@@ -1,0 +1,12 @@
+The SOLIDWORKS EPDM Quick Info icons provide you with a lot of information concerning the status of the file currently active in SOLIDWORKS.
+SOLIDWORKS EPDM Quick Info Icons
+These Quick Info icons are displayed next to file names in the “File/Variable” column for parts and assemblies, as well as in the “Child Quick Info” column for assemblies. (The “Child Quick Info” column was not enabled by default in some older releases of EPDM, however it could be turned on through the Add In Options).
+Enterprise PDM compares the active document in SOLIDWORKS to the latest version of the file in the vault and displays the applicable icon or icons.
+Starting with the 2015 release, some of these icons have been updated slightly to make them easier to understand at a glance.
+SOLIDWORKS EPDM Quick Info Icons Demonstration
+Here is a video to show you the EPDM Quick Icon functionality in action:
+https://youtu.be/8Bjc-daAc0E
+Learn more about SOLIDWORKS EPDM
+Attend a
+SOLIDWORKS PDM training course
+either online or in-class to learn more about working with SOLIDWORKS PDM software.

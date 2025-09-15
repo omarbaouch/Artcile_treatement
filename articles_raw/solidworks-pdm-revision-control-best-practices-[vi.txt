@@ -1,0 +1,18 @@
+SOLIDWORKS PDM Revision control has always been the most important reason why customers are adopting the PDM system.  The term “revision control” however can mean different things to different people.  Fundamentally, it is important to
+keep an ongoing history of a part or product design
+but when it comes down to implementing a PDM system, it is important to make a plan and ensure you not only have a way to track the changes but also
+standardize and automate as much of the process as possible
+.  The end result is not only a reduction in errors related to using the wrong revisions but there is a potential for a tremendous amount of time savings.
+SOLIDWORKS PDM Revision and Workflow Plan
+On-demand Webinar
+The following webinar that we put together does a great job at going behind the scenes of revision control and demonstrates
+How easy it is to have a simple process control when revisions are created and
+How powerful it can be to automate these common tasks.
+The webinar covers mainly
+SOLIDWORKS PDM Standard
+functionality, but SOLIDWORKS PDM Professional offers the ability to automate tasks such as PDF publishing which can be incredibly powerful at integrating your design team with the rest of your organization.
+Check out this blog post to review the differences between PDM Standard and Professional
+.
+I hope you enjoy this webinar recording and please feel free to
+contact me
+if you are looking for guidance and direction related to SOLIDWORKS PDM Revision control.

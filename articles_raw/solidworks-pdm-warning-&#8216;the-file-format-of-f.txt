@@ -1,0 +1,5 @@
+When checking in files that contain configurations, a SOLIDWORKS PDM user may receive a message
+‘The file format of file is not recognized. Do you want to check it in anyway?’
+This may result from the configuration name exceeding 255 characters, which is the maximum allowed in a SOLIDWORKS PDM database.
+SOLIDWORKS Data Card
+The file can be checked in, but without the configurations. In the data card, there will be no tab for the configurations

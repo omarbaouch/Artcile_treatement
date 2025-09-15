@@ -1,0 +1,49 @@
+SQL queries are the bread and butter of information gathering from SQL databases. In this blog, we will learn how to access a SQL database and run a SQL Query.
+Access the SOLIDWORKS PDM SQL Database
+The first step is to access SQL Server Management Studio (SSMS), the main application for configuring, managing, and administering SQL server components. This application will be running on your PDM database server.
+SQL Server Management Studio
+When opening SSMS you will be greeted by a server connection pop-up.
+PDM
+typically uses the System Administrator (sa) account as its main connection point to SQL, but the SA account is not required to run database queries, a Windows account will also work. Either option can be chosen from the
+Authentication
+drop-down.
+Connecting To the SQL Database
+Running a SOLIDWORKS PDM SQL Query
+Once a connection has been established you will be presented with the Object Explorer, which will include each vault as a distinct database. Selecting New Query or right-clicking a vault and selecting New Query will open a new window:
+Starting a New Query
+Paste your query here (double clicking on a .sql file will automatically open the query view), select the vault, and
+Execute
+.
+Sample Query
+The query in the above picture can be used as a sample, it will list all user information details such as email address, phone number, address, and presence note.
+--Query to show user details example--
+
+select u.Username,
+
+isnull (u.FullName , '') as [Full Name],
+
+isnull (u.Email,'') as [Email],
+
+isnull ((select value from settings where userid = u.UserID and varID =34), '') as [Phone],
+
+isnull ((select value from settings where userid = u.UserID and varID =35), '') as [Cellphone],
+
+isnull ((select value from settings where userid = u.UserID and VarID =36), '') as [Presence Note],
+
+isnull ((select value from settings where userid = u.UserID and varID =37), '') as [Website 1],
+
+isnull ((select value from settings where userid = u.UserID and varID =38), '') as [Website 2],
+
+isnull ((select value from settings where userid = u.UserID and varID =39), '') as [Website 3],
+
+isnull ((select value from settings where userid = u.UserID and varID =40), '') as [Website 4]
+
+from Users u where u.UserID != 1 and u.Enabled = 1
+
+and u.Username like N'admin'
+
+order by u.Username
+Learn more about SOLIDWORKS PDM and SQL Query
+Take a
+SOLIDWORKS PDM training course
+live online and learn more about data management from the experts at Javelin.

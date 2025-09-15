@@ -1,0 +1,7 @@
+When a revision is incremented a label is added to the current version using a predefined revision scheme. The revision can be incremented through a transition action of a workflow, or from the Modify pull-down menu of the local vault view as shown in the figure below.
+Modify Increment Revision
+This command is also available from the right mouse menu, if you set up the EPDM Admin action shown in the figure below.
+Transition action
+When the revision is incremented by a transition action, or by manually entering a value in the data card, the associated variable is updated with the new value. When using Modify/Right Mouse Increment Revision, the variable is not updated. The result is that a file’s data card will not show the incremented revision value.
+It is best to let the revision be controlled by a transition action
+. If Modify/Right Mouse Increment Revision needs to be used, the incremented revision value should be entered manually into the data card.

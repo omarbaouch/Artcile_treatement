@@ -1,0 +1,35 @@
+Do you have a special workflow for migrated data? Does it look something like this:
+Migration Workflow
+Or this:
+Alternative Migration Workflow
+New
+Set Revision
+function
+These workflows aren’t necessary anymore with the new
+Set Revision
+function in
+SOLIDWORKS PDM 2016
+.
+Let’s take a look…
+In this example, all the data cards have the appropriate revisions and need to be synced with the systems revisions, so they increment appropriately when transitioned through the production workflow.
+Select all the files you would like to sync, then via explorer go to
+Modify
+>
+Set Revision
+:
+Set Revision
+Right-click >
+Select All
+Select All
+Right click within the grid and select
+Set All New Revision Values To Card Variable Value
+Update all revision values
+Note: you can also add a comment to this process.
+Add Comments
+Click OK then: review the data
+Revision history event recorded
+Now the data card revisions will match the system revisions and increment appropriately as per your production workflow without the need of a special workflow.
+Learn more about SOLIDWORKS PDM Set Revision
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about using or administering SOLIDWORKS PDM.

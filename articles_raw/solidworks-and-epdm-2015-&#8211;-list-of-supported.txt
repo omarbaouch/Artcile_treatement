@@ -1,0 +1,3 @@
+With the release of SolidWorks 2015 and SolidWorks Enterprise EPDM 2015, some virtual environments are now supported. Below is a list of which virtual environments are supported and which SolidWorks programs are supported in these environments.
+Notes:
+Virtual environments force SOLIDWORKS, eDrawings, and DraftSight to run in Software OpenGL mode resulting in significant graphics performance degradation.

@@ -1,0 +1,20 @@
+The SOLIDWORKS PDM
+convert task
+, opens the model, and completes a save as PDF.  If the last save of the model was zoomed out, it can result in an excess of empty space, as shown in the example below:
+Excess of screen space
+With a small edit to the script, we can add a Zoom To Fit command before the file is converted to PDF.
+How to add a Zoom To Fit command to the SOLIDWORKS PDM convert task
+Open the Administration Tool and open the convert task;
+Convert to PDF Task
+Within
+Output File Details
+select
+Advanced Scripting Options
+;
+Advanced Scripting Options
+Add
+swModel.ViewZoomtofit2
+as listed below (line 710)
+Add swModel.ViewZoomtofit2
+And the command will be added ahead of conversion;
+Zoom To Fit command applied to the view

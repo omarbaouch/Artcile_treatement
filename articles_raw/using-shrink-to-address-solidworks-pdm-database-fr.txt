@@ -1,0 +1,27 @@
+The recommended free disk space for an SQL Server (SOLIDWORKS PDM Professional database), is 15%. If free disk space reaches levels below that, problems can occur. Lower levels can lead to PDM can becoming unusable.
+There may not may any notification of low disk space, until running the
+SOLIDWORKS PDM Database Upgrade Wizard
+.
+SOLIDWORKS PDM Database Upgrade Wizard
+The PDM Database Upgrade Wizard, is used to upgrade the SQL database(s), used by PDM. This is normally done after upgrading SOLIDWORKS PDM to a newer release.
+SOLIDWORKS PDM Database Full Errors
+In the case of insufficient disk space, the log created by the PDM Database Upgrade Wizard, will show that there was a failure, but may not provide the cause.  To find the cause we need to look in the PDM USER log. In the log there will be errors such as:
+SOLIDWORKS® PDM database upgrade (upgrade.exe) to fail with a client log error “[SQL Server] The transaction log for database ‘db_name’ is full”?
+[Microsoft][ODBC SQL Server Driver][SQL Server] The transaction log for database ‘db_name’ is full.
+These errors point to the Transaction Log being full. The Transaction Log records all SQL transactions as well database modifications. The Transaction Log is critical to disaster recovery and should never be deleted or moved.
+These messages may occur because the defined maximum Transaction Log size has been reached or because there is no more disk space for the Transaction Log to grow.
+The reason that low disk space may not be noted until the use of the PDM Database Upgrade Wizard, is because the Upgrade process will create many temporary tables. The greater the gap between versions of the database(s), the more free space that will be required, during the Upgrade
+If disk space becomes more critical, users may start to get the message ‘‘Error accessing the database’ and ‘Transaction log is full’ in client log.”  When investigating this message it is important to determine if Autogrowth has been enabled and that the defined Maximum File Size has not been reached.
+Transition Log – Enable Autogrowth
+If the Transaction Log settings are correct the the available disk space should be checked.
+Only those who are familiar with SQL should make any changes as incorrect settings may have a detrimental effect on PDM use.
+How to limit the consumption of disk space
+There are a number of reasons why disk space can become an issue and there are things that can be done to limit the consumption of disk space. Some of these are:
+Having a dedicated SQL Server. This would mean having a separate server for the PDM Archives. Having separate servers for the PDM Archive and Database, can increase PDM performance, on larger implementations
+Using
+Simple as the Recovery Model for SQL
+.
+Moving old SQL back-ups to a separate server.
+When disk free space has become critical, there are a couple of solutions. First, would be increase the amount of disk space. The other is to
+Shrink
+the Transition log. The Shrink operation will cause SQL Index fragmentation and this can lead to poor SQL/PDM performance. So it is not recommended that it be used on a regular basis, but in situations where disk space is critical, it may provide stop gap solution, until a final solution can be implemented. Also, on large databases or in environments where there hundreds of users, shrinking databases yearly, may actually increase performance.

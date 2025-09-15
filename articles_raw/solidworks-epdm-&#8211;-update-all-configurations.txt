@@ -1,0 +1,4 @@
+Update all configurations flag in a data card
+will set the same value for all configurations. This value will be shown in all configuration tabs in the data card.
+Drawing sheets do not have sheet-specific custom properties. Therefore, custom properties will only display on the @ tab of the data card.
+Some sheet specific details can extracted and displayed in the drawing data card’s tabs. These include Name, Scale, PaperSize, Template, Width, Height, ProjectionType. Below is an example of how to create this mapping when editing a variable.

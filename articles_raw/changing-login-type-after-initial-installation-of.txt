@@ -1,0 +1,19 @@
+During the installation of SOLIDWORKS EPDM server components, the default login type is set to SolidWorks Enterprise PDM, Windows or LDAP. After the installation, the login type can be changed for each vault .
+From
+Start
+>
+All Programs
+>
+SolidWorks Enterprise PDM
+, choose
+Archive Server Configuration
+Access Archive Server Configuration
+Right click on the vault to be changed and select Properties
+Vault properties
+Under Login Type, choose the type of login you wish to switch to.
+Login type
+If LDAP or Windows is chosen, additional information, such as server and user/group information need to supplied.
+LDAP Settings
+Select Users and Groups
+Switching to SolidWorks Enterprise PDM login can be useful in troubleshooting login issues
+. Use SolidWorks Enterprise PDM login to determine if the issue is with EPDM or LDAP/Active Directory(Windows). When I implement EPDM, I first use SolidWorks Enterprise PDM login. After testing, if there are no login issues then I switch the login type to LDAP or Windows.

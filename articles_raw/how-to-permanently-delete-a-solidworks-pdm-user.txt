@@ -1,0 +1,27 @@
+When a new SOLIDWORKS PDM User is created in the vault, the
+user is stored in both the database and the registry on the archive server
+.  When a user is deleted via the administration tool, the user is removed from the database, but still listed when adding new users because it exists in the registry on the archive server:
+Deleted SOLIDWORKS PDM Users still listed?
+To completely permanently delete a user, we need to delete them from the registry on the archive server.
+How to permanently delete a user
+Please note that caution should be taken when editing the registry
+, as changing or deleting the wrong key, can affect other programs, or the operating system.
+On the archive server;
+Start > Registry editor
+Navigate to the key;
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\ConisioUsers
+Locate the user and delete the value
+Edit the Windows Registry
+After the registry value is deleted, the SOLIDWORKS PDM User should no longer show up when adding new users;
+User[s] completely removed
+In a replicated environment, it’s likely to be using vault specific login, in these instances, the user account will be found under a different registry key:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\[VAULTNAME]\ConisioUsers
+What if I delete the wrong key?
+If a registry value is deleted for a SOLIDWORKS PDM User that still exists in the vault, they will show with a red plus next to them in the administration tool:
+Deleted User
+To restore this account; open the user from the administration tool and use the
+‘Set Password’
+option to recreate them in the registry:
+After this is complete and the
+Users
+node is refreshed, the red plus should be removed and the login repaired.

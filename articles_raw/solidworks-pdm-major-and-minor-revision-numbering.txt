@@ -1,0 +1,49 @@
+In this article, we are going to look at how to implement a SOLIDWORKS PDM Revision Numbering System, that incorporates both minor and major revisions.
+Review our previous article for
+a complete guide to increment a revision number via a workflow
+How to create a SOLIDWORKS PDM Revision Numbering System for major and minor revisions
+For this example, we’re going to create a system that uses uppercase alphabetical for major revisions, and numerical for a minor revision.  For example = A-01, B-01, C-01, C-02, C-03 etc.
+First, we have to create our revision numbering components…
+Administration Tool > Revisions > Revision Number Components
+Right-Click >  New Component…
+Revision Number Components
+Next, we have to create the Revision Number System…
+Administration Tool > Revisions > Revision numbers
+Right-Click >  New revision number…
+Add the revision number components we created in the previous step
+Revision Number System
+Now we have to implement this into the workflow.  In the appropriate workflow and state;
+Administration Tool > Workflows > [Workflow Name]
+Incorporate into a workflow
+On the state where the revision is first applied:
+For this example the ‘Approved’ state
+Properties > Revision Numbers
+Add the new revision number system
+Leave the ‘Increment by’ and the ‘Reset to’ values blank
+Save the workflow
+Clear increment by on revision state
+In the transition preceding the state where the revision is first applied;
+For this example the ‘Passed Approval’ transition
+Properties > Revision Numbers
+Add the new revision number system
+For both revision number components; set the ‘Reset to’ vault to 1
+When files first enter this state, the revision will be set to A-01
+In the transition preceding the state where the revision is first applied reset the revision components to 1
+Now, we need to increment the appropriate revision in the corresponding state;
+For the ‘Major Rev Change’ transition
+Properties > Revision Numbers
+For the
+Major Rev Component
+set the value to increment by 1
+Major Rev Change transition
+For the ‘Minor Rev Change’ transition
+Properties > Revision Numbers
+For the
+Minor Rev Component
+set the value to increment by 1
+Minor Rev Component
+Save and close the workflow.
+As with any change in the vault; it’s imperative to test any changes thoroughly before implementing.  This is a great example of a change that should be implemented in a
+sandbox vault
+, ahead of the production vault.
+Test thoroughly

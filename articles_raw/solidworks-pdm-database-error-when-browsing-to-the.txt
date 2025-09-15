@@ -1,0 +1,24 @@
+When a SOLIDWORKS PDM Vault View is created on a client computer, the view’s connection information is stored in the Windows Registry.  An additional entry is also created for 32 bit programs.   However, this registry entry can sometimes be flagged by some system cleanup utilities and deleted.
+If this happens, you will encounter the SOLIDWORKS PDM Database Error: “
+No database connected to this view
+” when browsing into the Vault View through an Open or Save dialog in any 32 bit application (for instance Microsoft Office 32 bit programs):
+SOLIDWORKS PDM Database Error
+To confirm if this is the cause of the issue, go to the Registry Editor and check:
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases
+There should be a key with a name matching the name of the local Vault View.  If the registry key for the Vault View is missing, or if the entire Database key is missing, they will need to be re-created.
+Windows Registry
+Here is the procedure for repairing the registry:
+WARNING
+: Please be very careful when editing or deleting any entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.
+Step 1:
+Browse to the 64 bit Registry Key at:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases
+Right-click on the key that is missing from the 32 bit section (either for a single vault view or the entire Databases section) and select “Export” to save the registry key information to a .reg file.
+Export registry key
+Step 2:
+Open the .reg file in a text editor such as Notepad.  Modify the registry path by adding “WOW6432Node”, changing it to:
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases
+Change Registry Key
+Step 3:
+Once all paths have been updated, save the file, then right-click the file and select Merge (or double click the file) to merge the information into the registry.
+Key successfully added

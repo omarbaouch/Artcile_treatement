@@ -1,0 +1,22 @@
+New in
+SOLIDWORKS Manage 2021
+, we have enhanced controls for referenced files when promoting from SOLIDWORKS PDM to ensure all the required references are captured, and there are no orphaned records causing discrepancies between the vault and Manage BOM.
+PDM File Promotion Settings
+Start the
+SOLIDWORKS Manage Administration
+Tool
+General
+SOLIDWORKS
+SOLIDWORKS PDM
+PDM File Promotion Settings
+The options are;
+Notify users and stop the transition in PDM
+Notify user but do not stop the transition
+Do not notify the user and do not stop the transition in PDM
+The recommended setting would be
+Notify users and stop the transition in PDM,
+with any of the alternate options there’s a chance of inconsistencies between the Manage and PDM.
+That’s awesome…but what’s a transition?
+If you’re interested in learning more about transitions and states; creating and editing workflows are covered in detail within our
+Administering SOLIDWORKS PDM training course
+, along with many more tips and tricks, on how to create the most efficient vault for users.

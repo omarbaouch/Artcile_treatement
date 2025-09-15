@@ -1,0 +1,38 @@
+When retiring a replicated archive server within
+SOLIDWORKS PDM Professional
+it’s important to use the recommended steps to ensure all replication information in the database for the server will be removed, along with any archives.
+CRITICAL
+: This operation is destructive.  It is imperative that
+good vault backups
+are captured ahead of completing any of the steps within this article.
+How to remove a replicated archive server
+Open the Administration Tool
+Locate the server to remove from replication
+RMB > Remove
+NOTE:
+In this scenario, the server being retired is
+WIN-8P6OOFC3A8K
+and the replicated vault is named
+JavVault
+Confirm the vault is being removed from the appropriate server then enter the SQL credentials and accept that this operation is destructive and confirm that good backups have been captured and hit
+Yes
+Remove Replicated Archive – SQL Credentials
+ENSURE
+: you are removing the replicated vault and not the ‘primary’ vault, we can confirm this if the dialog lists
+‘…this vault is part of replicated network of vaults, only the local copy of these files will be deleted’
+as above.
+Click
+Yes
+to confirm the removal and affected database connections
+Remove Replicated Archive – Confirm DB Connections
+then…
+Remove Replicated Archive – Removing
+and the result;
+Remove Replicated Archive – Removed
+If any client’s local views are still attached to this server, they will need to be repointed to an existing archive.  This can be completed by
+removing and re-adding the local view
+.
+Why is it important to remove it ahead of retiring the server?
+In a replicated environment, there are values within the ‘ArchiveServerNeighbour’, ‘ArchiveServers’ and ‘ArchiveServerStored’ tables in SQL for the corresponding replicated archive.  Removing the vault using this method will ensure there are no orphaned files, and the archive servers are removed and no longer listed within the replication schema and settings.  If there are any files that have not been replicated ahead of removing the replicated archive the following error will be thrown;
+SOLIDWORKS PDM Warning
+These files will need to be replicated before the vault can be removed.

@@ -1,0 +1,5 @@
+Recently I was asked how to add a SOLIDWORKS PDM Vault View shortcut, to the Windows Taskbar. I was told that in previous Windows releases, this was possible. I did some research and found that this was never possible; in previous releases of Windows, but it was possible in the first preview of Windows 10.
+There is a way to access the SOLIDWORKS PDM Local Vault View from the Windows 10 Taskbar, this is done by:
+Right-clicking on the Windows Explorer Icon, in the Windows Taskbar
+Then clicking on the PDM Local Vault View.
+File Explorer

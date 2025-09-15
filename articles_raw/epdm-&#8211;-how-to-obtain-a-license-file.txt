@@ -1,0 +1,15 @@
+A new EPDM license file is required when you update to a new release of SolidWorks Enterprise PDM or if additional licenses are purchased. Your EPDM License File can be obtained from the SolidWorks Customer Portal at
+www.solidworks.com
+by following this simple procedure:
+1. From the upper right corner select
+Login
+.
+2. From the SolidWorks Login screen choose SolidWorks
+Customer P
+ortal.
+3. Enter your e-mail address and password for an existing customer portal account, or create a new account.
+4. In the Customer Portal under My Support select
+Register My Products.
+5. Enter your SolidWorks Enterprise PDM serial number.
+6. From the Version pull-down select the version of the license file you required.
+7. The license file will be e-mailed to the email address used to log into the Customer Portal.

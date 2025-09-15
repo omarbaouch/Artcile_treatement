@@ -1,0 +1,40 @@
+After installing the
+SOLIDWORKS PDM Client
+for the first time, the client computer must be connected to the server using a vault view. The message is commonly seen when selecting the archive server from the list in the View Setup application. It can also be seen when using the Add Server option in the PDM Administration tool.
+When attaching a client computer to an Archive Server, the logged-in User’s Profile is compared to the ‘Attach access’ and ‘Administrative access’ of the user profile. If the user profile credentials cannot be matched, the user will be prompted to log into the PDM Archive Server.
+Login Archive Server
+Archive Server error
+In some cases this process may fail, with the error ‘The Archive Server could not open the Windows Registry’
+The Archive Server could not open the Windows Registry
+There can be other associated errors, which I have listed below:
+Could not initialize archive serve connection. Error Description: The system detected a possible attempt to
+compromise security.
+No authority could be contacted for authentication.
+No credentials are available in the security package.
+Could not authenticate with server.
+The specified Archive Server operation was invalid in this context.
+The Archive Server could not open the Windows Registry.
+The function requested is not supported.
+Why does this error occur?
+This issue can also occur when creating a local vault view or when attempting to ‘Refresh’ the vault in PDM Administration.
+Refresh Vault
+This error will often occur, on client computers that are disconnected from their company’s domain. The problem stems from the domain controller not responding when the client sends the Windows domain profile credentials for authentication. This problem can also occur if a user is logged in using Windows via an Azure Active Directory account. The issue can also occur when PDM is installed using a local machine user profile, and unable to create a vault using a domain network account.
+Client-Side Resolutions
+Run the administration tool or view setup wizard with a different Windows user account
+.
+Browse to the SOLIDWORKS PDM installation folder
+Hold down the ‘SHIFT’ key and right-click the application to run ConisioAdmin.exe’ for attaching the Archive Server or ViewSetup.exe’ to create a local vault view.
+Select ‘Run as different user’.
+Run as Different User
+Use a different local Windows account and enter the local system name using the format ‘SYSTEM_Name\USER_Name’.
+Run as Different User
+Create a temporary Windows user that is part of the local administrator group
+.
+While logged in as this temporary Windows user, attach the vault or create the local vault view. The vault and vault view should now be accessible when logged into the domain.
+Server-Side Resolutions
+Add the Active Directory group to the Archive Server Configuration tool.
+While client-side fixes can get a single machine up and running quickly, for a solution that will include other user’s computers, a change can be applied on the server end. From there, the Active Directory group that contains these users can be added. Once the group is added, the users will no longer see the login prompt.
+Archive Server Configuration Settings – Security Tab
+Need help with your SOLIDWORKS PDM?
+Javelin’s team of Certified Experts provide a variety of SOLIDWORKS PDM Services including System Implementation, Health Check Optimization and Upgrades.
+Learn more about our PDM services »

@@ -1,0 +1,12 @@
+SOLIDWORKS PDM Conditions are powerful tools for controlling document flow, through a Workflow Transition. In a previous article titled,
+SOLIDWORKS PDM Transition Conditions
+, I looked at the general use of Conditions. Most of the available Conditions, such as Category, File Path, Revision and Variables are self explanatory, but a SOLIDWORKS PDM Object Type condition can be a little confusing.
+Condition Variables
+With Object Type, PDM is filtering data passing through a Transition, by type of Object it is. The Object can be one of three entities:
+File:
+With this filter, only physical files are allowed to pass through a transition. The File Object Type should not be confused with Filepath. Filepath filters by file name, extension, or path.
+BOM:
+Named BOM’s are saved from a Computed BOM’s. These BOM’s can be checked in and out, as well as being “revisioned”. This Filter will only allow named BOM’s to pass through a Transition.
+Item:
+An Item consists entirely of metadata, that can be used to collect the entire “product definition” of a project. This can include CAD data, documentation and other supporting documents. Items don’t themselves contain files, but they can be linked to files. With this filter, only items pass through a Transition.
+SOLIDWORKS PDM Object Type Condition

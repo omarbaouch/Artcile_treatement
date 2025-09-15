@@ -1,0 +1,36 @@
+Your SOLIDWORKS PDM Vault is the heart of your business, and your PDM workflow are the essential arteries that directs the flow of information to personnel from project inception to completion.
+How your PDM workflow identifies, structures, links, and assigns ownership to your requirements and internal processes directly affects your ability to successfully and efficiently perform your business objectives.
+PDM Workflow
+Common workflow issues
+If your PDM workflow is ignored or done incorrectly, your business pays severe penalties in the form of intervention resource expenditure. Those expenditures are the unplanned time, money, and resources expended to compensate for revision, product quality and schedule problems.
+When quality and schedule problems dominate the energy your organization expends on a daily basis, corrective action becomes the standard “way of working”. Changing that environment requires an understanding of how your current processes and the required workflow relate to best practices and the culture change that is needed to make the transition.
+What should my workflow consist of? How do I actually go about designing a workflow for my business?
+Configuration Management Training will help
+Our new Configuration Management (CM) Training presents a structured and effective methodology for documenting, validating, releasing, and changing requirements
+. In addition the course provides methods for reducing intervention resource costs. It addresses the process enhancements that your organization must make in order to accommodate change and keep all requirements clear, concise, and valid.
+The training is not about the picks and clicks of creating a PDM workflow,
+we can provide you with a SOLIDWORKS PDM Administration course for that
+; no, this training concentrates on how your process workflow should be structured and more importantly how your business should handle design and project change.
+Planning a Workflow Process
+Who should attend the training?
+Anyone in your business that needs to be involved or will contribute to your project workflow and change management requirements. Typical personnel involved are:
+Project Managers, Project Leaders, Project Controllers, and Project Members.
+Quality Assurance Managers, General Managers, Engineering Managers, and Process Implementation Team Members.
+IT Managers, Software Controllers, Developers, and Testers.
+Support Managers, Application Engineers, and Support Technicians.
+Lab Managers and Lab Technicians.
+Service Managers, Service Controllers, Service Technicians.
+Configuration/Build Managers.
+Take the next step
+If your business workflow is not working effectively or you need to design a new workflow then
+talk to us about configuration management training for your business
+. We currently have
+configuration management courses
+scheduled in the next few months in
+Burlington, ON.
+, and
+Ottawa, ON.
+We can also provide
+private on-site training for 10 or more people
+. Allowing your team to learn about the methodology together, and determine how to design a workflow specifically for your business.
+Visit our CM Training Website

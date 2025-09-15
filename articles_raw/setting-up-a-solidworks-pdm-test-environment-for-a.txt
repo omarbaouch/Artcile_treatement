@@ -1,0 +1,27 @@
+When there is a new release of SOLIDWORKS PDM, it is wise to first test the upgrade so that you can identify and address any problems, before updating your production vault.
+SOLIDWORKS PDM uses the SolidNetWork License Manager (SNL) and this needs to first be updated to the same version of SOLIDWORKS PDM that is to be installed. The License Manager is backwards compatible, so a separate installation of the license Manager is not required. It is wise to update the License Manager after hours, to be sure there is no impact on production if issues are encountered. The License Manager is installed from the SOLIDWORKS Installation Manager.
+Updating License Manager
+Create a SOLIDWORKS PDM Test Environment
+Once the License Manager is updated, the new version of SOLIDWORKS PDM can be installed. You will require a different system to install the new version of SOLIDWORKS PDM. This can be a different server, a PC used for testing, or a virtual machine. If you are going to be using a virtual machine, please ensure that the virtual environment you are using is
+supported
+.
+The same SQL installation you use for your production vault can be used for your test vault, so SQL does not need to be installed on your test environment.
+Using a PDM Sandbox Vault
+Once SOLIDWORKS PDM has been installed on your test system, you can now import the contents of your production vault into your sandbox vault. The steps to do this can be found in my blog article
+SOLIDWORKS PDM – Sandbox Vault.
+This process will copy your vault settings, but not the archive or database.
+Setting up an Independent Test Environment.
+While testing only your vault settings is useful, having a duplicate of your PDM environment is often the best way of testing a new release. This will require at minimum a new database on the same instance of SQL. In general, the process consists of backing up and restoring the database to the vault. Once this is done, part or all of the archive is copied into the new vault. This process is explained in the
+PDM Installation guide
+as well as a
+previous article
+of mine.
+If you wish to avoid using the same SQL instance, you can install a separate instance on a separate physical server or on a Virtual Machine (VM). For PDM licensing, you can still use the same SOLIDWORKS License Manager. To avoid licensing issues with Microsoft SQL,
+SQL Server Developer Edition
+can be used. SQL Server Developer Editions is a “full-featured free edition, licensed for use as a development and test database in a non-production environment.” Another tool that I find useful for testing is
+Windows Sandbox
+. This tool allows me to quickly create a VM without requiring any licensing. Be aware that once you close down the application, the VM is permanently removed.
+Learn More
+Javelin provides PDM training in-class or live online.
+Check out the training courses available
+.

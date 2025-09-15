@@ -1,0 +1,4 @@
+Files can be renamed by right clicking on a file and choosing ‘Rename’ from the SolidWorks fly-out menu.
+SolidWorks fly-out Menu
+This only renames the cached file and may result in having the old file and a newly renamed file in the vault. Using the standard Windows rename command from the shortcut menu in the local vault view, will update the vaulted file. This will ensure that references and versions are maintained correctly.
+EPDM Windows Explorer shortcut menu

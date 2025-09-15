@@ -1,0 +1,32 @@
+A SOLIDWORKS PDM folder or file showing up in a grey colour indicates that a local folder or local file existed in your local file vault view, but not in the PDM vault itself.
+Local files and folders are displayed in a vault view
+When you browse through folders and work with files in the vault view, SOLIDWORKS PDM will retrieve and cache the copies of the folders and files locally. These local copies will remain in the cache, even when you log out of the vault view. So that next time you access the folder or file SOLIDWORKS PDM will not have to retrieve the files again.
+Why would a file or folder be coloured grey?
+If you have a cached copy of a file or folder, that is no longer accessible in the vault itself, it will show up in grey colour to indicate it is only stored locally. There are several reasons you may see these local files or folders, and it is in most cases normal that they appear:
+You log into the vault view where a different user with more access permissions previously cached a file, but the current user does not have read permissions to the folders or files. The previously cached objects would still be in the view.
+The folder or file has been deleted, renamed or moved, and the previously cached copy remains.
+The files were added to the local view by an application, but were not added to the vault itself – therefore only existing locally. (Note that some files should remain local, such as temporary files created by applications).
+Clear Local Cache
+If you wish to remove the local copy of files, you have worked with and no longer need to have it cached locally, use the ‘Clear Local Cache’ command or remove local copy in dialog (note that it will only process files part of the vault, and local folders are not removed).
+Clear Local Cache
+Hiding Local Files
+If you wish to not see the local files or folders,
+right-click
+‘
+Users’
+in
+Administration
+tool, select ‘
+Settings
+’ > ‘
+Explorer
+’ tab and enable ‘
+Show only files that are part of the file vault
+’.
+Settings dialog controlling how local files or folders should be handled
+Automatic Removal of Local Files
+If you wish to have local copies of deleted, moved or renamed files and folder automatically removed, enable the ‘
+Local file clean-up
+’ option in the settings dialog. Note that if the object is still in the vault in same location, and you log in as user with less permission, the local copy will not be cleared.
+NOTE
+that if the folders or files show up in a grey colour you will NOT be able to do any vault operations on the objects (besides add to vault) – if they should not be local, verify that you have sufficient folder and workflow permission to see the objects.

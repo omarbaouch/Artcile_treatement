@@ -1,0 +1,25 @@
+New in SOLIDWORKS PDM Standard 2018, is the ability to run Convert to PDF on SOLIDWORKS Drawings. This is enabled through PDM Tasks.
+Tasks are used to automate procedures, that are performed regularly. The Convert Task in SOLIDWORKS PDM Standard, automates the process of creating PDFs of SOLIDWORKS Drawings. This Task uses the same mechanics that saves a PDF in SOLIDWORKS, but requires little or no user interaction. Tasks are configured through the SOLIDWORKS PDM Administration.
+PDM Admin Tasks
+The Convert task itself, can be installed when the vault was created. If this was not done, the Task can Imported.
+Import a Task
+The Convert Task to be Imported, is located in the PDM installation directory, in the Default Data folder.
+Convert Task File to import
+The Administration Guide that is available from the Help pull-down in SOLIDWORKS PDM Administration, describes in detail how to configure a Task. In summary, there eight sections that need to defined.
+Convert Help
+Choosing the Add-in. The Add-in is added to the vault, by the same operation that adds the Task. The Add-in is used to define the perimeters, of the Task.
+Menu Command allows us to specify what prompt the user will see, when they access the the task manually.
+Execution Method, is where we choose which computers will run the task and the criteria for choosing a computer.
+Conversion Setting, is where the output file format is defined
+File Card, defines Variable mapping between the source and the target file.
+Output File Details, is where we define the output file name and the output path.
+Permission is where we designate, which Users and Groups have access to the Task
+Once the Convert Task has been configured, it can be launched from the right-mouse menu, of the Local Vault View.
+Convert to PDF command
+A Task can also be launched through a
+Workflow Transition Action
+.
+NOTE:
+Before a Task can be launched on a computer,
+Task Host Configuration
+must first be enabled, on that computer.

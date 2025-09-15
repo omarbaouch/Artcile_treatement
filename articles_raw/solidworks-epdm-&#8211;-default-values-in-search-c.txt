@@ -1,0 +1,18 @@
+Default values can be assigned to variables so that when a search is used, one or more fields will have a predefined default value. For example a default value can be added for the search path.
+Default values are added by
+selecting the background of the Complete Search data card
+Select the background of the Data Card
+Then select the
+Default Values
+button
+Default Values Button
+From the Default Values pull-down, select the variable list and
+pick a variable you would like to assign a default value to
+Variable list
+Then
+enter a default value
+.
+Default Value Entered
+When the search card is used, the default value will be displayed.
+Search with default value applied
+This approach can be used for other variables, such as Workflow and Workflow State. Default Values can also be used on other Data Cards, such as File cards.

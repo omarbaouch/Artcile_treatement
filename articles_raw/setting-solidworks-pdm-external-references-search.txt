@@ -1,0 +1,6 @@
+SOLIDWORKS PDM
+will normally handle references, between components. If these references do not exist, then PDM will use search criteria used by the respective application, such as SOLIDWORKS. Through the SOLIDWORKS PDM External References tab, additional folders to be searched, can be specified. These folders must reside in the selected Vault.
+Set External References in the Settings node of SOLIDWORKS PDM Administration:
+SOLIDWORKS PDM Admin
+Search paths for External References can then be defined here:
+Search paths for External References

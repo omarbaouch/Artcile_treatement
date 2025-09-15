@@ -1,0 +1,46 @@
+<p>In SOLIDWORKS PDM Professional 2016 it&#8217;s possible to link PDF document properties with SOLIDWORKS PDM variables and create a two way relationship.</p>
+<div id="attachment_20817" style="width: 649px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard.png"><img decoding="async" aria-describedby="caption-attachment-20817" class="wp-image-20817 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard.png" width="639" height="293" alt="" title=""><p id="caption-attachment-20817" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20817 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard.png" width="639" height="293" alt="" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard.png 639w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard-300x138.png 300w" sizes="(max-width: 639px) 100vw, 639px" /></noscript></a> PDF Data Card</p></div>
+<div id="attachment_20818" style="width: 871px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties.png"><img decoding="async" aria-describedby="caption-attachment-20818" class="wp-image-20818 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties.png" width="861" height="506" alt="" title=""><p id="caption-attachment-20818" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20818 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties.png" width="861" height="506" alt="" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties.png 861w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties-300x176.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties-768x451.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties-640x376.png 640w" sizes="(max-width: 861px) 100vw, 861px" /></noscript></a> PDF Document Properties</p></div>
+<h3>How To Map Custom Properties to PDF Data Cards</h3>
+<p>First step is to create some variables for this information via <strong>Administration Tool</strong> &gt; <strong>Variables</strong> &gt; <strong>Right-Click</strong> &gt; <strong>New Variable</strong></p>
+<div id="attachment_20833" style="width: 260px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/NewVariable.png"><img decoding="async" aria-describedby="caption-attachment-20833" class="wp-image-20833 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/NewVariable.png" alt="New Variable from shortcut menu" width="250" height="124" title=""><p id="caption-attachment-20833" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20833 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/NewVariable.png" alt="New Variable from shortcut menu" width="250" height="124" title=""></noscript></a> New Variable from shortcut menu</p></div>
+<p>This example I&#8217;ve named PDF_Author</p>
+<div id="attachment_20834" style="width: 398px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank.png"><img decoding="async" aria-describedby="caption-attachment-20834" class="wp-image-20834 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank.png" alt="VariableBlank" width="388" height="583" title=""><p id="caption-attachment-20834" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20834 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank.png" alt="VariableBlank" width="388" height="583" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank.png 388w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank-200x300.png 200w" sizes="(max-width: 388px) 100vw, 388px" /></noscript></a> PDF_Author</p></div>
+<p>Next we need to link it to PDF Files. Click <strong>New Attribute</strong> &gt; Enter the data as shown:</p>
+<ul>
+<li>Block Name = <strong>CustomProperty</strong></li>
+<li>Attribute name = <strong>Author</strong></li>
+<li>File Extension = <strong>pdf</strong></li>
+</ul>
+<div id="attachment_20828" style="width: 393px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author.png"><img decoding="async" aria-describedby="caption-attachment-20828" class="wp-image-20828 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author.png" alt="Link PDF Document Properties" width="383" height="582" title=""><p id="caption-attachment-20828" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20828 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author.png" alt="Link PDF Document Properties" width="383" height="582" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author.png 383w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author-197x300.png 197w" sizes="(max-width: 383px) 100vw, 383px" /></noscript></a> Edit Variable</p></div>
+<p>Create the remaining variables as per the following mappings;</p>
+<table>
+<tbody>
+<tr>
+<th>Block Name</th>
+<th>Attribute Name</th>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Keywords</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Title</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>Next we need to link this information in the .PDF file data card.  Create the applicable text and edit boxes, then link them to the variables.</p>
+<div id="attachment_20974" style="width: 658px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard.png"><img decoding="async" aria-describedby="caption-attachment-20974" class="wp-image-20974 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard.png" alt="PDF Card" width="648" height="321" title=""><p id="caption-attachment-20974" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-20974 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard.png" alt="PDF Card" width="648" height="321" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard.png 648w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard-300x149.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard-640x317.png 640w" sizes="(max-width: 648px) 100vw, 648px" /></noscript></a> Card Editor &gt; PDF Card</p></div>
+<p>Now the two way relationship is created and when a PDF is added to the vault the custom properties in the PDF will be updated on the data card and when a user updates variable values on the data card, the values are updated in the PDF document properties.</p>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Attend our <a href="http://www.javelin-tech.com/main/training/course_solidworks_enterprise_pdm_admin.htm" target="_blank">SOLIDWORKS PDM Administration training course</a> to learn more about creating custom data cards and administering SOLIDWORKS PDM.</p>

@@ -1,0 +1,29 @@
+The use of $PRPSHEET can be confusing, since it can be used in more then one way and can interact with
+SOLIDWORKS PDM
+or be independent of PDM. $PRPSHEET is intended to get information from one document, such as a part or assembly, into another document, such as a drawing.
+In order to understand how this transfer of information works, we need to understand the mechanism behind it. SOLIDWORKS uses metadata, to share information between documents.  Metadata,
+is data that describes other data.
+In SOLIDWORKS, metadata is referred to as Properties and a Property will have an associated Value. In the below example, we see that a part, has a Property called ‘Customer’ and this Property has a Value of ‘ACME’.
+Part Property
+This Property (metadata) describes the part, as being associated with a Customer, whose name is ACME. The same Property can be used between multiple documents, but for each document, the Value will be unique.  This does not mean, that another document cannot have a Property, called Customer, whose Value is Acme. Instead each document will have a unique Property Value for Customer, called ACME. Therefore modifying the value in one document, will not affect the other. To put this in a “real world” sense, a colleague and I are both wearing ties (the Property). We can both be wearing red ties (the Value) or one of us could be wearing a blue tie and the other a red tie. If I were to change the color of tie I’m wearing, it would not effect the color of tie my colleague is wearing.
+When a SOLIDWORKS Part or Assembly, has a Property, with an associated Value, I can share this Properties Value, with a Drawing. In a drawing.
+For example, I want to
+link
+the Part Property ‘Customer’, to a note in my Drawing. I want to do this, so that if I change the Value of the Property ‘Customer’, in the Part. the Drawing note will update automatically. To do this, I use $PRPSHEET, to map the Part Property, to the note.
+Using $PRPSHEET to Link a Part Property to a Drawing Note
+The advantage of linking a note to a Property, is that information is only entered and modified in one location. Thereby eliminating the chance, of mismatching information. An additional advantage is information needs to only be entered once.
+SOLIDWORKS PDM also uses metadata, but in PDM, metadata is referred to as Variables. Variables act to add,  change or read information from the Vault’s Database. Like a Property, a Variable has an associated Value. The same Variable can be used in multiple documents, but for each document, the Value will be unique to given document, even the Value is the same.
+As PDM users, we often interact with these Variables through a Data Card. Information entered into the Data Card, is written to the Vault’s Database and information contained in Database is displayed in the Data Card.
+Variable Values Displayed in Data Card
+Since there are advantages to having one location to enter information (Metadata), it is good is a good practice to link the Variable Value of a document, with the document’s Property Value. This link, is defined with an PDM Attribute. In the below example, the Value for the Variable ‘Customer’, is being mapped to the SOLIDWORKS Property ‘Customer’.
+Mapping Variable Value to a SOLIDWORKS Custom Property
+In this way, when we enter a Value for the Variable ‘Customer’, in the Parts Data Card, the Value is pushed to the parts Property, ‘Customer’. If we have a note in Drawing, that is using the link $PRPSHEET:”CUSTOMER”, the Drawing note will display Value, for the Part’s Variable ‘Customer’. The flow of information from a Variable Value entered into a data card, to a Drawing note, is illustrated below.
+Flow of Information from Data Card to Drawing Note
+Taking things a step further, I can define the mapping of a Variable, so that it’s Value, is pushed to both the Part and Drawing. By adding the attribute $PRPSHEET to Variable, we can push information, entered in the Part’s Data Card, to the Drawing’s Properties.
+$PRPSHEET Attribute
+The note in my drawing, can now linked to the Drawing’s Properties, using $PRP.
+The information now flows from the Data Card to the Part Properties and then to the Drawing Properties.
+Flow of Information from Data Card to Drawing Properties
+It is important to note, that in order for changes in the Part’s Data Card, to propagate to the Drawing’s Properties, the Drawing must first be opened and saved. If there are multiple Drawings to be updated ,SOLIDWORKS Task Scheduler’s task, ‘Update Files’ can be used.
+The use of $PRPSHEET as a Variable Attribute, requires PDM add-in for SOLIDWORKS, in order the Variable Value to be mapped to the Drawing’s Properties. The  PDM add-in for SOLIDWORKS, requires a SOLIDWORKS PDM Editor license.
+One final note, in this article I used a Part as an example, but this article also applies to assemblies.

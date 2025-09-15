@@ -1,0 +1,14 @@
+After installing SOLIDWORKS PDM 2019, or a later version, you may receive a SOLIDWORKS PDM Resource Monitor Warning that the available GDI handles are critically low for Explorer.exe, as shown in the figure below:
+Low GDI Handle Critical Warning
+What are GDI Handles?
+GDI stands for Graphical Device Interface and every process that displays graphical objects and formatted text uses it. By default, each process has a limit of 10 000 GDI handles. Just like when CPU usage is high or available RAM is low, your computer can become unstable, when GDI handles run low. In the case of SOLIDWORKS PDM,
+having many Windows Explorer dialog boxes open, can consume the available GDI handles
+.
+How to resolve the issue
+Low GDI handles is not something that just started happening in SOLIDWORKS PDM 2019, the difference is that SOLIDWORKS PDM 2019 and future releases now report when handles are running low, and this gives you the opportunity to
+close SOLIDWORKS PDM dialog boxes before Windows Explorer crashes
+.
+Warning vs Critical Warning
+When the number of GDI handles reaches 8500, SOLIDWORKS PDM you will display the following warning:
+Low GDI Handle Warning
+At 9000 used GDI handles, you will get a critical warning, shown at the beginning of this article. To avoid crashing, close windows as soon as you get the warning.

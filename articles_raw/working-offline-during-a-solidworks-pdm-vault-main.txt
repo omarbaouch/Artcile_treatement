@@ -1,0 +1,71 @@
+Overview
+During a SOLIDWORKS PDM vault maintenance, such as a
+migration or implementation of a server
+, a
+performance audit
+, or
+during an upgrade
+, users may need to work offline for a certain period of time, while the vault is being serviced. Sometimes, it is also necessary to recreate all local views as part of the maintenance work.
+This article explains how users can prepare for such an event, work offline for the duration of the service and copy their work back to the vault once the system is available again.
+If the maintenance being done does not involve recreating the local views, please refer to
+this article
+instead. If you are unsure about what method will be used, please contact your PDM administrator or Javelin.
+Preparation
+Prior to the SOLIDWORKS PDM vault maintenance date, check-in all your files and get the latest versions of all files that you will need while the vault is offline. To get the latest versions, select your files and press the button
+Get Latest Version
+on the toolbar. For assemblies and drawings, make sure you also selected any references files in the dialog box that appears when you click the command.
+Get Latest Version
+Setting up the Local View
+Go to
+Start
+Menu >
+Programs
+>
+SOLIDWORKS PDM
+>
+Administration
+, expand Local Settings and double-click
+Settings
+.
+A dialog window will open. Select your vault, and make sure the options
+User server default
+and
+User automatic login for this vault
+are both unchecked.
+Disable automatic login
+Point to your local view in Windows Explorer and click
+Work Offline
+.
+Work offline button
+Working Offline
+When you open the vault, all folders will show a blue icon. You will only see files that you have previously been cached to your local view and the vault functions such as Check in, Check out, Change State will not be available.
+Offline folders
+All files will show a column
+Writeable
+, and the value should be
+No
+. To be able to work with these files, you can either right click and uncheck the Read-Only flag (one by one) or copy multiple files to a folder outside of the local view (e.g. C:\Temp), right-click and uncheck the Read-Only flag of all files at once.
+Offline files
+Save your files in SOLIDWORKS and, optionally, keep a record of the files you are changing (e.g. an Excel spreadsheet) to help you return the modified files to the migrated vault.
+Copying files after the PDM vault maintenance
+As part of the new vault setup, your old local view will be transformed into a regular Windows folder (yellow icon).
+Login to your new local view, check-out all files that you have modified while offline and then copy those files to the vault, replacing the existing ones. This will create a new version that you can now check-in to the vault. The previous history of those files will be kept.
+If you created any new files, simply copy them to the local view and check them in as new files.
+Fixing broken references
+If the process above resulted in any broken references, select the file with the missing references and go to
+Tools
+in you PDM menu >
+Update References
+.
+Update references
+Select the references that you want to fix and click the second button of the Toolbar (
+Find Files
+). This will allow you to search the vault for a file with that name and fix the reference.
+For more information about the Update References tool, see this
+article
+or this
+SOLIDWORKS Help page
+.
+Need a SOLIDWORKS PDM Service?
+Javelin’s team of Certified Experts provide a variety of SOLIDWORKS PDM Services including System Implementation, Health Check Optimization and Upgrades. Learn more about our
+SOLIDWORKS PDM Services »

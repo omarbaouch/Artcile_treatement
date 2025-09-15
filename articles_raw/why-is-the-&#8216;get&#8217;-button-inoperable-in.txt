@@ -1,0 +1,26 @@
+I have all the appropriate folder and state permissions, and I can view and save a file via the history dialog, so why is the SOLIDWORKS PDM Get disabled?
+SOLIDWORKS PDM Get Inoperable
+This is due to a user setting within the vault; ‘
+Always work with latest version of files
+’.  Which forces the latest version to always be cached.
+To remove this option;
+Administration Tool
+>
+Users
+>
+[Username] Right-Click
+>
+Settings
+SOLIDWORKS PDM Administration
+Reference Dialog > ‘
+Always work with latest version of file
+‘
+Clear this if you’d like to Get previous versions via the history dialog (Explorer > Select file > Right-click > History)
+Always work with latest version of files
+As the above image shows; there is an option ‘
+Enable the get version command in SOLIDWORKS Add-in
+‘ and with this enabled means that even with the setting ‘Always work with latest version of file’ on, we can Get a previous version via the add-in;
+Get previous version through SOLIDWORKS Add-in
+Interested in further SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

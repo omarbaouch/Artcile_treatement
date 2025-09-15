@@ -1,0 +1,27 @@
+Aras PLM is a full-featured, business-ready product lifecycle management software solution built on top of SOLIDWORKS® PDM Professional that extends PDM and related engineering business processes and drives cross-functional collaboration enterprise-wide.
+Aras PLM delivers powerful capabilities that are highly sought-after by companies that run SOLIDWORKS PDM Professional including:
+A complete engineering BOM
+that’s ready for release to manufacturing.
+Enterprise-wide
+business process management
+for change control across your company and your connected supply chain.
+Stage-gate
+project management
+process that seamlessly connects your product items to a project plan as deliverables and milestones.
+Watch our on-demand webinar below as we discuss how to add BOM and Configuration Management to your current SOLIDWORKS PDM system.
+Bill of Material Management
+BOM management with Aras helps organizations connect and manage multiple sources of information in a single database. Easily create and maintain structured, multi-level bill of materials for each stage of the product lifecycle. Easily synchronize EBOMs and MBOMs for clear visibility into cross-disciplinary change statuses through, design, manufacture and service.
+Aras PLM BOM Management
+During the webinar you will learn:
+How to select alternate/substitute parts
+Applying options (variants) and configuration rules
+BOM redlining and comparison
+Target-estimated-calculated-actual weight and cost
+Viewing multiple BOM views
+Configuration Management
+Aras PLM Configuration Management provides a comprehensive methodology for managing the configuration (hierarchical set of information) of a product or system throughout its life.
+Aras Part Lifecycle
+During the webinar you will learn:
+How Aras PLM provides configuration identification, control, status accounting and verification
+How to track baselines at different stages of the product lifecycle, e.g. as-designed, as-built, as-maintained
+How to utilize graphical online business process workflows with email notifications and reminders

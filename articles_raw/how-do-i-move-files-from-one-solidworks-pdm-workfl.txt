@@ -1,0 +1,17 @@
+A question I often come across while on tech support is:
+How do I move files from one SOLIDWORKS PDM workflow to another?
+When a new SOLIDWORKS PDM workflow has been created and additional logic and transitions or states added. There is a need to move many existing files over to the new workflow, the following steps are recommended:
+Right-Click in the open area of the old workflow and select “New Workflow Link”
+New Workflow Link
+Select the Workflow Link Properties, new workflow where the files will be moved and the state files need to be moved to
+Workflow Link Properties
+Add a transition from current state of the files to the “New Workflow Link” and assign permissions to users/groups to access the new transition and save the workflow
+SOLIDWORKS PDM workflow New Transition/Permissions
+Right-Click on the file, select Move to Customer Parts Workflow under State Change
+Move to New Workflow
+Press OK to change the workflow
+Transition the files to the New Workflow
+Files are in the new workflow/state
+Files updated
+NOTE
+: Validate any workflow changes in a test environment BEFORE making any such global changes in a live production system.

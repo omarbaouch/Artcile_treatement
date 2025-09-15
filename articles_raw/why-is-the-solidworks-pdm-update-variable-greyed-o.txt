@@ -1,0 +1,34 @@
+A question I run into often while on tech support is:
+“Why is the SOLIDWORKS PDM
+Update Variable
+checkbox greyed out when using the
+Set Revision tool
+?”
+Set Revision – Update Variable Greyed Out
+The minimum permissions required to use
+Set Revision
+are;
+Folder Permission
+Set Revision
+State Permission
+Set Revision
+But to also update the variable will require;
+Folder Permission
+Check out file
+State Permission
+Check out file
+Set Revision – Update Variable – Required Permissions
+With the
+Check out file
+permission added, you’ll be able to also update the variable when using
+Set Revision
+;
+Set Revision
+If you’re of the mindset that the
+Check out file
+permissions shouldn’t be necessary to update the variable, you’re not alone.  There’s an existing enhancement request to have this requirement removed;
+SPR# 898366
+: ‘Set Revision’ feature should not require ‘Check Out File’ permission to increment revision without update to variable (data card).
+If this sounds appealing, you can vote on this via the
+SOLIDWORKS Customer Portal
+.

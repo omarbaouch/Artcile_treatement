@@ -1,0 +1,33 @@
+An existing file set can be duplicated, perhaps to be re-used as a starting point for a new project, within the SOLIDWORKS PDM Vault using the Copy Tree command.
+However an issue that may come up is that the source files that the
+Copy Tree
+is performed on most likely contain certain project specific information, and revision values that are already written to their data card variables.
+For example let’s use Copy Tree to create a copy of a ‘Base’ assembly shown in the figure below:
+Copy Tree command selected
+The referenced assembly files are selected automatically by the Copy Tree tool as shown below:
+Copy Tree Dialog
+When the copy is complete you can see in the figure below that the copied assembly data card includes the original variable values such as assy number, revision, description etc.
+Copied file metadata
+After the files have been copied, it can be a time consuming, and potentially error filled process to manually clear all of these data card variables.
+Automatically clearing Copy Tree data variables
+Thankfully, we can specify which data card variables should automatically have their variables cleared when the Copy Tree command is performed.
+This is set by going to the PDM Administration console, right-clicking on the Users node and selecting “Settings”.
+In the Settings dialog:
+Pick
+Copy Tree
+from the list
+Click on the
+Add…
+button to add a file type, you can simply leave the default value of *.* to have the same settings affect all file type, or if different data card variables are being populated for different file types, you can create a unique list of variables to update for each file extension.
+Click the
+Add Variable
+button and then specify the variable that should be changed by the Copy Tree.  Leave the Value field blank to simply have that variable be cleared.
+Pick
+OK
+to finish
+Next time you use Copy Tree the variable[s] will follow the instructions you entered in the SOLIDWORKS PDM Admin settings.
+Copy Tree Settings
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about administering SOLIDWORKS PDM either online, in-class, or on-site at your office.

@@ -1,0 +1,52 @@
+
+<p>If your <a href="https://www.javelin-tech.com/3d/solidworks-toolbox/" target="_blank" rel="noopener">SOLIDWORKS Toolbox</a> is stored within the vault, you have the option to <a href="https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/">manually upgrade it</a>, or my preferred method is to use the Installation Manager as I&#8217;ve outlined here:</p>
+<h2>How to upgrade SOLIDWORKS Toolbox using the Installation Manager</h2>
+<p>In this scenario, the upgrade is complete on the server using the <a href="https://www.javelin-tech.com/blog/2020/10/solidworks-pdm-upgrade-checklist/">PDM Upgrade Checklist.</a> Now, we&#8217;re finally ready to upgrade SOLIDWORKS and PDM Client to the new major version. </p>
+<blockquote>
+<p><strong>NOTE</strong>: SOLIDWORKS Toolbox only needs to be upgraded once, so we&#8217;re going to include it in the first SOLIDWORKS workstation being upgraded, the rest will be able to update SOLIDWORKS and PDM at the same time and the toolbox will be skipped.</p>
+</blockquote>
+<h3>Preparing the toolbox for upgrading</h3>
+<ul>
+<li>Log in to the vault, preferably as &#8216;Admin&#8217; but any account with full permissions will suffice</li>
+</ul>
+<div id="attachment_65820" style="width: 326px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65820" class="wp-image-65820 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Logged-in-as-Admin.png" alt="" width="316" height="241" title=""><p id="caption-attachment-65820" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65820 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Logged-in-as-Admin.png" alt="" width="316" height="241" title=""></noscript> Logged in as Admin</p></div>
+<ul>
+<li>Perform a &#8216;Get Latest&#8217; on the toolbox folder to cache the most up to date version of all the files</li>
+</ul>
+<div id="attachment_65819" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65819" class="wp-image-65819 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Get-Latest-on-Toolbox-600x487.png" alt="" width="600" height="487" title=""><p id="caption-attachment-65819" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65819 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Get-Latest-on-Toolbox-600x487.png" alt="" width="600" height="487" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Get-Latest-on-Toolbox-600x487.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Get-Latest-on-Toolbox-768x624.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Get-Latest-on-Toolbox.png 809w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Get Latest on the Toolbox folder</p></div>
+<ul>
+<li>Check out the database file
+<ul>
+<li>Default Location; <em>[Vault Name]\[Toolbox Path]\lang\english\swbrowser.sldedb</em></li>
+</ul>
+</li>
+</ul>
+<div id="attachment_65816" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65816" class="wp-image-65816 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-Out-Toolbox-Database-600x315.png" alt="" width="600" height="315" title=""><p id="caption-attachment-65816" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65816 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-Out-Toolbox-Database-600x315.png" alt="" width="600" height="315" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-Out-Toolbox-Database-600x315.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-Out-Toolbox-Database-768x404.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-Out-Toolbox-Database.png 961w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Check out the database file</p></div>
+<h3>Completing the upgrade</h3>
+<p>Start the installation manager, and complete the SOLIDWORKS upgrade with the appropriate settings.</p>
+<ul>
+<li>On the Summary Tab
+<ul>
+<li>Toolbox/Hole Wizard Options &gt; Select <strong>Change</strong></li>
+</ul>
+</li>
+</ul>
+<div id="attachment_65822" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65822" class="wp-image-65822 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Use-an-existing-SOLIDWORKS-Toolbox-600x530.png" alt="" width="600" height="530" title=""><p id="caption-attachment-65822" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65822 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Use-an-existing-SOLIDWORKS-Toolbox-600x530.png" alt="" width="600" height="530" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Use-an-existing-SOLIDWORKS-Toolbox-600x530.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Use-an-existing-SOLIDWORKS-Toolbox.png 749w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Change Toolbox/Hole Wizard Options</p></div>
+<ul>
+<li>Ensure <strong>Use an existing SOLIDWORKS Toolbox</strong> is selected and the path is correct</li>
+</ul>
+<div id="attachment_65814" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65814" class="wp-image-65814 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Change-Toolbox-Hole-Wizard-Options-600x530.png" alt="" width="600" height="530" title=""><p id="caption-attachment-65814" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65814 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Change-Toolbox-Hole-Wizard-Options-600x530.png" alt="" width="600" height="530" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Change-Toolbox-Hole-Wizard-Options-600x530.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Change-Toolbox-Hole-Wizard-Options.png 749w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Use an existing SOLIDWORKS Toolbox</p></div>
+<ul>
+<li>Complete the upgrade then check in the swbrowser.sldedb file</li>
+</ul>
+<h3>Validation</h3>
+<ul>
+<li>Ensure the swbrowser.sldedb updated by verifying the timestamp</li>
+</ul>
+<div id="attachment_65826" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65826" class="size-medium wp-image-65826 lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Ensure-the-swbrowser-file-updated-600x292.png" alt="" width="600" height="292" title=""><p id="caption-attachment-65826" class="wp-caption-text"><noscript><img decoding="async" class="size-medium wp-image-65826 lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Ensure-the-swbrowser-file-updated-600x292.png" alt="" width="600" height="292" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Ensure-the-swbrowser-file-updated-600x292.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Ensure-the-swbrowser-file-updated-768x374.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Ensure-the-swbrowser-file-updated.png 774w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Verify the swbrowser.sldedb file was updated</p></div>
+<ul>
+<li>Check in swbrowser.sldedb to make the updated version available to other users</li>
+</ul>
+<div id="attachment_65815" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-65815" class="wp-image-65815 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-in-swbrowser-600x310.png" alt="" width="600" height="310" title=""><p id="caption-attachment-65815" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-65815 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-in-swbrowser-600x310.png" alt="" width="600" height="310" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-in-swbrowser-600x310.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-in-swbrowser-768x397.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/04/UT-Check-in-swbrowser.png 934w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Check in swbrowser.sldedb</p></div>
+<h3>Additional Steps</h3>
+<p>Prior to upgrading any additional SOLIDWORKS workstations to the new version, <strong>perform a Get Latest on the Toolbox folder</strong>, then the latest version will be cached and the installation manager will skip the Toolbox upgrade on those machines.</p>

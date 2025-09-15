@@ -1,0 +1,96 @@
+SOLIDWORKS Workgroup PDM (WPDM) software helps individuals and small workgroups manage projects and control their design revisions.
+The simple data vault of WPDM provides file security with little IT support, and its tight integration with SOLIDWORKS design software makes WPDM easy to learn. Advanced search, notifications, and secure file access increase productivity across your entire design group.
+WPDM is Included with the SOLIDORKS Premium and SOLIDWORKS Professional packages. If you have a SOLIDWORKS standard license, you need to get a WPDM license to be able to install it.
+Use the steps below for a SOLIDWORKS Workgroup PDM Installation on both your server and client machines.
+Server Side
+Creating a Vault
+The best practice is to use SOLIDWORKS installation manager for all SOLIDWORKS installations.  This can be started by inserting a SOLIDWORKS DVD or navigating to the downloaded files and double clicking on the
+setup.exe
+.
+1- On the welcome page for the installation type, choose choose
+Server products
+; this will expand a list of these types of programs. Select
+Install SolidWorks Workgroup PDM Server (vault) on this computer
+. Then, press the
+Next
+button to continue.
+2- The Summary page will show you the installation location and the products to be installed under the SolidWorks Workgroup PDM Server heading. Download Options allow you to change the location of the source files. Click the
+Change
+in front of SOLIDWORKS Workgroup PDM Server.
+3- In the next page you can modify these settings.
+Installation location
+Workgroup PDM Vault: this is where your actual data (files & metadata) is going to be stored. If you are upgrading an existing vault, be sure this is the same location you were using originally. If you are loading for the first time, the vault data can reside at any networked drive. Though it is
+HIGHLY RECOMMENDED
+this location reside on the same physical server as the PDM service is being loaded under
+Installation
+location.
+You will need to obtain a
+Validation Code
+to install your vault. Enter your email address and choose a validation method. Your serial number should automatically be populated. If you wish to
+Validate automatically over the internet
+, click
+Get Code
+to automatically retrieve your validation code. If you wish to
+Validate manually by email
+, please follow the on-screen instructions to obtain your validation code. Once the validation code has been entered, press the
+Back to Summary
+button to continue.
+4- Press the
+Install
+(or
+Download and Install
+) button to continue. Follow the steps till the end and press the
+Finish
+button to complete the installation.
+Vault Administrator installation
+Once the WPDM server is installed we need to install the WPDM AdminTool on the server. The SolidWorks Workgroup PDM VaultAdmin program is a tool that allows administrators to control vault settings and user access. It is also the tool for setting up the revision scheme, life cycles and other vault options.
+1- Insert your DVD or navigate to the downloaded files folder. Start the
+setup.exe
+and on the welcome page for the installation type, choose
+Individual
+or
+Modify the individual installation
+and press the
+Next
+button.
+2- Enter your SolidWorks serial number on the following page. With SOLIDWORKS Professional or Premium licenses you do not need to enter a serial number for SolidWorks Workgroup PDM. But, if you have a SOLIDWORKS Standard license then you need to purchase and enter your SolidWorks Workgroup PDM serial number too. Press
+Next
+after you have entered your serial numbers.
+3- Select the SolidWorks Workgroup PDM VaultAdmin component and deselect all other SolidWorks programs and then select
+Next.
+4- Press the
+Install Now
+or
+Modify Now
+to continue. The Vault AdminTool will be installed on your server.
+Client Side
+When you are done installing WPDM on the server it is time to install and set it up on the client machines. To install WPDM on the client machines follow the steps below:
+1- On an existing SolidWorks client machine, use Control Panel to change the SW installation.
+2- In Installation Manager,
+modify the individual installation
+.
+3- With Professional or Premium you do not need to select SolidWorks Workgroup PDM, just click Next. But, if you have a SOLIDWORKS Standard license then you need to purchase and enter your SolidWorks Workgroup PDM serial number too. Press
+Next
+after you have entered your serial numbers.
+4- Expand
+SolidWorks Explorer/Workgroup PDM
+section and check off
+SOLIDWORKS Workgroup PDM x64 Client Add-in.
+Click
+Next
+and then
+Modify Now
+to install.
+5- When installation of WPDM on client machines is finished, there are a few configurations that should be done before users can actually use WPDM on their machines.
+The first step is to enable the WPDM Add-In in SOLIDWORKS. To do so go to Tools->Add-Ins and check off WPDM add-in and press
+OK
+. The log in window will pop up asking for the name of the server and your credentials.
+The most important option to setup on client side is the “local save in folder”. This is where the projects will be saved temporary when they are checked out of the vault. To setup this folder right click on the vault view and select
+SolidWorks Workgroup PDM options.
+Within the “SolidWorks Workgroup PDM options” window switch to the
+Folder
+tab and then set the folder you want to use as your “local save in folder”.
+Workgroup PDM Troubleshooting
+If you have installed Workgroup PDM on your server and clients machines and having problem, you can use this
+article
+on basic troubleshooting of Workgroup PDM

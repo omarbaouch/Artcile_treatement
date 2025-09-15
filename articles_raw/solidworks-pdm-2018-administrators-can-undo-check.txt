@@ -1,0 +1,21 @@
+New in SOLIDWORKS PDM 2018;
+Administrative Permission –
+Can undo check out files checked out by other users
+.
+Administrative Permissions – can undo files checked out by other users
+Previously in SOLIDWORKS PDM only the default ‘admin’ user account could undo the check out of files
+checked out by other users or in other views.
+Why might this permission be useful?
+When a file is checked out from the vault; the database will store information about which user, client computer and vault view that file is checked out on.  When the file is checked back in, the same information is matched against the checkout information to ensure the file is being checked in from the same client view and computer.  If an attempt is made to check in a file that was checked out from a different file vault view, you’ll be greeted with a warning showing that the information doesn’t match; ‘
+The file is checked out on another computer
+‘ blocking the check-in.
+Example scenario 1
+A user had several files checked out and suffered a hard drive failure resulting in a new local view having to be created on their machine.  This user will be unable to check in the files that they had previously checked out, as the new vault view has a different view ID and doesn’t match the checked out information in DB.  In this scenario any user with the ‘
+can undo check out files checked by other users
+‘ can undo the checkout and release the checked out status reverting the file back to the last version to be checked in to the vault.  From here, the user will be able to check out/in the files again as desired.
+Example scenario 2
+A user has left for a month of vacation, and forgot to check in everything he/she was working on.  This has caused big problems as other users need to make changes to the files, and the project is due tomorrow!  Within this environment, nobody has access to the vacationing users’ machine, as passwords are not shared anywhere.  Again; in this scenario, any user with the ‘
+can undo check out files checked by other users
+‘ can undo the checkout and release the checked out status reverting the file back to the last version that was checked in to the vault.  From here, others users will be able to check out/in the files again as desired.
+WARNING!
+When using undo check out it will discard any local changes made to the cached file since being checked out.  Please use with caution.  Recommend this permission be limited to vault administrators.

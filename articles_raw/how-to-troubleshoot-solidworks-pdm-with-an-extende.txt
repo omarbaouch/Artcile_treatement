@@ -1,0 +1,23 @@
+Updated 2025-06-04
+When troubleshooting problems within SOLIDWORKS PDM, especially performance issues, it’s important to ensure the client has a strong connection to the server components.  Often, tech support will request an extended ping test, to look for issues.
+How to complete an extended ping test with log
+In Windows 10
+Start button > RMB > Run
+CMD
+Run CMD
+Ping <Database/Archive Server Name> -t -l
+1350
+>C:\temp\Pingtest.txt
+Let it run for a sample amount of time, then stop the test by pressing
+CTRL-C
+.
+The command will be completed, and a log file generated on the C-Drive;
+This can then be sent to tech support for further analysis.
+Additional Notes
+The above test is using an increased packet size of
+1350
+, this improves the quality of the test to a size more comparable with PDM communications.
+Any listings of ‘Request timed out’ or dropped packets would indicate an issue.
+If multiple tests are required (network communication can vary) editing the command from ‘>’ to ‘>>’ will append the existing log, rather than replacing it, so multiple tests can be captured within the one log.
+2025-06-04…Update Details
+This article was updated to reduce the sample packet size from 1500 to 1350 as within some environments a packet size of > 1400 could cause IP fragmentation / reassembly on the link to measure.

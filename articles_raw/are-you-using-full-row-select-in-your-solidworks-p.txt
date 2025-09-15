@@ -1,0 +1,14 @@
+SOLIDWORKS PDM Full Row Select is one of the most useful interface options in the PDM Vault View and is often one of the most commonly overlooked.
+This feature allows you to select a file by clicking in any column, not just the file name.  This can be a real time saver if you have many columns in your vault view.
+SOLIDWORKS PDM Full Row Select enabled
+NOTE: To use Full Row Select effectively you should
+have your Vault View set to use Detail View
+.
+In your SOLIDWORKS PDM Vault View pick on
+Display
+>
+Options
+>
+Full Row Select
+to enable this interface option.
+Display > Options > Full Row Select

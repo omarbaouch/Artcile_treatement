@@ -1,0 +1,21 @@
+Are you receiving a SOLIDWORKS PDM login prompt when you create a new email in Microsoft Outlook 2016? Read on to learn how to disable the Outlook SOLIDWORKS PDM Login.
+Login Prompt when creating a new email in Outlook 2016
+The Outlook SOLIDWORKS PDM Login is caused by the new Attach File feature in Outlook 2016, which provides a list of recent items;
+Outlook Recent Items
+You can cancel the login prompt and proceed to create your email.  However, if you do not want this prompt to appear anymore you will need to disable the recent items feature within Outlook via the registry;
+Please note that caution should be taken when editing the registry
+, as changing or deleting the wrong key, can affect other programs, or the operating system. If you not are familiar with Windows Registry, please have someone who is, do this for you.
+Activate the
+Registry Editor
+(search for Regedit in the Windows Start menu)
+Browse to the key
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail
+Note: If the sub key ‘Mail’ doesn’t exist, you can create it.
+Within the Mail key, create a new DWORD (32-bit) value
+Name it
+MaxAttachmentMenuItems
+and
+set the value to 0
+After you
+restart Outlook
+the list of recent items should be disabled and you’ll no longer be prompted to login to the vault when forwarding that chain letter

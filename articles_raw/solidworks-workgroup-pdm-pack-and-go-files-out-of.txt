@@ -1,0 +1,12 @@
+If you are managing your SOLIDWORKS files using Workgroup PDM, you may have wondered how you can package up file sets so that you can share them with others.
+When managing your SOLIDWORKS files using Windows Explorer you can use Pack and Go, and when using Enterprise PDM there is the Copy Tree command, but where is this functionality in Workgroup PDM?
+No Pack And Go
+There isn’t any direct command within the Workgroup PDM interface that will allow us to extract and package a file set from the vault, however with a couple extra steps we can work around this. As shown in the video below:
+SOLIDWORKS Workgroup PDM Pack And Go Process
+While SOLIDWORKS Workgroup PDM stores all documents in a central vault that can only be accessed through the WPDM add-in, it does create local copies of these files whenever they are checked out, placing them in a regular Windows Explorer folder.
+The local folder where the files will be placed on check out can be specified in the option settings for Workgroup PDM.
+To access this, right click on the Vault in the SOLIDWORKS Task Pane and select “Workgroup PDM Options”.
+Go to the “Folders” tab and set “My SOLIDWORKS Workgroup PDM Documents – default save in folder for Open and Check-Out” to “Use Folder” and create a special folder for the SOLIDWORKS documents from the vault to go to.
+Now when you “Open/Check out” any Assembly or Drawing, as long as the “Get local copy” option is checked, the full file set will be copied to the folder that you have just selected.
+Navigating to that Windows Explorer folder and right clicking on the Assembly or Drawing file will give you the option to perform a Pack and Go in the SOLIDWORKS fly out menu.
+Pack and Go

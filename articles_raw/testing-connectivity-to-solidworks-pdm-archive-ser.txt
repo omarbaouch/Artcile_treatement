@@ -1,0 +1,30 @@
+In order to troubleshoot SOLIDWORKS PDM connectivity issue between the Archive Server and client, a simple ping test can be used. The ping test is performed on the client computer.
+From inside Windows “Start”, select run and type in CMD.
+In the command dialogue box enter ping followed by the archive server (ping <server name>). This simple test will determine if the client computer can see the archive server.
+Ping Test Results
+Being able to ping the server may not be sufficient to discover problems though. Slow connections lead to poor performance and not being able to access data. To test for slow connections, we can increase the pack size, using the following syntax:
+ping <server name> -t -l 1350
+The -t option will ping the <server name> continuously until stopped by the user. Pressing
+Ctrl-C
+on your keyboard to stop the ping test.
+The -l option defines the packet size to be used in the test.  A normal ping packet is only 8 bytes which is not a good test of actual TCP packets. The above continuous ping test is using an increased packet size of
+1350
+; this improves the quality of the test to a size more comparable with PDM communications
+Ping Test Results
+Any dropped packets or excessive latency times indicate a problem with the connection to the server. There are many variables that can determine the impact of slow connections, but the below values can be used as a general guide.
+<40 ms is normal in a local network environment
+<80 ms is workable for an internet connection, but problems can occur when accessing larger amounts of data. This value is high for a local network environment
+>80 ms performance issues will be noticeable and failures will occur
+>120 ms performance degradation will be quite noticeable and the number of failures will increase significantly
+>200 ms connection issues are critical and access to data may not be possible.
+Being able to connect to the server is only one aspect that needs to be looked at, communication issues may also need to be addressed. My colleague’s article “
+How to Perform a Telnet Test
+”
+The PDM User log can be helpful in determining if there are communication issues. Socket errors or messages that show failures to access the database or archive server are often related to socket errors.
+Accessing the PDM User Log
+The Archive Server log can be used to determine if the issue is related to one user’s computer or multiple user’s computers, by looking at the reported IP addresses. If only one user’s computer is reporting communication issues, then the issue is likely localized to that one user.  If there are multiple IP addresses reporting communication issues, then the issue is likely with the PDM server(s) or the network.
+Accessing the Archive server Log
+With many people working from home, communication issues have become more frequent. This is usually a result of high latency that can be associated with VPN connections.  Our blog, “
+Using SOLIDWORKS PDM Remotely
+” discusses some of the things that may mitigate communication issues when working from home.
+While your SOLIDWORKS Value Added Reseller can provide advice on some aspects of communication issues, resolving these issues is mainly the responsibility of your IT department.

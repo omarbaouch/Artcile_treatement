@@ -1,0 +1,50 @@
+Starting with the 2015 release SOLIDWORKS Enterprise PDM now uses the SolidNetWork License Manager program instead of a license file.
+If you already are using the SolidNetWork License Manager program for your SOLIDWORKS license[s] you may wish to simply add the EPDM license[s] to the existing license server instead of installing a second instance of the program.
+Add Enterprise PDM licenses to an existing SolidNetWork License Manager
+These are the steps to add your Enterprise PDM licenses to an existing SolidNetWork License Manager:
+Step 1:
+Make sure the SolidNetWork License Manager software release year matches the EPDM software release. (ie. EPDM 2015 will require the 2015 SNL Manager).  The SOLIDWORKS client installations do not necessarily need to be upgraded, EPDM 2015 and the 2015 SNL Manager are both compatible with older versions of SOLIDWORKS.
+SolidNetWork License Manager software release
+Step 2:
+Go to the
+Windows Control Panel
+>
+Programs and Features
+then select the
+SolidNetWork License Manager
+and click
+Change
+.  In the installation manager window select the option to “
+Modify
+” the installation then click
+Next
+.
+Modify Installation
+Step 3:
+Click “
+Install
+“, then on the
+License Information
+screen, add a comma to separate the two serial number then the full 24 digit EPDM serial number.  (If you do not have your full 24 digit EPDM serial number you can retrieve it from the My Products section of your SOLIDWORKS Customer Portal Account).
+Begin Installation
+License Information
+Step 4:
+Once the installation is modified you will need to reactivate the SolidNetWork License Manager to complete the licensing process.  Launch the SNL Manager program, then on the
+Server Administration
+tab click the “
+Modify
+” button.
+Modify License Information
+Step 5
+:  Select the option to “
+Activate/Reactivate a software license
+“.  Click “
+Next
+“.
+Activate/Reactivate a software license
+Step 6
+:  Make sure all products are selected and click “
+Next
+” to complete the activation.
+Select All Products
+Here is a video demonstration of the procedure described above:

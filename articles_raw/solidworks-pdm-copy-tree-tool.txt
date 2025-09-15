@@ -1,0 +1,17 @@
+SOLIDWORKS PDM Copy Tree offers the same functionality as SOLIDWORKS Pack & Go, but it contains file management tools that are built specifically for use with SOLIDWORKS PDM.
+Copy Tree is available from the Tools pull-down of the local vault view.
+Tools Menu, Local View
+As with Pack & Go, the files can be copied to a different folder, including a folder outside of the local vault view. The files can also be saved to a zip file. Since this is a PDM tool, a user can choose which version to use.
+Copy Tree settings
+Similar to Pack & Go, a user can specify what related items can be included in the Copy tree bundle. This includes Simulation results and associated drawings. If drawings are included, they can be renamed after their associated components. Relative paths will maintain the same folder structure as the original file set. The option to ‘regenerate serial number in cards,’ will assign the next serial number, if serial numbers are used in data cards. The use of Serial Numbers requires having a Serial Number defined in PDM Administration. PDM Professional is required to use Serial Numbers.
+Copy Tree Options
+The Transform option allows the adding of a prefix or suffix to the file name, or replacing a text string in the file name. The option to ‘Rename with serial number,’ will generate new serial numbers for the copied components. Using ‘Rename with serial number,’ requires having a serial number defined in PDM Administration. PDM Professional is required to use Serial Number.
+Transform Options
+The selected component and all related files will be displayed, in a list. The user can choose which components to copy. There is a filter to make it easier to find listed files.
+Files to Copy
+The Destination Folder Path and the Target File Name can be specified for individual files, from the same list of components.
+Define Indvidual File Path and Name
+If there are multiple warnings, these can be viewed using the up and down arrow keys.
+File Warning Options
+The copied parts can be checked in on creation. The number of and types of files will be displayed. And, when all options have been set, selecting Copy will begin the copy process. Reset All, will reset all transform operations settings to the defaults.
+Starting Copy

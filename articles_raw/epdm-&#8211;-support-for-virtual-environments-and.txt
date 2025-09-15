@@ -1,0 +1,10 @@
+Recently I have come across issues with NAS drives being used for the SolidWorks Enterprise PDM Archive. If you are considering using these appliances, please review the below statement, from SolidWorks, first.
+Due to the
+many configurations and wide variety of virtual applications, Network Attached Storage (NAS), and Storage Area Network (SAN) appliances, it is not possible for SolidWorks to replicate all the permutations. SolidWorks therefore cannot certify the use of SolidWorks products operating in a virtual environment and on NAS and SAN devices.
+The Enterprise PDM Vault, Workgroup Vault, and SNL license servers may operate without issue in these environments, however such configurations are unsupported.
+Known Issues
+The use of replication capabilities available with NAS and SAN devises may interfere with the Enterprise PDM Archive server replication.
+Virtual environments force SolidWorks, eDrawings, and DraftSight to run in Software OpenGL mode resulting in significant graphics performance degradation
+If software issues arise on an installation that utilizes these environments, SolidWorks and the Value Added Reseller will attempt to reproduce the issue on supported environments, and if validated, will pursue a solution.
+UPDATE: The above is only valid for installations prior to SOLIDWORKS EPDM 2015. Please use the below link for Virtual Environments which are supported for SOLIDWORKS EPDM 2015
+Supported Virtual Environments

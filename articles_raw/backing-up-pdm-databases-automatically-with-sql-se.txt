@@ -1,0 +1,117 @@
+Proper backups are an essential part of data management.  For SOLIDWORKS PDM, there are two key elements that must be backed up to ensure that data is safe, the
+vault archives
+, and the
+vault database
+.
+The vault archives are copies of the actual files stored in the vault.  They are organized in folders managed by the Archive Server.
+The vault database contains all the information about those files, the history, the variable values as well as the Vault settings.
+With SOLIDWORKS PDM Professional, the database is typically hosted on Microsoft SQL Standard or Enterprise, which include the
+SQL Server Agent
+service.  This service can be used to automatically create a .bak file backup of the PDM database based on a schedule set up in a maintenance plan.
+Please Note:  SOLIDWORKS PDM Standard vaults must be hosted on Microsoft SQL Express, which does not include the SQL Server Agent.  PDM Standard databases must be backed up using a different method.
+The backups for the SQL database and of the Archive Folders should be as synchronous as possible so the schedule in the maintenance plan should be set up to closely align with the Archive backups.  These backups should be performed
+daily
+.  The sql maintenance plan should include two tasks, the backup file creation, and the backup file cleanup which will delete older backup files after a certain number of days.
+As with the Archive Folder backups, it is highly recommended that the SQL database backups be copied from the server to an external backup drive each night.
+Creating an SQL Maintenance Plan for Database Backups
+Step 1
+:  Ensure that the
+SQL Server Agent
+service is running.  Launch the
+SQL Server Configuration Manager
+program and verify that the
+SQL Server Agent
+is currently running. If it is not, right click the Agent and click
+Start
+.
+Step 1 – Start SQL Server Agent
+Step 2
+:  Launch the Microsoft SQL Server Management Studio and log into the instance hosting the vault database(s).
+Step 3:
+Expand the
+Management
+folder in the Object Explorer then right click on the
+Maintenance Plans
+folder and select the
+Maintenance Plan Wizard
+command.
+Step 4
+:  When the Wizard launches the starting page explains further what functions can be automated using the Maintenance Plan.  We will focus here on performing database backups.  Click
+Next
+to proceed.
+Step 5
+:  On the
+Plan Properties
+scree, set a name for the maintenance plan, and ensue that the plan is set to
+Single schedule for the entire plan or no schedule
+. Click
+Change
+to set the schedule for the plan.
+Step 6:
+On the
+Job Schedule
+screen, we highly recommend that the backups be scheduled to run
+Daily
+.  Make sure that you give the Maintenance Plan enough time to complete the backup in advance of any scheduled hard disk backup you may have already set up.  Click
+OK
+to set the schedule.  Back on the
+Plan Properties
+screen click
+Next
+to continue.
+Step 7:
+On the
+Select Maintenance Tasks
+screen, check the box to select the
+Back Up Database (Full)
+task, and the
+Maintenance Cleanup Task
+. Then click
+Next
+to continue.
+Step 8:
+On the
+Task Order
+screen the default order should be maintained. Click
+Next
+to continue.
+Step 9:
+On the
+Define Task
+screen for the Backup task, first, select the
+Databases
+to be backed up.  Ensure that the SOLIDWORKS PDM Vault database(s) and the
+ConisioMasterDb
+are checked.
+Step 10:
+Switch to the
+Destination
+tab and set the folder path where the backup files should be created.  Ensure that the backup extension is set to
+bak
+(
+do not
+include the “.” separator) and that the task is set to
+Create a backup file for each database
+.  Click
+Next
+to continue.
+Step 11
+:  On the
+Define Task
+screen for the Maintenance Cleanup Task, set the task to delete
+Backup files
+, and specify the folder path where the backup files are being included. Set the file extension to
+bak
+(
+do not
+include the “.” separator).  Set the number of backups to keep, typically between 7 to 14 days of backups, depending on your company’s protocols. Click
+Next
+to continue.
+Step 12
+:  On the Report screen, you have the option to set a custom path for the task report file. Click
+Next
+to continue.
+Step 13
+:  Finally, review settings and click
+Finish
+to complete the Maintenance Plan Wizard.

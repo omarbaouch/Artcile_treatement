@@ -1,0 +1,23 @@
+Issue
+: the recent Windows Security Update (KB5003637) released in June 2021, may break the integration of Adobe Reader ActiveX within SOLIDWORKS PDM. This can result in a black window when previewing a PDF, or on some systems, this may cause SOLIDWORKS PDM to crash! There have also been reports that right-clicking a PDF and trying to use “Open With” to open the file in either Adobe or Chrome will crash Windows Explorer.
+Solution
+: This
+3DEXPERIENCE Technical Partners Community article
+provides details on this alert and a potential workaround for SOLIDWORKS PDM Professional. You can use your SOLIDWORKS ID to log in.
+If you are not able to access the article, please follow the instructions below
+.
+Black Preview Window for PDFs
+Solution Instructions
+First, confirm that Adobe Reader ActiveX is being used with SOLIDWORKS PDM and Windows Security Update (KB5003637) has been installed. You can check if the Windows security update (KB5003637) has been installed by doing the following.
+Right-click on Windows START and run Windows PowerShell(Admin)
+Checking if Windows Security Update (KB5003637) is Installed
+Type ‘get-hotfix’ at the command prompt and press the enter key on your keyboard. This will list all of the Windows updates on your system.  Look for all the highlighted updates shown in the below image, to confirm that Windows Security Update (KB5003637) is installed on your system.
+Installed Windows Security Update (KB5003637)
+If Security Update (KB5003637) is installed on your system, you are using Adobe Reader ActiveX in conjunction with SOLIDWORKS PDM Professional, and you are experiencing problems with previewing PDF’s, please try the following workaround.
+Start the Windows Registry Editor and navigate to HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\FileFormats\.pdf
+Double-click “4” to edit this key, and leave only “InsoPlugin.dll”
+Editing Registry Key “4”
+Restart your computer
+NOTE: incorrect changes to the Window Registry, can cause installed applications or Windows to fail.
+Use caution when making changes to the Windows Registry, or have an IT professional make these changes for you.
+There is no workaround available for SOLIDWORKS PDM Standard as Oracle Viewer is not part of that product.

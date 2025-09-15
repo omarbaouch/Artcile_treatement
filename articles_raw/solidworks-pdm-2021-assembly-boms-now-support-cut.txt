@@ -1,0 +1,14 @@
+Starting in SOLIDWORKS PDM 2021, Cut List items can be shown as children of their part files in any Bill of Materials (BOMs), not only in the part Cut List or Weldment BOMs, as was the case until SOLIDWORKS PDM 2020. This makes it much easier to visualize and export a complete BOM structure with all sub-assemblies, parts, and cut list items.
+To enable this, open the desired BOM in the Administration Tool and check the option
+Include cut list references.
+Configuring a BOM with a Cut List
+Next, select either
+Weldment Cut List
+or
+Weldment BOM.
+Similar to the existing part BOMs, the former will show each unique cut list part as a single item, while the latter will group all parts of the same profile, regardless of their length.
+Finally, map the properties to the BOM column names, using the
+Columns
+box shown above. Those property names must coincide for both physical files (e.g. parts) and cut list items.
+Once you finish and save this configuration, the cut list items will be included as children of their parts in any BOMs where those parts are used. The image below shows the cut list items highlighted.
+SOLIDWORKS PDM BOM with Cut List

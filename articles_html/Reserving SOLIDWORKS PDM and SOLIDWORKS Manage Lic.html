@@ -1,0 +1,108 @@
+<p>Sometimes it is necessary to ensure that certain users always have a license of SOLIDWORKS PDM or SOLIDWORKS Manage available. This can be done by using the Options File for the SolidNetwork License Manager.</p>
+<p>In other posts we&#8217;ve discussed how the Options File can be used to change the <a href="https://www.javelin-tech.com/blog/2015/06/using-solidnetwork-licensing-options-file-enterprise-pdm-video/">default timeout for PDM licenses</a>, the <a href="https://www.javelin-tech.com/blog/2010/08/options-file-timeout-period/">default timeout for SOLIDWORKS licenses</a>, how to <a href="https://www.javelin-tech.com/blog/2012/10/snl-blocking-license-borrowing/">block borrowing of SOLIDWORKS licenses</a> and <a href="https://www.javelin-tech.com/blog/2010/09/reserve-licenses-on-2010-solidnetwork-license-manager-for-users-or-groups/">how to reserve just SOLIDWORKS licenses</a>, now let&#8217;s look at reserving SOLIDWORKS PDM and SOLIDWORKS Manage licenses for certain users.</p>
+<h3>How to create a Custom Options File</h3>
+<p><strong>Step 1:</strong>  Launch the SOLIDWORKS SolidNetWork License Manager program and click &#8220;Modify&#8230;&#8221; on the <em>Server Administration</em> tab.</p>
+<div id="attachment_13908" style="width: 980px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1.png"><img decoding="async" aria-describedby="caption-attachment-13908" class="wp-image-13908 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1.png" alt="SolidNetWork License Manager - Modify" width="970" height="614" title=""><p id="caption-attachment-13908" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13908 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1.png" alt="SolidNetWork License Manager - Modify" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript></a> SolidNetWork License Manager &#8211; Modify</p></div>
+<p><strong>Step 2:</strong>  Select the option to &#8220;Activate/Reactivate a software license&#8221; and then click &#8220;Next &gt;&#8221;.</p>
+<div id="attachment_13909" style="width: 980px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13909" class="wp-image-13909 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-2.png" alt="Activate/Reactivate a License" width="970" height="614" title=""><p id="caption-attachment-13909" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13909 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-2.png" alt="Activate/Reactivate a License" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-2.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-2-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-2-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript> Activate/Reactivate a License</p></div>
+<p><strong>Step 3:</strong>  On the next screen check the box beside &#8220;Options File&#8221; and click &#8220;Edit&#8221;.</p>
+<div id="attachment_13913" style="width: 980px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13913" class="wp-image-13913 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-3.png" alt="Edit Options File" width="970" height="614" title=""><p id="caption-attachment-13913" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13913 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-3.png" alt="Edit Options File" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-3.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-3-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-3-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript> Edit Options File</p></div>
+<p><strong>Step 4:</strong>  If you do not have an Options File created yet you will be presented with the option to create a new one in the default path.</p>
+<div id="attachment_13914" style="width: 997px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4.png"><img decoding="async" aria-describedby="caption-attachment-13914" class="wp-image-13914 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4.png" alt="Create Options File" width="987" height="797" title=""><p id="caption-attachment-13914" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13914 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4.png" alt="Create Options File" width="987" height="797" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4.png 987w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4-300x242.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4-640x517.png 640w" sizes="(max-width: 987px) 100vw, 987px" /></noscript></a> Create Options File</p></div>
+<p><strong>Step 5:</strong>  Now we write our Options File.  First, let&#8217;s set the Options file to be case insensitive. By default the Options file will read user and group names as being case sensitive.  This frequently leads to some confusion so avoid this, we will enable the keyword GROUPCASEINSENSITIVE:</p>
+<pre>GROUPCASEINSENSITIVE ON</pre>
+<p>Next, the groups will need to be defined.  <em><strong>These are not the groups already setup in SOLIDWORKS PDM.</strong></em>  The SNL Manager has no idea that those groups exist, so the groups for the purpose of reserving licenses MUST be explicitly defined in the Options File.</p>
+<p>The correct syntax will be to have the Option Keyword, in this case GROUP, followed by the group name, then each user name that is a member of the group, each separated by a space.  This is the PDM username NOT the Window username, which would be the case if you have set up groups to reserve SOLIDWORKS licenses.  So if you have already defined groups of users in the Options File to reserve SOLIDWORKS licenses, you may need to create entirely new groups, with different usernames to reserve the PDM licenses.  So as an example, we can define two groups for whom we want to ensure there will always be a license available, the senior designers and the PDM administrators:</p>
+<pre>GROUP senior_design scott chris joe
+GROUP administrators justin andrew</pre>
+<p>This is then followed by the actual reserve option definition.  The correct syntax will be to have the Option Keyword, in this case RESERVE, followed by the number of licenses to reserve, followed by GROUP and then the name of the group, each separated by a space.  So if we need to reserve three SOLIDWORKS PDM Professional CAD Editor licenses for the three senior designers, but just one PDM Professional Contributor license to be shared between the two administrators (who are not using SOLIDWORKS), we will add:</p>
+<pre>RESERVE 3 swepdm_cadeditorandweb GROUP senior_design
+RESERVE 1 swepdm_contributorandweb GROUP administrators</pre>
+<div id="attachment_26807" style="width: 980px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1.png"><img decoding="async" aria-describedby="caption-attachment-26807" class="wp-image-26807 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1.png" alt="Reserving SOLIDWORKS PDM Licenses" width="970" height="614" title=""><p id="caption-attachment-26807" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-26807 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1.png" alt="Reserving SOLIDWORKS PDM Licenses" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1-768x486.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-5-1-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript></a> Reserving SOLIDWORKS PDM Licenses</p></div>
+<h5>The Feature Names of the SOLIDWORKS PDM Professional products are:</h5>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Feature Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="197">CAD Editor</td>
+<td width="323">swepdm_cadeditorandweb</td>
+</tr>
+<tr>
+<td width="197">Contributor</td>
+<td width="323">swepdm_contributorandweb</td>
+</tr>
+<tr>
+<td width="197">Viewer</td>
+<td width="323">swepdm_viewer</td>
+</tr>
+<tr>
+<td width="197">Universal (PSL)</td>
+<td width="323">swepdm_processor</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h5>The Feature Names of the SOLIDWORKS Manage products are:</h5>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Feature Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="197">CAD Editor</td>
+<td width="323">swmanagepro_editor</td>
+</tr>
+<tr>
+<td width="197">Contributor</td>
+<td width="323">swmanagepro_contributor</td>
+</tr>
+<tr>
+<td width="197">Viewer</td>
+<td width="323">swmanagepro_viewer</td>
+</tr>
+<tr>
+<td width="197">Universal (PSL)</td>
+<td width="323">swmanagepro_processor</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h5>The Feature Names of the SOLIDWORKS PDM Standard products are:</h5>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Feature Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="197">CAD Editor</td>
+<td width="323">swpdmstd_cadeditor</td>
+</tr>
+<tr>
+<td width="197">Contributor</td>
+<td width="323">swpdmstd_contributor</td>
+</tr>
+<tr>
+<td width="197">Viewer</td>
+<td width="323">swpdmstd_viewer</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Step 6:</strong>  Once the Options File text is finished, save the sw_d.opt file and close it.</p>
+<div id="attachment_13918" style="width: 980px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13918" class="wp-image-13918 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-6.png" alt="Save SolidNetwork License Manager Options File" width="970" height="614" title=""><p id="caption-attachment-13918" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13918 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-6.png" alt="Save SolidNetwork License Manager Options File" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-6.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-6-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-6-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript> Save SolidNetwork License Manager Options File</p></div>
+<p><strong>Step 7:</strong>  Ensure that all server information is correct and click Next to proceed to the next screen.</p>
+<div id="attachment_13919" style="width: 980px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13919" class="wp-image-13919 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-7.png" alt="Check Server Information" width="970" height="614" title=""><p id="caption-attachment-13919" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13919 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-7.png" alt="Check Server Information" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-7.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-7-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-7-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript> Check Server Information</p></div>
+<p><strong>Step 8:</strong>  Click &#8220;Select All&#8221; to make sure all your SOLIDWORKS products are selected for reactivation, enter your contact email and click &#8220;Next&gt;&#8221; to complete the reactivation process.</p>
+<div id="attachment_13920" style="width: 980px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13920" class="wp-image-13920 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-8.png" alt="Activate License" width="970" height="614" title=""><p id="caption-attachment-13920" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13920 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-8.png" alt="Activate License" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-8.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-8-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-8-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript> Activate License</p></div>
+<div id="attachment_26809" style="width: 980px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9.png"><img decoding="async" aria-describedby="caption-attachment-26809" class="wp-image-26809 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9.png" alt="Activation/Reactivation Succeeded" width="970" height="614" title=""><p id="caption-attachment-26809" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-26809 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9.png" alt="Activation/Reactivation Succeeded" width="970" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9.png 970w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9-300x190.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9-768x486.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Step-9-640x405.png 640w" sizes="(max-width: 970px) 100vw, 970px" /></noscript></a> Activation/Reactivation Succeeded</p></div>

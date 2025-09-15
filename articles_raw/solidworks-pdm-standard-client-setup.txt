@@ -1,0 +1,28 @@
+Once
+SOLIDWORKS PDM Standard
+has been installed, the
+vault has been created and configured
+, it is time to connect users to the vault. In SOLIDWORKS PDM Administration,
+right-click on your vault
+and select
+Connect
+. This step can be skipped, if you are already connected.
+SOLIDWORKS PDM Standard Client Setup
+If this is the first time accessing your vault, you may be prompted to accept the terms of the SOLIDWORKS PDM Standard License Agreement.
+License agreement
+Enter the password for the vault, you defined when you created your vault.
+Log into Vault
+After logging in, again
+right-click your vault
+, but this time choose
+Create Local View
+. A local view is required in order for users to access files in the vault.
+Local view
+Select where the local view of the vault  will be added. To avoid the Windows 256 character limit on path length, I recommend placing the view at the root of a drive.
+Local view folder
+You can make the local vault view visible for all users, or you can restrict it to the logged in Windows user, when the local view was created.
+Access for All Users
+On the next screen, You will be prompted to log into your vault.
+Log in to your vault
+You will then see be presented with a local view of the vault. In Windows 7 some of the vault panels,  may not be visible. Left click and drag the solid white bar near the top of the local vault view, to see all the panels.
+Local view window

@@ -1,0 +1,53 @@
+With the 2019 release and later versions of SOLIDWORKS PDM, the SQL Server Management Studio is no longer included within the installation media.  Please see
+here
+for our updated guide to downloading and installing the SSMS.
+The SQL Server Express Management Studio is a must for any SOLIDWORKS PDM Standard installation.  With this tool you can capture database backups, run queries and complete other vault maintenance.
+The simplest way to install this is during install within the installation manger;
+At SWPDM Server Options select ‘
+Install MS SQL Management Tools
+‘;
+Install Via Installation Manager
+If you missed this during install do not fear as we can complete this later manually.
+Manually Installing The SQL Server Express Management Studio
+Browse to
+<Installation Media>\SQLMNGMNT\sqlmanagementstudio_x64_enu.exe
+and
+Run
+as administrator
+Select
+New SQL Server stand-alone installation or add features to an existing installation
+New SQL Server stand-alone installation or add features to an existing installation
+Check for and install any updates then click
+next
+.
+For Installation Type select ‘
+Perform a new installation of SQL Server 2014
+‘ and click
+next
+;
+Perform a new installation of SQL Server 2014
+Read and accept the license agreement then click
+next
+For
+Feature Selection
+under ‘
+Shared Features
+‘ choose the following, then select
+next
+;
+Client Tools Connectivity
+Client Tools Backward Compatibility
+Management Tools – Basic
+Management Tools – Complete
+Shared Features
+Click
+Next
+and
+complete the install
+;
+SQL Server Express Management Studio Installed
+The management studio should now be available from;
+Start > Programs > Microsoft SQL Server 2014 > SQL Server 2014 Management Studio
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

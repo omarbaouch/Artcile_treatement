@@ -1,0 +1,16 @@
+On occasion I get asked “why are there
+SOLIDWORKS PDM
+Grey Folders or files in the Local Vault View?”
+A grey folder or file is located in the cache of the Local Vault View
+, but is not present in the Archive vault. Here are reasons why grey folders or files would be present in your local vault view:
+The folder or file has been deleted, or renamed on a different client
+The logged in user lacks the permissions to see the folder or file, but a user with sufficient permissions has previously cached the folder or file locally.
+The file was added to the Local Vault view, while in offline mode.
+An error occurred while the file was being added to the vault.
+The user setting
+Show only local files
+is checked.
+Show only local files
+SOLIDWORKS and PDM subscription customers can learn more about addressing these issues by visiting searching the
+DS Support Knowledge base
+.

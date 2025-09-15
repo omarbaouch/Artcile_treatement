@@ -1,0 +1,13 @@
+What is the difference in the user and group cache options ‘Clear cache during logout’ and ‘Refresh cache during login’ found in SOLIDWORKS PDM permissions?
+SOLIDWORKS PDM Cache Options
+At first glance these two options seem to accomplish the same task, but there are major differences between the two.
+In ‘
+Clear cache during logout
+‘ the system will automatically remove all locally cached files when a user logs out, starts to work offline, or when shutting down the computer. The number of files that will be cleared is totally dependent on how many files the user had performed a ‘get’ on. This is equivalent of select the folder in the Explorer, click on
+Tools
+and select “
+Clear local cache
+“.
+In ‘
+Refresh cache during login
+‘ the system will perform an automated ‘Get’ on all files within folders with this setting. This will load the latest version of all files within predetermined folders and also perform a ‘get’ on any files within this folder that have previously cached versions already cached.

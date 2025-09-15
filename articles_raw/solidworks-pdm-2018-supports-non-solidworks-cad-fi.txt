@@ -1,0 +1,30 @@
+New in
+SOLIDWORKS PDM 2018
+is support for the
+3D Interconnect
+functionality; the PDM vault will now manage references between SOLIDWORKS files and non-SOLIDWORKS CAD files.
+SOLIDWORKS 3D Interconnect PDM Vault
+Note:
+The non-SOLIDWORKS CAD files must be added to the vault before being added to the assembly, to save the references to PDM.
+When the assembly is checked in, all the references will be written to the database and managed from there.  This results in the Contains tab, Bill of Materials tab, and the Where Used tab are all being populated without using any 3rd party software or defining any references manually.
+SOLIDWORKS PDM Contains Tab
+Currently, SOLIDWORKS PDM 3D Interconnect supports the following file formats:
+File Format
+File Extension
+Autodesk
+®
+Inventor
+IPT, IAM
+CATIA
+®
+V5
+CATPART, CATPRODUCT
+PTC
+®
+/CREO
+PRT, PRT., XPR, ASM, ASM., XAS
+Siemens™ NX
+PRT
+SOLID Edge
+®
+PAR, PSM, ASM

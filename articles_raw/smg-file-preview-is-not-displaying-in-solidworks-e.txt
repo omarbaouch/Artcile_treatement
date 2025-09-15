@@ -1,0 +1,54 @@
+The preview pane in the SOLIDWORKS Enterprise PDM file explorer has the ability to show a dynamic preview of SMG (
+SOLIDWORKS Composer
+) files, just like SOLIDWORKS files.
+SMG File Preview working
+If the preview is not working, there are a few possible causes, these troubleshooting steps will help you to resolve the preview issues.
+SMG File Preview Not Working
+Step 1: Verify that the Composer Player is installed
+The dynamic SMG file preview in EPDM uses the SOLIDWORKS Composer Player program.  If this program is not installed, the preview will not work.  To check if the player is installed, try going to
+All Programs
+>
+SOLIDWORK 20XX
+>
+SOLIDWORKS Composer 20XX
+and see if the SOLIDWORKS Composer Player program is listed.  If the program is present, skip to step 3.
+Step 2:  Install the Composer Player
+If the program is not listed, you will need to modify the SOLIDWORKS installation to add the Composer Player.  To do so, go to the
+Control Panel
+>
+Programs And Features
+, then select the SOLIDWORKS entry and click “
+Change
+” on the top bar.
+Change Installation
+Select the option to “
+Modify the individual installation
+“, then click
+Next
+until you get to the “Product Selection” screen.
+Modify Installation
+If you have SOLIDWORKS Composer installed on your system, expand the SOLIDWORKS Composer entry and verify that the sub level SOLIDWORKS Composer Player is checked.
+Ensure Player is Installed
+If you do not have SOLIDWORKS Composer installed, but still need to view Composer files, verify that the SOLIDWORKS Composer Player is checked.  Complete the modify process then restart your system to test if the preview is working now.  If not, continue to Step 3.
+Option Checked
+Step 3:  Resolve Registry Issues
+If the SOLIDWORKS Composer Player program is installed, then it’s possible that the preview issue is caused by a registry issue.
+To check if this is the case, go to the Registry Editor (only someone familiar with editing Windows Registry entries should perform this process, if you are not familiar with editing the registry, you should contact your SOLIDWORKS Value Added Re seller for assistance), and browse to Registry key:  [HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\FileFormats\.smg].
+Edit the multistring registry value “4” and verify that both “3DViaPlugin.dll@DSComposerPlayerActiveXCtrl”  AND “3DViaPlugin.dll@DS.3DVIAPlayerActiveXCtrl” are listed.  The ActiveX Component that handles the preview was renamed from DS.3DVIAPlayer to DSComposerPlayer with the release of SOLIDWORKS 2015 SP2, so you will want to ensure that BOTH values are showing in the registry value.
+If one of the entries is missing, add it to the multistring value then repeat the process for the key: [HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\FileFormats\.smgxml] restart the computer and test the preview.  If the preview is still not working, proceed to Step 4.
+Edit Registry
+Step 4:  Re-register the ActiveX Components
+Browse to the folder where SOLIDWORKS Composer is installed (by default this should be C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS Composer\bin) and verify that either “composerplayeractivex.ocx” OR “3dviaplayeractivex.ocx” is present.  (If not then
+Repair the installation
+)
+Run a Command Prompt as the Administrator, then change the prompt directory to the installation folder where the .OCX file is located.
+Register the ActiveX Components by typing:
+For version 2015 SP1 or older:
+regsvr32 3dviaplayeractivex.ocx
+For version 2015 SP2 or newer:
+regsvr32 composerplayeractivex.ocx
+You should then receive a successful registration message.
+After restarting the computer the dynamic preview should be working.
+Re-register the ActiveX Components
+Video demonstration of the steps
+https://youtu.be/6fxkpxEwIhs

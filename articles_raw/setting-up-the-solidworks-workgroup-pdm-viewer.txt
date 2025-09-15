@@ -1,0 +1,34 @@
+UPDATED May 1, 2015
+A license of SolidWorks Workgroup PDM Advanced Server is required for use of the Solidworks Workgroup PDM Viewer. The SolidWorks Workgroup PDM Advanced Server is not included with Solidworks Basic Professional or Premium and must be purchased separately. Once SolidWorks Workgroup PDM Advanced Server has been purchased, there are a number of steps that must be completed in order to allow access to the Viewer.
+The first component that must be installed is Microsoft Internet Information Services (IIS):
+Form the Windows Control Panel select
+Uninstall Program Get Programs
+Select
+Turn Windows features on or off
+Under Internet Information Services Enable:
+Web Management Tools- IIS Management Console
+World Wide Web
+Services: Application Development Features- .NET Extensibility, ASP.NET, CGI, ISAPI Extensions and ISAPI Filters
+Please refer Microsoft documentation for further IIS installation instructions.
+Next the Solidworks Workgroup PDM Viewer needs to be installed
+From Windows Control Panel select Uninstall a Program.
+Access the SOLIDWORKS Installation Manager, by right clicking on SOLIDWORKS Workgroup PDM server and choosing
+Change.
+Select
+Modify
+and click on
+Next
+Set Solidworks Workgroup PDM Viewer License and Solidworks Workgroup PDM Viewer to
+This Feature will be installed on you local hard drive
+and click on
+Next
+Enter your SolidWorks Workgroup PDM Viewer license key and press
+Next
+Start the Workgroup VaultAdmin and, from the vault settings tab, click on
+Change
+.
+Enter the license key
+Once the installation is complete and the viewer has been activated, u
+sers can access the Workgroup PDM Viewer by typing the URL http://ViewerComputerName/pdmweb/ into the address field of
+Internet Explorer
+To access the vault, the user will be required to enter their Workgroup PDM user name and password.

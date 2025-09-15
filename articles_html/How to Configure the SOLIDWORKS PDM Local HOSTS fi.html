@@ -1,0 +1,42 @@
+<p>By default, the SOLIDWORKS PDM client is set to use server name, which via <a href="https://www.whatismyip.com/dns-lookup/" target="_blank" rel="noopener noreferrer nofollow">DNS lookup</a> will resolve the IP number and communicate with the server.  In a perfect world, the DNS server configuration will resolve quickly and not cause any issues, but this isn&#8217;t always possible in certain environments, for example, while using a VPN.</p>
+<p>Slow lookup may result in the following symptoms within PDM:</p>
+<ul>
+<li>Delay when logging in</li>
+<li>General poor performance while navigating or adding files</li>
+<li>Replication Failing</li>
+</ul>
+<p>Occasionally a PDM support technician may advise you to bypass the DNS lookup, by editing the local HOSTS file and adding the server IP.</p>
+<blockquote><p><strong>NOTE</strong>: Users should always consult their local IT Professional ahead of making any of these changes</p></blockquote>
+<h2>How to edit the local hosts file and add the server IP</h2>
+<blockquote><p><strong>NOTE</strong><strong>: </strong>Local Windows Administrator credentials are required</p></blockquote>
+<ul>
+<li>Using the Administrator account run Notepad;</li>
+</ul>
+<div id="attachment_49248" style="width: 367px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Hosts-File-Notepad-Admin.png"><img decoding="async" aria-describedby="caption-attachment-49248" class="wp-image-49248 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Hosts-File-Notepad-Admin.png" alt="Run Notepad" width="357" height="303" title=""><p id="caption-attachment-49248" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49248 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Hosts-File-Notepad-Admin.png" alt="Run Notepad" width="357" height="303" title=""></noscript></a> Run Notepad</p></div>
+<ul>
+<li><strong>File</strong> &gt; <strong>Open</strong>
+<ul>
+<li>Change the setting to look for <strong>All Files </strong>(defaults to *.txt)
+<ul>
+<li>Navigate to and <strong>Open</strong> the <strong>hosts</strong> file;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_49250" style="width: 809px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open.png"><img decoding="async" aria-describedby="caption-attachment-49250" class="wp-image-49250 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open.png" alt="HOSTS File Location" width="799" height="355" title=""><p id="caption-attachment-49250" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49250 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open.png" alt="HOSTS File Location" width="799" height="355" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open.png 799w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open-600x267.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Open-768x341.png 768w" sizes="(max-width: 799px) 100vw, 799px" /></noscript></a> HOSTS File Location</p></div>
+<pre>Default location is C:\Windows\System32\Drivers\Etc\</pre>
+<ul>
+<li>Underneath the comment section (any line that begins with #) add a new line for each required server with the IP Number and the server name and a tab space in between.  For example;
+<ul>
+<li>192.168.1.xxx     MyDbServerName</li>
+<li>192.168.1.xxx     MyArchiveServerName
+<p><div id="attachment_49251" style="width: 639px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Updated.png"><img decoding="async" aria-describedby="caption-attachment-49251" class="wp-image-49251 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Updated.png" alt="SOLIDWORKS PDM Hosts File" width="629" height="515" title=""><p id="caption-attachment-49251" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49251 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Updated.png" alt="SOLIDWORKS PDM Hosts File" width="629" height="515" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Updated.png 629w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Host-File-Updated-600x491.png 600w" sizes="(max-width: 629px) 100vw, 629px" /></noscript></a> Hosts File</p></div></li>
+</ul>
+</li>
+</ul>
+<blockquote><p><strong>NOTE</strong>: If the archive and the DB server are hosted on the same machine, only one line is required.</p></blockquote>
+<ul>
+<li>Save and close the hosts file.</li>
+</ul>
+<p>Once complete, the DNS lookup should be bypassed and the hostname resolved directly using the IP.  Once complete, I would recommend running the <a href="https://www.javelin-tech.com/blog/2017/05/solidworks-pdm-connectivity-test-tool-updated/">connectivity tool</a> to ensure the connection works as expected, or complete a <a href="https://www.javelin-tech.com/blog/?p=47996">ping test</a>.</p>

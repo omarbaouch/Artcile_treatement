@@ -1,0 +1,28 @@
+When previewing SolidWorks files in a SOLIDWORKS PDM Professional or PDM Standard vault view, the files can either be shown as a static Bitmap view, or as a dynamic 3D eDrawings view.
+However if the eDrawings preview is not working, but the eDrawings software is installed and launches via the start menu, then most likely the connector between eDrawings and SOLIDWORKS PDM needs to be re-registered.
+eDrawings Preview not working
+Here are the steps to re-register the eDrawings connector:
+Step 1:
+Locate the eDrawings installation folder.  Depending on how eDrawings was installed, this may be located in a different location.  Most commonly it will be located located in the folder  c:\program files\solidworks corp\edrawings.  However if this folder is missing, check also in c:\program files (x86)\common files\edrawings.
+edrawingofficeautomator version and location
+Step 2:
+From the Start Menu, search for the Command Prompt by typing “cmd”.  Right click on the Command Prompt icon and select “Run as administrator”.
+Step 3:
+Change directory to the eDrawings installation folder. (Type
+cd <path to eDrawings installation folder>
+)
+Step 4:
+Type
+Regsvr32 emodelview.dll
+to register the dll.
+Step 5:
+Type
+edrawingofficeautomator /regserver
+to finish registering the program.
+Step 6:
+Restart Windows Explorer, either by rebooting the system or by going to the Task Manager (Ctrl + Shift + Esc) then finding the explorer.exe process and killing it, then restart the process by going to File > New Task.
+End the process
+Start Explorer
+Once these steps are completed the eDrawings view in the Vault View preview tab should work properly.
+eDrawings Preview Restored
+http://youtu.be/S4d1aG8FmDM

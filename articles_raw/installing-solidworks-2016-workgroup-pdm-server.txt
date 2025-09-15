@@ -1,0 +1,23 @@
+The SOLIDWORKS 2016 Workgroup PDM Server installation is included in the SOLIDWORKS Installation Manager. The Installation Manager can be launched from your SOLIDWORKS Installation DVD or from a downloaded service pack.
+Once the Installation Manager starts, on the Welcome Screen, you can select
+SOLIDWORKS Workgroup PDM Server
+under
+Server Products
+.
+SOLIDWORKS Installation Manager
+Starting with SOLIDWORKS Workgroup PDM 2012, a Validation Code required in order to install the server. In the Installation Summary, beside “Validation Code required for installation”, click on
+Change
+.
+Validate code
+Enter you serial number and your e-mail and then click
+Get Code
+. If
+Validate Automatically
+fails, then try the e-mail option.
+Get code
+Your Validation code will appear at the bottom of the screen. If you used the e-mail option, you would then enter the validation code, sent to you, in the text box.
+Click on
+Back to Summary
+and continue with the installation by selecting
+Install Now
+.

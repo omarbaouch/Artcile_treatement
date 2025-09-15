@@ -1,0 +1,36 @@
+The benefits of
+copy tree
+and
+how to use it
+have been well documented.  Similar to Copy Tree, SOLIDWORKS 2015 and 2016 include the
+Move Tree
+feature, which instead of copying; will
+move
+partial or entire file and folder structures, including related drawings, to another folder or folders maintaining all references.
+In this example, I’m going to move an assembly from a folder and separate the drawing files from the models.
+The Move Tree feature can be accessed via Windows Explorer;
+Select the assembly:
+Tools
+>
+Move Tree
+I need all drawings to be moved also, so I’ll check the box within
+Settings
+to
+Include Drawings
+;
+The majority of the files are going to go to the new folder
+\JavVault\Projects\New Flashlight Models
+, so I’ll update default destination to there:
+I need the drawings to be saved in
+\JavVault\Projects\New Flashlight Drawings
+so I’ll sort the files by type and select the two drawing files and edit their
+Destination Folder Path
+,
+Then complete the process by selecting
+Move Tree
+;
+Now the files are moved with drawings and models separated, references updated and the file history is maintained;
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

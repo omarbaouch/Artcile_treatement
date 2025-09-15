@@ -1,0 +1,27 @@
+There have been lots of enhancements added to the search function within SOLIDWORKS PDM 2020, like the new
+Quick Search
+and the ability to search multiple variables.  Another enhancement I’m a big fan of, are the keyboard shortcuts we can use to access the search functionality quickly while within explorer;
+Last Used Integrated Search Card
+From within explorer;
+CTRL
+&
+SHIFT
+&
+F
+takes us directly to our last used search card within the integrated search.
+CTRL & SHIFT & F
+Quick Search
+From within explorer;
+CTRL
+&
+F
+takes us directly to the Quick Search box.
+CTRL & F
+Wrap Up…
+Both of these keyboard shortcuts, provide users a quick and easy and way to access the powerful search functionality within SOLIDWORKS PDM.  Learn more about
+SOLIDWORKS PDM 2020 enhancements and new search tools
+.
+Next Steps
+Now we know how to access the search card quickly, it’s a great chance to talk about how custom search cards can help us with our day to day searching.  Within our
+Administering SOLIDWORKS PDM course
+, we cover in detail how to create a search card from scratch, allowing administrators to create a custom card to suit their company’s needs.  During our training course, we discuss limiting search cards to only the values that pertain to the users and creating separate cards for each department paired with custom columns displaying only the results the users require making searching within the vault easy and efficient for users.

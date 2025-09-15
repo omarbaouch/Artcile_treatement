@@ -1,0 +1,16 @@
+In previous Javelin blogs, it was explained how to use $PRPSHEET “
+Write Drawing Card With Part Card Variables
+“.
+Data Card Variables
+While this is a good tool for reducing workload, and ensuring consistency of data entry by reducing the number of data cards where information has to be entered; there is one limitation that needs to be understood.
+Updating the component (part or assembly card) does not update the drawing properties, until the drawing is opened in SOLIDWORKS
+. The reason for this, is that metadata, in the form of Custom Properties, is not written to a file until it is loaded into system memory, typically by opening the file.
+The most common place where this limitation will present itself, is the Preview tab of the PDM Local View.
+SOLIDWORKS PDM Preview Tab
+For example, if a title-block note is set to inherit a component property using $PRPSHEET.
+Linked Note
+Or if the the note is linked to a Drawing Custom Property ($PRP) this note will NOT display the correct value, until the Drawing is opened and saved.
+Possible workarounds, include using the SOLIDWORKS Task Scheduler Update Files or Update Associated files, to mass update drawing files.
+SOLIDWORKS Task Scheduler
+or use a custom Task, such as the one available from the SOLIDWORKS Knowledgeable, to update drawings. For Data Card Variables such as Drawn By and Drawn Date, using the ‘Default Value’, ‘Special value’, properties can be pulled from PDM to the Drawing’s Custom properties and may eliminate the need to use $PRPSHEET.
+Data Card default value setting

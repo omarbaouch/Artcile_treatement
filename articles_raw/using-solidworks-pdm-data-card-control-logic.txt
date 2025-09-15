@@ -1,0 +1,35 @@
+SOLIDWORKS PDM control logic provides the ability to dynamically show, hide, or disable a data card control by specifying one or more conditions.
+Creating SOLIDWORKS PDM Data Card Control Logic
+In the example below, we’ll use two radio buttons on a file card to display whether a document is approved or rejected. If it’s approved, then we’ll also display the approver’s name. If it’s not approved, then there is no need to show a blank approver. In that case, we’ll hide the Approved By control using Control Logic.
+Data Card Example
+In the Card Editor, the controls appear as follows.
+Data Card Controls
+The Caption property of the radio buttons becomes the value of the variable. To ensure only one radio button can be enabled at a time, we’ll connect both radio buttons to the same variable. Let’s call this variable Approved Status.
+Rework Required radio button connected to Approved Status variable
+Approved for Production radio button connected to Approved Status variable
+A nice feature of radio buttons is that when they are connected to the same variable, enabling one of the radio buttons automatically disables the other.
+Applying the SOLIDWORKS PDM Data Card Control Logic
+Now, we are ready to apply Control logic. Control Logic can be accessed a few ways in the Card Editor, i.e., in the Control pull-down menu, the gear-wrench icon on the toolbar, or in the properties panel of a control. With either of these options, the desired control must be selected first before Control Logic becomes available. In this example, we’ll use the button on the toolbar.
+Control Logic button on the Card Editor toolbar
+Notice, on the SOLIDWORKS PDM we have two controls for the approver. One is Static-text, which serves as a label, and the other is an Edit-box connected to the variable Approved By.
+First, we’ll apply control logic to the Static-text and then repeat the process for the Edit-box.
+Select the Static-text, “Approved By” and then select the Control Logic button on the toolbar as shown above.
+In the Control Logic dialog box, click to add an action. The options will be Grey out or Hide.
+Add Action
+We’ll select Hide and then click to add a condition.
+Add Condition
+A droplist of variables will appear. We’ll select Approved Status and then add a condition.
+The condition shown below will hide the Approved By control if the value of the Approved Status variable does not contain the text, “Approved.”
+Control Logic for Static Text control
+Repeat the process for the Edit Box control. The condition will be the same, but the action is slightly different. For an Edit Box, the available actions are Hide – Clear value or Hide – Retain value. Here, we’ve chosen Hide – Clear value.
+Control Logic for Edit Box control
+That’s it! Let’s test.
+Testing SOLIDWORKS PDM Data Card Control Logic
+Shown below is the data card for a file in the vault when Rework Required is enabled. This triggers the control logic which hides the approver.
+When Rework Required is enabled, Approved By is hidden
+Consider taking this a step further and adding control logic actions to either gray out or hide the radio buttons themselves depending on which one is enabled. However, only do so if the variable is being set automatically such as in a workflow transition. If a user needs to manually edit the data card, the card controls must be accessible.
+In summary, we applied control logic to hide both the Approved By label and Approved By variable on the data card when the value of Approved Status is Rework Required. The actual condition, “Text Does Not Contain” “Approved,” gives us some flexibility so that the radio button captions can be changed in the future and still trigger the control logic. For instance, if we update the caption from Rework Required to Changes Needed, the existing control logic will still work as intended.
+Another example using the same concept would be a variable called Part Type with radio buttons that determine if the part is Manufactured or Purchased.
+There are several types of card controls in
+SOLIDWORKS PDM
+and control logic is not limited to radio buttons. Give it a try with any of the controls, i.e. Image, Text, Frame, Edit-box, Button, Radio-button, Combobox, Listbox, Tab, Checkbox, and Date field.

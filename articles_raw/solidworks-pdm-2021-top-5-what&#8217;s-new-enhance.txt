@@ -1,0 +1,50 @@
+DS SOLIDWORKS have added many new enhancements to
+SOLIDWORKS PDM 2021
+. The latest release lets you explore and document references with the highly-requested Treehouse View for Contains and Where Used. Workflow Icons build in visual recognition and awareness of your processes across the team. Bill of Materials options provide more CAD workflows, and everyday PDM operations are faster.
+You can learn what’s new in SOLIDWORKS PDM 2021 by attending our
+LIVE Virtual Tech Conference on Tuesday, October 6, 2020 at 11:00 AM ET
+. In the meantime check out what we think are the SOLIDWORKS PDM 2021 Top 5 enhancements:
+01. File Explorer Enhancements
+One of the best features of SOLIDWORKS PDM has long been the integration with Windows Explorer. In 2021, support for the latest Windows 10 elements are now included in the SOLIDWORKS PDM File Explorer:
+The ribbon control of Microsoft® Windows® File Explorer is available in SOLIDWORKS PDM File Explorer.
+You can use the Quick Access Toolbar to easily access commonly used commands.
+Support for Back and Forward from Windows Explorer Address bar
+Use keyboard shortcuts for commonly used commands:
+Check In Ctrl + I
+Check Out Ctrl + O
+Undo Check Out Ctrl + U
+Change State Ctrl + T
+SOLIDWORKS PDM 2021 File Explorer
+Benefits
+: Save significant time when performing common SOLIDWORKS PDM operations. Learn to use quickly and easily when familiar with Windows® Explorer.
+02. Contains and Where Used Treehouse View
+SOLIDWORKS PDM 2021 extends Treehouse view in the Contains tab to the Where Used tab. This helps you to view all the parent relationships of the selected child in a hierarchical and graphical format.
+Treehouse View can be used in place of list in Contains and Where Used tabs
+Graphical representation of file structure
+Three layouts available to provide right amount of content
+Thumbnail preview also available
+SOLIDWORKS PDM 2021 Treehouse
+NOTE
+: Available in SOLIDWORKS PDM Professional only. Quickly identify component of interest and perform SOLIDWORKS PDM commands directly from graphical representation of structure.
+03. Performance Improvements
+If you’re using SOLIDWORKS PDM, you know much of your speed comes from the efficiency of the database. SOLIDWORKS PDM 2021 offers performance improvements that make many file operations and workflows significantly faster:
+Improvements in system performance help you to quickly open, add, check in, and change the state of files with large reference structure. The Add Files operation is between 1.5 and 3 times faster. The Check-in and Change State operations are approximately 25% faster. (The level of improvement can vary depending on the number of files, network bandwidth and CPU cores).
+The Check-in dialog box itself displays much more quickly (in seconds rather than minutes) for very large assemblies or parts with a high number of configurations.
+You can more quickly destroy files or folders. The operation is many times faster when you are destroying a large number of files.
+SOLIDWORKS PDM 2021 Performance
+Benefit
+: With the expanded configurability and increased performance of SOLIDWORKS PDM 2021, you can take your engineering teams to the next level.
+04. Workflow State and Transition Icons
+SOLIDWORKS PDM has new icons for workflow states and transitions. The colours and appearance of existing icons are improved. These help illustrate each step and add colour to your processes flow; also you are building-in visual recognition for contributors wherever they are accessing the vault:
+Available icons for workflow states and transitions significantly expanded
+Meaningful icons available to represent specific states or transitions.
+SOLIDWORKS PDM 2021 Icons
+Benefits
+: Understand status of files quickly with colourful, meaningful icons.
+05. SOLIDWORKS Bill of Materials Options
+SOLIDWORKS PDM uses the Bill of Materials component display settings that are specified in SOLIDWORKS. In SOLIDWORKS, in the Configuration Properties PropertyManager, the parameters that you specify in the Bill of Materials Options are also supported in computed BOMs of SOLIDWORKS PDM 2021.
+SOLIDWORKS PDM supports all “Show,” “Hide” and “Promote” options used with SOLIDWORKS bill of materials
+In SOLIDWORKS, in the Configuration Properties PropertyManager, the parameters that you specify in the Bill of Materials Options are also supported in computed BOMs of SOLIDWORKS PDM.
+SOLIDWORKS PDM 2021 BOM
+Benefits
+: Avoid need to create “named BOM” in order to align SOLIDWORKS CAD BOM and Data Management BOM. Reduce risk of mistakes and improve efficiency working with BOMs.

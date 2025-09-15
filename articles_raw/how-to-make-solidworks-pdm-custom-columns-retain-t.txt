@@ -1,0 +1,17 @@
+If you’re using
+custom columns for Windows Explorer
+within SOLIDWORKS PDM you may have run into an issue with them not retaining their order while navigating the vault or after a reboot.  This issue can be caused by a mismatch in the registry of the client machine, which we can correct with a few edits.
+WARNING
+: Caution is required when editing entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.
+SOLIDWORKS PDM Custom Columns in Windows Explorer
+How to make custom columns in the vault retain their order
+Via the system tray close the PDM Client:
+Exit the PDM Client
+Open the registry editor and delete the following keys:
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\CTDMListView
+Delete Registry Key
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[Vault Name]\CTDMListView\ColOrder
+Deleting other registry key
+NOTE
+: Don’t worry, the registry keys will be recreated when logging back into your vault view.
+Then log back into the vault, rearrange the custom columns as you’d like to see; then it should be retained moving forward on the client machine.

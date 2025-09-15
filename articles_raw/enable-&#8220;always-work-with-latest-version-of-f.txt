@@ -1,0 +1,24 @@
+Have you ever been working on an assembly and realized that you weren’t working with the most recent files/changes to sub-components? With
+SOLIDWORKS PDM
+you can ensure every time you open a file with subcomponents, those sub-components are always referencing the most recent version in the vault with the “Always work with the latest version of files” setting.
+To enable the “Always work with the latest version of files” setting:
+Open the Administration tool and log in to the vault you want to enable this setting on.
+Navigate and expand the Group/User node.
+PDM Administration tool showing the “Users and Groups Management” node
+Right-click the “Group” or specific “User” you want to enable this setting on and select “Settings”.
+“Settings” are applied differently than “Permissions”, this means that if you take a user out of the group it will keep this setting enabled as any option selected in the “Settings” menu will always get applied at the user level.
+Right-click on a group and show the “Settings” option
+Navigate to the “Reference Dialog” node and select “Always work with latest version of files”.
+Group Settings – “Always work with latest version files” setting
+Enabling this setting will force the user to automatically cache the most recent version of files when doing a check out and when opening a file. See the images below that show the “Check out” dialog menu, with the “Always work with…” setting disabled you have the option to “Get” a version of the files but with the setting enabled you don’t get that option.
+Check out the dialog without “Always work with latest version of files”
+Check out the dialog with “Always work with latest version of files”
+This will also disable the “Get” option from the “History” menu but the “View” options should still be available for previewing old versions of files.
+History menu – Grayed out “Get” Action
+If you want to look at a past version of a file in their applications, you can check the setting “Enable the get version command in SOLIDWORKS Add-in” that is directly underneath the “Always work with latest version of files” setting.
+Group Settings – “Enable the get version command in SOLIDWORKS Add-in” setting
+This setting will allow you to get the previous version of files from the
+SOLIDWORKS Add-in
+menu.
+“Get Version” menu from the PDM SOLIDWORKS Add-in interface
+To learn more about SOLIDWORKS PDM, check out our PDM training courses here.

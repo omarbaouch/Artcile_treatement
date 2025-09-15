@@ -1,0 +1,12 @@
+New in
+SOLIDWORKS PDM 2020
+, we have an additional more convenient method to log out of and verify who we’re logged in as:
+New log out icon
+We can access the icon from anywhere within the vault view, and log out via clicking and selecting ‘log out’;
+Log Out
+We can also verify who we’re logged in as by hovering over the icon (useful for anyone who switches between an administrative and regular user account);
+Logged in as
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

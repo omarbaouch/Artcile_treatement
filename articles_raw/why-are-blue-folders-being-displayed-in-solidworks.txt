@@ -1,0 +1,18 @@
+Are you seeing
+SOLIDWORKS PDM
+blue folders in your vault view, instead of the standard green colour?
+Blue Folders
+If so,
+this simply means you are working offline and not connected live to the vault server
+. This happens when you click the Work Offline button on the vault login screen, or attempt to login when you are disconnected from your network, it will default to offline since you are after all, offline.
+Return to Green Folders
+The solution is an easy one — within
+Windows Explorer
+> click on your vault view folder > in the
+Tools
+menu > select
+Work On-line
+.
+Work On-line
+Your vault view will now connect to the actual vault and your folders will go back to being green.
+Green Folders

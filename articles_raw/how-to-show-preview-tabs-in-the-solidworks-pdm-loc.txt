@@ -1,0 +1,20 @@
+In SOLIDWORKS PDM Local Vault View, there is an option to select/deselect the
+Show preview tabs
+to get more information about the files/folders in the PDM Vault.
+Missing Preview Tabs
+Preview tabs can be turned on by
+right-clicking
+in the window and select
+View
+>
+Show preview tabs
+.
+Show preview tabs
+With the show preview tabs selected, you are able to toggle between
+Preview
+,
+Data Card
+,
+Version
+etc… to get more information about the files/folders.
+SOLIDWORKS PDM Local Vault View Preview Tabs

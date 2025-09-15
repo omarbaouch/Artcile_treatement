@@ -1,0 +1,2 @@
+A “grey” file or folder in the vault view means that there is a cached local copy, but the logged in user either does not have read (read file, view working version) permission to that file, or it has been deleted, moved or renamed.
+There is a user setting that can be enabled to remove “grey” files or folders that are left behind after the folder has been deleted, renamed or moved. Right-click on the user(s) node, settings, explorer tab, enabled “automatically delete local read-only files that are not part of the file vault”.

@@ -1,0 +1,8 @@
+A template can update the value of variables including a variable that is set to use a EPDM serial number.
+Serial Number
+In order to do this, a template variable is created and in the case of the type Serial Number, we associate it to a EPDM serial number.
+Template Variable
+In a file or folder data card, a control can also be set to inherit the variable value, from the same EPDM serial number.
+Serial Number Used
+This can lead to conflicts as both the data card and the template are trying to generate the same serial number and may result in the serial not incrementing. To avoid this conflict, have any file or folder control set to Text, instead of Serial Number. This would only apply to variables that are being updated by the template variable and use a EPDM serial number.
+Text value used

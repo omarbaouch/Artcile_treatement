@@ -1,0 +1,43 @@
+As part of our best practices, it’s imperative to routinely check that
+good backups are being captured
+, and database maintenance is being complete.  If you find these scheduled actions aren’t completing, the first step of troubleshooting will be to manually complete an action for the SQL Server Agent from within the
+SQL Server Management Studio
+;
+Manually execute a backup within the SQL Server Management Studio
+If you’re greeted with an error similar to below, it’s indicating there is an issue with the SQL Server Agent;
+Issue with the SQL Server Agent
+The SQL Server Agent is a service that executes scheduled administrative tasks, within SQL Server, for example; backups.  This service is required to be running to complete any of the maintenance tasks within SQL Server.
+How to manually start the SQL Server Agent
+On the server;
+Start > Microsoft SQL Server 20xx
+SQL Server 20xx Configuration Manager
+SQL Server in Start Menu
+Select
+SQL Server Services
+> RMB
+SQL Server Agent
+>
+Start
+SQL Server Services
+Then the service should resume;
+Service resumed
+NOTE
+: If the service doesn’t start, or there are errors; please check the
+Windows Event Log
+for further details and troubleshooting steps.
+Service stoppages (without error) can be caused by a number of actions like a reboot, restart of the SQL Server Service, or anything similar.  With some additional settings changes, we can ensure this SQL Agent Service will restart automatically.
+How to set the Agent to restart automatically
+Within the SQL Server Configuration Manager;
+Select the
+SQL Server Agent
+>
+RMB
+>
+Properties
+SQL Server Agent > RMB > Properties
+Service
+Tab >
+Start Mode
+Set to
+Automatic
+Start mode set to Automatic

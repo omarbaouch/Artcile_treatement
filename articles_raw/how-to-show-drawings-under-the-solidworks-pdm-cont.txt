@@ -1,0 +1,10 @@
+By default the SOLIDWORKS PDM Contains Tab in Windows Explorer is set to the ‘Active Configurations’, and as a result of this will not show any references to drawings.
+SOLIDWORKS PDM Contains Tab
+How to show the drawings within the Contains tab
+Change the view from Default <Active Configuration> to <Do Not Show Configurations>
+Do Not Show Configurations
+Then the drawings will be listed as references within the contains tab;
+Drawings listed as references under the contains tab
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

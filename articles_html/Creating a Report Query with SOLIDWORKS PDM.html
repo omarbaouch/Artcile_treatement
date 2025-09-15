@@ -1,0 +1,60 @@
+<p>SOLIDWORKS PDM Reports are useful for extracting information from an SQL database, without the need to run a SQL query. While SQL queries will return the information requested, running these queries requires knowledge of the syntax, used to compile them. Most SOLIDWORKS PDM users do not possess this knowledge. Also, it is not wise to allow users direct access to the SQL databases, as they could unintentionally, damage them.</p>
+<blockquote><p>In order to allow PDM users to query the SQL database, while preventing direct access, you can define a SOLIDWORKS PDM Report Query from a PDM Local Vault View.</p></blockquote>
+<p>A couple of sample Reports are installed with PDM and more can be downloaded from the SOLIDWORKS Knowledge base. While these existing reports are useful, they may not provide the information that you need to access. In this article, will look at the basics of creating a Report, so that users, can access this information. <strong>FORMATTING THESE REPORTS, REQUIRES UNDERSTANDING OF HOW TO GENERATE THE REQUIRED SQL QUERY.</strong></p>
+<p>In order to generate a PDM report, we first need to create and test an SQL query that will return the information we require. This is carried out in the SQL Management Studio.</p>
+<div id="attachment_27877" style="width: 259px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-27877" class="wp-image-27877 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/05/New-Query.png" alt="New Query" width="249" height="83" title=""><p id="caption-attachment-27877" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-27877 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2017/05/New-Query.png" alt="New Query" width="249" height="83" title=""></noscript> New Query</p></div>
+<p>Once you create and test your SQL query, you can now use the query to generate a PDM Report. The first step is to start a Text editor, such as Notepad and enter the below elements.</p>
+<pre>@[SQL query name]
+ §Name [Report name]
+
+§Company [Company name]
+
+§Description
+ [Description of Report]
+
+§Version [1.0]
+
+§Arguments
+ [
+ ]
+
+§Sql
+ [
+ SQL query syntax
+ ]</pre>
+<p>Next copy the SQL query into</p>
+<pre>§Sql
+ [
+ ]</pre>
+<p>The SQL query goes between the square brackets of the text string:</p>
+<pre>§Sql
+ [
+ ]</pre>
+<p>Below is a an example of a report that will non-delete files in the vault</p>
+<pre>@[AllFilesInTheVailt]
+ §Name [Shows All Files In The Vault]
+
+§Company [SolidWorks]
+
+§Description
+ [This query will show all non-deleted files in the vault.]
+
+§Version [1.0]
+
+§Arguments
+ [
+ ]
+
+§Sql
+ [
+ SELECT (P.Path + D.Filename) AS All_nondeleted_FilesInTheVault
+ FROM DocumentsInProjects AS DIP
+ JOIN Projects AS P
+ ON P.ProjectID = DIP.ProjectID
+ JOIN Documents AS D
+ ON D.DocumentID = DIP.DocumentID
+ WHERE D.Deleted = 0
+ ORDER BY Path, Filename ASC
+ ]</pre>
+<p>Once all the syntax has been entered, save the file with the extension &#8216;crp&#8217;.</p>
+<p>Please refer to my <a href="https://www.javelin-tech.com/blog/2013/01/epdm-using-the-report-generator/" target="_blank" rel="noopener noreferrer">Using the Report Generator article</a> for instructions on running reports.</p>

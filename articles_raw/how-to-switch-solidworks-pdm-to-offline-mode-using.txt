@@ -1,0 +1,35 @@
+Working offline
+within SOLIDWORKS PDM is a great option if you want to bring work home on your laptop, or if there is
+maintenance being performed on the vault
+and there’s no access to the server.
+In a perfect world, you’ve remembered to switch into offline mode ahead of losing access, but if you’re forgetful and impatient (like myself), there is an option to make this switch within the registry, without having to wait for the delayed login prompt when the server can’t be found by the client
+Work Offline in SOLIDWORKS PDM
+WARNING
+! – Only complete this change if you are comfortable with the Windows Registry.  Accidental changes to the registry can render your system inoperable, exercising extreme caution is required when making any registry edits.
+Start
+Regedit.msc
+and navigate to;
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[vaultname]
+Registry Editor
+RMB within this key >
+New
+>
+DWORD
+New > DWORD
+Set the
+New Value Name
+as ‘
+Offline
+‘
+and the
+Value Data
+as ‘
+1
+‘
+Set the New Value Name as ‘Offline’
+Then the PDM client will be instantly switched to offline mode, without having to wait for the login prompt;
+SOLIDWORKS PDM Offline Mode
+NOTE
+: If you’ve used offline mode previously, the registry key may already exist.  In this scenario we can just switch the Value Data to ‘
+1
+‘

@@ -1,0 +1,81 @@
+To ensure the safety of your
+SOLIDWORKS PDM
+data, it’s essential to have a maintenance plan in place to perform regular (preferably nightly) backups of the vault database and the ConisioMasterDB database.
+A Maintenance Plan that will automatically backup the databases
+can be set up for SOLIDWORKS PDM Professional using the SQL Server Agent included in Microsoft SQL Standard.
+Note
+:
+SOLIDWORKS PDM Standard
+does NOT  include the SQL Server Agent so this method does not work for PDM Standard vaults.
+However over time those backups will take up a great deal of hard drive space if they are not cleaned up and removed.  This process can also be automated by the SQL Server Agent.
+Steps to removing Old SQL Database Backups
+Step 1:
+Ensure that the
+SQL Server Agent
+service is running.  Launch the
+SQL Server Configuration Manager
+program and check that the
+SQL Server Agent
+is currently running, if it isn’t right click the Agent and click
+Start
+.
+SQL Server Configuration Manager
+Step 2
+:  Log into the Microsoft SQL Server Management Studio and expand the
+Management
+folder in the Object Explorer then right click on the
+Maintenance Plans
+folder and select the
+Maintenance Plan Wizard
+command.
+Maintenance Plan Wizard command
+Step 3
+:  When the Wizard launches the starting page explains further what functions can be automated using the Maintenance Plan.  Click
+Next
+.
+Wizard starting page
+Step 4
+:  Name the maintenance plan, the click
+Change
+to create a schedule for the plan to run on.
+Name the maintenance plan
+Step 5:
+You can run the plan
+Daily
+,
+Weekly
+or
+Monthly
+at whichever time will work for you.  If you already have a Maintenance Plan in place to perform the backups, you may want to schedule the Cleanup to take place on the same schedule.  Click
+OK
+to set the schedule, then click
+Next
+.
+Run the plan Daily, Weekly or Monthly
+Step 6:
+Select the
+Maintenance Cleanup Task
+option and click
+Next
+.
+Maintenance Cleanup Task
+Step 7:
+On the Task Order screen ensure that the Maintenance Cleanup Task is listed, otherwise go back a step and select it again, then click
+Next
+.
+Maintenance Cleanup Task Enabled
+Step 8:
+Define the options for the Cleanup Task. Click “…” to specify the folder where the SQL Database backup files are being saved.  Specify the Age of the files which should be removed by the task.  If backups are being done daily for instance, setting the Cleanup Task to remove any files over 14 days old will keep only 14 .bak files from each database being backed up.  Once the options are set, click
+Next
+.
+Define the options for the Cleanup Task
+Step 9
+:  If you wish you can set up a report text file, then click
+Next
+.
+Set up a report text file
+Step 10
+:  Finally, review settings and click
+Finish
+to complete the Maintenance Plan Wizard.
+Complete the Maintenance Plan Wizard

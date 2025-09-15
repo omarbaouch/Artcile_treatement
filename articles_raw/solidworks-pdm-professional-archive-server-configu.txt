@@ -1,0 +1,42 @@
+Once SOLIDWORKS PDM Server has been installed,  you may be prompted to configure the Archive Server. The archive is where the vaulted files are physically stored.
+Archive server configuration
+After the initial welcome screen, you will be asked to identify which users and groups will be listed for access to the archived vaults. Additional users and groups can be added after the initial set up, using the Archive Server Configuration tool.
+Windows login
+Pick
+Finish
+when the setup has been completed
+Completed dialog
+You will be able to access the Archive Server Configuration tool, from
+Windows
+>
+Start
+>
+All Programs
+>
+SOLIDWORKS PDM
+, or by typing ‘
+Archive Server Configuration
+‘ in Windows search.
+Launch archive config
+This tool will list list all vaults in your archive.
+Your vaults
+In the Archive Server Configuration tool, you can Restart, Stop, and Start the Archive Server service.
+Stop/Start
+Create a new Archive root folder (new archive)
+New root folder
+Delete a vault or an Archive
+Change the Default Settings for Login, Security and the Refresh Interval.
+Change default settings
+The Login tab is where the default login is set, as well as the Admin and SQL login.
+Login tab/page
+The Security tab allows you the set the  security/permissions setting to an archive. This is the same window accessed during the initial set-up, mentioned earlier in this article.
+Security tab/page
+The Refresh Interval tab sets the rate which the listing of vaults is refreshed.
+Refresh interval tab/page
+By right-clicking on on a vault, part or all of a vault can be relocated to a different drive. Please refer to my article
+Spanning Archive over Multiple Drives using the SOLIDWORKS PDM Relocate Tool
+for instructions on how this is done.
+Learn more about Archive Server
+To learn more about
+SOLIDWORKS PDM Administration
+you should attend our training course live online or in a classroom near you.

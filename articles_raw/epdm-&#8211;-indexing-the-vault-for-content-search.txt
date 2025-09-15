@@ -1,0 +1,18 @@
+When you index a vault archive, the search tool can use the content search option to search a document’s contents or properties.
+The first step is to set-up the Enterprise PDM index server, on the SQL Server hosting the vault database. The SolidWorks Enterprise PDM Installation Guide (found in the \Support\Guides\<lang>
+directory on the installation media) outlines how this is done.
+The keys steps include:
+Verifying the Microsoft Indexing Service installation
+Updating the vault database with the index server name
+Changing the database server login account
+Changing the SQL Server login account
+Adding index server filters
+Rescanning the index catalog
+Managing vault index catalogs.
+Once this is done, the SolidWorks Enterprise PDM Administration Guide (available from the Help pull-down in SolidWorks Enterprise PDM Administration, or it can be found in the \Support\Guides\<lang>directory on the installation media). Describes how to
+Index Vault Archives on a SQL Server
+. It also describes how to
+Configure the Index Service on a Non-SQL Server
+and how to
+Remove a Vault Index
+.

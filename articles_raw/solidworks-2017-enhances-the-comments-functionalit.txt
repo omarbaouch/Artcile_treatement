@@ -1,0 +1,16 @@
+SOLIDWORKS comments have been enhanced in the 2017 release.
+SOLIDWORKS PDM
+is great for documenting files, but sometimes we need to comment and document features and other items
+within a design
+. That just got easier in
+SOLIDWORKS 2017
+. Now all items with a comment can be shown with a special indicator in the FeatureManager Design Tree.
+Showing Comment Indicator
+Now it’s easy to see which items have comments, and they can be viewed just by hovering. All comments are grouped in a folder at the top of the FeatureManager Design Tree.
+Quickly View Comments
+SOLIDWORKS Comments now support many new item types such as mates and folders. Top level comments can be created as well, and now the time and date stamp is automatically added to any comment! You can also attach images or make a one click screenshot. Double click any embedded image to view it in full scale. All comments can be viewed in a sortable, discussion thread style window. This is a great way of capturing design intent and maintaining a history of design decisions.
+View All Comments
+With these great improvements, customers are able to implement the use of SOLIDWORKS comments in applications such as company best practices and internal training!
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

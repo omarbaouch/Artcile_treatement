@@ -1,0 +1,12 @@
+PLEASE NOTE
+that this article has been updated to reflect the changes to PDM 2016. This article is still relevant for earlier versions of SOLIDWORKS Enterprise PDM.
+While a vault view can be created from Windows
+Start
+>
+All Programs
+>
+SOLIDWORKS PDM
+(for EPDM the path is Start > All Programs > SOLIDWORKS Enterprise PDM)
+Windows Start Menu
+It may be faster to do this through EPDM Admin. Right-click on the vault  and select “Create local View”
+Create Local View

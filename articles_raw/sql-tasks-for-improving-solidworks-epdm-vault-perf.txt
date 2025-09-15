@@ -1,0 +1,13 @@
+While helping a customer to resolve SOLIDWORKS EPDM performance issues, I came across an SQL query in the SOLIDWORKS Knowledge Base, which can help determine if Rebuild, Reorder, or Shrink SQL maintenance tasks can be used to improve SOLIDWORKS EPDM Vault Performance. I found this utility useful and I believe others may as well.
+The Knowledge base article number for this query is S-064460
+. I believe this article is available to all customers, but if you cannot access it, ask your SOLIDWORKS Reseller to get this for you. I will be discussing these SQL tasks in separate articles. In this article I want to introduce this query and provide an overview of how to use it.
+SQL queries are executed from Microsoft SQL Management Studio.
+New query
+The query is available from the SOLIDWORKS Knowledge base article,
+and it can be executed by double-clicking on the file, or opening it from the file menu in Microsoft SQL Management Studio.
+Open Query
+Once the query is loaded, it can be executed.
+Execute Query
+Once executed, you will be presented with a list of maintenance tasks you should run.
+Task required
+Scheduling these tasks to run regularly will negate the need to run this query.

@@ -1,0 +1,27 @@
+If you’re using SOLIDWORKS PDM 2019, then you’ve likely noticed some changes to the local vault view.  As part of the
+performance improvements in 2019
+, the frequency that Windows Explorer completes a refresh has been reduced.  This behavior is most apparent with operations like a
+Copy/Move Tree
+, as previously after the move tree completed explorer would automatically refresh and the files wouldn’t be apparent in the source folder,
+whereas in 2019 a manual refresh (default ‘F5’ key) is required for the files not to be visible anymore
+.
+The benefit of this change in functionality is primarily seen in larger vaults, or with larger assemblies where any reduction to the calculations in the database can be beneficial to the system.  In smaller vaults; it may be more beneficial to bring back the automatic refresh option so the user doesn’t have to complete it manually.
+How to re-enable the automatic refresh in explorer
+WARNING
+: Caution is required when editing entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.
+Open
+Regedit
+Browse to;
+HKEY_CURRENT_USER\Software\Solidworks\Applications\PDMWorks Enterprise\Namespace
+Enable Automatic Refresh – Regedit
+Right-Click > New > DWORD (32-bit) Value
+DWORD (32-bit) Value
+Name it;
+EnableAutoFileRefresh
+Set the value to;
+1
+EnableAutoFileRefresh
+Close the Registry Editor
+Close and reopen Explorer
+Note
+: This setting is specific to the client install, therefore will need to be completed on each client machine that requires this change.

@@ -1,0 +1,32 @@
+SOLIDWORKS PDM Professional 2017
+comes with some very useful new Tasks that can be big time savers for users.  One is the new DraftSight to PDF Task.
+This Task is able to convert DWG and DXF files to PDF format
+.  This requires that
+DraftSight Professional or Enterprise Pack
+be installed on the computer that runs the task.
+PLEASE NOTE
+:  This Task cannot work with the free version of DraftSight.
+Also, for the Task to complete,
+you MUST also disable the SOLIDWORKS PDM Add-in for DraftSight
+on the computer that runs the task.
+To import the DraftSight to PDF Task:
+Step 1.
+Right click on the vault name in the SOLIDWORKS PDM Administration program and select “Import…”
+Import Task
+Step 2.
+Browse to the SOLIDWORKS PDM installation folder (probably located at C:\Program Files\SOLIDWORKS 2017\SOLIDWORKS PDM\) and go into the folder “Default Data”. In that folder, select the DraftSight_To_PDF_gb.cex file and click open.
+DraftSight to PDF location
+Step 3.
+On the system or systems that will serve as the Task Host for the DraftSight To PDF conversion task, Right Click on the SOLIDWORKS PDM icon in the Windows Taskbar and select the “Task Host Configuration”.  Check the box to Permit the Task to run on that computer.
+Task Host Configuration
+DraftSight to PDF Task Settings:
+The DraftSight to PDF task is fairly similar to the existing SOLIDWORKS Convert Task in PDM, with most of the same controls as are in the default Convert Task.
+Properties Output settings
+Just like the SOLIDWORKS Convert Task in 2017, the Office to PDF Task also supports using Variables from Data Cards to build the output filename.
+On the “Conversion Settings” screen, shown below, you can override the current Draftsight export settings and customize the output for the task.
+Properties Conversion Settings
+Need DraftSight Professional?
+Visit the
+Dassault Systèmes DraftSight Store
+for the current price, a purchase includes a DraftSight Professional license plus a 12 month subscription for upgrades and service packs. Note that DraftSight Professional currently runs on Windows only.
+Buy DraftSight Professional

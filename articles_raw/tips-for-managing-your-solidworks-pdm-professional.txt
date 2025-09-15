@@ -1,0 +1,7 @@
+SOLIDWORKS PDM is awesome for storing your files and making sure that everyone follows the rules to get products into the customer’s hand. In
+SOLIDWORKS PDM
+, you can locate files by searching for them using the information stored in the database. Even with this searching ability, some companies prefer to have folders to organize their files. So, what can you do to keep your SOLIDWORKS PDM Professional vault organized?
+SOLIDWORKS PDM Professional
+provides tools to help you organize your vault:
+Watch the on-demand webinar
+Learn all the details on how to organize and find your data in a PDM environment with templates and searches in this on-demand webinar:

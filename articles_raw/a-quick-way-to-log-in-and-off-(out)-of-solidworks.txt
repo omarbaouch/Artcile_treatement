@@ -1,0 +1,15 @@
+I’m sure that most reading this article are familiar with how to log in to the SOLIDWORKS PDM Local Vault View, by means of the PDM icon in Windows Quick Access or from Windows Explorer. It may be that you have even added short-cuts to Windows Quick Access, in order to navigate to a particular folder in your vault.
+From the Windows Task Bar
+But logging in/out of a vault can also be done from the Windows Task Bar. By clicking on the upward pointing arrow of the Windows taskbar, close to where the date and time are displayed. You can view apps that are currently running on your system. Some may be familiar with this area when
+specifying a computer as a SOLIDWORKS PDM Task Host
+.
+Windows Task Bar Apps
+Clicking on the PDM icon will display several options including Log In and Log Off.
+Log In/Off
+Being able to Log In/Off from here, is useful when you need to log in as a different user or into a different vault. I use this often for troubleshooting user permissions, by logging in as the PDM Admin.
+What If I’m Still Logged in?
+While the log off option will log you out of the vault, it’s possible that when browsing back into the vault, you’ll find the same user gets logged in, without producing a prompt to allow you to change. This can make it difficult to switch between multiple logins, such as an engineering user and the Admin. In these cases, the cause is the “Automatic Login” feature.
+In order to receive a log in prompt when browsing back into the vault, you will need to open the PDM Administration tool. Under Local Settings, you can access the Settings. This brings up a dialog box with the automatic login options. Grab your vault name from the drop down and uncheck “Use server default” or “Use automatic login for this vault.” Then, when you log out of the vault, browsing back into it will prompt the user for their login credentials.
+As a side note, it is also possible to log out of a vault from inside the
+Local Vault View
+.

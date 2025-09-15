@@ -1,0 +1,23 @@
+Whether it is for maintenance, troubleshooting, or preventing unauthorized access, occasionally there is the need to block SOLIDWORKS PDM login.
+To block users
+access the SOLIDWORKS PDM Administration tool
+and
+right-click on a Vault
+and select
+Properties
+.
+Vault Properties
+Next click on
+Block Log-ins
+.
+SOLIDWORKS PDM Block log-ins
+Anyone attempting to log into the vault will receive a the message: “system is locked due to maintenance”
+System Maintenance Message
+To allow access to the vault, select
+Permit Log-ins
+and users will once again be able to access the vault.
+Permit log-ins
+NOTE
+: this will not log out users who are already logged in. People who are already logged in, will continue to be able to access the vault.  There is no built-in functionality to force log-outs, but the connection form a client to SQL can be killed. The process to do this, is outlined in another one of my articles, titled “
+Killing SQL connection to force a Client logout
+”

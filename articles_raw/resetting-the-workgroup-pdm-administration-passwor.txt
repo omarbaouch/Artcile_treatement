@@ -1,0 +1,14 @@
+If the password for the SolidWorks Workgroup PDM administrator user has been lost, it is possible to reset the original
+administrator login account.
+When Workgroup PDM is first installed the administrator user is pdmwadmin with the password pdmwadmin.  If this user has been deleted or if it’s password has been changed, it’s possible to reset this account by making direct changes to files within the Workgroup PDM VaultData folder on the server.
+To reset the pdmwadmin user account, follow these steps:
+1.  Login as a Windows user with Administrative rights on the server hosting the Workgroup PDM Vault
+2.  Go to the Control Panel > Administrative Tools > Services and Stop the  “SolidWorks Workgroup PDM Server” service.
+3.  Navigate to the pdmrc folder in the Workgroup PDM vault directory.  By default this is located at C:\VaultData\pdmrc.
+4.  First confirm if the pdmwadmin user is set up as an administrator.  In the pdmrc folder, open the file admin.pdmw using Notepad.  If the pdmwadmin user is not present, paste the line below into the file.
+pdmwadmin               U            +
+5.  Open the users.pdmw file using Notepad.  If the user has been deleted, paste the line below into the file.  If the password for the pdmwadmin user has been changed, then replace the existing line in the file with the line below.
+pdmwadmin               <01>pNOxNT=Nq%OuNT^No^O}NTAN
+6.  To keep the changes that were made, navigate to the data folder in the vault directory (C:\VaultData\data) and delete the file cache.store
+7.  Restart the “SolidWorks Workgroup PDM Server” service.
+8.  Login to the SolidWorks Workgroup PDM VaultAdmin using the Name “pdmwadmin” and Password “pdmwadmin”.

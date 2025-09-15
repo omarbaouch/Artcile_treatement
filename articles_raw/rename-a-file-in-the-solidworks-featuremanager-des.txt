@@ -1,0 +1,41 @@
+When you rename an assembly file in SOLIDWORKS via the FeatureManager Design Tree SOLIDWORKS PDM will update all the references for you automatically.
+Here I have a SOLIDWORKS flashlight assembly:
+SOLIDWORKS Flashlight Assembly
+I’d like to change the name of my sub assembly
+Head_sub
+to
+JavHeadSubAssy
+.
+SOLIDWORKS PDM rename file requirements
+Before we can change the name there are a few requirements to check off first:
+The file must be checked out
+PDM add-in installed and loaded
+The user has the state and folder permission to Add or rename a file
+If you are missing any of the above requirements you will receive an error message.
+Note: To see the
+Rename
+option in SOLIDWORKS from the right click menu, this must first be enabled:
+Tools > Options > System Options > FeatureManager > “Allow component files to be renamed from FeatureManager tree“
+SOLIDWORKS PDM rename file process
+Within the FeatureManager Design Tree
+right-click the part/sub-assembly name
+you would like to change, and select
+rename
+from the shortcut menu as shown in the figure below
+Rename Assembly
+After a rebuild and save, the name will be updated within SOLIDWORKS PDM:
+Flashlight Assembly References Updated
+It even updates the components within the sub-assembly:
+Sub-Assembly Components Updated
+Easy!
+If you’re looking to
+create a new assembly and use your current assembly as a base
+, then
+this feature isn’t the one for you
+.  Check out one of my favourite functions of PDM
+Copy Tree
+.
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about using or administering SOLIDWORKS PDM.

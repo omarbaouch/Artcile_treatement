@@ -1,0 +1,31 @@
+
+<h6>Updated 2025-06-04 </h6>
+<p>When troubleshooting problems within SOLIDWORKS PDM, especially performance issues, it&#8217;s important to ensure the client has a strong connection to the server components.  Often, tech support will request an extended ping test, to look for issues.</p>
+<h3>How to complete an extended ping test with log</h3>
+<p>In Windows 10</p>
+<ul>
+<li>Start button &gt; RMB &gt; Run
+<ul>
+<li>CMD</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_48980" style="width: 718px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run.png"><img decoding="async" aria-describedby="caption-attachment-48980" class="wp-image-48980 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run.png" alt="Run CMD" width="708" height="269" title=""><p id="caption-attachment-48980" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-48980 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run.png" alt="Run CMD" width="708" height="269" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run.png 708w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run-600x228.png 600w" sizes="(max-width: 708px) 100vw, 708px" /></noscript></a> Run CMD</p></div>
+<ul>
+<li>Ping &lt;Database/Archive Server Name&gt; -t -l <strong>1350</strong> &gt;C:\temp\Pingtest.txt</li>
+</ul>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09.png"><img decoding="async" class="aligncenter wp-image-70499 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09.png" alt="" width="628" height="136" title=""><noscript><img decoding="async" class="aligncenter wp-image-70499 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09.png" alt="" width="628" height="136" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09.png 628w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09-600x130.png 600w" sizes="(max-width: 628px) 100vw, 628px" /></noscript></a></p>
+<ul>
+<li>Let it run for a sample amount of time, then stop the test by pressing <strong>CTRL-C</strong>.</li>
+</ul>
+<p>The command will be completed, and a log file generated on the C-Drive;</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13.png"><img decoding="async" class="aligncenter wp-image-70500 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13.png" alt="" width="1075" height="817" title=""><noscript><img decoding="async" class="aligncenter wp-image-70500 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13.png" alt="" width="1075" height="817" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13.png 1075w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13-600x456.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13-768x584.png 768w" sizes="(max-width: 1075px) 100vw, 1075px" /></noscript></a></p>
+<p>This can then be sent to tech support for further analysis.</p>
+<h3>Additional Notes</h3>
+<ul>
+<li>The above test is using an increased packet size of <strong>1350</strong>, this improves the quality of the test to a size more comparable with PDM communications.</li>
+<li>Any listings of &#8216;Request timed out&#8217; or dropped packets would indicate an issue.</li>
+<li>If multiple tests are required (network communication can vary) editing the command from &#8216;&gt;&#8217; to &#8216;&gt;&gt;&#8217; will append the existing log, rather than replacing it, so multiple tests can be captured within the one log. </li>
+</ul>
+<h6>2025-06-04&#8230;Update Details</h6>
+<p>This article was updated to reduce the sample packet size from 1500 to 1350 as within some environments a packet size of &gt; 1400 could cause IP fragmentation / reassembly on the link to measure.</p>

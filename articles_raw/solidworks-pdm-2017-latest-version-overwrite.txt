@@ -1,0 +1,28 @@
+New in
+SOLIDWORKS PDM 2017
+is the SOLIDWORKS PDM Latest Version Overwrite
+feature which enables users to overwrite a file while retaining the current version value.
+Previously in SOLIDWORKS PDM a new version was created for every check in of a file.  Repairing something as simple as a typo would create unnecessary versions using up disk space in the archive server.
+NOTE: This function should be used with caution as it permanently deletes file versions.
+Permission should be limited to the appropriate personnel.
+This feature will require the
+‘Can overwrite latest version during check in’
+folder and state permissions.
+Can overwrite latest version during check in option
+Latest overwrite option in workflow
+As an example here is a file in my vault which has a spelling mistake;
+note the file version is 6/6.
+File with spelling mistake in description
+To repair this using
+Latest Version Overwrite
+I’ll first need to check out the file and correct the issue.
+Spelling mistake corrected
+Then during check-in I will check the
+Overwrite Latest Version
+box, then select check in.
+Check Overwrite Latest Version
+The spelling error is corrected and the file version remains at 6/6.
+Latest Version Overwrite – Complete
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

@@ -1,0 +1,44 @@
+SOLIDWORKS PDM Reorganize Index or Rebuild can increase performance on a
+fragmented database
+. If fragmentation is between 10 – 30% then Reorganize is recommended, when above 30% a Rebuild would be best.
+For fragmentation values lower than 10%, or for smaller databases, Reorganize and Rebuild may not increase performance
+. The SOLIDWORKS Knowledge Base article S-061702 offers a query to find average fragmentation and provides guidance on whether to use the Reorganize or Rebuild tasks.
+How to Reorganize a Single Database
+In the example below, we will look at how to create a one-time task to
+Reorganize
+a single database. I am specifying a one-time task as I wish to only use this task when fragmentation is between 10 – 30% as noted earlier.
+In Microsoft SQL Server Management Studio (2014), under
+Management
+, right-click on
+Management Plans
+and select
+Maintenance Plan Wizard.
+Start Maintenance Plan Wizard
+Identify the
+Plan Properties
+. Since I only want to run this task when there is a minimum amount of fragmentation, I will run this task on-demand, by selecting the
+Not Scheduled
+option
+Maintenance Plan Properties
+Select the Maintenance Task(s) that will be executed by this Plan.
+Maintenance Plan Tasks
+Along with the Reorganize Task, I have also selected the
+Update Statistics Task
+, as well. This Task updates query optimization Statistics, which in turn can lead to increased query performance. Updating query Statistics, requires that the queries to be recompiled. This can have the effect of reducing performance, so frequent updating of Statistics should be avoided.
+The management of Statistics can be handled by
+automatic options
+and may be sufficient, to maintain performance. These options are Auto Create and  Auto Update. Auto Create will automatically create missing Statistics and Auto Update will update Statistics when they’re deemed to be out of date. Both of these are set from the Options tab of a Databases Properties. The Database Properties are available by right-clicking on a Database.
+Auto-create and Auto-up Statistics
+Once the Tasks have been identified and the order in which the Tasks are executed, have been defined. The next step is to identify the database(s) to run this Task(s) on.
+Specify Database[s] for Index Task
+Alternatively, if you have several PDM databases, the option ‘All user databases (excluding master, model, msdb, tempdb) can be selected. This option has the additional benefit of including any future databases.
+If you would like to have a report generated for the outcome of this task, identify how you would like this report created.
+Report Options
+Confirm that the task is configured correctly and click on
+Finish
+to start the task.
+Maintenance Plan Review
+When the task is complete you can review the results and the report.
+Maintenance Plan Complete
+The Maintenance plan will be saved for later use.
+Saved Task

@@ -1,0 +1,34 @@
+Many times when working within SOLIDWORKS PDM Professional or Standard, you may want to create a Task that can be used to speed up your workflow.
+One such example of this could be the task titled “Convert to PDF”, which Converts SOLIDWORKS Drawing files (.slddrw) files to PDF and save them in the configured location within the Task Settings.
+Now say when setting this task up, something went wrong and you’re receiving a few “Failed” messages when running the task manually via the Command Menu.
+Troubleshooting a failed PDM Script:
+Make sure that the
+Task Host is configured on the current system
+Monitor the Task in the PDM Administration tool via the
+Task List
+.
+Ensure that the correct version of the PDM Add-In is used, If not –
+Upgrade the PDM Add-In to match your PDM Server Install
+If there are no changes to the default script. then reset the script.
+Review the
+PDM Client Log
+and
+Archive Server Log
+for Errors
+Review the Windows ‘Application and ‘System’ Event logs for Errors
+In this article, we will be looking at Step 4 of the process.
+Reset the Default PDM Script
+Launch the “Administration” tool for SOLIDWORKS PDM
+Navigate to the Tasks > Open the Task to Modify
+SOLIDWORKS PDM Tasks
+Go to “Output File Details”
+Output File Details
+Copy the script to the Notepad file and Save the file
+“Reset” the Script
+If you have multiple versions of SOLIDWORKS – Choose the version that you would like the files to be open and rebuilt in
+Reset the script
+Select “OK” on all Windows. Re-run the Task Script to see the results.
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

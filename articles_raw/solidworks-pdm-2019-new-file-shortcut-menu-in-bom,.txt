@@ -1,0 +1,13 @@
+In previous releases of SOLIDWORKS PDM, when right clicking on any referenced file on the Bill of Materials, Contains or Where Used Tabs wouldn’t give access to the full File Shortcut menu.
+Instead, users had to go through two steps, first going directly to that file using the “Browse to” or “Browse to in a New Window”  command, then right clicking on the file in the Vault View window to access the File Shortcut Menu to perform actions such as checking out the file or performing a transition.
+Now in SOLIDWORKS PDM 2019, users have access to the full File Shortcut Menu directly in these tabs.
+SOLIDWORKS PDM 2019 File Shortcut Menu
+This will provide a significant time savings for users when trying to access any of these commonly used commands from within these tabs.
+How to take advantage of the new SOLIDWORKS PDM 2019 File Shortcut Menu
+To take advantage of these improvements, all that is necessary is to upgrade your SOLIDWORKS PDM installation to 2019.
+Make sure to review the steps outlined in our
+SOLIDWORKS PDM Upgrade Checklist
+to ensure that your upgrade process is as smooth as possible.
+If you need assistance with the upgrade we offer a comprehensive
+SOLIDWORKS PDM Upgrade Service
+so that you can be confident in the knowledge that your critical business system will be upgraded by an experienced Certified SOLIDWORKS PDM Professional.

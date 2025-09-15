@@ -1,0 +1,4 @@
+You have made some changes to your vault in SolidWorks Enterprise PDM Administration and would like to test those changes in Local Vault View. Right click on the vault and choose
+Explore
+.
+This will open the Local Vault View in offline mode. Just right-click on the vault in the Explorer Window and you can log into your vault.

@@ -1,0 +1,9 @@
+Even if a SolidWorks BOM is hidden in a SolidWorks assembly or drawing, the BOM can still be accessed through SolidWorks Enterprise PDM.
+This option can be set from the local vault view under,
+Display
+>
+Options
+, by selecting
+Extract hidden BOM from SolidWorks on Check In
+.
+SolidWorks EPDM Display Options

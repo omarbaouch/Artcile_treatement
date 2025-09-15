@@ -1,0 +1,39 @@
+The SOLIDWORKS PDM Client software can use a number of optional Add-Ins that integrate directly with several different CAD programs.
+For most users, the most important integration is probably that with the SOLIDWORKS 3D Design software itself.  The PDM Add In within SOLIDWORKS is a powerful tool that gives you the ability to Check Out and Check In files within the Vault, perform Transitions, review Data Cards and access to many other PDM functions, all within the Task Pane area of SOLIDWORKS.
+This Add-In is available for both SOLIDWORKS PDM Standard and Professional.  If you do not see the SOLIDWORKS PDM Add-In in the Task Pane area, here are a few steps to take to troubleshoot the issue:
+Check if the Add-In was Disabled
+If the Add-In is not active in the Task Pane area, it’s possible that it was simply disabled.
+Within SOLIDWORKS go to Tools > Add-Ins… and review the list of available Add-Ins.
+If SOLIDWORKS PDM Add-In is present in the list, simply check the box to the left of the Add In name to enable it.  Typically, if you are working with SOLIDWORKS files in the vault, you will always want the PDM Add In to be enabled, so checking the box to the right of the Add In Name will ensure that the Add In is always enabled at startup.
+Change the PDM Client License Type
+If you encounter an error saying “
+The operation is not supported by your SOLIDWORKS PDM license
+” when trying to enable the SOLIDWORKS PDM Add-In, then it’s likely that the client is not currently using a SOLIDWORKS PDM Cad Editor license type.
+Only the SOLIDWORKS PDM CAD Editor license will allow access to the CAD software Add-Ins for PDM.  If you are using a PDM Contributor or PDM Viewer license, you will need to change the client license type in order to use the add in.  The article
+How to change the SOLIDWORKS PDM Client licence type
+provides step by step instructions on how to do this.
+Modify the SOLIDWORKS PDM Client Installation
+If the SOLIDWORKS PDM Add-In is missing completely from the SOLIDWORKS Add-Ins list, then it’s possible that it did not get installed along with the PDM Client software.  To address this, modify the SOLIDWORKS PDM Client Installation and ensure that the SOLIDWORKS Add In is selected.
+The Client software may have been installed using either the SOLIDWORKS Installation Manager or using the SOLIDWORKS PDM Client msi installer.
+If installed using the SOLIDWORKS Installation Manager:
+Step 1:
+Go to Windows Apps & Features, select the SOLIDWORKS installation and click “Modify”.
+Step 2:
+Select “Modify your installation” and click “Next”.
+Step 3:
+Click “Next” until reaching the “Summary” screen.  In the “SOLIDWORKS PDM Options” section, click “Change”.
+Step 4:
+Ensure that the “PDM Client Type” is set to “SOLIDWORKS PDM CAD Editor” and that the “SOLIDWORKS Add-in” is selected, then click “Back to Summary” and then “Modify Now”.
+If installed using the SOLIDWORKS PDM Client MSI:
+Step 1:
+Go to Windows Apps & Features, select the SOLIDWORKS PDM Client installation and click “Modify”.
+Step 2:
+In the InstallShield Wizard click “Next”.
+Step 3:
+Select “Modify” and click “Next”.
+Step 4:
+Click “Next” until reaching the “Choose Product Type” screen.  Ensure that the “SOLIDWORKS PDM CAD Editor” is selected and click “Next”.
+Step 5:
+On the  “Select Add-Ins” screen ensure that the “SOLIDWORKS” add-in is checked and click “Next”.
+Step 6:
+Finally click “Install”.

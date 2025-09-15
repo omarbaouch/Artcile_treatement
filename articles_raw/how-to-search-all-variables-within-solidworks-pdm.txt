@@ -1,0 +1,23 @@
+Ever have a scenario where you’re looking for a specific value but can’t remember which variable it’s stored in?  If you know where the value should be stored (for example part number), searching within SOLIDWORKS PDM is easy as we can search that specific variable and find what we’re looking for quickly, but as a user I found there were scenarios where I’d be looking for a value and not sure which variable it might exist in.  In this article we’re going to look at a couple of options to search all variables at once.
+For these searches we’re going to be using the default
+Complete Search Card
+.  If you do not have a copy of this in your vault, please read our
+SOLIDWORKS PDM Complete Search Card Guide
+for importing it.
+Searching all via the variables tab
+Complete Search Card > Variables Tab
+Set the following:
+Variable;
+<Any Variable>
+Comparison;
+Text Contains
+Then the value to what you’re looking for.
+Searching all via the variables tab
+As this search includes all the variables in the vault you may see a slower than usual return of results
+Searching all via the history tab
+Complete Search Card > Variables Tab
+Check the option to
+‘Look in card variable values’
+and enter the value in ‘
+Text to find in history’.
+Searching all via the history tab

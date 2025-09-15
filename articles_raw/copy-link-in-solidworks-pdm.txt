@@ -1,0 +1,14 @@
+Have you ever questioned, how they send a notification to an email that will allow you click on it and take you directly to the file to review? Good news the option is available. You can now add a link to a report, Email, or office document, and Solidworks has made it as seamless as possible.
+This great feature in SOLIDWORKS PDM is the ability to generate a hyperlink to any file in the vault through the Right-Click Menu.
+SOLIDWORKS PDM 2018 Copy Link
+Simply right-click on any file, and go to the Copy Link command.
+This will copy a hyperlink to the file’s location to your clipboard.
+This link can then be pasted into any document, such as a spreadsheet, or can be sent to another user by email.
+Paste in email message
+There are a few things to remember when using this option the user can access the file if they have the following credentials:
+They have a local vault view created on their computer.
+If they do not have a vault view see the following blog articles to create the view.
+https://www.javelin-tech.com/blog/2017/08/solidworks-pdm-standard-create-local-vault-view/
+https://www.javelin-tech.com/blog/2024/11/how-to-set-up-a-solidworks-pdm-local-vault-view-using-a-cvs-file/
+They have at minimum “Read File Contents” permissions for both the folder and state that the file is currently in.
+These permissions can be added under the username or groups in the Solidworks PDM Administration tool

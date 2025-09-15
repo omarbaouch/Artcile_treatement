@@ -1,0 +1,10 @@
+With the latest release of
+SOLIDWORKS PDM Professional
+, a new web portal has been included that provides access to the PDM vault with any web browser. This includes all mobile phones and tablets! Check out this video to discover some of the key capabilities of the SOLIDWORKS PDM web portal accessed through an iPhone.  The direct integration with the
+eDrawing
+iOS app is amazing and when browsing
+SOLIDWORKS Electrical
+PDF’s the embedded hyperlinks are very useful.
+There is no additional licensing, but I recommend that our
+SOLIDWORKS PDM upgrade team
+setup the web portal for you as there are some subtle settings which shouldn’t be missed.

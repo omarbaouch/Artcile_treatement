@@ -1,0 +1,49 @@
+When server components are moved, particularly in the
+SOLIDWORKS Solid Network License Manager
+, the new server location must be updated to ensure continued access to licenses. This update is performed within the
+SOLIDWORKS PDM Administration
+tool.
+Updating the License Manager Server in SOLIDWORKS PDM
+To specify the new license server location, follow these steps:
+Open
+SOLIDWORKS PDM Administration
+.
+Double-click on the
+License
+node to open the license settings.
+In the
+Server List
+, add the new server and remove the old one.
+Specify the new server using the format:
+port@server_name
+.
+The default port for the
+SOLIDWORKS SolidNetWork License Manager
+is
+25734
+.
+PDM License Node
+In the server list, add the new server and remove the old one. Be sure to specify the new server by port@server name. The default port for the SOLIDWORKS SolidNetWork License Manager is 25734.
+Defining Server and Port Number
+Monitoring License Usage
+In addition to updating the license server location,
+license usage
+can be monitored from the
+License
+node within SOLIDWORKS PDM Administration. To do this:
+Navigate to the
+License Usage
+tab within the
+License
+node.
+Review active sessions, allocated licenses, and user activity.
+License Usage
+By ensuring that the
+SOLIDWORKS Solid Network License Manager
+server location is correctly defined and monitoring license usage, administrators can maintain a seamless licensing experience for SOLIDWORKS PDM users.
+Need Assistance?
+We hope this guide helps you effectively in
+Specifying a New License Manager Server Location for SOLIDWORKS PDM
+. If you have any questions or encounter issues, do not hesitate to contact our
+TriMech Tech Support
+team for further assistance.

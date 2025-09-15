@@ -1,0 +1,9 @@
+It’s no secret I’m a big fan of  SOLIDWORKS PDM Professional templates.  Previously as a vault administrator I had an obsession with folder structure. I found that every user had a style to file management with regards to folder structure which resulted in inconsistencies depending on who created the project folder.  It would drive my OCD into panic mode.  What worked for me is; calling a vote on a folder structure that works for everyone with projects and then creating a PDM template.  Then I reduced folder permissions forcing users to use the template (because old habits die hard). The result was a consistent folder structure within each project folder and my OCD was free to obsess over more important things….like icon colours.
+Paste files into template dialog
+If you share this
+obsession
+passion for consistency, a tip for creating templates is to copy and paste entire folder structures into the edit template dialog, and it will even include files:
+SOLIDWORKS PDM Professional Templates Files included
+Interested in further SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

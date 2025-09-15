@@ -1,0 +1,17 @@
+Have you ever spent a lot of time working on a SOLIDWORKS project only to come back later to find out that it has broken or missing file references? Perhaps one of the parts that was inside your assembly has been moved or renamed. A very common issue that users have when working on projects with a team is reference and revision control. Watch the video below to see exactly how SOLIDWORKS PDM Reference and Revision control will help eliminate the risk of using an incorrect file.
+SOLIDWORKS PDM Reference Vaulted System
+SOLIDWORKS PDM has a vaulted system that keeps track of all of its files. If one of your co-workers moves a file that was being referenced within your project into your template folder the next time you open the assembly there will be no problems. This is because the vaulted system maintains references even if the part’s name or location is changed. Since references are kept, you can easily move common parts from project folders to your library in order to access them easily. SOLIDWORKS PDM uses the standard windows conventions so you can easily drag and drop your file into the desired location.
+Be confident when working with assemblies and parts
+If you want to be very careful when working with your part files you can choose to open the file and view it rather than edit. This will prevent  any accidental changes to the part. When you decide whether you want to edit or view your part, you simply check it out thus opening your part or assembly. After you are satisfied with changes you might have made during editing you can save the file by checking it in. While doing so you can leave a comment on the file indicating what changes were made so that you can keep track of the different file versions.
+Set Revision Command
+Learn more about SOLIDWORKS PDM
+SOLIDWORKS PDM Standard
+is a new data management solution for smaller workgroup environments in a single location.
+Included in SOLIDWORKS Professional and Premium packages.
+SOLIDWORKS PDM Standard allows you to manage your SOLIDWORKS data more effectively on local and shared network drives.
+Read additional blog articles to
+learn how to get started with SOLIDWORKS PDM Standard
+, including installation, setup, and usage.
+SOLIDWORKS PDM Professional provides even more functionality, learn about the
+differences between the Standard and Professional PDM versions
+.

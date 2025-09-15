@@ -1,0 +1,21 @@
+The backbone of the SOLIDWORKS PDM Standard vault is the database in Microsoft SQL Server Express.The SQL Express server databases can be managed and maintained using the SQL Management Studio.  This program is not installed automatically when installing SOLIDWORKS PDM Standard server components, however it is included with the SOLIDWORKS installation media.  Here are two SQL Management Studio install options:
+Option 1:  Automatic SQL Management Studio Install through the SOLIDWORKS Installation Manager
+This is definitely the easiest way to install the Management Studio, simply check the option “Install MS SQL Management Tools” under the SQL Server section in the Installation Manager.  This is only possible during the initial installation (or upgrade) of the SOLIDWORKS PDM Server software, so if PDM Standard is already installed, then this won’t be an option.
+Install MS SQL Server Express
+Option 2:  Manual SQL Management Studio Install
+Step 1:
+The SQL Management Studio software is included in the SOLIDWORKS installation file set in the folder “sqlmngmnt”.  Right click on the file “sqlmanagementstudio_x64_enu.exe” and select “Run As Administrator
+SQL Management Studio executable
+Step 2:
+In the SQL Server Installation Center, select “New SQL Server stand-alone installation or add features to an existing installation.
+Add features
+Step 3:
+Under Installation Type, select “Perform a new installation of SQL Server”.
+Perform a new installation of SQL Server
+Step 4:
+Under Feature Selection, check the boxes beside “Client Tools Connectivity”, “Client Tools Backwards Compatibility”, “Management Tools – Basic” and “Management Tools – Complete”.
+Feature Selection
+Pick Next and complete the installation:
+Installation Complete
+You will be able to log into the SWPDM Instance of SQL Server Express using the “sa” account login and password.
+Logged into SQL Server Management Studio

@@ -1,0 +1,10 @@
+An administrator can now allows users, who have the option selected, to
+always work with latest version of files,
+and the ability to
+Get
+earlier versions of a file. This is done by enabling the option
+Enable the get version command in SolidWorks Add-in
+, from within the User Settings dialog.
+Enable Get Version in User Settings
+Once this option is selected the user will be able to get an earlier version of a file while accessing the vault through SolidWorks. This ability is only available when using the SolidWorks add-in.
+Get Version in the SolidWorks Add-in

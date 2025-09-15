@@ -1,0 +1,35 @@
+This article is
+part of a series
+for troubleshooting common, and perhaps not so common, SOLIDWORKS PDM error messages. The error message
+“Could not copy the file. Cause: The file could not be found.”
+, can occur when a user launches a SOLIDWORKS PDM Template that generates a file.
+Template Fails to Create New File
+When a PDM Template generates a file, it uses a corresponding document template.
+Defining Document Template for PDM Template
+For example, if the PDM Template generates a SOLIDWORKS part file, the PDM Template would use an existing SOLIDWORKS part, as a template. The user of the PDM Template will need at least read permissions to the template document.
+Resolving the PDM Issue
+To resolve this issue, make sure that users have at minimum the permission,
+Read file contents
+, for both the folder and state that document templates reside in.
+Minimum State Permissions to Use Document Template
+Alternatively, editing the PDM Template and specifying a user with sufficient permissions, will temporarily elevate the current user’s permissions. This is useful when you want to elevate a users permission, only when they use the PDM Template.
+Elevating User Permissions When Running Template
+Error could also be from Invalid Characters
+This error message as well as the error message “Could not create folder. Cause: The file/key name was invalid,” can also be the result of an invalid character being specified for the file name, by the PDM Template. Below is a list of invalid characters, for file names:
+" (Double quote)
+
+/ \ (Forward / Back slash)
+
+: (Colon)
+
+? (Question mark)
+
+* (Asterisk)
+
+< > (Smaller / Bigger than)
+
+| (Pipe)
+
+Any character created using the CTRL key
+
+An empty filename

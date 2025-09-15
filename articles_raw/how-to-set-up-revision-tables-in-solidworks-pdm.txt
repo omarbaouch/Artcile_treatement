@@ -1,0 +1,66 @@
+In SOLIDWORKS PDM 2018, the much-anticipated
+Revision Tables
+integration was added, and we can now automatically add table rows with updated variable values via a workflow transition or the
+Set Revision
+command.  In this article, we’re going to look at the basic set up of this feature to automatically update the Revision Table via a workflow transition action.
+NOTE
+: This functionality requires SOLIDWORKS PDM 2018 or later, and the drawing file format to be 2018 or later.
+How To Set Up Revision Tables
+By default, there are 5 revision columns; Zone, Rev, Description, Date and Approved.  For this example, we’re going to create a table that only uses
+Rev
+,
+Description – Rev Table
+,
+Date
+and
+Approved
+Enable Revision Tables
+Administration Tool > SOLIDWORKS > Revision Table
+Settings:
+Check
+Enable Revision Table
+Number of visible rows:
+3
+Revision placeholder character(s): *
+Revision Table Settings
+Map Variables
+Administration Tool > Variables > Revision
+Create a new attribute
+Block Name:
+SWRevTable
+Attribute Name:
+Revision
+Extension:
+slddrw
+Map Variables
+Repeat for variables used for the
+Description – Rev Table
+,
+Date
+and
+Approved
+values.
+Integrate Into Workflow
+For any transitions that have revision actions associated with them; add
+Set Variable
+actions to update the variable used by the table
+Integrate Into Workflow
+For this example, I’m using the
+Default
+vault set up, therefore this required adding actions to the transitions;
+Passed Approval
+,
+No Approval Required
+and
+Change Approved
+For more information regarding the increment of a revision via a workflow please see our previous article on
+SOLIDWORKS PDM Revision
+.
+Test Thoroughly
+This is a great example of something that can be tested thoroughly in a Sandbox vault, ahead of implementing in your production vault.
+NOTE
+: The drawing must have a pre-existing revision table within it, for the integration to work and the rows to be added automatically.
+Learn more about SOLIDWORKS PDM Revisions
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about using or administering SOLIDWORKS PDM, and creating a complete revision numbering system.

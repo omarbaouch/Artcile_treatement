@@ -1,0 +1,21 @@
+With
+SOLIDWORKS PDM 2017
+you can now add a custom column in the Transition and Get dialog boxes. SOLIDWORKS PDM Custom Columns can be added by
+right-clicking on any column heading
+and selecting
+More
+from the shortcut menu.
+Right-click column
+Or by right-clicking within a dialog box
+and selecting
+Columns
+>
+More
+from the shortcut menu.
+Adding a column
+After clicking on More, you can choose the Columns you would like to add.
+Choose Columns
+The available columns are tied to the Variables within a vault. As with any other column, Custom Columns can be reordered and resized. Changes to columns, including the addition of columns, is stored for each PDM user.
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

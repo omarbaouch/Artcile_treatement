@@ -1,0 +1,62 @@
+Overview
+This article aims to describe the steps to install SOLIDWORKS PDM in a client machine in a simplified way, as a quick reference. For detailed instructions, please refer to the
+SOLIDWORKS PDM Installation Guide on the SOLIDWORKS website
+.
+SOLIDWORKS PDM Client Installation Steps
+Before you begin, make sure you are logged on to the client computer as a user with local administrative rights.
+STEP 1:
+Run
+\SWPDMClient\setup.exe
+from the installation media or folder to install SOLIDWORKS PDM client.
+Setup.exe
+STEP 2:
+Click
+Next
+Confirmation window
+STEP 3:
+Accept the license agreement and click
+Next
+License Agreement
+STEP 4:
+To accept the default installation location, click
+Next.
+To specify a different installation location
+:
+Click Change.
+Browse to the new location.
+Click OK.
+Click Next
+Installation location
+STEP 5:
+Select the type of client to install: Select PDM Product
+SOLIDWORKS PDM Professional: Select if you connect to SOLIDWORKS PDM Professional server only.
+SOLIDWORKS PDM Standard: Select if you connect to SOLIDWORKS PDM Standard server only.
+SOLIDWORKS PDM Product selection
+STEP 6:
+a. Select the type of client to install, based on your license:
+SOLIDWORKS PDM CAD Editor
+SOLIDWORKS PDM Contributor
+SOLIDWORKS PDM Viewer
+Click
+Next
+Client type selection
+STEP 7:
+If the product type is SOLIDWORKS PDM CAD Editor, Select Add-Ins
+You can select:
+Microsoft Office Integration, SOLIDWORKS, DraftSight, Inventor, and AutoCAD add-ins for SOLIDWORKS PDM Professional client.
+SOLIDWORKS and DraftSight add-ins for SOLIDWORKS PDM Standard client.
+Click
+Next
+Add-ins
+STEP 8:
+Click
+Install
+Ready to install
+Step 9: Click
+Finish
+Installation completed
+Need help with your SOLIDWORKS PDM Install?
+Javelin provides a
+SOLIDWORKS PDM implementation service
+that will ensure your PDM system is installed correctly and optimized for your business. Certified PDM Implementation experts will also advise you on best practices and make you self sufficient. We have refined the implementation process over 20+ years helping thousands of customers with data and document management issues.
+Learn more about the service »

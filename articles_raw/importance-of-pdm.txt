@@ -1,0 +1,14 @@
+I was very inspired when I saw the new animation that SolidWorks has put together to explain why file management is so important.  They have taken all of the top areas of benefit to our clients and communicated them in the most simple way I have ever seen.  The video starts off with some top frustrations and industry trends such as how time is commonly wasted and the amount of data we need to organize is exploding in quantity and is causing chaos and then clearly addresses this with the
+SolidWorks Enterprise PDM solution
+. (EPDM)
+Here is a quick list of areas it emphasizes and this matches up very well with what I have heard from so many clients:
+Centralize data to provide consistency
+Index files to make them easy to find and reuse
+Version and revision control to make it effortless to go back
+Backups effortlessly of important company information
+Access around the world
+Automated workflows can boost productivity by eliminating approval bottlenecks
+Scalable for any size of company
+Windows familiar commands reduce learning curve
+Out of the entire video, I think my favourite message was the emphasis on how designer’s energy is put into design, not management of their files.  This is key because headaches caused by file mismanagment can not only lead to lost productivity but lost employees. Learn more about SolidWorks Enterprise PDM here:
+http://www.javelin-tech.com/main/products/pdm.htm

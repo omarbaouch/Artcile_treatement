@@ -1,0 +1,58 @@
+When troubleshooting connectivity issues for some SOLIDWORKS products, such as the SolidNetwork License Manager, SOLIDWORKS Workgroup PDM or SOLIDWORKS Enterprise PDM, it’s possible that a ping test may succeed but the communication may still be failing.
+A Telnet Test can be very useful in such situations to determine if the issue still is a network communication issue or if it’s an issue with the particular software.  The Telnet Test allows you to ensure that a specific port on the target system is open and responding.
+Set Up the Telnet Test
+To perform a Telnet Test, the Telnet Client needs to be turned on by going to the Control Panel > Programs >
+Turn Windows features on or off
+, or by going to Programs and Features and clicking Turn Windows features on or off from there.  In the list of Windows Features, check the box beside
+Telnet Client
+to enable the feature.
+Add remove programs
+The Telnet Client will take a few minutes to turn on.
+Windows Features Update
+Perform the Telnet Test
+To perform the actual test, launch the Cmd prompt and type in the command
+telnet
+, followed by a space then the target
+computer name
+, followed by another space and then the
+port number
+.  This should look like: telnet host_name port_number.  Press Enter to perform the telnet.  If the telnet succeeds the prompt will display a flashing cursor, if it fails it will report that it cannot open the connection.  The most common reason for a failed Telnet Test is if the Firewall settings are blocking the port.
+Cmd Window
+Successful Connection
+Failed Connection
+Common communication ports for SOLIDWORKS products:
+SolidNetWork License Manager
+TCP port
+25734
+and
+25735
+SOLIDWORKS Workgroup PDM
+Request
+:  TCP port
+40000
+Data
+:  TCP port
+30000
+VaultAdmin
+:  TCP port
+20000
+Viewer
+:  TCP port
+80
+SOLIDWORKS Enterprise PDM
+Archive Server
+:  TCP and UDP port
+3030
+SQL Server
+:  TCP port
+1433
+and UDP port
+1434
+Web Server
+:  HTTP port
+80
+and HTTPS port
+443
+Video Demonstration
+Watch the video below or visit our YouTube Channel:
+https://youtu.be/sI9S-ItQuoc

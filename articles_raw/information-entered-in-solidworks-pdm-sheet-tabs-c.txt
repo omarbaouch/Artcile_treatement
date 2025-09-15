@@ -1,0 +1,7 @@
+The information entered in a SOLIDWORKS PDM sheet tab and a data card can differ. In some cases we may want to link a note in a drawing sheet to a value entered in a sheet tab. For example the document number from a sheet tab needs to be linked to a title-block note; which is located in the corresponding drawing sheet
+PDM Sheet Tab
+The flow of information from a data card to a file, such as a drawing, starts with a variable that is associated with a data card field. An attribute block can be added to the variable, which will map the variable’s value to the file. In the case of SOLIDWORKS files, this is done with the CustomProperty block.
+CustomProperty Attribute
+In this way values entered into the PDM data card are mapped to SOLIDWORKS  custom and configuration specific properties.  In the case of a drawing, the variables mapped to SOLIDWORKS properties will appear under the @ tab.
+Sheet’s are not configurations though, and as such there is no mechanism for mapping information in a sheet tab, to a note. We can use the data card option, ‘Update all Configurations’ to push changes entered into via the sheet tab to a variable, but this will update all the tabs including the @ tab.
+Update all configurations

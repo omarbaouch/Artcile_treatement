@@ -1,0 +1,7 @@
+Version free variables allow for a variable to be changed without checking out a file.
+Changing a version free variable will not increment the version of a file and a user can update the variable without having permissions to check out the file. This can be useful when their are values that need to be updated, but the actual file does not change. An example of this type of variable would be cost. Version free variables is an option when a variable is created or edited.
+Edit Variable Dialog
+Once this variable options is set, a user can update this variable without having to check out the file.
+Updating a variable in a Data Card
+Permission to modify version free variables is set from user/group folder permissions.
+Allow editing of version free variables

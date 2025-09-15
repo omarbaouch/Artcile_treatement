@@ -1,0 +1,22 @@
+Once the SOLIDWORKS PDM Standard
+Server
+and
+Client
+components have been installed, a Local Vault View needs to be created.
+SOLIDWORKS PDM Standard Local Vault View
+The Local Vault View is where the vault files are cached, when a Check Out or Get is performed on a vaulted file. By caching the files locally, performance is not degraded by network bottlenecks.
+In many ways, the Local Vault View is similar to the PDM add-in in SOLIDWORKS. In both you can Check In/Out, Transition and Search for files, but there some additional tools that are only available, in the local vault view. These include the ability to copy files with Copy Tree, to move files with Move Tree, or to generate Reports. Also, the Local Vault provides a cleaner interface to view files and the elements of those files. Lastly, the Local Vault View allows you perform operations, such as Check In/Out and Change State, without having to open a file in SOLIDWORKS.
+The Local Vault View can added from PDM Admin or from the Windows Start menu. In PDM Admin, right-click on the vault and select Create Local Vault View…
+Create Local View
+To create the Local Vault View through the Windows Start menu, use the the path shown below.
+View Setup
+Alternatively, you can type View Setup in the Windows Start Search box.
+Type View Setup
+Whichever method you use to start the creation of the Local Vault View, the first step will be to log into vault on the server, as a PDM Administrator.
+Log in as administrator
+After logging in, specify the root location of the vault. To avoid exceeding the Windows path limit of 260 characters, place the vault at the root of a drive. If your projects have many layers of sub-folders, you can easily exceed this limit.
+Select Folder
+Next, choose whether the vault will be accessible to all Windows users or only the logged-in user.
+Accessibility choice
+Lasty, log into the Local Vault View
+Log in to test

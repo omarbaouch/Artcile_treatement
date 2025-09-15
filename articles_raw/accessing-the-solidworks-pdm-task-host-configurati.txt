@@ -1,0 +1,15 @@
+A frequently neglected yet vital step in configuring a
+SOLIDWORKS PDM
+Task is defining the specific tasks that a computer is authorized to execute within the Task Host Configuration.
+How to access the SOLIDWORKS PDM Task Host Configuration
+On the computer that will be running the Task, right click on the
+PDM Icon
+.
+PDM icon in the system tray
+Select
+Task Host Configuration.
+Task host configuration
+Ensure that the correct
+File Vault
+is selected, and that the Add-in is permitted.
+SOLIDWORKS PDM Task Host Configuration

@@ -1,0 +1,6 @@
+In order to adhere to the procedures that design must follow, a Workflow can be complex.
+These Workflows can be hard to follow, which can make them difficult to create or modify. Often these workflows can be broken into logical sections. By taking these sections and making them into separate workflows, the complexity of the main workflow can be greatly reduced.
+A Workflow Link can be added in order to send a file to a separate workflow, that represents a logical section of the main workflow. While in this workflow the file must progress through a series of states, before it is finally release back to the main workflow.
+To create a workflow link select the third icon from the left.
+When creating a Workflow Link, the target Workflow and State is specified.
+Permissions are controlled by the target State.

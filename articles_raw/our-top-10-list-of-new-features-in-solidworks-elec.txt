@@ -1,0 +1,16 @@
+DS SOLIDWORKS has just released their latest version of SOLIDWORKS Electrical.  With this 2016 release we have reviewed many of the new enhancements and improved features in our blog during the last few days.  Review the SOLIDWORKS Electrical 2016 top 10 list below and pick on a link to read the related article:
+Formula Manager Enhancements
+Limiting User Rights on Project Data
+Paste Special Wizard Improvements
+Properties Side Panels
+New dialog to Manage Attributes in the scheme
+Assign Component Feature
+Project Snapshot
+Defining Wire Order
+Title Block Attribute Management
+PDM Link Enhancements
+Learn more about SOLIDWORKS 2016
+These are just a few of the new enhancements and upgrades released in SOLIDWORKS Electrical 2016. See the product live by attending a Launch Broadcast on either Thursday October 1st or Tuesday October 6th. Please
+visit our registration page
+to register for a Broadcast event.
+REGISTER FOR A LAUNCH EVENT

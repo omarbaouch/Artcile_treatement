@@ -1,0 +1,35 @@
+Throughout history there have been plenty of great pairings: Peanut Butter and Chocolate, Bow and Arrows, or Shrek and Donkey. These days, there is no better pairing than combining our team’s Electrical and Mechanical information to get a full picture of what is going on with a SOLIDWORKS Electrical BOM in PDM.
+In previous webinars we’ve discussed utilizing the
+SOLIDWORKS Electrical
+– SOLIDWORKS PDM Integration tool to fully include the Electrical Schematic projects within the PDM Vault. Using this tool is a great start to work towards a full Electro-Mechanical Assembly; but did you know we could do more than that?
+What is the SOLIDWORKS Electrical – PDM Integration tool?
+The connection between SOLIDWORKS Electrical and SOLIDWORKS PDM utilizes a purpose-built connector to bridge the systems. In short, the connector allows for our electrical projects to be stored directly within existing SOLIDWORKS PDM Vaults. Not only does this provide better security and traceability to the information stored in the Electrical Project but gives additional visibility to other stakeholders. During a check-in, the PDM Integration will generate a couple of things for our vault: an Electrical Project Archive, the PDF of the Electrical Project, and each sheet exported as a DXF/DWG. More importantly for this blog, the Bills of Materials (BOM) will be generated for the Electrical Project as well as PDM Virtual Documents and will be checked into the vault. Using the SOLIDWORKS Electrical – PDM Connector gives full control over the Electrical Project within the vault and allows us to utilize many of the great PDM functions to better track changes and approvals.
+If you want to learn more about the Electrical – PDM integration tool,
+check out this recent webinar!
+What do BOMs look like in PDM?
+The final appearance of the Bills of Materials is largely determined by the configuration on the administrative side (discussed below). But regardless of the options, we will get a SOLIDWORKS PDM Virtual document that represents our BOMs. These documents will include all of the components and cables for the designated location. This means that the Bill of Materials, Contains, and Where Used tabs for SOLIDWORKS PDM will show
+up-to-date
+information on the Electrical Project. Since we are using a synchronized library between SOLIDWORKS Electrical and SOLIDWORKS PDM, accurate part numbers and descriptions will also appear for the entries in the BOM allowing non-electrical users to see all the relevant information for any given electrical component.
+BOM in SOLIDWORKS PDM
+How do I configure SOLIDWORKS Electrical BOMs in PDM?
+Fortunately, we have some control over how the BOMs are generated within PDM. First, we can sort the BOMs by
+Location
+,
+Component Type
+, or have one for all
+Global
+components. This sorting will determine how many BOM files are created and what is contained in each:
+Sorting by Location
+will create a BOM for each Electrical project location and list out the parts and cables used.
+Sorting by Component Type
+will generate three total BOMs. One for parts, one for cables, and one for cable harnesses.
+Sorting by Global
+will make a single BOM that includes everything.
+BOM Settings
+Determining which BOM sorting option you want is ultimately up to how your non-electrical team would read the data when compared to SOLIDWORKS PDM BOMs. Within the Electrical Project itself, we know that we can create our reports to create BOMs in whatever configuration we desire. These settings only affect how it is represented within the PDM Vault.
+To take this a step further, there are configuration options to determine the discrete file structure within the project directory. Within the settings, naming rules can be configured for the BOMs based on a large amount of available electrical variables. Project, Book, Location, and Component information can be pulled from SOLIDWORKS Electrical and inserted into the BOM name in SOLIDWORKS PDM. This can allow for more easily digestible content on the SOLIDWORKS PDM side so any non-electrical users can discern what is in each BOM. If we wanted to map variables from SOLIDWORKS PDM and SOLIDWORKS Electrical, the file structure tab can accommodate that as well. There is a built-in utility to specify a PDM Variable, an Electrical Variable, and then which direction the mapping will go.
+SOLIDWORKS Electrical Integration Administration
+Where do I go from here?
+The next step towards integrating SOLIDWORKS Electrical BOMs within SOLIDWORKS PDM is to investigate the SOLIDWORKS Electrical – SOLIDWORKS PDM Integration tool. Please contact us today to be put in touch with one of our many Application Experts who specialize in connecting SOLIDWORKS Electrical and SOLIDWORKS PDM. Also, consider utilizing one of our
+implementation services
+for the tool to ensure proper installation and configuration. You’ll find that the journey to get truly collaborative electro-mechanical assemblies is much easier than you think!

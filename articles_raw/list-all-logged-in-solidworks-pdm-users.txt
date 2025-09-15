@@ -1,0 +1,51 @@
+Using the
+SOLIDWORKS PDM Professional
+search tool, we can complete a search to list all logged in users.
+Importing the Users Search Card
+Via the
+Administration Tool
+; open the card editor;
+Card Editor
+Select
+File
+>
+Import
+Select File > Import
+Navigate to the client installation files and select
+all(Search Complete)_gb.crd
+for English
+Select >
+Open
+Default location of the client install files is;
+C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\Default Cards
+Default Cards
+Save
+the card
+List all logged in users
+Open the Search Tool
+Open the Search Tool
+Select the
+Show Users
+search
+Leave the
+User name
+field blank
+Check
+Show logged in users
+box
+Clear
+the
+Show non-logged in users
+box
+Select
+Search
+Show Logged in Users option
+This will return a list of all users who are currently logged in to the vault.
+Scenarios where this may be useful…
+Scenario 1: Upgrading the vault
+For a
+vault upgrade
+, we strongly recommend that all files are checked in, and users are logged out.  Using this search we can ensure all users are logged out before completing the upgrade.
+Scenario 2: The license fight
+If you’re constantly in a fight for a PDM license so you can access the vault, you can ask one of your fellow colleagues to complete this search and find out who you need to request to log out so you can gain a license. *
+*Alternatively, you could recruit your friendly neighborhood VAR and purchase more licenses

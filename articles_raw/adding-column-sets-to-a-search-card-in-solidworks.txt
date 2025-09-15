@@ -1,0 +1,23 @@
+Understanding and Utilizing Column Sets in SOLIDWORKS PDM
+Column Sets are an incredibly useful feature in SOLIDWORKS PDM, offering a level of personal customization that can significantly enhance your PDM experience. This article will guide you through the process of setting up column sets specifically for Search Cards, a feature not covered in our previous article on
+Customizing Column Sets
+for regular Local Vault View navigation.
+Before being able to add the Search Result Column to the Data Card, you will need to have a column set created for it. If none exist, then use the “Customizing Column Sets” guide above on how to create one.
+How to add Column Sets to Search Card
+Once you have a column set ready, you can add it to your search card.
+Start by going to the Cards node in the PDM Administration tool and expanding “Search Cards”. This will display all the available search cards.
+Search Cards node
+From here you can select the desired search card by double clicking on it.
+Then select the checkbox in the “View” column and you can even make it a preferred column set if you’d like.
+Search Card in PDM Card Editor interface
+Available column sets for the Search Result Columns
+How to use the column set in the File Explorer Local Vault View
+After setting up the column set in the PDM Administration tool, you can now use it in the File Explorer Local Vault View.
+Within the PDM Local Vault View in File Explorer, search for a file using the Card that was just modified.
+Selecting the Search Card in the PDM Local Vault View in File Explorer
+Right-click in any white space to select
+Column Set > [Column Set Name]
+to update the currently active column set.
+Changing the active column set
+Conclusion
+Column Sets offer a high degree of customization in SOLIDWORKS PDM, allowing you to tailor your workspace to your specific needs. By understanding how to create and implement these sets, you can streamline your workflow and enhance your overall experience with the software.

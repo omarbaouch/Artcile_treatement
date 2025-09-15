@@ -1,0 +1,14 @@
+Included with the enhancements to the SOLIDWORKS PDM File Version Upgrade Tool in
+SOLIDWORKS PDM 2018
+, is a more detailed summary of the files ready to upgrade:
+Ready to Upgrade Files – Summary
+The new summary lists:
+The total number of SOLIDWORKS versions to update.
+Number of SOLIDWORKS part file versions.
+Number of SOLIDWORKS drawing file versions.
+Number of SOLIDWORKS assemblies file versions.
+Work instruction file names with the number of files in each work file.
+Which gives us a little more information before we hit that ‘Go’ button and let the tool do it’s magic.
+Why is this important?
+To upgrade a file version; each file needs to be Checked Out > Opened in SOLIDWORKS > Saved > Checked back in.  This can be time-consuming when dealing with a large number of files.  If you’re setting the tool to run overnight, you’ll need to make sure there’s enough time to complete the upgrade before users need to access them again.  This summary gives us a better idea of how many files are currently selected for upgrade.
+In some scenarios, it’s better to break this up into several projects or add multiple clients to complete the upgrade to ensure there’s enough time to complete the upgrade before users return to the vault.

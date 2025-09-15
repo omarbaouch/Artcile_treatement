@@ -1,0 +1,45 @@
+A question I often come across while on tech support is:
+“How do I retrieve an old SOLIDWORKS PDM File Version from within my Vault and save it as a new version so that the versions in between remain preserved?”
+SOLIDWORKS PDM File Version
+Navigate to and
+select the file you’d like to get an older version of
+, then click on
+Actions
+>
+Get Version
+and
+select
+the older SOLIDWORKS PDM file version you’d like to retrieve.
+Get Version
+You can also select
+Get Version
+from the
+right-click shortcut menu
+.
+Older Version Warnings
+NOTE
+: the ‘Version 2/3’, ‘Local version: 2’ and ‘Latest version: 3’.
+There is also an alert on the version tab to let you know that you do not have the latest version of this file on your local hard disk.
+Right-click
+and
+Copy
+and
+Paste
+the file from PDM Vault to a local drive.
+Check Out
+the file in PDM Vault.
+File Check Out
+Note
+: the local version updates to same as the latest version. In SOLIDWORKS PDM you can only check out the latest version of the files.
+Copy
+and
+Paste
+the file from the local drive to the PDM Vault.
+Warning: Replace File
+Select
+Yes
+to replace the file in the PDM Vault or
+Yes to All
+if multiple files are selected.
+Check In
+the file in the PDM Vault. Latest version 4 is same as version 2 and the version 3 is preserved.

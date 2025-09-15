@@ -1,0 +1,28 @@
+PLEASE NOTE
+that this PDM Relocate Tool article has been updated to reflect the changes to PDM 2016. This article is still relevant for earlier versions of SOLIDWORKS Enterprise PDM.
+The SOLIDWORKS PDM Archive can be spanned over multiple drives.
+This can be useful when a drive is nearly full
+.
+The first step is to create a
+full backup
+of the database and the archive. No one should be accessing files in the vault during this process and if possible all files should be checked in.
+The Relocate tool is located in
+Start
+>
+All Programs
+>
+SOLIDWORKS PDM
+>
+Archive Server Configuration
+.
+Windows start menu
+Expand the server list,
+right-click on the vault archive you would like to span
+and select
+Relocate
+.
+Relocate Tool
+Click Add to add the destination folder
+where part or all of the archive will be moved to and browse to that folder. The slider is used to define what percentage of the archive will be moved to destination folder.
+PDM Relocate Options
+Perhaps a better method of addressing disk space issues, is Cold Storage. Information on Cold Storage can be found in the SOLIDWORKS Enterprise PDM Administration guide. This guide is available from the Help pull-down menu in SOLIDWORKS Enterprise PDM Administration.

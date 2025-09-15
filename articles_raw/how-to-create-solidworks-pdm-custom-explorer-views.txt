@@ -1,0 +1,26 @@
+Did you know that you can build
+SOLIDWORKS PDM
+Custom Explorer Views with additional columns based on variables within the vault? This is a useful tool, as it allows users to obtain specific information about a file at a glance without having to open the file[s] or select the data card tab. This feature can be assigned to specific users or groups.
+How to add SOLIDWORKS PDM Custom Explorer Views
+Administration Tool > Columns > Right Click >
+New Column Set…
+New Column Set
+In the Customizable Columns window; give the new column an appropriate name and for type select
+File List
+;
+Explorer View
+From here, we can add variables by selecting
+New Column
+and setting the desired
+Variable
+from the drop-down list;
+Selecting New Column
+The next step is to assign permissions accordingly;
+Assign permissions
+Now, when users with the appropriate permissions log in, they’ll see the additional columns;
+Additional Columns Added
+Note
+: The columns Name, Checked Out By, Size, File Type, State, Modified, Checked Out In and Category are all standard and cannot be removed. Users can reorganize the order of the columns by dragging within explorer.
+Need SOLIDWORKS PDM Training?
+Learn about our SOLIDWORKS PDM training courses
+for users and administrators.

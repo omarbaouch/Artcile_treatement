@@ -1,0 +1,62 @@
+When troubleshooting SOLIDWORKS PDM issues, or when performing operations like software upgrades you may need to manually backup the SOLIDWORKS PDM Database outside of your normally scheduled Maintenance Plan.
+This backup can be run as a task within the Microsoft SQL Server Management Studio.
+Step 1:
+In the Management Studio, right click on the PDM database that needs to be backed up, then go to the
+Tasks
+flyout and select “
+Back Up…
+”
+Step 2:
+In the
+Back Up
+dialogue box, on the
+General
+page, ensure that the
+Backup type
+is set to
+Full
+and the
+Backup component
+is set to
+Database
+.  In the
+Destination
+area, make sure that the
+Back up to
+option is set to
+Disk
+.  You may need to select the existing destination and select “Remove”, then click “
+Add…
+“.
+Backup the SOLIDWORKS PDM Database
+Step 3
+:  In the
+Select Backup Destination
+dialog, click “…” and select the folder where the backup file should be created.  Enter a name for the backup file, including the “bak” extension. Clicking Ok in the
+Select Backup Destination
+dialogue will return to the
+General
+screen of the
+Back Up
+dialogue.
+Select Backup Destination
+Step 4:
+On the
+Media Options
+page of the Back up dialog window, set the
+Overwrite media
+option to
+Overwrite all existing backup sets
+, then check the option under
+Reliability
+to
+Verify backup when finished
+.
+Overwrite media option
+Compress backup
+Step 5 (Optional):
+The backup file size will depend on the size of the vault.  It can be quite large, possibly several gigabytes.  When compressed however the file size will decrease dramatically.  If the file size will be very large, on the
+Backup Options
+page of the Back up dialogue window, you may wish to set the Compression action to
+Compress backup.
+Alternatively, the .bak file can be compressed using Windows compression or a third party program.

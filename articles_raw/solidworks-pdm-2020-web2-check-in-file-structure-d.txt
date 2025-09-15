@@ -1,0 +1,5 @@
+New in
+SOLIDWORKS PDM 2020 Web2
+, when you drag a folder or file to the file list, the Check in File Structure dialog box opens automatically.
+Check in File Structure Dialog Box
+Learn more about SOLIDWORKS PDM Web2 enhancements in the video below:

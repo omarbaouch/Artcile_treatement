@@ -1,0 +1,36 @@
+Whether its because the SOLIDWORKS PDM archives have been migrated to a new server, or you are working in a different office than usual and need to connect through a replicated Archive Server, it may be necessary to modify which Archive Server your PDM Vault View is attached to.
+This can be done very easily through the Windows Registry.  The change can be applied without needing to check in any files beforehand and without losing any work.
+The first step is to determine how the Vault View on the client computer was originally set up.  There are two possible ways the vault view might have been attached, either using the default “
+For all users on this computer
+” or “
+Only for me
+”
+Select Attach Location
+Depending on which Attach type was used, the server information will be stored in different locations in the Windows Registry.
+If you don’t know which Attach type was used originally, first check the location used by the default, “
+For all users on this computer
+” option.
+If “
+For all users on this computer
+” was used:
+This option creates registry entries for the SOLIDWORKS PDM Archive Server information in these two locations:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\VAULTNAME
+and
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\VAULTNAME
+The string value “ServerLoc” contains the Archive Server computer name.  To attach to the new server, this value must be changed in
+BOTH
+of the locations listed above.  If the value in the WOW6432Node section of the registry is not updated, there will be
+errors with some applications when trying to browse into the vault view
+.
+ServerLoc Registry String
+Once the change is made, exit the PDM Client software and log back in again.  The view will immediately begin using the new server name.
+If you do not see the vault name listed under “Databases”, then the view was set up using the “Only me” Attach Type.
+If “
+Only me
+” was used:
+This option creates registry entries for the server information in these two locations:
+HKEY_CURRENT_USER\Software\Solidworks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME
+and
+HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME
+Again, the string value “ServerLoc” contains the Archive Server computer name.  Modify the string, in BOTH locations, with the new server name, then exit the PDM Client software and log in again to begin using the new Archive Server.
+ServerLoc Archive Server Name

@@ -1,0 +1,21 @@
+A request we frequently receive from
+SOLIDWORKS PDM Administrators
+is help with setting up users who should have
+View Only rights
+to files that are stored in the
+SOLIDWORKS PDM
+Vault. What are the minimum permission requirements?
+This is actually a slightly more complicated scenario than many administrators realize at first.
+There are two sets of permissions that must be considered
+:
+1. Folder Permissions
+To set Folder Permissions, in the PDM Administration tool, right-click on either the specific User, or if you are setting up many users in a Group, right click the Group and select “Properties”.  Then, go to the “Folder Permissions” page.
+Folder Permissions
+In the upper box, select the folder that contains the files that the user(s) should be able to view.  If they should be able to view all files in the vault, then select the vault root and the permissions assigned will be inherited by all sub folders.
+There are two permissions that will need to be assigned, “Read file contents” and “Show working versions of files”.  “Show working versions of files” allows users to see files that have no Revision value set (for instance if the files are in a Non-Revision Managed Workflow).
+2. State Permissions
+The second permission, which is quite often overlooked, is the State Permission.  As a file passes through a Workflow, each state can potentially have different permissions assigned.  If the Folder Permissions to “Read file contents” and “Show working versions of files” have already been assigned but the user still cannot see the file, then determine what Workflow State the file is currently in and check what State Permissions the user or group has.
+To assign Workflow State Permissions, again go to the User or Group properties in the PDM Administration tool.  Then, go to the “State Permissions” page.
+State Permission
+In the “Workflow” drop list, select the Workflow that the files are in, then in the upper box, you will see the list of States that are part of that Workflow.  Once the State is selected, the lower box will show the currently assigned permissions for that State.  Make sure the user has the permission “Read file contents” if they should be allowed to see files that are in this State.
+This step should be repeated for each State that contains files the user or group should be able to see, and for each Workflow if there are multiple Workflows in the vault.

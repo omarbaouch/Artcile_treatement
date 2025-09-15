@@ -1,0 +1,23 @@
+I think we can all agree that nothing ruins a day quite like learning that hours of hard work were lost because of file management errors. Implementing a product data management system reduces your risk by eliminating overwriting, accidental deletion, and document control errors, leaving your day (and budget) intact!
+SOLIDWORKS PDM
+is designed specifically for the important task of handling your SOLIDWORKS Electrical files. Discover the various levels of SOLIDWORKS Electrical PDM integration below:
+SOLIDWORKS Electrical PDM integration
+SOLIDWORKS Electrical
+“Link to PDM configuration” manager provides users with several levels of PDM integration. Administrators can define exactly which project information will be exported on each update, including: project archives, drawings, or even full PDF document packages. SOLIDWORKS Electrical then has several methods of exporting the data; let’s take a look at which option is best for your team.
+Project exports can be defined all in one place, making it easy to standardize what is added to the PDM vault
+For the team that likes full control
+The most basic method of SOLIDWORKS Electrical PDM integration saves the exported data into a user specified folder. This folder can be in the PDM vault or any other mapped location, providing maximum flexibility. Checking files in and out of the vault is handled entirely through Windows Explorer, allowing users to add comments, adjust versions/revisions, and use the familiar PDM interface. This method is ideal for teams looking for a simple solution, similar to the processes used by mechanical teams.
+For the team that’s already connected
+SOLIDWORKS Electrical can also be configured for PDM integrated folder exporting. Much like the previous method, administrators specify a location for the exported files, but with this option the folder must be located within a PDM vault. The advantage of this is that project exports are automatically checked in as new versions any time a user pushes their data to PDM. This solution enables users to backup their data with a single click.  By electing to export reports and drawings, this method can provide anyone in your PDM system with up to date design outputs from your electrical projects. This option is best suited to teams working on a shared SOLIDWORKS Electrical server, who would also like to utilize PDM for backing up data and sharing it within their organization.
+For the team that wants complete integration
+On the flip side, what if all your users are working on their own SOLIDWORKS Electrical database? The advanced check in/check out option shifts document control and data management entirely to the PDM system. With this method, users are able to check projects out of the vault from within SOLIDWORKS Electrical, locking the project to read-only for all other users.
+Advanced export with check in/out buttons directly integrates your Project Manager and PDM Vault
+The project archive is then automatically extracted to their system, adding all necessary symbols, components, title blocks, etc. During check in, users can opt to either keep the file checked out as a work in progress, or release control and allow other users to edit the project. This method works well any time it is inconvenient or impractical for electrical designers to be working out of a shared database, such as when they are working in multiple locations.
+For the team that has been watching mechanical users enviously
+Finally, the SOLIDWORKS PDM Electrical Connector is a brand new option for SOLIDWORKS Electrical Schematic 2018 users. This connector enables full PDM integration between your SOLIDWORKS Electrical and PDM databases, providing functionality identical to that used in mechanical workflows.
+SOLIDWORKS PDM Services
+SOLIDWORKS Electrical has numerous options for PDM integration, and Javelin has the skills and experience to implement the best PDM solution for your team.
+Contact us
+today to take advantage of our
+SOLIDWORKS PDM Services
+.

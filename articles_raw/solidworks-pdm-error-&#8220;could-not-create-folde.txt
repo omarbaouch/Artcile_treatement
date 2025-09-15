@@ -1,0 +1,26 @@
+This article is part of a series for troubleshooting common, and perhaps not so common, SOLIDWORKS PDM error messages.
+SOLIDWORKS PDM ERROR:
+“Could not create folder. Cause: The file/key name was invalid.”
+This reported error can occur when executing a SOLIDWORKS PDM Template.
+The error is caused when a folder/file name being defined in the SOLIDWORKS PDM Template contains an invalid character
+. Later versions of SOLIDWORKS PDM will capture the invalid character, and prevent it from being used in the folder/file name
+Invalid Character
+If the Template was created in an earlier version of SOLIDWORKS PDM, an invalid character may exist in the folder/file name defined in the PDM Template. In this situation, a user will receive the message “Could not create folder. Cause: The file/key name was invalid.”  when executing the PDM Template. Editing the PDM Template and removing the invalid character will resolve this issue.
+Invalid characters
+for folder/file names include:
+" (Double quote)
+
+/ \ (Forward / Back slash)
+
+: (Colon)
+
+? (Question mark)
+
+* (Asterisk)
+
+< > (Smaller / Bigger than)
+
+| (Pipe)
+
+and any character created when pressing the CTRL key
+This error message can also occur if the folder/file name is empty.

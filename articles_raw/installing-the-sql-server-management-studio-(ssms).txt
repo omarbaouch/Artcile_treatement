@@ -1,0 +1,24 @@
+The SQL Server Management Studio (SSMS) is an integral component for administrating SOLIDWORKS PDM, as it allows us to maintain and capture backups of the database.  When installing a new instance of SQL Express via the installation manager for SOLIDWORKS PDM 2019 and later versions, a separate download and install is required to include SSMS.
+SQL Server Option in SOLIDWORKS PDM Installation
+For SOLIDWORKS PDM 2018 and earlier versions, please see our guide
+here
+on how to install this from the included install media
+How to download and install the SQL Server Management Studio
+Download and run the installer;
+Download SQL Server Management Studio 18.2
+Download Link
+Confirm the installation location, and hit
+Install
+Install SSMS
+Progress….
+Progress dialog
+Complete with a reboot;
+Restart your machine after installation is complete
+Then SSMS should be available via:
+Start > Programs > Microsoft SQL Server Tools xx
+SSMS
+Now we can capture
+manual backups
+, or
+schedule backups using Windows Task Scheduler
+and other database administrative tasks.

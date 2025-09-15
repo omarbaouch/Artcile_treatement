@@ -1,0 +1,26 @@
+Ever made a mistake and transitioned a file to a released state before it was ready?  Not to fear! SOLIDWORKS has you covered; with its
+SOLIDWORKS PDM Rollback
+functionality you can return a file to a previous version.
+NOTE
+: This function should be used with caution as it permanently deletes file versions.  Permission should be limited to the appropriate personnel.
+First, enable the rollback permission found In the admin tool > select the desired group/user > folder permissions, select the permission for the desired folder or the whole vault > Check the Rollback Permission > Hit OK to save
+Navigate to and select the file you’d like to rollback, and the
+Right-click
+>
+History
+Access File History
+Select
+the
+previous version
+you’d like to return to
+Select a previous file version
+Click
+Rollback
+WARNING
+! This action will permanently delete all versions that were created after the selected point and cannot be reversed
+Rollback Warning Message
+Now the file will be returned to it’s previous version, including state and revision:
+File has been rolled back
+Learn more about SOLIDWORKS PDM
+Javelin delivers SOLIDWORKS PDM user and administration training courses either in-class, online, or on-site at your location. Learn more about our
+SOLIDWORKS PDM training »

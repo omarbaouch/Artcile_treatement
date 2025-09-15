@@ -1,0 +1,10 @@
+In previous versions of SOLIDWORKS PDM, it was possible to add Input Formulas to Edit boxes in Search Cards … but they didn’t actually do anything.  The input formula box would display for any Edit box in the Card Editor, so the formula could be built, but the search tool was unable to evaluate the formula.
+In
+SOLIDWORKS PDM 2017
+(Standard and Professional) however, this functionality is now available for Search Cards the same as for File and Folder cards.
+Card Editor
+Unlike previous releases, when the Search Card is called up in the Search tool, the formula will immediately evaluate the selections from linked fields on the card.
+PDM Search Tool
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

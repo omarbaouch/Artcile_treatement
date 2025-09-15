@@ -1,0 +1,52 @@
+Following an upgrade of
+SOLIDWORKS PDM Professional
+, you may encounter some odd behavior when accessing the vault through Web2.
+If you see any of these symptoms, you may have missed one final step in the upgrade process:
+Login page hanging indefinitely
+Being able to login successfully but not able to navigate between folders
+Either hanging indefinitely or being sent back to the Login page when trying to view any details of a file
+Or, encountering the error “
+Could not open database
+“.
+These are all symptoms of the same issue, the Web2 application pool using the wrong identity.
+This most commonly happens following an upgrade of the software.  That’s because, during the upgrade, the application pool will be reset to the default “
+Network Service
+” identity and must be modified back to use the Windows Profile that it was using before the upgrade.
+In order for Web2 to work properly, the application pool identity must be set to use a Windows Profile that has:
+Has
+logged into the vault
+and
+selected a folder in the vault
+at least once.
+Has been added as a member of the
+IIS_IUSRS
+group.
+Is a member of the local
+Administrators
+group.
+Following any upgrade of the SOLIDWORKS PDM Professional Web2 Server software, make sure the following steps are performed:
+Step 1:
+Open
+Internet Information Services (IIS) Manager
+, go to the “
+Application Pools
+“, select “
+SOLIDWORKS PDM Web2
+” and click “
+Advanced Settings…
+“.
+Application Ppols SOLIDWORKS PDM Web2
+Step 2
+:  Select the “
+Identity
+” field and click on the “
+…
+” button.
+Identify Network Service
+Step 3
+:  Select “
+Custom account
+” and click “
+Set…
+“, then enter the credentials for the Windows User account that should be used for Web2.
+Set the credentials for the Windows User account

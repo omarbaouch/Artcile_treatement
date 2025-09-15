@@ -1,0 +1,34 @@
+<p>Many times when working within SOLIDWORKS PDM Professional or Standard, you may want to create a Task that can be used to speed up your workflow.</p>
+<p>One such example of this could be the task titled &#8220;Convert to PDF&#8221;, which Converts SOLIDWORKS Drawing files (.slddrw) files to PDF and save them in the configured location within the Task Settings.</p>
+<p>Now say when setting this task up, something went wrong and you&#8217;re receiving a few &#8220;Failed&#8221; messages when running the task manually via the Command Menu.</p>
+<h2>Troubleshooting a failed PDM Script:</h2>
+<ol>
+<li>Make sure that the <a href="https://www.javelin-tech.com/blog/2013/05/solidworks-pdm-task-host-configuration/#:~:text=On%20the%20computer%20that%20will,click%20on%20the%20PDM%20Icon.&amp;text=Select%20Task%20Host%20Configuration.&amp;text=Ensure%20that%20the%20correct%20File,check%20as%20an%20Add%2Din.">Task Host is configured on the current system</a></li>
+<li>Monitor the Task in the PDM Administration tool via the <a href="https://www.javelin-tech.com/blog/2020/06/solidworks-pdm-monitor-tasks/">Task List</a>.</li>
+<li>Ensure that the correct version of the PDM Add-In is used, If not &#8211; <a href="https://www.javelin-tech.com/blog/2016/08/solidworks-pdm-professional-task-add-in/">Upgrade the PDM Add-In to match your PDM Server Install</a></li>
+<li>If there are no changes to the default script. then reset the script.</li>
+<li>Review the <a href="https://www.javelin-tech.com/blog/2011/03/epdm-user-log-file/">PDM Client Log</a> and <a href="https://www.javelin-tech.com/blog/2011/03/epdm-how-to-locate-the-archive-server-log/">Archive Server Log </a>for Errors</li>
+<li>Review the Windows &#8216;Application and &#8216;System&#8217; Event logs for Errors</li>
+</ol>
+<p>In this article, we will be looking at Step 4 of the process.</p>
+<h3>Reset the Default PDM Script</h3>
+<ol>
+<li>Launch the &#8220;Administration&#8221; tool for SOLIDWORKS PDM</li>
+<li>Navigate to the Tasks &gt; Open the Task to Modify</li>
+</ol>
+<div id="attachment_49405" style="width: 247px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-49405" class="wp-image-49405 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task-1.png" alt="SOLIDWORKS PDM Tasks" width="237" height="500" title=""><p id="caption-attachment-49405" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49405 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task-1.png" alt="SOLIDWORKS PDM Tasks" width="237" height="500" title=""></noscript> SOLIDWORKS PDM Tasks</p></div>
+<ol start="3">
+<li>Go to &#8220;Output File Details&#8221;</li>
+</ol>
+<div id="attachment_49406" style="width: 730px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task.png"><img decoding="async" aria-describedby="caption-attachment-49406" class="wp-image-49406 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task.png" alt="Output File Details" width="720" height="534" title=""><p id="caption-attachment-49406" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49406 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task.png" alt="Output File Details" width="720" height="534" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task.png 720w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Convert-Task-600x445.png 600w" sizes="(max-width: 720px) 100vw, 720px" /></noscript></a> Output File Details</p></div>
+<ol start="4">
+<li>Copy the script to the Notepad file and Save the file</li>
+<li>&#8220;Reset&#8221; the Script</li>
+<li>If you have multiple versions of SOLIDWORKS &#8211; Choose the version that you would like the files to be open and rebuilt in</li>
+</ol>
+<div id="attachment_49407" style="width: 570px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Reset.png"><img decoding="async" aria-describedby="caption-attachment-49407" class="wp-image-49407 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Reset.png" alt="Reset the script" width="560" height="432" title=""><p id="caption-attachment-49407" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49407 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Reset.png" alt="Reset the script" width="560" height="432" title=""></noscript></a> Reset the script</p></div>
+<ol start="7">
+<li>Select &#8220;OK&#8221; on all Windows. Re-run the Task Script to see the results.</li>
+</ol>
+<h3>SOLIDWORKS PDM Training</h3>
+<p>Javelin offers various <a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">SOLIDWORKS PDM training courses</a> which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.</p>

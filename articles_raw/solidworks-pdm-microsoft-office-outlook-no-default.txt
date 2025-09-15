@@ -1,0 +1,14 @@
+Are you receiving a Microsoft Office Outlook / SOLIDWORKS PDM No Default Mail Client Error while previewing files in the vault?
+SOLIDWORKS PDM No Default Mail Client Error
+Why am I receiving this SOLIDWORKS PDM No Default Mail Client Error?
+SOLIDWORKS PDM uses eDrawings to preview files, and within eDrawings, there’s functionality that sends performance emails.  Essentially; eDrawings is trying to access Outlook to send an email, and has run into some corruption in the registry related to Outlook.
+This issue is detailed within the Microsoft Knowledge base
+.
+As a workaround, we can disable the eDrawings setting to automatically send performance emails.
+Fix the error by disabling eDrawings Performance email
+Start > Programs > SOLIDWORKS 20xx > eDrawings 20xx
+Start > Programs > SOLIDWORKS 20xx > eDrawings 20xx
+eDrawings > Tools > Options
+General > Clear ‘Enable performance email’
+General > Clear ‘Enable performance email’
+Ok > Close eDrawings

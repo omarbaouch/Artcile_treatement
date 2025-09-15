@@ -1,0 +1,43 @@
+Did you know that you can create a
+SOLIDWORKS PDM
+Search shortcut directly on your desktop?
+Being the responsible PDM user that you are, it’s safe to assume that you’re checking in your documents at least once a day?  A search shortcut can be a speedy way to round up all the files you currently have checked out minutes before the end of your day and check them in.
+You can create a shortcut to any search, but for this example I’m going to show you how to create a shortcut to one of my search favorites –
+checked out files.
+Via Windows Explorer navigate to the SOLIDWORKS PDM installation folder.
+Default location – C:\Program Files\SOLIDWORKS Enterprise PDM
+SOLIDWORKS PDM installation folder
+Find the file
+Search.exe
+then right-click and select
+Copy
+Copy Search.exe
+Navigate to where you’d like to create the shortcut f
+or this example I’ll use my desktop
+then right-click and select
+Paste Shortcut
+Paste Shortcut
+Right-click on the new shortcut and select
+Properties
+Properties of the shortcut
+Add the following information to the
+Target
+field:
+“C:\Program Files\SolidWorks Enterprise PDM\Search.exe” “/V:[Vault Name]” “/F:[Search Favorite Name]”
+My Vault Name is
+JavVault
+, and my favorite search I’d like to point to is called
+Checked Out Files – Justin W
+.  My target section will look like this:
+“C:\Program Files\SOLIDWORKS Enterprise PDM\Search.exe” “/V:
+JavVault
+” “/F:
+Checked Out Files – Justin.W
+“
+Shortcut Properties
+Now every time I double click this shortcut I have a list of all the files I currently have checked out, which I can easily check-in before the end of my work day.
+SOLIDWORKS PDM Search shortcut results
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about creating custom search cards and administering SOLIDWORKS PDM.

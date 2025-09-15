@@ -1,0 +1,41 @@
+By default, the SOLIDWORKS PDM client is set to use server name, which via
+DNS lookup
+will resolve the IP number and communicate with the server.  In a perfect world, the DNS server configuration will resolve quickly and not cause any issues, but this isn’t always possible in certain environments, for example, while using a VPN.
+Slow lookup may result in the following symptoms within PDM:
+Delay when logging in
+General poor performance while navigating or adding files
+Replication Failing
+Occasionally a PDM support technician may advise you to bypass the DNS lookup, by editing the local HOSTS file and adding the server IP.
+NOTE
+: Users should always consult their local IT Professional ahead of making any of these changes
+How to edit the local hosts file and add the server IP
+NOTE
+:
+Local Windows Administrator credentials are required
+Using the Administrator account run Notepad;
+Run Notepad
+File
+>
+Open
+Change the setting to look for
+All Files
+(defaults to *.txt)
+Navigate to and
+Open
+the
+hosts
+file;
+HOSTS File Location
+Default location is C:\Windows\System32\Drivers\Etc\
+Underneath the comment section (any line that begins with #) add a new line for each required server with the IP Number and the server name and a tab space in between.  For example;
+192.168.1.xxx     MyDbServerName
+192.168.1.xxx     MyArchiveServerName
+Hosts File
+NOTE
+: If the archive and the DB server are hosted on the same machine, only one line is required.
+Save and close the hosts file.
+Once complete, the DNS lookup should be bypassed and the hostname resolved directly using the IP.  Once complete, I would recommend running the
+connectivity tool
+to ensure the connection works as expected, or complete a
+ping test
+.

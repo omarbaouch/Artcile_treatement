@@ -1,0 +1,10 @@
+In SOLIDWORKS PDM switching to
+Work Offline
+mode will not automatically free a PDM license;
+SOLIDWORKS PDM License in use
+To release the license you must exit or Log off PDM via the System Tray;
+Exit SOLIDWORKS PDM
+Then you’re free to
+Work Offline
+without consuming a license;
+Work offline without a license

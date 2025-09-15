@@ -1,0 +1,53 @@
+Within
+SOLIDWORKS Manage
+, there are scenarios (upgrading, etc) where a manual synchronization of the PDM object is required to ensure everything is up to date between SOLIDWORKS Manage and PDM.
+How to run a synchronization of a SOLIDWORKS ‘PDM’ object
+Within SOLIDWORKS Manage;
+Options >
+Administrative Options
+SOLIDWORKS Manage Administrative Options
+Structures > Documents & Records
+Select the PDM Object
+RMB
+Edit
+Edit ManageVault PDM Object
+Within the
+SOLIDWORKS PDM Configuration Wizard
+via the drop-down jump to the
+Completed
+page and select
+Finish
+Process Complete
+Within the
+Synchronization details
+dialog select
+Synchronize
+Synchronize
+When complete we can close the
+Synchronization details
+dialog and the
+SOLIDWORKS PDM Configuration Wizard
+Synchronize complete
+On some specific occasions, it may be required to include all the PDM documents in a synchronization.  These generally take a lot longer depending on the size of the vault, so should only be performed when necessary.
+How to include document folders in a Synchronization
+Edit the PDM Object (see above) and within the
+SOLIDWORKS PDM Configuration Wizard
+jump to the
+Connection
+page
+Within the
+Connection
+page select
+Enable Synchronization and get all PDM Objects
+Enable Synchronization and get all PDM Objects
+This will perform the same sync as above, but also include all the PDM Document Folders
+Include all the PDM Document Folders
+As mentioned previously, this may take some time to complete.  If a sync of all PDM files isn’t required, we can limit this to specific folders
+How to limit a Synchronization to specific folders
+Within the
+Synchronization details
+dialog
+Uncheck
+Update Document Folders
+then expand and select the desired folders to synchronize
+Uncheck Update Document Folders

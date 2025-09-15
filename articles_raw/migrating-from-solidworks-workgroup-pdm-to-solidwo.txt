@@ -1,0 +1,27 @@
+Now that you are about to embark on all the fun and excitement that comes with upgrading to SOLIDWORKS PDM Professional or PDM Standard;
+how do you get all your legacy data moved over from your old SOLIDWORKS Workgroup PDM Vault?
+You need a good strategy!
+Step 1: Analyse your current vault
+How big is your SOLIDWORKS Workgroup PDM vault?  Use the Windows right click-properties method on the the vault folder on your server to determine the size:
+Vault Folder Properties
+What release and service pack of SOLIDWORKS are you running?
+It’s a bad idea to skip releases during a migration (i.e. migrating a SOLIDWORKS 2008 Workgroup Vault to a SOLIDWORKS PDM Professional 2017 Vault)
+Was SOLIDWORKS Workgroup PDM “Lifecycle” in use?
+SOLIDWORKS Workgroup PDM Vault Admin
+Did the revision scheme ever change over the years (i.e. Revision 1, 2, 3 changed to A, A1, B, B1, C, C1)?
+Are there other files than just SOLIDWORKS files in the Vault (templates, pictures, PDF, DWG etc.)?
+Step 2:
+What is really important to you
+Does the full history of revisions need to be migrated or is just the latest version of all the files good enough for legacy data?
+Step 3:
+Setup your new SOLIDWORKS PDM Standard or Professional environment
+This is not as easy as it might sound. You want to make sure it is well prepped to receive the legacy data but also configured to meet your current and future data management goals.  Leverage the years of experience Javelin has with implementing all sorts of different sizes of Vault and level of complexity.
+Step 4:
+Migrate the data
+Data is one of your companies most valuable assets, don’t leave it to chance. Javelin has the tools and the know how required to move your data safely and efficiently.
+Contact us
+about a new service offering to help you migrate your data to SOLIDWORKS PDM Standard or Professional. Visit our website to learn more about the
+SOLIDWORKS PDM Services available from Javelin
+.
+Also review our
+SOLIDWORKS PDM Standard Getting Started Guide »

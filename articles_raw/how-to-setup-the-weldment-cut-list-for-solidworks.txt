@@ -1,0 +1,36 @@
+In this article, we’re going to look at how to setup the weldment cut list to show the quantity and length values in a SOLIDWORKS PDM Weldment Cut List
+SOLIDWORKS PDM Weldment Cut List
+Quantity
+Administration Tool > Bills of Materials > Weldment Cut List
+Add the column ‘QTY’ with the variable
+<Reference Count (BOM Quantity disregarded)>
+Add the column ‘QTY’ with the variable
+Then hit OK.
+The Quantity should now be visible;
+Length
+Administration Tool > Variables
+Create a variable for the length and map it accordingly;
+Name:
+Cut List Length
+(Or whatever you desire)
+Variable Type:
+Decimal Number
+Block Name:
+CustomProperty
+Attribute Name:
+UNIT_OF_MEASURE
+File Extension:
+sldprt
+Create a variable for the length and map it accordingly;
+Add this new variable to the part card
+Add this new variable to the part card
+Add the new variable to the Weldment Cut List BOM
+Administration Tool > Bills of Materials > Weldment Cut List
+Add the column ‘Length’ with the variable created (Cut List Length)
+Add the column ‘Length’ with the variable created (Cut List Length)
+Hit OK
+Now when a part containing a cut list gets checked into the vault, the length and quantity should be visible via the BOM tab in explorer;
+QTY and Length displayed
+Interested in further SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

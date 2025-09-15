@@ -1,0 +1,17 @@
+Exporting nodes, such as Data Cards, Workflows, Users & Groups, can help with the system deployment, or troubleshooting your vault.
+Export Node
+In SOLIDWORKS PDM Administration, right-click on the node you want to export and choose Export from the pop-up menu.
+Export node
+Click on the Save icon to save the exported node, to a location of your choosing.
+Save As
+The node as well as any other nodes that are required, will be exported
+By right-clicking on vault, you can export all nodes.
+Export all nodes
+Import Nodes
+You can import nodes by right-clicking your vault icon and choosing Import from the shortcut menu. You will be presented with a window that will allow to browse to the exported nodes.
+Import node
+If you use a sandbox to develop your vault, this is a good method of transferring nodes from your sandbox vault to your production vault.
+Learn more about PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

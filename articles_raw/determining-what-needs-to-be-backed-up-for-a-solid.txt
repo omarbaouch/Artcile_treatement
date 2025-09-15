@@ -1,0 +1,72 @@
+I’ve written this article at the request of the
+Javelin Services Group
+, who are invaluable when performing migrations from SOLIDWORKS Workgroup PDM, to SOLIDWORKS PDM Standard or Professional. This article is an addendum to the article: ‘
+Backing Up the SOLIDWORKS Workgroup PDM Vault
+‘ written by esteemed colleague Andrew Lidstone.
+Files that should be backed up
+The steps for migrating data from your current SOLIDWORKS Workgroup PDM Vault will depend on the set-up of your current environment. Generally, there are four groups of files that may need to be migrated to your new PDM system:
+SOLIDWORKS Project files
+Standard Library files
+Hole Wizard/Toolbox data
+Support files
+SOLIDWORKS Project Files
+Project files are your design files and should exist in your Workgroup Vault. Before creating a back-up for an upcoming migration, you want to first Check-in the latest Revisions of all files. At this point, no new files should added to your Workgroup Vault, unless they will ONLY be managed by the Workgroup Vault.
+Locating SOLIDWORKS Project Files
+Tools such as SOLIDWORKS Explorer Contains and Where Used, as well
+File
+>
+References
+in SOLIDWORKS, can help determine the location of files, that may have never been checked into the Workgroup Vault. These files should also first be checked in.
+SOLIDWORKS Explorer
+There is no tool in Workup PDM to create a back-up of vaulted files
+. Typically this is done by third party software, but a back-up can be created manually, by copying and pasting the Vault Data folder. The default name of the folder is VaultData, but it can differ. The location of the Vault Data, may be on a different server than where Workgroup PDM was installed. The location of the VaultData folder can be obtained from the Workgroup PDM VaultAdmin, under the Vault Management tab as shown below:
+SOLIDWORKS Workgroup PDM Vault
+If you are not familiar with the SOLIDWORKS Workgroup PDM Vault Admin, please refer to
+Andrew’s article
+.
+Standard Library files
+The location of Standard Library files can vary from company to company. They may be located in the Workgroup Vault, which means the files will be backed up along with the vault. If your Standard Libraries are outside the Vault and were defined through the SOLIDWORKS Design Library, you can determine the location of these Libraries from within SOLIDWORKS by selecting
+Tools
+>
+Options
+>
+System Options
+>
+File Locations
+>
+Design Library
+.
+Design Library Location
+These libraries should also be backed up, as part of the migration process.
+Hole Wizard/Toolbox Files
+Hole Wizard/Toolbox is not typically added to a Workgroup vault, but you may want to add it to your PDM Standard or Professional vault. The location of your Toolbox/Hole Wizard, can be found in
+Tools
+>
+Options
+>
+System Options
+>
+File Locations
+>
+Hole Wizard/Toolbox
+, from within SOLIDWORKS.
+Hole Wizard/Toolbox Location
+Support Files
+Support files include Part, Assembly and Drawing Templates but may include other items such as, Sheet Formats, Hole Callout Format Files and Sheet Metal Gauge Tables. If you intend to add these Support files to your PDM Standard or Professional vault, you should back these up as well. The location of the support files can be determined from inside SOLIDWORKS via
+Tools
+>
+Options
+>
+System Options
+>
+File Locations
+.
+NOTE
+: There may be other groups of files that you need to be migrated to your SOLIDWORKS PDM Standard or Professional vault. Carefully examining your current set-up, both in Workgroup and SOLIDWORKS, will help you identify these additional file groups.
+Next Steps
+Contact us
+about a new service offering to help you migrate your data to SOLIDWORKS PDM Standard or Professional. Visit our website to learn more about the
+SOLIDWORKS Services available from Javelin
+.
+Also review our
+SOLIDWORKS PDM Standard Getting Started Guide »

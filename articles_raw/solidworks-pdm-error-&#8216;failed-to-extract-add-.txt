@@ -1,0 +1,20 @@
+If you’ve recently upgraded to Windows 10 and you’ve received a SOLIDWORKS PDM error:
+‘Failed to extract add-in…’
+you’re not alone.  This can be caused by the SOLIDWORKS PDM add-in being built with .NET Framework 3.5 and Windows 10 only has .NET Framework 4.5 enabled by default.
+How to manually enable .NET Framework 3.5
+Start
+>
+Programs and Features
+>
+Turn Windows features on or off
+;
+Windows Programs and Features
+Check the box for
+.NET Framework 3.5 (includes .NET 2.0 and 3.0)
+Windows .NET Framework features
+Hit
+OK
+and Reboot
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

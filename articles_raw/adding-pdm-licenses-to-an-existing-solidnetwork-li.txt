@@ -1,0 +1,24 @@
+Adding
+PDM
+serial numbers is quicker and simpler for CAD administrators in SOLIDWORKS 2023. Previously, the installation of the SOLIDWORKS SolidNetWork License Manager Server needed to be modified to add and remove network serial numbers. In 2023, CAD administrators can now use the Product Activation Wizard from within SOLIDWORKS SolidNetWork License Manager Server to add and remove serial numbers for perpetual and term licenses.
+NOTE: Make sure the SolidNetWork License Manager software release year matches the EPDM software release (ie. PDM 2023 requires at least 2023 SNL Manager). SOLIDWORKS client installations do not necessarily need to be upgraded as PDM 2023 and the 2023 SNL Manager are both compatible with older versions of SOLIDWORKS.
+Adding PDM Licenses in 2023:
+On the License Server, open the SolidNetwork License Manager Server application.
+On the ‘Server Administration’ tab, click the ‘Modify’ button.
+Check ‘Activate/Reactivate your product license(s), and then select ‘Next’ twice.
+You’ll see two new buttons added to this dialog: ‘Add’ and ‘Remove’.
+To add, simply select ‘Add’. You can type or paste multiple serial numbers. Separate them by line.
+To remove, highlight the license(s) that you want removed and select ‘Remove’.
+Select ‘Next >’ to add the license(s). This automatically activates product license(s).
+Adding PDM Licenses (2015 – 2022):
+On the License Server, Open ‘Control Panel’ and access ‘Programs and Features’.
+Find ‘SOLIDWORKS SolidNetWork License Manager’ in the list of installed programs. Highlight it, and then choose to ‘Modify/Change’ (via right-mouse click or from the Programs and Features dialog).
+Click ‘Next’, and then select the ‘Modify’ radio button.
+Click ‘Install’.
+Add or remove any serial numbers in the text box. Separate serial numbers with commas. Click ‘Next >’.
+Once the installation has been modified to include all necessary serial numbers, open the SolidNetWork License Manager Server product on the server.
+You may get prompted to activate. If so, select ‘Yes’. If there is no prompt to activate:
+On the ‘Server Administration’ tab, click the ‘Modify’ button.
+Select the ‘Activate/Reactivate your product license(s)’ radio button. Click ‘Next’.
+Click the ‘Select All’ button, ensure the radio button is selected to activate “Automatically over the Internet”, provide a valid email address, and then click Next.
+Finish the activation and you should have access to all the necessary licenses.

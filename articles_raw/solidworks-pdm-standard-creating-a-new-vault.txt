@@ -1,0 +1,21 @@
+After installing
+SOLIDWORKS PDM server
+and
+Client
+, you can now create your SOLIDWORKS PDM Standard Vault, through the SOLIDWORKS PDM Administration tool. The method I find fastest, to access the PDM Administration tool, is to type Admin, in the Windows Start menu and then clicking on the resulting link.
+Once in the SOLIDWORKS PDM Administration tool, you first need to identify the server where SQL Express was installed. This is done by right-clicking on SOLIDWORKS PDM Administration and selecting Add Server.
+You will then be prompted to enter the server name and TCP port, that will be used to allow the PDM components to communicate. The default value is 3030, but you can a specify different port.
+You should ensure that whichever port you use, is open on both the Server, and Client.
+Many of the issues encountered when setting up a vault, are a result of blocked ports. Firewalls, as well as other security software, are often responsible for these ports being blocked.
+Once the connection has bee established, you will be prompted to enter the user name and password for the PDM Server.
+Once the server has been identified, you can create the PDM vault. This is done by right clicking on the Server and selecting Create New Vault.
+After clicking on Next, to proceed past the Welcome screen, you will be prompted to provide a Name for your new vault and and optionally, a Description of the vault.
+Next, specify the location of the PDM Archive Server.
+On the next Screen, you identify the SQL Database Server.
+After identifying the database, you may need to enter the database’s Username and Password
+You will next need to point to the License Server, that will be attached your SOLIDWORKS PDM Standard license. This should have installed when you installed the PDM Server. If not you will need to install this first. There is a separate serial number, for SOLIDWORKS PDM Standard. If you do not have this, contact your SOLIDWORKS Value Added Reseller (VAR). Your VAR may also need to activate your SOLIDWORKS PDM Standard serial number.
+Once the License Server has been connected, you will be asked to identify the Language to be used by the Vault and the Date Format.
+When creating a new Vault, you can choose to use the same Admin password, you chose when you installed PDM Standard, or you can choose a new password.
+The next screen allows you to configure the new Vault. You can import a previous Vault, Vaults that are pre-configured by SOLIDWORKS or an EMPTY Vault. Pre-configured Vaults can be useful when you first start using PDM Standard. The Empty Vault is for more experienced users, that want to create a customized vault.
+The final screen allows you to Review your choices and complete the creation of the vault.
+You will now see the newly created Vault, in SOLIDWORKS PDM Administration.

@@ -1,0 +1,28 @@
+If you needed to bring a file into a PDM Vault that already had an assigned revision level, it used to be a very time consuming process to match up the revision information with the vault database. In SOLIDWORKS PDM 2016 however, this is now much easier to do!
+A new “
+Set Revision
+” command allows users with the appropriate permissions to directly set the Revision of the file to exactly what it should be and at the same time update the data card revision variable information if necessary.
+To do so, a user must have “Set Revision” permission, which administrators can apply from the Folder Permissions and the State Permissions.
+Set Revision Permissions
+Set SOLIDWORKS PDM File Revision
+The file must be checked in, and be in a state that has a revision scheme defined
+.  The Revision variable must be assigned in the state information for the Set Revision command to be able to update the variable value.
+Set Revision Value
+To manually set the revision level,
+select the file in the Vault View
+and go to
+Modify > Set Revision
+.
+Set Revision Command
+In the dialog,
+use the drop list to set the revision level
+.  Check the box for “Update Variable” to have the new revision level be written into the data card.
+Set RevisionValue
+Once you
+click OK
+, both the revision level in the database and the revision value on the data card will be synced with the file’s legacy revision level.
+New revision value applied
+Learn more about SOLIDWORKS PDM
+Take a
+SOLIDWORKS PDM training course
+either online, in a local classroom, or ask us about delivering customized PDM training in your office.

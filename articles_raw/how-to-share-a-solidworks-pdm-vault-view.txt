@@ -1,0 +1,46 @@
+When
+creating a new SOLIDWORKS PDM Vault View
+, we have two options for
+Attach type
+;
+Only for me
+For all users on this computer
+SOLIDWORKS PDM Vault View Setup
+Or if creating
+using the SOLIDWORKS PDM
+Administration Tool
+;
+SOLIDWORKS PDM Administration Tool
+which is essentially the same options, but we can choose either
+Yes
+or
+No
+.
+What is the difference between these two options?
+Only for me
+If you choose
+Only for Me
+or select
+No
+when asked “
+Do you want to make the file vault view accessible for all users on this computer
+“, the registry keys are written in the HKEY_CURRENT_USER section.  Creating the keys in this location makes the vault view only available to the Windows profile that it was created in.
+For all users on this computer
+If you choose
+For all users on this computer
+or select
+Yes
+when asked “
+Do you want to make the file vault view accessible for all users on this computer
+“, the registry keys are written in the HKEY_LOCAL_MACHINE section.  Creating the keys in this location makes the vault view accessible to any Windows profile that logs into this workstation.
+….but which option should I choose?
+That would depend on your setup.  If you’re using a dedicated machine for your use; you can select
+For all users on this computer
+,
+as there isn’t a risk of users logging into a different Windows profile and gaining access to files that were checked out on the previous profile.  If multiple users consistently access the same workstation, and it’s a requirement for everything to be kept separate; then use the
+Only for me
+option, which will make the view unique to that logged-in profile.
+Q: Wait; if I create a shared profile and someone else logs into my workstation, does that mean they will inherit all my permissions?
+A: No.  User permissions are still controlled via the vault log in.  What could happen is; they will gain write access to files that were checked out on the other profile, or files could appear as private if they were cached on the other profile, and the current user doesn’t have viewing permissions.  When using a “Shared” view, both user accounts are accessing the same folder, therefore the same cached content is being accessed.  If another user is going to access a shared view, a
+clear of the local cache
+would help prevent this.

@@ -1,0 +1,28 @@
+Starting with Microsoft SQL 2005, the Password Policy and Password Lockout settings from the Windows Operating System (found by going to
+Control Panel
+>
+Administrative Tools
+>
+Local Security Policy
+>
+Account Policies
+) are automatically inherited by the sa account in SQL.
+Account Policies
+This could lead to issues if the password stored in the
+Database Server Configuration
+program or the
+Archive Server Configuration
+tool are incorrect for any reason and the Password Policy is set to lockout the account after a certain number of failed login attempts.
+If that happens, PDM will no longer be able to access the SQL database and users will not be able to work in the vault.
+For this reason the
+SOLIDWORKS PDM Installation Guide
+recommends disabling this option for the sa account.
+This can be done from within the
+SQL Server Management Studio
+program, by expanding the
+Security
+folder, then the
+Logins
+folder and right clicking the sa account and selecting Properties.
+In the Login Properties window, on the General page, clear the option “Enforce password policy”.
+Once this change is made there should no longer be any concern about the sa account being locked out because of an incorrect password.

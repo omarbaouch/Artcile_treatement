@@ -1,0 +1,26 @@
+Within Microsoft SQL, every SOLIDWORKS PDM vault database has a transaction log associated with it that records the modifications to the database.  In some scenarios, if this log grows large it can cause performance issues within SQL and the vault.  If you’ve recently changed the recovery model for the SOLIDWORKS PDM vault
+DB from full to simple
+, we can reduce the size of the transaction log with a shrink action.
+How to shrink the SQL transaction log
+Login to the SQL Server Management Studio using the
+sa
+(system administrator) account;
+SQL Server Management Studio Login
+Expand the
+Databases
+folder
+Select the vault DB
+Right-click
+Tasks
+>
+Shrink
+>
+Files
+Shrink Transaction Log – Tasks > Shrink > Files
+For
+File Type
+select
+Log
+, and click
+OK
+Shrink Transaction Log

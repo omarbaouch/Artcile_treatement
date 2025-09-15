@@ -1,0 +1,7 @@
+To have a data card variable display the configuration name of SolidWorks files, set-up the variable as shown below.
+The block name mus be set to “SWCfgProperty”. In the above image the configuration name is being mapped to variable, but other configuration specific properties can be mapped to a variable. The below list identifies these properties and specifies whether they can be set to read/write, or read only.
+Attribute: Name – Configuration name  (read only)
+Attribute: Description  – Description (read/write)
+Attribute: Comment – Comment (read/write)
+Attribute: BOMPartNumber  – Document name (read only)
+Attribute: BOMUserSpecifiedName   – User specified name (read/write)

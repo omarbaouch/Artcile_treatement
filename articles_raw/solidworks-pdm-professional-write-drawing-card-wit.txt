@@ -1,0 +1,12 @@
+SOLIDWORKS PDM Professional is capable of copying values from a part or assembly card and writing them to a Drawing card.  The setup to do this is actually quite easy.
+To set up this link do the following:
+Open the drawing card in the card editor
+Select the control with the variable you want to modify and click variables
+Add a new block attribute block named $PRPSHEET (all uppercase)
+Set the attribute name to be the same as the block attribute for the part/assembly custom property (number)
+Set the extensions to slddrw
+To test this link:
+Open a part with the custom property added (123456789 in this example)
+Create a new drawing and save it (it should have the same property)
+Change the property in the part and check it in
+Return to the drawing and the card will be updated

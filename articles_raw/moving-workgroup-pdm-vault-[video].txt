@@ -1,0 +1,22 @@
+Moving Workgroup PDM Vault to a new computer is relatively simple.  All vault settings, users, groups and the actual SolidWorks files are contained within the VaultData folder, so only that folder will need to be transferred to the new server.
+Here are the steps for the full process:
+Check In
+Step 1:
+Have all users check in any files they are currently working on.
+Stop the Vault
+Step 2:
+Stop the Workgroup PDM Service.
+Locate the root directory folder
+Step 3:
+Locate the root directory folder.  By default this should be located at C:\VaultData.
+Copy the vault root folder
+Step 4:
+Copy the vault root folder to the new computer.
+Install the Workgroup PDM Vault Service
+Step 5:
+Install the Workgroup PDM Vault Service on the new computer.
+Summary
+Step 6:
+Ensure that the Vault Data location in the installation manager matches the location where the vault root folder was copied to.  If necessary change the location in the installation manager to match the actual location.
+Ensure that the Vault Data location matches
+Here are the steps in a follow along video:

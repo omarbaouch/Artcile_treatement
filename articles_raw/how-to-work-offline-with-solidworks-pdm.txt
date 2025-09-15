@@ -1,0 +1,33 @@
+Working with
+SOLIDWORKS PDM
+, there will be times where connectivity to the server is unavailable. This could happen while working remotely for example, or while the vault is undergoing maintenance such as an upgrade, a server move, or a migration.
+To prepare your SOLIDWORKS PDM vault for working offline:
+Check in active files to ensure you have the most recent copies of them in your vault. Then Check those files out to obtain write access.
+Then proceed to work offline.
+These instructions are assuming the vault view will not need to be recreated. If the vault view is to be recreated, please follow instructions in
+this article here.
+Step 1: Check in and check out all active files
+The first step is to ensure you have checked in all your active files, and then check them out again. This can be done by selecting the “Keep Checked Out” option from the check in dialog:
+SOLIDWORKS PDM Check In dialog
+This accomplishes two things. One, it gives the user write access to those files, and two, it caches those files locally making them available to you in offline mode.
+Step 2: Switch to working Offline
+The next step is to switch to working offline via
+Tools
+>
+Work Off-line
+.
+SOLIDWORKS PDM Work Offline
+When working offline, folders will appear blue in colour which indicates that the vault is now in offline mode
+, as shown in the image below:
+Blue folders for off-line mode
+In offline mode, users will have access to all files they have in their local cache
+. Any files that were checked out before switching to offline mode will also be writeable (i.e. users will have write access to them). Files can then be opened, modified, etc., just as normal.
+Once connection to the server is restored, users can switch back to on-line mode using
+Tools
+>
+Work On-line
+.
+SOLIDWORKS PDM Work On-line
+Once back online,
+all files that were checked out will need to be checked back in
+for changes to be written to the server.

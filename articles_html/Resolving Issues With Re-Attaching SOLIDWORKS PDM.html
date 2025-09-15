@@ -1,0 +1,26 @@
+<p>If you have had to remove and re-attach a SOLIDWORKS PDM Vault View on a client computer, you can sometimes encounter an odd Status value which will block you from being able to complete the process of recreating the view:  &#8220;<strong><em>Attached; Missing Information</em></strong>&#8220;.</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Vaultview-issue.png"><img decoding="async" class="aligncenter wp-image-44843 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Vaultview-issue.png" alt="" width="513" height="409" title=""><noscript><img decoding="async" class="aligncenter wp-image-44843 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Vaultview-issue.png" alt="" width="513" height="409" title=""></noscript></a></p>
+<p><strong>This is actually being caused by the View Setup utility detecting some existing information left over from the previous view</strong>.</p>
+<p>This can happen if a system has been partially restored, or if the vault view was deleted but something has interfered with the removal process and some of the registry entries for the view are still present.</p>
+<p>To resolve this behavior all you will need to do is remove the orphaned registry values.</p>
+<blockquote><p><strong>**Warning**</strong>  Only make direct modifications to the registry if you are familiar with working in the Windows Registry.  If you are not, contact your SOLIDWORKS Value Added Reseller for assistance.</p></blockquote>
+<p>You will need to ensure that the registry key for the specific vault that you are trying to attach to does not already exist in the following locations:</p>
+<ul>
+<li>
+<pre><strong>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VAULTNAME]</strong></pre>
+</li>
+<li>
+<pre><strong>HKEY_CURRENT_USER\Software\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VAULTNAME]</strong></pre>
+</li>
+<li>
+<pre><strong>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]</strong></pre>
+</li>
+<li>
+<pre><strong>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]</strong></pre>
+</li>
+</ul>
+<p>If the vault name is displaying in any of these locations, delete the key(s) and run the View Setup utility again.</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1.png"><img decoding="async" class="aligncenter wp-image-44844 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1.png" alt="" width="836" height="533" title=""><noscript><img decoding="async" class="aligncenter wp-image-44844 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1.png" alt="" width="836" height="533" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1.png 836w, https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1-600x383.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Registry-1-768x490.png 768w" sizes="(max-width: 836px) 100vw, 836px" /></noscript></a><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Ok-1.jpg"><img decoding="async" class="aligncenter size-full wp-image-44846 lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Ok-1.jpg" alt="" width="518" height="416" title=""><noscript><img decoding="async" class="aligncenter size-full wp-image-44846 lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/10/Ok-1.jpg" alt="" width="518" height="416" title=""></noscript></a></p>
+<h3>Video Demonstration</h3>
+<p>Here is a video to demonstrate the steps:</p>
+<p>https://youtu.be/e5e7tWqj4nc</p>

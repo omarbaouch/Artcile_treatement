@@ -1,0 +1,24 @@
+New in
+SOLIDWORKS PDM 2020 Web2
+you now have the ability to see a read-only view of the
+Bill of Materials
+.
+The large screen layout – BOMs:
+In the large screen layout, the
+Bill of Materials
+tab is available in the
+file detail view
+. It displays the bill of materials of SOLIDWORKS PDM items or of a SOLIDWORKS assembly, drawing, part or weldment part.
+The supported BOM types are:
+Computed BOMs
+Weldment BOMs
+Weldment cut lists
+SOLIDWORKS BOMs
+To display the Bill of Materials click on the file name and select Bill of Materials tab.
+Bill of Materials – Large Screen Layout
+The small screen layout – BOMs:
+In the small screen layout, the Bill of Materials tab is available from the ellipsis menu. The tab contains two customizable columns.
+To display the Bill of Materials tab, in the file detail view, click the ellipsis, and click Bill of Materials.
+Bill of Materials – Small Screen Layout
+Watch a demo video
+Learn more about the enhancements to SOLIDWORKS PDM 2020 Web2 in the video below:

@@ -1,0 +1,50 @@
+The
+SOLIDWORKS PDM Standard
+installation consists of three components, SQL Express, PDM Server and the PDM Clients. In this post we will install SQL Express and a SOLIDWORKS PDM Standard Server Installation.
+To learn about the PDM Client installation read our next post
+.
+Installing SQL Express and the PDM Server
+PDM Standard is installed using the same Installation Manager that is used by SOLIDWORKS. To install PDM Standard select “
+Install SOLIDWORKS PDM Server components on this computer
+” and click on
+Next
+.
+PDM Standard IM
+For SOLIDWORKS Standalone installations, PDM Standard requires the installation of the  SolidNetWork License Manager. After pressing next on the Welcome page, you will be asked to provide your SOLIDWORKS PDM Standard serial number, which you can get from your SOLIDWORKS reseller. If you already use SolidNetWork License Manager for SOLIDWORKS, you can modify the existing License Manager to add the PDM Standard serial number. Please refer to the article
+Adding EPDM License(s) Serial Numbers to an Exiting  SolidNetWork License Manager
+.
+PDM Standard SN
+On the summary page click on
+Change
+to configure the PDM installation.
+Install Manager Summary
+Choose the appropriate product. In this case PDM Standard.
+Identify the installation location, or accept the default.
+Choose which features to install. The archive and database  needs only to be installed once on a server(s), that can be accessed by the clients. The client feature needs to be installed on all clients. It can be helpful, to have a client installed on the server, for troubleshooting purposes relating to network permissions and connectivity.
+For the SQL Server, choose whether to install a new instance, or use an existing instance.
+Please note, performance may be degraded if SQL is shared between multiple applications. A dedicated SQL instance should provide the best performance.
+Enter the sa password that will be used to access the SQL database. Along with SOLIDWORKS PDM Standard, Microsoft’s SQL Express will be installed. If you already have Microsoft SQL Express installed, you can use the existing instance.
+Click on Back to Summary to continue with the installation
+Install Manager Server Options
+Accept the license agreement and click on
+Install Now
+to complete the SOLIDWORKS PDM Standard Server Installation. Along with SOLIDWORKS PDM Standard, Microsoft’s SQL Express will be installed. If you already have Microsoft SQL Express installed, you can use the existing instance.
+Install Manager Summary Install Now
+Configure Archive Server
+After the SOLIDWORKS PDM Standard installation has completed, you next need to configure the Archive Server.
+Archive Server Configuration
+Root folder
+Select the root folder where you wish create your archive. A best practice is to place the archive at the root of a drive, to avoid Windows limitations on path length (256 characters)
+Set the admin password. This password will be used by default to create your vault.
+Admin password
+Enter the SQL ‘sa’ password you created, or provided earlier.
+sa password
+Provide administrative access to the file vaults. If you are not sure, use the defaults. You can always change that after, if need be.
+Windows security
+Click on
+finish
+to complete setting up the archive.
+Learning more about PDM
+Javelin can provide PDM implementation and training services for your business.
+Learn more about Javelin Services
+.

@@ -1,0 +1,19 @@
+The File List area of the
+SOLIDWORKS EPDM
+Add-In provides lots of valuable information about the active file in SOLIDWORKS.  By default there are columns showing information such as “Workflow State”, “Checked Out By” and “Version” as well as “Revision” information.
+But these columns can be customized to report any information that EPDM knows about the file, including any variables from the Data Cards.
+SOLIDWORKS EPDM Add-in
+To add columns to the File List area of the EPDM Add In:
+Step 1:  Go to the Enterprise PDM drop down menu in SOLIDWORKS, and select “Options”.
+EPDM Options
+Step 2:  Go to the “View Setting” tab and in the Display Information section, click the drop list for “Information to display:”.  Find the variable that you would like to display in the File List and select it.
+Select Variable[s] to display
+Step 3:  Check the option to “Display in a column of it’s own” and give the column a caption.
+Display options
+Step 4:  The new column will be placed at the far right of the File List, drag the column header to re-position the column as desired.
+New column added
+Video Demonstration
+https://youtu.be/WXzsvApSVaE
+Learn more about EPDM
+To learn more about using or administering SOLIDWORKS EPDM you can take a training course with us either in-class or online.
+View Training Courses

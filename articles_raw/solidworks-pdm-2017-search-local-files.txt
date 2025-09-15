@@ -1,0 +1,14 @@
+A great new feature in
+SOLIDWORKS PDM 2017
+Standard and Professional, is the ‘SOLIDWORKS PDM Search Local Files’ command.  This new command can be accessed through the right-click shortcut menu in the Vault View. This command can be used to
+search for any files that exist in the local vault view that have NOT yet been added to the vault
+(so they are not yet in Private State).
+Search Local Files command
+PDM files are found in the local vault view if:
+The file was created or copied into the vault view folder while the user was working offline,
+Or if there was a temporary interruption in the connection to the Database server, preventing a new file from automatically being added to the vault.
+Now through a single command any local files, located in any sub folders in the vault view can be quickly found, and then added to the vault.
+Search results adding file to vault
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

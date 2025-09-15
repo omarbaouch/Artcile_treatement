@@ -1,0 +1,20 @@
+Currently if you need to make changes to User Viewer settings, each user has to be updated individually.
+Viewer settings
+If there are multiple users to update, this can be a tedious time consuming task. To avoid this toil, the SOLIDWORKS PDM Viewer Settings can be updated for all users by using the following SQL query:
+Update Settings
+
+ set value = (
+
+ select Value From Settings S
+
+ Inner Join Users U on S.UserID = U.UserID
+
+ Where VarID = 16 and Username = 'Admin')
+
+ Where VarID = 16 and UserID != 2
+First update the Viewer settings for the Admin and then run the query on your vault.
+Run query
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+either online, in a classroom near you, or ask us about training on-site at your location.

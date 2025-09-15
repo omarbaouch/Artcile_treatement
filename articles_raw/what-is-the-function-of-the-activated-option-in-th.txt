@@ -1,0 +1,4 @@
+The function of the checkbox in the SOLIDWORKS PDM BOM tab is to activate a computed bill of materials (BOM) in order to show it in the bill of materials view (Explorer > PDM menu > Display > Show Bill of Materials).
+Activated BOM
+This flag is also useful in export XML rules, where possibility to only export activated BOMs is presented (Export Rule / Only export activated BOMs).
+Show Bills of Materials

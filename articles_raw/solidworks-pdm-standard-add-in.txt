@@ -1,0 +1,32 @@
+With each license of SOLIDWORKS Professional and Premium, a license of SOLIDWORKS PDM Standard Editor is included. In this article, I will provide an overview of the SOLIDWORKS PDM Standard Add-in.
+First though, let’s review the different license types available for PDM.
+Editor:
+Adds an Add-in in SOLIDWORKS, which allows a user to interact with the vault from with-in SOLIDWORKS. This includes Checking Out files so they can be edited, Checking In files so that they will be saved to the PDM server, searching for files as well as other vault related activities.
+Contributor
+: Offers the same functionality as the Editor, but does not include the SOLIDWORKS add-in for easy access to the vault while working on files.
+Viewer:
+Offers read-only capabilities. Users can view files, but cannot check-out files for editing. With a viewer license, users are able to transition files.
+PDM licenses exist in a shared pool. When a user logs into the vault, their computer will pull a license that matches the license type that their client has been set to use. When a user logs out of the vault, that license is returned to the pool. A different user can then grab the license. This means that PDM licenses are for concurrent users. A vault with 2 licenses can have 3 users as long as only 2 users are logged in at one time.
+Changing License Type
+The add-in that is included with Editor licenses can be enabled inside of SOLIDWORKS.
+SOLIDWORKS Add-ins
+SOLIDWORKS PDM Add-in Features
+When the PDM Add-in is enabled a new tab will available from the SOLIDWORKS Task Pane. The Task Pane is normally on the right side of the SOLIDWORKS window.
+Clicking on the PDM tab, will provide access to the vault. Along the top of the vault portal, is a Command bar. From this location, a user can Check-in/Check-out files, Transition files to different State, as well as other vault related activities.
+SOLIDWORKS PDM Task Pane Command Bar
+Below the Command bar, the SOLIDWORKS PDM tree lists the files opened, in the currently active window. The Version of each file is shown, as well if file is Checked-out and by whom. Other information can be viewed by dragging the bar, along the bottom the SOLIDWORKS PDM tree. The information that will appear on this panel is controlled, by the PDM Administrator. Icons beside each file’s icon, provide additional information about the file, such as whether the file cached locally, is the same as that of the vault.
+SOLIDWORKS PDM tree
+A preview of a file, selected in the SOLIDWORKS PDM tree, will be shown below the SOLIDWORKS PDM tree.
+Preview Panel
+In the last panel, a summary of information for a selected component is displayed. This is similar to the information found in the SOLIDWORKS PDM tree.
+File Summary
+A user can customize some aspects of the PDM interface. This can be done by selecting SOLIDWORKS PDM>Options, from the Tools Pull-down in SOLIDWORKS.
+Accessing PDM Options in SOLIDWORKS
+The Server tab. controls how information from the PDM Server, is managed by the Client. This includes, the renaming of components by an automatic serial number generator.
+Server Options
+View Settings allows control of how some information is presented, such as what information will be displayed in the SOLIDWORKS PDM tree.
+View Settings
+Much of the way that the Client interacts with the vault will be controlled by the PDM Admin. Most of what can be customized in Client, is intended to enhance the user’s interaction with the vault, with the exception of Serial Numbers. Serial numbers are the terminus of an automatic serial number scheme and should be set the same, on all clients accessing the same vault.
+This article is intended as an overview of SOLIDWORKS PDM Add-in. To efficiently work with PDM and to take advantage of all its tools,
+I would strongly recommend taking training
+.

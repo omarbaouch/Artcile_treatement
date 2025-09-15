@@ -1,0 +1,17 @@
+Sometimes the archive log file is not enough to troubleshoot your vault – the “
+Collect Support Information…
+” tool allows you to quickly generate a variety of logs and reports.
+STEP 1:
+In the SolidWorks Enterprise PDM Administration Window, right-click on the vault and click on Collect Support Information…
+STEP 2:
+Choose the information to be generated.
+STEP 3:
+Add any files or folders from the Archive, if required.
+STEP 4:
+If needed or requested, create a back-up of the SQL database.
+STEP 5:
+Enter any additional information that you feel is important.
+STEP 6:
+Create the package.
+STEP 7:
+Send the resulting zip file to the support help desk of your local SolidWorks reseller.

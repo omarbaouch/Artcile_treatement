@@ -1,0 +1,22 @@
+It’s no secret I’m a big fan of the
+SOLIDWORKS PDM
+Copy Tree
+Feature.  It have many benefits, especially when
+compared to Pack and Go
+.   WinZip is the default archive utility for Copy Tree but we have the ability to configure that to
+7-zip
+via the following steps.
+This is a client based setting and won’t change it for all vault users.
+Step 1:
+Administration Tool
+>
+Local Settings
+>
+Settings
+Set 7-zip as the File Archiver For Copy Tree
+Step 2: Select the Zip Program tab and input the Full path to the 7z.exe.
+Enter path for 7-Zip
+Step 3: For Arguments to the Zip program, enter a -tzip “%1″ @”%2” and check the Store source file names in a temporary text file box
+Enter Arguments
+Step 4: Hit OK.  Now 7Zip should be used whenever selecting Compressed Archive as the  Copy Type within Copy Tree
+Copy Tree Compressed Archive

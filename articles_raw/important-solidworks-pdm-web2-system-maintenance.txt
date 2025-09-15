@@ -1,0 +1,17 @@
+I had a support case recently where the SOLIDWORKS PDM Server hard drives were at critical levels and the culprit was the Web2 portal.  To prevent this from happening to any Web2 users, there’s Important
+SOLIDWORKS PDM Web2
+System Maintenance that must be completed to clear space as the Web2 system folders will continue to grow in size as users access the vault.
+SOLIDWORKS PDM Web2 System Maintenance
+The following folders should be monitored and emptied periodically to prevent the Web2 Server disk space reaching critical levels:
+tempFiles
+Default location; C:\inetpub\wwwroot\SOLIDWORKSPDM\Web2\Content\tempFiles
+Uploads
+Default location; C:\inetpub\wwwroot\SOLIDWORKSPDM\Web2\Content\Uploads
+Additional Information
+tempFiles
+As users access the vault via Web2, the server caches files from the vault it stores them in the tempFiles subfolder, which is why it continues to grow in size. You can safely delete the contents of the tempFiles subfolder (but not the tempFiles subfolder).
+Uploads
+As users upload files, this is the folder where the Web2 Server adds files before being copied into the vault.  You can safely delete the contents of the Uploads subfolder.
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

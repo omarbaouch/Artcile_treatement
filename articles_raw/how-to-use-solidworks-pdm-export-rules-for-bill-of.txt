@@ -1,0 +1,10 @@
+Is there a way to export specific BOM (Computed BOM or CAD BOM) using SOLIDWORKS PDM export rules?
+An ability to only export activated BOMs is presented. You should activate specific BOM in Bill of materials Tab in SOLIDWORKS PDM Explorer and turn the flag ‘Only export activated BOMs’ in Export Rule.
+Activate only one of the CAD BOMs
+Activate BOM
+Create export rule and set it for exporting Computed BOM or CAD BOM, turn the flag ‘Only export activated BOMs’ on. Indicate output folder for XML files.
+BOM Export Rules
+Edit workflow and add new transition action with type ‘Export data to XML’.
+Run it for required files (for example for drawings only).
+Select export corresponding export rule created before.
+Transition Action – Export data to XML

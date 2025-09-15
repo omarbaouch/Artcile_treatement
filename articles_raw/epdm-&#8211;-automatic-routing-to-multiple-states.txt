@@ -1,0 +1,3 @@
+When checking in or transitioning a number of files, you may want to route the files to different states. For instance, you may want to route SolidWorks files to one state and supporting documents to a different state.
+In order to make this work, the transition must be set to Automatic and at least one condition must be added to filter which files are allowed into the target state.
+In the above example, I used a category to only allow CAD files into the target state, but other conditions or combination of conditions could be used.

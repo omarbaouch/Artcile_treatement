@@ -1,0 +1,13 @@
+You’ve had to reinstall Microsoft SQL on the same server. The installation of Microsoft SQL and SOLIDWORKS PDM went off seamlessly, but when you try to create a vault you receive this error message:
+“Could not add vault ‘[VaultName]’ to the SOLIDWORKS PDM master database ‘ConisioMasterDb’’.
+What the…does this mean and how do I fix it?
+How to resolve the issue
+When creating a vault for the first time, after installing or reinstalling SQL and PDM, PDM will create the ConisioMasterDB databse, that is referenced by all other PDM databases. When the ConisioMasterDB databse is created, a associated ConisioMasterDb.mdf and ConisioMasterDb.ldf will also be created.
+MDF (Master Database Fie) contains all the main information of the database and plays a crucial role in information storage.
+LDF keeps track of what changes have been made in the database.
+In the situation where there was a previous installation of SQL, these two files will likely exist and cannot be overwritten during the creation of the first vault. To resolve this
+FIRST MAKE SURE YOU HAVE GOOD BACKUPS
+,
+Next delete ConisioMasterDb.mdf and ConisioMasterDb.ldf. These files are located by default, in:
+C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA
+Once these files have been deleted, you will be able to create your vault and continue on with the SOLIDWORKS PDM restoration.

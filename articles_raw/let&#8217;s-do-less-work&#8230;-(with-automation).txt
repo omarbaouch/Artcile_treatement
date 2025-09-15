@@ -1,0 +1,19 @@
+How about this? Do less work + yet get more accurate and error-free drawings and sign-offs? Sound good? Then this post is for you…
+I wanted to write a short blog outlining some of the very nifty ways that SolidWorks Enterprise PDM (a.k.a. EPDM) can automate a whole lot of processes that you take for granted, and at the same time decrease your errors, and add standardization to your sign-offs.
+Here I’m just going to show 3 simple ways that Enterprise PDM automatically helps you with this:
+Number 1 – Title Blocks (
+Engineers
+)
+I would say about 95% of companies still have their engineers fill in the title block information manually, engineer name, date, description, etc. – but with EPDM there is absolutely no need at all, as soon as you send off a part/drawing to be approved, your name + date + part description all get automatically put in.
+Me, being an engineer, would make a drawing, and send it for approval to my manager, and when I do this EPDM will automatically put my name + date + all the project and customer information in for me (I put NONE of this information in myself, it was all done automatically by EPDM when I send my drawing for approval):
+Number 2 – Sign-off + Revision (
+Managers
+)
+Next, your manager will come along and review, then approve your drawing, and THEIR name + date will be automatically added to the drawing along with a new Rev:
+Number 3 – Automatic
+PDF / STEP / IGES
+Once a part is approved by your manager, EPDM can automatically create PDF files, STEP/IGES files, or any other type of file you’d need and save them to a special directory (so your vendors can grab the files to quote on, for example):
+In conclusion
+: With all this automation that EPDM gives you, not to mention since everything is automatic there’s really no way to screw it up, so no more errors either  – why do anything manually ever again? Now that’s what I call doing less work…
+Cheers.
+Jake Middleton – CSWP

@@ -1,0 +1,22 @@
+When performing maintenance on a SOLIDWORKS PDM Vault, for instance updating the software or moving the Database or Archive files to a different location; it is best to lock down access to the vault so that no changes can be made while the maintenance is being carried out. To lock SOLIDWORKS PDM Vault vault for maintenance,
+right-click on the Vault
+in the SOLIDWORKS PDM Administration console and select “
+Properties
+” from the short-cut menu.
+SOLIDWORKS PDM Vault Properties
+Click the button to “Block Log-ins” to prevent users from logging into the vault.
+Block Log-ins
+When users next try to login, they will receive a warning that the vault is undergoing maintenance and they cannot login until it is completed.
+Login Warning Message
+During this time users will be able to “
+Work Offline
+” which will give them write access to any files that they have previously checked out and read access to any files that they have available in their local cache (these files can be cached before hand by performing a “Get Latest” on the files).
+Work Offline Option
+Once the maintenance is completed,
+right-click on the Vault
+again and select “
+Properties
+” then click “
+Permit Log-ins
+“.
+Permit Logins

@@ -1,0 +1,40 @@
+When SOLIDWORKS CAD software is updated to the latest release, the SOLIDWORKS Workgroup PDM Vault must also be updated. The following outlines how this can be done.
+If possible, first:
+Have all users check in any files they currently have checked out.
+Ensure all users log out of the vault.
+Lock the SOLIDWORKS Workgroup PDM Vault
+To prevent users from logging in the vault during the update, the vault can be locked from the
+Vault Settings
+tab of the VaultAdmin tool.
+SOLIDWORKS Workgroup Vault Settings
+Open the vault admin tool and ensure that
+Validate Vault,
+under the
+Vault Management
+tab is checked. This can ensure the integrity of the vault. The vault can also be rebuilt, in order to increase performance.
+Please note, validating and rebuilding the vault can take several hours to complete. During this time the vault cannot be accessed.
+Validate Vault controls
+From the  the
+Vault Management
+tab stop the SolidWorks Workgroup PDM service.
+Stop Service
+Make a backup of the vault.
+Update the software
+Start the Installation Manager by launching Setup from the installation media media.
+After the Installation Manager Starts, select
+SOLIDWORKS
+Workgroup PDM
+from
+Server
+Products
+.
+Note: Starting with Workgroup 2012, a validation code must be generated in order to complete the installation
+. Please refer to our blog post on Installing SOLIDWORKS Workgroup PDM
+server:
+Installing SOLIDWORKS 2016 Workgroup PDM Server
+Restart the SOLIDWORKS Workgroup PDM Vault
+After the installation has finished, restart the
+SOLIDWORKS Workgroup PDM
+service, if it does not start on it’s own. When the service starts, the vault will be validated and rebuilt.
+Again this,
+can take several hours to complete. During this time the vault cannot be accessed.

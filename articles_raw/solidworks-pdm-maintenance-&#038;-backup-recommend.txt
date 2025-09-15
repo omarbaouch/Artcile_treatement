@@ -1,0 +1,38 @@
+For SOLIDWORKS PDM Maintenance to optimize performance and prevent data loss, it is important to perform scheduled back-up of your PDM components.
+Let’s first examine the components that should be backed up. These components are:
+The SQL Database,
+The Archive Folder and
+The Archive settings.
+With the first two components, failing to back these up correctly, may lead to
+permanent
+data loss.
+The first and second components, should be scheduled to occur during the same time span so there are no mismatches in data. For example, the SQL Database and the Archive Folder could be scheduled to occur over night, when no one is accessing the vault. This ensures that the information in the SQL database, matches the files in the Archive. If there are mismatches, those files may not be
+recoverable,
+if a fatal event were to occur, such as the loss of a server.
+Also, back-ups should be done to a server other then where the PDM components are installed, preferably one that is in a different location.
+The SQL Database
+The database is typically backed up through SQL Management Studio. SQL Management Studio ships with SQL Standard or higher, and is used by PDM Professional. PDM Standard uses SQL Xpress, which does not contain SQL Management Studio, but this can be
+installed separately.
+SQL Management Studio is installed on the database server. Once you launch this application, you will need to login with the Windows or SQL Server login.
+Connect to the server
+Back-us of the database can be scheduled through the Maintenance tab of Object Explorer
+Maintenance tab of Object Explorer
+To create a Back-up Plan use the Maintenance Plan Wizard,
+Maintenance Plan Wizard Tool
+And schedule a Back-up.
+Maintenance Plan Wizard
+If you use software to back-up your server, do not reply on it to back-up the SQL database, unless it has the purpose build functionality, to do this and you are confident in its ability to back-up databases.
+The Archive Server and Settings
+There are no utilities, that ship with PDM for backing up the Archive. A reliable back-up application, should be used to do this. Please note that, depending how PDM was set-up, the Archive and Database may have installed on separate servers. Also, if you a replicated environment, remember to back-up all the Archives.
+The third component that should be backed up, is the Vault Settings. these settings essentially correspond to the nodes, you see in the SOLIDWORKS PDM Administration.
+Back-up Vault Settings
+These settings are backed up from the Archive Server Configuration Tool, which is located on the Archive Server.
+SOLIDWORKS PDM Archive Server
+Backup settings, can be created for individual or groups of vaults.
+Backup settings
+SOLIDWORKS PDM Maintenance Plans
+As well as backing up your data to help prevent data loss, there are a couple of Maintenance Plans, that can be configured increase database performance. SOLIDWORKS recommends running
+Reorganize Index weekly and Rebuild the Index monthly.
+The actual frequency will depend on how much time it takes, for your SQL Index to be come fragmented.
+Checking the fragmentation regularly,
+will help you determine the scheduling

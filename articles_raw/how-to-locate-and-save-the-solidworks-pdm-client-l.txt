@@ -1,0 +1,26 @@
+When troubleshooting
+SOLIDWORKS PDM
+issues, a helpful resource you can utilize is the SOLIDWORKS PDM Client logs. These log files let you see
+SOLIDWORKS PDM
+events from the local client. It reports activities such as logins, vault connection attempts, and database access events.
+As a result, you can use the log file when troubleshooting
+SOLIDWORKS PDM
+problems. Your SOLIDWORKS VAR might ask for this log so that they can see what PDM is recording about your specific issue.
+Opening the PDM Client Logs
+The SOLIDWORKS PDM Client logs are easily accessible from inside the PDM Administration tool.
+To find the log file, use the steps below:
+Navigate to Start>All Programs>SolidWorks PDM>Administration.
+Expand the Local Settings.
+In the PDM Administration tool, double-click on Log File.
+Opening the Client Logs
+This will open the log and show all the events being recorded from the client software. At this point, you typically need to save this out for further investigation.
+Viewing the SOLIDWORKS PDM Client log
+Saving the PDM Client logs
+Depending on what version of SOLIDWORKS PDM you are using, there are different ways to save the file. Typically, your SOLIDWORKS VAR will want this saved as a COG file, as it is the easiest format for them to use/read. This guide will focus on saving these log files in the COG format.
+For 2022 and earlier versions:
+For SOLIDWORKS 2022 and older versions, click the icon shown below to copy the log file, then right-click on your desktop or another location in File Explorer, and paste the file. At this point, the COG file can be moved, attached to an email, or uploaded to a file-sharing platform.
+Copy button on the log file
+For 2023 and newer versions:
+With SOLIDWORKS 2023 and newer, the process has been streamlined. All that’s needed is to click the Save button and save the log file as a COG file. At this point, the COG file can be moved, attached to an email, or uploaded to a file-sharing platform.
+Save button on the log file
+Are you still having issues after reading the Client log files? Contact our Technical Support Team here.

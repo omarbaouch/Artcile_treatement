@@ -1,0 +1,13 @@
+The information
+below is available from the Web Server Guide, which can be accessed from the Help file of SolidWorks Enterprise PDM Administration. I have been asked often enough about this aspect of the Web Server set-up, that I believed it was worth breaking it into its own blog article.
+If the security settings are set too high in Internet Explorer, the installation may not start. A warning message that the Web client cannot be initialized will be displayed.
+Check security settings by Accessing the Windows Control Panel and selecting Internet Options.
+Select the Security tab and lower the default Level.
+Add the Web Share to trusted sites.
+Customize the security level to allow ActiveX components to be installed.
+If the system has a content blocker, such as a virus scanning utility or pop-up blocker, the Active X control might be prevented from installing.
+Allow pop-ups for URLs
+Disable the content blocker.
+The user lacks sufficient permissions to perform the initial ActiveX Web client installation.
+Increase the users’ computer account permissions to allow them to install Web client components.
+Have an administrator log in and install the Web client components.

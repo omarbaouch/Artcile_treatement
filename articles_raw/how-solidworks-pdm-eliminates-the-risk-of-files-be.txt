@@ -1,0 +1,18 @@
+Do you ever have trouble coordinating who can work on a SOLIDWORKS file at any given time? Has there been a time where you finally finished your work, saved it and the next time you open the file find out your work has been overwritten? Eliminate the risk of files being overwritten by using SOLIDWORKS PDM. Check out the video below to see what precautionary measures are taken by SOLIDWORKS PDM to ensure a zero risk working environment.
+Prevent overwritten files with automatic file locking
+SOLIDWORKS PDM files will be automatically locked when they are currently being edited. This eliminates the issues of another user overwriting the progress that you just made working on your file. SOLIDWORKS PDM will tell you who is currently working on the part and even gives you the option to instant message or call them within the software itself.
+When a file is currently open, SOLIDWORKS PDM restricts access to prevent the data from being overwritten
+Outdated files and different revisions
+In order to prevent you from using outdated SOLIDWORKS PDM files the system will highlight them in red notifying you to refresh the file. This can all be done without having to close your project file and reopen it, speeding up the process even further. By simply right-clicking and choosing “Get latest version” or “Get” you will be able to update your part immediately within the software.
+Another feature that SOLIDWORKS PDM provides is the ability to open different versions of the same file. When you check the file back in after editing it you can leave a comment explaining the difference that you just made. This condenses every version of the same file into one. You no longer have to worry about which version is the correct one for a specific application.
+Learn more about SOLIDWORKS PDM
+SOLIDWORKS PDM Standard
+is a new data management solution for smaller workgroup environments in a single location.
+Included in SOLIDWORKS Professional and Premium packages.
+SOLIDWORKS PDM Standard allows you to manage your SOLIDWORKS data more effectively on local and shared network drives.
+Read additional blog articles to
+learn how to get started with SOLIDWORKS PDM Standard
+, including installation, setup, and usage.
+SOLIDWORKS PDM Professional provides even more functionality, learn about the
+differences between the Standard and Professional PDM versions
+.

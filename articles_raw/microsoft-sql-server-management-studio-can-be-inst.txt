@@ -1,0 +1,10 @@
+Microsoft SQL Server Management Studio is the front-end to SQL Server, that allows you to query databases, manage your vaults and run Maintenance Plans. The Maintenance Plans are of great importance, as they can
+increase performance
+and
+back-up your database(s)
+.
+Microsoft SQL Server Management Studio
+SQL Management Studio (SSMS) ships with SQL Standard, which is what is in included with SOLIDWORKS PDM Professional, but not with SQL Express, which is included with PDM Standard.
+SSMS can be installed for SQL Express though. The installation files are located with the SOLIDWORKS Installation media, in a folder called sqlmngmnt. SSMS can also be downloaded from
+Microsoft
+.

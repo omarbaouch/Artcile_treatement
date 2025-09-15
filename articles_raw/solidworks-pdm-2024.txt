@@ -1,0 +1,14 @@
+Discover what’s new for
+SOLIDWORKS PDM 2024
+and
+SOLIDWORKS Manage 2024
+Learn helpful features like tracked check outs, assembly visualization, and record-based BOM management in this comprehensive breakdown of all the changes coming to SOLIDWORKS PDM and SOLIDWORKS Manage.
+SOLIDWORKS PDM
+Graphically view the workflow state, as well as other PDM data, of SOLIDWORKS assemblies using assembly visualization in SOLIDWORKS PDM.
+Improve data protection and tracking by ensuring that reference information is hidden for users who don’t have access to the referenced file, and by enabling users to check out and undo checkout in the file history. Experience shorter response times when performing common operations such as adding files, checking in, changing state, and using Copy Tree.
+Learn more about SOLIDWORKS PDM 2024
+Take a live
+SOLIDWORKS training course
+from Javelin or attend an
+upcoming webinar
+for the latest in SOLIDWORKS technology

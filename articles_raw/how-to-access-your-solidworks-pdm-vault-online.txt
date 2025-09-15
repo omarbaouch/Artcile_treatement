@@ -1,0 +1,48 @@
+The SOLIDWORKS PDM Web2 client allows users to connect to your
+SOLIDWORKS PDM Professional
+vault online from most devices with an internet browser. Web2 client is beneficial for external and internal users who are not connected to their office network or have an unsupported operating system.
+Access to Web2 is included with
+SOLIDWORKS PDM
+Professional using either a Web or a Viewer license. The Web license comes with each CAD Editor, Contributor, or PSL license. You can dynamically access SOLIDWORKS files with the main web browsers (Edge, Chrome etc.) without loading plug-ins.
+Take a look at the demonstration to learn more
+:
+Why you need the Web2 Client
+Today’s manufacturers face a host of challenges related to effectively managing product design and manufacturing data—not just within product development and manufacturing departments but across the greater manufacturing enterprise. How well manufacturing organizations manage product and production data—and leverage this data to support related functions—has a direct bearing on a manufacturer’s ability to grow, as well as maintain and extend its competitive edge.
+You’ve invested in SOLIDWORKS PDM Professional and realizing the advantages of centralized data, increased productivity with  automated tasks, and you’re benefitting from the visibility and productivity gained through workflows.
+One very important gain is the granular and dynamic file security you now have, knowing that the right person will have access to the right data at the right time. With this in mind, you may want to make it EASIER for users to access your SOLIDWORKS PDM online with the Web2 Client, and providing your business with the following benefits:
+Allow all departments access to project data online
+Connect shop floor, sales, service technicians, managers, and clients
+Collaborate at work, at home remotely, or in the field
+Access data with a web browser on most devices, no need for CAD software or powerful machines
+Using the Web2 Client
+The Web2 Client provides users with:
+Viewing capabilities for many file types such as PDF, Word, Excel, and PowerPoint
+Browser independence
+No client installation requirements
+Transition action support such as setting revision variables
+Other capabilities include:
+Quick searching and viewing of vault data.
+A mobile version for small hand held devices like smartphones.
+The ability to preview multiple file types.
+Thumbnail previews of SOLIDWORKS files when accessed via the mobile version.
+The ability to open SOLIDWORKS files with the eDrawings application for iPhone, iPad, and Android.
+Contains and Where Used information.
+State change capabilities.
+Editing capabilities.
+Who should access SOLIDWORKS PDM Online?
+The
+shop floor
+to start. Quite often, the shop floor gets the main office hand me down computers. So they may not have the system requirements to run a current operating system. Or at the other end of the spectrum, you may have more mobile solutions like tablets that don’t run a Windows operating system at all.
+Sales teams
+who are out of the office would benefit by having access to the latest data.
+Service teams
+that are on the road who may need access to current repair procedures. Or, what if they could communicate back any issues they’ve found, immediately with photos from their smartphone.
+Managers or clients
+may need to review or approve the design drawings. Wouldn’t it be more productive if they had access to the vaulted data and be able to keep the process moving efficiently no matter where they might be?
+Setting up SOLIDWORKS PDM Vault Online
+SOLIDWORKS PDM Web2 is included with
+SOLIDWORKS PDM Professional
+and simply needs to be installed and configured using standard Windows IIS found on your server. You can keep access to the web interface internal to your office space, or you can securely open your vault to users outside your office.
+Contact us to help you get setup
+As you can see from the demonstration, SOLIDWORKS PDM Web2 gives you an easy and convenient way to access your data. Whether you’re working remotely or out in the field, you have access to your vaulted data. If you want to improve the communication with your clients, Web2 will definitely improve your processes and continue to add value to your SOLIDWORKS PDM Professional investment.
+Contact us to get setup »

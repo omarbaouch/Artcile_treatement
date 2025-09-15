@@ -1,0 +1,18 @@
+I recently came across this video created by DS SOLIDWORKS Senior Technical Manager Steve Fick.  Steve did a great job touching on two very important advantages of the
+SOLIDWORKS PDM Professional version over the standard version
+to 1) ensure that a distributed and mobile team can access data quickly and reliably, and 2) having the ability to make good decisions while on the road.
+SOLIDWORKS PDM Professional on a mobile device
+PDM Web Portal
+The key focus is on the
+web portal available with SOLIDWORKS PDM Professional
+and how easy it is to navigate with a mobile phone as it automatically detects and switches to an optimized format.  It also
+integrates seamlessly with the eDrawings IOS or Android app
+which allows managers to review the actual CAD data while on the run.
+Take a look at the SOLIDWORKS PDM Professional mobile device demonstration below:
+The nice thing about this web portal is that it doesn’t require any additional PDM licensing.  It consumes the same PDM licenses that designers and managers use while at their desks.  We have set up a good number of clients with this web portal already.
+Get more information
+If you have any questions about the web portal, or SOLIDWORKS PDM Professional mobile device functionality, or if you are
+interested in getting our help setting up the web portal
+then please
+contact us
+.

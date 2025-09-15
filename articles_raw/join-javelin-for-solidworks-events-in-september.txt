@@ -1,0 +1,63 @@
+Javelin is hosting SOLIDWORKS Simulation and SOLIDWORKS PDM Events in September.
+Attend a complimentary SOLIDWORKS seminar in September to discover how you can use
+SOLIDWORKS Simulation
+to
+reduce costs and speed time to market
+by reducing the number of physical prototypes before going into production, and learn how
+SOLIDWORKS PDM
+will help you get your design data under control,
+securely store and index your data, apply version control, and share and collaborate on designs online
+with people outside your organization.
+Javelin is hosting four events in
+Edmonton, Alberta
+and
+Winnipeg, Manitoba
+starting on September 12th. Register today to secure your seat!
+SOLIDWORKS Simulation Events:
+Product Design Validation Techniques with SOLIDWORKS Simulation
+Join us for a live presentation
+that will explore ways to integrate simulated design validation techniques in parallel with the product design cycle to create better parts. This session will also discuss ways to combine results from the
+SOLIDWORKS Simulation
+product line to solve multi-physics systems.
+SOLIDWORKS Simulation 2017
+Why Attend this Event?
+Learn design validation techniques and best practices that you can easily incorporate into the product design cycle.
+Discover how to analyze the results after testing your design, and determine next steps.
+Hear from a guest speaker who uses SOLIDWORKS to design and test industry-changing products.
+Engage with SOLIDWORKS users and experts in your community.
+Get the facts directly from the experts at SOLIDWORKS. Bring your questions!
+LOCATION
+DATE
+TIME
+Holiday Inn Express Downtown – Edmonton, AB
+Tuesday, September 12, 2017
+8:30 AM – 12:00 PM (MDT)
+Register Now
+Alt Hotel Winnipeg – Winnipeg, MB
+Thursday, September 14, 2017
+8:30 AM – 12:00 PM (CDT)
+Register Now
+SOLIDWORKS PDM Events: Keep Your Projects Connected Everywhere with SOLIDWORKS PDM
+SOLIDWORKS product data management (PDM)
+solutions help you get your design data under control, securely store and index your data, apply version control, and share and collaborate on designs online with people outside your organization.
+Why keep using time consuming, out-of-date development tools? Join us for this complimentary event to learn about a simpler, faster, and easier way to use SOLIDWORKS.
+Eliminate manual, time consuming version and revision tasks from your work day
+Be sure you’re working on the correct and latest files at all times
+Know immediately who could be impacted by a design change
+Secure all types of data alongside your CAD data with ease
+LOCATION
+DATE
+TIME
+Holiday Inn Express Downtown – Edmonton, AB
+Tuesday, September 12, 2017
+11:30 AM – 2:00 PM (MDT)
+Register Now
+Alt Hotel Winnipeg – Winnipeg, MB
+Thursday, September 14, 2017
+11:30 AM – 2:00 PM (CDT)
+Register Now
+Featured Speakers
+Mike Spens – Senior Digital Technical Sales Manager, DS SOLIDWORKS
+Mike Spens is a SOLIDWORKS Technical Manager who has been focused on helping customers succeed with the SOLIDWORKS PDM tools for 15 years. His time spent as a print room clerk while working on an engineering degree motivated him to find a better way to manage and share design documentation. He has since guided hundreds of businesses along the path to simpler change control and accessible engineering data while continuing as a passionate champion of SOLIDWORKS design and simulation products.
+Sasi Sithambaram – Simulation Technical Sales Manager, DS SOLIDWORKS
+Sasi Sithambaram is the newest member of the Simulation team at SOLIDWORKS. Prior to that, Sasi worked at a SOLIDWORKS re-seller for several years as an Elite Application Engineer, specializing in Design Validation. Sasi holds a M.S. and B.S. in Mechanical Engineering from the University at Buffalo.

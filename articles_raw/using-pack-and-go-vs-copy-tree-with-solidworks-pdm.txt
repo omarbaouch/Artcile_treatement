@@ -1,0 +1,38 @@
+One question that we often receive from users who have begun using
+SOLIDWORKS PDM Standard or SOLIDWORKS PDM Professional
+is whether to use Pack and Go or Copy Tree when copying files?
+Our answer is quite simple,
+if your files are located in a SOLIDWORKS PDM Vault…DON’T USE PACK AND GO!
+I’ll go over both of the processes below and explain why Copy Tree is a better solution.
+Using Pack and Go
+Pack and Go doesn’t know about PDM.  It only talks to the SOLIDWORKS files themselves, and gathers its file list directly from them.  This works fine outside of a vault, but in the vault we aren’t just working with files, we work with versions of files and there is no way for Pack and Go to know about that. Pack and Go doesn’t have the ability to check information within the PDM database.
+Here is an example:
+SOLIDWORKS PDM Vaulted Assembly
+I have the latest version the assembly file
+Flashlight
+.
+sldasm
+cached to my local disk from a PDM vault, which is currently version 9 (in this case going to the preview tab cached the local file for me), and it is referencing Version 8 of the subassembly
+Base
+.
+sldasm
+(which has a very visible bright red colour).
+Version 9 of the assembly
+However this red appearance was added since the last time I checked out the latest version of the
+Base
+sub assembly, so the locally cached version is 6/9, which is a plain white appearance.
+Version 6 of the assembly
+When we perform a Pack and Go of the assembly
+Flashlight
+, the utility simply sees that the files are present in the vault and is ready to go ahead and copy them, there’s no way to check if they are the correct versions  (that said, if there was no copy of the files in the local cache, the Pack and Go would trigger a Get Latest process, the same way that clicking the Preview tab does).
+Pack and Go Screen
+If we examine the results we see that even though we performed a Pack and Go of Version 9 of the
+Flashlight
+assembly,
+we didn’t get the correct versions of it’s referenced files, we only copied what was local at the time of the Pack and Go
+.  This is potentially very dangerous, especially if the differences between versions is a bit more subtle than our example here.
+Copied Assembly
+Using Copy Tree
+By contrast, the Copy Tree utility is a fully integrated PDM tool.  It doesn’t get the file information from the SOLIDWORKS files at all, instead it queries the PDM database for file reference, and version information.  This ensures that you not only can make sure you have the latest version of the files, you actually could choose a different version.
+Copy Tree Screen
+So if making copies of file sets that are stored inside either a SOLIDWORKS PDM Standard or SOLIDWORKS  PDM Professional vault, always use the Copy Tree utility.

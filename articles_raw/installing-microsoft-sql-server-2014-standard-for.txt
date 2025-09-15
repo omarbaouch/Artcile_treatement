@@ -1,0 +1,41 @@
+In this article we will look at installing Microsoft SQL Server 2014 Standard, which ships with the SOLIDWORKS installation media disks (
+not the downloadable installation file set
+).
+SQL Server 2014 Standard must be installed before SOLIDWORKS PDM Professional can be installed. SQL Server 2014 should be installed on a
+compatible server.
+The recommendations made in the preceding link, should be considered as minimal recommendations. Also, before the installation of SQL or PDM, some important items should be considered.
+Will the Database (SQL) and the vaulted files (Archive) be on one or two separate servers. Better performance can be obtained by having separate severs, for each component.
+For large implementations, having separate servers for SQL components should be considered.
+Regardless of how the SQL and PDM components are divided among servers, those components should be the only applications running on these servers.
+Having capable servers may not be sufficient, if the network bandwidth is limited.
+. Ensure that your network can handle the extra traffic that PDM will add.
+VPN (virtual private networks) can be slow. If you have remote locations, consider SOLIDWORKS PDM Replication.
+Develop good back-up procedures.
+SQL Management Studio installs with Microsoft SQL Server 2014 Standard and can be used to
+schedule back-ups
+.
+Some third part software can back-up SQL databases, but it is wise to recommend and test this.
+Consider where the back-ups are being stored. If they’re stored onsite, they may be at risk to the same catastrophes, as the PDM servers. If the back-ups are on the same network, they may be compromised along with the PDM servers. An example of this would be a ransomware attack, that locks the PDM servers and the back-up systems.
+Don’t forget to check the back-ups regularly. Never rely on an automated process, as things can go wrong. A simple test would be be to check the time stamp on the back-up. Restoring the back-up to a test environment, would be a more thorough test. Remember that both the Database and archive from the same time period, needs to be restored
+Organize and develop a strong team that will develop, maintain and administrate SQL, PDM, the PDM Servers and your Network. Also, ensure you have redundancy in your team, so that if one person is not available to complete a task,another can.
+The above is a shot-list of what to consider, when implementing PDM. To be sure your implementation is done correctly, contact your SOLIDWORKS value added re-seller (VAR). Your VAR should have the expertise, in SOLIDWORKS PDM implementations.
+With the above considerations satisfied,let’s begin the installation. From the SQL 2014 installation folder right click on setup.exe and select Run As Administrator.
+Run SQL Setup as Administrator
+From the SQL Server Installation Center, select the Installation tab and select New SQL Server stand-alone…
+New Server Installation
+On the next screen you will asked to enter the Product Key. If the installation was launched from the SQL server media, that ships with the SOLIDWORKS, the key will be filled in for you. If it is a separately purchased license of SQL Server, you will enter your own key.
+Enter Product Key
+After accepting the End User License Agreement, select SQL Feature Installation, in the Setup Role Screen.
+Setup Role
+In Feature Selection, check the options shown below and identify the installation location.
+Feature Selection
+For Instance Configuration, choose Default Instance unless another instance of SQL is already on the server (not recommended)
+Instance Configuration
+Set the Server Configuration as shown below. The Collation tab is use to change the Collation designator, to one that matches your locale.
+Server Configuration
+For Database Engine Configuration, select Mixed Mode and enter a password. This will be the ‘sa’ password that will be used when working in SQL Management Studio, as well as when working with PDM. After defining and confirming the password, identify the SQL administrator(s)
+Database Engine Configuration
+Lastly, review the installation perimeters and if correct, click on install.
+Ready to Install
+Once the installation has complete you will be presented with a screen, that will show the result of the installation. Any failures may result in SQL not performing correctly and should be addressed.
+Installation Results

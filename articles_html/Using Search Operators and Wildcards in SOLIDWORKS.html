@@ -1,0 +1,35 @@
+<p>New in <a href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-2020/">SOLIDWORKS PDM 2020</a>, when performing a complete search, you can now use Search Operators and Wildcards such as &#8220;AND&#8221;, &#8220;OR&#8221;, or &#8220;NOT&#8221; separated by a space.</p>
+<p>From previous releases, we know that you can refine your search using various parameters including file name, description, etc. But, what if you don&#8217;t know <i>EXACTLY </i>what you&#8217;re looking for? That&#8217;s why we have wildcards.</p>
+<h3>List of Search Operators &amp; Wildcards:</h3>
+<pre>*     -&gt; Default search Method 
+" "   -&gt; Exact Entry
+=     -&gt; Exact Entry
+&lt;     -&gt; Less than a particular number
+&gt;     -&gt; Greater than a particular  number
+&lt;=    -&gt; Less than or equal to a particular number
+&gt;=    -&gt; Greater than or equal to a particular number
+SPACE -&gt; Equivalent to an AND
+!=    -&gt; Do not include Entry
+<span style="color: #ff6600;">AND   -&gt; String containing "Value1 AND Value2"
+&amp;     -&gt; String containing "Value1 &amp; Value2"</span>
+<span style="color: #ff6600;">OR    -&gt; Equivalent to "Value1 OR Value2" 
+|     -&gt; Equivalent to OR "Value1 | Value2" </span>
+<span style="color: #ff6600;">NOT   -&gt; Do not include Entry "NOT Document"</span></pre>
+<p>Given the list of Wildcards above, keep in mind that there are a few rules that one needs to keep in mind:</p>
+<ol>
+<li>Search strings are case sensitive.</li>
+<li>Operators such as &#8220;AND OR and NOT&#8221; are case sensitive and need to be capital separated by a space.</li>
+<li>To search for special characters in a name, use &#8220;\&#8221; as a workaround
+<ul>
+<li>Example: File Name &#8211; &#8216;Tool &amp; Die&#8217;</li>
+<li>Search Field: &#8220;Tool \&amp;&#8221;</li>
+</ul>
+</li>
+</ol>
+<p><div id="attachment_43941" style="width: 641px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/AND-e1571756672358.jpg"><img decoding="async" aria-describedby="caption-attachment-43941" class="wp-image-43941 lazyload" style="font-family: Georgia, &#039;Times New Roman&#039;, &#039;Bitstream Charter&#039;, Times, serif; font-size: 16px;" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/AND-e1571756672358.jpg" alt="" width="631" height="638" title=""><p id="caption-attachment-43941" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43941 lazyload" style="font-family: Georgia, &#039;Times New Roman&#039;, &#039;Bitstream Charter&#039;, Times, serif; font-size: 16px;" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/AND-e1571756672358.jpg" alt="" width="631" height="638" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/AND-e1571756672358.jpg 668w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/AND-e1571756672358-594x600.jpg 594w" sizes="(max-width: 631px) 100vw, 631px" /></noscript></a> AND Operator Example</p></div></p>
+<p><div id="attachment_43942" style="width: 641px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-43942" class="wp-image-43942 lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/NOT-e1571756725897.jpg" alt="" width="631" height="657" title=""><p id="caption-attachment-43942" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43942 lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/NOT-e1571756725897.jpg" alt="" width="631" height="657" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/NOT-e1571756725897.jpg 648w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/NOT-e1571756725897-576x600.jpg 576w" sizes="(max-width: 631px) 100vw, 631px" /></noscript> NOT Operator Example</p></div></p>
+<p><div id="attachment_43944" style="width: 641px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/OR-1-e1571756768535.jpg"><img decoding="async" aria-describedby="caption-attachment-43944" class="wp-image-43944 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/OR-1-e1571756768535.jpg" alt="" width="631" height="675" title=""><p id="caption-attachment-43944" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43944 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/OR-1-e1571756768535.jpg" alt="" width="631" height="675" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/OR-1-e1571756768535.jpg 631w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/OR-1-e1571756768535-561x600.jpg 561w" sizes="(max-width: 631px) 100vw, 631px" /></noscript></a> OR Operator Example</p></div></p>
+<blockquote><p><em>When upgrading to SOLIDWORKS PDM 2020, the previously saved searches are upgraded to follow the new search rules while maintaining the previous behavior. </em></p></blockquote>
+<p>Given the list of operators above and the search strings, Users can now integrate the above into both the <a href="https://www.javelin-tech.com/blog/2019/10/solidworks-pdm-quick-search-variable-lists/">Quick Search </a>command as well as Complete Search. These operators can be used in any input search criteria which has an edit-box type field, such as Description, Name, Part No, etc&#8230;</p>
+<h3>SOLIDWORKS PDM Training</h3>
+<p>Javelin offers various <a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">SOLIDWORKS PDM training courses</a> which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.</p>

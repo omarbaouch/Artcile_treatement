@@ -1,0 +1,2 @@
+Parallel Approval Mapping now captures transition data for each approver. Prior to SOLIDWORKS Enterprise EPDM 2015, only the data from the last user was copied. In the Transition Action dialog box, you can specify which approver(s) is used to set the variable value.
+Approver Transition Action

@@ -1,0 +1,5 @@
+In SOLIDWORKS PDM there are options that can automatically handle how files are cached. These options are available for both the User and Group Properties.
+Here is how you can automatically get the latest cache of SOLIDWORKS Toolbox files managed in a SOLIDWORKS PDM vault during log in:
+Go to User/Group Properties, click on “Cache Options” > Select your SOLIDWORKS Toolbox folder > check the “Refresh cache during log in”
+SOLIDWORKS PDM Cache Options
+With ‘Refresh cache during log in’ enabled the SOLIDWORKS PDM system will perform an automated ‘Get’ on all files within folders assigned this setting. This will load the latest version of all files within predetermined folders and also perform a ‘get’ on any files within this folder that have previously cached versions already cached.

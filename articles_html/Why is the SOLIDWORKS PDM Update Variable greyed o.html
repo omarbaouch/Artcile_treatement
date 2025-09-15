@@ -1,0 +1,35 @@
+<p>A question I run into often while on tech support is:</p>
+<blockquote><p><em>&#8220;Why is the SOLIDWORKS PDM <strong>Update Variable</strong> checkbox greyed out when using the <a href="https://www.javelin-tech.com/blog/2016/05/solidworks-pdm-file-revision/"><strong>Set Revision tool</strong></a>?&#8221;</em></p></blockquote>
+<div id="attachment_35267" style="width: 1058px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision.png"><img decoding="async" aria-describedby="caption-attachment-35267" class="wp-image-35267 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision.png" alt="SOLIDWORKS PDM Update Variable disabled" width="1048" height="458" title=""><p id="caption-attachment-35267" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-35267 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision.png" alt="SOLIDWORKS PDM Update Variable disabled" width="1048" height="458" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision.png 1048w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-600x262.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-768x336.png 768w" sizes="(max-width: 1048px) 100vw, 1048px" /></noscript></a> Set Revision &#8211; Update Variable Greyed Out</p></div>
+<p>The minimum permissions required to use <em><strong>Set Revision</strong></em> are;</p>
+<ul>
+<li><strong>Folder Permission</strong>
+<ul>
+<li>Set Revision</li>
+</ul>
+</li>
+<li><strong>State Permission</strong>
+<ul>
+<li>Set Revision</li>
+</ul>
+</li>
+</ul>
+<p>But to also update the variable will require;</p>
+<ul>
+<li><strong>Folder Permission</strong>
+<ul>
+<li>Check out file</li>
+</ul>
+</li>
+<li><strong>State Permission</strong>
+<ul>
+<li>Check out file</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_35270" style="width: 1230px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions.png"><img decoding="async" aria-describedby="caption-attachment-35270" class="wp-image-35270 size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions-1220x624.png" alt="Set Revision - Update Variable - Required Permissions" width="1220" height="624" title=""><p id="caption-attachment-35270" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-35270 size-large lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions-1220x624.png" alt="Set Revision - Update Variable - Required Permissions" width="1220" height="624" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions-1220x624.png 1220w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions-600x307.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions-768x393.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions.png 1523w" sizes="(max-width: 1220px) 100vw, 1220px" /></noscript></a> Set Revision &#8211; Update Variable &#8211; Required Permissions</p></div>
+<p>With the <em>Check out file</em> permission added, you&#8217;ll be able to also update the variable when using <strong>Set Revision</strong>;</p>
+<div id="attachment_35271" style="width: 1058px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete.png"><img decoding="async" aria-describedby="caption-attachment-35271" class="wp-image-35271 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete.png" alt="Set Revision - Update Variable - Complete" width="1048" height="458" title=""><p id="caption-attachment-35271" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-35271 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete.png" alt="Set Revision - Update Variable - Complete" width="1048" height="458" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete.png 1048w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete-600x262.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete-768x336.png 768w" sizes="(max-width: 1048px) 100vw, 1048px" /></noscript></a> Set Revision</p></div>
+<p>If you&#8217;re of the mindset that the <strong>Check out file</strong> permissions shouldn&#8217;t be necessary to update the variable, you&#8217;re not alone.  There&#8217;s an existing enhancement request to have this requirement removed;</p>
+<blockquote><p><strong>SPR# 898366</strong>: ‘Set Revision’ feature should not require ‘Check Out File’ permission to increment revision without update to variable (data card).</p></blockquote>
+<p>If this sounds appealing, you can vote on this via the <a href="https://www.javelin-tech.com/blog/2010/11/enhancement-requests/">SOLIDWORKS Customer Portal</a>.</p>

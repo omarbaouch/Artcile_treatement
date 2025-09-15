@@ -1,0 +1,152 @@
+SOLIDWORKS PDM
+,
+SOLIDWORKS Manage
+and
+SOLIDWORKS Electrical
+software all rely on databases hosted by
+Microsoft SQL Server
+software to operate.
+The
+Microsoft SQL Server
+software is licensed separately from your
+SOLIDWORKS
+software, so
+it is your responsibility to ensure that you have the correct licensing for both the
+Release
+and
+Edition
+of
+Microsoft SQL Server
+which you have installed.
+NOTE
+: The information in this guide is intended to provide an overview the MS-SQL licensing requirements as they relate to SOLIDWORKS products.  Your Microsoft Software Reseller will be able to help you with more specifics concerning these licensing options.
+Do I need to purchase
+Microsoft SQL Server
+licensing for SOLIDWORKS PDM Standard?
+No.
+SOLIDWORKS PDM Standard
+is only compatible with
+Microsoft SQL Server Express
+,
+the PDM Standard database
+cannot
+be hosted on any other edition of
+Microsoft SQL Server
+.
+Microsoft SQL Server Express
+is free for commercial use so no additional licensing needs to be purchased.
+Express
+Edition is an entry level database server which is limited to being able to use only 4 processor cores and 1 GB of memory per instance.  The database file itself is limited to a maximum size of 10 GB.
+What Edition of Microsoft SQL Server should I use to host my
+SOLIDWORKS PDM Professional
+databases?
+SOLIDWORKS PDM Professional
+is compatible with
+Microsoft SQL Server Express
+,
+Microsoft SQL Server Standard
+, and
+Microsoft SQL Server Enterprise
+Editions.
+For most situations,
+Microsoft SQL Server Standard
+should be used for hosting the vault databases.
+Microsoft SQL Server Standard
+Edition is able to use up to 24 processor cores and up to 128GB of memory per instance.  These limits are more than sufficient for most
+SOLIDWORKS PDM Professional
+vaults.
+For some exceptionally large vaults or for replicated PDM environments, there
+may
+be benefit in the additional functionality available with
+Microsoft SQL Server Enterprise,
+such as database replication and higher resource utilization limits. However typically there are other less expensive steps that can be taken to optimize performance of the vault.  If you feel your performance is being limited by using
+Microsoft SQL Server Standard
+Edition to host the databases, speak with your SOLIDWORKS PDM Value Added Reseller first to examine if the
+Enterprise
+Edition would provide substantial gains for your specific vault.
+Microsoft SQL Server Express
+can be used for sandbox or training vaults, however it should
+never
+be used to host a SOLIDWORKS PDM Professional or SOLIDWORKS Manage production vault due to the resource limits of this edition mentioned earlier.
+How does
+Microsoft SQL Server Standard
+Edition licensing work?
+There are two licensing models for Microsoft SQL Server Standard,
+Server + CAL
+and
+Core-Based
+licensing. More information about these licensing models can be found in the
+SQL Server 2019 Licensing Datasheet
+and the
+SQL Server 2019 Licensing Guide
+.
+The licensing model that is best for you will depend on several factors, including how many users will be accessing your SOLIDWORKS PDM Vault, and what Microsoft SQL licensing you may already own.  It is best to consult with your Microsoft Software Reseller to determine which one you should choose for your specific situation.
+If you own no other Microsoft SQL licensing at this time, or if you must keep the licensing separate, typically the Core-Based licensing model becomes the more economical option once there are 25-30 individual users who must access the vault.
+Did my SOLIDWORKS PDM Professional software purchase include Microsoft SQL Standard Licensing?
+Possibly, it depends on when you purchased your
+SOLIDWORKS PDM Professional
+software.
+If you purchased
+PDM Professional CAD Editor, Contributor or Viewer
+licenses
+prior to October 8, 2019
+, then your purchase would have included 1 run-time restricted
+Microsoft SQL Server Standard 2014
+Server License
+as part of the initial order, as well as one run-time restricted
+Microsoft SQL Server Standard 2014
+Client Access License
+for each user license purchased.
+After October 2019
+, these licenses were no longer bundled automatically with the SOLIDWORKS PDM software, though they could be purchased separately through your SOLIDWORKS Value Added Reseller by request up until October 1, 2020.  Since then these run-time restricted licenses have not been available for purchase.
+If you purchased
+SOLIDWORKS PDM Professional Universal License
+packs (formerly called PSL licenses)
+before April 1, 2020
+, then
+Microsoft SQL Server Standard
+2014
+Core Licenses
+(4 Cores) were included with the purchase.
+If you have purchased
+SOLIDWORKS PDM Professional
+after these dates, then you will need to purchase the required MS-SQL licensing separately through your Microsoft Software Reseller.
+What does it mean that the SQL licenses previously bundled with SOLIDWORKS PDM Professional were run-time restricted?
+The
+Microsoft SQL Server Standard
+Server + CAL licenses that were previously bundled with SOLIDWORKS PDM Professional were not full, unrestricted licenses, meaning that they can only be used for SOLIDWORKS software (i.e.:
+SOLIDWORKS PDM Professional
+,
+SOLIDWORKS Manage
+or
+SOLIDWORKS Electrical
+).  No other applications can be hosted on the Server license and these run-time restricted CALs cannot be used to authorize the client to connect to a SQL server hosting another application.
+The
+Microsoft SQL Server Standard
+Core licenses however did not have this restriction. (Though for performance reasons we strongly recommend against hosting other databases on the same SQL server that the SOLIDWORKS PDM databases are hosted)
+Are there any other limitations with the Microsoft SQL Server licenses that came with my SOLIDWORKS PDM Professional software?
+Yes, these limited licenses did not include Microsoft Software Assurance so that means that they cannot be upgraded to newer releases of Microsoft SQL.  Microsoft Software Assurance cannot be purchased separately for these licenses.  Additionally, these licenses cannot be used for public cloud servers.
+How long will I be able to keep using the Microsoft SQL 2014 licenses that came with my SOLIDWORKS PDM Professional software?
+The
+Microsoft SQL Server Standard 2014
+licenses that were bundled with SOLIDWORKS PDM are perpetual licenses so you can continue to use them for as long as you wish.
+However,
+SOLIDWORKS PDM 2021 SP5 will be the last release of PDM that will be compatible with Microsoft SQL Server 2014
+.  SOLIDWORKS PDM 2022, and all future releases, will be blocked from running on Microsoft SQL Server 2014.  New licenses for MS-SQL will need to be used and the server software upgraded to a release compatible with SOLIDWORKS PDM 2022 (Microsoft SQL Server 2016 or newer).
+If I am using the Client Access Licenses that came bundled with my SOLIDWORKS PDM Professional CAD Editor/Contributor/Viewer licenses, do I need to purchase any additional SQL licensing now?
+That depends on how many individual people are accessing the vault.
+It is very important to understand that Microsoft SQL Client Access Licenses are not “floating” or “concurrent” licenses, the way that SOLIDWORKS PDM user licenses are. PDM user licenses are intended to be shared between users, so once one user is done with the license they can log out the vault, then that license can be returned to the pool and a different user can then take that license.
+Microsoft SQL CALs are different, each individual user that accesses the vault would need their own SQL
+User CAL
+(the exception would be if multiple users are sharing a single device, and these people only ever access the vault from that device, then one
+Device CAL
+could be used instead).
+When SQL CALs were previously bundled with PDM Professional User licenses, only one CAL was included per PDM license.  If those SOLIDWORKS PDM licenses are being shared by multiple people, then additional CALs are required.
+However, before purchasing any additional Microsoft SQL Client Access Licenses you should first determine if you already own any that are being used for other software, such as an ERP program.  If so, determine whether the CALs are unrestricted and can be used any software or if they are run-time restricted to only be used for that other program.  If they are unrestricted, and if some of the PDM users are already covered by those CALs, then you may not need to purchase additional licensing (once a person is covered by a Client Access License, they can use that license to connect to any SQL Server).
+If additional CALs are required, your Microsoft Software Reseller will be able to supply them for you.  Microsoft SQL Client Access Licenses are backwards compatible, so a 2019 SQL CAL can be used to access a 2014 SQL Server.
+If I am using the Core-Based Licensing that came with my SOLIDWORKS PDM Professional Universal (PSL) licenses, do I need to purchase any additional SQL licensing now?
+That depends on how many cores are currently accessible by your Microsoft SQL Server software.  Each SOLIDWORKS PDM Professional Universal (formerly PSL) license included SLQ Core-Based licensing for 4 processor cores and additional core licenses could be purchased through your SOLIDWORKS Reseller as needed up until April 2020.  If you require additional SQL Core Licenses, these can be purchased through your Microsoft Software Reseller.
+Can I use a cloud hosted Microsoft SQL Server for SOLIDWORKS PDM?
+Yes, as long as your Microsoft SQL licensing includes Microsoft Software Assurance it can be used on a public cloud server.  Additionally, some Amazon AWS and Microsoft Azure cloud offerings bundle Microsoft SQL licensing into the cost of the instance, effectively reducing the upfront cost of the licensing.
+NOTE:
+though that the Microsoft SQL Server Standard licenses that came bundled with SOLIDWORKS PDM Professional cannot be used on a public cloud server.

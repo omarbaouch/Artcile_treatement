@@ -1,0 +1,44 @@
+<p>By default within a replicated SOLIDWORKS PDM Professional environment, 10 files are replicated per transfer to the target server(s) during scheduled replication.  If you&#8217;re experiencing bottlenecks or low bandwidth; it&#8217;s a good idea to reduce this number, or, if you have available bandwidth; the number of files can be increased to speed up replication.</p>
+<p>This value can be adjusted at any time and is a useful tool for troubleshooting communication problems within a replicated environment.</p>
+<h2>How to adjust the number of files that are received per transfer to the target server</h2>
+<blockquote><p><strong>NOTE</strong>: Steps within this article involve editing the Windows Registry.  This process can severely damage the operation of installed programs and should only be done by someone that is familiar with working in the Windows Registry.</p></blockquote>
+<p>On the target server;</p>
+<ul>
+<li>Open the registry editor and browse to the following key;
+<ul>
+<li><em><strong>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer</strong></em></li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_50621" style="width: 815px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key.png"><img decoding="async" aria-describedby="caption-attachment-50621" class="wp-image-50621 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key.png" alt="Adjusting replication performance - Navigate to Key" width="805" height="533" title=""><p id="caption-attachment-50621" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50621 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key.png" alt="Adjusting replication performance - Navigate to Key" width="805" height="533" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key.png 805w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key-600x397.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key-768x509.png 768w" sizes="(max-width: 805px) 100vw, 805px" /></noscript></a> Navigate to Key</p></div></p>
+<ul>
+<li>Create a new DWORD value named <em><strong>ReplicationThreads</strong></em>
+<ul>
+<li>RMB &gt; New &gt; DWORD (32-bit) Value</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_50622" style="width: 813px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD.png"><img decoding="async" aria-describedby="caption-attachment-50622" class="wp-image-50622 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD.png" alt="Adjusting replication performance - New DWORD" width="803" height="532" title=""><p id="caption-attachment-50622" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50622 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD.png" alt="Adjusting replication performance - New DWORD" width="803" height="532" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD.png 803w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD-600x398.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD-768x509.png 768w" sizes="(max-width: 803px) 100vw, 803px" /></noscript></a> New DWORD</p></div></p>
+<ul>
+<li>Select the new key <em>ReplicationThreads</em>
+<ul>
+<li>RMB &gt; <strong>Modify</strong></li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_50623" style="width: 518px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-ReplicationThreads-Modify.png"><img decoding="async" aria-describedby="caption-attachment-50623" class="wp-image-50623 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-ReplicationThreads-Modify.png" alt="Adjusting replication performance - Replication Threads Modify" width="508" height="129" title=""><p id="caption-attachment-50623" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50623 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-ReplicationThreads-Modify.png" alt="Adjusting replication performance - Replication Threads Modify" width="508" height="129" title=""></noscript></a> Replication Threads Modify</p></div></p>
+<ul>
+<li>Edit the key as follows;
+<ul>
+<li>Base = Decimal</li>
+<li>Value Data = Define the number of files to be received by the target server</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_50625" style="width: 812px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value.png"><img decoding="async" aria-describedby="caption-attachment-50625" class="wp-image-50625 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value.png" alt="Adjusting replication performance - Set The Value" width="802" height="531" title=""><p id="caption-attachment-50625" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50625 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value.png" alt="Adjusting replication performance - Set The Value" width="802" height="531" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value.png 802w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value-600x397.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value-768x508.png 768w" sizes="(max-width: 802px) 100vw, 802px" /></noscript></a> Set The Value</p></div></p>
+<blockquote><p>The number of files set must be between 1 and 64</p></blockquote>
+<ul>
+<li>Hit OK and close the registry editor.</li>
+</ul>
+<p>To incorporate the changes, a restart to the archive server service is required;</p>
+<p><div id="attachment_50626" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services.png"><img decoding="async" aria-describedby="caption-attachment-50626" class="wp-image-50626 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services.png" alt="Restart the archive server services" width="806" height="593" title=""><p id="caption-attachment-50626" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50626 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services.png" alt="Restart the archive server services" width="806" height="593" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services-600x441.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services-768x565.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Restart the archive server services</p></div></p>

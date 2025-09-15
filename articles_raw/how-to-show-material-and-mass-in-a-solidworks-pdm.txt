@@ -1,0 +1,21 @@
+Information about a file can be added and accessed through metadata. In SOLIDWORKS this metadata is referred to as Properties. In SOLIDWORKS PDM, this metadata is contained within Variables. By the use of PDM Attributes, we can map a Variable value to a File Property.
+This attribute acts as a conduit, allowing information entered in a PDM Data Card, to populate a SOLIDWORKS File Properties. Information can also be entered into a SOLIDWORKS File Properties and through the Attribute, pushed into PDM.
+To prevent accidentally overwriting of this metadata, the Data Card should be the default location where information is entered manually. There are some exceptions though. In the case of SOLIDWORKS, some Properties (metadata) is generated internally. Examples of this would be Mass and Material.
+Applying a Material to SOLIDWORKS Component
+Material can be applied to a SOLIDWORKS component, from the SOLIDWORKS Feature Manager. Based on the material selected, SOLIDWORKS evaluates many mechanical properties of that component, such as Mass
+Applying Materiel to a SOLIDWORKS Component
+Linking to File Properties
+These evaluated Properties can then be associated with the File Properties, for that component. This is done clicking on the pull-down, of the Value/Text Expression tab.
+Adding Properties in SOLIDWORKS
+For those that are not familiar with File Properties, the above menu is accessed by selecting File > Properties, from within SOLIDWORKS.
+Of course, we don’t want to have to repeat this process for every single component we create, so we can instead create a SOLIDWORKS Template, where these File Properties have been added. We do not need to specify the material for the component in this Template. We only need to add the File Properties to the template.
+Adding to a SOLIDWORKS Template
+SOLIDWORKS Templates are created from the Save As dialog, by choosing the appropriate file type.
+Saving a SOLIDWORKS Part Template
+Developing a Data Card
+When developing a Data Card in SOLIDWORKS PDM Administration, a Control will always be associated with a PDM Variable.
+SOLIDWORKS PDM Data Card
+By Clicking on the Variable button of a selected Control, we can create or edit the associated  Variable. This PDM Variable can then be associated with a SOLIDWORKS, Property through an Attribute. The Attribute needs to match Property name in SOLIDWORKS, or the Variable Value will not be updated.
+PDM Variable with Material Attribute
+If done correctly, the Material properties defined in SOLIDWORKS will appear in the components Data Card and will be associated with a PDM Variable.
+SOLIDWORKS PDM Properties Variable

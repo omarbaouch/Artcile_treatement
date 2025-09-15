@@ -1,0 +1,43 @@
+Before creating a new Vault, the
+SOLIDWORKS PDM  SERVER
+, the PDM Client on the computer where the vault will be created and the
+SOLIDWORKS SolidNet License Manager
+must be installed.
+A new SOLIDWORKS PDM Vault is created with the SOLIDWORKS PDM Administration tool. To create a new vault
+right-click on the server
+and select
+Create new vault
+from the shortcut menu as shown below:
+Create a new SOLIDWORKS PDM Vault
+Press on Next in the Welcome Screen to begin creating the new Vault.
+Welcome Screen
+Select whether the installed PDM Type is SOLIDWORKS PDM Professional or SOLIDWORKS PDM Standard
+SOLIDWORKS PDM
+Next provide the Vault with a Name and optionally a Description, for the Vault.
+Choose Vault Name
+Select the location of the Archive Folder. This would have been defined during the installation of SOLIDWORKS PDM Server.
+Select Vault Archive Folder
+Point to the SQL Database server and provide a name for the database that will be associated with this vault. PDM will automatically generate a name for you, by adding ‘SWPDM_’ in front of the Vault Name.
+Choose Database
+Enter the login information for the SQL server.
+SQL Password
+Provide the path where the SOLIDWORKS License Manger was installed, in the form of port number@server name. By default the port number is 25734.
+License Server for Vault
+Set the Language and Date Format for the Vault
+Regional Settings
+The default ‘Admin’ password defined during installation of PDM can be used, or another password can be created for this one vault.
+Admin User
+SOLIDWORKS PDM ships with Predefined Vault Configurations, which can be useful in the understanding of PDM components, such Data Cards and Workflows. These components can also be built on, to create your own components. When Configuring the Vault, three Predefined Configurations are available. The Default contains Data Cards for many common file types, the SOLIDWORKS Quick Start contains Data Cards associated with SOLIDWORKS file types and Empty can be used to create each component from the beginning.
+Configure Vault
+If Default or SOLIDWORKS Quick Start Configuration are chosen, details of each component be selected and in the case of the Default, The Dispatch Add-in and Tasks can added, as well.
+Configuration Details
+After reviewing your options, click on
+Finish
+to create the New SOLIDWORKS PDM Vault.
+Finish
+The new Vault will now appear SOLIDWORKS PDM Administration.
+New Vault in SOLIDWORKS PDM Administration
+Learn more about creating a new SOLIDWORKS PDM Vault
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn how to create and manage a PDM vault. The course is available live online or in a classroom near you.

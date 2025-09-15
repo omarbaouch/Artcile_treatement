@@ -1,0 +1,18 @@
+SOLIDWORKS PDM Performance is always a concern for administrators.
+Even small delays quickly compound when they affect multiple users, multiple times a day for repetitive actions.  On the other hand, when dealing with very large vaults with hundreds of users in particular, saving even a few seconds on processes that are repeated hundreds of times a day can mean a big win for an organization overall.
+In SOLIDWORKS PDM 2019, working with large assemblies and especially files with complex reference structures is faster than ever before.
+Large, complex lists in the “Contains” and “Where Used” tabs will display much more quickly than in previous releases
+.
+Large complex lists display faster in SOLIDWORKS PDM 2019
+Additionally, many
+file operations such as moving, dragging and dropping, re-naming and adding files are much faster
+in SOLIDWORKS PDM 2019.
+Even simply browsing through the vault, especially browsing into folders that contain a very large number of files that have already been locally cached (something that could significantly impact SOLIDWORKS PDM Performance previously) is much faster in this latest release.
+How do you take advantage of these improvements?
+To take advantage of the SOLIDWORKS PDM performance improvements, all that is necessary is to upgrade your SOLIDWORKS PDM installation to 2019.
+Make sure to review the steps outlined in our
+SOLIDWORKS PDM Upgrade Checklist
+to ensure that your upgrade process is as smooth as possible.
+If you need assistance with the upgrade we offer a comprehensive
+SOLIDWORKS PDM Upgrade Service
+so that you can be confident in the knowledge that your critical business system will be upgraded by an experienced Certified SOLIDWORKS PDM Professional.

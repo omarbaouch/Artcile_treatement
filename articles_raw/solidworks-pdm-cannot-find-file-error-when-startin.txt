@@ -1,0 +1,7 @@
+Many organizations will store their SOLIDWORKS templates in their SOLIDWORKS Enterprise PDM vault. On occasion a user will receive the following EPDM cannot find file error message:
+EPDM Cannot Find File Error Message
+This can occur when a “clear local cache” was performed on the folder, where the template files are kept. This error message is more of an annoyance, as the user will eventually be able to choose a template.
+How to prevent this File Error Message
+To prevent this message, perform a “get version” or a “get latest version” on the template folder, to cache the templates to the local drive. If SOLIDWORKS Enterprise PDM 2014 is installed, a get latest can be performed on template folder automatically, when the user logs into the vault. Please refer to my article
+Always work with latest version of files Option – new in SolidWorks EPDM 2014
+.

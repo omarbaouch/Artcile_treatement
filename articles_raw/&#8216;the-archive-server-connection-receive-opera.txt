@@ -1,0 +1,6 @@
+One or both of the following error messages can occur when a replicated SOLIDWORKS PDM archive is taken offline and registry keys are not updated correctly:
+Archive Server connection Error Message
+PDM Error Message
+To fix this issue, on the archive server, edit the registry key:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\<vaultname>
+Then either delete the ‘Replicate’ string, or set the value to zero.

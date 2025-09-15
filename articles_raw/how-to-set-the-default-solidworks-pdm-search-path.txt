@@ -1,0 +1,25 @@
+When opening the
+Complete Search Card
+from within a vault, the SOLIDWORKS PDM default search path will be the folder in which the search was opened, therefore only searching from that folder down.  As a user, I found that 99.9% of the time, I actually wanted to search the entire vault, regardless of where I opened the search card.  In this article, we’re going to look at how to set the default SOLIDWORKS PDM search path to be the root folder.
+Note; To edit a data card requires the permission
+Can update the design of cards
+Setting the default search path
+Open the
+complete search
+card
+Administration Tool > Cards > Search Cards > Complete Search
+Then Select ‘Default Values’
+Open the complete search card
+Set the variable as
+Search Folder Path
+and the value as
+\
+Set the variable as Search Folder Path and the value as \
+Hit OK, then save and close the card editor
+Save the Search Path
+Now all SOLIDWORKS PDM searches, using the
+Complete Search Card
+will set the Search Folder Path as the root of the vault.
+Learn more about Data Card Customization
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

@@ -1,0 +1,17 @@
+A question I frequently get asked on support is;
+“Can I upgrade my SOLIDWORKS version without having to upgrade my SOLIDWORKS PDM client?”
+Can I upgrade my SOLIDWORKS version without upgrading my PDM client?
+SOLIDWORKS PDM Professional
+SOLIDWORKS PDM Professional officially supports the same version of SOLIDWORKS and two older versions
+.  As an example; SOLIDWORKS PDM Professional 2016 officially supports SOLIDWORKS 2016, 2015 and 2014.
+SOLIDWORKS PDM Standard
+SOLIDWORKS PDM Standard officially supports same major version of SOLIDWORKS
+. As an example; SOLIDWORKS PDM Standard 2016 officially supports SOLIDWORKS 2016.
+SOLIDWORKS PDM Standard will not prevent you from using an earlier version of SOLIDWORKS, but it’s not recommended as certain tools such as Toolbox will not work in the older version.
+Service Packs of the same release
+You can use a different service pack of SOLIDWORKS PDM
+(e.g. 2016 SP2)
+with a different service pack of SOLIDWORKS
+(e.g. 2016 SP4)  within the officially supported versions.
+Newer and older [year] version compatibility
+The combination of a newer major version of SOLIDWORKS and an older major version of SOLIDWORKS PDM is NOT supported.

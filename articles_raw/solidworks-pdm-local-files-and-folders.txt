@@ -1,0 +1,56 @@
+SOLIDWORKS PDM copies files between the client machine and server machine, so that users are always working on files stored locally on their computer. Clients connect to the server through a working folder called the local vault view which is where files are cached. This method of working boosts performance and reduces the chance of file corruption compared to opening and saving files on a network drive.
+What are SOLIDWORKS PDM local files and folders?
+In a local vault view, the logged-in user will see any files and folders they have permission to see, even if there aren’t local copies. This is made possible by the PDM Database Server. In the client view, the Version tab gives information about a selected file, such as the latest version and local version.
+A file in the vault that has no local copy
+A file becomes locally cached when it’s requested for Preview, Open, Get Version, Get Latest Version, Check Out, or Copy and Paste. Files can also be automatically cached using the administrative setting “Refresh cache during login.” This setting automates a Get Latest on specified folders which is helpful for templates and library-type files.
+For most locally cached files, there is a copy of the file in an archive location on the server. However, there can be files that exist only in the local cache (i.e. no copy on the server). Furthermore, there could be files that appear to be only local but are displayed this way because the logged-in user doesn’t have permission to see the archive versions of those files. When speaking about SOLIDWORKS PDM local files, context is key. The term “Local File” is typically used to refer to files that exist in the local cache, but are not part of the vault database. These kinds of local files are problematic because they either weren’t added to the vault or once existed as part of the vault and became orphaned.
+SOLIDWORKS PDM gives a few indicators for this kind of local file.
+The file icon or thumbnail will appear faded.
+The State of the file will be displayed as “<Local File>”
+The Version of the file will be displayed as “-/?”
+An undesirable local file. This file is local only..
+A local version of a file that is part of the vault
+A folder can also be local. SOLIDWORKS PDM local folders appear gray in color.
+An example of a local folder
+Be on the lookout for these kinds of files and SOLIDWORKS PDM local folders when browsing the local vault view.
+How do SOLIDWORKS PDM local files and folders happen?
+Local files and folders in a SOLIDWORKS PDM local vault view can be created in a number of ways:
+If a user saves a file into a folder where the Folder Permission, Add or Rename file is disabled for the user, then the file will be created only locally. A warning will appear saying the file was not added to the vault. This means that other users won’t be able to see this file on their computers.
+If a new file/folder is created in the local vault view while working in Offline Mode (
+https://www.javelin-tech.com/blog/2019/12/solidworks-pdm-work-offline/
+), it is not automatically added to the vault as it would be in Online Mode. Therefore, it’s a local file/folder which only exists on the computer where it was created. Other users won’t have the ability to see the file/folder until the user goes back into Online mode and selects the option to add it to the vault.
+If a cached file/folder is deleted, moved, or renamed using a different client computer, then the cached copy remains in the local view as only local file/folder. In other words, it becomes an orphaned copy on client machines that had the file/folder cached. In the case of a moved file, computers that had the file cached in the original location will now have duplicate file names with the original being flagged as a local file.
+If the currently logged-in user lacks permission to see the vault version of a file/folder, but a user with permission previously logged in on that computer and cached the file/folder, then it will appear as a local file/folder to the user without permission. This is a special case where there is a copy of the file on the archive server or a record of the folder in the database. However, it is not easy to tell if the cached file is only local or also has a vault version. Be cautious in this situation since there is a potential for the user without permission to edit the local copy if it is writable. However, only the user with permission will be able to check it in to make a new version of the file on the archive server.
+If a file is created by an application that does not use the standard Windows Save As dialog box, then it will be stored only locally, unless the file extension is listed in the user/group setting, Adding Files.
+If a pattern for a file name or extension is specified to be excluded in the user/group setting, Adding Files, then a file matching the pattern will be stored only locally.
+If a folder is created by an application, then it will be stored only locally, unless the folder name is specified in the user/group setting, Adding folders.
+If a file is saved inside a gray local folder, then the file will be only local, i.e. not added to the vault.
+How to handle SOLIDWORKS PDM local files and folders?
+Local files and folders can either be added to the vault, deleted, or hidden.
+With the local vault view in Online Mode, any files/folders that are only local will have the option, Add To File Vault in the Right Click menu. This command could be used on files/folders that were created in Offline Mode. It could also be used on a file/folder created in Online Mode that failed to add to the vault automatically for some reason, such as user/group settings or a network connectivity issue.
+Generally, the majority of local files and folders are orphaned objects that should either be deleted or hidden. Fortunately, there are settings that make this easy.
+In the Administration tool, user or group settings for File Explorer, I suggest the following combination of settings.
+Enable, Show all files
+Enable, Automatically delete local read-only files that are not part of the file vault.
+Settings for File Explorer
+Show all files will allow new files that were added in Offline Mode to be seen in Online Mode. This way, the user can easily add them to the vault after going online by right-clicking on the file and selecting, Add to File Vault. Alternatively, the Search Local Files command could be used to bring up a dialog box with a list of local files and the option to add them to the vault.
+To pull up a complete list of local files in a vault view, right-click in the white space of the root folder of the vault view and select, Search Local Files
+.
+Search Local Files
+This can also be done within a subfolder to find SOLIDWORKS PDM local files from that level downward.
+A dialog will appear that gives the option to add the files to the vault.
+Adding local files to the vault
+The next setting, Automatically Delete Local Read-only Files that are not part of the File Vault will delete the undesirable local files. These would be files that get left behind from operations done on another computer, such as delete, move, or rename.
+For example, consider a file that is cached on two computers, Computer A and Computer B. On computer A, the file is moved and will only exist in the new location on this computer. On Computer B, the user will see the file in the new location but also have a copy that was left behind as a local file in the old location. These two files on Computer B have the same name but are not linked in any way. Although the original file will be marked as a local file, it’s best to avoid duplicate file names which can lead to reference issues.
+The local file in the example above will be read-only because the user on Computer A would not have been able to move the file if it was checked out on Computer B. In other words, the cached file on Computer A is not modified, so there are no changes to worry about losing. Also, this local file is no longer not part of the vault. Therefore, it is safe to delete and the local file cleanup setting will do just that.
+Some local files are writable, such as local files created in Offline Mode and local files created by a user who does not have Add or Rename File permission. These files only exist on the computer they were created on. The local file cleanup setting will ignore these files because they are not read-only. In this case, the user decides if they want to add them to the vault or delete them manually.
+This setting also does not apply to files that display as local files because the currently logged-in user lacks permission to see vault versions of files that another user cached on the same computer. To remove these files from the local cache, the user with permission to see the vaulted files can use the Clear Local Cache command. Then, when the other user logs in, the files won’t be shown since that user doesn’t have permission to see them and they don’t exist in the local cache. If users with different levels of permissions are sharing the same computer and local vault view, then it’s best practice to clear the local cache before logging out.
+Clear Local Cache only works on files that are part of the vault
+.
+Specifically, it will remove local copies of files that are part of the vault, not checked out, and not referenced by a checked-out parent file. Therefore, it won’t work on local files that were left behind from delete, move, or rename, or on files that were created in the vault folder structure, but were never added to the vault.
+One way to perform Clear Local Cache is for individual objects by selecting the desired folder(s) or file(s) in the local vault view and then the Tools menu > Clear Local Cache. It can also be done on the entire vault view by right-clicking on the root folder and selecting Clear Local Cache
+.
+Furthermore, the administrator can enable the setting, Clear Cache During Logout in the cache options for a user or group. However, clearing the entire cache during logout would decrease performance. I’d only recommend automating the clearing of the cache if there are security concerns or very limited disk space on the client machine.
+If the user setting Show Only Local Files is enabled. Please refer to the article,
+Grey Folders and Files in the local Vault View article
+With an understanding of SOLIDWORKS PDM local files and SOLIDWORKS PDM local folders, you can decide what settings and processes will work best in your environment.

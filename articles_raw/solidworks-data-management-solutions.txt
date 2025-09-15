@@ -1,0 +1,29 @@
+In this demonstration session from our recent virtual tech conference we’ll take a look at the suite of
+data management solutions from DS SOLIDWORKS
+.  No matter your company size or process complexity there is a solution designed for you. Watch the playlist below to learn more:
+Data Management Solutions
+Covered in this demonstration are on-premise solutions from DS SOLIDWORKS, plus solutions from Javelin to take the technologies to the cloud.
+SOLIDWORKS PDM Standard
+, powered by Microsoft® SQL Server Express and fully embedded into SOLIDWORKS 3D CAD and Windows® Explorer, provides an intuitive set of configurable tools to manage your SOLIDWORKS files.
+SOLIDWORKS PDM Professional
+, powered by Microsoft SQL Server Standard extends the capabilities of SOLIDWORKS PDM Standard to
+allow your entire enterprise to easily share data
+and collaborate on designs.
+SOLIDWORKS Manage
+provides a unique set of advanced data management tools. This is accomplished by leveraging the file management capabilities and ease of use of SOLIDWORKS PDM Professional and adding powerful
+project
+,
+process
+, and
+item management
+capabilities.
+Javelin Cloud Services
+, can help you to Plan, Design, Build, Migrate, Run, Operate, and Optimize SOLIDWORKS on the cloud. Javelin’s Certified Amazon Web Service (AWS) and Microsoft Azure Experts provide cloud infrastructure and application migration solutions to small and medium sized businesses. For any stage of your cloud planning, adoption, or management process, you can rely on the Javelin Team to help you achieve your goals.
+Want to get started with SOLIDWORKS PDM?
+We have a
+getting started guide
+to help you figure out how to implement PDM Standard. If you want Javelin to implement your PDM system then check out our
+implementation service
+and other
+SOLIDWORKS PDM services
+available from Javelin.

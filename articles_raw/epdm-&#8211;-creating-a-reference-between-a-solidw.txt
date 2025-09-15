@@ -1,0 +1,23 @@
+If you ever needed to link a non-SolidWorks file (Excel, Word, PDF…) to a SolidWorks file, then here’s the steps to accomplish this:
+Right-click the parent file and select
+Check Out
+.
+Select the file(s) to reference.
+Right-click the file(s) and select
+Copy
+.
+Right-click the parent file and select
+Paste as Reference
+.
+In the
+Create File References
+dialog box, enable these options as needed:
+Add Reference,
+creates a reference to the file.
+Show in Bill of Materials,
+includes the file in the parent file BOM.
+Click
+OK
+.
+6.  Check-in the parent file(s)
+Now the non-SolidWorks file will appear under the “Contains” tab of the local vault view when the SolidWorks file is selected.

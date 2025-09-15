@@ -1,0 +1,10 @@
+The Replication report available in SolidWorks Enterprise PDM Administrator will show how many files have not been replicated, but not the names of these files.
+SolidWorks subscription customers can access a T-SQL query, that will list these files. This query can be downloaded from the
+DS Support Knowledge Base
+. The
+article number is
+S-010221
+.
+Double clicking on this query will launch Microsoft SQL Server Management Studio.
+In order to run this query, the archive server name in the query must be changed to reflect the name of your archive server
+.

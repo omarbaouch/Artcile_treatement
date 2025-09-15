@@ -1,0 +1,36 @@
+The dividing factor between SOLIDWORKS PDM As-Built vs Latest in a Bill of Materials is a
+Check-in
+of the selected assembly
+.
+As-Built vs Latest
+The
+As Built
+option will show the BOM for a referenced file at the time that the assembly is checked in whereas the
+Latest
+option shows the BOM for a referenced assembly, which reflects the latest versions of all referenced files.
+If you check out an assembly, make a change, and then check the assembly back into the vault — PDM will update the referenced BOM to reflect the latest changes.
+Confused?  Me too, let’s look at an example.
+As-built vs latest
+I’ve got an assembly I created
+ParentAssem.SLDASM
+then added a sub-assembly
+SubAssem.SLDASM
+(which contains SubAssemPart.SLDPRT)  to it and checked it in (version 1).
+SOLIDWORKS Assembly Checked In
+Then I modified SubAssem to add a new part within it SubAssemNewPart.SLDPRT.  Notice SubAssem.SLDASM goes to version 2.
+Assembly revised as version 2
+Now let’s look at the difference between the As-Built and Latest
+ParentAssem.SLDASM.
+First
+As-built
+;
+As-Built Assembly
+Next
+Latest
+;
+Latest Assembly
+Notice that SubAssemNewPart.SLDPRT appears in
+Latest
+because it was added after
+ParentAssem
+was checked in.

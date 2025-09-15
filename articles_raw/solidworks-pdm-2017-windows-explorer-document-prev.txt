@@ -1,0 +1,21 @@
+There are new enhancements for the
+SOLIDWORKS PDM 2017
+Preview Tab in the Windows Explorer Vault view. If
+eDrawings
+is being used as the viewer and
+Display
+>
+Options
+, in the local Vault view, is set to ‘
+Show Full UI in SOLIDWORKS preview
+‘…
+SOLIDWORKS PDM Display Options
+…you can now display an exploded view of an assembly.
+Explode command in the Preview tab
+In addition, the Preview Panel Card view , can now be turned off.
+Card Preview Enabled
+Which allows you to display a larger eDrawings view of your SOLIDWORKS document.
+Card Preview Disabled
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

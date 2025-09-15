@@ -1,0 +1,38 @@
+<p>One or both of the following error messages can occur when a replicated SOLIDWORKS PDM archive is taken offline and registry keys are not updated correctly:</p>
+
+		<style>
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 50%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style>
+		<div id='gallery-1' class='gallery galleryid-24904 gallery-columns-2 gallery-size-medium'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message.png"><img decoding="async" width="300" height="116" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-300x116.png" class="attachment-medium size-medium" alt="Archive Server connection Error Message" aria-describedby="gallery-1-24939" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-300x116.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message.png 428w" sizes="(max-width: 300px) 100vw, 300px" title=""></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-24939'>
+				Archive Server connection Error Message
+				</dd></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-2.png"><img decoding="async" width="300" height="130" src="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-2-300x130.png" class="attachment-medium size-medium" alt="PDM Error Message" aria-describedby="gallery-1-24941" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-2-300x130.png 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2016/11/error-message-2.png 385w" sizes="(max-width: 300px) 100vw, 300px" title=""></a>
+			</dt>
+				<dd class='wp-caption-text gallery-caption' id='gallery-1-24941'>
+				PDM Error Message
+				</dd></dl><br style="clear: both" />
+		</div>
+
+<p>To fix this issue, on the archive server, edit the registry key:</p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\&lt;vaultname&gt;</pre>
+<p>Then either delete the &#8216;Replicate&#8217; string, or set the value to zero.</p>

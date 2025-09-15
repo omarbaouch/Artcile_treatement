@@ -1,0 +1,23 @@
+If you experience problems with SOLIDWORKS products (e.g. SOLIDWORKS Professional, PDM, eDrawing etc…) you can try repairing the installation. When Repairing SOLIDWORKS Installation search for Control Panel in
+Windows Start Search
+and go to Progams > Programs and Feature > Uninstall or change a program.
+Right-click on SOLIDWORKS 20XX
+and select
+Change
+Programs and Features
+Select
+OK
+to continue:
+SOLIDWORKS Installation Manager
+Then select
+Repair your installation
+and pick
+Next
+Repair the individual installation
+This will then bring up a window to select the SOLIDWORKS programs you would like to repair, make your selections (or select all) then hit
+Repair
+.
+Products to Repair
+It will take some time to go through the process of repairing the SOLIDWORKS installation[s].
+Repair Process is complete
+That’s it!! The Repairing SOLIDWORKS Products process has been completed.

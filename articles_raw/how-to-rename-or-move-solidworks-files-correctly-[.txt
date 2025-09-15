@@ -1,0 +1,14 @@
+As your library of SOLIDWORKS files grows, you may at times need to rename or perhaps move your files from one folder location to another. This can cause issues if you simply right-click on the document in Windows Explorer and click “Rename” or if you move the file from one folder to another by dragging and dropping it. In this article I’ll show you the correct procedure to rename move SOLIDWORKS files
+Renaming or Moving SOLIDWORKS Files
+The reason this causes issues, is that SOLIDWORKS Assemblies and Drawings rely on the folder path and filename information in order to know what files should be referenced.  So if you rename a Part file and then open the Assembly that references that Part, SOLIDWORKS has no idea where the Part file went, all it knows is that it isn’t there anymore.
+Unable To Locate File Message
+SOLIDWORKS will immediately give you the option to either suppress the missing component, or use a Browse window to find the file again.  This could cause a lot of issues, especially if it wasn’t you who renamed the file and you have no idea what the new file is or what it’s called?
+The correct procedure
+Watch the video below to learn how SOLIDWORKS Explorer should be used when renaming or moving files:
+About SOLIDWORKS Explorer
+SOLIDWORKS Explorer installs tools right within the Windows Explorer right-click shortcut menu.  When right-clicking on any SOLIDWORKS file, you will see a SOLIDWORKS “fly out menu” with a list of commands, including “Rename” and “Move”.
+SOLIDWORKS Explorer Options
+Using the “Rename” or “Move” commands from this SOLIDWORKS command list will launch SOLIDWORKS Explorer which will search for any additional documents that reference the file that is being renamed or moved.
+Rename Document
+It will then update these other documents with the changed file information, so that the next time they are opened, they will be able to locate the changed file again.
+Move Document

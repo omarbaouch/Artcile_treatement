@@ -1,0 +1,20 @@
+Previously, SOLIDWORKS introduced functionality which automatically created a file property which showed the version of SOLIDWORKS that the file was
+last saved with
+. Now with SOLIDWORKS PDM 2018, we can easily take advantage of the SOLIDWORKS Last Saved With file property to display that information in the PDM interface.
+Once the vault is upgraded to SOLIDWORKS PDM 2018, a new Variable will automatically be created called:
+_SW_Last_Saved_With_
+This variable is automatically mapped to the “Summary” block “Last Saved With” attribute of
+slddrw
+,
+sldasm
+and
+sldprt
+file types.
+_SW_Last_Saved_With_ Variable
+The new “_SW_Last_Saved_With_” Variable can be used exactly the same way as any other Variable in PDM, added to Data Cards or to Column Sets.
+SOLIDWORKS PDM Data Card design
+SOLIDWORKS PDM Column Customize
+It is very important to note however, since this Variable is new, the “SW Last Saved With” information will not populate into the Variable until the file has been Checked In to the upgraded 2018 Vault.
+NOTE
+: any existing files will need to be checked out, then checked back in before the value will display the new variable.
+‘Last Saved With’ Variable displayed

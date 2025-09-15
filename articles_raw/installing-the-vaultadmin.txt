@@ -1,0 +1,11 @@
+By default, the SolidWorks Workgroup PDM VaultAdmin is not installed during the installation of SolidWorks. In this article we will look at how to include the VaultAdmin during the original installation of SolidWorks or adding it at a later time.
+During the installation of the SolidWorks client, the VaultAdmin can be included in the installation from the Product Selection menu. This menu is part of the SolidWorks Installation Manager.
+At a later time the VaultAdmin can be added by modifying your SolidWorks Installation as follows:
+Select
+Uninstall a program
+from the Windows Control Panel (For Windows XP select Add/Remove Programs).
+Right click on the SolidWorks Installation and choose
+Change.
+Once the Installation Manger starts, click on
+next
+until you arrive at the Product Selection menu and select the VaultAdmin as illustrated earlier.

@@ -1,0 +1,44 @@
+<p>After enabling the <a href="https://www.javelin-tech.com/blog/?p=40051">content search in SOLIDWORKS PDM Professional</a>, by default the Windows Search Service supports indexing the following files types;</p>
+<ul>
+<li>Microsoft Office files</li>
+<li>HTML files</li>
+<li>MIME messages</li>
+<li>Plain-text files</li>
+</ul>
+<h2>How to include PDF files in the PDM Content Search</h2>
+<p>We can include other file types by installing its corresponding third-party iFilter.  After a new iFilter is installed the archive must be reindexed to include the new file type in the content search.</p>
+<h3>Step 1 &#8211; Add the PDF iFilter to the server running Windows Search</h3>
+<p>We can download and install the standalone PDF iFilter from Adobe <a href="https://supportdownloads.adobe.com/detail.jsp?ftpID=5542" rel="nofollow noopener" target="_blank">here</a>, but current versions of Adobe Acrobat® and Adobe Reader® include the iFilter when installed, so in most instances; it&#8217;s easier to install the full program so we can view PDFs on the server as well as index them.</p>
+<h3>Step 2 &#8211; Add and check in some files for testing</h3>
+<div id="attachment_40195" style="width: 737px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Add-Files.png"><img decoding="async" aria-describedby="caption-attachment-40195" class="wp-image-40195 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Add-Files.png" alt="Add and check in some files for testing" width="727" height="553" title=""><p id="caption-attachment-40195" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40195 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Add-Files.png" alt="Add and check in some files for testing" width="727" height="553" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Add-Files.png 727w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Add-Files-600x456.png 600w" sizes="(max-width: 727px) 100vw, 727px" /></noscript></a> Add and check in some files for testing</p></div>
+<h3>Step 3 &#8211; Verify the iFilter is installed and rebuild the index</h3>
+<ul>
+<li>Control Panel &gt; Indexing Options</li>
+</ul>
+<div id="attachment_40056" style="width: 645px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png"><img decoding="async" aria-describedby="caption-attachment-40056" class="wp-image-40056 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png" alt="Indexing Options" width="635" height="324" title=""><p id="caption-attachment-40056" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40056 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png" alt="Indexing Options" width="635" height="324" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png 635w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options-600x306.png 600w" sizes="(max-width: 635px) 100vw, 635px" /></noscript></a> Indexing Options</p></div>
+<ul>
+<li>Advanced &gt; File Types Tab
+<ul>
+<li>Ensure the PDF entry exists</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_40197" style="width: 650px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Verify-iFilter-installed.png"><img decoding="async" aria-describedby="caption-attachment-40197" class="wp-image-40197 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Verify-iFilter-installed.png" alt="Ensure the PDF entry exists" width="640" height="614" title=""><p id="caption-attachment-40197" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40197 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Verify-iFilter-installed.png" alt="Ensure the PDF entry exists" width="640" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Verify-iFilter-installed.png 640w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Verify-iFilter-installed-600x576.png 600w" sizes="(max-width: 640px) 100vw, 640px" /></noscript></a> Ensure the PDF entry exists</p></div>
+<p>As the iFilter was added after the content search was set up, we&#8217;ll need to rebuild the indexes to include the pdf files;</p>
+<ul>
+<li>Indexing Options
+<ul>
+<li>Advanced &gt; Index Settings Tab
+<ul>
+<li>Hit <strong>Rebuild</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_40198" style="width: 650px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index.png"><img decoding="async" aria-describedby="caption-attachment-40198" class="wp-image-40198 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index.png" alt="Rebuild the indexes to include the PDF files" width="640" height="614" title=""><p id="caption-attachment-40198" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40198 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index.png" alt="Rebuild the indexes to include the PDF files" width="640" height="614" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index.png 640w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index-600x576.png 600w" sizes="(max-width: 640px) 100vw, 640px" /></noscript></a> Rebuild the indexes to include the PDF files</p></div>
+<blockquote><p><strong>Note</strong>: Before testing, we need to wait for the rebuild to complete, in larger vaults this may take some time</p></blockquote>
+<div id="attachment_40199" style="width: 252px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Indexing-Done.png"><img decoding="async" aria-describedby="caption-attachment-40199" class="wp-image-40199 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Indexing-Done.png" alt="Indexing Complete" width="242" height="113" title=""><p id="caption-attachment-40199" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40199 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Indexing-Done.png" alt="Indexing Complete" width="242" height="113" title=""></noscript></a> Indexing Complete</p></div>
+<h3>Step 4 &#8211; Test</h3>
+<div id="attachment_40200" style="width: 970px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search.png"><img decoding="async" aria-describedby="caption-attachment-40200" class="wp-image-40200 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search.png" alt="SOLIDWORKS PDM Content Search" width="960" height="837" title=""><p id="caption-attachment-40200" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-40200 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search.png" alt="SOLIDWORKS PDM Content Search" width="960" height="837" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search.png 960w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search-600x523.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Content-Search-768x670.png 768w" sizes="(max-width: 960px) 100vw, 960px" /></noscript></a> SOLIDWORKS PDM Content Search</p></div>
+<p>To learn how to include SOLIDWORKS files, please <a href="https://www.javelin-tech.com/blog/subscribe/">subscribe to our blog for future articles</a>.</p>

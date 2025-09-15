@@ -1,0 +1,36 @@
+The
+Rollback feature
+in
+SOLIDWORKS PDM 2017
+has been enhanced to allow
+a
+parent file to be rolled back
+with
+its child references
+and files indicated as sub-parents (such as drawing files) to a previous version, state and revision.  Previously this command could only be performed on individual files and didn’t include referenced files.
+NOTE
+: This function should be used with caution as it permanently deletes file versions.  Permission should be limited to the appropriate personnel only.
+Navigate to the selected file and
+Right-click > History;
+Right-click > History
+Then
+Select
+the
+previous version
+you’d like to return to and click
+Rollback
+;
+Select previous version > Rollback
+Warning! This action will PERMANENTLY DELETE ALL VERSIONS that were created after the selected point and cannot be reversed
+Rollback Warning
+Then
+check
+all the boxes for referenced files you’d like to Rollback with the file and select
+Continue
+;
+Select Files To Rollback
+Now the assembly and it’s references will be returned to the selected previous version, including state and revision;
+Rollback Complete
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

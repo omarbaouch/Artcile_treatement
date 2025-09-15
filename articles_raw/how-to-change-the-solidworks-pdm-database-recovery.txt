@@ -1,0 +1,39 @@
+With
+SOLIDWORKS PDM Professional
+,
+SOLIDWORKS PDM Standard
+, and
+SQL Management Studio
+by default within Microsoft SQL, the recovery model option for any new databases is set to full.  In some instances this can cause problems later as the full recovery model; causes the transaction log to grow exponentially as regular database backups are captured.  We have seen instances in the past where the transaction log continually grows to a point where it’s consumed all the available disk space and causes performance issues within SQL and the vault.  If you are
+backing up the vault DB daily
+we recommend the recovery model is set to simple, to prevent the transaction log from getting too large.
+How to verify and change the Recovery Model option of the DB
+Log in to the SQL Server Management Studio using the
+sa
+(system administrator) account;
+Log In to the server
+Expand the
+Databases
+folder
+Select the vault DB
+Right-click >
+Properties
+;
+Database Properties
+Select
+Options
+and the
+Recovery Model
+should be listed;
+Recovery Model Options
+And if necessary, we can switch it from
+Full
+to
+Simple
+via the drop-down, then hit
+OK
+;
+Changing the DB Recovery Model to Simple
+NOTE
+: These recommendations are based on the SOLIDWORKS PDM uses of SQL when regular backups are performed.  More information regarding the Recovery Model and transaction log options can be found within the SQL documentation.
+If your Recovery Model has been set to full for some time, and you’d like to clear up some storage space; a shrink of the transaction log may be required.

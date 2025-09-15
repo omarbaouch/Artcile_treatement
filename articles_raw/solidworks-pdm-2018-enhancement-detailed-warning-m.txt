@@ -1,0 +1,8 @@
+New in
+SOLIDWORKS PDM 2018
+, we are presented with more information as to why the vault is angry at us with detailed SOLIDWORKS PDM Warning Messages for when workflow conditions are not met.
+Previously in SOLIDWORKS PDM, if a workflow condition was not met…it would look like this:
+Transition Warning in SOLIDWORKS PDM 2017
+This doesn’t really tell us much, other than the fact we failed and must try again and again until we get it right.  New in SOLIDWORKS PDM 2018 these warnings look like this:
+Transition Warning in SOLIDWORKS PDM 2018
+This detailed description of the missing condition allows us to quickly identify what the problem is and fix it more efficiently than just trial and error.

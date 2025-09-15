@@ -1,0 +1,20 @@
+New in
+SOLIDWORKS PDM 2019
+, when you add new sheets to a checked-out SOLIDWORKS drawing file, SOLIDWORKS PDM generates default values for the newly added sheets and updates the values in the drawing data card.
+Previously, you had to manually update the values of mandatory variables in the drawing data card before check-in.
+SOLIDWORKS PDM Drawing Data Card
+NOTE
+: You must enable the SOLIDWORKS PDM add-in before adding the new sheets in the SOLIDWORKS Drawing.
+In the
+Administration
+tool, in the
+SOLIDWORKS Drawing Card
+, if you select the
+Updates all configurations
+, the
+Variables
+that use the
+$PRPSHEET
+type variable mapping are updated on the tabs for all sheets.
+Previously, only the values on the as-build (@) configuration tab updated automatically and you had to manually update the active configuration tabs.
+Updates All Configurations

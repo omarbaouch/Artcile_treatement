@@ -1,0 +1,17 @@
+Changing the value of a variable in the Folder Card may not propagate to File Card, even though the File Card is set to inherit that value from the Folder Card.
+The “Update Values in Files…” utility can be used to update the values of a variable for multiple files within a folder.
+In order to use this utility, the File Card must contain the same variable as the Folder Card.
+1. In the local vault view, check out the files to be updated.
+2. Select the folder that contains the files to be updated.
+3. From the
+Modify
+pull-down select
+Update
+>
+Values in File…
+4. Key Words can be entered to update only specific files. You can also choose to update files in sub-folders.
+5. Select in which workflow states the files to update should be in. <Pre State> means files that have not yet been checked in.
+6. Deselect the files you do not want to update.
+7. Select the variables that need to be updated.
+8. Select which configurations of the files need to be updated.
+9. Click on Finish to start the update.

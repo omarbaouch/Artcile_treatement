@@ -1,0 +1,24 @@
+Within SOLIDWORKS PDM Professional, when creating a
+task
+after selecting
+which computers can support the task
+, we have 3 options for the execution method;
+Let the system choose the computers to execute the task
+Prompt the user to choose a computer when the task is initiated
+Execute on the computer where the task is initiated
+SOLIDWORKS PDM Task execution Methods
+Your environment will define which is the appropriate selection, for example; using a dedicated task host…but what do each of these options mean?
+1. Let the system choose the computers to execute the task
+This option is available if you have multiple task hosts enabled.  With this selected, there is no hierarchy and whichever available machine responds first will accept the task.
+2. Prompt the user to choose a computer when the task is initiated
+With this option selected, when the task is launched, the user will be presented with a list of hosts to choose from;
+Note: The task will be added to the queue but won’t launch until the client is available
+3. Execute on the computer where the task is initiated
+This is the only option available with PDM Standard.  This will launch the task on the same machine that created the task.
+If you’d like the task to be completed silently when attached to a workflow transition, it is required to select
+Let the system choose the computers to execute the task
+or
+Execute on the computer where the task is initiated
+for the execution method
+We can monitor what tasks are queued on which machines via the task list in the Administration Tool:
+Monitor what tasks are queued

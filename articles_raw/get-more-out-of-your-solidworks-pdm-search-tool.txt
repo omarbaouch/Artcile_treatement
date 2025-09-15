@@ -1,0 +1,26 @@
+Are you a searcher or an explorer?
+If you’re a searcher then you’re in luck as
+SOLIDWORKS PDM Professional
+comes equipped with a powerful search tool, that can minimize the time it takes to locate a file or folder.
+Let’s start with a look at some of the basic commands located within the search tool:
+Search Commands
+Using Wildcards
+Let’s get a bit more advanced and look at how we can use wildcards to squeeze even more functionality out of this tool.
+Wildcard
+= a character that will match any character or sequence of characters in a search.
+By default the search will look for anything matching the parameters.  For example; if I search
+Jav
+, it will search for any folder or file name containing ‘Jav’:
+Search All
+Using the asterisk wildcard, we can search for specific file types containing our search parameter.  For example; *
+jav*.sldasm
+will look for any SOLIDWORKS Assembly with ‘Jav’
+as part of the filename:
+Search .SLDASM
+Need to look for a specific word document, but unsure whether it’s .doc or .docx filetype?
+*Jav*doc*
+Search .doc & .docx
+Learn more about creating custom SOLIDWORKS PDM search cards
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn how to create and manage a PDM vault. The course is available live online or in a classroom near you.

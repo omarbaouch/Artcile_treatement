@@ -1,0 +1,37 @@
+In the dynamic world of design and engineering, staying at the forefront of technological advancements is key to success. With the release of
+SOLIDWORKS PDM 2024
+, you can look forward to a host of feature enhancements that promise to streamline workflows, enhance collaboration, and elevate overall performance.
+In this article, we’ll delve into the specifics of these improvements, focusing on the Assembly Visualization tool, Web2 capabilities, new file type icons, enhanced check-out options, and performance improvements.
+Assembly Visualization and SOLIDWORKS PDM Integration:
+SOLIDWORKS PDM 2024 introduces seamless integration with the Assembly Visualization tool, allowing users to access PDM variables directly within the tool’s Custom Column dialog box. Now, variables like PDM- or PDM-Date are easily accessible under Properties, enhancing the visualization of data within the Assembly Visualization panel. This facilitates a more intuitive and comprehensive approach to managing assembly data.
+PDM Assembly Visualization
+Web2 Advancements for Version-Specific Downloads:
+SOLIDWORKS PDM Web2
+The Web2 interface in SOLIDWORKS PDM now empowers users to download specific versions of files and their references. While multiple files cannot be selected for simultaneous download, the Download Version dialog box provides granular control over the version selection and download settings. This enhancement ensures that users can access and work with specific file versions seamlessly, enhancing version control and project management.
+File Type Icons for Enhanced Visualization:
+File Type Icons for Enhanced Visualization
+SOLIDWORKS PDM 2024 introduces new file type icons, providing visual cues for weldment cut list items and files shared using pasted shared overlays. These icons are integrated into various dialog boxes, including File Details, File Operations, and Web2, offering you a quick and visual way to identify file types. However, we should note that cut list item icons are not yet available for SOLIDWORKS BOMs.
+Check Out Integration with Change State Command:
+PDM 2024 users now have the option to check out a file immediately after completing a change state operation. Customizing the column set of the Do Transition dialog box allows users to include the Check Out system variable. This streamlines your workflow, ensuring that files are checked out seamlessly as their state changes, promoting efficient collaboration and preventing bottlenecks.
+Check Out Integration with Change State Command
+Improved Copying Tree Dialog Box:
+SOLIDWORKS PDM File Explorer’s Copying Tree progress dialog box receives a facelift in 2024, offering more detailed information during file tree copy operations. Two progress bars provide insights into primary and secondary steps, including file preparation and finishing actions. This enhancement provides you with a clearer understanding of the copying process, promoting transparency and efficiency.
+SOLIDWORKS PDM Copy tree
+Check-Out Event Details:
+In SOLIDWORKS PDM File Explorer, users can now view detailed check-out and undo check-out events in the History dialog box of a file. This includes information on which user performed the operation, offering enhanced traceability and accountability in the design process.
+SOLIDWORKS PDM Check Out
+Expanded Access to System Variables:
+SOLIDWORKS PDM 2024 makes system variables more accessible and available across various interfaces. Several key system variables, such as and, are now available in File List, Quick Search Result, and Search Result column set types. You can also call out the new variable in a default column located in File list. Additionally, the Version tab’s user interface in File Explorer is improved, offering a more comprehensive view of system variables.
+Expanded Access to System Variables
+Effortless Viewing of License Usage:
+PDM users with access to the Admin tool can now view license details without special administrative permissions. The License node in the Administration tool includes sub-nodes for viewing license servers and license usage. This enhancement enables users to manage licenses more effectively, ensuring optimal resource utilization.
+SOLIDWORKS PDM license usage
+Data Security Enhancements:
+SOLIDWORKS PDM 2024 prioritizes data security by restricting unauthorized access to file information in the Contains and Where Used tabs within File Explorer and Web2. A warning message alerts users without the necessary rights, reinforcing data integrity and confidentiality.
+Data Security Enhancements
+Performance Improvements:
+One of the standout features of SOLIDWORKS PDM 2024 is the significant performance improvements in file-based operations. Add files, change state, and copy tree operations are now approximately two times faster. Moreover, the copy tree to compressed archive operation achieves orders of magnitude improvement in speed, enhancing overall system efficiency
+Get SOLIDWORKS PDM 2024
+As we navigate the intricate world of design and engineering,
+SOLIDWORKS PDM 2024
+emerges as a beacon of efficiency and innovation. The highlighted feature enhancements, from Assembly Visualization integration to improved performance, showcase a commitment to empowering users with tools that not only meet but exceed their expectations. Upgrade to SOLIDWORKS PDM 2024 and experience a new era of design and data management, where precision meets performance.

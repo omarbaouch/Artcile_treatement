@@ -1,0 +1,15 @@
+If you are using SOLIDWORKS PDM to manage your documents, you are no doubt aware that PDM offers Administrators an incredible amount of control over how the vault interacts with users and with your documents.  However with great control comes … a great number of property screens and options to set.
+Exporting SOLIDWORKS PDM Vault Settings
+While this in depth control is great, it does mean that if you wanted to, for instance manually copy a Group or Workflow from one vault to another, or provide a complete break down of all your vault settings to a support technician if something isn’t working correctly, it would very time consuming as there could be hundreds of individual settings involved.
+That’s why being able to export individual Workflows, Users, Cards … or even the entire vault’s settings in a single step is a great time saver for PDM Administrators.
+How to export settings from the PDM vault:
+Step 1
+.  To export any settings out of your vault simply right click on what you want to export and select the “Export” command.  You can export anything in the PDM Administration console.
+For an individual Serial Number, User, Workflow, etc, simply right click on the one you want.  If you want to export all the Workflows in the current vault, right click on the top level Workflow node.  If you want to export all of the  vault settings, then right click directly on the vault name right at the top .
+Step 1
+Step 2.
+Once you have chosen what to export and clicked the command, the “Administrative Export File” window will open.  This will list everything that is being exported.  If you select a File card for instance, then that File card, along with all components that are referenced by it, such as any Variables, Lists and Serial Numbers, will all be exported to the file as well.  Once you are ready you will now need to save the export file by going to File > Save.  This saves all the settings to a .cex file which you can then locate somewhere on your hard drive.
+Step 2
+How to import settings into the EPDM vault:
+To import the settings from the .cex file into another vault, simply log into the vault that you want to import the settings to in the Administration console, right click the vault name in the list and click “Import”.  Browse to the .cex file that you saved from the other vault and click Open.  The settings are now imported into your new vault.
+Watch this video for a quick demonstration of the exporting SOLIDWORKS PDM Vault settings workflow:

@@ -1,0 +1,2 @@
+While the order in which the transition actions are executed should not impact the behavior of the action, my experiences has shown this is not the case. In a transition where the revision is to be set, the order in which the actions are executed will impact if the revision is set. To ensure the revision is set, the revision variable must be set first, and the revision must be incremented last. Any additional actions must occur between these two actions.
+Transition Actions

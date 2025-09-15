@@ -1,0 +1,8 @@
+To update a file’s Custom Properties with the corresponding variable values in the SOLIDWORKS PDM Vault Database, select one or more files from within the PDM Local Vault View, then from the Modify pull-down select
+Modify
+>
+Update
+>
+File Attributes from Database
+.
+File attributes from database

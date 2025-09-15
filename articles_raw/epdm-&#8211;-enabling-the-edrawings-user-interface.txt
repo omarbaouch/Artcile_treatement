@@ -1,0 +1,3 @@
+For increased performance, the eDrawings User Interface is disabled in the Explorer preview window.
+To enable the eDrawings User Interface left click in the preview window.
+The eDrawings Toolbar can be displayed selecting “Show full UI in Solidworks preview” from Display Options.

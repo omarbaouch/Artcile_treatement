@@ -1,0 +1,6 @@
+With SOLIDWORKS PDM 2016 the PDM menu has been removed from the SOLIDWORKS standard menu bar. As shown in the figure below the previous version of SOLIDWORKS PDM included an Enterprise PDM menu for accessing the PDM Options.
+Enterprise PDM menu
+PDM Options is now only accessible from the
+SOLIDWORKS Tools menu
+as shown in the figure below:
+SOLIDWORKS PDM menu for SOLIDWORKS 2016

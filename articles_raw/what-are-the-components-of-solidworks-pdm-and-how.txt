@@ -1,0 +1,44 @@
+SOLIDWORKS PDM Professional
+is made up of different components including a Server, Archive Server and Clients. Watch the
+overview video
+below to understand what the components are and how they work together:
+With
+SOLIDWORKS PDM
+, engineers and designers no longer accidentally (or purposefully) step on each others toes while working on a file. With defined workflows, the right person at the right time has access to the file. He or she can then take ownership by checking it out of the vault to ensure they are the only designer making changes to the file. Then, with a simple check in, the file can be put back in the vault with any design changes noted in the file history.
+How does SOLIDWORKS PDM work?
+To any user, it will look and feel the same because the view into the secure vault is through Windows Explorer or built right in to SOLIDWORKS in the task pane. The complexities behind the scene are completely transparent, making PDM a very easy tool to learn.
+The behind the scenes of SOLIDWORKS PDM is nothing more than a SQL database with workflows set up to define how the data moves through the organization. But, it can be set up to do much more than that—with the possibility of tying in to other management systems and even duplication and replication processes for multiple sites around the world.
+SOLIDWORKS PDM Capabilities
+Bring your design data under control and improve the way your teams manage and collaborate on product development by utilizing the features included with SOLIDWORKS PDM Professional:
+File Reference Management
+: Maintain all file references between SOLIDWORKS parts, assemblies, drawings, and other types of design data automatically.
+Revision and Version Control
+: Ensure the appropriate personnel are always working with the right version of a design.
+Advanced Searching
+: Take advantage of powerful file searching tools to quickly find the design data that you need across a range of file types.
+Electronic Workflow
+: Create an electronic workflow to formalize, manage, and optimize processes.
+Electronic Signature
+: Save time by using an automated, electronic process to circulate documents for signature and approval.
+Audit Trail and History
+: Maintain a complete history of product design, engineering, and development activities.
+Regulatory Compliance
+: Facilitate compliance with government regulatory requirements and industry standards.
+BOM Export
+: Export bill of materials (BOM) information for use in downstream applications and systems.
+BOM Editing
+: With the SOLIDWORKS PDM Professional system, you can use easy-to-configure templates to pull together all necessary product structure information and automate BOM information preparation.
+Multisite Replication
+: Support collaboration among design groups by replicating your data vault to multiple sites.
+ERP/MRP Connection
+: Maximize the value of your design data using SOLIDWORKS PDM Professional to connect with an ERP (Enterprise Resource Planning) or MRP (Manufacturing Resource Planning) application, and synchronize and improve the effectiveness of your business enterprise systems.
+Engineering Change Management
+: Significantly reduce the time needed to complete your design approval and engineering change order (ECO) processes with the automated electronic workflow system in SOLIDWORKS PDM Professional software.
+Learn more or get help with your PDM
+Javelin provides
+SOLIDWORKS PDM training courses
+and a variety of
+SOLIDWORKS PDM Services
+include installation and administration. We can even
+move your existing on-premise SOLIDWORKS PDM onto the cloud
+.

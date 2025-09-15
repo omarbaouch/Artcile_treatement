@@ -1,0 +1,15 @@
+SOLIDWORKS PDM SQL Server Statistics is information about what is stored in SQL Tables. This information is then used to generate optimized query plans. Great, but what does that have to do with SOLIDWORKS PDM? To understand that, we first need to understand what a query plan is.
+Query Plan
+A query plan is an ordered set of steps, used to access data in a SQL database. When processing a query, there are many alternative paths that SQL can follow and there can be can significant performance differences between alternatives. The SQL Query Optimizer, attempts to determine the most efficient way to execute a query. Since PDM operations regularly query database tables, Statistics can have a significant impact on SOLIDWORKS PDM performance.
+SQL Server Statistics
+Statistics contain information on the density and distribution of data within a database table column or columns. Statistics are created automatically when a Index is created and these are referred to as Index Statistics. Indexes are used to find rows with specific column values. Without Indexing, queries would start with the first row and work its way through the entire table. Index Statistics determine whether an index is useful or not, for a particular query. Column Statistics are created manually using the ‘Create Statistics’ command or manually by the Database option ‘Auto Create Statistics’.
+Managing Statistics
+Statistics are great for optimizing queries but when the database changes, the Statistics can become out of date. In order to maintain query performance, it is important that these statistics get updated regularly, SQL contains options to automatically manage Statistics. These options are Auto Create and Auto Update:
+Auto Create will automatically create missing Statistics.
+Auto Update will update Statistics, when they’re deemed to be out of date.
+Both of these are set from the Options tab, of a Database’s Properties. The Database Properties are available by right-clicking on a Database.
+Auto-create and Auto-up Statistics
+Additional query optimization can be scheduled through SQL Maintenance Plans.
+Maintenance Plan Tasks
+NOTE
+: While this can lead can lead to increased query performance. Updating query Statistics, requires that the queries to be recompiled. This can have the effect of reducing performance, so frequent updating of Statistics should be avoided.

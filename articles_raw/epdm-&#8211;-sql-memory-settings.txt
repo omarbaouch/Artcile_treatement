@@ -1,0 +1,13 @@
+The SQL server will use up memory based on available system resources. Once the memory is allocated it may not be released until the service is restarted. This is normal behavior for SQL and is not a memory leak. The maximum memory used can be controlled through SQL management studio. Generally this option does not need to changed, unless memory usage is proving to be an issue for other applications running on the server.
+Start
+SQL management studio
+and log-in
+Right click on the server and choose
+Properties
+.
+Select the
+Memory
+tab and enter the maximum value.
+A general rule is set the maximum server memory to total physical RAM minus 2 GB for the operating system and other applications. Please refer to Solidworks Knowledgebase article
+S-055090
+for more details. The knowledegebase is available to all subscription customers, by logging into the Solidworks Customer Portal.

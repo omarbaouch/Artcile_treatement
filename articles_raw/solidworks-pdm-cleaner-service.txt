@@ -1,0 +1,42 @@
+When files are
+DESTROYED
+(this is different to being deleted and likely only the admin has permission), they aren’t removed from the vault archive until the SOLIDWORKS PDM Cleaner Service has been run.
+This can cause issues when your IT admin is frantically trying to clear space when the hard drives are close to being full on the archive server and not seeing results from all the file destruction.  In this situation a better option would be to spread the archive over multiple drives (see
+here
+), but if this isn’t an option you can change the time the cleaner service runs from the default 3 AM.
+Changing the schedule for SOLIDWORKS PDM Cleaner Service
+On the Archive Server open the Registry Editor
+Start menu > Run > regedit
+Run Regedit
+Navigate to the key
+HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\VAULTNAME\
+Browse to the Vault
+Right-Click within > New > String Value > Named ‘
+Cleaner
+Schedule’
+Edit the CleanerSchedule entry
+For value data, enter the schedule string in format
+Minute Hour Weekday
+(See below for more information)
+In the below example it’s running every Monday at 1:00am
+Enter time value
+Restart the archive server service for the changes to be implemented
+Restart the Server
+Schedule Format
+Minute - Use numerals 0 through 59.
+
+Hour - Use numerals 0 through 23, where 0 is midnight
+
+Weekday - Use numerals 1 through 7, where 1 is Monday.
+Examples
+0 0 *
+Run every day at midnight.
+0 2 1-5
+Run every Monday through Friday at 2 a.m.
+0 * *
+Run every hour on the hour every day.
+0 6-18 1-5
+Run every hour between 6 a.m. and 6 p.m. Monday through Friday.
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

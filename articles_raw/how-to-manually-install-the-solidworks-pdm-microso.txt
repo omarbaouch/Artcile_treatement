@@ -1,0 +1,66 @@
+SOLIDWORKS PDM Professional
+includes a Microsoft Office Add-in for Office products such as Word, Excel and PowerPoint that allows you to perform PDM vault commands on open documents.
+SOLIDWORKS PDM Menu in Microsoft Word
+You can select the Microsoft Office add-in (
+Microsoft Office Integration
+) option when installing the SW PDM client if Office applications are detected on the system.
+Microsoft Office Add-in Integration
+Manual installation of Microsoft Office Integration
+If the SOLIDWORKS PDM installation wizard was not able detect the Office applications, you can manually install the add-in by following the instructions provided below:
+Step 1:
+Verify your MS Office version is 32-bit or 64-bit. The best method is to open the Office application and go to
+File
+,
+Help
+, and view the
+About
+information. It should state if the application is 32-bit or 64-bit as shown in the figure below:
+Office Version Information
+Step 2:
+Browse to the SOLIDWORKS Downloads folder and look for the folder “
+SWPDMClient”
+folder
+SOLIDWORKS download folder
+Step 3:
+Locate the Office add-in .CAB files and open
+Office.cab
+for 32-bit Office or
+Office64.cab
+for 64-bit Office products.
+Step 4:
+Extract
+epdmlib.dll
+and
+office.dll
+into the SOLIDWORKS PDM Installation directories
+For 32-bit Office applications, folder location
+C:\Program Files (x86)\SolidWorks PDM
+For 64-bit Office applications, folder location
+C:\Program Files\SOLIDWORKS PDM
+For 64-bit Office files,
+rename
+the files to
+epdmlib.dll
+and
+office.dll.
+Step 5:
+Start a
+command prompt
+and
+Run as Administrator
+Run as administrator
+Step 6
+: Change the location to the installation folder where the two files were copied and type the following commands (followed by
+Enter
+keystroke):
+regsvr32 epdmlib.dll
+regsvr32 office.dll
+Command prompt entries
+PDM Add-in enabled in office application
+Step 7:
+Start the Office application and the SOLIDWORKS PDM add-in tab should now show up.
+If the Office add-in is missing,
+follow the instructions to manually turn on the add-in
+.
+NOTE:
+If the SOLIDWORKS PDM tab still does not load, try restarting the system.

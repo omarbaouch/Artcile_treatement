@@ -1,0 +1,18 @@
+In my
+previous article
+, we looked at Creating Branches from a Source file, so that we could test different concepts, on these Branches. In this article, we will look at how to combine these changes into a Source File by Merging Branched files with their source.
+As with Branch, Merge is available from the Tools pull-down, in the PDM Local Vault view.
+Selecting Branch from the Tools Pull-down of the Local Vault View
+The dialog Box for Merge, is similar to that for Branch but the Branch Name is not specified, as it already exits for the Source files and the Branches.
+Merge Dialog Box
+The Source and Branch file will be checked out for this operation, if they’re not already checked. Only one file can be Merged, at a time.
+Like the Branch operation, the Merge operation will appear in the History of the file.
+Merge Operation in History of a File
+A list of Associated Branches, is available by right clicking on a Branch or the Source file.
+Selecting Associated Branches
+Selecting a Branch, from the Associated Branches fly-out, will display a report, that lists the Source file and any Branches.
+Associated Branches
+There are options, to open to open the report as a .csv file (in a spreadsheet solution such as Excel), or to save the report as an external file.
+Additional notes:
+While the Branch operation, can be seen in the History of a file, the file cannot be Rolled Back, to a point before the Branch
+While the images in this article, so SOLIDWORKS files, other file types can be Branched.

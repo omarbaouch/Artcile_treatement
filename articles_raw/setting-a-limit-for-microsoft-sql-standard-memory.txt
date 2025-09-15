@@ -1,0 +1,17 @@
+Microsoft SQL Server doesn’t share it’s toys well with others.  By default, SQL Server Standard will dynamically use up memory based on what resources are available.  As a result,
+it’s fairly common for it to take up ALL available memory on a system and not release it back until the service is restarted
+.  However there are generally other processes running, not to mention the operating system itself, that will run out of memory due to SQL’s greedy ways.  This will sometimes result in performance issues and instability.
+The way to address this is to limit the amount of memory that Microsoft SQL Standard is allowed to use.  By default this limit is set to 2TB of RAM, which is what allows SQL Server Standard to think it can use up all resources.
+This limit is set by going to the SQL Server Management Studio and right clicking on the instance name at the top of the Object Explorer and going to “Properties”.
+SQL Server Management Studio Properties
+Go to the “Memory” page and see the “Maximum server memory”.
+Maximum Server Memory
+PLEASE NOTE:  This only applies to SOLIDWORKS PDM Professional vaults.  SOLIDWORKS PDM Standard uses Microsoft SQL Express, which is limited to only use 1GB of RAM.
+So how much RAM should SQL be allowed to use?
+Well that depends on a few factors.
+Is this server dedicated for hosting just the SQL Database for PDM or is it also hosting the PDM Archive Server service?
+If it’s also hosting the  Archive Server service then we will need to hold back about 500MB of RAM for that service.
+Is there any other software running on this server?
+There shouldn’t be.  SOLIDWORKS highly recommends that the server hosting the PDM Server services be dedicated for that purpose, however if that is not possible for your situation, you will need to determine what other programs are running on this server and what their RAM requirements should be.
+Are there any other SQL instances running on this server?
+If the SQL server is only hosting SOLIDWORKS PDM then you won’t need to worry about this, but if there are multiple instances for other softwares, then each instance will need to be configured so that they share the available memory.  So for instance if you have 3 SQL instances and determine there is only 10GB of memory that should be made available for SQL, that memory will need to be distributed among each of the instances, setting the maximum value on each so that the total does not exceed the available memory.

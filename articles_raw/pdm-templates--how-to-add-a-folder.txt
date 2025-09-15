@@ -1,0 +1,55 @@
+Templates can be used to create a new folder or even a folder structure. This can be done through a simple right click in the Explorer Vault View.
+Templates are created through the Template node of SolidWorks Enterprise PDM Administration. Right click on the node and select and select
+New Template
+.
+Provide a
+Name
+for this template.
+Assign whose permissions are to be used when running the template.
+We will not be looking at Template Cards at this time and will be going directly to
+Files & Folders
+. Click on
+Template Variables
+.
+We want to associate the name of one of our folders, to a serial number that has already been created in the
+Serial Number
+node of SolidWorks Enterprise PDM Administration. We name the
+Template Variable
+, choose
+Serial Number
+as the
+Type
+and choose the required serial number from the
+Serial Number
+pull-down. To return to the Folder tab we press on
+OK
+. The “t_” at the beginning of the template variable name, helps identify that this is a template variable.
+Both Root Folders (yellow icon) and Sub Folders (green icon) can be created. Root folders are created at the root level of the vault.
+A folder can be associated to a
+Template Variable,
+so that it displays the value of the that variable. In this example the “Project Number”
+Serial Numbe
+r. the
+“%”
+must proceed and follow the variable name. To avoid typo’s, copy the
+Template Variable
+name, from the
+Template Variables
+window.
+Sub folders can be added to the parent folder (shown in yellow), or to an existing sub-folder (shown in green).
+PDM Template setting that is often mis looked…
+To copy
+Template Variables
+to a folder’s data card, right click the folder and go to
+Properties.
+Then you can select the
+Card Variable
+that will be mapped to the
+Template Variable
+.
+An
+Icon
+is added.
+And Permissions are assigned.
+In the SolidWorks Enterprise PDM Explorer Vault View, we can run our template from a right mouse menu.
+The template will generate the parent folder and any sub folders. In our example, the parent folder reflects the Project Number serial number.

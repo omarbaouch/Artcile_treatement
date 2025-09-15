@@ -1,0 +1,11 @@
+Sometimes when files are moved, renamed or deleted, file references can be broken. Update References can be used to re-establish the file references.
+From the
+Tools
+pull-down menu Select
+Update References
+Select
+Find
+Point to the folder where the referenced files should be located
+Select the files to update and click
+Finish
+.

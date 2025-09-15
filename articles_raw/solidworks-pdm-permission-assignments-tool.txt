@@ -1,0 +1,23 @@
+If you’ve had the honor of being named the local vault administrator then it’s extremely likely that someone has approached you regarding their SOLIDWORKS PDM Permission Assignments:
+“I need to be able to
+<Fill in the blank>
+, but I can’t.
+<Random Name>
+can, but I’m not allowed.  Why is life so unfair?”
+Previously as a vault administrator, it was a constant subject at my desk.  I would often be looking in the vault permissions, checking who had permission to do what and whether I needed to add a group to a folder permission of a new folder.  Within the Administration Tool, there’s a SOLIDWORKS PDM Permission Assignments tool that will allow you to quickly look at a vault folder, and see which groups have permissions assigned to it.
+Permission Assignments
+Administration Tool > [Vault Name] > Groups
+Right-Click > Permission Assignments
+Group Permission Assignments
+Select the folder you’re interested in;
+Permission Assignments
+Folders
+– Lists the folders in the vault
+Groups with permissions
+– Lists the groups or users that have permissions for the selected folder
+This allows us to quickly see which groups have permissions assigned to a specific folder, without opening each group properties dialog separately.
+Note
+: Permission Assignments is also available at the User level via the Administration Tool, but as a general rule (outside of the admin user) we recommend only assigning permissions at the group level
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

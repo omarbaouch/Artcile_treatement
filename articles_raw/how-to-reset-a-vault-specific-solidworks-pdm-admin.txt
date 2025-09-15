@@ -1,0 +1,42 @@
+In a previous post I showed you how to
+reset the ‘default’ SOLIDWORKS PDM Vault Admin Password
+. If you’ve ever had the chance to participate in one of my
+administering SOLIDWORKS PDM training class
+, you’ve likely heard my
+rant
+lecture on the benefits of a
+sandbox vault
+.
+A Sandbox Vault gives us a place to test and troubleshoot vault issues or changes in a safe place, before implementing any changes in our primary production vault.  This sandbox vault isn’t something we’ll likely be using daily, and with that said; it’s easy to forget the password as we’re maybe not using it often.  I recently had a scenario where I needed to reset the SOLIDWORKS PDM Admin Password, in test vault without affecting my primary vault.
+Reset a vault specific Admin password
+Login to the archive server with local administrative permissions
+Open the registry editor
+Start > Run > Regedit
+Start > Run > Regedit
+WARNING
+: Please be very careful when editing or deleting any entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.
+Navigate to;
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\
+[vaultname]
+\ConisioUsers
+Delete the key ‘Admin’
+Delete the Admin key
+Start the Archive Server Configuration Tool
+Start > Programs > SOLIDWORKS PDM > Archive Server Configuration
+Start SOLIDWORKS PDM Archive Server
+Archive Server Configuration Tool > Archives > [Vault Name]
+Right-Click Properties > Properties
+Archive Server Configuration Tool > Archives > [Vault Name]
+Select the ‘Login’ tab
+Clear the checkbox ‘Use default Admin User’
+Enter the existing default Admin password under ‘Current Password’
+Enter the new password for the vault specific admin account
+Default login type
+Note
+: If the default Admin password is lost or forgotten,
+you can use this guide to reset it.
+After hitting OK the ‘Admin’ key will be recreated in the registry and the new password set
+Admin key recreated
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

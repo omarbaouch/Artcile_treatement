@@ -1,0 +1,19 @@
+The Bill of Materials (BOM) is such an important report yet it is surprising the number of users that do not have a formal strategy in place with how their bill of materials is created, edited and approved.  I’ve seen clients who don’t even use the SOLIDWORKS BOM functionality and continue to use old techniques such as manually counting and entering lines in Microsoft Excel.  A number of years ago, there were good excuses why this still might be necessary, but it is definitely not the case anymore!
+To see the SOLIDWORKS BOM in action, I would recommend watching this video:
+SOLIDWORKS BOM Types
+To understand a little more about the bill of materials functionality within SOLIDWORKS and
+SOLIDWORKS PDM
+, I have noted a few different versions of the BOM you should be aware of:
+SOLIDWORKS BOM in an Assembly
+SOLIDWORKS BOM in a Drawing
+SOLIDWORKS PDM BOM
+SOLIDWORKS PDM Computed BOM
+SOLIDWORKS PDM Saved BOM
+SOLIDWORKS BOM Best Practice
+When planning your bill of materials process, it would be advantageous to have a good understanding of what you can and can’t do with these BOM’s and the roles that they play.  Here are a few thoughts on the matter related to recommended process.
+If there is a lot of rearrangement of the bill of materials, removed components, embedded cutlists, etc. then I would recommend the SOLIDWORKS BOM in an Assembly
+be the best starting point.  It provides the most amount of control and manipulation with how the SolidWorks design is constructed.  This BOM can be placed directly on a drawing avoiding the need to recompute and rearrange the BOM on the drawing.   If the majority of your rearrangement of the BOM is due to what is on the drawing, you may consider starting on the drawing and avoiding the need for the assembly BOM all together.
+If control over the bill of materials is required, SOLIDWORKS PDM can help there
+.  The starting point for the BOM in SOLIDWORKS PDM is either the “SOLIDWORKS PDM BOM” which is identical to the SOLIDWORKS Assembly or Drawing BOM or the “SOLIDWORKS PDM Computed BOM” which is computed by SOLIDWORKS PDM on the fly based on file reference counts.  If there is no modification to the BOM in SOLIDWORKS, these are likely going to be the same.  Both of these are under revision control with the assembly or drawing from which they are derived from.
+To provide an increased amount of control, either one of these BOM’s can be saved to create a “SOLIDWORKS PDM Saved BOM”.  This treats the BOM as it’s own entity and provides the flexibility of changing pretty much whatever you want.
+Regardless of the BOM you are using in SOLIDWORKS PDM, you always have the ability to compare and export which can help a tremendous amount when communicating with other departments.

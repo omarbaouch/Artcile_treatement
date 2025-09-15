@@ -1,0 +1,10 @@
+Using Transition Conditions, files can be pushed to a branch of workflow, or into a different workflow.
+This simple workflow illustrates how we can filter which destination workflow a file will enter, based on input from a file data card.
+Filter Workflow
+In this example file data card, the value for the variable Part Type, can be set to Custom or Standard.
+Data Card
+Automatic transitions are used in this workflow, so that the only input required, is through the data card.
+Automatic filter workflow
+Conditions are set for each transition, to filter which direction a file will take in the workflow. A file with a value of  ‘Custom’, for the variable Part Type, will transition to the Custom workflow link.  A file with a value of  ‘Standard’, for the variable Part Type, will transition to the Standard workflow link.
+Condition part type
+The workflow links will then move the files to the appropriate destination workflow.

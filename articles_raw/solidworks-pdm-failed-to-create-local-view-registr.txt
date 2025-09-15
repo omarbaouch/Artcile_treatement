@@ -1,0 +1,15 @@
+This article is geared towards troubleshooting a particular error when creating a SOLIDWORKS PDM Local View. The steps outlined in this article can be applied to other scenarios, where creating a Local View has failed.
+Failed to Create Local View
+For this particular scenario, examining the PDM User Log, after the view setup fails, reveals an entry that states:
+“Could not find server port for vault ‘Vault Name’ in the registry – Could not find vital registry information for this view. You might have to attach to this vault again to repair the registry.”
+Accessing the PDM User Log
+What is the cause of this PDM error?
+This message indicates that during the Local View creation process, some information failed to write to an area of Windows called the Windows Registry. If a Windows user lacks sufficient permissions, SOLIDWORKS PDM may not be able to write to the Registry. Logging into that computer as the local system administrator can allow the creation of the Local View.
+In some cases, there can be errors in the Registry that will prevent the creation of the Local View, even when logged into Windows as an administrator.
+Resolving the error
+In these cases,
+repairing the PDM installation
+should be the next step. If a repair fails to allow the creation of the Local View, then it may be necessary to
+manually delete the remnants of a previous Local View first
+. With these remnants deleted, you should now be able to create a new Local View.
+For the message highlighted in this article, you will likely need to delete the remnants of a previous Local View first.

@@ -1,0 +1,18 @@
+If you have had to remove and re-attach a SOLIDWORKS PDM Vault View on a client computer, you can sometimes encounter an odd Status value which will block you from being able to complete the process of recreating the view:  “
+Attached; Missing Information
+“.
+This is actually being caused by the View Setup utility detecting some existing information left over from the previous view
+.
+This can happen if a system has been partially restored, or if the vault view was deleted but something has interfered with the removal process and some of the registry entries for the view are still present.
+To resolve this behavior all you will need to do is remove the orphaned registry values.
+**Warning**
+Only make direct modifications to the registry if you are familiar with working in the Windows Registry.  If you are not, contact your SOLIDWORKS Value Added Reseller for assistance.
+You will need to ensure that the registry key for the specific vault that you are trying to attach to does not already exist in the following locations:
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VAULTNAME]
+HKEY_CURRENT_USER\Software\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VAULTNAME]
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]
+If the vault name is displaying in any of these locations, delete the key(s) and run the View Setup utility again.
+Video Demonstration
+Here is a video to demonstrate the steps:
+https://youtu.be/e5e7tWqj4nc

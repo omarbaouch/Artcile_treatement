@@ -1,0 +1,20 @@
+States and transitions, have a large number of settings, which include permissions, conditions, actions and notifications. Having to manually duplicate settings between states and transitions can be time consuming, and there is always the chance of forgetting to recreate a setting. similar states and transitions can be created quickly and precisely by using copy and paste.
+To show how this works here is an example workflow:
+Example Workflow
+The  transition called
+Released Documents
+contains a number of actions. Notifications are defined and permissions are set.
+Transition actions
+For this workflow we would like to have a transition that bypasses the approval process and we also require the same settings as the Release Documents transition. Instead of manually creating these settings, we can right click on the Release Documents transition and select Copy
+Copy Transition
+And then right-click on a blank area of the workflow and choose Paste from the shortcut menu.
+Paste Transition
+We are prompted to select the source state
+Select Source State
+And then the destination state.
+Destination State Selected
+All settings including permissions, conditions, actions and notifications are copied. All that is left to do is to rename the transition.
+Rename the Transition
+The change to the workflow is now complete.
+New Workflow
+The same process can be used for changing states, as well as workflow links. Items can also be copied between workflows.

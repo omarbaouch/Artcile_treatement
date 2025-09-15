@@ -1,0 +1,13 @@
+A nice new function has been added to the out of the box SOLIDWORKS PDM Convert Task in
+SOLIDWORKS PDM Professional 2017
+.  When building the file name for the output file, it is now possible to select Data Card Variables right within the interface.
+In previous releases of the SOLIDWORKS PDM Convert Task, it was possible to add Variable values to the output file name, but it required extensive manual editing of the task script.
+Now in 2017 this function is built right into the default task script.
+To take advantage of this new feature:
+Update the Task Add In to the latest version.
+Then double click the Convert Task (or any custom task created from the Convert Task) and go to the  “Output File Details” page.
+Click the > box next to the output path and select the Data Card Variables desired.
+SOLIDWORKS PDM Convert Task Select Variables
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

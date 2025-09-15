@@ -1,0 +1,79 @@
+Do you want to expand your existing SOLIDWORKS PDM system into a full SOLIDWORKS Product Lifecycle Management solution in order to connect your business systems and processes? Aras PLM from Javelin is the solution you are looking for.
+Aras PLM works directly with SOLIDWORKS PDM Professional as a full-featured, business-ready solution for Product Lifecycle Management
+(PLM) that drives cross-functional collaboration and extends engineering business processes throughout the company and the extended supply chain.
+Scalable and secure, Aras PLM includes users company-wide in business process workflows and provides out-of-the box functionality including Engineering BOM Management, Enterprise Change, Integrated Project Management and much more.
+Aras PLM for SOLIDWORKS PDM highlights:
+Engineering BOM that’s ready for release to manufacturing
+Enterprise-wide business process management for change control across the company and supply chain
+Stage-gate project management process seamlessly connects product items to the project plan as deliverables and milestones
+Aras PLM and SOLIDWORKS PDM
+A PLM solution for companies that use SOLIDWORKS
+Built on top of SOLIDWORKS PDM Professional,
+Aras PLM delivers powerful capabilities that are highly sought-after by companies that run SOLIDWORKS PDM
+. You get exactly what you need without changing existing design processes or sacrificing your PDM installation, which makes this the ideal PLM solution for companies that use SOLIDWORKS.
+Aras PLM runs in a standard web browser
+providing non-engineering users with a familiar, easy-to-use look & feel. With Aras PLM companies improve product quality, accelerate time to market and streamline critical processes such as New Product Development & Introduction, Complex Configuration Management, Enterprise Change Management, Supplier Management, Outsourced Manufacturing and Quality Compliance.
+Watch the demonstration video below to see how Aras PLM works in conjunction with SOLIDWORKS
+https://youtu.be/QBtX2LsgXy8
+Extending the SOLIDWORKS PDM system
+Aras PLM offer SOLIDWORKS users the following additional functionality:
+Engineering Bill of Materials
+Manage complex multi-level engineering BOMs
+Version and revision control BOMs, Parts, SKUs, and related items
+Complete product structure including parts, assemblies, sourced components and more
+Enterprise Change Management
+Graphical online change process with branching, parallel paths, voting, delegation and escalation
+Identify multiple affected items for impact analysis
+Email notification and alerts provide reminders
+Integrated Project Management
+Portfolio dashboard with traffic light indicators
+Secure Web-based project collaboration
+Scheduling and Gantt charts
+Requirements Management
+Multi-discipline requirements management
+Trace matrix
+Embedded in PLM
+Classification Driven Parts & Documents
+Item classification for complex configurations
+Class properties inherited hierarchically
+Extensible classification structures
+Alternate & Substitute Parts
+Interchangeability for form, fit, function, logical, physical, performance, reliability and more
+Specify universal and BOM-specific options
+Authorize for use without impacting quality
+AVL / AML
+Define preferred suppliers on a part-by-part basis
+Designate qualification status
+Maintain approved supplier database
+Quality Compliance
+Closed-loop quality processes for compliance
+FMEA product risk analysis and control plans
+ISO compliant processes and document control
+Dashboards, Scorecards & Reports
+Display graphical KPI metrics
+Standard one-click reports provide status
+Scorecards, dashboards and reports
+Aras PLM Change Management
+Aras PLM Benefits & Advantage
+For businesses currently using SOLIDWORKS PDM Professional (formerly SOLIDWORKS Enterprise PDM) there are many benefits and advantages that can be obtained with the addition of Aras PLM:
+Optimized for SOLIDWORKS
+: Built on top of SOLIDWORKS PDM Professional, Aras is the ideal PLM choice for SOLIDWORKS users.
+Complete PLM Solution
+: Feature-rich right out of the box, providing industry best practices you can take advantage of immediately.
+Model-based SOA Architecture
+: Real-time changes to business rules, forms, workflows, lifecycles and the data model without complex programming.
+Familiar Web-based UI
+: Standard web-browser and familiar look & feel make it easy for users throughout the company to get up and running fast.
+Superior Performance
+: Highly scalable, flexible and secure PLM solution across a full spectrum of product development, supply chain, sales, quality and manufacturing applications.
+Cross-functional Collaboration
+: Users throughout the extended enterprise can contribute, share and leverage critical product information in real time.
+Executive Visibility
+: Portfolio dashboard with status indicators the ability to drill down to details and take action.
+Aras PLM allows our SOLIDWORKS users to maintain their current design practices without disruption, and extends our processes for cross functional coordination. Together Aras enterprise PLM and SOLIDWORKS PDM Professional provide the ideal solution for us to streamline and simplify process complexity throughout the company.
+— David Baer, IT Project Manager, Spartan Motors
+Connect all your systems
+Aras PLM complements and extends existing systems, and an advanced model-based service-oriented architecture [SOA] on the Microsoft platform delivers unmatched flexibility to support competitive business processes. Open APIs with XML / SOAP Web services provide federated integration with other enterprise systems.
+Take the Next Step
+Interested in a SOLIDWORKS Product Lifecycle Management solution?
+Contact us to learn how Aras PLM will benefit your business »

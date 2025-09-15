@@ -1,0 +1,13 @@
+New in SOLIDWORKS PDM 2020 dialog boxes for the following nodes are customizable and can be resized:
+Edit Variable
+Serial Number
+Indexing Settings
+Cold Storage Schema
+Data Import/Export
+File Type Properties
+Customizable Columns
+BOM
+Dispatch
+Edit Template
+To resize the dialog boxes, the process is very similar to that of Windows Explorer — hover the cursor over one of the corners of the dialog box to be resized, and simply click, hold, and drag the cursor to resize to the desired size.
+Resize dialog box

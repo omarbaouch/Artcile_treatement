@@ -1,0 +1,3 @@
+SOLIDWORKS PDM Tasks are useful tools for automating processes, such as Printing, running the SOLIDWORKS Design Checker and Converting files. In the case of Converting files, there may be File Card Variables in the Source file we would like to map to the Converted file. When creating or editing a Task, this can be done from File Card tab, of the Task Properties dialog box.
+Task Properties Dialog: Mapping File Card Variables
+As well as mapping Variables from the Source file, Variables can be added to the Converted file, using Free Text, as the Source option.

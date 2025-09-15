@@ -1,0 +1,17 @@
+Included with the enhancements to the File Version Upgrade tool in PDM 2018, we can now notify users about the upgrade process.
+This is configured on the
+Upgrade Settings
+screen:
+File Version Upgrade Tool – Notify Users
+Then the specified vault users will be notified when the upgrade has been
+Started:
+File Version Upgrade Notification – Started
+When the process has
+Completed:
+File Version Upgrade Notification – Completed
+Paused
+,
+Resumed
+or if it has
+Failed
+.

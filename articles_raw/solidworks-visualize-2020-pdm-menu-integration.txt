@@ -1,0 +1,16 @@
+A great addition in
+SOLIDWORKS Visualize 2020
+is the new SOLIDWORKS PDM menu.  This menu provides better integration between Visualize and your data management tools.
+The menu will become active when a file stored in a
+SOLIDWORKS PDM Professional
+vault is opened in Visualize (
+this functionality is not currently available for
+SOLIDWORKS PDM Standard
+).
+SOLIDWORKS PDM Menu
+Now, directly through the Visualize interface, users can manage files in PDM.  Actions such as Get Version, Check In, Check Out and Change State can be performed through the drop menu.
+Version and Transition Comments can be entered directly through the interface without leaving the program.
+Version and Transition Comments
+Specific file information including, Local Version, Local Revision, Checked Out By, Checked Out In and the current Workflow State are all listed at the bottom of the menu.
+Additionally, you can open the file’s Data Card, and view or edit it inside the SOLIDWORKS Visualize program.
+Specific file information

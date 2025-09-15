@@ -1,0 +1,60 @@
+Part of the
+SOLIDWORKS PDM Standard Client installation
+is to select the SOLIDWORKS PDM Standard Client. But you can continue the installation selecting the SOLIDWORKS PDM Professional Client instead. In this post we will cover how to switch SOLIDWORKS PDM Client Installation from a Professional Client to a Standard Client.
+If you selected the wrong SOLIDWORKS PDM client type during the installation
+, you will come across many issues when trying to use SOLIDWORKS PDM. For example:
+Slow performance when opening folders in the PDM vault,
+Slow performance Check-in/out files,
+Slow performance when using the Search Tool, etc.
+Confirm the type of SOLIDWORKS PDM License
+Open
+SOLIDWORKS SolidNetWork License Manager Client,
+in the
+License Usage
+tab, select the correct license under
+Product
+:
+Type of SOLIDWORKS PDM Product
+In this case, we have SOLIDWORKS PDM Standard CAD Editor
+Go to Start menu and type admin to open
+Administration
+(SOLIDWORKS PDM Administration)
+Click on
+Help
+and
+About SOLIDWORKS PDM Administration…
+About SOLIDWORKS PDM Administration
+Review the options in the
+Client Type
+SOLIDWORKS PDM Professional Client Type
+We have
+SOLIDWORKS PDM Professional CAD Editor & Web
+client installed but the available license is
+SOLIDWORKS PDM Standard CAD Editor
+To Switch the Client Type, Launch the
+Windows Registry Editor
+, (In Windows 7, or Windows 10 go to the Start menu and type: regedit)
+In the Registry Editor expand
+HKEY_LOCAL_MACHINE
+then
+SOFTWARE
+then
+SolidWorks
+then
+Applications
+then
+PDMWorks Enterprise
+Windows Registry Editor
+Double click on
+PDMType
+, change
+Value data
+:
+1
+to
+0
+, press
+OK
+Edit PDMType String
+Note
+: SOLIDWORKS PDM Standard (PDMType Value = 0) & SOLIDWORKS PDM Professional (PDMType Value = 1)

@@ -1,0 +1,15 @@
+<p>This article is part of a series for troubleshooting common, and perhaps not so common, SOLIDWORKS PDM error messages.</p>
+<blockquote><p>SOLIDWORKS PDM ERROR: <em>&#8220;Could not create folder. Cause: The file/key name was invalid.&#8221; </em></p></blockquote>
+<p>This reported error can occur when executing a SOLIDWORKS PDM Template. <strong>The error is caused when a folder/file name being defined in the SOLIDWORKS PDM Template contains an invalid character</strong>. Later versions of SOLIDWORKS PDM will capture the invalid character, and prevent it from being used in the folder/file name</p>
+<p><div id="attachment_50568" style="width: 943px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-50568" class="wp-image-50568 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-01-46.png" alt="SOLIDWORKS PDM Invalid Character" width="933" height="493" title=""><p id="caption-attachment-50568" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-50568 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-01-46.png" alt="SOLIDWORKS PDM Invalid Character" width="933" height="493" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-01-46.png 933w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-01-46-600x317.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-01-46-768x406.png 768w" sizes="(max-width: 933px) 100vw, 933px" /></noscript> Invalid Character</p></div></p>
+<p>If the Template was created in an earlier version of SOLIDWORKS PDM, an invalid character may exist in the folder/file name defined in the PDM Template. In this situation, a user will receive the message &#8220;Could not create folder. Cause: The file/key name was invalid.&#8221;  when executing the PDM Template. Editing the PDM Template and removing the invalid character will resolve this issue.</p>
+<p><strong>Invalid characters</strong> for folder/file names include:</p>
+<pre>" (Double quote)
+/ \ (Forward / Back slash)
+: (Colon)
+? (Question mark)
+* (Asterisk)
+&lt; &gt; (Smaller / Bigger than)
+| (Pipe)
+and any character created when pressing the CTRL key</pre>
+<p>This error message can also occur if the folder/file name is empty.</p>

@@ -1,0 +1,26 @@
+One of the best features of SOLIDWORKS PDM has been the integration with Windows Explorer. New in
+SOLIDWORKS PDM 2021
+, the ribbon control of Microsoft® Windows® File Explorer is available in SOLIDWORKS PDM File Explorer along with new keyboard shortcuts:
+Windows Explorer SOLIDWORKS PDM Tab
+The file list and the search result lists also support all Windows File Explorer view types except for Content.
+Click on the blue person icon to change the
+Language
+and view the
+About
+information of the installed SOLIDWORKS PDM product.
+Setting language option
+The support for Back and Forward from Windows Explorer Address bar are accessible.
+SOLIDWORKS PDM Keyboard Shortcuts
+New in
+SOLIDWORKS PDM 2021
+, you can use keyboard shortcuts for commonly used commands such as Check-In or Check-Out:
+PDM Action
+Keyboard Shortcut
+Check In
+CTRL + I
+Check Out
+CTRL + O
+Undo Check Out
+CTRL + U
+Change State
+CTRL + T

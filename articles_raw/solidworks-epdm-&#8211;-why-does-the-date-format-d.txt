@@ -1,0 +1,10 @@
+When the Special Value “Today’s Date” is used in the control properties of a data card, the date is drawn from Windows and the format is defined by Windows. Other dates use the date format specified during the creation of the EPDM vault. This means that the formats can differ. To resolve this mismatch either the Windows or EPDM date format can be changed.
+Today’s date
+The Windows date format can be changed from
+Windows Control Panel
+>
+Region and Language
+. EPDM references the short date format.
+Windows Region and language settings
+In EPDM the format can be changed by right-clicking on the vault in the EPDM admin, and selecting properties.
+EPDM date

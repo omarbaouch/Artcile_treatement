@@ -1,0 +1,30 @@
+Before your
+SOLIDWORKS PDM
+users can start working in the vault they will need to be set up within SOLIDWORKS PDM first, to do this follow the steps below.
+Creating New SOLIDWORKS PDM Users Step-by-Step Guide
+Open the “Administration” tool and log in to the vault as “Admin” or a user that has the “Can Administrate Users” Administrative Permission.
+You can find this tool by going to a computer that has SOLIDWORKS PDM installed on it and then Start Menu -> “SOLIDWORKS PDM” Folder -> “Administration”.
+Navigate and expand the “Users and Groups Management” node.
+Right-click the “Users” node and select “New User”.
+User’s right-click context menu
+In the “Add User” dialog box:
+If the user account is already listed, check the box, highlight it, and move on to “Step 6”.
+User accounts are listed if they have already been added to another vault on the same archive server but have not been added to the vault you are managing.
+or if the user account is not listed, select “New SOLIDWORKS PDM User”.
+PDM “Add Users” dialog box
+In the “New User” dialog box, enter the user’s login name and click “OK”.
+“New User” Dialog box
+Back in the “Add Users” dialog box, type in the user’s details
+To give this user permissions already assigned to an existing user, use the dropdown list to select the existing user in the “Copy permissions and settings from User:” section and the new user will inherit all permissions and groups that the existing user had.
+Fill in the new User’s basic information
+Click “Next”.
+In the user’s “Properties” dialog box, use the nodes to set the permission for how the user can work in SOLIDWORKS PDM
+For basic viewing privileges please see our article on
+“
+What Permissions are needed to view files in SOLIDWORKS PDM?”
+.
+Click “OK” to complete the user creation process, you should now see the user list under the “Users” Node.
+“Users” node list of current users
+Now if you already have a
+vault view
+set up the new SOLIDWORKS PDM user that has just been created will be able to log in and start working.

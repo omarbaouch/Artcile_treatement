@@ -1,0 +1,57 @@
+<p>Have you ever checked out a file in <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/" target="_blank" rel="noopener">PDM</a>, did some work and changes on the file only to realize that when you wanted to do a &#8220;Check in&#8221; you couldn’t as the file was “Read-only”? This can cause some extreme headaches, and even potentially some lost work if you don&#8217;t know what is happening. Here is one of the most common reasons for this and how to resolve it.</p>
+<h2>Windows Folder Permission issues between Windows and PDM causing &#8220;Read-only&#8221; files</h2>
+<p>PDM needs the ability to write and modify files, when you do a &#8220;Check out&#8221; or &#8220;Check in&#8221; action, typically the &#8220;Read-only&#8221; flag on the cached file gets toggled. When you do a check out the &#8220;Read-only&#8221; flag on the file should toggle off, and when you do a &#8220;Check in&#8221; it should get toggled back on. This feature/process is necessary to make sure users aren&#8217;t modifying files inside of PDM without checking out the file. Sometimes the currently set Windows Folder permissions block PDM from switching the “Read Only” check box on files. To resolve this we need to make sure a couple of permissions are set on the root of the vault.</p>
+<div id="attachment_64428" style="width: 658px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64428" class="wp-image-64428 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Read-only-check-box-Properties-window.png" alt="File Properties showing the &quot;Ready-only&quot; check box" width="648" height="488" title=""><p id="caption-attachment-64428" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64428 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Read-only-check-box-Properties-window.png" alt="File Properties showing the &quot;Ready-only&quot; check box" width="648" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Read-only-check-box-Properties-window.png 648w, https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Read-only-check-box-Properties-window-600x452.png 600w" sizes="(max-width: 648px) 100vw, 648px" /></noscript> File Properties &#8220;Read-only&#8221; check box</p></div>
+<ol>
+<li>Open File Explorer</li>
+<li>Navigate to the location where your vault was set up
+<ul>
+<li>Typically this is the C drive for most people</li>
+</ul>
+</li>
+<li>Right-click the Vault View and select &#8220;Properties&#8221;
+<ul>
+<li>If you have Windows 11 you might need to hit &#8220;Show More Options&#8221; first and then select &#8220;Properties&#8221;</li>
+</ul>
+<p><div id="attachment_64432" style="width: 472px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64432" class="wp-image-64432 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Right-Click-Properties.png" alt="Right Clicking the Vault View and select &quot;Properties&quot;" width="462" height="168" title=""><p id="caption-attachment-64432" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64432 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Right-Click-Properties.png" alt="Right Clicking the Vault View and select &quot;Properties&quot;" width="462" height="168" title=""></noscript> Vault View Properties.</p></div></li>
+<li>Select the &#8220;Security&#8221; Tab</li>
+</ol>
+<div id="attachment_64429" style="width: 1050px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64429" class="wp-image-64429 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Security-Properties-Window.png" alt="Showing the last tab called &quot;Security&quot;" width="1040" height="684" title=""><p id="caption-attachment-64429" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64429 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Security-Properties-Window.png" alt="Showing the last tab called &quot;Security&quot;" width="1040" height="684" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Security-Properties-Window.png 1040w, https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Security-Properties-Window-600x395.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Security-Properties-Window-768x505.png 768w" sizes="(max-width: 1040px) 100vw, 1040px" /></noscript> Security Tab</p></div>
+<ol start="5">
+<li>Click &#8220;Edit&#8221;</li>
+<li>Click &#8220;Add&#8221;</li>
+<li>Add your Windows User</li>
+<li>You can check this by opening the Command Prompt typing &#8220;Whoami&#8221; and using the Windows credentials that pop up.
+<ul>
+<li>In this case, I am using the domain\username &#8220;azuread\codyfoley&#8221;.</li>
+</ul>
+</li>
+</ol>
+<div id="attachment_64431" style="width: 458px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64431" class="wp-image-64431 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/whoami-Command-Prompt.png" alt="In the command prompt, used the &quot;Whoami&quot; command to see what user account I am logged into windows with" width="448" height="153" title=""><p id="caption-attachment-64431" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64431 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/whoami-Command-Prompt.png" alt="In the command prompt, used the &quot;Whoami&quot; command to see what user account I am logged into windows with" width="448" height="153" title=""></noscript> The &#8220;whoami&#8221; in the &#8220;Command Prompt&#8221;</p></div>
+<ol start="9">
+<li>Click &#8220;OK&#8221;.</li>
+<li>With your name highlighted check the &#8220;Full Control&#8221; box
+<ul>
+<li>Additionally, check the &#8220;Full control&#8221; box on the &#8220;User&#8221; group as well</li>
+</ul>
+</li>
+</ol>
+<div id="attachment_64430" style="width: 372px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64430" class="wp-image-64430 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Full-Control-Security-Box.png" alt="Selected &quot;Full control&quot; in the &quot;Allow&quot; column" width="362" height="450" title=""><p id="caption-attachment-64430" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64430 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/Full-Control-Security-Box.png" alt="Selected &quot;Full control&quot; in the &quot;Allow&quot; column" width="362" height="450" title=""></noscript> Select &#8220;Full control&#8221; in the allow column of the Group/User name</p></div>
+<ol start="11">
+<li>Click &#8220;Apply&#8221;</li>
+<li>Click &#8220;OK&#8221;</li>
+</ol>
+<p>&nbsp;</p>
+<p>Now on any files that have checked out that are opening as &#8220;Read-only&#8221;, you can manually turn off their flags and then check the file in. To do this, please.</p>
+<ol>
+<li>Find the file in the vault</li>
+<li>Right Click the file and then select &#8220;Properties&#8221;</li>
+</ol>
+<div id="attachment_64438" style="width: 360px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64438" class="wp-image-64438 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Right-Click-Properties-1.png" alt="Right click file and select &quot;properties&quot; " width="350" height="217" title=""><p id="caption-attachment-64438" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64438 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Right-Click-Properties-1.png" alt="Right click file and select &quot;properties&quot; " width="350" height="217" title=""></noscript> Right click -&gt; &#8220;Properties&#8221;</p></div>
+<ol start="3">
+<li>Un-check the &#8220;Read-only&#8221; flag on the file and select &#8220;OK&#8221;</li>
+</ol>
+<div id="attachment_64436" style="width: 658px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-64436" class="wp-image-64436 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Read-only-check-box-Properties-window.png" alt="Deselecting the &quot;Read-only&quot; check box" width="648" height="488" title=""><p id="caption-attachment-64436" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-64436 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Read-only-check-box-Properties-window.png" alt="Deselecting the &quot;Read-only&quot; check box" width="648" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Read-only-check-box-Properties-window.png 648w, https://www.javelin-tech.com/blog/wp-content/uploads/2024/07/File-Read-only-check-box-Properties-window-600x452.png 600w" sizes="(max-width: 648px) 100vw, 648px" /></noscript> Unselect the &#8220;Read-only&#8221; box</p></div>
+<p>&nbsp;</p>
+<p>After you do this you should now be able to &#8220;Check in&#8221; the file with no issues and this problem should be resolved going forward.</p>
+<p><strong>Want to learn more? Check out our </strong><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/"><strong>SOLIDWORKS PDM </strong></a><strong><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">training courses</a>. </strong></p>

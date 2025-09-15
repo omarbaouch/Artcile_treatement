@@ -1,0 +1,21 @@
+When a file is accessed in the vault, it is cached (saved) to location where the local vault view was created. Files do not need to be checked out in order to be cached. A “Get” will also cache files locally, as will checking out a upper level CAD document such as a assembly or drawing. Files are cached locally in order to allow working from a local drive. This prevents issues that can experienced when working from a network drive, such as performance and permissions.
+Why Clear your Local Cache?
+Having a large number of files cached locally can impact performance when accessing files from the local vault view
+. On rare occasions some conflicts can arise with the locally cached files. Because of this, most locally cached files should be removed when they are no longer being used. These files can be removed when they are checked in as shown in the image below the
+Remove local copy
+option is checked
+Check in dialog
+You can empty your cahce by
+right-clicking in the local vault
+and selecting
+Clear Local Cache
+from the shortcut menu
+Clear local cache option
+Clear local cache is also available from the
+Tools pull-down
+, in the Local Vault View.
+When to keep Cached files
+For some folders it may not be desired to clear the local cache. For
+Toolbox and library folders, performance can be increased by keeping these file cached locally
+. SolidWorks Enterprise PDM 2014 contains options on automating cache management.
+In a related article, I explain how to automate cache management

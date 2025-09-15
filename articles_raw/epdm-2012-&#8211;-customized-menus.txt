@@ -1,0 +1,17 @@
+In SolidWorks Enterprise PDM 2011 many of the commands that I used from the right-click menu, in Explorer Vault view, were moved to SolidWorks Enterprise PDM menu bar. I missed being able to right-click and quickly “clear the local cache”. Luckily in SolidWorks Enterprise PDM 2012, menus can now be customized to include my favorite commands, including adding “clear local cache” to the right-click menu.
+In SolidWorks Enterprise PDM Administration, right-click on a User or Group and select “
+Settings
+“.
+From the right menu pane of Settings select “
+Menus
+“.
+From the “
+Destination Menu
+” pull-down, select the menu you would like to customize.
+Highlight the “
+Available commands
+” you would like to add and click on the plus sign.
+To remove a command highlight it in the “
+Destination Menu
+” and click on the minus sign.
+Commands can be reordered using the up and down arrow keys.

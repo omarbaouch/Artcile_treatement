@@ -1,0 +1,19 @@
+If there is a mismatch in the Back-up settings of the SOLIDWORKS PDM Archive Server Configuration application, the message ‘Failed to Make Backup!’, will appear in the Archive Server log. If the error message is opened from the Archive Server log, the below description will be displayed.
+Date: 2018-05-18 09:07:02.000
+
+Module: ArchiveServerService
+
+Function: MainClass::muiBackupProc
+
+Code: E_INVALIDARG
+
+Code Description: An invalid argument was given to the method.
+
+Failed to make backup!
+The Back-up that is failing is that of the PDM settings. These are the settings found in SOLIDWORKS PDM Administration. To correct this issue, launch the Archive Server application and choose Back-up Settings from the Tools pull-down.
+Launching Back-up Settings
+Then reset the password and make sure that the backup location is a valid.
+Back-up Settings
+Read our article on using the
+SOLIDWORKS PDM Archive Server Configuration
+application for more information

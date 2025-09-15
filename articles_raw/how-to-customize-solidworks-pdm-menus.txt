@@ -1,0 +1,28 @@
+It’s easy to customize SOLIDWORKS PDM menus to better suit the needs of a group or a user that is working in a PDM vault. An example of this is how the right-click shortcut menus and toolbars within the Vault View can be easily customized.
+The Administrator can modify each of these elements of the interface by
+right-clicking on the User or Group
+that they want to customize the interface for, and selecting
+Settings
+, then go to the
+Menus
+screen.
+PDM Settings
+Here the Administrator can customize the “Background Right Click” menu, the “File Right Click” menu, the “Folder Right Click” menu, and the drop down menus for “Actions”, “Modify”, “Display” and “Tools”.
+Customizable Menus
+Removing commands from menus
+For instance, the default File Right Click menu in the PDM Vault View includes a number of items, some of them unrelated to PDM operations, such as antivirus commands, third party programs, and in the case of sldprt, sldasm and slddrw file, the SOLIDWORKS flyout menu, which are not needed inside the PDM vault.
+Standard Right Click
+These can be removed by selecting the <Non-PDM commands> and clicking Remove Command
+Remove menus
+Adding commands to menus
+Additional menu items that might be used by specific users or groups can also be added, such as Favorite Searches.  Simply select the item in the list of Available commands and click Add Command
+Add Menus
+Re-positioning menu commands
+The inserted command can be re-positioned in the the Right Click menu by clicking Move Up or Move Down.
+Move Up
+Once the changes are saved, the menus will update in the user’s vault views immediately.
+Customized Right Click
+Learn more about administrating PDM
+Take our
+Administering SOLIDWORKS PDM Professional
+either live online or in a Canadian classroom near you to learn more about managing your SOLIDWORKS PDM vault and users.

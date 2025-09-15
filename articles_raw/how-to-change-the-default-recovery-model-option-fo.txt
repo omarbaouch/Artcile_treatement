@@ -1,0 +1,35 @@
+By default when a new database is created within Microsoft SQL the recovery model option is set to full.  If you’re capturing daily backups, a full recovery model can cause issues with the transaction log affecting performance.  We’ve previously looked at
+how to change the recovery model
+, but we can change a setting within SQL to make the default recovery model set to simple.
+How to set the default recovery model to simple
+Log in to the SQL Server Management Studio using the
+sa
+(system administrator) account;
+SQL Server Management Studio
+Expand the
+Databases
+folder
+Then the
+System Databases
+folder
+Select the
+model
+DB
+Right-click >
+Properties
+;
+Databases
+Select
+Options
+and for
+Recovery Model via the drop-down,
+we can switch it from
+Full
+to
+Simple
+, then hit
+OK
+;
+Simple Recovery Model Option
+Then any new vaults we create, the database Recovery Model will be set to simple;
+New Database set to Simple

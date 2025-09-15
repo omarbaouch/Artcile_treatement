@@ -1,0 +1,25 @@
+By default when SOLIDWORKS PDM transition actions complete a change state operation on a file, all the referenced files will be selected to transition:
+SOLIDWORKS PDM transition action
+You can de-select any files to exclude them from the transition.
+Some users like the files selected by default, as it ensures no files are forgotten files when transitioning an assembly.  Other users dislike it, as it has the potential to complete unwanted transitions on files.
+The good news is we can control this behavior via the settings.
+Change the settings to not select referenced files when changing state
+Administration Tool > Users > [User Name] > Right-Click > Settings
+Administration Tool Settings
+Reference Dialog > Check ‘
+Do not mark referenced files when changing state
+‘ > Ok
+Do not mark referenced files when changing state
+Update
+With the 2019 release and later versions; this option has changed;
+Select child references during state change
+The wording is now;
+Select child references during state change,
+and by default, this setting is enabled.  Disabling this option will stop child references from being automatically selected during a transition.
+Then by default, the referenced files won’t be selected in a change state dialog;
+Change state dialog
+NOTE:
+This setting change can be completed on a global level, by changing the settings at the ‘Users’ node instead of the Username.
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

@@ -1,0 +1,15 @@
+A Transition Action can be used to launch a Task. For instance, when a user changes the state of a drawing file, the file is saved as a PDF.
+In a workflow, double-click a transition to access the Transitions Properties and left-click the Actions tab.
+Left-click
+Add Action,
+to access Transition Actions. Provide a
+Description
+for the action, choose
+Execute Task
+as the
+T
+ype
+and select the task from the
+Select task to execute
+pull-down.
+A task will have to be created before it can be added to a Transition Action. Please refer to the SolidWorks Enterprise PDM Administration guide, for information on creating a task.

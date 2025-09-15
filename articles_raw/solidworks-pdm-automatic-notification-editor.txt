@@ -1,0 +1,19 @@
+A SOLIDWORKS PDM Notification can be added from the Local Vault, so that the logged in user will receive a message when a predefined event occurs to a file or folder. To set up these Notifications,
+right-click on the file or folder
+and select
+Notify
+.
+SOLIDWORKS PDM Notify Options
+Predefined Notifications
+There are some predefined triggers, such as when the logged in user check’s file in or out. Notifications can also be triggered, when a file touches a predefined State.
+Waiting for Approval
+Notify Me
+Notify Me, offers the same options as other pull-down items but in in addition there are options to restrict Notifications, to the file creator or the user that changed State last time.
+Select File Notification Type
+My Notifications
+My Notifications, allows users to create, edit and control multiple Notifications. Individual Notifications are set up the same way as with Notify Me.
+Notification Editor
+Learn more about SOLIDWORKS PDM
+Attend the
+SOLIDWORKS PDM Administration course
+in a Canadian classroom near you or live online.

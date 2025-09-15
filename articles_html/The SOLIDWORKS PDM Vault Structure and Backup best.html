@@ -1,0 +1,38 @@
+<p>If you are an IT professional who supports a <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> installation, you already know that it has many features that enable the Engineering department to design their products faster and better; but from a purely IT perspective, it is a specialized file repository &#8211; a vault. This article will help you understand its structure, and how you can make sure your SOLIDWORKS PDM vault is properly backed up.</p>
+<p>If all you want is straight-forward instructions on <a href="https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/">how to create a SOLIDWORKS PDM backup</a>, please see <a href="https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/">this article</a>.</p>
+<h2>The Vault Structure</h2>
+<p>A PDM vault has two main components: a SQL Server database, that holds metadata, such as data card values, folder structures, users, groups, etc and the Archive Server, that contains all file contents. Note that the <strong>SOLIDWORKS PDM SQL Server database DOES NOT store any files at all</strong>, even though Microsoft SQL Server has the ability to store files. This is by design. We will discuss the implications from a backup point of view later on this article.</p>
+<p>The diagram below shows a hypothetical conversation between a workstation with a PDM client installed, SQL Server and the Archive Server.</p>
+<p><div id="attachment_44420" style="width: 910px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-44420" class="wp-image-44420 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1.png" alt="" width="900" height="900" title=""><p id="caption-attachment-44420" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-44420 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1.png" alt="" width="900" height="900" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1.png 900w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1-200x200.png 200w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1-600x600.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1-768x768.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/11/Vault-Conversation1-760x760.png 760w" sizes="(max-width: 900px) 100vw, 900px" /></noscript> A conversation between a PDM client, SQL Server and the Archive Server</p></div></p>
+<p>What really would be happening here is this:</p>
+<ol>
+<li>User browses to a file in the vault. So far, only SQL Server is involved. The folder structures, permissions, data card information, etc is all stored in the vault database. That includes the file entry, with the complete file information.</li>
+<li>Once a file is selected, one of the attributes that are returned by SQL Server is the file internal ID. The user will never see that, but that ID is what the PDM client software will use in the next step.</li>
+<li>If the user opens the file or simply goes to the Preview tab, the PDM client will make a request over TCP Port 3030 to the Archive Server. It will tell the Archive Server what file ID it needs and what version (typically, the latest).</li>
+<li>The Archive Server will return the file contents and the PDM client will store it in the local cache folder so the user can open or view that file.</li>
+</ol>
+<p>So, here are a few conclusions that we can draw from this:</p>
+<ul>
+<li>Each file in a SOLIDWORKS PDM vault is made of SQL data and file system data.</li>
+<li>Each version of a file in the vault is stored by the Archive Server as a separate file. In the example above, if the user had requested version 4 of that file instead of 5, the file transmitted by the Archive Server on step 4 would be different &#8211; it would be a different file, but that is transparent to the user.</li>
+</ul>
+<h2>How to create <em>good </em>backups</h2>
+<p>So, what does this all mean from a backup standpoint?</p>
+<ul>
+<li>A good PDM backup is made of the SQL Server database backup <span style="text-decoration: underline;"><strong>and</strong> </span>the corresponding archives.</li>
+<li>Both must be synchronized, i.e. taken at the same time or at least within a short time interval.</li>
+</ul>
+<p>Let&#8217;s consider a few scenarios where you need to restore a full back due to hardware failure.</p>
+<p>If you take the SQL backups in the morning and the Archive backup at night, the SQL database will not <em>know</em> about the newer files and versions that the users added during the day. So when users browse the vault, they will not even see those newer files or versions, even though the Archive <em>has them</em>. Those archives will be orphaned. For all practical matters, the vault state is exactly what it was in the morning, when the SQL backup was taken.</p>
+<p>And, if we had the opposite scenario, where the Archives are backed up in the morning and the SQL database at night? As you can probably guess at this point, PDM would show the latest data (all files that have been added during the day and latest versions too), but those newer versions would simply not exist in the Archive. So when a user tried to obtain them, he or she would get an error message at step 4.</p>
+<blockquote><p>NOTE: <em><strong>the database backup and the archive backup must be synchronized</strong>.</em></p></blockquote>
+<h3>SOLIDWORKS PDM Backup Best Practices</h3>
+<p>So here are some good backup practices for your PDM vault.</p>
+<p>The first advice is&#8230;<strong> hope for the best, but plan for the worst. </strong>If you do this, you can rest assured you will be able to restore your vault, even in catastrophic scenarios:</p>
+<ol>
+<li>Make daily backups.</li>
+<li>Make sure the SQL backup and the archive backup are synchronized.</li>
+<li>Test your backups periodically (e.g. monthly) to make sure your backups are good. You can use a test environment to do a full restore.</li>
+<li>Make sure your backups are stored in a different system than the production server. This could be a different server on your network or a backup device such as a tape drive, for instance.</li>
+<li>At least weekly, move a backup set <strong>physically</strong> to another building. No one wants a disaster to happen, but fires, flooding, etc can happen.</li>
+</ol>

@@ -1,0 +1,29 @@
+We all know far too well how tedious managing file reference between CAD files can be. More so, we know how painful it is when things get out of control. Thanks to SOLIDWORKS PDM Update References, worrying about the files references is a thing of the past. Whether files have been renamed or moved into a multitude of different directories, PDM automatically tracks and updates all of these changes so that your drawings and assemblies open intact, every time.
+This is all good and well for the files that are already stored within a PDM Vault, but what about when we migrate data or import designs, that began life outside of the vault. In this scenario, we need to consider if any of the components within design already exist within the PDM Vault. Of course, we could blindly pack & go the external data set into the vault, but this will likely only provide short-term gain for long-term pain.
+As the master database of an organization’s digital assets, maintaining a well-organized vault with no duplicate files lends way to improved efficiency across the board. For example, it prevents wasted time on the review and approval of components that may have already been approved in previous designs. As well, downstream in other departments such as purchasing, it minimizes potential issues that can arise with duplicate files, like inconsistent information and conflicting vendor part numbers to name a few.
+Thankfully,
+SOLIDWORKS PDM
+provides a tool, fitting called “Update References…”, that makes updating file references a seamless task.
+How SOLIDWORKS PDM Update References Works
+SOLIDWORKS PDM Update References offers three facets of functionality that aid in repairing broken references or redirecting references for duplicate files.
+Find Files
+Opens the Find Files dialog box to let you search the vault for missing files.
+Find File
+updates the broken reference with a file of the same name, in a different location. The file must already be in the vault.
+You can use
+Find File
+to replace multiple references.
+Replace File
+Opens the Replace File dialog box to let you browse to the location of a file to replace the selected file.
+Replace File
+can update a broken reference with a file of a different name. The file can be in the vault or outside the vault.
+You can only replace one reference at a time using
+Replace File
+.
+Add Files to Vault
+When a referenced file is outside the vault, opens the Add Files to Vault dialog box, which lets you specify where to add the file within the vault.
+See The Tool in Action
+For a quick walk through of the
+Update References…
+tool and to see it in action firsthand, take a look at the video below.
+https://www.youtube.com/watch?v=-LseOakCsWY

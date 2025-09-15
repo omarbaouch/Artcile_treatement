@@ -1,0 +1,19 @@
+You attempt to check in a SOLIDWORKS PDM file, but you receive a message that
+‘a file with this name already exists in the vault’
+. You perform a search and cannot find this file?!
+This can happen when a file with the same name has been deleted. Deleting a file in the vault, is similar to deleting a file in Windows Explorer;
+the file is moved to a Recycle bin of sorts
+. This allows the deleted files to be recovered.
+In order to check in the new file, the deleted file must be destroyed. This is done by right clicking on the folder that contained the deleted file and selecting
+Properties.
+From the
+Deleted Items
+folder, right-click the deleted file and select
+Destroy
+.
+Note
+: You will have to have the required administrative permissions to destroy the file.
+Destroy Deleted Files
+For subscription customers, SOLIDWORKS offers a report to find deleted files in vault. This report is available from the
+DS Support Knowledge Base
+.

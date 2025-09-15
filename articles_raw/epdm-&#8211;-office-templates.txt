@@ -1,0 +1,51 @@
+This article is a continuation on my previous articles relating to linking Data Card Variables, to Office Properties. In this article we will look at how to create a Word or Excel template that can be used for ECO’s/ECN’s
+As before, this article will assume that the appropriate variables have been added to SolidWorks Enterprise PDM and that these Variables have been mapped to the corresponding Data Card Fields.
+The first step is to create the Office document as outlined in my previous blogs
+EPDM – Mapping Variables to Microsoft Office
+and ‘
+EPDM – Using “Link to content” to Define custom file properties in Excel
+.
+The Office template needs to be checked into your vault. To control excess to the template it is recommended, that the template be checked into a folder, that only an administrator has write access to.
+Once the Office template has been checked in, launch SolidWorks Enterprise PDM Administration and log into vault.
+Right click on the
+Template Node
+and select
+New Template.
+Enter a name for the Template and press
+Next.
+Select the appropriate permissions for creating files for the template. The user must have sufficient permissions to folder, where the ECO/ECN will be created. Click on
+Next
+.
+We will not look at Template Cards at this point; click
+Next
+.
+A Template can create folder and sub-folders. The folder names can be linked to Template Variables, such as Customer, Part/Project Number and date. We will not look at creating folders in this article.
+For this article we will look at creating a ECO in the ‘Current Folder’. This is the folder that is open in the local vault view, when we run the template. Click on
+New Template.
+.
+Select the Office template you created earlier and click on
+Open
+.
+We will not be using Template Variables, press on
+OK
+and press then
+Next
+.
+From the
+Extension
+pull-down, choose an Icon for your Template and press
+Next.
+Select which
+Users and Groups
+will have be able to you this Template and click on
+OK
+to finish creating the Template.
+To run the Template, in the Local Vault View, right click and select
+New
+and then click on the Template .
+Any variables in the Data Card that are mapped to the Office template, will be written to the new ECO. A unique name should be given to the new ECO. Click on
+Create File
+to create the new ECO.
+A new ECO is created
+And the variable is mapped to the Office document.
+We will look at using template variables and template cards in upcoming articles.

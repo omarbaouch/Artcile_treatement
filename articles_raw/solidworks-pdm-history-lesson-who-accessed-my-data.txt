@@ -1,0 +1,30 @@
+Using
+SOLIDWORKS PDM
+for you data management carries a lot of major benefits including seamless collaboration, data security, and revision tracking. When working with team members and revising designs you might find yourself asking, “When was this file last edited and who did the editing?” or “Why were those changes made?”
+Fortunately, SOLIDWORKS PDM has your back and tracks changes to your data set
+automatically
+without a second thought from the end user. The SOLIDWORKS PDM History has a wealth of information that we can leverage to make more informed decisions. The answers to Who, What, When, and Why of those changes might just be a few clicks away.
+Viewing the SOLIDWORKS PDM History
+The history for any given file in the SOLIDWORKS PDM Vault can be viewed a couple of different ways. For users only interacting with the vault from Windows File Explore can be accessed by either Right-Clicking on a file and selecting “History” or by selecting a file and then using the Action command to “Get Version”. Each method has its own distinct advantage.
+Using the “Get Version” method will show the versions of the file (being checked in or out) in normal font and the revisions (being released through a workflow) in bold. This gives a very quick identification of what the “major” versions of a file are without needing to read the comments.
+Get Version Command
+If the “History” method is used, a new dialog box will appear with more detailed information. Just like “Get Version”, it will show the revisions and versions of the file (without the bold text) but also provide more context as to
+who
+caused the change and what the event was. For example, in the image below we can see that Dave transitioned the file from Approved to Under Change, checked the file in 3 different times, and finally moved to “Change Pending Approval”. Although this might be too much information for someone just looking for Revision B of a file, it can give insight into the whole lifecycle of the file.
+SOLIDWORKS PDM History
+Finally, the other methods to access this history are reserved for the team’s SOLIDWORKS users and utilize the SOLIDWORKS PDM add-in for SOLIDWORKS. Rather than needing to dig through menus or right-click on a file, the Get Version and History commands are on the PDM Toolbar. They will behave the same as within File Explorer with the only real difference being that the Get Version command will not show the bolded text for the versions that represent a revision.
+SOLIDWORKS PDM Add-In
+The history tools within SOLIDWORKS PDM give a user a ton of control and visibility over the files in the vault… but what can we do with that information?
+Comparing Files and Using the Get Command
+First and foremost, using the Get command either from the Get Version tool or within the SOLIDWORKS PDM History dialog box will grab the selected version and bring it to the user’s local cache. What this means is that it will overwrite the existing version that is in the cache. If any changes were made to the file and a different version is gotten before checking the changes in, they will be lost. The Get command can be accessed by both SOLIDWORKS and Non-SOLIDWORKS users alike to pull files from the archive server or even cold storage. If you want to know if a version of a file is the latest and greatest, File Explorer and SOLIDWORKS will let you know.
+Local Version
+The other side to this is being able to investigate the differences between a version outside of the revision and the version number being different. Specific file compare tools can be defined in the Administrative Tool for SOLIDWORKS PDM but for most people, using SOLIDWORKS to compare files does the trick. The SOLIDWORKS Compare tool typically uses references from two different part files but when integrated with SOLIDWORKS PDM, it can make use of different versions of the same file. This allows for comparisons of Revision C of a file to Revision – for example. The comparison can check for differences in properties, features, and geometry. At a quick glance you could see if the supplier changed, the volume of the model increased, or if any material was added/removed from one version to another!
+SOLIDWORKS File Compare
+Administrate to Investigate
+One of the biggest themes of SOLIDWORKS PDM is being able to restrict access to certain things or to enforce proper policies and procedures. The file history inside of SOLIDWORKS PDM is really no different. Firstly, the administrator can force users to input comments on file check in and on file transition. I don’t typically recommend enforcing comments on file check-in for one big reason: people will put in unhelpful comments such as “no” or “changes”. Transition comments on the other hand are a good idea to turn on. These comments will be a vital piece of history in your vault to understand
+why
+someone moved a file to Under Editing or a change was rejected. Without forcing the comments, it is in the end user’s hands to make the right choice to comment or not.
+Force Transition Comments
+The other thing the administrator can restrict is whether or not a user only ever works with the latest version. This is done in the Reference Dialog section of a user or group setting. Setting this option will still allow the user or group to view the history of the file but can only use the most recent version in the file vault. This can stop people from “accidentally” using older versions of a file without knowing and without having to force refresh the cache on log-in.
+Force Get Latest
+The final piece of the history is enabling the Get Log for SOLIDWORKS PDM. The option is turned on under the Vault Properties in the Administration Tool and is not on by default. Turning on logging will record any time any user in the vault uses the Get command to detail when they used the command and on what files. It provides a rich understanding of the files in the vault to see if anyone is using older versions of files and can allow for more informed decision-making.

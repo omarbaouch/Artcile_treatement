@@ -1,0 +1,22 @@
+SOLIDWORKS PDM
+can work with different viewers to preview files within a vault. For SOLIDWORKS files,
+eDrawings is the default viewer
+. During the Installation of SOLIDWORKS PDM or SOLIDWORKS, eDrawings can be installed at the same time.
+During the installation of SOLIDWORKS PDM, the default location for the eDrawings viewer is noted within the PDM environment. Typically the default edrawings path is:
+C:\Program Files\SOLIDWORKS Corp\eDrawings\EModelViewer.exe
+This path can vary between implementations, and in some cases updates can cause the defined path to become invalid.
+Assigning the eDrawings PDM Viewer Path
+The eDrawings viewer path can easily be fixed though. In the PDM Admin, if you right click on a User, User node or Group, you can access the Settings for that selection.
+Accessing PDM User Settings
+In the Admin settings under the
+Viewers
+options, along the left side of the Settings window, the location of an eDrawings installation can be specified.
+Viewers Settings
+By default, there are two Installed Viewers. One is a SOLIDWORKS File Viewer and the other is the eDrawings EModelViewer. The latter being the default eDrawings viewer.
+Adding or removing PDM File Viewers
+Additional viewers can be added, and existing ones removed. The first step to add an additional viewer is to first install it. These additional viewers would be for other file types, that are stored in a PDM vault and are not supported by the EModelViewer.
+Selecting an Installed Viewer will display the files extensions associated with the viewer. Additional extensions can be added, but the Selected Viewer needs to support those file types.
+As noted earlier, a viewer should first be installed before defining it in SOLIDWORKS PDM Settings. The path can be entered manually, or it can be selected by using the Browse button.
+Note
+the syntax “%1%”. It is important to have this syntax at the end of the viewer path, for the default viewers and may also be required for other viewers.
+For more information on defining viewers, please refer to “Adding a Viewer for the View File Command”, in the SOLIDWORKS PDM Administration guide, available from the Help pull-down menu in the PDM Admin.

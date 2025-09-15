@@ -1,0 +1,16 @@
+When moving SOLIDWORKS PDM files between folders, with the option ‘Folder data card variable’ checked the result may not be what you are expecting.
+Default Values
+The expectation would be that any Data Card Control, with ‘Folder data card variable’,  would pull the Variable Value from the Folder Card, regardless how the file made its way to the folder.
+When a file is moved or copied and the associated Data Card has Default Values, the existing values are copied to the target file. The default values of the target file are
+NOT
+regenerated. With the exception of:
+Data card variables with the Unique flag set
+. If this set, the variable value is cleared, the user is warned and the default value is regenerated.
+Unique variable
+Data card variable is a serial number
+. The user is warned and the variable value is set to next available serial number.
+Serial number
+Default Overwrites is enabled for data card variable
+. The variable value for any copied file is regenerated,
+but the variable value is not regenerated for files that are moved (cut & paste).
+Default overwrites

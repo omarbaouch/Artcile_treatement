@@ -1,0 +1,30 @@
+With the new
+Quick Search feature included in SOLIDWORKS PDM 2020
+, it’s possible to search within multiple variables right from Windows Explorer;
+SOLIDWORKS PDM Quick Search
+By default, when searching using an AND or NOT operator, it will search for both values within the same variable.
+In this example, we want to search all files for any parts that contain
+Brace
+in the
+Description
+variable
+AND
+Stainless Steel
+in the
+Material
+variable;
+Brace AND Stainless Steel
+Blank PDM search results
+This search returns blank because none of the
+selected variables to search
+contain both values
+Brace
+and
+Stainless Steel
+How to search in different variables using Quick Search
+To search within different variables when using a AND or NOT operator requires a colon (:) prefix;
+:
+Brace
+AND
+Stainless Steel
+Correct search syntax

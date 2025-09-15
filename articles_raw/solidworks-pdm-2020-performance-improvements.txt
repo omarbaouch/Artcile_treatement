@@ -1,0 +1,15 @@
+The increased performance of
+SOLIDWORKS PDM 2020
+makes your day-to-day use faster than ever before. You no longer have to wait for file contents and their details to load to browse to a sub-folder. You can toggle between
+Bill of Materials
+,
+Contains
+, or
+Where Used
+tabs without delay while the data loads in the background.
+Here is a list of some of the features that improved performance in PDM 2020:
+Logging into the vault is faster if you set large number of files or folders for automatic caching.
+Viewing the System History of a vault that includes a large number of items.
+Opening a file from a folder that includes a large number of files.
+Creating a new file or sub-folder in a folder that contains large number of files.
+Watch the video below to learn more about the performance enhancements in SOLIDWORKS PDM 2020:

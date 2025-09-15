@@ -1,0 +1,12 @@
+DISCLAIMER:
+This blog article contains information on modifying your Windows Registry. It is always recommended that you take a backup of the Registry before editing any of the values because any improper editing can cause strange behavior and at worst could even corrupt your operating system completely, requiring you to re-install Windows. Proceed with any of the actions listed below only if you know what you are doing and if you do it with care.
+A clean installation of SolidWorks consists of uninstalling SolidWorks and deleting certain keys in the Windows registry.
+These keys reside in:
+HKEY_CURRENT_USER\SOFTWARE\…
+HKEY_LOCAL_MACHINE\SOFTWARE\…
+Care must be taken when deleting these keys in order to prevent breaking the link between the vault and your local vault view.
+Breaking this link very rarely results in data loss on the local client if have a good understanding of how the vault works, but the potential does exist.
+If you have this happen, it is best to contact your SolidWorks resellers’ support help desk to obtain assistance.
+If SolidWorks Enterprise PDM is installed on a client computer and a clean installation of SolidWorks is required, delete the following keys ONLY:
+HKEY_CURRENT_USER\SOFTWARE\SolidWorks\SolidWorks 20##
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\SolidWorks 20##

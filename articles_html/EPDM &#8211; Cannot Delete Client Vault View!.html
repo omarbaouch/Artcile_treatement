@@ -1,0 +1,8 @@
+<p>If being logged in as the user or an administrator will not allow you remove the view, the problem could be due to the <em>desktop.ini </em>file missing or having incorrect &#8220;AttachedBy&#8221; information.</p>
+<p>1. Open a command prompt</p>
+<p>2.  Navigate to the local vault view (cd c:\&lt;vault&gt;)</p>
+<p>3. Type<em> desktop.ini</em>, this will open the desktop.ini file for editing in notepad:</p>
+<p style="text-align: center;"><img decoding="async" class="aligncenter size-full wp-image-2171 lazyload" title="desktop" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2011/07/desktop1.jpg" alt="" width="386" height="105"><noscript><img decoding="async" class="aligncenter size-full wp-image-2171 lazyload" title="desktop" src="https://www.javelin-tech.com/blog/wp-content/uploads/2011/07/desktop1.jpg" alt="" width="386" height="105"></noscript></p>
+<p>4. Add or update the &#8220;AttachedBy&#8221; entry and enter your currently logged in windows profile in the syntax of machine name\username.</p>
+<p>5.  Save and close the file.</p>
+<p>6. Close the command prompt and you should now be able to remove the view without a warning.</p>

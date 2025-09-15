@@ -1,0 +1,24 @@
+When upgrading the SOLIDWORKS PDM file vault to a new version, the add-ins in the vault will not automatically update.  You can
+view a step by step guide to upgrading the Task Add-in
+.  In this article, we are going to look at upgrading the Dispatch Add-in.
+It is recommended to run the same major and service pack version of the Dispatch add-in as the current major and service pack version of SOLIDWORKS PDM.
+First, we need to remove the existing SOLIDWORKS PDM Dispatch Add-in (don’t worry you won’t lose any existing scripts):
+Step 1: Administration Tool > Add-ins > Dispatch >
+Right-Click
+> Remove
+Note if installing for the first time, skip to step 2
+Remove the SOLIDWORKS PDM Dispatch Add-in
+Step 2: Administration Tool
+>
+File
+>
+Open
+Change the filter to show “.caf” files
+Browse to the installation location for PDM and the “Default Data” folder (by default the path is “C:\Program Files\SOLIDWORKS PDM\Default Data”)
+Click to Open
+Dispatch.caf
+Open Dispatch File
+Step 3: Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins
+Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins
+Step 4: Close the Admin Tool and Reboot the client workstation
+Upgraded Dispatch Add-in

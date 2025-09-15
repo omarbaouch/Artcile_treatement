@@ -1,0 +1,24 @@
+Many important settings are controlled by Reference Dialog, but many do not know where to find it, or what options are controlled in this area.
+The Reference Dialog is accessed by right clicking on the User node and selecting settings (settings can also be changed for individual users or groups).
+In the settings dialogue box, select Reference Dialog.
+Below is a list of the options and what they do
+Auto Select reference file to get latest version of files,
+will pre-select the
+Get
+option, in the check-out dialog box, if the latest version of referenced files are not cached locally.
+Always  work with latest version of files,
+will copy the latest version of a file to the local cache. If a file contains references, the latest version of these files will also be cached.
+Get Version is
+not available if this option is selected, unless the sub-option,
+Enable the Get Version command in SolidWorks Add-in,
+is checked.
+Check out files silently without showing the check out dialog box,
+hides the check-out dialog. Each referenced file will have to be checked out individually.
+Try to check out all referenced files when the referencing file is checked out
+. This option can be used to check out referenced files if the option
+Check out files silently without showing the check out dialog box hides the check-out dialog
+has been selected.
+Do not mark referenced files when changing state,
+can be useful if you typically do not change state of all referenced files. For instance if there are referenced files that are released and you do  not wish to sent them back through the workflow. With this option selected only the parent is selected, all references that also need to change state, must be selected manually.
+Show “not rebuilt” warning on drawing and assemblies in need of rebuilding.
+While seeing  warnings may be annoying, this could indicate that there is changes to a referenced document which could impact the parent file. For instance a change to part may causes changes to it’s drawing. These changes will not propagate until the drawing is opened in SolidWorks and rebuilt.

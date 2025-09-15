@@ -1,0 +1,30 @@
+<p>Sometimes you may need to <strong>completely uninstall SOLIDWORKS PDM Client, including all Program Files and Registry Keys</strong>. This process is helpful when troubleshooting a problematic SOLIDWORKS PDM Client machine.</p>
+<p>These steps will allow you to perform a clean SOLIDWORKS PDM Client uninstall and remove any installation files left behind and also remove registry entries.</p>
+<p>Perform these steps only on the client machine where no server components are installed. If these steps are used on the machine where server components are installed, the PDM vault may stop functioning.</p>
+<p>Before performing these steps, make sure all files are checked in to the PDM vault on the workstation:</p>
+<ol>
+<li><strong>Check in</strong> all files, if unable able to login to the SOLIDWORKS PDM vault view, go to step 4.</li>
+<li><strong>Right click</strong> on the local vault view, select <strong>Delete File Vault View</strong>
+<p><div id="attachment_38360" style="width: 415px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-38360" class="wp-image-38360 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Delete-vault-view.png" alt="" width="405" height="107" title=""><p id="caption-attachment-38360" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-38360 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Delete-vault-view.png" alt="" width="405" height="107" title=""></noscript> Delete File Vault View</p></div></li>
+<li>If unable to login and check in all files during the <strong>step 3</strong>, select &#8220;<strong>Leave the local contents of the file vault view as normal files and folders</strong>&#8220;. This will leave the files in the local folder, all the changes made after the files were checked out are not lost.
+<p><div id="attachment_38368" style="width: 574px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-38368" class="wp-image-38368 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/leave-local-contents.png" alt="Uninstall SOLIDWORKS PDM Client" width="564" height="195" title=""><p id="caption-attachment-38368" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-38368 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/leave-local-contents.png" alt="Uninstall SOLIDWORKS PDM Client" width="564" height="195" title=""></noscript> Delete View</p></div></li>
+<li><strong>Rename</strong> the local folder to &#8220;<strong>PDM Vault_OLD</strong>&#8220;</li>
+<li>If you were able to check in files during the <strong>step 3</strong>, select &#8220;<strong>Delete the cached file vault files and folders from the local hard disk</strong>&#8220;</li>
+<li>Uninstall <strong>SOLIDWORKS PDM Client</strong> from <strong>Programs and Features</strong> in <strong>Control Panel</strong></li>
+<li>Restart the machine to clear any DLLs or program files still active<br />
+<blockquote><p><strong>WARNING</strong>: Be <strong>very</strong> careful when making modifications to the registry as this may cause serious instability on your system. As such, you will need <strong>full administrative permissions</strong> on your computer to be able to edit them. Note that Javelin is not responsible for any changes that you make to your system, the following is just a guide.</p></blockquote>
+</li>
+<li>Launch the <strong>Windows Registry Editor</strong>, (In Windows 7, or Windows 10 go to Start menu and type: regedit)</li>
+<li>In the Registry Editor expand and <strong>delete (or rename)</strong> the registry folder (<strong>PDMWorks Enterprise</strong>) located under following locations:<br />
+<strong>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise</strong><br />
+<strong>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise</strong><br />
+<strong>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise</strong></li>
+<li>In the Start menu, type %localappdata% press Enter to open the local folder, open the SolidWorks folder and delete &#8220;SOLIDWORKS PDM&#8221; subfolder</li>
+<li>Delete any installation folders left behind located in the following places:<br />
+<strong>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM</strong><br />
+<strong>C:\Program Files (x86)\SOLIDWORKS PDM</strong></li>
+<li>Reinstall <strong>SOLIDWORKS PDM Client</strong></li>
+<li><a href="https://www.javelin-tech.com/blog/2017/08/solidworks-pdm-standard-create-local-vault-view/">Create the vault view again</a></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

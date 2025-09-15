@@ -1,0 +1,15 @@
+When files are deleted in a SOLIDWORKS PDM vault, these files are placed in the PDM equivalent of the Windows Recycle bin. These files will stay in this location until they are
+destroyed
+. Having a large number of deleted files can impact performance negatively.
+Information about deleted files is stored in a table called ‘dbo.HistoryDelete’ (SQL tables should not be manually changed as this can severely impact the use of the related PDM vault).
+Deleted File Location in an SQL Database
+Each entry in the dbo.HistoryDelete is analyzed whenever the database is queried or added to, and can affect database tables that contain information such as variable values, revisions file history and more.
+NOTE:
+The SOLIDWORKS PDM
+Destroy tool
+will
+permanently
+remove the deleted files.
+Destroyed files and folders cannot be recovered
+by normal means.
+Regularly reviewing your deleted files to remove only what can safely be destroyed will make this task less cumbersome; and a best practice for optimizing your SOLIDWORKS PDM performance.

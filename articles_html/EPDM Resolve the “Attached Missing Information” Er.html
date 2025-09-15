@@ -1,0 +1,46 @@
+<p data-start="136" data-end="173"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">When creating a new vault view in SOLIDWORKS PDM, you may encounter the confusing message:</span></p>
+<blockquote data-start="175" data-end="214">
+<p data-start="177" data-end="214"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong data-start="0" data-end="33" data-is-last-node="" data-is-only-node="">Attached; Missing Information</strong></span></p>
+</blockquote>
+<p data-start="216" data-end="253"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">This typically indicates leftover or corrupt registry entries, or incomplete vault view files from a prior installation. Below is the structured method for <strong data-start="190" data-end="228">completely cleaning and recreating</strong> it to resolve the issue.</span></p>
+<div id="attachment_13597" style="width: 432px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-13597" class="wp-image-13597 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/error-message.png" alt="EPDM error message" width="422" height="150" title=""><p id="caption-attachment-13597" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-13597 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/error-message.png" alt="EPDM error message" width="422" height="150" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/error-message.png 422w, https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/error-message-300x106.png 300w" sizes="(max-width: 422px) 100vw, 422px" /></noscript> EPDM error message</p></div>
+<h2>Clean Registry &amp; Recreate a New Vault View:</h2>
+<h6><strong>NOTE:</strong> Always export a backup copy of the registry keys before deleting, <strong>caution should be taken when editing the registry</strong>, as changing or deleting the wrong key, can affect other programs, or the operating system. If you are not familiar with Windows Registry, please have someone who is, do this for you.</h6>
+<h3>Step 1: Remove Corrupt Registry Entries:</h3>
+<p data-start="1343" data-end="1382"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Close View Setup, then delete any vault-related keys at:</span></p>
+<ul data-start="1384" data-end="1549">
+<li data-start="1384" data-end="1425">
+<p data-start="1386" data-end="1425"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-start="0" data-end="81" data-is-last-node="" data-is-only-node="">HKLM\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VaultName]</code></span></p>
+</li>
+<li data-start="1426" data-end="1467">
+<p data-start="1428" data-end="1467"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-start="0" data-end="93" data-is-last-node="" data-is-only-node="">HKLM\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VaultName]</code></span></p>
+</li>
+<li data-start="1468" data-end="1549">
+<p data-start="1470" data-end="1549"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-start="0" data-end="78" data-is-last-node="" data-is-only-node="">HKCU\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VaultName]</code></span></p>
+</li>
+</ul>
+<h3 data-start="1635" data-end="1687">Step 2: Delete/Re-Name the Local Vault Folder:</h3>
+<ul>
+<li data-start="1689" data-end="1769"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Remove any leftover empty or yellow folder located at the <strong data-start="58" data-end="71">ShellRoot</strong> path. If stubborn, delete hidden system files like <strong data-start="123" data-end="138">Desktop.ini</strong> first</span></li>
+</ul>
+<h3 data-start="1771" data-end="1806">Step 3: Run View Setup Again:</h3>
+<ol data-start="1808" data-end="2100">
+<li data-start="1808" data-end="1849">
+<p data-start="1810" data-end="1849"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Launch <strong data-start="7" data-end="21">View Setup</strong>.</span></p>
+</li>
+<li data-start="1850" data-end="1891">
+<p data-start="1852" data-end="1891"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Select your archive server (or manually add it).</span></p>
+<p><img decoding="async" class="alignnone size-full wp-image-71838 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-1.png" alt="" width="502" height="397" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-71838 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-1.png" alt="" width="502" height="397" title=""></noscript></li>
+<li data-start="1892" data-end="1933">
+<p data-start="1894" data-end="1933"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Choose your vault.</span></p>
+<p><img decoding="async" class="alignnone size-full wp-image-71839 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-2.png" alt="" width="503" height="398" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-71839 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-2.png" alt="" width="503" height="398" title=""></noscript></li>
+<li data-start="1934" data-end="1975">
+<p data-start="1936" data-end="1975"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Specify a clean view folder (ideally close to drive root to avoid path length issues) and c</span><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">hoose whether it&#8217;s user-specific or shared across all users.</span></p>
+<p><img decoding="async" class="alignnone size-full wp-image-71840 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-3.png" alt="" width="499" height="394" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-71840 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-3.png" alt="" width="499" height="394" title=""></noscript></li>
+<li data-start="2018" data-end="2100">
+<p data-start="2020" data-end="2100"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Complete the wizard. The “Attached; Missing Information” issue should no longer appear.</span></p>
+<p><img decoding="async" class="alignnone size-full wp-image-71841 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-4.png" alt="" width="498" height="396" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-71841 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/Attached-Missing-4.png" alt="" width="498" height="396" title=""></noscript></li>
+</ol>
+<h4>Conclusion:</h4>
+<p>The <strong data-start="2822" data-end="2857">“Attached; Missing Information”</strong> error almost always stems from residual registry entries or leftover folder data. Cleaning those completely and reinstalling the view usually resolves the problem. If issues persist, coordinate with your IT or PDM administrator, there may be deeper server or permission problems at hand.</p>
+<p>&nbsp;</p>

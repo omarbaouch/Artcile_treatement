@@ -1,0 +1,7 @@
+When creating or editing a SOLIDWORKS PDM Task, you can specify a Data Card that will be presented when the Task is launched.
+SOLIDWORKS PDM Task Input Card
+When the Task is launched, a user will be presented with the specified data card.
+Data Card displayed
+At this point a user can enter the required information into the Data Card.
+Note:
+The Convert and Print tasks enabled when the vault is created are not coded to use an input card and no input cards are installed. To use an input card with these tasks, create a card (or add fields to an existing card) to provide run-time values to the convert or print tasks. Use the Advanced Script Options dialog box to modify the tasks by adding code that uses the input from the card. Use the { } syntax to refer to card variables. For more information, see the Programmer’s Reference Guide, accessed by right-clicking the Add-ins feature.

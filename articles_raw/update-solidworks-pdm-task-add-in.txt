@@ -1,0 +1,25 @@
+When upgrading SOLIDWORKS PDM from one release to another, the Task Add-in does not automatically get upgraded.
+This Add-in should always be upgraded whenever you upgrade the PDM software
+. This ensures compatibility and allows you access to any enhancements or fixes that have been added to the Task.
+Here is the process for upgrading the SWTaskAddIn, which runs the default Convert task that is included with SOLIDWORKS PDM.
+The four step update process
+Step 1:
+First check which version of the Task Add-in is currently being used by your vault.  In the Administration console, expand the “Add-ins” node and double click the SWTaskAddIn to see the current Add-in Version.  In the case here it is the “32050050” version, which means the Add-in was for PDM 2024 SP5.
+Current Version of the SOLIDWORKS Task Add-in
+SOLIDWORKS 2025 SP1.2 has been recently installed, so the Add-in should be upgraded to match that version.
+PDM Version
+Step 2:
+Next locate and open one of the tasks included in the SOLIDWORKS PDM installation files.  In the Administration Console, click Open and browse to the installation directory for PDM and into the “Default Data” folder.  The default path will be “C:\Program Files\SOLIDWORKS CORP\SOLIDWORKS PDM\Default Data”.  Find the tasks included with PDM, “Convert_gb.cex”.
+Open a Task
+Step 3:
+From the opened file, select the “SWTaskAddIn” (not the task itself, just the AddIn), and drag and drop it onto the existing SWTaskAddIn under the Add-ins node of the Administration console.
+Drag & Drop Task
+Click Yes to accept the new task.
+This should only be done AFTER upgrading the program itself
+.
+Replace Add-in
+Step 4:
+You can verify that the clients are using the upgraded Task add in by right clicking on the PDM “blueberry” icon in the Windows Task tray and selecting “Task Host Configuration”.
+Task Host Configuration
+The Task add-in version that the client is using will be shown in the Version column.
+Task Host Configuration Version

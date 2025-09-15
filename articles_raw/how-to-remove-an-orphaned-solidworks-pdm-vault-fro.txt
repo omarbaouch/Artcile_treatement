@@ -1,0 +1,22 @@
+Even though a vault has been removed from the vault server, it can still appear on a user’s computer. The user can see the deleted vault, but cannot access it.
+Vault is still visible but inaccessible
+To remove the ghost of an earlier vault, the Windows Registry can be edited to remove the key, associated with this vault. If you are not familiar with the Registry, you may want to recruit the help of someone who is. Changes to registry can damage installed programs, as well as the operating system. To avoid accidental changes by the uninitiated,  I have purposefully left out the steps to launch the Registry.
+The key we want to delete is the
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\ConisioAdmin
+.
+Delete a registry key
+This will not affect the local vault views. This will clear the vaults reported by PDM Admin on the local system. The list of vaults will update the next time you launch PDM Admin. Any connected vault will show in PDM Admin, but the orphaned vault should no longer appear.
+If the orphaned vault is still visible, it’s time to go back in the Registry. In the key HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Computers\<local>\Archives, double click ‘Vaults. and delete the orphaned vault.
+Vault Archives
+Also, look at the key HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults and delete the key related to the orphaned vault.
+Delete Vault Key
+To delete the orphaned vault view, right click on the appropriate vault,
+Delete local vault view
+Then cancel the login by hitting the ‘x’, as shown below
+Cancel log in
+And choose whether to keep locally cached files, or whether to delete them.
+Delete local vault view
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+either online, in a classroom near you, or ask us about training on-site at your location.

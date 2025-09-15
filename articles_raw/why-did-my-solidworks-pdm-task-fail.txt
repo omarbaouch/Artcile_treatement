@@ -1,0 +1,10 @@
+A SOLIDWORKS PDM Task automates the conversion of SOLIDWORKS files to other file formats, such as PDFs. A PDM Task opens a SOLIDWORKS file, in SOLIDWORKS, and then performs a Save As operation. Occasionally a SOLIDWORKS PDM Task can fail!
+SOLIDWORKS PDM Task Properties
+Reasons for a SOLIDWORKS PDM Tasks Failure
+Typical reasons for a task to fail are slow network connections (if the PDM Task is being sent across a network), as well as insufficient resources on the Task Host (the computer where the task is being executed), can lead to crashing. In some situations, a previous SOLIDWORKS crash, can cause a PDM Task to fail.
+When SOLIDWORKS crashes, sometimes the SOLIDWORKS executable remains running. You may have experienced this when you launch SOLIDWORKS and get the message shown below.
+Journal File Warning
+SOLIDWORKS Journal File Issue
+SOLIDWORKS creates a Journal file whenever SOLIDWORKS is launched, There can only be one Journal file active, at any time for each major version of SOLIDWORKS installed (i.e. one for SOLIDWORKS 2020, one for 2021 etc.); if after a crash occurs the SOLIDWORKS executable continues to run. A new Journal file cannot be created when SOLIDWORKS is relaunched. This Journal file warning is what can prevent the PDM Task from running. This is because the Journal file warning must be manually dismissed, before a new session SOLIDWORKS can be launched.
+To resolve this issue, start the Windows Task Manager and look for the Process called SLDWORKS.exe. Then right-click on the executable and select End Task. Do this for all SLDWORKS.exe you find. If you have any open files, you should save them first, before ending the SLDWORKS.exe Processes.
+Ending SLDWORKS.exe Process

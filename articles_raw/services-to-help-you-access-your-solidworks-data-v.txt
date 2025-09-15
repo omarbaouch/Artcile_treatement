@@ -1,0 +1,82 @@
+Right now with the COVID-19 outbreak a lot of companies are being forced to change the way they operate, with employees having to work remotely outside of the office. This means accessing the shared SOLIDWORKS data in your office becomes more of a challenge. In a
+previous post
+we presented the different methods available for accessing data through
+Remote Desktop Tools
+,
+VPN (Virtual Private Network)
+and
+Cloud options
+.
+In this post I will outline the various PDM and Cloud services that Javelin provides, so you are aware of the options available and how you can get help to remotely access your data.
+Javelin Cloud Services
+Remote SOLIDWORKS PDM Services
+Javelin’s team of Certified Experts provide a variety of remote services including System Implementation, Health Check, Optimization and Upgrades.
+SOLIDWORKS PDM Implementation Service
+: If you need to organize your business for working remotely then we can provide you with a SOLIDWORKS PDM implementation service that will ensure your PDM system is installed correctly and optimized for remote sharing. Certified PDM Implementation Experts will also advise you on best practices and make you self sufficient. We have refined the implementation process over 20+ years helping thousands of customers with data and document management issues.
+SOLIDWORKS PDM Upgrade Service
+: If you are upgrading your SOLIDWORKS PDM from Standard to Professional in order to take advantage of web tools and access in the professional version; then you should consider our remote PDM Upgrade Service to ensure that the upgrade goes smoothly and downtime is kept to a minimum.
+SOLIDWORKS PDM Audit Service
+: Javelin’s team of Certified PDM Experts can provide you with a comprehensive SOLIDWORKS PDM Audit to ensure you system is optimized for working remotely. Our analysis will determine if there are any issues with your system, establish it’s running at full capacity, verify your data is fully protected, and check that the latest enhancements and features are being utilized.
+Javelin Cloud Services
+Javelin’s Amazon Web Service (AWS) Certified Experts provide
+cloud infrastructure and application migration solutions
+to small and medium sized businesses. We can help you to Plan, Design, Build, Migrate, Run, Operate, and Optimize your cloud service.
+Javelin Cloud Mentoring
+: Get the guidance you need to select the right service levels from AWS Services. Our team will evaluate your existing PDM infrastructure and provide a future needs analysis including:
+Servers/Virtual Machines (VMs)
+Storage Needs
+Virtualized Hosts or Bare Metal
+Internal network cabling
+Routers and Switches
+External bandwidth requirements and availability, which includes:
+Match needs to AWS offerings:
+EC2 instance types
+EBS storage types
+Network Needs and Configuration
+We also provide an AWS network diagram for a proposed infrastructure
+Javelin Cloud Network Configuration
+: The Javelin team can build a seamless connection between AWS and your current network infrastructure. The service includes:
+Current infrastructure analysis
+Switching and Routing
+Network Speeds and Capacity
+VPN Appliances
+External Bandwidth Availability
+Hardware recommendations for Optimal Performance
+Hardware and Network configuration and testing
+Javelin Cloud Server Services
+Client-Side Configurations
+DNS Configurations
+Javelin Cloud PDM Installation and Setup
+: Javelin AWS and SOLIDWORKS PDM Services Team will provide you with the network configuration that best suits your PDM requirements on the Cloud:
+AWS configuration and build out (SQL, PDM database and PDM Archive in place)
+Configure Amazon SNS for AWS notifications delivery
+Configure Amazon SES for PDM SMTP Notifications Delivery (if necessary)
+Configure AWS VPC for Delivery of PDM SMTP Notifications to OnPrem SMTP Server (if necessary)
+Create CloudWatch Alarms
+AWS Backup Configuration
+Javelin Cloud Health Check:
+Analyze your existing system and provide you with a report. The service includes:
+On demand checkups (scheduled in advance as required)
+EC2 resource usage analysis
+Network usage analysis
+EBS Storage usage
+Our team will also provide you with recommendations for upgrade/downgrade of EC2, EBS, or other Amazon resources
+Disaster Recovery Validation Service
+: Testing of backup systems to avoid major problems, typically includes 1 day to recreate, and 1 day of testing.
+Verify consistency of backup data
+Recreate PDM environment and restore data
+Connect simulated client machines and test restored data
+Provide reporting on results
+Recommended annually
+Additional Cloud Services
+: There are a number of IT services that our experts can provide you, these include:
+VPN Consulting Services
+Remote Desktop Tools Support
+Office 365 Administration
+PDM Administration
+Azure, AWS Administration
+Network Administration and Consultation
+Setup of a cloud based CAD workstation featuring an Nvidia Tesla graphics processor
+Interested?
+If you are interested in any of these SOLIDWORKS PDM or Cloud services then please
+contact us »

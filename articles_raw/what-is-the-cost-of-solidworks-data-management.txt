@@ -1,0 +1,156 @@
+In this article and related videos we compare the different data management solutions available from DS SOLIDWORKS and the cost required to implement and maintain the system.
+How much is a lack of Data Management costing your business?
+What does a Data Management system do?
+Pros and Cons of DS SOLIDWORKS Data Management Systems
+Return on Investment (ROI) Example
+Get started with Data Management
+How much is a lack of Data Management costing your business?
+A lack of data management can be very costly for your time and business especially with the way most of us work today. How many of these situations do you experience in your business on a daily basis…
+File open and save times are very slow!
+With many of us working from remote home offices, these performance issues have increased, and data has become even more disconnected with workarounds.
+I can’t find my files
+: Scouring hard drives folders with Windows File Explorer search can help but is very slow and limited. So much time and productivity are lost trying to track down data, which inevitably ends in unnecessary recreation of parts!
+Am I using the latest version?
+So now I finally found a file and sent it to the shop floor. The part gets machined… but when assembled, it doesn’t fit… was it the latest revision? How much cost is incurred from scrap and penalties from product delivery delays?
+I spend too much time on administrative tasks!
+Different people need different forms of consumable data. Such as PDF files of drawings, DXF files of sheet metal flat pattern, or Excel-based BOM.  How about entering the same data over and over again; we enter the same part numbers, descriptions, materials, finishes, customer data into part files, drawing title blocks, bill of materials, then again in other business systems like an ERP. How much wasted time, and worse, how many errors are not detected?
+I need past revisions of parts!
+Your customer just contacted you looking for a replacement part from a product they purchased five years ago. How quickly can you zero in on all the parts and the revision level they were at back then. Back to the situation of not being able to find the file and having to reverse engineer the part. Costly for you and the client.
+It’s hard to share files with other users and offices!
+Your satellite office needs a file. You suffer from lost productivity finding the file, creating the email and another copy of the file, then lose track of who has the latest version after sending it.
+What does a Data Management system do?
+The main reason for using a data management system is to centralize and secure your data. The system will maintain a history and audit trail, automate the creation of consumable files and can make data more self-serving. For example, Bill of Materials (BOM) and consumables can be requested and accessed at the appropriate time. The performance boost from working from a local cache is especially beneficial for CAD designers. You can push and pull data between different business systems to eliminate duplicate data entry.
+Every business is at different a stage for company size and number of departments; with their own product and process complexities. One data management system does not fit all, so DS SOLIDWORKS have different options to suit your needs for both today and tomorrow.
+Pros and Cons of DS SOLIDWORKS Data Management Systems
+There are currently four DS SOLIDWORKS Data Management Systems to choose from, and two of which utilize Windows Explorer making them very easy to use. Here is an overview of each system along with their pros and cons:
+SOLIDWORKS PDM Standard
+SOLIDWORKS PDM Standard
+, powered by Microsoft® SQL Server Express and fully embedded into SOLIDWORKS 3D CAD and Windows® Explorer, provides an intuitive set of configurable tools to manage your SOLIDWORKS files.
+Pros
+:
+Included with SOLIDWORKS Professional & Premium software
+Easy to use because it integrates into Windows Explorer
+Minimal setup and minimal cost.
+Cons
+:
+Limited performance as it’s build on Microsoft® SQL Server Express
+Limited capabilities when compared to the other solutions, such as no data card lists.
+No replication to get data to different offices
+No API
+Limited to 1 workflow and 10 states with single transitions
+No system integrations like ERP, MS office, or other CAD systems.
+SOLIDWORKS PDM Professional
+SOLIDWORKS PDM Professional
+, powered by Microsoft SQL Server Standard extends the capabilities of SOLIDWORKS PDM Standard to allow your entire enterprise to easily share data and collaborate on designs.
+Pros
+:
+Fully functional data management
+A very nice API making it almost limitless what you can do with this solution
+Integrates with other products like DriveWorks, SOLIDWORKS Composer, SOLIDWORKS Electrical, and other CAD systems
+Can integrate with ERP systems
+Can replicate data to maintain data access and performance, even globally
+Has unlimited workflows to manage just about any data source
+Makes Bill of Materials access flexible and convenient.
+Cons
+:
+Is a document centric solution
+Document management only
+Not true processes
+SOLIDWORKS Manage
+SOLIDWORKS Manage
+provides a unique set of advanced data management tools. This is accomplished by leveraging the file management capabilities and ease of use of SOLIDWORKS PDM Professional and adding powerful project, process, and item management capabilities.
+Pros
+:
+Integrates into SOLIDWORKS PDM Professional
+Adds process management and project management.
+Can distill and display data through dashboards and reports
+Very customizable
+Powerful Bill of Materials management like BOM Variants and types or even starting a new product from a BOM.
+Cons
+:
+No API yet so it’s very configurable but not customizable
+It does have it’s own user interface that people will need to learn
+3DEXPERIENCE Works
+3DEXPERIENCE Works
+is a portfolio of connected, powerful and collaborative Data and Product Lifecycle Management solutions on the cloud-based 3DEXPERIENCE® platform. It empowers your team to collaborate and share your SOLIDWORKS® 3D designs and data on the cloud.
+Pros:
+Quick out of the box functionality
+No hardware requirements
+No client installs and again integrates will SOLIDWORKS and Microsoft office products.
+Cons
+:
+Workflows are pre-defined
+The performance is dictated by your internet speed.
+There are currently no ERP integrations
+Minimal configurability
+It currently only has revisioning where SOLIDWORKS PDM Standard and Professional have revisioning and versioning.
+Return on Investment (ROI) Example
+Now that you have a better understanding of the data management systems currently available and their pros and cons, you will also want to know much does each solution cost, and which is the right fit for your business?
+As an example we will review the cost for a company which has 10 users who need data management, comprised of:
+5 dedicated CAD designers
+5 other other users:
+1 Manager
+1 Purchaser
+1 Salesperson
+2 Shop Floor users who want to benefit from their own data management but also want to Collaboration with other departments.
+In the table below you can see a breakdown of the initial software cost, ongoing annual cost and typical return on investment time for a DS SOLIDWORKS data management solution:
+NOTE
+: Costs shown in the table below are approximate US dollar estimates,
+contact us for an accurate quote
+SOLIDWORKS
+PDM Standard
+SOLIDWORKS
+PDM Professional
+SOLIDWORKS
+Manage
+3DEXPERIENCE
+Works
+Number of users
+1-10 users
+5-100+ users
+5-100+ users
+5-100+ users
+Solution type
+On-premise
+On-premise
+On-premise
+Cloud
+Initial software cost
+$2,500
+$30,000
+$45,000
+$15,500
+Implementation / training costs
+$7,000
+$10,000
+$20,000
+$2,500
+Average first year total*
+$9,500
+$40,000
+$65,000
+$18,000
+Ongoing annual software costs
+$600
+$5,200
+$8,500
+$15,500
+Typical ROI
+6-8 months
+8-10 months
+10-12 months
+10-12 months
+Learn More
+Learn More
+Learn More
+Learn More
+*Based on 5 CAD users & 5 other department users
+** Costs shown in US dollars
+Get started with Data Management
+So how much is your current data management costing you today? Go and take account of the lost productivity and lost revenue from the many manual and repetitive processes you use today. Check on the amount of scrap from costly errors that make it to the shop floor.
+Status quo is always easy to fall back on, but that doesn’t mean it’s the right answer. Invest in your company!  Ensure your most valuable asset is protected and that you squeeze every ounce of value from it. With the right data management system your productivity will go up, and your team will work more cohesively. As you can see in the ROI table above, the more data and people you connect, the more significant your returns will be. Lastly, no matter where you might want to start today, these solutions allow you to grow within each solution and across these solutions.
+If you have any questions or want to find out more, please
+visit our website
+and
+reach out to talk with our knowledgeable staff
+.

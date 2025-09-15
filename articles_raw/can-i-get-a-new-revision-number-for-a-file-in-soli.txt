@@ -1,0 +1,59 @@
+A common question that we are asked during
+SOLIDWORKS PDM implementations
+is what the correct transitions in the workflow are to increment the revision number of CAD files; should the SOLIDWORKS PDM revision number be created before or after the modification is done?
+SOLIDWORKS PDM Default Workflow
+As an example, let’s examine the
+Default Workflow
+that comes with the
+Default
+predefined configuration. This workflow will increment the revision number whenever a file is sent to the Approved state, through one of the highlighted transitions. This means the revision number is generated
+after
+the modification has been made and reviewed.
+SOLIDWORKS PDM Default Workflow
+The example below is the history of a part that followed this workflow. Notice that the revision A is set to version 3 (three). Before this version, neither the history nor the data card showed a revision number. Likewise, revision B is only set to version 5 (five). This means that while the part was being changed in version 4 (four), the revision shown was still the old one, revision A.
+History of a file with two revisions
+This is how SOLIDWORKS PDM is intended to handle revision numbers. Several built-in functionalities are meant to work with revision numbers in this way, as we will see later.
+A different SOLIDWORKS PDM revision number workflow approach
+Some engineering departments prefer to work in a different way. Those in favor of the alternative that follows argue that, if a designer starts changing a part that has been previously released as revision A, he or she is already working on a revision B, so the revision entry (on the data card, drawing title block and history) should reflect this since the beginning, that is, when the change is requested or started.
+The SOLIDWORKS PDM revision number workflow below is an example of this possible setup. Note that an extra state is required here. We are also using an automatic transition – a functionality that is only available in the Professional edition. This way, files will get a revision number as soon as they are checked in for the first time.
+A modified SOLIDWORKS PDM revision number workflow
+The history of a file going through this workflow will look like this:
+History of a file – now with revision numbers generated prior to the approval
+In the end, the data card looks like this – exactly the same as the first example.
+Data card of a file on revision B
+While the result – when looking to the data card or to the drawing’s title block – may look correct, from the history point of view this is inconsistent, and we can verify this in several parts of the client and the Administration tool.
+Why this technique could be a problem
+The
+Get Version
+menu is now misleading
+Get Version menu
+The permission
+Show working versions of files
+will not work as expected. This permission is typically not granted to any non-designer groups (e.g. Manufacturing, Procurement) so those users can only see approved versions, and not any work in progress. In this example, they would see version 5 (five) of the part, created prior to the actual change, and not the approved version, 7 (seven).
+“Show working versions of files” permission
+The option
+Never move versions with revisions to cold storage
+, that can be set to any new or existing cold storage schemas, will also consider the wrong version as the released one.
+Cold storage schema
+In this case, we recommend that this entire functionality is not used at all, because there is no way to avoid that released revisions be moved or permanently deleted (if using the option
+Delete archive files
+). This could lead to data loss and compliance issues – for instance, if your ISO systems requires all revisions of items to be kept.
+An alternative
+If you really need to show the new revision number prior to the approval, it is possible to implement an alternative solution. The Revision data card variable can be updated first (e.g. during the
+Create Revision Number
+transition) and the revision entry can be incremented only during the approval, that is, during the
+Passed Approval
+transition.
+Revision variable update
+Revision increment
+This will solve the problems described above, however, now the Revision number on the data card will be out of sync with the actual file Revision number, as we can see below. To avoid any confusions, you could add the workflow state to the data card next to the Revision Number, so it is clear to all users that revision B is still under Work In Progress.
+Also, you can now use permissions, e.g. disable
+Show Working Versions of Files
+for non-engineering users, to make sure no files are used before they are released.
+Revision shown on Data Card and History
+The answer…
+As we have seen, the answer to the question that opened this article is
+yes, you can increment the SOLIDWORKS PDM revision number of your files at any point of your workflow
+. However, you must consider all unintended consequences of an
+unorthodox
+setup if that is your case.

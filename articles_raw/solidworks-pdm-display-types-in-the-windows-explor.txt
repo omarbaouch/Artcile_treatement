@@ -1,0 +1,21 @@
+There are three
+SOLIDWORKS PDM
+Display Types available in the Windows Explorer Local Vault:
+Show Files
+Show Bills of Materials
+Show Search Results
+They can be found under the Display menu as shown below:
+SOLIDWORKS PDM Display Types
+Show Files
+Show Files, is the default and most commonly used. This is the view, that displays the files and folders, that are part of your vault.
+Show Files
+Show Bills of Materials
+Show Bills of Materials, will display all
+Named
+(saved)  BOMs, in a selected folder.
+Show Bills of Materials
+Show Search Results
+Show Search Results, will show a selected Search Card and once the Search is launched, will display the results of the Search.
+Show Search Results
+Additional Search Cards can be selected from the Search menu, in the top-right of the Vault View.
+Search Cards

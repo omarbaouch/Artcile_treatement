@@ -1,0 +1,15 @@
+When performing certain actions in the vault, such as transitioning a file, or checking a file in, you can add comments to provide context for this action in the file’s history as shown in the example below:
+Check in version comment
+These Version comments can be reviewed by right clicking on the file and going to “History”.  The comments stored against each version can be reviewed for each version in the history of the file.
+In previous versions, the user whose name was associated with that “Event” in the history could always edit the associated Comment at any time in the future.
+Users could only update comments that they made, not comments from events associated with other users
+.
+In SOLIDWORKS PDM 2019, Administrators have been given a new permission to control this functionality
+, potentially restricting users from going back and making changes to these comments in the file history.
+The new permission can be set for either individual Users, or for Groups.
+How to take advantage of SOLIDWORKS PDM Update History Comments Permission
+To set this new permission in SOLIDWORKS PDM 2019, launch the PDM Administration program and double click on a specific User or Group.
+Go to the “Administrative Permissions” and in the list you will see the new permission “Can update history comments”.
+Can update history comments permission
+By default SOLIDWORKS PDM Update History Comments Permission will be enabled allowing users to continue to update the comments in the history, just as they have always been able to do.
+If the permission is unchecked, users will no longer be able to make any changes to their comments after the fact.

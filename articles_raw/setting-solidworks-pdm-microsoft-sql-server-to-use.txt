@@ -1,0 +1,31 @@
+For users to be able to log into
+SOLIDWORKS PDM
+they must be able to connect to the Microsoft SQL Server that is hosting the database.
+By default Microsoft SQL Server Standard will communicate on port number 1433, so generally all that might be needed is to add a firewall exception for that port number to allow communication.  However, there are two possible scenarios for PDM users where port 1433 may not be the port in use.
+If using
+SOLIDWORKS PDM Standard
+, it’s database is hosted Microsoft SQL Server Express.  SQL Server Express be default uses a dynamic port instead of static port 1433.
+If using
+SOLIDWORKS PDM Professional
+but the database is being hosted on a Named Instance of Microsoft SQL Server Standard, instead of the Default Instance, it will be using a dynamic port instead of static port 1433.
+If you have a firewall is in place, then SQL Server should be changed to use a static port instead of dynamic. This is fairly easy to do by following these steps:
+SQL Server Configuration Manager
+Step 1:
+On the server hosting the Microsoft SQL Server software, launch the program “SQL Server Configuration Manager”.
+Expand SQL Server Network Configuration
+Step 2:
+Expand the “SQL Server Network Configuration” tree in the left pane and find the instance you wish to modify.  If using SOLIDWORKS PDM Standard this is listed by default as “Protocols for SWPDM_SQLEXPRESS” unless you modified the instance name when installing PDM Standard.
+TCP/IP Properties
+Step 3:
+Right Click on the “TCP/IP” protocol and select “Properties”.
+TCP Dynamic Ports
+Step 4:
+In the Properties dialog, go to the “IP Addresses” tab and go to the IPAll section.  The currently used dynamic port is listed in the “TCP Dynamic Ports” box.
+TCP Dynamic Ports
+Step 5:
+To change to a static port, clear the value in the “TCP Dynamic Ports” box and fill in the port number to be used in the “TCP Port”.  Generally ports above 50000 are advised.
+Confirm change
+Step 6:
+Once the change is made, the PDM service will need to be restarted.  To restart the service, go to “SQL Server Services” and right click the SQL Server service for the instance and select “Restart”.  In the case of SOLIDWORKS PDM Standard this will be displayed as “SQL Server (SWPDM_SQLEXPRESS).
+Restart Service
+Once this is done, a firewall exception can be added for the selected port allowing the PDM Clients to communicate with the SQL Database server.

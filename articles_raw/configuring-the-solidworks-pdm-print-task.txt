@@ -1,0 +1,51 @@
+In
+SOLIDWORKS PDM Professional
+, you can configure the Print task provided by the SOLIDWORKS Task Add-in to specify the computer, printer, and print settings to use. The Print task can be configured to run silently when executed or a user who initiates the task can select all or some of the print properties.
+The Print task can be imported from the PDM installation directory.
+Import a Task
+The Print task to be imported, is located in the PDM installation directory, in the Default Data folder.
+Print Task File to Import
+The
+Administration Guide
+that is available from the Help pull-down in
+SOLIDWORKS PDM Administration
+, describes in detail how to configure the Print task. In summary, there are ten sections that need to be defined.
+SOLIDWORKS PDM Print Properties
+To Configure the Print task:
+Expend the
+Tasks
+and double-click
+Print
+In the
+Print Properties
+dialog box, in the left pane, click
+Execution Method
+Select the computer that can be used to
+execute the task
+and how task execution is initiated
+Click
+Printer
+Select one:
+Always use the following printer name
+Select a printer from the list of available local printers
+Prompt the user with the following options
+Specify printers that users can chose from
+Select printer based on paper size
+For each Paper Size to be printed, click under Printer Name and specify the name of the printer to use
+In the left pane, click
+Paper Size, Scale
+and Orientation
+to specify defaults for paper size, scale and orientation
+Select Allow the users to change this settings to let users who run the print command change the settings
+Click
+Margins
+to specify paper margins and optional headers and footers, or have the print command prompt user for these values
+Click
+Files
+to specify how to handle referenced files and setup a folder for error logs
+Click
+Permissions
+to give users and groups permissions to initiate the task
+Click
+OK
+to save

@@ -1,0 +1,25 @@
+As you work with projects in SOLIDWORKS Workgroup PDM, your
+PDM working folder
+may come to have a very large number of files cached locally.  How can you determine which files are safe to remove  and which ones you may still be working on?
+The best way to manage this is using the SOLIDWORKS Workgroup PDM Cleanup Tool.  This can be accessed by right clicking on the “My Workgroup PDM Documents” folder in the File Explorer area of the Workgroup PDM Task Pane and selecting “
+My SOLIDWORKS Workgroup PDM Cleanup…
+”
+The tool will review all files in the working folder and show if they are:
+Older
+– This indicates that the revision of the file that is locally cached in the working folder is older than the latest one available in the vault.  These files would be safe to delete locally as this revision could always be retrieved again from the vault if needed.
+Same
+– This indicates that the revision of the file that is locally cached in the working folder is identical to the latest one available in the vault.  These files would be safe to delete locally as this revision could always be retrieved again from the vault if needed.
+Newer
+– This indicates that the file in the working folder has been modified is newer than the latest one checked into the vault.  These files should most likely not be deleted (unless you wish to start over) as this would cause a loss of work.
+Not in Vault
+– This indicates that the file has never actually been checked into the vault.  These files should be reviewed and if they should be added to the vault this should be done before deleting the local copy (until the file is checked into the vault the first time, this is the only copy, so don’t delete it unless you are sure).
+Conflict
+– This indicates that the local file has been modified in some way, however the file that was modified is older than the latest revision available in the vault.  This could happen for instance if I checked out a file, made changes and checked the file in to create revision 2 of the file.  However I then open the file and specify that I want to open revision 1 from the vault, then make changes again to revision 1.  This would result in a conflict which would need to be resolved to determine if this file is still valid to check back in or if I need to get revision 2 and make the changes to it.
+SOLIDWORKS Workgroup PDM Cleanup
+Are you upgrading to SOLIDWORKS 2018?
+NOTE: that SOLIDWORKS Workgroup PDM is not compatible with SOLIDWORKS 2018.
+End of life for SOLIDWORKS Workgroup PDM products is SOLIDWORKS 2017 SP5.
+SOLIDWORKS 2018 client is NOT compatible with a 2017 vault.
+When the time comes to upgrade to SOLIDWORKS 2018, a migration from SOLIDWORKS Workgroup PDM to one of the other
+SOLIDWORKS PDM solutions
+will be required.

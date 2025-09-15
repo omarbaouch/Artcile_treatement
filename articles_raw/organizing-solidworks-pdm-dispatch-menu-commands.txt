@@ -1,0 +1,17 @@
+SOLIDWORKS PDM Dispatch
+is a very powerful tool in
+SOLIDWORKS PDM Professional
+.
+However as the number of Dispatch Actions grows, the right-click shortcut menu list can get larger and larger, as shown below:
+SOLIDWORKS PDM Dispatch Menu listing is quite large
+At this time there is no way to filter out Dispatch Actions so that they only show for some Users or Group, or so that they only display in certain folders.
+It is possible though to
+organize the Dispatch Actions into sub or fly out menus
+in the right-click shortcut menu.
+Separate menu items with a backslash
+In the Dispatch Action settings, under the Menu Command, the sub menus and command text can be separated using a back slash
+.
+So
+Dispatch\Rename\Rename with Drawing Numbers
+will result in a fly out menu named “Dispatch” with a sub fly out menu named “Rename” and finally the command named “Rename with Drawing Numbers” as shown in the figure below;
+Flyout menu applied

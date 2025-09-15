@@ -1,0 +1,57 @@
+PDM Client License Types
+When installing the SOLIDWORKS PDM Client you can select from 3 different license types:  Editor, Contributor, or Viewer.  It is very important to make sure that you select the correct license type for the PDM licenses that you own, otherwise, you will receive an error when trying to log into the vault.
+The capabilities of these license types will depend on whether they are being used in a Professional or Standard environment.
+SOLIDWORKS PDM Professional
+SOLIDWORKS PDM CAD Editor
+:  Supports working with all file types. Users can add and modify files. CAD add-ins allow access to PDM functions within supported CAD applications.
+SOLIDWORKS PDM Contributor
+: Supports working with all file types. Users can perform the same actions as with the Editor license, but add-ins are not enabled.
+SOLIDWORKS PDM Viewer
+:  Allows read-only access to vaults, users cannot add or modify files or use CAD add-ins.
+SOLIDWORKS PDM Standard
+SOLIDWORKS PDM CAD Editor
+:  Supports working with SOLIDWORKS, DWG/DXF format, Microsoft Word, and Microsoft Excel files. Users can add and modify files. All file formats that Office plug-in handles behave the same way in SOLIDWORKS PDM Standard except Preview.
+SOLIDWORKS PDM Contributor
+: Supports working with SOLIDWORKS, DWG/DXF format, Microsoft Word, and Microsoft Excel files.
+SOLIDWORKS PDM Viewer
+:  Allows read-only access to vaults, users cannot add or modify files.
+Solidworks PDM add-in
+Steps for changing SOLIDWORKS PDM Client License type
+After installing a PDM client, there are 3 different ways to change your client license type. Each of these options will edit the registry so Windows Administrator access is required.
+The PDM administration tool
+Modifying your Solidworks install
+Editing the registry
+The PDM Administration Tool
+Run the Administration program as administrator and go to
+Help
+, then select
+About SOLIDWORKS PDM Administration
+.
+About SOLIDWORKS PDM Administration
+In the dialog box select the desired Client type in the drop list as shown below.
+SOLIDWORKS PDM license type
+Once the new license type is selected, the
+workstation will need to be restarted
+before the change will take effect.
+Restart message
+Modifying your Solidworks Install
+This method uses the Solidworks installation manager, the same tool used when first installing Solidworks and PDM.
+Navigate to your installed apps and choose to modify your Solidworks install (or the PDM client). If the modify button is not selectable, Solidworks was installed by an admin image, and you will have to use one of the other options to change your client type.
+Modifying the Solidworks Install
+Modify your install.
+First Page of Installation Manager
+Follow along with the installation manager until the summary page.
+Installation Manager Summary
+Edit your PDM options and select your PDM client type, return to the summary and modify your install.
+PDM Client Options
+Registry Edit
+The PDM client type is stored in the Windows Registry, each of the above steps are just fancy ways of editing that registry. This option is the fastest method but
+i
+f you are not familiar with working within the Registry, you should not attempt this process. Irreparable damage to the operating system or installed software can occur, if some areas are edited or deleted.
+The client type is stored in the PTID registry value under:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\
+CAD Editor > {05AD35C4-8A9A-4114-B51F-32186222ABA1}
+Contributor > {E2BE88CF-6E17-43e2-A837-C1051F3E4EDB}
+Viewer > {CC72DD26-1A34-4209-B50B-21C7DD5E29F6}
+In the example below the client is set to pull a CAD Editor license. Double click on PTID and change the value data to the desired client type, restart Windows Explorer and you are done.
+Video of Client Type Change in Administration

@@ -1,0 +1,10 @@
+$PRPSheet can be used in an attribute block to map a model property to a custom or configuration specific property of a drawing. This is explained in the Javelin blog article
+SOLIDWORKS PDM Professional: Write Drawing Card With Part Card Variables
+. This property will then show up under the @ tab of the drawing data card.
+Data Card @ tab
+The term $PRPSheet, may seem to indicate that a property is being mapped to a drawing’s sheet, but a sheet is not a configuration. Properties can only be mapped as a custom, or configuration specific properties. Since a sheet is not a configuration, properties cannot be mapped to them. You can enter information for each sheet independently in the data card, but this will not be reflected in the drawing sheet itself.
+We can show values contained in $PRPSheet in the sheet tabs. This is done by checking ‘
+Update in all configurations
+‘ in the properties of a field in the data card.
+Update all configurations
+This will cause all sheet tabs, including the @ tab, to display the same value for that field. In order make make changes for this field, the changes must be made from data card and not the drawing.

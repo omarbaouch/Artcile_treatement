@@ -1,0 +1,55 @@
+After installing both the PDM Standard
+Server
+and
+Client
+components,  the server/computer where the database was installed, needs to be identified in SOLIDWORKS PDM Administration. From Windows
+Start
+>
+All Programs
+>
+SOLIDWORKS PDM
+, select
+Administration
+.
+SOLIDWORKS PDM Administration
+Right-click on SOLIDWORKS PDM Administration
+and select
+Add Server
+. The default port is 3030. You may need to open up this port on your firewall.
+Add Server
+The server will now be listed in SOLIDWORKS PDM Administration
+Server Added
+A vault is required to control the workflow and access of files added to SOLIDWORKS PDM Standard. To add the vault,
+right-click on the server
+and select
+Create new Vault
+from the shortcut menu.
+Create new vault
+Click on Next in the Welcome window
+Welcome Screen
+Name your vault. Optionally a description of the vault can be added.
+Vault name
+Select the root folder of the vault. This would have been done during the archive server configuration stage, of the PDM Standard installation
+Vault root
+Identify the location of the MS-SQL database server and give the new database a name. When you create a new vault a corresponding database is created in SQL.
+Create database
+Create new vault
+In order to use PDM Standard, it’s serial must be included in a SOLIDWORKS SolidNetwork License Manager. This would have been during the installation of PDM Standard. You now need to identify where the SolidNetWork License Manager is located, by clicking on Add and entering the server name where the SolidNetWork License Manager was installed. Please note the port 25734 shown in the below image, is the default port used by SolidNetWork License Manager, if you defined a different port during the installation, please enter that port number instead.
+Choose the language and date format.
+Regional settings
+If you would like, you can give a different ‘admin’ password for this vault, then what was provided during the installation of PDM Standard.
+Vault admin password
+Configure the New Vault. will allow you to choose what vault items, such as data cards, will be added to your new vault. The Default option is useful, if you want to avoid having to create these items yourself. the Quick Start is similar to the default, but it is centered around Solidworks files. The Empty option, allows you to create all these items on your own, or import them from another vault. There are many items that need to created for a vault. I would strongly recommend taking training so that you configure your vault correctly.
+Configure vault
+In the previous step, if you choose any option but Empty, you can choose which items you want to add to your new vault.
+Configuration details
+Review the set-up details and click on finish to create your vault.
+Review Set-up
+Once the vault is created, you will be presented with a summary of your new vault. Review your vault and Close this window.
+Summary
+Your new vault will now be visible in the SOLIDWORKS PDM Administration.
+New vault added
+Learning more about PDM
+Javelin can provide PDM implementation and training services for your business.
+Learn more about Javelin Services
+.

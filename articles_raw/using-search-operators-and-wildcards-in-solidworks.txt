@@ -1,0 +1,48 @@
+New in
+SOLIDWORKS PDM 2020
+, when performing a complete search, you can now use Search Operators and Wildcards such as “AND”, “OR”, or “NOT” separated by a space.
+From previous releases, we know that you can refine your search using various parameters including file name, description, etc. But, what if you don’t know
+EXACTLY
+what you’re looking for? That’s why we have wildcards.
+List of Search Operators & Wildcards:
+*     -> Default search Method 
+
+" "   -> Exact Entry
+
+=     -> Exact Entry
+
+<     -> Less than a particular number
+
+>     -> Greater than a particular  number
+
+<=    -> Less than or equal to a particular number
+
+>=    -> Greater than or equal to a particular number
+
+SPACE -> Equivalent to an AND
+
+!=    -> Do not include Entry
+AND   -> String containing "Value1 AND Value2"
+
+&     -> String containing "Value1 & Value2"
+OR    -> Equivalent to "Value1 OR Value2" 
+
+|     -> Equivalent to OR "Value1 | Value2"
+NOT   -> Do not include Entry "NOT Document"
+Given the list of Wildcards above, keep in mind that there are a few rules that one needs to keep in mind:
+Search strings are case sensitive.
+Operators such as “AND OR and NOT” are case sensitive and need to be capital separated by a space.
+To search for special characters in a name, use “\” as a workaround
+Example: File Name – ‘Tool & Die’
+Search Field: “Tool \&”
+AND Operator Example
+NOT Operator Example
+OR Operator Example
+When upgrading to SOLIDWORKS PDM 2020, the previously saved searches are upgraded to follow the new search rules while maintaining the previous behavior.
+Given the list of operators above and the search strings, Users can now integrate the above into both the
+Quick Search
+command as well as Complete Search. These operators can be used in any input search criteria which has an edit-box type field, such as Description, Name, Part No, etc…
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

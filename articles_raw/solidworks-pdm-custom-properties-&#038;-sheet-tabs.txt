@@ -1,0 +1,13 @@
+Drawings do not have sheet specific custom properties and because of this, in the SOLIDWORKS PDM Data Card,  their properties always appear under the
+@
+tab.
+SOLIDWORKS PDM Tabs
+This can result in the @ tab and Sheet(s) tab(s) displaying differing information.
+Different Info Displayed
+We can use the option
+Update all configurations
+in file data card, to ensure that sheet tabs and the @ tab show the same information, but this is not always the goal.
+Update all configurations
+We may want to pull information, such as title-block information, that is unique to each Sheet and display it on the corresponding sheet tab, of the drawings data card. At the time this article was written, this is
+NOT
+possible. The problem stems from the fact, that sheets are not configurations. While in a part or assembly, we can access configuration specific properties, there is no such thing as sheet specific properties.

@@ -1,0 +1,23 @@
+In this post you will learn how to change the
+SOLIDWORKS PDM
+Vault date format and why the change may be required.
+The reason for a SOLIDWORKS PDM Vault date change could be because:
+The date format defined during the creation of the vault is incorrect.
+A company has decided to change the date format that will be used.
+Or there is a mismatch between date formats in a data card.
+Data Card Date Mismatch
+I want to first talk about a mismatch between date formats in a data card before I explain how to change the date format in SOLIDWORKS PDM. In some scenarios, when creating a data card, there is a Date Field that can be applied to a control.
+In the Date Field Properties, a date is generally assigned Text Value or Today’s Date as a Default Value.
+Default Value for Date Field Properties
+Today’s Date will pull the date from Windows. All other options, including Text Value, will pull the date from PDM. One solution for a date mismatch is to modify the Windows Date Format through the Windows Control Panel.
+Changing Date Format in Windows
+The other is to change the date format of the PDM vault.
+Changing SOLIDWORKS PDM date format
+To change the date format of the PDM vault, in PDM Administration, right-click on the vault and select Properties
+Accessing Vault Properties
+In the File Vault Properties dialogue box, a new date format can be selected from the Date Format pull-down.
+Changing Date Format through Vault Properties
+Want to learn more about SOLIDWORKS PDM Administration?
+Take our
+SOLIDWORKS PDM Administration training course
+live online to gain a better understanding of creating and managing a SOLIDWORKS PDM vault

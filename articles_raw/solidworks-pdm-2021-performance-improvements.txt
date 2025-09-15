@@ -1,0 +1,21 @@
+SOLIDWORKS PDM 2021
+has improved performance of file-based operations such as Add Files, Check-In, Destroy and other operations related to workflows.
+Improved system performance will help you quickly add, check-in, open, and change state of files with large reference structure. The Add Files operation is between 1.5 to 3 times faster in SOLIDWORKS PDM 2021.
+SOLIDWORKS PDM 2021 Performance
+The Check-in and change state operations have increased performance by approximately 25%. The Check-in dialog box opens quickly in PDM 2021 with large assemblies or parts with a high number of configurations.
+NOTE
+: The level of performance improvement can vary depending on the number of files, network bandwidth and CPU cores.
+Destroy Files
+In SOLIDWORKS PDM 2021 you can destroy files or folders quicker than before. This operation has significant improvement in performance when destroying a large number of files.
+Other PDM Operations and Workflows
+Performance is significantly improved for the following operations:
+For folders containing a very large number of files:
+Check-in and Check-out of a file
+Adding a new file by dragging or by copying and pasting
+Creating a new file from a template
+For assemblies with a large number of components at a single level, when working in SOLIDWORKS:
+Opening files
+Saving files
+Switching windows
+Editing a target file name in the Copy Tree dialog box in a high-latency environment
+Using Copy Tree when a user setting is added to clear variable values

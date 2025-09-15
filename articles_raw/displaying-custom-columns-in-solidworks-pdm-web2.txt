@@ -1,0 +1,16 @@
+A very useful feature in SOLIDWORKS PDM Vault Views is the ability to display
+customized Column Sets
+built from any Variables that have been created in the PDM Vault.
+SOLIDWORKS PDM Custom Columns
+By default,
+SOLIDWORKS PDM Web2
+will display columns for “Checked Out By”, “State”, “Days In State”, “Version”, “Modified”, “Size” and “Path” values.  However, it’s possible to add a custom Column Set to the Web2 interface as well.
+Standard Columns in SOLIDWORKS PDM Web2
+To show a custom Column Set in Web2, go to the Internet Information Services (IIS) Manager on the server hosting the Web2 site.  In the SOLIDWORKSPDM site settings, go to “Application Settings” in the ASP.NET section.
+IIS Manager
+In the Application Settings, go to the “ColumnSetName” setting and double click to edit it.  Type the exact name of the Column Set that you want to show in the “Value” field and click “Ok”. (you can find this name by expanding the “Columns” section in the PDM Administration console)
+SOLIDWORKS PDM Application Settings
+Once this is done the additional columns from the Column Set will display after the default ones in the Web2 interface.
+New columns added
+Unfortunately at this time, there is no way to re-order the columns in the Web2 interface, however as of SOLIDWORKS PDM 2019, we can hide some of the default columns if we wish.  To do this, go to the “gear” icon next to the column headers, and un-check any columns that you do not wish to have shown.
+Hiding Columns

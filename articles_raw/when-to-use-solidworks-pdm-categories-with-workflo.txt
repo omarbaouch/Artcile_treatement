@@ -1,0 +1,9 @@
+SOLIDWORKS PDM
+Categories
+are useful when you have conditions which are shared by multiple workflows. For instance there may be a file path condition, which is common to two or more workflows. Instead of defining this condition in each workflow, we can instead define this condition in a category:
+Category Condition
+And then reference the category in multiple workflows:
+Workflow properties
+If categories are used,
+care must be taken not to create a conflict between category and workflow conditions
+. A good practice is to only use category conditions in the workflows, all other conditions are then specified in the category. If only one workflow is used, it is best to avoid the use of categories, as there is very little benefit in using categories in this scenario.

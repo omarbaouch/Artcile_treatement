@@ -1,0 +1,20 @@
+This article builds on an excellent
+one posted by my colleague Michael Nwachukwu
+. In his article, Justin explained how to link SOLIDWORKS PDM variables to a SOLIDWORKS revision table. In this article, I will look at how to add additional columns to a SOLIDWORKS Revision Table and link these to PDM.
+I will first add the columns that I want in my SOLIDWORKS Revision Table. This is done by right-clicking on the header row of the Revision Table and selecting Insert Column.
+Insert Column
+I will then define the Column Property as Custom and enter a Title for the Property. The Title of the Property is important as it must match the PDM Attribute I will be creating later.
+Column Properties
+Now that I added the Custom Column I want, I will right-click on the Revision Table and save it.
+Save Revision Table
+After I have configured and saved my Revision Table, I will launch SOLIDWORKS PDM Administration, to continue with the set-up. With PDM Revisions configured as outlined by Justin, I will now add the additional variables I want to show in my Revision Table. I do this by manually entering the Attribute name. The Attribute name must be
+identical to the SOLIDWORKS Revision Table Title
+.
+SOLIDWORKS PDM Variable
+With the PDM Variable configured correctly, I need to populate the value for my variable. There are two ways I can do this. One is through a Transition action.
+Transition Action
+The other is through a Control in a Data Card.
+Data Card Control
+Setting the Variable Value through a Transition Action automates the process, but works best where values are available to be pulled from. these are usually environmental variables such as Date, Full Name, Initials, Version Comment, and Date.
+Environmental Variables
+In situations where the Variable Value requires user input beyond Version Comment, the Data Card option is likely the best.

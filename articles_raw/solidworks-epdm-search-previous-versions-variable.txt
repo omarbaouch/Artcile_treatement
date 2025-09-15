@@ -1,0 +1,4 @@
+The Variable “Search Previous Versions” may provide unexpected results if checked while executing an EPDM Search.
+Search Card
+This option will search each version of each file for the search string. When files are copied, the initial version of the copy, will have the same variable values as the original file. This can result in the copied files being included in the search results, even though the variable values were changed in a later version.
+EPDM Search Option Enabled

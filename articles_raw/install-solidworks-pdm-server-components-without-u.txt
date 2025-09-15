@@ -1,0 +1,22 @@
+Starting with SOLIDWORKS 2016, the SOLIDWORKS PDM file set was incorporated into the SOLIDWORKS Installation Manager. This makes for a convenient one stop location to install all SOLIDWORKS products. Unfortunately, this also makes for a large installation file-set, that can be cumbersome to move around.
+There are good reason for using the SOLIDWORKS Installation Manager though. Outside of installing the selected products, the Installation Manger will also install any required prerequisites.
+When installing SOLIDWORKS or any of the products intended for the end user, I would recommend using the Installation Manager
+.
+For Server Products, though, using that products installer may be more efficient. For example, the PDM Server Installation is approximately 500 MB, which is far smaller then full SOLIDWORKS Installation, which is around 14 GB. This makes the PDM Server Installation, much more portable. This also, makes downloading the PDM Server Installation, much faster.
+If you have already downloaded the full SOLIDWORKS Installation, you will find the PDM Server Installation file-set in a folder called ‘swpdmserver’. You can copy this file to server or a portable drive, so that you can take the file-set, to the location where you need to install PDM Server. You can also choose to download only certain components, such as PDM Server. The process for doing this, is explained in my article:
+Manually Downloading SOLIDWORKS Components.
+Also, from this area, you can download any required prerequisites. Using the PDM Server Installation file-set works well for updates, but I would recommend using the SOLIDWORKS Installation file-set, for the initial installation of the PDM Server.
+If you do decide to install SOLIDWORKS PDM Server Components manually then the rest of this article will walk you through the installation.
+How to Install SOLIDWORKS PDM Server Components Manually
+The PDM Server installation is launched by executing the SOLIDWORKS PDM Server.msi. This will be located either in the ‘swpdmserver’ folder, of SOLIDWORKS Installation file-set, or from the downloaded PDM Server Installation file-set.
+SOLIDWORKS PDM File Set
+After clicking on Next, on the Welcome screen, accepting the License Agreement, and providing the installation path, you will be asked if you want to install SOLIDWORKS PDM Standard or Professional.
+Choose the PDM Service Installation type
+You will then be asked what components you wish to install.
+Components to Install
+If you chose to install the Client, as I did in this example, you will be asked to choose a Product Type.
+Having the Client installed in the same as the PDM Archive, can be useful when troubleshooting connection issues.
+Again, if the Client is being installed, you will prompted to install any Add-ins.
+Installing Add-ins
+The remainder of the installation deals strictly with server components. You will first be asked to identify the location of SQL and the default password that was defined for the Conisio Master database.
+Select SQL Server Login

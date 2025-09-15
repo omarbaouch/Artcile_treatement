@@ -1,0 +1,59 @@
+Starting with the 2015 release, SOLIDWORKS PDM licensing is now handled through the SolidNetwork License Manager, instead of through a license file.  This has many benefits for PDM administrators, one of which is that it will allow much more customized control over PDM licenses using the SNL Manager Options File.
+One such benefit is when it comes to forcing inactive users to log off automatically so that their licenses are released back to the license pool, allowing other users access to PDM.
+Previously (in 2014 and older releases) this functionality could be enabled in the Licensing node of the Enterprise PDM Administration console by going to “Automatic Log Off”. However the only option was to have users automatically log off after 30 minutes of inactivity.
+Automatic Log Off
+Now, for both SOLIDWORKS PDM Professional and SOLIDWORKS PDM Standard this functionality will be controlled by the SolidNetwork License Manager’s time out settings.
+This means that by default the automatic log off, or time out, is ENABLED when you upgrade to PDM 2015 or newer software.
+The default setting is for inactive licenses to be logged off after 2 hours, however this can be modified using the SNL Manager Options File.
+How to create a Custom Options File
+Step 1:
+Launch the SOLIDWORKS SolidNetWork License Manager program and click “Modify…” on the
+Server Administration
+tab.
+SolidNetWork License Manager – Modify
+Step 2:
+Select the option to “Activate/Reactivate a software license” and then click “Next >”.
+Activate/Reactivate a License
+Step 3:
+On the next screen check the box beside “Options File” and click “Edit”.
+Edit Options File
+Step 4:
+If you do not have an Options File created yet you will be presented with the option to create a new one in the default path.
+Create Options File
+Step 5:
+Now we write our Options File.  The correct syntax is to have the Option Keyword, followed by a space, then the Feature Name, followed by another space and then the Time in seconds.  For instance if we wanted the PDM Professional CAD Editor licenses to time out after 1 hour of inactivity but the PDM Professional Contributor license to time out after only half an hour we would write:
+TIMEOUT swepdm_cadeditorandweb 3600
+TIMEOUT swepdm_contributorandweb 1800
+Write Options File
+A full list of the Option Keywords that can be used in the SNL License file can be found on page 141 and 142 of the FLEXlm End Users Guide (http://files.solidworks.com/Supportfiles/FlexLM_Enduser/licensingenduserguide.pdf).
+The Feature Names of the SOLIDWORKS PDM Professional products are:
+Product Name
+Feature Name
+CAD Editor
+swepdm_cadeditorandweb
+Contributor
+swepdm_contributorandweb
+Viewer
+swepdm_viewer
+PSL
+swepdm_processor
+The Feature Names of the SOLIDWORKS PDM Standard products are:
+Product Name
+Feature Name
+CAD Editor
+swpdmstd_cadeditor
+Contributor
+swpdmstd_contributor
+Viewer
+swpdmstd_viewer
+Step 6:
+Once the Options File text is finished, save the sw_d.opt file and close it.
+Save SolidNetwork License Manager Options File
+Step 7:
+Ensure that all server information is correct and click Next to proceed to the next screen.
+Check Server Information
+Step 8:
+Click “Select All” to make sure all your SOLIDWORKS products are selected for reactivation, enter your contact email and click “Next>” to complete the reactivation process.
+Activate License
+Activation Success
+Here is a video demonstration of the steps outlined above:

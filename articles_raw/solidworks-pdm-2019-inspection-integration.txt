@@ -1,0 +1,25 @@
+SOLIDWORKS PDM 2019 Inspection Integration
+New in SOLIDWORKS PDM 2019, we now have additional integration with SOLIDWORKS Inspection.  This integration includes:
+SOLIDWORKS PDM Ribbon
+We can now access PDM features, directly within Inspection such as;
+Check-Out
+Check-In
+Change State
+Get Version,
+Get Latest
+Search
+File Reference Handling
+SOLIDWORKS PDM will automatically create the references for inspection files and update the Contains tab with the appropriate parent files and output files as child references
+Variable Mapping
+We can map properties for the following block attributes;
+SWIPrjProperty
+SWICustomProperty
+Part Name
+Part Number
+Part Revision
+Document Name
+Document Number
+Document Revision
+How does SOLIDWORKS PDM 2019 Inspection Integration improve our vault?
+With the updated integration, it’s possible to edit SOLIDWORKS Inspection properties directly from the vault, making it unnecessary to open the inspection program each time, thus cutting down on lost time; making users more efficient.
+With all this added to the vault; it helps to make the SOLIDWORKS PDM a ‘One Stop Shop’ for all our engineering files, centralizing all documents in one location and adding the many benefits of PDM…such as permissions, version control, and revision management to inspection files.

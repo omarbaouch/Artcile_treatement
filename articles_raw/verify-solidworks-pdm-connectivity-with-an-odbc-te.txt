@@ -1,0 +1,32 @@
+To verify that a PDM Client computer or Archive server can communicate with the SQL (Database) Server, a SOLIDWORKS PDM ODBC test can be performed.
+ODBC (
+Open Database Connectivity
+) is accessed from the Windows Administrative Tools:
+Windows Administrative Tools
+The testing is defined from the
+System DSN
+tab, by clicking on Add and selecting SQL Server
+System DSN Tab
+Any Name can be added for the Data Source and optionally a Description can be added. The SQL (Database Server) can be selected from a pull-down or entered manually.
+Defining the data source
+Click on “
+Client Configuration”
+uncheck “
+Dynamically determine port
+” and click “
+OK
+“.
+Choose, ‘With SQL Server authentication using a login ID and password entered by the user’ as the Authenticity type and enter your SQL Login ID and password. The default Login ID is sa.
+Login ID and password
+Choose the Database, for which you want to test the connection.
+Database to test
+The following screen, can be left with the default options. Click on Finish to create the ODBC Data Source.
+Data source created
+You will be presented, with the Configuration of the ODBC Data Source being created. Click on Test Data Source, to test the connection.
+Test Data Source
+You will then be presented with a summary of the test results.
+SOLIDWORKS PDM ODBC Test Results
+Learn more about SOLIDWORKS PDM
+Take a
+SOLIDWORKS PDM training course
+delivered by a certified expert either in a local Canadian city, or live online

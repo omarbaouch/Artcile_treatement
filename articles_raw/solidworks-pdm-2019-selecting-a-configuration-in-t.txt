@@ -1,0 +1,36 @@
+SOLIDWORKS PDM 2019 now gives users the ability to preview a different configuration of a file other than the one that was active when the file was last saved by using an updated SOLIDWORKS PDM Configuration Preview.
+This new functionality can allow users to quickly view a specific configuration visually, without having to open the file in a separate viewer or in SOLIDWORKS.
+Configurations in the Preview Tab
+This can be an enormous time savings, especially when dealing with a part or assembly that has a large number of configurations.
+This new ability to preview other configurations is possible because eDrawings is now able to take advantage of Display Lists that have been saved in SOLIDWORKS models (this functionality was introduced in SOLIDWORKS 2018 for use with Large Design Review Mode only).
+How to take advantage of this new functionality
+To take advantage of these improvements, you must ensure that you have upgraded your SOLIDWORKS PDM and SOLIDWORKS eDrawings installations to 2019.
+The configurations in the SOLIDWORKS models will NOT automatically be available to preview.
+Prepare the file
+In order to get preview access to the configurations, the file must be prepared first. To do this:
+Open the file in either SOLIDWORKS 2018 or SOLIDWORKS 2019.
+Go to the Configuration Manager tab and right-click on the configuration that you would like to always be able to see a preview of:
+If you are using SOLIDWORKS 2018, you will see an option to “Add Large Design Review Mark”.
+If you are using SOLIDWORKS 2019, this has been renamed to “Add Display Data Mark”.
+Add Display Data Mark
+Enable this for any configurations that you want to see in the PDM preview and save and check in the file.
+Please note,
+enabling the Display Data Mark will cause the file size to grow and saves will take longer
+as the graphics information is being generated for each of the configurations marked, each time your save.
+There are two ways to access the different configurations:
+Access configurations via the fly out menu
+Option 1 is to simply right-click in the preview area and go to the
+Configurations
+fly out menu to select the configuration.
+Configurations fly out menu to select the configuration
+Access configurations via the eDrawings drop list
+Option 2 is to use the new drop list available in the eDrawings Full User Interface.
+eDrawings configurations drop list
+To access this new drop list in the user interface, go to
+Display
+>
+Options
+and enable the option “
+Show full UI in SOLIDWORKS Preview
+”
+Show full UI in SOLIDWORKS Preview

@@ -1,0 +1,22 @@
+This is a continuation of our
+SOLIDWORKS PDM Branching and Merging series
+. In this article, we will look at the steps to Branch SOLIDWORKS files. Branching creates copies of a source file, which can be modified in order to test new concepts.
+Branching is available from the Tools pull-down, of the Local Vault View.
+Selecting Branch from the Tools Pull-down of the Local Vault View
+The Branch dialog box is similar to the
+Copy Tree
+dialog and has many of the same options. Like Copy Tree, files must first be Checked-in.
+Branch Dialog Box
+There is no option to create a Compressed Archive though, and a Branch Name is required. A Branch Name can only be used once, so development of a Branch naming scheme, early on, can prevent problems coming up with Branch Names, on a per use basis.
+Once the Branching operation is complete, the History of the file, will so the Branch operation.
+Branch Operation in History of a File
+A list of Associated Branches, is available by right clicking on a Branch or the Source file.
+Selecting Associated Branches
+Selecting a Branch, from the Associated Branches fly-out, will display a report, that lists the Source file and any Branches.
+Associated Branches
+There are options, to open to open the report as a .csv file (in a spreadsheet solution such as Excel), or to save the report as an external file.
+Additional notes:
+While the Branch operation, can be seen in the History of a file, the file cannot be Rolled Back, to a point before the Branch
+A Source file can be Branched multiple times and Branched files can themselves be Branched
+The Source file and Branched files, can modified without affecting other Branches. Modifying a Branch will not affect the Source file
+While the images in this article, so SOLIDWORKS files, other file types can be Branched.

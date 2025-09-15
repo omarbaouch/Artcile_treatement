@@ -1,0 +1,9 @@
+With the release of
+SOLIDWORKS PDM Professional 2017
+, Dassault Systèmes has introduced two new license models.
+SOLIDWORKS PDM Professional Licenses
+SOLIDWORKS PDM Professional Add-on Licenses
+The first of these, is SOLIDWORKS PDM Professional Add-on Licenses. This license type is ideal for companies who already have Microsoft SQL Server, including installations of those that were bundled with SOLIDWORKS PDM Professional (formerly known as SOLIDWORKS Enterprise PDM).  If a company purchased a SOLIDWORKS PDM Professional Processor License (PSL), then the process is straightforward. As the PSL is SQL licensed per core, any of the three new Add-On licenses can easily be added on without issue. Otherwise a company needs to ensure they own sufficient Microsoft Client Access Licenses (CALs), to support the number of SOLIDWORKS PDM Professional Add-on Licenses they purchased.
+If a company decides to use Add-On PDM licenses with a currently owned Microsoft SQL Server that is being used for other applications, it should be noted that this can lead to performance issues; as system resources would by necessity be shared. Performance issues could be compounded if these applications are installed on the same server as the PDM components. SOLIDWORKS recommends having the PDM database and Archive installed on its own individual dedicated servers.
+SQL Server 2014 Runtime Restricted Server License
+This type of license can be used for licensing a failover server, or for setting up a separate SOLIDWORKS PDM Professional environment. An example of this would be an environment for testing a new release of PDM. This type of license, will use a company’s existing CALs.

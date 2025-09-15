@@ -1,0 +1,47 @@
+The need to access data online continues to increase. The Web2 client of SOLIDWORKS PDM Professional 2020 delivers expanded capabilities to answer this growing need. When you want to download any PDM data, a new Download with References page provides options to help ensure you’re downloading exactly what you need.
+Choose the associated
+versions
+,
+drawings
+,
+simulation data
+and more from a simple,
+responsive user interface
+.
+In the large screen layout, the
+Download with References
+dialog box displays the collapsible
+Settings
+option and the list of files to download.
+Download with References
+Download Options
+The file list displays the files bases on these settings:
+Version
+Latest
+Referenced
+Preserve relative paths
+Include sub-folders
+Include drawing
+Include simulation
+Customizable Columns
+Customizable Columns
+The file list includes customizable columns such as
+State
+,
+Version
+,
+Size
+and
+Path
+.
+In the small screen layout, the
+Download with References
+dialog box displays the list of files to download in one column.
+Small Screen Layout – List of Files to Download
+Click
+Settings
+to select appropriate options. Click Cancel to access the file list.
+Watch a demo video
+Learn more about the latest enhancements with SOLIDWORKS PDM Web2 in the demo video below, and
+watch other SOLIDWORKS 2020 What’s New videos on our website
+.

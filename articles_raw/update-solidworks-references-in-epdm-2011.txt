@@ -1,0 +1,3 @@
+I came across this blog that Jeff Sweeney wrote and I couldn’t agree more.  I have been waiting for this feature for a long time and I am very excited that it is here.   I see this functionality being a key contributor to making the migration of files into Enterprise PDM even easier.
+Have a look at Jeff’s posting on updating references automatically in EPDM 2011.
+http://www.3dvision.com/wordpress/index.php/2010/11/05/update-references-in-epdm-2011/

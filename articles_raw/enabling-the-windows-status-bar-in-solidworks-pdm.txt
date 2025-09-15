@@ -1,0 +1,12 @@
+Every so often we’ll get a question from a
+SOLIDWORKS PDM
+user about the Windows Status Bar.
+The Status Bar can provide a lot of useful information for Windows Users, such as the number of files in a folder, number of items selected and the total file size of the selected items.
+Windows Status Bar
+However the Status Bar is turned off by default in the SOLIDWORKS PDM Vault View, so users who frequently make use of the Status Bar may wonder how to get it back.
+To turn it back on is very simple.  Go to  “Organize” then “Change folder and search options”.
+Organize > Change folder and search options
+Go to the “View” tab and find the check box for “Show status bar” and check it.
+Folder Options
+Once this is enabled it will display the Status Bar at the bottom of the Vault View, just as it would be displayed outside the vault.
+Status Bar displayed in Vault View

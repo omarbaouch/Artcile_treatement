@@ -1,0 +1,2 @@
+The Character limit that can be entered into a multi-line Edit box, of a data card is 2^20- 1 (1,073,741,823), but the custom property character limit of a program may have a smaller upper limit.
+For example in SolidWorks the upper limit is 1000 characters, while in Microsoft Office it is 256 characters. Adding more characters then the limit will result in a truncated custom property value.

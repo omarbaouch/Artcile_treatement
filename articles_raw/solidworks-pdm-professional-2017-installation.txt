@@ -1,0 +1,26 @@
+SOLIDWORKS PDM Professional installation for the 2017 release is now carried out through the SOLIDWORKS Installation Manager. The installation can be selected from the Installation Manager
+Welcome
+page, under
+Server products
+as shown in the figure below:
+SOLIDWORKS Installation Manager
+On the summary page click on
+Change
+to configure the PDM installation.
+Change on Summary Page
+Choose the appropriate product. In this case PDM Professional.
+Identify the installation location, or accept the default.
+Choose which features to install. The archive and database  needs only to be installed once on a server(s), that can be accessed by the clients. The client feature needs to be installed on all clients. It can be helpful, to have a client installed on the server, for troubleshooting purposes relating to network permissions and connectivity.
+For the SQL Server, choose whether to install a new instance, or use an existing instance. Please note, performance may be degraded if SQL is shared between multiple applications. A dedicated SQL instance should provide the best performance.
+Enter the sa password that, will be used to access the SQL database.
+Click on
+Back to Summary
+to continue with the installation
+Server Options
+Click on
+Install Now
+to complete the installation.
+Complete the installation
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

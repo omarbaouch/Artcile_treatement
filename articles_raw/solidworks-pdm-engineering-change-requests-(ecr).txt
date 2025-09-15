@@ -1,0 +1,25 @@
+Over the years, many customers have asked us to help them manage change.  This means a lot of different things depending on who you talk to about it.  To keep it simple, I distinguish change as two distinct areas which are important to focus on: 1) Managing the history of a file, and 2) Documenting and approving why things change. In the blog post learn about the SOLIDWORKS PDM ECR (Engineering Change Requests) tools available from Javelin.
+Managing the history of a file
+Luckily, managing the history of a file is the bread and butter of what SOLIDWORKS PDM does.  It will automatically do the following things as the files evolve:
+Coordinate who’s working and updating a file
+Create new versions of a file
+Keep a recorded history with comments, names and dates
+Control access permissions
+Update properties and titleblocks appropriately
+Stamp released revision information
+Allow controlled access and comparison to previous versions
+Documenting and approving why things change
+Properly documenting why changes were made with appropriate sign off tends to be slightly more challenging.  This requires carefully implemented processes and company standards.  To assist with this, Javelin has taken common requirements from numerous companies and has done the administration work to implement a great engineering change request that is fully integrated into SOLIDWORKS PDM.
+Below is a screen shot of some of the SOLIDWORKS PDM ECR highlights but here is a quick lists of what it accomplishes:
+Generate a standard SOLIDWORKS PDM ECR from a standardized form
+Automate project, date and login information into the document
+Get approvals for change
+Track progress on outstanding ECR’s for engineering and monitor bottlenecks through reporting
+Notify team of new change requests automatically
+Link change requests to files for the purpose of linking them to specific revisions
+Track billable ECR’s to ensure invoicing occurs when they are implemented
+Categorize by urgency to deal with high priority items first
+SOLIDWORKS PDM ECR Screens
+For more information about SOLIDWORKS PDM ECR, please visit our
+product page
+.

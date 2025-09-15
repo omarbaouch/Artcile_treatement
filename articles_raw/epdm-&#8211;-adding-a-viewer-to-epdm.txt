@@ -1,0 +1,16 @@
+A default viewer can be assigned to preview selected file types from the Local Vault View. In the EPDM Admin Tool, either under the
+Group
+or
+User Node
+, right click on a group or user and select
+Settings
+.
+Select the
+Viewer
+tab and left click on
+Add
+.
+Under
+Installed Viewers
+, enter the file extension(s) that will be associated with the viewer. Multiple file types are separated with commas.
+Browse or enter the full path to the viewer application.

@@ -1,0 +1,43 @@
+As the number and complexity of SOLIDWORKS PDM Workflows increases, the tools and strategies to test and troubleshoot workflow becomes increasingly important. In this article, I will look at tools and strategies to deal with multiple and complex workflows:
+SOLIDWORKS PDM Sandbox Vaults
+The first tool I want to mention is the sandbox/test/development vault.  Whatever you want to call them, having a safe place to test the different elements of your vault(s) is essential. Making changes on the fly, on a production vault is a recipe for disaster. A sandbox vault is a vault that contains all or part of the elements of your production vault. You can create sandbox vaults to test your vault in its entirety or just a few select segments.
+When dealing with complex workflows, breaking up the workflow into smaller sections for testing, can simplify testing and remove outside influences. Each segment can be a separate workflow, in the same single vault or part of the purpose-built vault. This will depend on what you are trying to test. Once you have fully tested the workflow segment, you can add to a complete workflow, to test its integration, with other workflow segments. This should also be done in a sandbox vault. Once you have tested the integration of the segments, you can add the segment to your production workflow. If you are not familiar with creating sandbox vaults,
+our related article explains how to create a Sandbox Vault
+.
+SOLIDWORKS PDM Workflow Segment
+In an implementation where multiple workflows are used, conditions control which files enter which workflow. A workflow can have multiple conditions and conditions may be common for multiple workflows.
+SOLIDWORKS PDM Workflow Conditions
+SOLIDWORKS PDM Categories for Workflow Conditions
+The next tool I want to look at is for situations where there are common conditions that exist between workflows. In these situations, categories can simplify the process of creating workflow conditions and can ensure that the conditions are set consistently. A category is a means of preconfiguring workflow conditions.
+Transition Conditions
+Once created, categories can be assigned to multiple workflows.
+SOLIDWORKS PDM Category Condition in Workflow
+Managing Complex Workflows
+I want to next look at a strategy for managing complex workflows. By breaking them up into smaller pieces, managing these workflows can be simplified. Below is a sorting Workflow that I will be using to illustrate this.
+SOLIDWORKS PDM Sorting Workflow
+What appears to be green coloured states are in fact workflow links. Workflow links push files to an appropriate workflow and workflow state. When creating the link, you define the target workflow and state.  In the below example files entering this workflow link, will move to the Work In Progress State of the CAD Documents workflow.
+CAD Workflow Link
+For the scenario, I am using for this article, I have four different file conditions that I want to manage. I could make a single workflow to handle all these conditions, but this can lead to a complex workflow that is difficult to understand, let alone edit. This is where workflow links come in. Instead of a single, cumbersome workflow, I created four workflows, one for each condition, and a fifth workflow to sort the files. This fifth workflow will be where all newly added files will land. From this workflow, files are then pushed to the correct target workflow.
+SOLIDWORKS PDM Workflow Transition Conditions
+To ensure that files enter the correct workflow link and then onto the correct workflow, I added transition conditions. These conditions act the same way as category and workflow conditions but reside within a workflow transition. In the below example, only files that meet the CAD Document condition, can pass through the CAD Files transition. Also, note that the transition type is set to Automatic. By setting the transition to automatic, no user input is required.
+SOLIDWORKS PDM Category
+Now that we have transition conditions sorting which files go to a particular workflow, using a workflow link, we need to prevent files from entering those workflows through another means. Here again, I used conditions to filter files, but this time I used a variable as my condition and I set the value for that variable in my workflow. I did this by using a transition action. In the below example, I set the value CAD to a variable called File Type. The value for this variable can only be set through the transition action. In other words, the variable is not part of a data card or PDM template.
+Setting a Variable through a Transition Action
+In the Properties for my target workflow, I set the condition that corresponds with the variable value, I set in the transition action of my sorting workflow.
+Setting Workflow Condition to Corresponding Variable Value
+If you are concerned about some files being marooned in the sorting workflow, because they do not meet any transition conditions, an additional state can be created. The transition to that state would filter for files that do not meet the conditions of the other transitions. A notification can be added to alert the appropriate people, that the file never moved from the sorting workflow.
+File Condition Alert
+Below are the transition conditions I used to filter for files, that do not meet the conditions of other transitions. It is a little overkill, but it ensures the job gets done right. As long as there are no conflicts, there s no real issue with redundancy.
+Filtering for Files that do no Meet the Conditions of other Transitions
+Dealing with files in the wrong workflow
+The last thing that I want to discuss, is how to deal with files that go into the wrong workflow. One of my favourite troubleshooting tools for this situation is the condition “!=%.%”.  When I come across this situation, I will apply this condition to the workflow where the file enters incorrectly, and remove all other conditions.  When I next check-in a file, if I get a message ‘
+this file does not meet the condition workflow
+‘, then I know that a condition in the intended workflow is preventing the file from entering it. If the file again enters another workflow incorrectly, I will repeat the procedure until either I get the message ‘this file does not meet the condition workflow
+‘
+or the file finally enters the correct workflow.
+NOTE
+: This testing should be done in a sandbox vault.
+The above scenario points to two possible problems:
+Some workflows require additional conditions to prevent certain files from entering those workflows
+The target workflow’s conditions are too restrictive and do not allow the intended files to enter that workflow
+In summary, simplifying workflows, using tools such as categories and conditions as well as Sandbox vaults, will greatly simplify the creation of multiple and/or complex workflows.

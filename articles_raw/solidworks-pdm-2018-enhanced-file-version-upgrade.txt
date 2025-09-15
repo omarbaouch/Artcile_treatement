@@ -1,0 +1,13 @@
+New in
+SOLIDWORKS PDM 2018
+; upgrading old file versions is quicker with deeper vault analysis available using the enhanced
+File Version Upgrade Tool
+.
+The new enhancements are as follows:
+Upgrade checked out files on other client workstations.
+Add or remove folders to upgrade.
+Sort the file list in Search Results.
+Stop the upgrade process and resume.
+View the summary of the file versions to upgrade.
+Monitor the upgrade process.
+Notify users about the upgrade process.

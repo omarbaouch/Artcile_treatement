@@ -1,0 +1,25 @@
+SOLIDWORKS PDM 2017 (Product Data Management) products manage and synchronize your design data across your entire enterprise with a single, easily deployable solution tightly integrated with all SOLIDWORKS applications.
+Watch our
+SOLIDWORKS PDM 2017 on-demand webinar
+to see the latest enhancements in the software.
+During the webinar we review many of the new features including:
+Changing a Category of a Checked in File
+Controlling the Download Permissions for Users and Groups
+Copying Group Permissions and Group Members
+Generating SOLIDWORKS MBD 3D PDFs
+Latest Version Overwrite
+Preview Enhancements
+Quality Enhancements in SOLIDWORKS PDM
+Reference Tree Display Enhancements
+Rolling Back a File with References
+Searching Local Files
+SOLIDWORKS PDF Task Add-in
+SOLIDWORKS PDM Web2 Viewer Enhancements
+Vault Database Replication
+Adding Custom Columns
+SOLIDWORKS PDM 2017 takes care of your data
+During the webinar you will learn how SOLIDWORKS PDM 2017 centralizes the storage of all your engineering data and related files to give you these benefits:
+Secure repository for fast information retrieval
+Version control for both minor changes and major revisions to help prevent data loss
+Integrated workflows that automate your design and approval processes for more efficient review and release of final designs
+Implemented in a fraction of the time required by other product data management solutions

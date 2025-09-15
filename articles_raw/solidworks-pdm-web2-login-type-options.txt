@@ -1,0 +1,48 @@
+When a user logs into a PDM vault online via
+SOLIDWORKS PDM Web2
+, many don’t realize there are potentially
+two different license types
+that can be chosen, either a
+Web
+license or a
+Viewer
+license.  The options can be chosen by clicking on the box below the Vault name.
+Logging into a SOLIDWORKS PDM Vault Online
+What’s the difference between the two PDM Web2 License types?
+Web license
+:  If there is either a
+SOLIDWORKS PDM Professional CAD Editor & Web,
+SOLIDWORKS PDM Professional Contributor & Web
+or
+SOLIDWORKS PDM Processor Site License
+available, then a user can log into Web2 using the
+Web
+option.  Using this login option will give users with appropriate permissions the ability to Check Out, Check In, Change State and Delete files.
+SOLIDWORKS PDM Web License
+Viewer license
+:  If there is a
+SOLIDWORKS PDM Professional Viewer
+or
+SOLIDWORKS PDM Processor Site License
+available, then a user can log into Web2 using the
+Viewer
+option.  When the user logs in with this option, they will only have “read only” access to the vault.  So no matter what permissions the user account may have, if the Viewer option is used, during that session they will not be able to make any changes in the vault.
+SOLIDWORKS PDM Web2 Viewer License
+Setting a default license type
+In
+SOLIDWORKS PDM Professional 2019
+, it is now possible to change the default login type through the Internet Information Services (IIS) Manager
+.  Open the IIS Manager and go to the ‘SOLIDWORKSPDM’ site.  Double click on ‘Application Settings’ to edit the settings for the Web2 interface.
+SOLIDWORKS PDM Application Settings
+Go to the DefaultLicenseType setting.  By default it’s value is set to “Web”, meaning that users will have to click on the drop list and select
+Viewer
+if they want to log in using that type of license instead of a
+Web
+license.  By changing this vault to “Viewer”, then the login type will be Viewer, unless the users click on the drop list and select
+Web
+instead.
+DefaultLicenseType setting
+Need to learn more about SOLIDWORKS PDM?
+Attend one of our online
+SOLIDWORKS PDM training courses
+to learn more about using and administrating SOLIDWORKS PDM Professional.

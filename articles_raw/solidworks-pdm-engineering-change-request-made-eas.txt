@@ -1,0 +1,15 @@
+Over the years, many customers have asked us to help them manage their engineering changes requests (ECR) and automate their workflows.
+This means a lot of different things depending on who you talk with. But typically, It is a very linear process that affects many different departments. And a lot of steps can be forgotten.
+Javelin Engineering Change Request
+It is extremely hard to manage the history of a file and documenting and approving these changes is usually the main areas of concern for companies.
+Luckily, managing the history of a file is the bread and butter of what SOLIDWORKS PDM does. Properly documenting why changes were made with appropriate sign off tends to be slightly more challenging.
+To assist with this, Javelin has taken common requirements from numerous companies and has done the administration work to implement a great
+Engineering Change Request (ECR) module that is fully integrated into SOLIDWORKS PDM system
+.
+Please watch the video to see what this process looks like:
+Note
+that all the template and workflows can be tweaked to match precisely your company standards.
+This is where our team will work with you to determine the best approach to follow and implement accordingly.
+If you would like more information on how we can help you leverage the most out of your PDM system please
+contact us now
+.

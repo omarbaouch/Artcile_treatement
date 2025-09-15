@@ -1,0 +1,13 @@
+SOLIDWORKS PDM Dispatch Action is a very powerful, but often overlooked tool in
+SOLIDWORKS PDM Professional
+, and with PDM 2017, it’s now even more powerful.
+In previous releases it was only possible to use the Dispatch action to Copy, Delete, or Rename files in the vault.
+In SOLIDWORKS PDM Professional 2017, the Dispatch action can also be used to
+move
+files to a different location in the vault. This Move action will maintain the files history within the vault and will update any files referencing that file with the new folder location.
+Move/Rename File
+Using the SOLIDWORKS PDM Dispatch Action
+The Dispatch Action can be triggered manually by a Menu command, during a state transition, during checkout or during add.  The file being Moved/Renamed does not necessarily have to be the file that triggered the Action.  For instance, a dispatch action could be set up to move a PDF export of an approved drawing to an “Archive” folder when the SOLIDWORKS .slddrw file is transitioned to an “Under Change” state.
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

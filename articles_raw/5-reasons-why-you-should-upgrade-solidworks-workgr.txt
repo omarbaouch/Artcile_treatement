@@ -1,0 +1,50 @@
+Expanding Design Team
+If you are currently managing your projects with SOLIDWORKS Workgroup PDM (WPDM) but need to expand your system to accommodate users outside of your organization, connect with other business systems, or require a more advanced document workflow then you will need to upgrade to SOLIDWORKS PDM Professional (formerly Enterprise PDM).
+Here are five good reasons why you should upgrade SOLIDWORKS Workgroup PDM to SOLIDWORKS PDM Professional:
+1. Provide access to ALL departments in your business
+SOLIDWORKS PDM Professional uses a native Windows Explorer-based interface which provides you with the ability to manage access to all your data by other departments — such as marketing, purchasing, and manufacturing. Processes with other departments that typically occur sequentially can now take place in parallel, further boosting your business productivity and speeding time-to-market.
+SOLIDWORKS PDM Professional Windows Explorer
+For instance marketing can access photorealistic renderings to conduct field research, produce brochures, and create web pages much earlier in the process. Purchasing can access drawing files to solicit quotes for components, materials, and services more quickly, while manufacturing can access BOMs and complete production planning more efficiently.
+With a SOLIDWORKS PDM Professional Vault you can replicate portions to different servers, or provide a secure web access to design data at the user level. This enables product development organizations to support collaboration anywhere in the world.
+2. Connect ALL your business systems
+Connecting your PDM system with your existing business applications, such as material resource planning (MRP) and enterprise resource planning (ERP) systems, can provide additional operational efficiencies, eliminate duplicated efforts, and further reduce the potential for errors. The open system architecture of SOLIDWORKS PDM Professional, utilizing Microsoft SQL Server™ and its own standards-based, comprehensive (com, Visual Basic®, C+®) application programming interface (API), will enable you to integrate with other business systems, such as SAP or Microsoft Dynamics. Javelin’s team of SOLIDWORKS PDM Professional implementation experts will be able to set that up for you.
+Connecting Your ERP System
+3. Implement better workflow in your business
+With SOLIDWORKS PDM Professional you can easily set-up an automated workflow. The system ensures that all employees adhere to a company’s own designated process, and SolidWorks Enterprise PDM provides the tools for defining and formalizing the organization’s approach to developing products.
+The workflow functions of SOLIDWORKS PDM Professional enable users and personnel at local and distributed locations to become active participants in product development, design reviews, engineering change orders, quote approvals, and other product development-related processes.
+SolidWorks EPDM Worflow
+4. Easily find and reuse design data
+The intelligent search capabilities of SOLIDWORKS PDM Professional makes it easy to find design information based on file names, contained data, attached metadata, workflow state, or other predefined search characteristics. SOLIDWORKS PDM Professional facilitates design reuse by enabling you to classify, organize, and group design information for quick search and retrieval. By assigning specific searchable attributes for every file, project, and product design on individual system data cards; all departments can find and access any piece of design information they may need.
+Moving to SOLIDWORKS PDM Professional will provide much greater scalability as the searching and file operations can be handled by separate servers. Plus the software offers remote file storage and replication to allow fast access to files in other locations throughout your wide area network (WAN).
+EPDM Search Results featuring a SolidWorks Composer Document
+5. A better system for ISO Compliancy
+SOLIDWORKS PDM Professional automatically captures a complete, accurate, and detailed audit trail—from start to finish—for every product, assembly, and component your business will develop. Creating an audit trail will help you to meet regulations, such as International Standards Organization (ISO).
+Summary of SOLIDWORKS PDM Professional Features
+EPDM Feature
+Description
+Secure Access
+Protect your product design data with secure, managed access to authorized individuals, over a network or via the web. In addition to internal users, you can also permit access to partners, customers, and your supply chain.
+Revision Control
+Help your design team avoid overwriting files and help purchasing and manufacturing order and produce the correct parts, every time.
+Find Files
+Quickly and easily find SolidWorks files by searching on metadata.
+Scalability
+As your design organization grows, you’ll work with the same high level of speed, functionality, and security.
+Custom Configuration
+SolidWorks Enterprise PDM is fully configurable to work effectively within your unique team structure, design process, and industry.
+Find and Reuse Design Data
+Quickly locate documents based on their names, contained data, attached metadata, workflow state, and many other parameters. For even greater productivity, you can predefine, save, and share your searches.
+Full Document Preview
+View and print more than 250 file types, including SolidWorks, AutoCAD®, Inventor®, Solid Edge®, PDF, and Microsoft Office®, plus images, animations, movie files, and many others.
+Distributed Design Teams
+For multi site, multinational companies, SolidWorks Enterprise PDM supports document and drawing vault replication over a WAN, making current design information immediately available worldwide.
+Remote Access
+Increase the productivity of designers, managers, and sales and marketing personnel by permitting remote access to design data.
+Automated Approval Process
+Increase productivity, quality, and accountability when you engage key users in workflow and approval processes. SolidWorks Enterprise PDM supports the automation of workflows.
+Audit Trail
+Quickly access a full audit trail of product development activities. Meet internal and external compliance reporting requirements. Identify process issues and drive continual improvement to maintain your competitive advantage.
+Contact us
+to learn more about Upgrading to SOLIDWORKS PDM Professional, and our
+exclusive PDM Services
+.

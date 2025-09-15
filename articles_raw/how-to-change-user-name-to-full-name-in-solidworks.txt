@@ -1,0 +1,21 @@
+In SOLIDWORKS PDM, the user name can be changed to full name displayed in the “
+Checked Out By
+” column.
+SOLIDWORKS PDM Checked Out By Column
+This can be completed on any client machine.
+Login to the vault in
+SOLIDWORKS PDM Administration
+tool as
+Admin
+Right-click on
+Users
+tab and select
+Settings…
+User Settings
+In
+Explorer
+tab, check box for
+Show full user names
+under
+Miscellaneous
+Show Full User Names

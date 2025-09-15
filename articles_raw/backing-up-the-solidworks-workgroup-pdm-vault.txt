@@ -1,0 +1,11 @@
+One of the great features of SOLIDWORKS Workgroup PDM is that the vault is entirely self contained.  This makes backing up the vault VERY simple.
+However, we frequently find in conversations with SOLIDWORKS Workgroup administrators that the vault is not being backed up using a regular schedule.
+To locate the SOLIDWORKS Workgroup PDM vault, you need to log into the Workgroup PDM VaultAdmin program and go to the “Vault Management” tab.  This can be done from any system that has the VaultAdmin software installed.
+On the Vault Management tab you will see first the “Vault computer”, this is the hostname of the computer where the Workgroup PDM service is installed (though this is not necessarily where the vault itself is actually LOCATED).  Below this will be the Root Directory, this is the path to the actual vault.  By default this path is C:\VaultData, however this can be changed during installation, or at ANY other time by using the Change button next to the path.  Whatever folder is listed as the Root Directory is the top level folder containing the vault.
+Vault Location
+The ENTIRE contents of your Vault data folder must be backed up REGULARLY.
+All vault data including Users, Passwords, Projects trees and most importantly the actual SOLIDWORKS files themselves, are contained within this folder.
+Vault Data Folder
+We recommend performing daily backups of this folder and copying it to a different system
+(either to a NAS drive or other server).  Additionally we highly recommend having that backup be copied off site (outside the building) at least once per week.
+The data contained in your PDM vault represents a huge investment of time and money, it’s critical to your business to ensure that its contents are safe.

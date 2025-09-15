@@ -1,0 +1,4 @@
+<p>SOLIDWORKS PDM Login issues can often be the result of communication issues between the server and the client. A ping test as outlined in my article: <a title="ping test" href="https://www.javelin-tech.com/blog/2011/04/ping-test/" target="_blank">Testing Connectivity to Archive Server Using the Ping test</a>, can be used to check for communication issues.</p>
+<p>Some login issues can be a result of the logged in user account not having full control of the client registry, specifically this key:</p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSSQLServer\Client\SuperSocketNetLib\LastConnect.</pre>
+<p>Granting the logged in user full control over this key, or one of its parents, should resolve this issue.</p>

@@ -1,0 +1,28 @@
+A SOLIDWORKS PDM
+Named BOM
+, is a saved from a Computed BOM and can be treated like any other vaulted file. Named BOMs can be Checked In/Out, Versioned, and have their State changed. Like other vaulted files, the history of the BOM is captured and can be viewed.
+Named BOMs can only be viewed by switching the Display of the Local Vault View, to Show Bills of Materials.
+Show Bills of Materials
+Each cell of the Named BOM is editable and changed BOM Items are highlighted.
+Editable BOM with changed rows highlighted
+Additional Columns can be added, by right-clicking on an existing column. The new column can be added to the right or left, of the selected column.
+Insert New BOM Column
+The new Column can be associated with an existing Variable, or Free Text.
+BOM Column Association
+The same procedure can be used to insert Rows.
+Insert BOM Rows
+Once all changes are made, the BOM can be saved by clicking the Save icon to the far-right of the BOM.
+Save BOM
+As with other file types, the BOM can be Checked-in
+Check In BOM
+When a BOM is Checked-in a new Version is created.  And there is a pull-down available, that allows different versions to be viewed.
+BOM Versions
+Once checked in, a bar will placed on the right-hand side of the a cell, to indicate that the cell has been manually changed. Deleting text in an edited cell will restore the linked value.
+From the same location where the BOM is saved, different versions of the BOM can be compared.
+Compare BOM
+Any differences between the latest version and earlier versions are highlighted. The earlier version to be compared, can be selected.
+Highlighted BOM differences
+When defining Category or Workflow Conditions, BOM is an Argument for the Type, Object Type. This allows filtering of BOMs, if a separate workflow, is used to control the lifecycle of a BOM.
+BOM Category Condition
+BOM is also available as a Transition Condition.
+BOM Transition Condition

@@ -1,0 +1,43 @@
+In SOLIDWORKS PDM Professional 2016 it’s possible to link PDF document properties with SOLIDWORKS PDM variables and create a two way relationship.
+PDF Data Card
+PDF Document Properties
+How To Map Custom Properties to PDF Data Cards
+First step is to create some variables for this information via
+Administration Tool
+>
+Variables
+>
+Right-Click
+>
+New Variable
+New Variable from shortcut menu
+This example I’ve named PDF_Author
+PDF_Author
+Next we need to link it to PDF Files. Click
+New Attribute
+> Enter the data as shown:
+Block Name =
+CustomProperty
+Attribute name =
+Author
+File Extension =
+pdf
+Edit Variable
+Create the remaining variables as per the following mappings;
+Block Name
+Attribute Name
+CustomProperty
+Description
+CustomProperty
+Keywords
+CustomProperty
+Subject
+CustomProperty
+Title
+Next we need to link this information in the .PDF file data card.  Create the applicable text and edit boxes, then link them to the variables.
+Card Editor > PDF Card
+Now the two way relationship is created and when a PDF is added to the vault the custom properties in the PDF will be updated on the data card and when a user updates variable values on the data card, the values are updated in the PDF document properties.
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about creating custom data cards and administering SOLIDWORKS PDM.

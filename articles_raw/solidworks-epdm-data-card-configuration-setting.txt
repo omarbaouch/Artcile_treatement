@@ -1,0 +1,8 @@
+When viewing an EPDM data card for a file, by default the active configuration is displayed.
+EPDM Data Card Configuration Setting – Default Set
+This behavior can be controlled, to display the as built (@) configuration instead. This is done by clearing ‘
+Set focus to active configuration
+‘  from
+Display > Options
+.
+Set focus to active configuration

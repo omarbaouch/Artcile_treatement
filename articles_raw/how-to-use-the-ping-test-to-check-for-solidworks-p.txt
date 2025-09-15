@@ -1,0 +1,2 @@
+The SOLIDWORKS PDM ping test can be used to troubleshoot connectivity issues between the server and client computers, as well as between replicated archives.
+The video below illustrates how to do this along with the optimal settings to use.

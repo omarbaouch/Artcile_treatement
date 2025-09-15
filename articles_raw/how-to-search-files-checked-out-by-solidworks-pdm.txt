@@ -1,0 +1,11 @@
+It is often important for users to locate files they have checked out to themselves. These files should be checked in regularly. To help find those files, the search engine allows for the checked out criteria to be searched on.
+The
+Checked in/out
+tab allows a user to search for:
+Checked in files
+Checked out files
+Files checked out to a particular user
+Select
+Display checked out files
+and select user name from the list
+Display checked out files by a user

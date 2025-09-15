@@ -1,0 +1,10 @@
+<p><img decoding="async" class="alignnone size-full wp-image-14236 lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/locked-folder.jpg" alt="locked-folder" width="1000" height="666" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-14236 lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/locked-folder.jpg" alt="locked-folder" width="1000" height="666" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/locked-folder.jpg 1000w, https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/locked-folder-300x200.jpg 300w, https://www.javelin-tech.com/blog/wp-content/uploads/2015/01/locked-folder-640x426.jpg 640w" sizes="(max-width: 1000px) 100vw, 1000px" /></noscript></p>
+<p>The warning &#8220;folder contains hidden files you may not delete&#8221;, may appear when destroying a folder. There are a number of reasons why this may occur.</p>
+<ol>
+<li>The user destroying the folder, lacks read permissions to some files in that folder. Typically it would be because the user does not have sufficient permissions, in a workflow state.</li>
+<li>A file in the folder has not been checked in yet.</li>
+<li>An orphaned file.</li>
+</ol>
+<h3>How to delete the folder</h3>
+<p>For the first two possibilities, try logging in as the EPDM Admin and then destroying the folder.</p>
+<p>For an orphaned file, try adding a text file to the folder that cannot be deleted. This should trigger a orphan record cleanup process and allow the folder to be deleted.</p>

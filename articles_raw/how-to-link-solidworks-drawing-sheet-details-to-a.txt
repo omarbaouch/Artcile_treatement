@@ -1,0 +1,41 @@
+In
+SOLIDWORKS PDM
+we can map SOLIDWORKS Drawing Sheet details directly to a Data Card, making the information easily accessible to users.  In this article we’re going to look at how to create that relationship within the vault.
+How to map the SOLIDWORKS Drawing Sheet to a Data Card
+In this example, we’re going to map the
+current sheet
+and the
+total number of sheets
+values…
+The first step is we’ll need to create the variables to store this information, then create the attribute mappings accordingly;
+Administration Tool > Variables > New Variable…
+Name;
+Current Sheet
+Type;
+Text
+New attribute;
+Block Name:
+$PRP
+Attribute Name:
+SW-Current Sheet
+Extension:
+slddrw
+Edit Variable
+Name;
+Current Sheet
+Type;
+Text
+New attribute;
+Block Name:
+$PRP
+Attribute Name:
+SW-Total Sheets
+Extension:
+slddrw
+Sheet Total Variable
+Next, we’ll need to link these variables to a data card;
+Administration Tool > Cards > File Cards > SOLIDWORKS Drawing Card;
+Link up edit boxes to the new variables;
+Link to data card
+Then the Drawing Sheet value should populate directly to the SOLIDWORKS PDM Data Card;
+SOLIDWORKS Drawing Sheet and data card linked

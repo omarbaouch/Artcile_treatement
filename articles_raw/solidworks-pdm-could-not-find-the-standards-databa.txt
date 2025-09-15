@@ -1,0 +1,17 @@
+If
+SOLIDWORKS Toolbox
+is managed by SOLIDWORKS PDM then the
+swbrowser.sldedb
+Toolbox file must be cached locally and users must be able to access it.
+Here are some questions and answers to help you troubleshoot a SOLIDWORKS PDM Standards Database Error:
+Could not find the Standards database ‘C:\\\lang\english\swbrowser.sldedb’
+Are Toolbox Files Cached Locally?
+First ensure that this file is cached locally. If it is not, then perform a ‘Get Latest’ on that file. To ensure ALL Toolbox Files are cached locally, perform a Get latest on the Toolbox Folder.
+Get Latest Version
+Do users have Sufficient Permission to access Toolbox files?
+Next, make sure that user has sufficient permissions to see this file. A good way of testing that this, is from the user’s computer, log in as the PDM Admin and see if the error occurs. If not, check the Users Permissions. If the user is part of a Group, check the Group Permissions.
+To avoid having to ensure the Users/Groups, have sufficient permissions, in PDM Admin double-click on Toolbox, in the SOLIDWORKS node. For the option ‘When accessing Toolbox, use permissions from:’, select ‘Admin (System Administrator). This will elevate the users permissions, when they access Toolbox components.
+SOLIDWORKS PDM Admin Permissions
+Is the Toolbox File Path correctly specified?
+Also, check the SOLIDWORKS System Options, Hole Wizard/Toolbox, that the path is correct.
+SOLIDWORKS Toolbox File Path

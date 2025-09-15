@@ -1,0 +1,24 @@
+When using the
+UpdateBrowserDatabase.exe
+utility to update SOLIDWORKS Toolbox in
+SOLIDWORKS PDM vault manually
+, you may receive the error “
+Unable to backup destination database
+” as shown below:
+Unable to backup destination database
+The unable to backup destination database error occurs if the
+UpdateBrowserDatabase utility cannot delete the swbrowser.sldedbold
+backup file.
+When the
+UpdateBrowserDatabase
+utility runs an update, it removes the
+swbrowser.sldedbold
+file and replaces the file with the new backup.
+To prevent this issue, clear the ‘
+Read-only
+” check box in the ‘
+Properties
+‘ dialog box for the
+swbrowser.sldedbold
+file.
+File Properties

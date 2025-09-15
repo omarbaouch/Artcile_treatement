@@ -1,0 +1,29 @@
+New in
+SOLIDWORKS PDM 2021
+, the
+Bill of Materials (BOM) Options
+set within SOLIDWORKS will be inherited by the
+Computed BOM
+in PDM:
+SOLIDWORKS BOM Options
+Learn what each of the three BOM options provide below:
+BOM Option: Show
+Will show the subassembly and all the child components within
+Show the subassembly and all the child components within
+BOM Option: Hide
+Will show the subassembly but hide the child components within
+Show the subassembly but hide the child components within
+BOM Option: Promote
+Dissolves the subassembly but shows the child components
+Dissolve the subassembly but shows the child components
+Also, with derived configurations…
+We have the option to
+Link to Parent Configuration
+option for Part number displayed when used in a bill of materials.  This will set the derived configuration to inherit the setting from the parent configuration.
+Link to Parent Configuration
+Tell me more…
+SOLIDWORKS Custom BOM creation, along with many more customization tools are covered in detail within our
+Administering SOLIDWORKS PDM training course
+or, if you’re interested in learning more tips and tricks to utilize PDM from within SOLIDWORKS, check out our
+Using SOLIDWORKS PDM course
+.

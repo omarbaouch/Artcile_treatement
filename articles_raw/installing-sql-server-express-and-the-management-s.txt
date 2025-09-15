@@ -1,0 +1,78 @@
+The SQL Server Management Studio (SSMS) is an integral component for administrating SOLIDWORKS PDM, as it allows us to maintain and capture backups of the database.  When installing a new instance of SQL Express for PDM Standard via the installation manager, the management studio is not included and requires a
+separate download and install
+.  In this article, we’re going to look at how to install a new instance of SQL and include the SSMS, ahead of installing PDM Standard.
+SOLIDWORKS PDM Install options
+How to download and install SQL Server Express with the Management Studio
+Download and run the installer;
+SQLEXPRWT_x64_ENU.exe
+Choose the download
+Select
+New SQL Server stand-alone installation or add features to an existing installation
+New SQL Server stand-alone installation
+Read and accept the license terms, then select
+Next
+.
+The installer checks for issues, if any are reported; these will need to be resolved before continuing.  If no problems are returned we can hit
+Next
+;
+Installer checks for issues
+For
+Feature Selection
+, choose;
+Database Engine Services
+Client Tools Connectivity
+Client Tools Backward Compatibility
+Client Tools SDK
+Management Tools – Basic
+Management Tools – Complete
+Then hit
+Next
+Feature Selection
+For
+Instance Configuration
+;
+If a new install we can choose
+Default Instance
+If there’s an existing SQL install, we can choose
+Named instance
+Instance Configuration
+For
+Server Configuration
+, set the following;
+SQL Server Database Engine:
+Account Name:
+NT Service\MSSQL$
+[INSTANCENAME]
+Startup Type:
+Automatic
+SQL Server Browser:
+Account Name:
+NT AUTHORITY\LOCAL SERVICE
+Startup Type:
+Automatic
+Hit
+Next
+;
+Server Configuration
+For
+Database Engine Configuration
+, select the following;
+Authentication Mode
+Choose
+Mixed Mode
+Enter a STRONG password for the sa (system administration) account
+Specify SQL Server Administrators
+Add the local administrator account
+Hit
+Next
+Database Engine Configuration
+Installs will begin…..when complete, click
+Close
+;
+When complete, click Close
+and a new instance of SQL will be installed, complete with the management studio;
+SQL Server Installed
+Now, when
+installing PDM standard
+we can choose the already created instance of SQL Express;
+Installing SOLIDWORKS PDM standard

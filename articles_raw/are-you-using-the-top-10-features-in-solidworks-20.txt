@@ -1,0 +1,99 @@
+SOLIDWORKS 2016 is coming soon, and presently
+Subscription Service customers can download a beta version of 2016
+and give it a try. There were literally hundreds of enhancements in SOLIDWORKS 2015, have you managed to give the top features a try yet? Here is a reminder of the top 10 features in SOLIDWORKS 2015 and their associated benefits:
+1. NEW PRODUCT DEVELOPMENT WORKFLOWS
+Reduce time to market and comply with new industry standards.
+SOLIDWORKS® Model Based Definition (MBD)
+enables drawingless product detailing with 3D PMI annotations; output to eDrawings® or 3D PDF
+SOLIDWORKS Treehouse provides visual assembly structure planning, creation, editing, and viewing
+Prepare models automatically for export to popular AEC applications
+SOLIDWORKS Treehouse
+2. INTEGRATED CAPABILITIES CONNECT DESIGN AND MANUFACTURING
+Speed downstream manufacturing and bridge the gap between design and manufacturing.
+SOLIDWORKS Inspection
+automates inspection drawing and report creation
+SOLIDWORKS Costing
+supports sensors and costing of weldments, plastic/cast parts, machined castings, and 3D printed parts
+Print directly to
+3D printers
+in AMF and 3MF formats
+Use advanced techniques to flatten surfaces
+SOLIDWORKS Inspection
+3. SOLIDWORKS PERFORMANCE
+Faster modeling, analysis, and rendering capabilities leaves more time to improve designs.
+File size reduced by ~50%
+Faster component patterning and hide/show of assemblies
+SOLIDWORKS Simulation
+supports Intel® Solver and multi-core contact detection
+Define specific graphic regions to render in PhotoView 360
+SOLIDWORKS Enterprise PDM manages large data sets more efficiently
+Incremental Simulation Results
+4. PART AND SURFACE MODELING
+Create sketches, complex patterns, and advanced geometry faster and with less effort.
+Sketch: Line from midpoint;
+rectangle with horizontal/vertical construction lines
+Splines: Improved Spline on Surface; convert Style Spline to Spline Points
+Patterns: Improved Fill,
+Linear
+, Chain and
+Variable Pattern
+Advanced geometry: Asymmetric Fillets;
+split surfaces
+; sketch plane normal to view
+Improved Patterns
+5. ASSEMBLIES
+Faster, easier, more intuitive assembly creation, control and view creation.
+Mates
+: Center components on faces; select geometry to limit Width Mate
+Routing for rectangular sections, e.g., HVAC ducts, cable trays and chutes
+Simulate roller/energy chains using patterns
+along open or closed loops
+Exploded View
+: Radially and along axis; space components on drag
+6. DRAWING IMPROVEMENTS
+Find drawing views faster, and experience more automation and control.
+Track view locations with
+Enhanced formatting control of drawing and table notes
+Omit layers from printing;
+use splines as leaders
+Improved angle dimensioning
+and command of decimal rounding
+Automated drawing sheet zone annotations
+7. DESIGN SIMULATION
+Simulate real-life scenarios to predict product performance prior to manufacturing.
+Predict product durability under dynamic loading
+in SOLIDWORKS Simulation and Load Case Manager for loads combination
+View your nonlinear results during the solve
+in SOLIDWORKS Simulation to ensure convergence
+Rotating mesh regions in SOLIDWORKS Flow Simulation delivers enhanced simulation of rotating machinery
+SOLIDWORKS Plastics improves plastic part design with up-front Venting Analysis
+8. ELECTRICAL DESIGN
+Accelerate the development, creation, and integrity of electrical systems designs.
+Dynamic Connector
+tools simplify the design and use of connectors
+Advanced access to user-based controls for key tools
+In-line 3D routing diagnostics identifies and resolves routing issues
+Advanced Formula Manager provides access to system and mathematical variables in complex formulas
+9. USER EXPERIENCE
+Work more efficiently and better understand/visualize the design intent of your models.
+Dynamic Reference Visualization
+shows a graphical view of relationships between features
+Selection Sets
+let you select multiple entities and save them for reuse
+Isolate components while editing in context within an assembly
+Temporarily preview hidden bodies or components from the FeatureManager
+Selection Sets
+10. EXPANDED COMMUNICATION AND COLLABORATION
+Expand the reach of your design tools with faster, easier data connections and better social collaboration – anytime, anywhere.
+SOLIDWORKS Enterprise PDM Web2 client
+connects browser-ready devices to a vault
+eDrawings 2015 now has a UI adapted for touchscreen
+and supports SOLIDWORKS Plastics result plots
+MySolidWorks offers enhanced online learning and certification
+; ability to share/view designs online and search a global manufacturing network
+Collaborative Sharing uses community-based social innovation to provide greater connectivity to SOLIDWORKS, eDrawings, and DraftSight®
+Enterprise PDM Web2 Client
+Do you want to adopt the SOLIDWORKS 2015 skills?
+As you have learned in this review of SOLIDWORKS 2015 the software is always changing, with over 200 new enhancements in the latest release you need to update your skillset in order to make the most of the new technology. Our
+2 day SOLIDWORKS Advanced Update Course
+(or 4 day/3 hours per day online course) is valuable to users that need to update their skills and techniques to the latest version of SOLIDWORKS. Participants will learn new and effective software capabilities, best practices, and current tips and tricks. Fill out the form to learn more about the update solutions available for your business:

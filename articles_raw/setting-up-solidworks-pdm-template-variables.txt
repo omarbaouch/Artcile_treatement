@@ -1,0 +1,45 @@
+SOLIDWORKS PDM
+templates are used to automate the creation of new file and folder structures. This can be done through a simple right-click in the Explorer Vault View. With templates, you can automatically name your template files and folders as well as provide information for the project data cards through a template card.
+This blog article will provide an overview of properly setting up template variables and copying them to data cards and file names. This will not necessarily be a deep dive into the individual steps, as those are covered in other articles on our site.
+Creating SOLIDWORKS PDM Template Variables
+The first step is to create template variables. Template variables are used to store data inside the templates and carry the input of the user when the template card is shown. Template Cards are used to input information when running the template. Template variables will not be stored in the database, but use these template variables to name your files or folders, as well as link the values to the files & folders data cards.
+To create new template variables, click on Template Variables on the Template Cards section or the Files and Folders section of the Edit Template window. Here you will see a dialog to create your template variables with multiple types of input. The name will be the name of the template variable. The “t_” at the beginning of the template variable name will identify that this is a template variable.
+Opening the Template Variables dialog
+There are different types of template variables that you can select depending on your needs.
+Environmental variable
+lets you select an environment variable from a list to use as your template variable
+Format string
+creates a string for the template variable
+Name of logged in user
+uses the user name of the user running the template
+Prompt the user prompts
+for user input using a dialog box
+Serial number
+selects an existing serial number from the list to assign the template variable, but if a serial number is used in the template card, you should use the same serial number generator.
+The template variable editor with options
+Linking Template Card Variables to Template Variables
+As mentioned before, template cards are used to input information when running the template. Template variables can be created and linked to variables in the template card. Template Cards are like File Data Cards, except that Template Cards can only be accessed once, while creating the template.
+In the Template Cards section of the Edit Template dialog box, you will link the template variables to copy from the variables of the template card. When needed, you will add a template card by clicking
+Add Card
+, and SOLIDWORKS PDM will automatically list the variables used in the template card. You will go through the list on the right side and select the template variable for the variable from the drop-down of template variables.
+Linking variables to Template Cards
+Copying Template Variables to File Data Cards
+On the File and Folders page, we determine a folder structure and what files are to be added to these folders. Under the Files box, click on the New File icon shown in the screenshot below. It will open the Edit Template file dialog box.
+Creating a new file for the SOLIDWORKS PDM template
+In the Edit File Template dialog box, it will display the template source file, and what you want to name your template file. As mentioned before, you can use template variables to name your template file. Include template variables in the file name by enclosing them in
+%
+as shown in the screenshot below. You can also click on the arrow beside the Filename box and enclose the template variables with
+%
+for you.
+An example setup for a template file
+Under the Copy these variables to the file data card box, you can link the template variables to the variables on the file card. The template variable carries the value from the Template Card (Template Card Section), and the value from the template card can be passed to the File Card variables.
+If you are generating a serial number in your template card, you need to disable standard serial number generation for this file to avoid the serial numbers from skipping twice. The serial number generator is set in both the template card and the template variable.
+Copying Template Variables to Folder Data Cards (SOLIDWORKS PDM Professional 2024 & later)
+On the File and Folders page, we determine a folder structure and what files are to be added to these folders. As mentioned before, you can use template variables to name your template folder. Under the Folders box, right-click on the folder and select Rename. Include template variables in the folder names by enclosing them in
+%
+as shown in the screenshot below.
+If you want to link the variables from the Template Card to the Folder Card, right-click on the folder to modify and select Properties.
+Accessing the template folder’s properties
+Select the Copy Variables tab, and here you can link the template variables to the variables on the folder card. The template variable carries the value from the Template Card (Template Card Section), and the value from the template card can be passed to the Folder Card variables.
+Selecting variables to copy over
+Looking for more customization to SOLIDWORKS PDM or want our team of experts to make the changes for you? Learn more about our data management services here.

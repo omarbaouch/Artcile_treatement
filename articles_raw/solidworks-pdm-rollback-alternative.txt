@@ -1,0 +1,33 @@
+We have talked about the
+SOLIDWORKS PDM Rollback feature
+before and saw some of the
+enhancements made to the feature for SOLIDWORKS 2017
+.  In learning about it we also saw the warning;
+This function should be used with caution as it permanently deletes file versions
+.  Personally I’m not a big fan of deleting anything (seriously I’m a data hoarder).  With the following example scenario we’re going to look at a SOLIDWORKS PDM Rollback Alternative method that achieves the same result, without deleting any files.
+Example scenario
+Here is my simple part;
+Sample SOLIDWORKS part, two versions
+There are two versions; one with slotted holes (version 2/2) and one without (Version 1/2).  It’s still in the design phase and there’s been a change at a higher level which makes the slotted holes unnecessary, and I need to revert to the previous design (version 1).  Using rollback version 2 will be deleted, but I need to keep it as we may go back to that design.
+Rollback without the rollback
+WARNING: Make sure the file is CHECKED IN before starting the process to ensure no changes are lost.
+Via Explorer select the file then;
+Actions > Get > Version 1
+Get previous version
+File is local
+This caches version 1 in your local view;
+Then via explorer copy and paste it outside of the vault to your local machine (ie desktop etc)
+Copy and Paste the file outside the vault
+Then back in the vault check out the part (which forces a Get Latest, overwriting the cached version 1 with version 2)
+Get the part
+and copy and paste the locally saved version, replacing the vault version
+Then check it back in.
+Although not always required, its important to leave a comment explaining what has happened.
+Check the file in
+This creates an exact replica of version 1 as version 3.  Leaving version 2 available if we ever need go back to it.
+Replica created
+This is also a useful method if you don’t have rollback privileges within the vault.
+Although nothing is being deleted there’s still a need to be cautious with when to use this approach, as it doesn’t work in every scenario.  The example used references a part that’s still at the In Design state and no revision has been assigned.  It this was completed to a file with a revision it would remain at the same revision.
+Interested in further SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

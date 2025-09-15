@@ -1,0 +1,32 @@
+Using
+SOLIDWORKS PDM Professional
+, we can configure tasks to launch on right-click actions, but we can also manually launch a task from within the administration tool.
+How to manually launch a task via the task list
+Administration Tool > Tasks
+Task List
+Add Task
+Add Task
+Select the task you’d like to add, and hit;
+OK
+.
+In this example, we’re going to use the Convert task
+Select the task you’d like to add
+We can then build our list by selecting either
+Add Files…
+and select them individually, or we can add entire folders using
+Add Folder
+.
+In this example; we’re going to select the individual files we would like to add;
+Hit;
+Add Files
+then build the list of drawings you’d like to convert by selecting the files and hitting
+Open
+Add Files
+When your list is complete, hit;
+OK
+Complete your list
+and the task is launched;
+NOTE
+: This feature is also available within
+SOLIDWORKS PDM Standard
+, but limited to only administrative accounts

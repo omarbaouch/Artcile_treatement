@@ -1,0 +1,35 @@
+After enabling the
+content search in SOLIDWORKS PDM Professional
+, by default the Windows Search Service supports indexing the following files types;
+Microsoft Office files
+HTML files
+MIME messages
+Plain-text files
+How to include PDF files in the PDM Content Search
+We can include other file types by installing its corresponding third-party iFilter.  After a new iFilter is installed the archive must be reindexed to include the new file type in the content search.
+Step 1 – Add the PDF iFilter to the server running Windows Search
+We can download and install the standalone PDF iFilter from Adobe
+here
+, but current versions of Adobe Acrobat® and Adobe Reader® include the iFilter when installed, so in most instances; it’s easier to install the full program so we can view PDFs on the server as well as index them.
+Step 2 – Add and check in some files for testing
+Add and check in some files for testing
+Step 3 – Verify the iFilter is installed and rebuild the index
+Control Panel > Indexing Options
+Indexing Options
+Advanced > File Types Tab
+Ensure the PDF entry exists
+Ensure the PDF entry exists
+As the iFilter was added after the content search was set up, we’ll need to rebuild the indexes to include the pdf files;
+Indexing Options
+Advanced > Index Settings Tab
+Hit
+Rebuild
+Rebuild the indexes to include the PDF files
+Note
+: Before testing, we need to wait for the rebuild to complete, in larger vaults this may take some time
+Indexing Complete
+Step 4 – Test
+SOLIDWORKS PDM Content Search
+To learn how to include SOLIDWORKS files, please
+subscribe to our blog for future articles
+.

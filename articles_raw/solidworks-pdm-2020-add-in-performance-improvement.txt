@@ -1,0 +1,15 @@
+In
+SOLIDWORKS PDM 2020
+the performance of the SOLIDWORKS PDM Add-in has improved significantly. Enhancements include the following:
+The
+SOLIDWORKS PDM task pane tree refreshes faster
+and the commands in the SOLIDWORKS PDM toolbar are correctly enabled in the task pane instantaneously when you select a file.
+The
+data in the task pane tree loads in the background
+when you select a file in the task pane tree. The calls to the database are eliminated.
+In the Feature Manager design tree or in the graphics area, when you right-click a file and select SOLIDWORKS PDM, the menus are correctly enabled.
+When you select a file in the graphics area or in the Feature Manager design tree, the file listed in the task pane tree is selected and all the available commands are enabled.
+The
+improved communication between client and the PDM Server
+delivers a faster experience over all in the CAD add-in similar to the File Explorer.
+Watch the video below to learn more about these performance enhancements:

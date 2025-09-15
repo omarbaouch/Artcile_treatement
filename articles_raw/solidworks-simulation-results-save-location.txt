@@ -1,0 +1,41 @@
+The SOLIDWORKS Simulation Results Save Location can be specified in the simulation options. In this post I’ll explain how to save the results, the options available to you, and the best practice when you use SOLIDWORKS PDM.
+Simulation Options
+After enabling the SOLIDWORKS Simulation add-in and opening a file, you can open
+Simulation
+>
+Options
+>
+Default Options
+tab >
+Results
+.  Under the ‘Result folder’ section, I would recommend avoiding the ‘User defined’ option.  This would default to save results of ALL new studies in a single folder.  If you have many studies saving results to the same location, this folder would become very large in size.  Microsoft Windows can potentially have issues with a single folder that is extremely large in size.
+SOLIDWORKS Document Folder option
+The SOLIDWORKS Document Folder option includes another checkbox for ‘Under sub folder’.  This means the Simulation results will save to the same location as the SOLIDWORKS model file, but generate a new sub folder of your choice.  I prefer to call it something like ‘FEA Results.’  This helps to keep the results separate.  Otherwise the Simulation result files will be mixed in with your model files and gets a bit messy.
+SOLIDWORKS Simulation Results Options
+Issues with Saving over a Network
+Choosing where to save your Simulation results is very important.  Saving directly over a network can significantly slow down the solve times and also potentially cause corruption if there is any slight hiccup in the network connection while running (even if it doesn’t show a connection loss).  I’ve seen scenarios where saving results over a network is was not just a little slower, but more like 10x slower.  This can really add up if your studies take a couple hours to solve.  Saving results locally is always preferred.
+Also the SOLIDWORKS model is closely linked to the Simulation results.  So even if the Simulation results are saved locally but the SOLIDWORKS model files are saved on the network, you will still see delays when opening the models and switching between Simulation plots.  For best performance, BOTH the SOLIDWORKS files and Simulation results should be saved locally.
+Be aware that intermediate temporary result files (while the Simulation studies are solving) can be many times larger in size than the final results (.CWR file).  So ensure that plenty of space is available on the hard drive, otherwise you may get errors while running indicating it was unable to save results.
+Simulation Results in SOLIDWORKS PDM
+In a multi-user environment, saving locally can make it difficult for collaboration which is why PDM is great solution.  This allows you to save SOLIDWORKS models and Simulation results locally as you work, then check the files into the vault once the study is complete.
+There are a few things to be aware of to avoid issues with the check-in/check-out of Simulation files:
+By default PDM should automatically check-in Simulation results when checking in the SOLIDWORKS model files that contain studies.  If it doesn’t, ensure that the
+PDM Display Menu option
+under
+Display
+>
+Options
+> ‘
+Include SOLIDWORKS Simulation results in check-in
+‘ is selected.
+The .CWR file contains all of the Simulation results.  This is the file that should be checked in automatically
+When checking out the SOLIDWORKS model files with the Simulation study, in order to view the results the .CWR file must be checked out. While this can be done manually, you can also enable the option ‘
+Try to check out all referenced files when the referencing file is checked out
+‘ in the
+PDM Settings Dialog
+The error ‘
+Failed to create temporary file
+‘ may occur while trying to review results if the .CWR file is not checked out.
+SOLIDWORKS PDM may attempt to create a Preview of the .CWR file.  As some .CWR files are very large in size, this can take some time to process.  You can exclude file types in PDM to prevent the preview from being generated.  The .CWR file type can be added to Exclude File Types under the
+PDM Display Menu options
+.

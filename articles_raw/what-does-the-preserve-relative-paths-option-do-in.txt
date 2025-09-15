@@ -1,0 +1,33 @@
+If you’ve had a chance to take one of our
+Using SOLIDWORKS PDM classes
+, it’s likely you’ve heard me rave about the
+Copy
+or
+Move Tree Tool
+.  In a recent class, I was asked to clarify what the SOLIDWORKS PDM Move Tree
+Preserve relative paths
+checkbox does…
+Copy/Move Tree – Options – Preserver Relative Paths
+What does
+“Preserve Relative Paths”
+do?
+This option allows users to copy/move files and bring their sub-folder structure with them.  The image below gives an example where a top-level assembly has its references split into corresponding folders by file-type;
+Sub folder Structure
+Now I’m going to run a Move Tree on the top level assembly, with the
+“
+Preserve Relative Paths”
+option
+cleared
+, and move it to
+New Folder;
+Preserve relative paths – Cleared
+The result is the sub-folder structure is not copied, and all files that were moved are put into the same folder.
+Option Cleared – Result
+Now, let’s try that again with the
+option
+checked
+, and move it to
+New Folder;
+Preserve relative paths – Checked
+The result is the sub-folder structure is copied, and all the files remain in their file type folder structure within the new location;
+Checked – Result

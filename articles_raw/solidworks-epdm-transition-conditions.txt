@@ -1,0 +1,15 @@
+SOLIDWORKS EPDM Transition Conditions can be added to a workflow transition to limit which files can pass through the transition. As an example, a file can only pass through a workflow if the variable ‘Checked By’ contains an associated value.
+A Transition Action
+In this example, in a proceeding transition, a user’s initials are mapped to a variable through a transition action.
+SOLIDWORKS EPDM Transition Condition Set Variable
+A Transition Condition
+Below, a condition is added to the transition, to only allow files to pass through the transition when the variable”Checked By” contains a value. In this example any value is acceptable.
+Simple condtion
+‘OR’ and ‘AND’ Conditions
+‘OR’ and ‘AND’ conditions can also be applied to better control the workflow. In the example below the variable “Checked By” has to have a value of “Bob” OR “Doug” AND the variable State must have a value of “Approved”.
+complex condition
+The “OR” option is accessed by clicking on the Variable, as is the option to remove a condition.
+Or & remove
+To gain more SOLIDWORKS EPDM administration skills and knowledge try our
+Administering SolidWorks Enterprise PDM
+training course available live online or in a classroom near you.

@@ -1,0 +1,91 @@
+<p>The SQL Server Management Studio (SSMS) is an integral component for administrating SOLIDWORKS PDM, as it allows us to maintain and capture backups of the database.  When installing a new instance of SQL Express for PDM Standard via the installation manager, the management studio is not included and requires a <a href="https://www.javelin-tech.com/blog/?p=42908">separate download and install</a>.  In this article, we&#8217;re going to look at how to install a new instance of SQL and include the SSMS, ahead of installing PDM Standard.</p>
+<p><div id="attachment_43105" style="width: 652px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-Management-Studio-IM-Tip.png"><img decoding="async" aria-describedby="caption-attachment-43105" class="wp-image-43105 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-Management-Studio-IM-Tip.png" alt="SOLIDWORKS PDM Install options" width="642" height="256" title=""><p id="caption-attachment-43105" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43105 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-Management-Studio-IM-Tip.png" alt="SOLIDWORKS PDM Install options" width="642" height="256" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-Management-Studio-IM-Tip.png 642w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-Management-Studio-IM-Tip-600x239.png 600w" sizes="(max-width: 642px) 100vw, 642px" /></noscript></a> SOLIDWORKS PDM Install options</p></div></p>
+<h3>How to download and install SQL Server Express with the Management Studio</h3>
+<ul>
+<li>Download and run the installer;
+<ul>
+<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42299" rel="nofollow noopener" target="_blank">SQLEXPRWT_x64_ENU.exe</a></li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_43146" style="width: 1213px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download.png"><img decoding="async" aria-describedby="caption-attachment-43146" class="wp-image-43146 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download.png" alt="Choose the download" width="1203" height="476" title=""><p id="caption-attachment-43146" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43146 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download.png" alt="Choose the download" width="1203" height="476" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download.png 1203w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download-600x237.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Download-768x304.png 768w" sizes="(max-width: 1203px) 100vw, 1203px" /></noscript></a> Choose the download</p></div></p>
+<ul>
+<li>Select <strong><em>New SQL Server stand-alone installation or add features to an existing installation</em></strong></li>
+</ul>
+<p><div id="attachment_43147" style="width: 796px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install.png"><img decoding="async" aria-describedby="caption-attachment-43147" class="wp-image-43147 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install.png" alt="New SQL Server stand-alone installation" width="786" height="208" title=""><p id="caption-attachment-43147" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43147 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install.png" alt="New SQL Server stand-alone installation" width="786" height="208" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install.png 786w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install-600x159.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-New-Install-768x203.png 768w" sizes="(max-width: 786px) 100vw, 786px" /></noscript></a> New SQL Server stand-alone installation</p></div></p>
+<ul>
+<li>Read and accept the license terms, then select <strong>Next</strong>.</li>
+<li>The installer checks for issues, if any are reported; these will need to be resolved before continuing.  If no problems are returned we can hit <strong>Next</strong>;</li>
+</ul>
+<p><div id="attachment_43148" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules.png"><img decoding="async" aria-describedby="caption-attachment-43148" class="wp-image-43148 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules.png" alt="Installer checks for issues" width="806" height="608" title=""><p id="caption-attachment-43148" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43148 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules.png" alt="Installer checks for issues" width="806" height="608" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules-600x453.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Rules-768x579.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Installer checks for issues</p></div></p>
+<ul>
+<li>For <em>Feature Selection</em>, choose;
+<ul>
+<li>Database Engine Services</li>
+<li>Client Tools Connectivity</li>
+<li>Client Tools Backward Compatibility</li>
+<li>Client Tools SDK</li>
+<li>Management Tools &#8211; Basic</li>
+<li>Management Tools &#8211; Complete</li>
+</ul>
+</li>
+<li>Then hit <strong>Next</strong></li>
+</ul>
+<p><div id="attachment_43150" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select.png"><img decoding="async" aria-describedby="caption-attachment-43150" class="wp-image-43150 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select.png" alt="Feature Selection" width="806" height="607" title=""><p id="caption-attachment-43150" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43150 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select.png" alt="Feature Selection" width="806" height="607" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select-600x452.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Feature-Select-768x578.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Feature Selection</p></div></p>
+<ul>
+<li>For <em>Instance Configuration</em>;
+<ul>
+<li>If a new install we can choose <strong>Default Instance</strong></li>
+<li>If there&#8217;s an existing SQL install, we can choose <strong>Named instance</strong></li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_43151" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration.png"><img decoding="async" aria-describedby="caption-attachment-43151" class="wp-image-43151 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration.png" alt="Instance Configuration" width="806" height="608" title=""><p id="caption-attachment-43151" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43151 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration.png" alt="Instance Configuration" width="806" height="608" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration-600x453.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Instance-Configuration-768x579.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Instance Configuration</p></div></p>
+<ul>
+<li>For <em>Server Configuration</em>, set the following;
+<ul>
+<li>SQL Server Database Engine:
+<ul>
+<li>Account Name: <strong>NT Service\MSSQL$<em>[INSTANCENAME]</em></strong></li>
+<li>Startup Type: <strong>Automatic</strong></li>
+</ul>
+</li>
+<li>SQL Server Browser:
+<ul>
+<li>Account Name: <strong>NT AUTHORITY\LOCAL SERVICE</strong></li>
+<li>Startup Type: <strong>Automatic</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hit <strong>Next</strong>;</li>
+</ul>
+<p><div id="attachment_43152" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration.png"><img decoding="async" aria-describedby="caption-attachment-43152" class="wp-image-43152 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration.png" alt="Server Configuration" width="806" height="608" title=""><p id="caption-attachment-43152" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43152 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration.png" alt="Server Configuration" width="806" height="608" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration-600x453.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Server-Configuration-768x579.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Server Configuration</p></div></p>
+<ul>
+<li>For <em>Database Engine Configuration</em>, select the following;
+<ul>
+<li>Authentication Mode
+<ul>
+<li>Choose <strong>Mixed Mode</strong></li>
+<li>Enter a STRONG password for the sa (system administration) account</li>
+</ul>
+</li>
+<li>Specify SQL Server Administrators
+<ul>
+<li>Add the local administrator account</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hit <strong>Next</strong></li>
+</ul>
+<p><div id="attachment_43154" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration.png"><img decoding="async" aria-describedby="caption-attachment-43154" class="wp-image-43154 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration.png" alt="Database Engine Configuration" width="806" height="605" title=""><p id="caption-attachment-43154" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43154 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration.png" alt="Database Engine Configuration" width="806" height="605" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration-600x450.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Database-Engine-Configuration-768x576.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> Database Engine Configuration</p></div></p>
+<ul>
+<li>Installs will begin&#8230;..when complete, click <strong>Close</strong>;</li>
+</ul>
+<p><div id="attachment_43156" style="width: 816px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete.png"><img decoding="async" aria-describedby="caption-attachment-43156" class="wp-image-43156 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete.png" alt="When complete, click Close" width="806" height="608" title=""><p id="caption-attachment-43156" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43156 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete.png" alt="When complete, click Close" width="806" height="608" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete.png 806w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete-600x453.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Install-Complete-768x579.png 768w" sizes="(max-width: 806px) 100vw, 806px" /></noscript></a> When complete, click Close</p></div></p>
+<p>and a new instance of SQL will be installed, complete with the management studio;</p>
+<p><div id="attachment_43157" style="width: 1505px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS.png"><img decoding="async" aria-describedby="caption-attachment-43157" class="wp-image-43157 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS.png" alt="SQL Server Installed" width="1495" height="567" title=""><p id="caption-attachment-43157" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43157 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS.png" alt="SQL Server Installed" width="1495" height="567" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS.png 1495w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS-600x228.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS-768x291.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Service-and-SSMS-1220x463.png 1220w" sizes="(max-width: 1495px) 100vw, 1495px" /></noscript></a> SQL Server Installed</p></div></p>
+<p>Now, when <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-server-installation-updated/">installing PDM standard</a> we can choose the already created instance of SQL Express;</p>
+<p><div id="attachment_43158" style="width: 732px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Use-existing-instance.png"><img decoding="async" aria-describedby="caption-attachment-43158" class="wp-image-43158 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Use-existing-instance.png" alt="Installing SOLIDWORKS PDM standard" width="722" height="304" title=""><p id="caption-attachment-43158" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43158 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Use-existing-instance.png" alt="Installing SOLIDWORKS PDM standard" width="722" height="304" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Use-existing-instance.png 722w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Install-SQL-Express-and-SSMS-Use-existing-instance-600x253.png 600w" sizes="(max-width: 722px) 100vw, 722px" /></noscript></a> Installing SOLIDWORKS PDM standard</p></div></p>
+<p>&nbsp;</p>

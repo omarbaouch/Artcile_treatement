@@ -1,0 +1,41 @@
+After an upgrade to
+SOLIDWORKS Manage
+, there are a few steps required to ensure the new version of the add-in is loaded, and the records between Manage and PDM remain up to date.
+Step 1: Update the Manage add-in within SOLIDWORKS PDM
+Open the SOLIDWORKS PDM Administration Tool
+Login to the vault and expand the
+Add-ins
+Node
+Select the previous add-in > RMB >
+Remove
+Remove previous add-in
+Select the
+Add-ins
+Node > RMB >
+New Add-in
+Apply New Add-in
+Navigate to the client install folder
+Select both;
+SWM.swpdm.dll
+EPDM.Interop.epdm.dll
+Hit
+Open
+Open Add-in .dll files
+NOTE
+: The default location for the client install is:
+C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS Manage Client
+Hit
+OK
+on the addin properties dialog
+Note the new version number
+Accept new add-in version
+Note the warning and hit
+OK
+SOLIDWORKS PDM warning
+Kill and restart any active PDM Clients and the new version of the add-in is loaded within SOLIDWORKS PDM;
+New version loaded
+Step 2: Launch a manual sync between Manage and PDM
+For a step by step guide to launching a synchronization please see my previous article:
+How to perform a synchronization between SOLIDWORKS PDM and SOLIDWORKS Manage
+NOTE:
+Document folders aren’t required to be include in the sync and this will transfer any changes in Manage into the PDM Database

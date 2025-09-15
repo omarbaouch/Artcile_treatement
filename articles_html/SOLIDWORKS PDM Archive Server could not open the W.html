@@ -1,0 +1,59 @@
+<p>After installing the <a href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-client/">SOLIDWORKS PDM Client</a> for the first time, the client computer must be connected to the server using a vault view. The message is commonly seen when selecting the archive server from the list in the View Setup application. It can also be seen when using the Add Server option in the PDM Administration tool.</p>
+<p>When attaching a client computer to an Archive Server, the logged-in User&#8217;s Profile is compared to the &#8216;Attach access&#8217; and &#8216;Administrative access&#8217; of the user profile. If the user profile credentials cannot be matched, the user will be prompted to log into the PDM Archive Server.</p>
+<div class="mceTemp"></div>
+<p><div id="attachment_55345" style="width: 453px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-55345" class="wp-image-55345 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-43-29.png" alt="" width="443" height="267" title=""><p id="caption-attachment-55345" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-55345 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-43-29.png" alt="" width="443" height="267" title=""></noscript> Login Archive Server</p></div></p>
+<h2>Archive Server error</h2>
+<p>In some cases this process may fail, with the error &#8216;The Archive Server could not open the Windows Registry&#8217;</p>
+<p><div id="attachment_55338" style="width: 439px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-55338" class="wp-image-55338 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-10-28-33.png" alt="" width="429" height="333" title=""><p id="caption-attachment-55338" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-55338 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-10-28-33.png" alt="" width="429" height="333" title=""></noscript> The Archive Server could not open the Windows Registry</p></div></p>
+<p>There can be other associated errors, which I have listed below:</p>
+<ul>
+<li>Could not initialize archive serve connection. Error Description: The system detected a possible attempt to<br />
+compromise security.</li>
+<li>No authority could be contacted for authentication.</li>
+<li>No credentials are available in the security package.</li>
+<li>Could not authenticate with server.</li>
+<li>The specified Archive Server operation was invalid in this context.</li>
+<li>The Archive Server could not open the Windows Registry.</li>
+<li>The function requested is not supported.</li>
+</ul>
+<h3>Why does this error occur?</h3>
+<p>This issue can also occur when creating a local vault view or when attempting to &#8216;Refresh&#8217; the vault in PDM Administration.</p>
+<p><div id="attachment_55359" style="width: 337px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-55359" class="wp-image-55359 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-46-07.png" alt="" width="327" height="271" title=""><p id="caption-attachment-55359" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-55359 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-46-07.png" alt="" width="327" height="271" title=""></noscript> Refresh Vault</p></div></p>
+<p>This error will often occur, on client computers that are disconnected from their company&#8217;s domain. The problem stems from the domain controller not responding when the client sends the Windows domain profile credentials for authentication. This problem can also occur if a user is logged in using Windows via an Azure Active Directory account. The issue can also occur when PDM is installed using a local machine user profile, and unable to create a vault using a domain network account.</p>
+<h3>Client-Side Resolutions</h3>
+<ul>
+<li><strong>Run the administration tool or view setup wizard with a different Windows user account</strong>.
+<ul>
+<li>Browse to the SOLIDWORKS PDM installation folder</li>
+<li>Hold down the &#8216;SHIFT&#8217; key and right-click the application to run ConisioAdmin.exe&#8217; for attaching the Archive Server or ViewSetup.exe&#8217; to create a local vault view.</li>
+<li> Select &#8216;Run as different user&#8217;.</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_55343" style="width: 768px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-55343" class="wp-image-55343 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-36-51.png" alt="" width="758" height="262" title=""><p id="caption-attachment-55343" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-55343 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-36-51.png" alt="" width="758" height="262" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-36-51.png 758w, https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/05-07-2022-12-36-51-600x207.png 600w" sizes="(max-width: 758px) 100vw, 758px" /></noscript> Run as Different User</p></div></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Use a different local Windows account and enter the local system name using the format &#8216;SYSTEM_Name\USER_Name&#8217;.</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_55357" style="width: 459px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-55357" class="wp-image-55357 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-35-34.png" alt="" width="449" height="323" title=""><p id="caption-attachment-55357" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-55357 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/06-07-2022-08-35-34.png" alt="" width="449" height="323" title=""></noscript> Run as Different User</p></div></p>
+<ul>
+<li><strong>Create a temporary Windows user that is part of the local administrator group</strong>.
+<ul>
+<li>While logged in as this temporary Windows user, attach the vault or create the local vault view. The vault and vault view should now be accessible when logged into the domain.</li>
+</ul>
+</li>
+</ul>
+<h3>Server-Side Resolutions</h3>
+<ul>
+<li><strong>Add the Active Directory group to the Archive Server Configuration tool.</strong>
+<ul>
+<li>While client-side fixes can get a single machine up and running quickly, for a solution that will include other user&#8217;s computers, a change can be applied on the server end. From there, the Active Directory group that contains these users can be added. Once the group is added, the users will no longer see the login prompt.</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_66941" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-66941" class="wp-image-66941 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/archiveconfig-600x535.png" alt="Add user to the security tab" width="600" height="535" title=""><p id="caption-attachment-66941" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-66941 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/archiveconfig-600x535.png" alt="Add user to the security tab" width="600" height="535" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/archiveconfig-600x535.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2022/07/archiveconfig.png 679w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> Archive Server Configuration Settings &#8211; Security Tab</p></div></p>
+<h3>Need help with your SOLIDWORKS PDM?</h3>
+<p>Javelin&#8217;s team of Certified Experts provide a variety of SOLIDWORKS PDM Services including System Implementation, Health Check Optimization and Upgrades. <a href="https://www.javelin-tech.com/3d/process/solidworks-pdm-services/">Learn more about our PDM services »</a></p>

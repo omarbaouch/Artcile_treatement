@@ -1,0 +1,15 @@
+Troubleshooting Workflows can be complex and time consuming. In this article I have put together a few tips and tricks, that I have used in the past to resolve issues in Workflows relating to Conditions.
+It is highly recommended that any testing be down in a sandbox/test vault. Please refer to my blog
+EPDM – Sandbox Vault
+to learn how to create a sandbox/test vault.
+Workflow issues are generally related to permissions and Workflow/Category Conditions. Permission issues are covered in a separate blog.
+Conditions are set either in Categories or through Workflow properties (right click on Workflow and choose properties). Symptoms of problems with Conditions include files being checked into the wrong workflow or receiving the below error when you attempt check-in a file.
+.
+Files being checked into the wrong workflow, normally are a result of a file meeting the condition of two or Categories or Workflows. To test is this issue set the below condition for all Categories and Workflows, except the one(s) that file should go into.
+The argument !=%.% will prevent any file from entering that  workflow.
+If you are able to check in a file into the correct workflow, set the condition of this Category and Workflow to !=%.%, as illustrated in the previous image. Next clear the condition !=%.% for one of the other Categories and Workflows and test this workflow by checking in a file. If the conditions for this Category and Workflow are correct, you should receive the message, “The document does not meet the condition of any workflow”. If you are able to check in a file, then you will need to add additional conditions in order to prevent the file from entering that workflow. Repeat this process for each Category and Workflow.
+If a Category is used in multiple Workflows, you will need to set the condition for each possible combination of Category and Workflow. I often find it simplifies testing, by adding the Category conditions to the Workflows and then deleting the Categories. Once I have tested all workflows and made any corrections, I’ll recreate the Categories and delete the conditions in the Workflows. As a best practice try use either only Categories or Workflow conditions, whenever possible.
+In some cases files of the same type belong in different workflows. For example an Excel document can be used for a ECO and ECO’s belong to a ECO workflow. There may also Excel documents that are used for other purposes that need to go into a Documents Workflow. There are two ways this can handled, the first is having a separate folder in the vault for each the each Excel document (ECO folder for ECO’s and a Document folder or all other Excel Documents). The conditions could look like something like the following.
+The argument %\ECO-%doc% would only allow Excel documents that are located in a folder called ECO into a workflow.
+Variables can also be used as a condition.
+The process for addressing the error “The document does not meet the condition of any workflow”, is similar. Isolate the Workflow and Category  where the file should go into (using !=%.% on all other Workflows and Categories) and adjust the conditions accordingly.

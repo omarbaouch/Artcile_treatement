@@ -1,0 +1,18 @@
+New in
+SOLIDWORKS PDM 2020
+the performance of browsing in the PDM vault view has increased. SOLIDWORKS PDM now loads the data in the background, which improves the browsing responsiveness.
+From generic file browsing to looking up file references and accessing details the improved performance of SOLIDWORKS PDM 2020 makes your day-to-day experience more efficient. When you access files and folders data, it is now loaded asynchronously. This means you do not have to wait for the file contents to load before you can browse into a sub-folder. Details continue to load in the background and are cached until you click on to another file.
+When you double click a folder, SOLIDWORKS PDM loads data in this order:
+You can browse sub-folders while the remaining data loads in the folder.
+Files with standard columns in the file list.
+Information in the custom columns. You can add more custom columns and maintain the same browsing speed.
+When you select a file and switch between the
+Bill of Materials
+,
+Contains
+and
+Where Used
+tabs, SOLIDWORKS PDM loads the data for the tabs in the background.
+When you switch to a different file or folder, the background loading stops and loading of the new file or folder starts.
+Performance improves significantly for folders with a large number of files or for database servers with high latency.
+Watch the demo video below to learn more about the performance enhancements:

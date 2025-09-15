@@ -1,0 +1,19 @@
+Viewing SolidWorks files, Microsoft Office files, dxfs, dwgs, pdfs and many other common documents in Enterprise PDM is as simple as selecting the file and looking at the preview tab. But what if you have files that require a special viewer that is not integrated with Enterprise PDM, perhaps from a legacy CAD or CAE program?
+The “View File” command can be set up to assign any viewer program you specify, to view any file type you wish.
+Here are the steps to set up a special viewer for a file:
+Step 1.
+In the EPDM Administration console, right click on the “Users” node and click “Settings”. (see attached screen shot) If only some users are going to use this third party viewer then you will need to expand the “Users” node and right click directly on the user names and perform the next set of steps on each of them.
+Step 1
+Step 2.
+Click on the “Viewers” section along the left side panel and click Add (see attached screen shot)
+Step 2
+Step 3.
+In the “Extensions” text box, type in the file extension that will use a specific viewer.
+Step 3
+Step 4.
+In the “Path and arguments” text box, first add the path for the viewer program. Click the “Browse” button and locate the .exe file for the viewer program. Click open to have that path populate in the text box.
+Step 4
+Step 5.
+Finally add the argument. Click on the button with the “>” and select Argument 1 “%1%”.
+Step 5
+As you will also see in this video, Enterprise PDM will open the file in the viewer specified whenever you right click and select “View File”.

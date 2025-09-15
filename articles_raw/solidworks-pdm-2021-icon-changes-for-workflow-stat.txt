@@ -1,0 +1,10 @@
+SOLIDWORKS PDM 2021
+has new icons for workflow States and Transitions. The colours and appearance of existing icons are improved as well.
+The State and Transition icons are broken down into categories that make the selection process easier.
+In the SOLIDWORKS PDM Administration Tool, open a workflow, and in the
+Properties
+dialog box of a state/transition, click
+Change…
+, icon is selected from the list of categories.
+SOLIDWORKS PDM Workflow Icons
+The workflow state icons are beside the state name in the file list view making it easier to identify the state of the file.

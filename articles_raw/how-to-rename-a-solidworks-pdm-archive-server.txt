@@ -1,0 +1,34 @@
+If you want to rename SOLIDWORKS PDM Archive Server, follow these steps to ensure proper functioning of SOLIDWORKS PDM after renaming the server machine.
+Step 1: Backup and lock access
+The first step is to ensure you have a recent backup of the archive and the SQL database. Once the backups are complete, you need to ensure  that during the rename operation no one can access the PDM vault; refer to my recent article on
+how to block PDM login
+.
+Step 2: Rename the Server
+The next step is rename the server. There are a number of ways of doing this. In the below image I illustrate how this is done through Windows System Settings.
+Rename PC through Windows System Settings
+Step 3: Edit SQL Tables
+Now that the server is renamed, we need to make make changes through SQL Server Management Studio. Expand the Tables folder, for your vault and edit the tables
+ArchiveServers
+and
+SystemInfo
+.
+Edit Table
+Update the
+ArchiveServerName
+ONLY
+, for each of these tables. If this a replicated environment, ONLY update the server that was renamed.
+Updated name
+Once the Tables have been updated,
+restart the Archive Server service
+.
+Step 4: Edit Client Registry
+Each client must now be updated to reflect the new Archive Server name.  Edit the registry key:
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Application\PDMWorks Enterprise\Databases\VAULTNAME
+And update ServerLoc with the new server name.
+Registry Editor
+If the above key is empty, the file vault view is most likely “private”, in this case, edit the key:
+HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME
+Next delete the registry:
+HKEY_CURRENT_USER\Software\SolidWorks\Application\PDMWorks Enterprise\ConisioAdmin
+Deleting this key is only required  if the vault view is “private”. Once the changes have been made, on the client, reboot the system and log into the vault.
+If the server is part of a replicated environment, ensure that server name is correct in your replication settings.

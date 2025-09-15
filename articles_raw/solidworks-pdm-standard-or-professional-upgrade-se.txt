@@ -1,0 +1,54 @@
+Are planning on upgrading your SOLIDWORKS PDM system? Need help to ensure the upgrade goes smoothly and downtime is kept to a minimum? Javelin’s team of Certified SOLIDWORKS PDM experts can provide your business with a comprehensive service for upgrading your SOLIDWORKS PDM Standard or Professional system from one version to the next—a maximum of two major releases back from the version that is being installed (i.e. SOLIDWORKS 2016 to SOLIDWORKS 2018).
+If you are currently more than two versions back from SOLIDWORKS PDM 2018 and need to upgrade, we can help,
+contact us
+.
+SOLIDWORKS PDM Upgrade Service
+Our SOLIDWORKS PDM Upgrade Service includes the following:
+Planning Meeting
+to confirm and validate vault configurations and versions.
+Initial off-site migration test
+on your data prior to the upgrade.
+Remote or On-site upgrade service
+.
+Installation and upgrade of your SQL server software as required.
+Installation and upgrade of up to three data archive servers.
+Testing of the migrated system.
+Installation and check on upgraded clients/users.
+Review server log files.
+Test PDM processes with Check in/out, Workflows, etc.
+You are responsible for:
+Ensuring that all active files are checked in by all users prior to upgrade.
+Complete a full system backup of the Archive Servers, Archive Files and SQL database prior to upgrade.
+Provide a copy of your PDM SQL database for off-site validation of data and process prior to the upgrade.
+Complete installation and upgrade on remaining client computers.
+Moving/copying data prior to site visit if the vault is being moved to new hardware for upgrade.
+NOTE: Upgrading SOLIDWORKS files to the latest major release is NOT included (additional hours may be purchased for this task).
+Why a SOLIDWORKS PDM Upgrade is important for your business
+An upgrade to the latest SOLIDWORKS PDM system will enable your business to:
+Ensure that you are
+running an optimal build
+and any reported issues are resolved with the latest version.
+Support an upgraded system
+, if you have new hardware/software, or your system has reached the end of life (i.e. Windows Server 2003) you will need a SOLIDWORKS PDM upgrade to run on the latest system.
+Move/transfer your PDM Vault to another server
+, our technicians can ensure that your downtime is kept to a minimum and your data is transferred successfully.
+Take advantage of all the new SOLIDWORKS PDM features
+included with the latest version. Every new SOLIDWORKS release has hundreds of new features and performance enhancements.
+Take a look at just a few of the latest features in SOLIDWORKS PDM 2018:
+The benefits of a SOLIDWORKS PDM Upgrade Service from Javelin
+By using the Javelin SOLIDWORKS PDM Upgrade Service you can be confident in the knowledge that your critical business system will be upgraded by an experienced Certified SOLIDWORKS PDM Professional, which means:
+Shorter downtime
+: An upgrade to a major SOLIDWORKS release requires that all PDM clients are also upgraded; which will result in your users not having access to the vault until the upgrade has been completed.  We can provide an implementation plan to minimize your downtime.
+Upgrade expertise and experience
+: We are familiar with the common PDM migration issues.  This knowledge allows us to provide recommendations and/or solutions to resolve your issues.
+Comprehensive certified service
+: We will perform a full upgrade following SOLIDWORKS’ procedures, thus ensuring that you will not have an unsupported scenario.
+Optimize Performance and Health-check
+: As part of the upgrade, we ensure all settings are in place to maximize your database performance.
+Peace of mind
+: Upgrading SOLIDWORKS PDM can often seem an overwhelming process. Not all components are upgraded using the SOLIDWORKS installation manager. Having an upgrade carried out by certified experts ensures your peace of mind for your critical business system and data.
+Need a SOLIDWORKS PDM upgrade?
+Take the next step and
+contact us
+to find out about the latest SOLIDWORKS PDM release and our service pricing.
+Contact Us

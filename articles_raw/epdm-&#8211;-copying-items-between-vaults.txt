@@ -1,0 +1,2 @@
+Items on one vault can be copied by drag and drop, to another vault. In the originating vault, left click on the item you want to copy and drop it onto the target vault.
+Drag and drop copy

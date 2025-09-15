@@ -1,0 +1,2 @@
+For all of you who create or edit SOLIDWORKS PDM Data Cards, this may be one of your favorite enhancements, in SOLIDWORKS PDM 2018. Yes, you can now UNDO any unintended changes. Undo is not available from the right-mouse menu, but CTRL-Z works and Undo is available from the Edit pull-down. There is no Redo…yet.
+Edit > Undo

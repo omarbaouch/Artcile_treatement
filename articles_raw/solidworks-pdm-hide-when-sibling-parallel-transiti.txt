@@ -1,0 +1,18 @@
+What does the option “Hide when sibling parallel transition is chosen” do in SOLIDWORKS PDM?
+Hide when sibling parallel transition is chosen
+This option hides transitions after a commitment is made to enter a parallel transition.
+In other words if there are two or more parallel transitions that can be chosen from this state, once one is chosen the other parallel transition will not be available as an option. Once you commit to a parallel transition you do not have the option of changing to the other parallel transition unless you revoke the approvals already made to the parallel transition that was chosen.
+Note 3 ways to reach ‘Approved’ state from the ‘Under Edit’ state.
+Normal transition ‘Approvals Skipped’
+Parallel transition ‘Design Approval’
+Parallel transition ‘Admin Approval’
+Workflow
+All of these approvals will be shown before a choice is made, as shown below;
+Change State Options
+When ‘Hide when sibling parallel transition is chosen’ is not checked…
+Transition Properties
+… Then sibling parallel transitions will be shown when a parallel transition is chosen. In this case the ‘Design Approval’ parallel transition was chosen.
+Change State Options
+When ‘hide when sibling parallel transition is chosen’ is checked…
+Change State Options
+… Then sibling parallel transitions are hidden, as well as any other transitions from the source state.

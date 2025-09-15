@@ -1,0 +1,20 @@
+If you are using SOLIDWORKS Enterprise PDM, one very nice feature is that the vault view can be customized to display any of your SolidWorks custom properties in the detail view as you browse your files.  However if you are just storing your files in Windows Explorer, it doesn’t have quite the same flexibility.  One thing that you can display directly in Windows Explorer though, is the Description custom property.  This way if you are using non descriptive part numbers for file names you can easily see a full description of the model directly in Windows Explorer.
+Steps to display Description custom property value
+Step 1:
+Select the folder template that you wish to use.   Navigate to a folder where your SolidWorks files are stored and go to Organize then click on Properties.  Go to the Customize tab.  In Windows 7 and Windows 8 you can select from 5 different folder templates, “General Items”, “Documents”, “Pictures”, “Music” and “Videos”.  Unfortunately at this time Microsoft does not provide a 3D Model file type.  For this example we will use the “Videos” folder template for our SolidWorks files.  Under “Optimize this folder for:” select Videos from the drop list.
+File Properties
+Step 2:
+Change the view type to “Detail”
+Detail File Type
+Step 3:
+Right Click on any of the column headers and select “More”
+Customize Headers
+Step 4:
+In the list of Details there are two entries for “Description”, only one will contain the value from the SolidWorks Description custom property.  Check the box beside the detail that you wish to add (you might need to try each to make sure you add the correct one).  Once all columns have been added, you can re-order them by dragging the column header.
+Description Custom Property
+Step 5:
+Once the view is organized the way you wish it to display you can now apply this layout to other folders that contain your SolidWorks files.  Click on “Organize” and “Folder and search options”.
+Folder & Search Options
+Step 6:
+Go to the “View” tab and click “Apply to Folders”.  This will apply the view you have just set up to any folders that are set up to use the “Videos” template.  Repeat Step 1 for any folders that also contain SolidWorks files.
+Apply to Folders

@@ -1,0 +1,39 @@
+Included with the enhancements to the
+File Version Upgrade Tool
+in
+SOLIDWORKS PDM 2018
+, we can now monitor the upgrade process on any client with the tool installed via the following methods:
+Welcome Screen
+>
+Monitor Upgrade Process
+Welcome – Monitor upgrade process
+Then point the tool to the network location for the work instruction files
+Monitor Upgrade – Network location
+Or on the ‘Ready to Upgrade Files’ screen after the upgrade has been initiated;
+Click ‘
+Monitor
+‘
+Ready to Upgrade Files
+The Monitor screen looks like this:
+Monitor Upgrade Screen
+Which tells us the overall upgrade progress and progress of each work instruction file.
+Host Name –
+Machine name on which you initiate the upgrade process
+Instruction file name –
+Names of the work instruction files
+Progress –
+Upgrade completion status of work instruction files
+Processed Batch –
+Number of processed
+batches / total
+number of batches
+Processed File –
+Number of processed
+files / total
+number of files
+Start time –
+Time when the upgrade process is started
+Elapsed time –
+Time elapsed after the upgrade is started
+Status –
+Upgrade status of work instruction files

@@ -1,0 +1,47 @@
+SOLIDWORKS PDM Standard vs Professional
+With fast-moving projects and complex designs, data management is extremely important in any environment.  A primary goal of a data management solution is to keep the designers designing and let the data management system handle all the tedious tasks of updating values, tracking file history and revision management.  SOLIDWORKS PDM Standard is a great tool for managing data, but PDM Professional can build on this and help cut down on time lost with tedious tasks.
+The question is never: “
+Should I be using a SOLIDWORKS Product Data Management solution?”
+but:
+“Which SOLIDWORKS Product Data Management solution is the best choice for my company?”
+There are many reasons for upgrading from SOLIDWORKS PDM Standard to PDM Professional. but in this article I’ve narrowed it down to my top three:
+Professional Benefit #1: Workflows
+A SOLIDWORKS PDM Standard vault is limited to 1 Workflow with 10 states within it
+.  With SOLIDWORKS PDM Professional there is no limitation on workflows…we can have as many workflows, with as many states within them as our business requires.  SOLIDWORKS PDM Professional allows us to create a workflow and process structure for all our engineering needs, with room to grow as the business expands.
+SOLIDWORKS PDM Standard VS Professional – Workflows
+When implementing a new SOLIDWORKS PDM Professional Vault, I always create a minimum of three workflows to incorporate the basic process of a engineering process:
+CAD Files
+– The workflow that all CAD files transition through where revisions are applied and incremented.
+ECO
+– The Engineering Change Order workflow, where the ECO documents transition through and track what stage an ECO process is currently at.
+Library
+– All non-revision managed files.
+All files would join the appropriate workflow without any input from the user, which keeps things simple and requires minimal input from the user.  It is a challenge to include all the above processes within one workflow and 10 states and ultimately results in more management and sorting required from the users for each and every file.
+SOLIDWORKS PDM Professional also gives us the option of different transition types; Normal, Automatic or Parallel.  Automatic transitions allow us to create rules to automatically transition files through the workflow with no input from the users and parallel transitions provide the ability to define rules where multiple users must approve the transition before its complete.  All useful tools in the complete cycle of an engineering project.
+Professional Benefit #2: Templates
+If you ever get the opportunity to attend one of my
+Administering SOLIDWORKS PDM classes
+you’ll get to hear me rave about
+templates
+within SOLIDWORKS PDM Professional.  As a vault user, I used to find it frustrating when looking for a specific file required lots of navigating between folders.  In my experience, every user has a different opinion about a logical folder structure for a project.  By implementing folder templates users have the ability to create a consistent project folder and subfolder structure within two clicks.
+SOLIDWORKS PDM Standard VS Professional – Templates
+We can even customize folder templates further using template cards, and have a project number automatically assigned and information like
+Customer, Project Name, Project Number
+pushed to all the subfolder data cards, then from there to files which would automatically update custom properties so users don’t have to constantly enter consistent values for a project in the drawing title block etc.
+Professional Benefit #3: SQL Standard vs SQL Express
+SOLIDWORKS PDM Standard is built within SQL Express whereas the Standard Edition version of SQL Server is included within PDM Professional.  There are some key limitations within SQL Express that don’t exist in SQL Standard:
+1 GB RAM limit
+10 GB database limit
+The 10 GB database limit is not a problem, but the limit of 1GB RAM is more of a restriction.  Everything within SOLIDWORKS PDM goes through the database, so
+limiting the RAM can affect the performance
+negatively as more users connect.
+SQL Standard VS SQL Express
+SQL Standard also gives us the ability to create maintenance plans which can schedule and automatically capture backups of the database, rebuild and reorganize the tables to reduce fragmentation and increase performance.  All these tasks would have to be completed manually on demand within SQL express.
+Bonus Reason…Replication
+Ok, I’m cheating here slightly as I’ve gone over my 3 reasons, but this one doesn’t apply to everyone but is a key feature nonetheless.  If you have multiple offices Replication is a great tool to share data and keep performance high as you’re limiting the communication over the WAN.  In a replicated environment users would use a centralized database but the physical files are retrieved from the closest archive server over the LAN increasing performance and limiting the data communicated over the WAN to small packets of information from the DB.
+Learn more about SOLIDWORKS PDM Professional
+Visit our
+SOLIDWORKS PDM Professional product page
+to learn about the features and benefits or
+attend an upcoming seminar or webinar
+and get your questions answered.

@@ -1,0 +1,17 @@
+The First thing to note about Columns in
+SOLIDWORKS PDM 2021
+is the Columns node in PDM Administration. It now contains the sub nodes File Details Columns, File List Columns, File Operations Columns, Quick Search Columns and Search Results Columns. The addition of these sub nodes will make organizing and customizing your various Column sets easier.
+No Column Sub Nodes
+When creating a Column set under one of these sub nodes, the Column set will contain predefined options.
+Predefined Options for Column Sets in Sub node
+There are also new Types that can be chosen for the Column Set.
+New Column Types
+The Columns interface has been cleaned up by the addition of tabs for Columns and Permissions.
+New Tabs
+The default sort and sort direction can be defined by the Sort Column pull-downs.
+Sort Column
+In PDM 2021 for a Column set, under the Permissions tab, the Column set can be assigned to a User or Group. The Column set can also be assigned as the Preferred Column Set.
+Permissions and Preferred
+Note that changing the preferred column set will only effect users logging into a fresh installation of the PDM local vault view. Any current users who have already accessed their local vault view will have their existing column set remain unchanged. However, when a current user logs in on a new device for the first time, the preferred column set will be used.
+Users can switch between Column sets by right-clicking within the Explorer Vault View.
+Selecting Column Set

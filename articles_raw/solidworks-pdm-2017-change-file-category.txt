@@ -1,0 +1,10 @@
+The category associated with a file can now be changed. The
+admin user can change the category of a checked in file
+, by selecting Change Category, from the Modify pull-down menu in the local vault view.
+Change Category
+This will change the Category a file is associated with, not the workflow that the file resides in.
+Only the default admin user has the permission to Change Category
+.
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

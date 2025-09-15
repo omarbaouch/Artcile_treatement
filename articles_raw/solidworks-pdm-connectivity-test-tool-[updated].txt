@@ -1,0 +1,22 @@
+NOTE
+: This article has been updated to reflect the new version of the Connectivity Test Tool.  The new tool is available to all customers and can be downloaded via the
+DS Support Knowledge Base
+article QA00000119794
+Within a SOLIDWORKS PDM environment, there are several different components that need to talk to each other for everything to work as expected.  If a PDM client can’t communicate with a server, you will see errors and be unable login to the vault.  To help troubleshoot problems like these SOLIDWORKS has created a tool for testing the connection between client and server.
+Using the SOLIDWORKS PDM Connectivity Test Tool
+It’s simple to use…the first step is to specify the connections to test:
+Next, specify the hostname and port for each server component:
+NOTE
+: If the ports are still as default you can use the ‘Set Default Ports’ button to populate this information for you.
+Next, specify the SQL instance for the ODBC test (you can select the default or a named instance) and input the sa password:
+Select ‘
+Run Tests
+‘ to start the tool.
+If the connection to the server was successful a green check will show:
+Connection Success
+If the connection to the server was unsuccessful a red X will show:
+Unsuccessful Connection
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

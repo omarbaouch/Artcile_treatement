@@ -1,0 +1,15 @@
+SOLIDWORKS 2016 PDM Standard
+Now that
+SOLIDWORKS 2016 SP0 is available
+, a NEW PDM tool is also available to eligible customers,
+SOLIDWORKS 2016 PDM Standard
+. We’ve been receiving calls from customers wondering why they cannot yet install and begin using PDM Standard.
+SOLIDWORKS has yet to “enable” PDM Standard on customers’ licenses. The “enabling”, or “turning on” if you will, is scheduled to happen sometime
+mid-November, 2015
+.
+Eligible customers will be notified when their PDM Standard license is available. Until then, don’t let the anticipation get to you too badly! 🙂
+To learn more about PDM Standard, visit
+SOLIDWORK PDM Standard landing page
+, and view our blog post to learn
+how to install SOLIDWORKS PDM Standard
+.

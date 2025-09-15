@@ -1,0 +1,25 @@
+SOLIDWORKS PDM Professional (formerly called Enterprise PDM) is NOT simple plug and play software. Once the software is deployed within an organization, it must be properly maintained by a qualified SOLIDWORKS PDM Administrator.  This individual is responsible for ensuring all maintenance tasks are properly executed, updating user information, and making configuration changes to the vault.
+Javelin offers a two day (or four half day online)
+Administering SOLIDWORKS Enterprise PDM training course
+to teach these crucial skills.
+Certified SOLIDWORKS PDM Administrators
+New SOLIDWORKS PDM Certification Exam
+In 2012 SOLIDWORKS introduced a new certification exam specifically for PDM Administrators.  The
+Certified PDM Professional Administrator
+examination is a challenging 2 hour exam that tests the ability of a PDM Administrator to perform both the common, everyday tasks required to maintain and modify a vault for their organization; as well as their ability to handle potential issues that may crop up.
+In my opinion this is one of the best crafted exams I’ve encountered, focusing on very realistic situations that a PDM Administrator will very likely encounter.
+For customers with a current SOLIDWORKS Subscription, this exam is offered for FREE
+along with the
+CSWP Offers for Subscription Service Customers
+.
+Why do you need to get PDM certified?
+SOLIDWORKS Certifications are an industry recognized achievement that shows your ability to use and manage these tools properly.
+At present, in Canada, there are only 36 Certified PDM Professional Administrators.  By contrast, there are currently over 2300 Certified SOLIDWORKS Professionals in this country alone –
+learn more about the merits of being a certified user
+.
+Determine your strengths and weaknesses
+Certification also helps you determine your strengths and your weaknesses.  Studying and preparing for certification is a challenging process, and may help to fill gaps in your knowledge that you didn’t even realize existed.  SOLIDWORKS has prepared a
+Sample Exam
+for the CPPA test as a study guide for those preparing to take the exam.
+CPPA Certificate
+If you have completed the SOLIDWORKS PDM Administration course and have had some hands on experience managing a vault, then you are ready to tackle the CPPA exam and prove that you can be a Certified PDM Professional Administrator.

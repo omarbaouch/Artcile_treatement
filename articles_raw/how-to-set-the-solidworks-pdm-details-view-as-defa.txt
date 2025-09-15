@@ -1,0 +1,24 @@
+During our
+Administering SOLIDWORKS PDM Training course
+, I always recommend setting the explorer view as
+Details
+as there’s a lot more information available for files with this view option.  Directly after I often get asked: “How do I set the SOLIDWORKS PDM Details View as the default in Windows Explorer?”.
+SOLIDWORKS PDM Details View
+With SOLIDWORKS PDM being integrated within Windows Explorer, its a Windows Folder setting that we have to change
+Set Details View as Default
+For this example, I am using Windows 10
+Navigate to the root level of your vault
+Navigate to the root level of your vault
+Then select the
+Details
+View via the slider
+Then select the Details View via the slider
+To push this setting to all other folders within the vault;
+Via Explorer Select;
+Tools > Folder Options
+Via Explorer Select; Tools > Folder Options
+Select the view tab
+Click > Apply To Folders
+Click > Apply To Folders
+Now all your sub-folders within the vault will use the details view by default;
+Now all your sub-folders within the vault will use the details view by default;

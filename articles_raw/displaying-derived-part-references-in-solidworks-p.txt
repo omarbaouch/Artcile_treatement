@@ -1,0 +1,17 @@
+In this article, we will explore in SOLIDWORKS PDM that control the display of derived parts. Proper handling of derived parts leads to accurate Bill of Materials, efficient reference structures, accurate version and revision control, and prevention of duplicate parts. If you are a designer who utilizes SOLIDWORK’s derived part feature with files stored inside of a PDM vault, then these are settings that should be reviewed.
+What is a Derived Part?
+In SOLIDWORKS, a
+derived part
+is a feature that allows you to create a new part based on an existing part. This means that you can reference an existing part as the starting point and then make modifications or additions to create a new part. The derived part can inherit geometry, features, and design intent from the original part but can also have its own unique features and changes.
+Insert Part
+Derived parts can save designers time by allowing them to quickly make a mirror image of an existing part, making alterations to a parts design, or creating multi-body parts.
+Derived Part in SOLIDWORKS PDM BOM
+In previous releases of SOLIDWORKS PDM, there were no options to control the display of Derived Part references in a computed BOM. With the release of SOLIDWORKS PDM 2021, the display of Derived Part References can be toggled by editing the BOM in PDM Administration and checking ‘Include derived part references’:
+Enabling Derived Part References
+With ‘
+Include derived part references
+‘ checked, the derived part references will display in the Computed BOM:
+Computed BOM Showing Derived Part References
+Derived Part in Contains and Where Used Tabs
+Additionally, in the Contains and Where Used tab, all derived part references can be viewed. This is true regardless of the selected configuration. In released of PDM prior to 2021, derived part references were only displayed when the ‘Do not show configurations’ option was enabled for the selected configuration.
+Do Not Show Configurations

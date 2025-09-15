@@ -1,0 +1,13 @@
+A Computed or a SOLIDWORKS BOM, can be saved as a Named BOM. Which can be controlled by a workflow.  Named BOMs can be checked out, modified and checked in.
+Named BOMs are useful when the BOM contents needs to be managed independently of the referenced assembly. If there are changes to the assembly, that need to be reflected in the Named BOM, a new BOM can be saved. By checking out the existing Named BOM and overwriting with the new one, a version of the Named BOM is created. All previous versions are maintained.
+A Named BOM is saved from the BOM tab of the PDM local vault view. Select
+Save As
+from the Bill of Materials tab as shown below:
+Saving a Named BOM
+Select the
+file type as BOM
+to save a BOM file:
+BOM File Type
+Categories, Workflows and Transitions can be filtered to only accept BOMs. This is done by using the Object Type condition.
+Object type condition
+In this way you can have a branch of a workflow, or a complete workflow dedicated to BOMs.

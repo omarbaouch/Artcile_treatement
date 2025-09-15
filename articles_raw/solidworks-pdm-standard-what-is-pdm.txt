@@ -1,0 +1,37 @@
+What is PDM? As it applies to the SOLIDWORKS suite of products, PDM is the acronym for Product Data Management, but what does that mean and how does it benefit you, as the user of SOLIDWORKS?
+At its core,
+SOLIDWORKS PDM Standard
+, is about managing your engineering data. This data can be CAD documents, ECO/ECNs, BOMs, as well many other classes of documents. By managing all this data in a centralized location, everyone will have access to latest version of these documents. Also, access to documents can be controlled, so that data can only be accessed by those, that should have access.
+SOLIDWORKS PDM consists of three components:
+The
+Archive Server
+, is where the physical files are kept. As a PDM user you will not access this location directly. In a typical PDM installation, the Archive will be located on a server.
+The
+Database Server
+, uses a product called Microsoft SQL Express, to store information about the files. This information can include details such as part numbers, revisions, descriptions and any other information, that needs to be associated with a file.  Like the Archive Server, the Database Server is typically housed on a server.
+The Archive and database servers are combined to create a PDM Vault and a user has access to all the information through a
+Client
+, which acts as a portal to the Vault.
+PDM Servers and Clients
+Your PDM Administrator(s) will set-up these three components, as well as define the perimeters that govern how the Vault will work. There are several parameters that your Administrator will control but as a user, you only need to concern yourself with a few. These are Permissions, the Interface, and the Workflow.
+Typical workflow
+PDM Administrator
+Your Administrator will define, who has access to what files/folders and what stage in the Workflow, a user can access a file. For example, during the design phase, only designers\engineers will have read & write access to CAD files, but when the files are released, everyone has read access.
+PDM User
+A user can interact with PDM through SOLIDWORKS, an Explorer Window or over the Web. The type of access that a user has, depends on the PDM license type. These portals allow users to search for files, view information about these files, preview files, lock ownership of files as well as create new versions of files.
+Windows Explorer View of PDM Vault
+The benefits of using PDM are:
+All users have access to the latest versions of files, that are stored in a central location. This means manufacturing can have immediate and direct access to a project file, when it is release.
+All files are stored centrally, thereby reducing the chance of data loss or. This includes having your work overwritten, by a co-worker saving files, to a shared network drive.
+Multiple versions of files can be kept, thereby allowing a user to revert to a previous version
+All users work with files that are stored on their local drives, eliminating the need to work across a network. Networks are always slower, then properly operating computer with adequate resources. This means better performance, especially during Opening, Saving and Rebuilding operations
+Searches can be performed for files, not only but the file name, but related information such as part number, project or any other field defined by your Administrator.
+A user can lock files they are working on, so another cannot make changes until the user releases the file.
+Access to files can be controlled, so that only those that should have access to those files, will be able to access them. Access can be controlled by the folder that file resides in, as well as the State a file. As an example, manufacturing, can only view files when they are in a Released State.
+While at first PDM may seem onerous, with an open mind, you will soon find that the benefits of PDM, far out way the effort to learn and use PDM correctly.
+Need SOLIDWORKS PDM Software or Training?
+Learn more about the
+SOLIDWORKS PDM range of products
+. Review our
+SOLIDWORKS PDM training course
+offerings available live online, onsite at your location, or in a Canadian classroom near you.

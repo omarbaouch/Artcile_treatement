@@ -1,0 +1,22 @@
+When working with
+SOLIDWORKS PDM
+, it’s important to understand what a local file is and why it should be utilized rather than working strictly over a network.
+SOLIDWORKS
+users need a powerful data management system to organize their files to implement different workflows, maintain quality and have maximum efficiency when modeling. Rather than deal with any of these tasks manually,
+SOLIDWORKS PDM
+allows multiple users to work on a data set without stepping on each other’s toes, and it does so by being a network-based program.
+Cached SOLIDWORKS PDM Files
+If a user needs to work on a particular file, they must first check out the file. This is for performance reasons since working on the network is a much slower process for computers. However, it is also to protect the users and the data set from unintentional editing and deleting of files. For this to be successful, PDM will create a cache of a copy of the file to be placed on the user’s local drive.
+In addition, to better CAD performance, this allows users to create any changes without immediately committing to them. If the user decides not to implement new changes, they can revert to a previous revision of the files.
+SOLIDWORKS PDM Cached Files
+Adding Files to Your Vault
+A very important aspect of local files is being able to recognize if they are not yet checked into the vault. This is easy to identify by the color of the folder: green folders are part of the network vault, while greyed-out folders are still completely local. Local files are being pulled directly from your hard drives, therefore not accessible to other users through PDM and not a part of the workflow embedded in your PDM.
+You may be working on local files inside of your vault, but they need to be officially converted so that it is accessible to others. If you have placed files or folders inside of your vault and want to do so, right-click your file and select “Add To File Vault.” Your folders will turn green, meaning it’s now permanently situated inside of your network’s vault.
+Add file to Vault
+Skip the Duplicates
+SOLIDWORKS PDM has great functionality in terms of data management, especially how it handles local and network vault files. If one user checks out a file, PDM will understand that this file is checked out and in the hands of a particular computer. If another user were to attempt to check out the file, the option would be greyed out to prevent creating duplicates. When the file is checked back in, a local read-only file can be created on your local cache, or users can opt to remove the local cache files while checking in. SOLIDWORKS PDM allows users to implement workflows that they are already used to, while maintaining file references and avoiding unwanted file duplication.
+While the vault is incredibly powerful, understanding local files and how to convert them into network files is crucial to the organization of your vault. Files stored in the vault can be checked out as copies, which builds safety around your data set. Folders copied from local hard drives can easily be pushed into the network with a right-click function. SOLIDWORKS PDM is a crucial tool for many engineers, creating a structure for data sets while giving freedom to implement any workflows that just work for the team.
+Learn how to use SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Training course
+live online, courses are available for both users and administrators.

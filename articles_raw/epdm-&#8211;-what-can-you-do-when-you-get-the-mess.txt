@@ -1,0 +1,11 @@
+There can be a number of reasons for this message, some of which can be controlled by good Vault View management, others can indicate permissions issues, while other still can indicate problems with file(s).
+In many cases this issue can be overcome by:
+Copy or save the file that can’t be saved outside the vault.
+Do an
+Undo Check-out
+on the file
+(you may need the help of your EPDM administrator for this step)
+Check out the file.
+Copy the file from Step 1 back into the vault overwriting the one you checked out.
+Check-in the file.
+This should allow to check in the file without loosing all the work you have done since the last successful check-in.

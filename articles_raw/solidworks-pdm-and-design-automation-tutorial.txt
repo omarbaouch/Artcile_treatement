@@ -1,0 +1,26 @@
+Are you looking to apply design automation to
+SOLIDWORKS PDM
+?
+Watch my SOLIDWORKS PDM and Design Automation tutorial video to learn how you can use the DriveWorks design automation add-in with SOLIDWORKS PDM. You will learn how to use templates to give your design a head start on filling out critical information in SOLIDWORKS PDM.
+Included in this Design Automation Tutorial
+During this tutorial you will learn:
+How
+SOLIDWORKS PDM
+Interacts with
+DriveWorks design automation add-in
+How to push information into PDM by having a user fill out a card
+How to define variables
+What is DriveWorks software?
+DriveWorks software
+is used for Design Automation and Sales Configuration by companies large and small. Whether you are an engineer that needs Design Automation to automate your SOLIDWORKS models, or a company wanting to provide a Product Configurator for your sales teams, distributors and even customers; DriveWorks software is the ultimate choice for businesses that use SOLIDWORKS.
+DriveWorks Products
+There are three
+DriveWorks products
+–
+DriveWorksXpress
+,
+DriveWorks Solo
+and
+DriveWorks Pro
+. Each product is a SOLIDWORKS Gold Partner Product and DriveWorksXpress is already included in every license of SOLIDWORKS.
+All DriveWorks products are modular and scalable, you can implement DriveWorks and grow your projects at your own pace, adding additional capabilities as and when you need them.

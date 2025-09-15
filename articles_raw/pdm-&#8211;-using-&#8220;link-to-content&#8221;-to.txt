@@ -1,0 +1,53 @@
+With ECO’s/ECN’s, consistency of data input can be ensured by populating the ECO’s/ECN’s with Variables (Custom Properties) entered through Data Cards. These ECO’s/ECN’s are often in the form of a Word or Excel documents. In this article we will look look at creating a link between a property in Excel to a data card variable.
+This article will assume that the appropriate
+Variable
+has been configured for Excel xls and/or xlsx file types
+and that the
+Variable
+has been mapped to the the data card.
+If you are not familiar with how this done, please refer to the SolidWorks Enterprise PDM Administration Guide.
+In Excel, select  a cell column or row, that will be linked to the
+Custom Property
+.
+From the
+Formula
+tab, select
+Define Name
+.
+Enter the
+Name
+and select whether the
+Scope,
+will be for a particular
+Sheet, Sheets
+or the
+Workbook
+From the menu bar select the
+File
+tab
+Select
+Info
+and then
+Advanced Properties
+from the
+Properties
+pull-down
+Click on the
+Custom Tab
+to add or select a custom property. Next select
+Link to Content
+and choose
+Source Name
+we defined earlier. Click
+Add,
+to create/define the
+Custom Property
+and
+OK,
+to exit
+Properties
+.
+The Excel document can now be used as a template, so that information entered into the Data Card, will populate the appropriate cells.
+Please refer to my blog article ‘
+EPDM – Mapping Variables to Microsoft Office
+‘ to see how this process can be applied to Microsoft Word.

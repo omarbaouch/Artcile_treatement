@@ -1,0 +1,26 @@
+<p>In prior posts we have shown you <a href="https://www.javelin-tech.com/blog/2012/12/epdm-mapping-variables-to-msoffice/" target="_blank">how to link EDPM variables to the custom properties of a Microsoft office document</a>.</p>
+<p>What if you need to push that data into the cells of a <strong>Microsoft Excel Spreadsheet</strong>?</p>
+<p><!--more--></p>
+<p>To be able to write any properties back to specific cells in an Excel document, you will need to write an additional VB Macro that will update the files upon opening with any changes made with Enterprise PDM Variable mapping.</p>
+<p>In the case of updating a cell in the spreadsheet that would carry a value for a Project Name</p>
+<p>The steps to follow in order to associate the cell in the spreadsheet to the EPDM variable would be:</p>
+<ol>
+<li>Define a name for specific cell that would be updated (&#8220;projectname&#8221; for example in this example) This could be done by naming the cell (Option in the upper left-hand corner of the sheet)</li>
+<li>Define appropriate data type (test, number, Date etc) to the cell based on type of value it will be displaying.</li>
+<li>Define variable mapping to Excel custom properties for Enterprise PDM variables.</li>
+<li>Add the following VB code in the sheet that will trigger on a Document open action (Press Alt+F11 in your spreadsheet to open the VB editor and place the code)</li>
+</ol>
+<p>Private Sub Workbook_Open()<br />
+Sheet1.Range(&#8220;Projname&#8221;).Value = ThisWorkbook.CustomDocumentProperties(&#8220;Project name&#8221;)<br />
+Sheet1.Range(&#8220;Projnum&#8221;).Value = ThisWorkbook.CustomDocumentProperties(&#8220;ProjectNumber&#8221;)<br />
+Sheet1.Range(&#8220;Title&#8221;).Value = ThisWorkbook.BuiltinDocumentProperties(&#8220;Title&#8221;)<br />
+MsgBox (&#8220;Properties updated &#8211; save the document before exiting&#8221;)<br />
+End Sub</p>
+<p>In our example, the sample properties are mapped to the values on the Excel data card that gets installed with the default EPDM vault.</p>
+<p>These values are:</p>
+<p>a. Project Name</p>
+<p>b. Project Number</p>
+<p>c. Title</p>
+<p>Additional properties can be mapped/updated using the same steps mentioned earlier.<br />
+Please use the above as a sample only.</p>
+<p><span style="text-decoration: underline;">NOTE:</span> Starting with Office 2007, macro enabled Excel files are to be saved as .xlsm files</p>

@@ -1,0 +1,57 @@
+Once the SOLIDWORKS PDM Client software is installed the next step is to setup the Vault View which give the user(s) access to the vault through Windows Explorer. The easiest way to do this is by using the SOLIDWORKS PDM View Setup tool.  It is recommended that you perform this procedure with full Administrator privileges.
+SOLIDWORKS PDM View Setup Tool Step-by-step guide
+The View Setup is found by going to the
+Start Menu
+>
+SOLIDWORKS PDM
+>
+View Setup
+.
+SOLIDWORKS PDM View Setup
+Screen 1
+:  Welcome
+Launch the program then click “
+Next>
+“.
+Welcome dialog
+Screen 2:  Select Servers
+On the
+Select servers
+screen you will see any Archive Servers that your system can currently communicate with across the network.  If you are in a replicated environment make sure that you select the Archive Server that is local to your office (you may need to confirm this with your PDM Administrator to make sure which server is the one in your office).  Check the box beside the Archive Server and click “
+Next>
+“.
+Select Servers
+If you do not see your Archive Server, it’s possible that the broadcast which identifies the Archive Server and adds it to this list may be blocked.  That’s ok, you can still manually attach to the Archive server by clicking “
+Add…
+” and typing in the Computer Name directly.
+If you still cannot connect to the Archive Server it’s possible that either there is a network connection issue or a firewall is blocking the port (by default the Archive Server communicates across port 3030).
+Connected Server
+Screen 3
+:  Select Vaults
+On the
+Select vaults
+screen you will see a list of Vaults that are available on the Archive Server that you selected in the last screen.  Check the box beside the Vault or Vaults that you wish to attach to, then click “
+Next>
+“.
+If you receive a Status other than “Ok” when selecting the vault to attach, you may have existing vault view information in the registry.  This can be
+cleaned up through the Registry Editor
+.
+Select Vaults
+Screen 4
+:  Select Location
+On the
+Select location
+screen you can specify where you want the vault folder to be located and who should have access to it.  It is important that the location where the Vault View is placed is a folder where the Windows user will have full permissions.  The Vault View is built on top of a regular Windows folder, so it’s essential that the user have all the normal permissions and access.
+Under “Attach type” you can select who will have access to the Vault View.  Unless there is a specific need to have the vault folder be only accessible to a specific user (for instance if the workstation is shared between multiple users) it is best to use the default “For all users on this computer”.  Once you have selected the Location and the Type, click “
+Next>
+“.
+Select Location
+Screen 5
+:  Finish
+Once you’re ready click “
+Finish
+” to complete the process of adding the Vault View as you specified in the last screen.
+Finish Process
+SOLIDWORKS PDM view setup complete
+SOLIDWORKS PDM view setup Completion
+The vault view will be created in the folder that you specified in Screen 4.  As soon as the view is created you will see the contents of the vault (that you have permission to see), even though those files will not be local on your system until you access them.

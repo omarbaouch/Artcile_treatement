@@ -1,0 +1,22 @@
+In
+SOLIDWORKS PDM Professional
+you can add a
+Search Favorite
+, making it quicker and easier to access frequently used searches via Windows Explorer. Listed below are the steps to create a SOLIDWORKS PDM Professional Search Favorite:
+Favorite Searches
+To save a search simply
+expand the favorites drop-down
+and select
+Add To Favorites
+option as shown in the figure below:
+Add To Favorites
+Within the Add to Favorites dialog, give the favorite a name, select the users and groups who may see and edit the favorite.
+Add To Favorites Dialog
+Click ‘
+OK
+‘ and the search is saved.  Now your search is never more than two clicks away within Windows Explorer:
+Search Favorite
+Learn more about SOLIDWORKS PDM
+Attend our
+SOLIDWORKS PDM Administration training course
+to learn more about creating custom search cards and administering SOLIDWORKS PDM.

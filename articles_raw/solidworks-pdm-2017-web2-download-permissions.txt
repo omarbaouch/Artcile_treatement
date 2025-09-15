@@ -1,0 +1,32 @@
+SOLIDWORKS PDM 2017
+Web2 now lets an administrator control download permissions. This is done by modifying the configuration node of the Web.config file.  The Web.config file is located by default, in C:\inetpub\wwwroot\SOLIDWORKSPDM\Web2. The following string denies the user download permissions,
+<user
+denyDownload
+=
+“
+true
+“
+name
+=
+“
+No_Soup_For_You
+“></user>
+The Admin has download permissions enabled by default.
+<user
+denyDownload
+=”
+false
+“
+name
+=”
+admin
+“></user>
+These strings are entered under,
+<vaultSettings>
+, which is found near the end of the Web.config file.
+Dynamic Previews
+are now supported on Google® Chrome™, Mozilla® Firefox®, and Apple® Safari®, without the need to load any plug-ins.
+SOLIDWORKS PDM 2017 Web2
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

@@ -1,0 +1,19 @@
+The SOLIDWORKS PDM Standard Client, is the user portal for your vault. This portal provides users access to the files in your vault, with the ability to view or modify the files depending on user permissions. Users can interact with the vault through a Windows Explorer interface, or directly from within SOLIDWORKS software.
+Windows Explorer Client
+The Windows Explorer Client, shown in the image below, consists of three main sections:
+The Navigation Pane, allows users to navigate the folders and subfolders of the vault.
+The File Folder displays the file and sub-folders of the folder selected in the Navigation Pane. This area also contains pull-down menus that allow users to interact with the vault.
+The third area displays information about selected files within the vault.
+Windows Explorer Interface
+SOLIDWORKS PDM Client
+In SOLIDWORKS, users can interface with the vault, by clicking on the SOLIDWORKS PDM Standard icon, in the SOLIDWORKS Task Pane. The function available in the Explorer interface, are mirrored in Solidworks
+SOLIDWORKS Interface
+SOLIDWORKS PDM Standard, is added to SOLIDWORKS the same way as any other add-in.
+SOLIDWORKS Add-in
+SOLIDWORKS PDM Standard, can be configured for each user to control how messages are shown, generate Serial Numbers and modify View Settings.
+SOLIDWORKS PDM options
+While the SOLIDWORKS PDM Standard user interface is intuitive, training will ease the path to becoming  a proficient user.
+SOLIDWORKS PDM Training
+To learn more about SOLIDWORKS PDM Training you can attend one of our
+training courses
+either in-class or live online.

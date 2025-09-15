@@ -1,0 +1,14 @@
+When using the Copy Tree function in SolidWorks Enterprise PDM, the parent variable values are copied with the files. If a file being copied is at revision 3, then the copied part will also be at revision 3. If it is preferred that the new part starts at first revision, then some changes need to be made in Solidworks Enterprise PDM Administration.
+Right click on the
+User’s
+Node and select
+Settings
+and then click on the Copy Tree Tab
+Left click
+Add
+and enter the file type whose variables will be modified. The use of wildcards can be used to modify only certain file types. For example *.sld* would only modify Solidworks files. While the default *.* would modify all file types.
+Enter the data card variable that will be modified. To avoid typo’s you may want to copy the variable name directly from the
+Variables
+node.
+Enter the variable value that will be copied into data card, of the copied part. If you leave this field blank the existing value from the parent part will be cleared.
+Click OK to close the dialogue box and accept the changes.

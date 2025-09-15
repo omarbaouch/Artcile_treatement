@@ -1,0 +1,21 @@
+New in SOLIDWORKS PDM 2019 with the enhanced user comment permissions; we have the ability to make version comments mandatory for a check in at specific states or at specific transitions of a state change.  Previously; this permission was an ‘all or nothing approach’ via the administrative permissions for transitions and version comments which applied to all states and transitions.
+SOLIDWORKS PDM user comment permissions
+How to make state change comments mandatory for a transition
+Administration Tool > Workflows > [Workflow Name]
+Select the transition you would like to apply this requirement to
+Permissions > Select the User/Group
+Check ‘Must enter state change comments’
+Must enter state change comments
+This will result in a state change comment being required for the Management group when transitioning through ‘Change Approved’;
+Change Approved
+How to make a state change comments mandatory for a check-in
+Administration Tool > Workflows > [Workflow Name]
+Select the State you would like to apply this requirement to
+Permissions > Select the User/Group
+Check ‘Must enter state change comments’
+Must enter state change comments
+This will result in a version comments being required for the Engineering group when checking in to the ‘Approved’ State;
+Version comments are required
+How can SOLIDWORKS PDM User Comment Permissions help improve our vault?
+In my experience; making all comments important results in them all being unimportant…Previously, during a time when I was a vault administrator; I enabled the option that all state change comments were required.  I found this made the comments meaningless as it was just a requirement and users would put in the minimum information.  I worked around this using an overly complicated system of transition conditions, which allowed me to make comments required for specific transitions and it resulted in; a better file history with more meaningful comments.  With this new functionality, we have a simple solution, to apply importance to certain workflow actions which will result in a more complete and reliable document history.
+Another use of this functionality; when paired with the new revision table functionality added in SOLIDWORKS PDM 2018, we can ensure revision comments are added which can directly update the revision table within the drawing accordingly.

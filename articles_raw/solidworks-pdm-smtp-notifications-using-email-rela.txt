@@ -1,0 +1,43 @@
+SOLIDWORKS PDM Professional
+has the functionality to
+configure
+SOLIDWORKS PDM
+to send notifications through the default database message system or an SMTP mail server. Whereas
+SOLIDWORKS PDM Standard
+supports only the default database message system. But how do we set up the SMTP Server using an Email Proxy Application? That will be addressed in this article.
+Why would I need to use an Email Relay?
+There are multiple third-party applications available to use as an email proxy, this article will highlight only ONE of the many open-source applications that will act as the proxy to forward emails from one server to another.
+It is the responsibility of users to set up and troubleshoot the setup of the Mail Proxy Server.
+Step-by-Step: Setting up the Email Relay
+Download and Extract the
+Email Relay Application
+Run the “EmailRelay-Setup.exe” file
+Configure the Installation per the Screenshots below
+Installation Directories:
+emailrelay Installation Directories
+Installation Type:
+emailrelay Setup
+SMTP Server
+emailrelay SMTP Server Setup
+SMTP Client
+emailrelay SMTP Client Setup
+Filters
+emailrelay Filters
+Logging
+emailrelay Logging
+Connections
+emailrelay Connections Setup
+Server Startup
+emailrelay Server Startup
+Complete the Setup
+In the installation directory, you will find a couple of BAT files. You want to use “emailrelay-start-with-logfile.bat” to start the application.
+Configuring SOLIDWORKS PDM to use the Specified SMTP Server
+The settings for configuring the SMTP Mail Server within the Administration tool can be found on the SOLIDWORKS Help documentation:
+Configuring the Message System
+If the e-mail messages fail to be forwarded using the E-MailRelay system, check the spool directory for files with a .
+bad
+suffix. The reason for failure will be recorded within the envelope file.
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

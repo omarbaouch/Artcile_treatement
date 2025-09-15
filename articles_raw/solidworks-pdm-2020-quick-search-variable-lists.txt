@@ -1,0 +1,14 @@
+New in
+SOLIDWORKS PDM 2020
+File Explorer’s quick search can now be customized for searching for variables in SOLIDWORKS PDM. To do this, a custom quick search variable list must first be configured in the PDM Administration tool:
+Launch the Administration tool and log into your vault. Expand the Lists node
+Right click on Quick Search Variable Lists and select New List
+SOLIDWORKS PDM Variable List
+The new list can then be customized as needed – permissions can be assigned, and the variables to be used in the quick search can also be added here.
+To use this new search list, it is very simple. Simply log into the local vault view and find the Quick Search bar near the top right hand corner as shown:
+New search list
+This improvement to searching is strong as it changes the way searching is conducted in the vault. Using the quick search does not require a data card and hence it is easier to set up and maintain. Training users on effectively working with PDM can make the user more productive as less time is spent searching – leading to more productivity.
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

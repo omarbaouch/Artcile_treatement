@@ -1,0 +1,5 @@
+SolidWorks cannot access Template files & Design Library components directly from the Archive server. These files must be cached locally. To ensure that the proper version of the file is being used a “Get Latest” should be performed first.
+Get latest version of a document
+With SolidWorks EPDM 2014, the latest version can be automatically cached on log in. Please
+CLICK HERE
+for more information.

@@ -1,0 +1,10 @@
+I’m often asked what the
+SOLIDWORKS PDM
+Default Overwrites option in the Data Card Editor actually does.
+SOLIDWORKS PDM Default Overwrites Option
+The related Help topic snippet is a bit vague.
+Help snippet
+There is not a lot of additional information online and every single person, myself included, seems to have their own take, on what Default Overwrites actually does. In order to demystify the use of this option, I decided to ask the professionals at SOLIDWORKS PDM Support for their input. One of SOLIDWORKS top technical guns, provided me with an explanation that cuts through the uncertainty. I’d like to thank Kevin Fancera, of SOLIDWORKS PDM Support, for his explanation that I have included below:
+“In a card field tied to a variable, the option for default value will enter the specified default value in the card if there is no custom property in the file, that is mapped to the variable for that field. If one already exists, it will use the value from the custom property in the file.
+If default overwrites is enabled, it writes in the default value even if there is an existing custom property where a value is already present.
+If setting is enabled, copying a file will also regenerate the default value.”

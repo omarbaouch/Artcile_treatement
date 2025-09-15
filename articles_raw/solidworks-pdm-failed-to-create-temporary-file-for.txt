@@ -1,0 +1,8 @@
+If your SOLIDWORKS Simulation results folder is associated with PDM, you may receive the error message ‘
+Failed to create temporary file
+‘. This can happen when PDM attempts to create a preview of the Simulation results. This will typically occur when you try to create a new mesh, or show a result plot.
+To
+avoid this error, you can add Simulation .cwr file to the Exclusion list
+located from the Display pull-down, of the PDM local vault view.
+Exclude File Types in SOLIDWORKS PDM
+Alternatively, you can check-out the relevant .cwr file.

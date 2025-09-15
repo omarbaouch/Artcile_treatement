@@ -1,0 +1,33 @@
+SOLIDWORKS PDM Standard
+SOLIDWORKS PDM Standard is the new document management tool that is being released with SOLIDWORKS 2016, it works in a similar manner to SOLIDWORKS Enterprise PDM, which has been renamed to SOLIDWORKS PDM Professional for the 2016 release.
+SOLIDWORKS PDM Standard replaces SOLIDWORKS Workgroup PDM, which is set to be discontinued in the 2018 release.
+SOLIDWORKS PDM Standard is included with SOLIDWORKS 2016 Professional and Premium licenses.
+PDM Standard is the ideal data management application for single-site SOLIDWORKS businesses that need an easy-to-use solution that can be easily upgraded to SOLIDWORKS PDM Professional when their needs change. PDM Standard includes many of the high-powered features of SOLIDWORKS PDM Professional, such as
+electronic workflow
+,
+built-in notification system
+, and
+Windows Explorer integrated search
+.
+PDM Standard Client types
+There are three client types available:
+CAD Editor
+, allows interaction from within SOLIDWORKS. This includes viewing, adding and modifying files.
+Contributor
+, allows interaction through a Windows Explorer window. This includes viewing, adding and modifying files.
+Viewer
+is similar to the Contributor, but only viewing is allowed.
+Additional licenses of the Contributor and Viewer, can be purchased in 5-packs.
+SOLIDWORKS PDM Standard licenses
+Licenses will be handled by a
+SolidNetWork License (SNL) Manager
+. This is the same utility that SOLIDWORKS network licenses use. A CAD Editor license will be available for each seat of SOLIDWORKS 2016 Professional and Premium license owned. A serial number will be assigned to each eligible SOLIDWORKS 2016 license. The serial numbers can be accessed from the SOLIDWORKS Customer Portal, and if you can’t find them your SOLIDWORKS Reseller can help you.
+The PDM Standard serial numbers are set to be released in early November.
+To Learn More
+Download the
+SOLIDWORKS PDM Standard Data Sheet
+.
+Learn
+how to install SOLIDWORKS PDM Standard
+Review our
+article comparing SOLIDWORKS Standard PDM with PDM Professional

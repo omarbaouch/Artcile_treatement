@@ -1,0 +1,40 @@
+If your
+SOLIDWORKS Toolbox
+is stored within the vault, you have the option to
+manually upgrade it
+, or my preferred method is to use the Installation Manager as I’ve outlined here:
+How to upgrade SOLIDWORKS Toolbox using the Installation Manager
+In this scenario, the upgrade is complete on the server using the
+PDM Upgrade Checklist.
+Now, we’re finally ready to upgrade SOLIDWORKS and PDM Client to the new major version.
+NOTE
+: SOLIDWORKS Toolbox only needs to be upgraded once, so we’re going to include it in the first SOLIDWORKS workstation being upgraded, the rest will be able to update SOLIDWORKS and PDM at the same time and the toolbox will be skipped.
+Preparing the toolbox for upgrading
+Log in to the vault, preferably as ‘Admin’ but any account with full permissions will suffice
+Logged in as Admin
+Perform a ‘Get Latest’ on the toolbox folder to cache the most up to date version of all the files
+Get Latest on the Toolbox folder
+Check out the database file
+Default Location;
+[Vault Name]\[Toolbox Path]\lang\english\swbrowser.sldedb
+Check out the database file
+Completing the upgrade
+Start the installation manager, and complete the SOLIDWORKS upgrade with the appropriate settings.
+On the Summary Tab
+Toolbox/Hole Wizard Options > Select
+Change
+Change Toolbox/Hole Wizard Options
+Ensure
+Use an existing SOLIDWORKS Toolbox
+is selected and the path is correct
+Use an existing SOLIDWORKS Toolbox
+Complete the upgrade then check in the swbrowser.sldedb file
+Validation
+Ensure the swbrowser.sldedb updated by verifying the timestamp
+Verify the swbrowser.sldedb file was updated
+Check in swbrowser.sldedb to make the updated version available to other users
+Check in swbrowser.sldedb
+Additional Steps
+Prior to upgrading any additional SOLIDWORKS workstations to the new version,
+perform a Get Latest on the Toolbox folder
+, then the latest version will be cached and the installation manager will skip the Toolbox upgrade on those machines.

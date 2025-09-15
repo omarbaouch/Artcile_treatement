@@ -1,0 +1,20 @@
+SOLIDWORKS PDM Professional
+license are available in two basic formats, Processor Site Licenses (PSL), and individual Client Access Licenses (CAL).
+Client Access Licenses are available as a single CAD Editor, single Contributor license or in 5 packs of Viewer licenses.  The client installation must match the CAL license version that is available on the SolidNetWork License Manager.  So for instance if you accidentally set up a client to use a Contributor license but you only have CAD Editor CALs, the user will be presented with an error when trying to log into the vault because that license type is not available.  To resolve this, the
+license type on the client would need to be modified
+.
+SOLIDWORKS PDM Professional license
+If you purchased a SOLIDWORKS PDM Professional PSLs however, it can provide a license to any client installation of SOLIDWORKS PDM Professional, whether that installation is set to use CAD Editor, Contributor or Viewer license types.
+You can also use a combination of PSLs and individual CALs on a single SolidNetWork License Manager (either merged onto a single PDM Serial Number or
+using multiple serial numbers
+).
+When a combination of PSLs and individual CALs are being served by a single SolidNetWork License Manager, by default the client will try to acquire the individual license first, and then if that is not available, it will look for an available PSL.
+Processing a License Request
+So, for instance, if a client is set to use SOLIDWORKS PDM Professional CAD Editor and the user tries to log into the vault the following steps will occur:
+First, it will check if a CAD Editor license is available on the SolidNetWork License Manager.  If there is a SOLIDWORKS PDM Professional CAD Editor license available, it will take that license for the user.
+If no CAD Editor license is available, it will then look for a SOLIDWORKS PDM Professional Processor License (PSL) and take one if available.
+If neither license types are available it will report to the user that no licenses are available and they cannot log into the vault.
+Changing the License Order
+If you wish to change the default license order, this is very easy to do using the SOLIDWORKS SolidNetWork License Manager Client on the user’s computer.
+Simply go to the “License Order” tab and select the SOLIDWORKS PDM Professional Processor License and click “Move Up” to move the PSL above the SOLIDWORKS PDM Professional CAD Editor license so that it will take the PSL first.
+SOLIDWORKS SolidNetWork License Manager license order

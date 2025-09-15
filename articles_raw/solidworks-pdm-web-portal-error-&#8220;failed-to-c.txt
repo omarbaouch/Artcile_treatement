@@ -1,0 +1,22 @@
+Why do I receive error “Failed to check proxy settings” when logging in to SOLIDWORKS PDM Web Portal?
+When logging in to a SOLIDWORKS PDM vault web portal, an error message displays:
+“Failed to check proxy settings.
+Description:
+The Archive Server could not open the Windows Registry.”
+To correct this error message, you can add the site to the Trusted sites in Internet Explorer (IE):
+in Internet Explorer go to
+Tools
+>
+Internet Options
+>
+Security
+Tab > select
+Trusted sites
+> click on the
+Sites
+button > enter the PDM Vault Web Portal Link and select
+Add
+to include the link in the list of trusted websites.
+Internet Explorer Options
+Make sure the option: “Require server verification (https:) for all sites in this zone” is not checked.
+NOTE: This issue can also be caused by having the “IE Enhanced Security Configuration” enabled on the Windows Server operating systems.

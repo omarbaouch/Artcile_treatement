@@ -1,0 +1,38 @@
+Companies operating in regulated industries may be required to comply with standards like ISO 9001, ITAR, or FDA (21 CFR Part 11). These regulations ensure product quality and safety, as well as data integrity and security. Complying with these regulatory agencies/standards isn’t just about avoiding legal risk, it is about demonstrating that your organization is committed to traceability, safety, and quality. Achieving and maintaining regulatory certifications can be a long and complex process.
+SOLIDWORKS PDM
+can help your organization reach various certifications through the secure organization, tracking, and protection of your product data.
+In this article, we’ll take a look at some common regulatory requirements and how SOLIDWORKS PDM can help you meet them.
+“Audit Trail” of Changes Made to Files (Timestamps, User info, etc)
+SOLIDWORKS PDM logs every action taken on a file, including who made the changes and when. This can easily be seen by selecting any file and opening its History, as shown in the image below. Additionally, because SOLIDWORKS PDM uses SQL, this information could be pulled from the SQL database using a query to form a larger report of when files were changed and by whom.
+File History including Event, Version, User, Date, and Comment
+User/Group Permissions for Accessing, Modifying, and Approving Files
+Access control permissions in PDM are very granular and customizable. Different actions such as “can view file contents”, “can check out file”, or “can delete file”, can all be dynamically allowed or prohibited depending on who is doing the action, where, and when. Access to a file depends on the file’s parent folder, what workflow state the file is currently in, and the group or user permissions of the person trying to access it. There are also permissions that can be set for users to execute workflow state changes, known as transitions, such as a transition for moving a file to an “Approved” state.
+Consider the two simple examples below:
+There is a Manufacturing user group in PDM. When they log in to the vault, the only folder they are permitted to see is the top-level folder called “PDFs”, while the other folders are simply hidden to them.
+There is a user group called Engineering, with more permission such as the action to “check out file” for editing in the top-level folder called “Designs”, but only if the file is in the “Under Editing” state in the workflow. If the file is in the “Approved” state of the workflow, then the action is not permitted.
+Put all of this together, and your organization can build a complex web of permissions that will prevent unauthorized changes and ensure only the right people can see the right files at the right stage in the workflow.
+Electronic Approval/Review Processes and Digital Signatures
+Similar to the point above about the “Audit Trail” of all changes made to a file, PDM records every time a file is transitioned from one Workflow state to another. For example, when a file’s state is changed from “Waiting for Approval” to “Released”, the person executing the transition must be logged into a user account with the proper permissions to perform the action.
+A sample engineering workflow in SOLIDWORKS PDM
+Electronic Signatures can be enabled for added security, forcing the user to enter their password to complete the transition action. This creates an uneditable, traceable record of who gave their digital stamp of approval to documents being released.
+Flagging Controlled Documents
+Documents can be marked as “controlled” in a number of ways. Depending on the organization’s needs, a few ideas include:
+Set up a metadata variable where the level of access control can be selected from a drop-down list, or a simple check/uncheck box
+Display this field in data cards along with a visual icon (such as color-coded flag icons)
+Display as a column in File Explorer so it is easily seen when navigating through folders
+Utilize file categories (PDM Professional only)
+Move files into controlled state(s) in the workflow
+Employ an organized folder structure where certain folders are more controlled
+Tracking Obsolete Files
+Similar to tracking documents that are generally “controlled”, there are various methods for classifying a file as Obsolete. One example would be to create an Obsolete state in the workflow, where the file permissions are set to read-only or hidden. From there, the workflow transition condition “Child Reference State” could be used, which could prevent any parent files (such as drawings or assemblies) from reaching the Approved/Released state if any of the children’s files (sub-assemblies, parts) were in the Obsolete state. Similar workflow transition conditions could be set based on file variables, if it is preferred to flag Obsolete documents in that manner. Additionally, using the PDM Search tools, a list of all Obsolete files can be easily retrieved for auditing purposes.
+Approved and Obsolete files in SOLIDWORKS PDM
+Retaining Old Versions of Files
+Retaining and managing old versions of files is simple and user-friendly in SOLIDWORKS PDM. Any time a file is checked into the vault, a new version (copy) of the file is created and added to the central archive. With PDM, there is no manual naming/storing of files like “Bracket_v2_new_FINAL_Rev1.sldprt”. Instead, simply check the file in to create a new version, or transition the file through the approval process to bump the revision. All of the versions and revisions of a file are easily accessible to an end user through the File History, and the entire archive can be accessed by administrators.
+Finding Documents by Searching
+Because every file stored in SOLIDWORKS has a rich set of metadata associated with it, finding the right file is easy. In SOLIDWORKS PDM, users can search for files based on any combination of the associated data fields, such as part number, description, file extension, “Checked out by”, current workflow state, project folder, etc. For example, a search could be run using multiple pieces of criteria, such as 1. SOLIDWORKS File Types, 2. Checked out by Mike, 3.  Belonging to Project 0006. Combining those search criteria leads to the results shown in the screenshot below.
+Search results based on a complex query
+Ensuring that System Administrators are Properly Trained
+Some regulatory agencies require data management administrators to be formally trained and/or certified. TriMech offers the official
+SOLIDWORKS PDM Administrator courses
+, and our team can provide information about the certification process through Dassault Systèmes. Having a trained PDM Administrator ensures that company SOPs are being enforced through the proper configuration of your PDM system.
+To learn more about SOLIDWORKS PDM and Regulatory Compliance, watch our on-demand webinar here.

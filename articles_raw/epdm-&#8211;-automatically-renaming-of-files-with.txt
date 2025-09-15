@@ -1,0 +1,20 @@
+SolidWorks files can be automatically named/renamed when the file is saved. This option can only be set when the ‘Admin’ user is logged in and only needs to be done once on one computer.
+To set this option first create a
+Serial Number in SolidWorks Enterprise Administration,
+by right clicking the
+Serial Number
+node.
+The
+Format
+of the serial number can set  from the pull-down and by manually adding static text. The ‘
+Next counter Value
+‘ can also be set
+Once the Serial Number has been created, inside of Solidworks left click on the Enterprise PDM menu item and choose
+Options
+.
+Choose the
+Vault
+and
+Serial Number
+that will be used. If the Serial Number option is grayed, check to see if your logged in as ‘Admin’
+New files and/or existing files  can automatically be renamed. Parts, Assemblies and Drawings can be renamed and different Serial Numbers can be assigned to each document type.

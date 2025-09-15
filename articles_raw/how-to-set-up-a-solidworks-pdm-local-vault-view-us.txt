@@ -1,0 +1,96 @@
+A SOLIDWORKS PDM user needs to have a local vault view to access the
+SOLIDWORKS PDM
+vault. Local vault view allows the user access to the files in the vault, and the ability to check them in or out, among other actions.
+To create a .cvs file for a SOLIDWORKS PDM local vault view, follow these steps:
+Run the View Setup wizard with the “/a” trigger on a machine without a local vault view. If one exists, remove it first.
+Right-click the Windows Start icon and select “Run.”
+In the Run dialog, enter the following command (adjust the path if not default):
+“C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\ViewSetup.exe” /a
+Run command
+This launches the wizard to create the .cvs file follow the steps in the wizard.
+Wizard to create the .cvs file
+On the Welcome screen, select the server where the vault is hosted.
+Server where the vault is hosted
+Select the desired vault.
+Select desired vault
+Choose the location for the local vault view.
+Location for the local vault view
+Click “Finish.”
+Review and finish
+When prompted, specify the location to save the .cvs file.
+The .cvs file will be saved and is ready for use.
+Process completed
+How to use .CVS file
+The .cvs file is now ready for execution. However, it can be opened and edited in Notepad to adjust details, such as changing the vault or modifying the local vault view location.
+The .cvs file
+To edit the file, right-click the .cvs file and select
+Open with > Notepad
+. This allows you to customize the configuration as needed for different environments.
+Location
+: Specify the folder where the vault view should be created, typically
+C:\
+.
+ViewType
+: Set to either
+SharedView
+or
+PrivateView
+.
+[FileVault]
+: Replace with the exact file vault name (case-sensitive), e.g.,
+[W11 2024 SP1]
+.
+VaultID
+: Enter the vault ID, found in the PDM Administration tool by right clicking the vault and selecting Properties (omit
+{}
+brackets).
+DbName
+: Enter the case-sensitive database name.
+DbServer
+: Provide the SQL server name.
+ServerLoc
+: Input the archive server name.
+ServerPort
+: Specify the archive server port (default:
+3030
+)
+Creating Local Vault View using .CVS file.
+Copy the .cvs file to a preferred location on the client machine.
+Double-click the .cvs file to launch the View Setup wizard.
+The wizard will display “
+Action: Create local view
+” and “
+Status: Ready
+.”
+“Action: Create local view” and “Status: Ready.”
+Click
+Finish
+to create the local vault view. You will be prompted to log into PDM to complete the setup.
+Once complete, the wizard will show “
+Status: Completed
+,” and the local vault view will be ready for use.
+“Status: Completed”
+Silently creating Local Vault View using .CVS file
+You can execute the .cvs file and run the View Setup wizard in silent mode by specifying the file path and using the
+/q
+trigger as shown below:
+Run the command with the path to
+ViewSetup.exe
+, followed by the .cvs file path and
+/q
+trigger.
+The wizard operates silently, without displaying any screens or prompts.
+After the local vault view is successfully created, the user will be prompted to log in with their PDM credentials.
+“C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\ViewSetup.exe” “C:\W11 2024 SP1.cvs” /q
+Run CVS
+Benefits of Using a .cvs File for
+PDM Vault
+View Configuration
+Automating the setup of local vault views using a .cvs file eliminates the need for manual configuration on each machine, saving time, especially in large scale deployments.
+Ensures uniform configuration across multiple workstations by applying the same settings, reducing the risk of errors caused by inconsistent setup.
+The .cvs file can be easily edited to change parameters such as vault names or locations, making it adaptable for different projects or environments.
+With the
+/q
+trigger, the setup process can run in silent mode, allowing IT administrators to deploy vault views without user interaction.
+This method is ideal for organizations with many users or departments, as it simplifies the vault view setup for multiple users or machines simultaneously.
+The .cvs file can be reused or modified for future vault configurations, making it a versatile tool for managing multiple PDM setups.

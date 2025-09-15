@@ -1,0 +1,5 @@
+New in
+SOLIDWORKS PDM 2020
+, for transitions that include dynamic notifications, you receive a warning if you have not selected a user or group to receive a notification.
+Previously in SOLIDWORKS PDM, if you submit a file through a transition with dynamic notification and if a user/group was not selected to receive the notification, there was no warning that notification will not be sent out. In SOLIDWORKS PDM 2020 a warning is displayed if you move a file from one state to another using transition with dynamic notifications.
+Transition Notification Warning

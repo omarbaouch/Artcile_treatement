@@ -1,0 +1,48 @@
+In
+SOLIDWORKS PDM 2020
+we have the ability to define child reference state conditions, to prevent parent files from being transitioned before all the requirements are met.  In the example we’re going to use in this article, we’ve got the parent assembly;
+Light.SLDASM
+and we want to ensure that the assembly doesn’t get transitioned through
+Submit for Approval
+ahead of all it’s child reference parts and sub-assemblies being approved…this way the assembly and drawing can be rebuilt and updated ahead of being approved.
+How to define Child Reference State Conditions
+In this example, let’s use the Default vault setup.  The corresponding CAD workflow is
+Default Workflow
+, and we want all child files to be in the
+Approved
+state ahead of the parent being able to transition through
+Submit for Approval
+.
+Administration Tool > Workflows > Default Workflow
+Default Workflow
+We would like to prevent the parent assembly from transitioning through
+Submit for Approval
+so we’ll modify the properties of the transition and add a condition
+Default Wokflow > Submit for Approval
+Conditions
+Submit for Approval
+Conditions >
+<Click here to add a condition>
+Variable =
+Child Reference Current State
+Comparison =
+Text Equal To
+Value =
+Default Workflow.Approved
+Default Workflow.Approved
+Under Configuration / Path we could use wildcards and specify a file name or pattern etc, for example “%.sldprt” to limit this condition to just part files, but for this example we’ll leave it blank to apply to
+all
+child reference files.
+Hit
+OK
+, then
+Save
+and close the workflow
+Success!  The result is; we cannot transition the Light assembly until all it’s corresponding child references are in the
+Approved
+state.
+Cannot transition the Light assembly until all it’s corresponding child references are in the Approved state
+This just blew my mind!  Where can I learn more about customizing the workflow to increase efficiency?
+Thanks for asking, here at Javelin we offer an
+Administering SOLIDWORKS PDM Course
+where Workflow creation and features like creating an automatic revision numbering system and much more are covered in detail, helping you to customize the vault to your company’s specific needs, and getting the vault to do the work so you don’t have to.

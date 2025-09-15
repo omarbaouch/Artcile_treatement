@@ -1,0 +1,29 @@
+New in SOLIDWORKS PDM 2019 we have the ability to; send notifications on a conditional basis, depending on data card variables.
+SOLIDWORKS PDM Conditional Notifications
+How can this help improve our vault?
+Previously, notifications were attached to an entire transition…therefore; every file that transitioned through it generated a notification to a group or user, which often resulted in needless notifications being sent for parts that didn’t necessarily need it.  With this new functionality; we can limit notifications so that they are restricted to files that require it.
+SOLIDWORKS PDM Conditional Notifications Example
+We can use this new feature to build a notification that ONLY generates a notification for a part or assembly that is deemed high priority as it is sent for review.  The recipients will be limited to the management group so that they will only be notified when something high priority is waiting for approval.  The goal being; time-sensitive parts will be reviewed quicker, speeding up the overall process to complete a change on a high priority project.
+How to create a Conditional Notification for High Priority Parts
+For this example; I already have a data card variable, that determines the priority of the part;
+SOLIDWORKS PDM Card Editor
+Administration Tool > Workflows > [Workflow Name]
+[Transition Name] > Properties
+Submit Change for Approval Properties
+Notifications > Add Conditional Notification
+Add Conditional Notification
+Recipients
+Add Users/Groups
+Management
+Add Users/Groups – Management
+Notification Conditions
+Variable =
+Priority
+Comparison =
+Text Equal To
+Value =
+High
+Notification Conditions
+Save and close the workflow
+This should result in any ‘High Priority’ part generating a notification to the management group;
+‘High Priority’ parts generate a notification to the management group

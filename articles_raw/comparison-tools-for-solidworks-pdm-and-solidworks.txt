@@ -1,0 +1,83 @@
+Managing design data efficiently is critical to our success in today’s fast-paced engineering environment. Thankfully,
+SOLIDWORKS PDM
+and Manage are powerful tools that help engineering teams securely store, organize, and control access to design data and files.
+But what if we want to use comparison tools to look at the differences between files or bills of materials?
+SOLIDWORKS PDM Comparison Tools
+In SOLIDWORKS PDM, we have a bill of material compare tool as well as some tools inside of SOLIDWORKS to compare parts, assemblies, and drawings using our PDM revisions or versions. Additionally, there are a couple of ways to open drawings via the history tab to review differences in eDrawings.
+Comparing Bills of Materials with SOLIDWORKS PDM
+With the built-in comparison tools for bills of materials, you can quickly compare different versions or revisions of the same file. The differences are graphically shown as components are added, removed, or modified.
+To compare bills of materials in SOLIDWORKS PDM, follow these steps:
+On the Bill of Materials tab, click the Compare button.
+SOLIDWORKS PDM BOM Compare command
+Select the version you’d like to compare to.
+Selecting a version to compare
+Review the differences in the bills of materials.
+Differences shown between BOMs
+We will now see the differences between the current version and the previous one. As mentioned previously, the differences are color-coded to easily identify changes: green for additions, red for removals, and orange for modifications. In this case, we can see a modification from a quantity of two to one for the battery.
+The main limitation with this is that we can only compare the same file. We can’t compare it to a BOM from another assembly, but this is a great tool for taking a quick look at what’s changed when you are reviewing an assembly or drawing change.
+Comparing Part, Assembly, and Drawing Changes with SOLIDWORKS
+If you are tasked to review the changes between files, it can sometimes be hard to tell exactly what’s changed without being able to see the differences visually. When logged into SOLIDWORKS PDM, the Compare tool inside of SOLIDWORKS allows us to use the different versions and revisions for these comparisons.
+Comparing SOLIDWORKS Parts
+You can access the SOLIDWORKS Compare command by using the Tools dropdown, going to Compare, and then finally Documents. This tool allows us to compare file properties and part property changes, feature modifications, and volumes that have been added or removed.
+Accessing the SOLIDWORKS Compare command
+We can then select the part we have open, plus compare the Document Properties within the SOLIDWORKS PDM vault and select the versions we want to compare. We can include the part’s features and geometry to facilitate a comparison of those as well.
+Setting up a part comparison
+SOLIDWORKS will now open both versions in tiled windows. In this window, we can rotate and move the part and see the differences, plus the updated file and part properties on the right. The Documents tab will show information like file size, last saved date, and other file-level properties to compare. The Compare Features tab will show the two versions alongside what has been added or removed. Clicking on an actual feature from the list will highlight what has changed on the model in the graphics area.
+Comparing features between revisions of a part
+Switching over to the Compare Geometry tab to visually see the material to remove, the material to add, and the common volume. By clicking the eyeball, we can turn these on and off and only see the options that we’d like. There is also the face comparison button below that can be clicked to view these differences.
+Comparing geometry in SOLIDWORKS
+Comparing SOLIDWORKS Assemblies
+You can access the SOLIDWORKS Compare command by using the Tools dropdown, going to Compare, and then finally Documents. This tool allows us to compare file properties, assembly property changes, and volumes that have been added or removed. The option to compare geometry does so for every single component, meaning it could take a long time to compare large assemblies.
+After running the comparison, we’ll see the tiled windows with the two versions that we can move, zoom in on, and review the differences visually between the two:
+Comparing assemblies in SOLIDWORKS
+Comparing SOLIDWORKS Drawings
+You can access the SOLIDWORKS Compare command by using the Tools dropdown, going to Compare, and then finally Documents. The drawing comparison tool only compares the document properties and not individual dimensions or annotations between drawings. However, there is an additional tool called
+DrawCompare
+that can dive deeper into drawing differences, but they need to be completely separate files for that to work.
+Reviewing Historical Changes in SOLIDWORKS PDM
+Within SOLIDWORKS PDM, we can use the viewer to look at the current version and then change to the previous version to see the differences. This doesn’t give us a side-by-side comparison, so it’ll be a bit difficult to tell the differences. One way to be able to switch back and forth between the two is to open both versions in eDrawings and manually review the changes.
+We can do this by first right-clicking on a file and going to the history, and then selecting one version or revision and clicking the “View” option. This will open up the eDrawings viewer application with that version. Then, you can open the second version and it will launch in a secondary window in eDrawings.
+Using the SOLIDWORKS PDM history to view a file in eDrawings
+SOLIDWORKS PDM Compare Tool
+Inside the History window, there is a Compare option that’s available if you select two file versions; however, no default comparison tool is included with SOLIDWORKS PDM.  For this to work, a comparison application needs to be added inside the SOLIDWORKS PDM Administration Tool.
+SOLIDWORKS PDM History comparison tool
+Summary of SOLIDWORKS PDM Comparison Tools
+Comparing SOLIDWORKS PDM Bills of Materials
+Easily compare BOMS from different versions or revisions
+Changes are highlighted for added, removed, or modified
+A limitation is that you can’t compare different files, only file versions
+Comparing SOLIDWORKS Parts, Assemblies, and Drawings
+Integrated in SOLIDWORKS and connected to your vault
+Visual file comparison
+Limitations for drawings of what can be compared
+Comparing SOLIDWORKS Drawings Manually
+View the different versions inside of SOLIDWORKS PDM individually
+Open two versions in eDrawings and switch back and forth between the two
+SOLIDWORKS Manage BOM Comparison Tools
+With
+SOLIDWORKS Manage
+, there are powerful BOM comparison tools that allow us additional options for comparisons. We can view differences between revisions and BOM variations (such as two different geographic location BOMS or an EBOM to an MBOM). We are also able to compare a BOM to a different assembly or between two completely different assemblies.
+Comparing Revisions and Variants
+While viewing a BOM in SOLIDWORKS Manage, we can access the comparison tools by navigating to the Tools command and selecting Compare. For the BOM below, we are at Revision B, and we have US and EU BOM variants.
+Accessing the SOLIDWORKS Manage BOM comparison tools
+In the compare tool, you’re able to select different revisions of files and the different variants of the bill of materials. In our example, we will compare Revision B of the Miter Saw between the US and EU variants.
+Selecting BOMs to compare
+After selecting Compare at the bottom, we’ll now see the differences: green for additions, red for removals, and orange for modifications. We can see the different packaging that is called up based on the location it’s being shipped to. If we need to use the comparison external to SOLIDWORKS Manage, it can be exported to Microsoft Excel for further investigation. The Excel file will have individual tabs for each variant alongside a combined comparison sheet. This Excel table could be saved in SOLIDWORKS PDM and or attached to an ECR or ECN to help clarify what has changed for downstream recipients.
+Results of a BOM variant comparison
+Comparing Different Assemblies
+One great feature of SOLIDWORKS Manage BOM comparison is that we are able to compare much more than a single assembly. We can also compare different assemblies with each other. This could be useful if you have designs that are similar to one another and you want to compare the differences to determine updates or replacement parts.
+We’ll review a BOM for an assembly in the connected PDM vault but there are options to compare almost any object in the Manage database.
+Changing the selected object for comparison
+After selecting the other object to compare to, we are once again presented with a tabular, graphical representation of the differences. You can quickly see where assemblies are similar and different to help your team make more informed decisions.
+SOLIDWORKS Manage file comparison results
+Summary of SOLIDWORKS Manage Comparison Tools
+Comparing BOM Versions and Variants
+Review different revisions as well as different BOM variations, such as based on location
+Changes are highlighted for added, removed, or modified
+Can save this to Excel with comparison and colors included
+Comparing BOMs from Different Models
+You can also compare any different BOM types or assembly BOMs to each other
+Changes are highlighted for added, removed, or modified
+Can save this to Excel with comparison and colors included
+Comparing files with SOLIDWORKS PDM and Manage can help you and your team make more informed decisions when requesting changes to existing products. Having the information readily available without having to dig could mean the difference between a manufacturing mistake and a greatly improved product.
+To learn how to get more out of your data management systems, read about our services here.

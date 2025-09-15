@@ -1,0 +1,18 @@
+Beginning with
+SOLIDWORKS PDM 2018
+, users no longer have to go to the Search Tool to export search results from SOLIDWORKS PDM.
+The “
+Open Search Results
+” and “
+Export Results
+” commands are available directly in the integrated search tool within the PDM Vault View.
+The “
+Open Search Results
+” command will immediately launch the results of the search in a Microsoft Excel document.
+Open Search Results
+The “
+Export Results
+” command will launch a dialog to save the SOLIDWORKS PDM Export Search Results to a .csv file.
+Export Results
+The SOLIDWORKS PDM Export Search Results can be imported to a spreadsheet at a later time:
+Exported Search Results Imported into Excel

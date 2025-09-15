@@ -1,0 +1,52 @@
+<p><span class="keyword"><a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/">SOLIDWORKS PDM Professional</a> has the functionality to</span> configure <span class="keyword">SOLIDWORKS PDM</span> to send notifications through the default database message system or an SMTP mail server. Whereas <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-standard/"><span class="keyword">SOLIDWORKS PDM Standard</span></a> supports only the default database message system. But how do we set up the SMTP Server using an Email Proxy Application? That will be addressed in this article.</p>
+<h2>Why would I need to use an Email Relay?</h2>
+<p>There are multiple third-party applications available to use as an email proxy, this article will highlight only ONE of the many open-source applications that will act as the proxy to forward emails from one server to another.</p>
+<p>It is the responsibility of users to set up and troubleshoot the setup of the Mail Proxy Server.</p>
+<h3>Step-by-Step: Setting up the Email Relay</h3>
+<ol>
+<li>Download and Extract the <a href="http://emailrelay.sourceforge.net/" rel="nofollow noopener" target="_blank">Email Relay Application</a></li>
+<li>Run the &#8220;EmailRelay-Setup.exe&#8221; file</li>
+<li>Configure the Installation per the Screenshots below</li>
+</ol>
+<ul>
+<li>Installation Directories:</li>
+</ul>
+<div id="attachment_49385" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-49385" class="wp-image-49385 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Directories.png" alt="emailrelay Installation Directories" width="512" height="423" title=""><p id="caption-attachment-49385" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49385 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Directories.png" alt="emailrelay Installation Directories" width="512" height="423" title=""></noscript> emailrelay Installation Directories</p></div>
+<ul>
+<li>Installation Type:</li>
+</ul>
+<div id="attachment_49387" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-49387" class="wp-image-49387 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Installation-Type.png" alt="emailrelay Setup" width="512" height="423" title=""><p id="caption-attachment-49387" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49387 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Installation-Type.png" alt="emailrelay Setup" width="512" height="423" title=""></noscript> emailrelay Setup</p></div>
+<ul>
+<li>SMTP Server</li>
+</ul>
+<div id="attachment_49402" style="width: 525px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-49402" class="wp-image-49402 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-SMTP-Server-1.png" alt="emailrelay SMTP Server Setup" width="515" height="441" title=""><p id="caption-attachment-49402" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49402 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-SMTP-Server-1.png" alt="emailrelay SMTP Server Setup" width="515" height="441" title=""></noscript> emailrelay SMTP Server Setup</p></div>
+<ul>
+<li>SMTP Client</li>
+</ul>
+<div id="attachment_62869" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-62869" class="wp-image-62869 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client-600x488.png" alt="" width="600" height="488" title=""><p id="caption-attachment-62869" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-62869 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client-600x488.png" alt="" width="600" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client-600x488.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client.png 642w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> emailrelay SMTP Client Setup</p></div>
+<p>&nbsp;</p>
+<ul>
+<li>Filters</li>
+</ul>
+<div id="attachment_62870" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-62870" class="wp-image-62870 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Filters-600x488.png" alt="" width="600" height="488" title=""><p id="caption-attachment-62870" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-62870 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Filters-600x488.png" alt="" width="600" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Filters-600x488.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Filters.png 642w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> emailrelay Filters</p></div>
+<ul>
+<li>Logging</li>
+</ul>
+<div id="attachment_62871" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-62871" class="wp-image-62871 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Logging-600x488.png" alt="" width="600" height="488" title=""><p id="caption-attachment-62871" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-62871 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Logging-600x488.png" alt="" width="600" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Logging-600x488.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Logging.png 642w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> emailrelay Logging</p></div>
+<ul>
+<li>Connections</li>
+</ul>
+<div id="attachment_62872" style="width: 610px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-62872" class="wp-image-62872 size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Connections-600x488.png" alt="" width="600" height="488" title=""><p id="caption-attachment-62872" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-62872 size-medium lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Connections-600x488.png" alt="" width="600" height="488" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Connections-600x488.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/SMTP_Client_Connections.png 642w" sizes="(max-width: 600px) 100vw, 600px" /></noscript> emailrelay Connections Setup</p></div>
+<ul>
+<li>Server Startup</li>
+</ul>
+<div id="attachment_49389" style="width: 522px" class="wp-caption aligncenter"><img decoding="async" aria-describedby="caption-attachment-49389" class="wp-image-49389 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Server-Startup.png" alt="emailrelay Server Startup" width="512" height="440" title=""><p id="caption-attachment-49389" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-49389 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2020/11/Email-Relay-Server-Startup.png" alt="emailrelay Server Startup" width="512" height="440" title=""></noscript> emailrelay Server Startup</p></div>
+<ul>
+<li>Complete the Setup</li>
+<li>In the installation directory, you will find a couple of BAT files. You want to use &#8220;emailrelay-start-with-logfile.bat&#8221; to start the application.</li>
+</ul>
+<h3>Configuring SOLIDWORKS PDM to use the Specified SMTP Server</h3>
+<p>The settings for configuring the SMTP Mail Server within the Administration tool can be found on the SOLIDWORKS Help documentation: <a href="https://help.solidworks.com/2024/English/EnterprisePDM/Admin/t_message_system_selecting.htm?verRedirect=1" rel="nofollow noopener" target="_blank">Configuring the Message System</a></p>
+<p>If the e-mail messages fail to be forwarded using the E-MailRelay system, check the spool directory for files with a .<em>bad </em>suffix. The reason for failure will be recorded within the envelope file.</p>
+<h3>SOLIDWORKS PDM Training</h3>
+<p>Javelin offers various <a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">SOLIDWORKS PDM training courses</a> which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.</p>

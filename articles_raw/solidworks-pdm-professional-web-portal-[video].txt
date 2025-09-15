@@ -1,0 +1,4 @@
+The latest
+SOLIDWORKS PDM Professional
+Web Portal has a number of advantages over the previous web portal. The fact that it is programmed from scratch with updated language to support any web browser is by far the most notable. This has a direct positive impact on the reliability and accessibility. You can use the web portal to participate in approval workflows and can even upload new content which can be especially handy with contract engineering relationships.
+This short video highlights some of the key capabilities that customers are enjoying as the technology is getting rolled out.

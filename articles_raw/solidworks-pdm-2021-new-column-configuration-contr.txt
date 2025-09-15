@@ -1,0 +1,33 @@
+Included with
+SOLIDWORKS PDM 2021
+, are controls within the
+columns node
+, giving more control to customize the view so the content you care about is where it’s needed.
+Columns Tab
+Move to Top/Bottom
+Allows users to quickly sort the variables, moving them to the required location.
+Sort Column
+Allows users to select the variable to be used for the default sorting and assort it in ascending or descending order
+Configuring Column Sets – Sort Column
+Reset Button
+Clears any customizations and returns everything to default
+Configuring Column Sets – Reset
+Look for variable in given list of configurations
+Available within the
+File List
+Type.  Allows users to define a list of configuration names to look for the variable.
+Configuring Column Sets – Variable in list
+Permissions Tab
+View\Preferred
+These can be assigned at the group or the user level.
+View
+allows the user/group to access the column set,
+Preferred
+assigns the default if the user/group has multiple columns sets available.
+Configuring Column Sets – Permissions Tab
+This can also be set via the User or Group Properties;
+Configuring Column Sets – Via Groups
+Tell me more…
+Custom column creation, along with many more customization tools are covered in detail within our
+Administering SOLIDWORKS PDM course
+.  Helping people to configure the vault exactly to their needs, creating a more efficient working space for users.

@@ -1,0 +1,1 @@
+The SOLIDWORKS PDM Professional Administration tool contains a wizard that can simplify collect support information to aid in troubleshooting. Here’s a video that demonstrates how this tool is used.

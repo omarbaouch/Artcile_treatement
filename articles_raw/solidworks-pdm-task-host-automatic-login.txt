@@ -1,0 +1,16 @@
+When users launch Tasks in SOLIDWORKS PDM, instead of having the Task run on their local computer, it can be sent to a dedicated SOLIDWORKS PDM Task Host.
+For the Task Host to be able to process tasks it must be logged into the Vault.  If the dedicated Task Host system is an unattended system, perhaps located in a server room, a reboot could cause an interruption in Tasks being processed.
+Setup the SOLIDWORKS PDM Task Host
+To set up the SOLIDWORKS PDM Task Host to log in automatically after a Windows reboot do the following:
+Step 1:
+Launch the PDM Administration tool and expand Local Settings and double click “Settings”:
+SOLIDWORKS PDM Settings
+Step 2:
+On the “Automatic Login” page, select the vault name in the drop list and Check “Use automatic login for this vault”.  Select “Login as the following user” and input the login credentials for the User account that you will use for running the task.
+Local Settings
+Step 3:
+Create a shortcut for the vault view in the Windows Start Up folder:
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+WARNING
+:  Using Automatic Login with the “admin” account will allow full access to all files in the vault on the Task Host, this may be a concern if the system is not located in a secure place, such as a locked server room.
+Shortcut created

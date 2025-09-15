@@ -1,0 +1,70 @@
+SOLIDWORKS PDM Professional
+allows the use of an input formula for an Edit-box control on a data card. This means that the Edit-box can display values that users enter/select for other controls on the card. Multiple variables, static text, and various functions can be used in the input formula.
+Two common uses come to mind for utilizing Input Formulas in SOLIDWORKS PDM cards.
+Populating a variable by building up strings of static text and other variables.
+Populating a variable with an alias value of another variable.
+Only an Edit-box type card control has a property for an Input Formula. However, the variable values feeding this Input Formula can be returned from an Edit-box, Radio Button, Combobox Dropdown, Combobox Droplist, Combobox Simple, List, Checkbox, or Date Field. We’ll look at a few examples using Combox Droplists to select the required variable values to be used in our formulas.
+Using an Input Formula to Concatenate Variables and Static Text
+For this example, we have a template card with the variables City, Region, and Code connected to Combobox Droplist controls. In addition, there is an Edit-box control connected to the variable, Project Name. The purpose of this template card is to generate a Project Name based on the values a user selects for City, Region, and Code. A SOLIDWORKS PDM folder template can then use this card to create a new folder in the vault with the Project Name.
+List controls are not required but are often used in conjunction with Input Formulas. For more information about list controls check out
+SOLIDWORKS PDM Combobox Styles Reference
+With the Edit-box control selected in the Card Editor, the Properties of that control appear in the pane on the right. The Input Formula property is at the bottom of this pane.
+Input Formula property for an Edit-box card control
+We’ll start by entering the static text, “Prj”, short for Project, and a dash. Then add the variables for City, Region, and Code. If desired, spaces or other static text could be used between the variables, but we’ll keep them tight together. The flyout menu makes it easy to choose from existing variables.
+Adding strings of variables to the Input Formula
+When executing the PDM folder template, if a user were to select “London”, “S”, “340” for City, Region, and Code, respectively, the Input Formula would return, “Prj-LondonS340”. Since the Edit-box is connected to the Project Name variable, this can be used to create a new folder in the vault with that name.
+Using the Left Substring Function
+Suppose we want to shorten the project name so that only the first 4 characters of the City are used. This can be done with the
+Left Substring
+function. The syntax is, “
+$Left(<string>,<number>)”
+, where
+<string>
+is the character string, in our case the City variable and
+<number>
+is the number of characters to display, in our case 4.
+Using the Left Substring function to display 4 characters of the City variable
+Now, the Project Name will be “Prj-LondS340” instead of “Prj-LondonS340”.
+Testing the Behavior
+Executing the project template in the local vault view prompts the user with the template card. Once the values for City, Region, and Code are populated, the Project Name is evaluated and returns the expected result. Clicking OK will create a new folder in the vault named, “Prj-LondS340”, for example.
+Executing the template to create a new Project Name
+Using Input Formula Aliases
+Another application for using an Input Formula in SOLIDWORKS PDM is to display the actual value of a variable in one control and an alias value in another control. Suppose we want to show the price of a component selected from a droplist. We can set up an alias for each component, where the alias value is the price of the component. The idea is that a user selects a particular component and the Input Formula returns the alias (i.e. price) of that component.
+Consider a Combobox droplist with three items, namely, “Long Shaft”, “Medium Shaft”, and “Short Shaft”. This Combobox droplist control is connected to the variable, Component. We’ll create another variable called Component Price and connect it to an Edit-box control.
+Combobox droplist with a list of components
+One way to define aliases is within the Input Formula itself. The format is: “%
+VARIABLENAME
+(
+VALUE1
+=
+ALIAS1
+,
+VALUE2
+=
+ALIAS2
+)%”
+Create an Input Formula for the Component Price variable, as shown below.
+Using aliases in an Input formula
+This way, when a user selects Long Shaft in the Component droplist control on a file’s data card, the Component Price Edit-box control will display $300.
+Notice the items from the droplist had to be retyped in the input formula. Besides duplicating work for ourselves, this method is susceptible to typos. For instance, forgetting a space or not spelling correctly. It’s critical to match the items in the list exactly or a value won’t be returned.
+A better approach is to use an alias list, which will streamline the process.
+Using Input Formula with an Alias List
+In the SOLIDWORKS PDM Administration tool, let’s create a card list and set the Data type to Text With Alias. Enter the prices as the Alias for each component in the list.
+Creating an Alias List
+Now, the Input formula for Component Price simply becomes the Component variable, but the Component’s alias will be returned by the formula.
+Using an Input formula to return the alias value from an alias list
+Whether defining aliases within an Input Formula or in an alias-type card list, the end result is the same. The Droplist control will show the actual value and the Edit-box will show the alias value.
+Selecting a value for Component puts the alias of Component into Component Price
+Using the String X From List Function
+There are times when you want to have an ordered list. Starting with the same example from above we’ll modify the card list so that the alias is the row number of the list.
+Modifying the Alias List to create an ordered list where the alias is the index
+Now, we can use the “String X From List” function to evaluate the component price. The format of this function is “
+$Token(<string>|<string>|…,<index>,|)
+, where
+<string>|<string>|”
+is a list of strings to choose from and <index> is the number of the string in the list to return. The first string from the left is index one. Recall that an Input formula returns a variable value’s alias, so we’ll use the Component variable for the Index of the function and build a list of strings for the prices.
+Using the String X From List function
+How this works is as follows: If a user selects Medium Shaft, the Input formula will evaluate the Component variable as 2 based on the alias list. The second string in the argument of our function is $200, so this is the value that will be returned from the Input Formula and set as the value for Component Price.
+Limitations
+Input Formulas require user interaction with the data card to evaluate. For instance, variables changed automatically due to mapped custom properties in SOLIDWORKS, a Set Variable action in a workflow transition, or pushing Default Values when a file is first saved in the vault will not trigger an Input Formula to update. Therefore, data card controls that use Input Formulas may not always be up to date. As a workaround, re-enter/re-select the same value in one of the controls for a variable used in the formula and the input formula will be re-evaluated.
+If you’d like to learn more about SOLIDWORKS PDM visit our list of On-Demand Webinars here.

@@ -1,0 +1,11 @@
+I have found that there is some confusion about what the differences between
+Permissions per Folder
+and
+Assigned Folder Permissions
+.
+In
+Permissions per Folder
+, we see all the folders in the vault. Here we can assign permissions to folders, that users/groups currently have no permissions to.
+In
+Assigned Folder Permissions
+, only the folders that a user/group has been assigned permissions, will be shown. Here we can modify existing folder permissions.

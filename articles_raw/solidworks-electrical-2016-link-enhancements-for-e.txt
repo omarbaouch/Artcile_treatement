@@ -1,0 +1,10 @@
+To improve the integration of SOLIDWORKS Electrical 2016 with the rest of the SOLIDWORKS product portfolio there are now more options for linking with
+SOLIDWORKS Enterprise PDM
+. SOLIDWORKS Electrical users can select which BOM reports they wish to export and also define the target subfolder where the files will be saved.
+Users can also enter a parameter to ‘run after report’ in order to open the file containing the exported Bill of Materials with a different application.
+Link to SOLIDWORKS Enterprise PDM Configuration
+Learn more about SOLIDWORKS Electrical 2016
+To learn more about the latest SOLIDWORKS Electrical release you can attend a Launch Broadcast on either Thursday October 1st or Tuesday October 6th. Please
+visit our registration page
+to register for a Broadcast event.
+Register for a Launch Event

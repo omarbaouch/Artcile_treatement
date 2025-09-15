@@ -1,0 +1,40 @@
+In SOLIDWORKS PDM we can extract configuration specific information from the SOLIDWORKS part or assembly, and map it directly to the data card variable.
+How to map the configuration name to the PDM data card
+First, create the
+Variable
+to store the information in.
+Then map the attributes as follows;
+Block Name;
+SWCfgProperty
+Attribute Name;
+Name
+File Extensions;
+sldasm, sldprt
+Create the Variable
+Link the new variable to the data card
+Link the new variable to the data card
+Then the variable will extract the configuration name and map it directly to the data card;
+Map it directly to the data card
+Note
+: This value is read-only and will be read when the file is added or checked in to the file vault.
+Other configuration specific values that can be mapped to a data card variable:
+Configuration Property
+Block Name
+Attribute Name
+Read/Write
+Description
+SWCfgProperty
+Description
+Read/Write
+Comment
+SWCfgProperty
+Comment
+Read/Write
+Document Name
+SWCfgProperty
+BOMPartNumber
+Read-only
+User Specified Name
+SWCfgProperty
+BOMUserSpecifiedName
+Read/Write

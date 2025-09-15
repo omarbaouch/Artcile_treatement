@@ -1,0 +1,22 @@
+The successful implementation, use and growth of SOLIDWORKS PDM, is largely dependent on the skill of the administrator(s). Below are some characteristics that make for a good SOLIDWORKS PDM Admin person:
+SOLIDWORKS PDM Admin person
+Ability to form concession
+:
+Individuals and groups can have differing goals and priorities. A good PDM Admin should be able to form a solution, that the majority can agree on.
+Ability to make decisions
+:
+At times concession is not practical or possible. A good PDM admin should be able to make decisions that benefit the company as a whole.
+A solid understanding of the company’s policies and processes
+:
+In order to ensure that PDM reflects important company policies and processes, a good PDM Admin should have a good understanding of these policies and processes and/or be able to easily access information on these policies and processes.
+General computer skills
+:
+A comfortable working understanding of computers and a general understanding of networks.
+The admin should also have access to technical resources such as IT/IS
+Time to maintain and administer PDM
+:
+The PDM Admin should be able to schedule time for maintaining PDM (updates)
+General troubleshooting
+Developing and growing the use of PDM in order to take full advantage of the automation and time savings offered by SOLIDWORKS PDM.
+If you are thinking about becoming a PDM admin person you can receive
+training from us in-class or online

@@ -1,0 +1,18 @@
+In the SOLIDWORKS PDM vault view, toolbar buttons can be added for users and groups to give quick access to various commands.
+In
+Administration
+tool > Expand
+Users
+> Right-click the user and select
+Settings
+SOLIDWORKS PDM Admin User Settings
+Select the
+Toolbar
+tab > Add the button from the list of ‘
+Available toolbar buttons’
+to
+‘Current Toolbar buttons’
+list
+Add Toolbar Buttons
+Reopen the vault view
+Toolbar Buttons added to Explorer

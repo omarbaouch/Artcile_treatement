@@ -1,0 +1,84 @@
+SOLIDWORKS Enhancement Vote
+It must be very easy being a SOLIDWORKS Product Development Manager nowadays. The users are pretty much doing your job. 🙂
+It is that time of the year again, when all SOLIDWORKS users are invited to vote for the Top 10 Enhancement Ideas to be revealed next month at the
+SOLIDWORKS World 2015 conference in Phoenix, Arizona
+.
+This year the SOLIDWORKS Community was very busy brainstorming and submitting ideas for improving our beloved CAD software. There were almost 1000 ideas submitted and, even more impressive, most of them have many comments and suggestions for clarifying the scope and the implementation workflow.
+Some users took the time to read and vote on all 972 ideas and even added comments, but I know that most people are too busy to do that. So I narrowed down the list to only 20 ideas I believe would have a big impact in our productivity when using the core functionality of SOLIDWORKS. I am sure my colleagues who love Simulation or EPDM will list their own suggestions in the following days.
+All ideas are linked to the voting page, so just login to my.solidworks.com and click on each of them in order to vote.
+Note:
+I kept the original spelling used by the authors of these ideas.
+1.
+Display the exact item being cause of the error
+Can you imagine how much time we will save during troubleshooting if the item causing the error would be clearly highlighted in the graphic area?
+2.
+Selecting inner loops on a selected face
+This is huge! At this time if you want to select all the holes in a face for Convert or Offset Entities you have to work hard.
+Richard Laflamme and I found a few workarounds for speeding this process (to be demonstrated at SolidWorks World next month during the
+12 Different Ways to Create Inter-Part Relations in SOLIDWORKS 2015
+presentation
+–
+10:30 AM on February 11th), but adding this functionality would be so much faster and more elegant.
+3.
+Use CUDA or OpenCL for computationally intensive tasks
+We have very powerful videocards but SOLIDWORKS uses a tiny fraction of their power. Let’s unleash their potential.
+4.
+Variable Pull direction draft
+This is self explanatory and would save a lot of time when creating complex surfaces.
+5.
+Both Direction Pattern
+For a bi-directional pattern that has the seed in the center, this will reduce the number of features in half. Great idea, Deepak!
+6.
+Patterns should be able to use normal to planes for directions
+Another great time saver for patterns. Eliminate the need to create auxiliary geometry for providing directions.
+7.
+Untrim surface – keep untrimmed portion separate
+This is a great idea that would save about 5 features!
+8.
+Automatically Reattach Dangling Dimensions
+Another great time saver. Let the software propose the best way to re-attach dimensions and have the user confirm or infirm that.
+9.
+Get the same options when you select mutiple dimensions as when you select a single dimension
+Just a great time saver.
+10.
+Unknit surfaces; separate surfaces at edges
+I wanted this functionality from the moment I started playing with surfaces and imported geometry.
+11.
+Ability to choose Angle/Distance dimension with Smart Dimension tool
+Read the comments, it makes a lot of sense.
+12.
+Need “Motion Envelope” to show volume occupied by bodies/components when moving between positions
+We already have this functionality in SOLIDWORKS Mechanical Conceptual. A lot of us would welcome its implementation in SOLIDWORKS!
+13.
+Option for Exploded View to auto-create route lines
+This is a no-brainer that can be implemented very easy (I assume).
+14.
+Preselecting a slot face should default to a Slot mate
+That would save us so much time!
+15.
+Comand button to create flat configuration without having to place the “flat-pattern view on a drawing
+Great time saver and also would make the software more intuitive (beginners have difficulties discovering the current workflow)
+16.
+Optimized spline with minimum max-curvature
+If you work with splines, you would love this idea!
+17.
+link Gage value to custom property
+So many of my customers are asking for this functionality!!!
+18.
+Add feature dimension(s) to Move/Copy Bodies command
+At this time we cannot configure the distance that a body would move. The fix should be simple and I am sure SOLIDWORKS will listen to you!
+19.
+Update Graphics Driver During Version Upgrade
+Applications Engineers and IT specialists would cheer and applaud if this will get implemented. Please vote for this idea!
+20.
+Ability to save only the Speedpak configuration
+This is one of the most helpful ideas for collaboration between companies I have ever seen. Not only you can protect intellectual property this way, but your customer would still have all the relevant data needed to integrate your components in their assemblies.
+And this is the best idea that has not been submitted this year for the SWW 2015 Top Ten:
+21.
+Functionality for patterning Coordinate Systems (linear, circular, sketch driven, curve driven, pattern driven pattern)
+The mating between coordinate systems is very powerful (1 mate replaces 3 standard mates). Moreover, using coordinate systems in mate references, is quick and extremely easy.
+That being said, creating coordinate systems is a time consuming process. If I could pattern coordinate systems (especially as a sketch driven or pattern driven pattern), I can create a lot of “anchors” for mate references in a fraction of the time that I spend right now.
+The time savings would be absolutely outstanding –  90-99%!!!
+Please Vote and encourage your colleagues to read and vote!
+T
+he bottom line is: SOLIDWORKS listens to you! Tell SOLIDWORKS what you want!

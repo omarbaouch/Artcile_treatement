@@ -1,0 +1,17 @@
+New in
+SOLIDWORKS PDM 2020
+is an option to scale the paper size in
+Print Task
+.
+When configuring the
+Print
+task, you can select
+“Scale to fit”
+or
+“Scale”
+. When you select
+“Scale”
+, you can select
+“Allow the user to change the scale”
+to let the users change the scale at the run time.
+SOLIDWORKS PDM Default Scale Options

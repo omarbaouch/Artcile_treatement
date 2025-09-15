@@ -1,0 +1,3 @@
+A transition action comment can add a predefined comment when a file is transitioned. The notification can be defined in a Transition Action, for automatic transitions or transition actions that set a variable or increment a revision. These comments can be viewed from a files history and when when performing a Get Version.
+Standard items such as date, revision and user defined variables are available from the fly-out.
+Please note that the Transition Action Comment, is common for all actions in a given transition.

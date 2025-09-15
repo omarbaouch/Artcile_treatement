@@ -1,0 +1,38 @@
+One of my favorite enhancements in
+SOLIDWORKS PDM 2018
+is a new option to use dynamic values when updating Variables while performing a
+Copy Tree
+.  In the past, this functionality only allowed Administrators to either
+clear values
+or set
+static values
+for Variables in files that are created by a Copy Tree command.
+Now a new “Value” dialog box, shown below, will display when you click in the box beside the Variable name.  The > button will present a drop list of dynamic values that can be selected from.
+Copy Tree Value Dialog Box
+Copy Tree Dynamic Variable Values
+Here is what these selection will produce:
+Current time
+:  This will be the time when the Copy Tree command is performed.
+File Name
+:  This is the name of the SOURCE file that is being copied by the Copy Tree command including the file extension.
+File name without extension
+:  The file name of the SOURCE file, but with the extension removed.
+File Path
+:  The folder path for the SOURCE file that is being copied as displayed in the “Found In” column of the Copy Tree command dialogue box.  (If the source file set contains references in multiple folders, the “File Path” value written to each file created by the Copy Tree will match the “Found In” value for that file)
+Logged in user
+:  This is the value in the “Login name” field in the User Properties for the user who launches the Copy Tree command.
+Target File Name
+:  This is the “Target File Name” that the User specifies in the Copy Tree command dialogue for the file being created.
+Target File name without extension
+:  This is the “Target File Name” only, with the extension information removed.
+Target File Path
+:  This is the “Destination Folder Path” that the user sets for the file when performing the Copy Tree.
+Today’s date
+:  This will be the date that the Copy Tree command is performed.
+User – Full name
+:  This is the value in the “Full name” field in the User Properties for the user who launches the Copy Tree command.
+User – initials
+:  This is the value in the “Initials” field in the User Properties for the user who launches the Copy Tree command.
+User – User data
+:  This is the value in the “User data” field in the User Properties for the user who launches the Copy Tree command.
+Any combination of these dynamic values can be used as well.

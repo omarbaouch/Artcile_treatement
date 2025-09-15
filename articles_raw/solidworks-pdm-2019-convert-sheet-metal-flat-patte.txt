@@ -1,0 +1,51 @@
+New in SOLIDWORKS PDM 2019 Professional we have the ability to convert sheet metal flat patterns. The Convert Task in SOLIDWORKS PDM Professional converts flat patterns to the DWG/DXF file format.
+NOTE
+: The following SOLIDWORKS PDM Convert Sheet Metal Flat Patterns steps are for SOLIDWORKS 2018 or later
+Here are the steps to create the convert task to produce the sheet mental flat pattern drawings.
+Right-click
+on the
+Convert
+Task
+and select “
+Copy
+”
+Copy Task
+Double-Click
+the new copy of the task that is created to begin editing it. Start by
+renaming the task
+.
+Rename Task
+On the “
+Execution Method
+” screen, make sure that the
+task host
+is set up to run only on systems that have
+SOLIDWORKS 2018 or later
+installed.
+Execution Method
+On the “
+Menu Command
+“screen, adjust the task’s label in the Right-Click menu.
+Right-Click Menu Command
+On the “
+Conversion Settings
+” screen, select
+DWG Format
+or
+DXF Format
+in
+Output file format
+: dialog box.
+Click on
+Conversion Options
+.
+Conversion Settings
+The following options are applied when converting DWG/DXF format files:
+Advanced Conversion Options
+The details for each option:
+Options Detail
+Set up the Output File Details and other options as you do for
+other convert tasks.
+Once the SOLIDWORKS PDM Convert Sheet Metal Flat Patterns task is set up, you can now either launch the task from a right-click menu, or you can trigger it automatically from a
+Workflow Transition Action
+.

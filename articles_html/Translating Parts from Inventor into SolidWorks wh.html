@@ -1,0 +1,16 @@
+<p>A quick update to this post as our good friends at SolidWorks were kind enough to point out that I had not given the Inventor View Product it&#8217;s due. To that end I thought I should clear up some more of the hearsay and rumor surrounding translating files from Autodesk&#8217;s Inventor Product.</p>
+<h3>Translation of individual part files from Inventor:</h3>
+<p>Installation of the <a href="http://usa.autodesk.com/adsk/servlet/pc/index?siteID=123112&amp;id=10535296" target="_blank" rel="nofollow noopener">Inventor View product</a> will only be sufficient for translation if you are looking to obtain Solid Bodies void of any feature data within SolidWorks. If you are attempting to retain the parametric features of your model you will need to install the latest release of Inventor (as compared to your installed release of SolidWorks).</p>
+<p>The method to accomplish the full translation is to:</p>
+<ol>
+<li>First open up the file in Inventor from your hard disk.</li>
+<li>Secondly follow the same procedure with SolidWorks &#8211; opening the file from the hard disk, (As it is currently open and running in Inventor). SolidWorks should begin the task of translation between the two products via the API in order to recreate the parametric model in SolidWorks feature by feature.</li>
+</ol>
+<h3><strong>Translation of Inventor Assemblies:</strong></h3>
+<p>For the assemblies to translate correctly (minus the assembly mates) <strong>it is necessary to again have the full Inventor product installed alongside SolidWorks IF the intention is that features be available within the parts that make up your translated assembly</strong>. SolidWorks can use the Inventor Viewer product to sort out and process the details of the components and their positions if only the solid bodies representing the individual parts are required.</p>
+<p>Forcing SolidWorks to interact with the full installation of Inventor will result in a query, asking if you would like to import the components as solid bodies or with their feature data reconstructed.  Feature by feature translation will be the longer route of the two, as every part must be built by SolidWorks as it is deconstructed by inventor.</p>
+<p>When using the Inventor View Product to perform the translations above, it is best practice to open up the assembly using the Inventor View tool followed by SolidWorks.</p>
+<p>I hope this post clears up some of the fog surrounding this issue.</p>
+<p><em>Our many thanks to <strong>Michel Cloutier</strong> at <strong>SolidWorks </strong>for sending us this extra tip:</em></p>
+<h3><strong>Managing Autodesk Inventor Files with SolidWorks EPDM</strong></h3>
+<p>Once you have the Inventor View product installed &#8211; You will have the ability to add native Inventor files into your EPDM Vault, and have their references understood by EPDM.  With the references recognized you can use EPDM functions such as the &#8220;BOM&#8221; &amp; &#8220;where used&#8221; tabs to better understand your assembly. The same way SolidWorks files are displayed within the Vault!</p>

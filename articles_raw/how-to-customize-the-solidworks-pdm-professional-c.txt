@@ -1,0 +1,53 @@
+The default SOLIDWORKS Convert Task in PDM Professional (tasks are not available in SOLIDWORKS PDM Standard) allows you to export to many different file types.
+Unfortunately, at this time, .smg files (for SOLIDWORKS Composer) are not one of the supported file types.
+However, the SOLIDWORKS Convert Task is also HIGHLY customizable, so while we don’t have the option to output to .smg in the task interface, with a few script changes we can make our own task to do this.
+Customized Convert Task Steps
+Here are the steps to create a custom convert task to produce Composer .smg files
+Step 1
+:  Right-click on the Convert Task and select “Copy”
+Copy Task
+Step 2
+:  Double click the new copy of the task that is created to begin editing it.  Start by renaming the custom task.
+Enter a Name
+Step 3
+:  On the “Execution Method” screen, make sure that the task is set up to run only on systems that have the SOLIDWORKS Composer Player software installed.
+Task System
+Step 4
+:  On the “Menu Command” screen, adjust the task’s label in the Right Click menu.
+Right-click Menu Command
+Step 5
+:  On the “Conversion Settings” screen, ANY output file format can be selected, we will specify the .smg file output directly in the task script next.
+Conversion Settings
+Step 6
+:  On the “Output File Details” screen, click the “Advanced Scripting Options …” button.
+Task Details
+Step 7
+:  Find and comment out the line
+ext = GetExtension(docType, “[FileFormat]”)
+by adding a ‘ at the beginning.  Next, immediately below add the line
+ext = GetExtension(docType, “(*.smg)”)
+Edit the script
+Step 8
+:  Find the lines near the end of the script:
+Else
+bIsSupportedExtension = False
+Immediately above this add the lines:
+ElseIf docFileName = "smg" Then
+bIsSupporterExtension = True
+New lines added
+Step 9
+:  Verify the location of the file
+composersolidworksplug-in.dll
+.  By default it will be in the folder
+C:\Program Files\SolidWorks Corp\Composer\Plugins\solidworks
+, however if SOLIDWORKS was installed to a different root directory, such as SOLIDWORKS 2016 instead of SolidWorks Corp, the path may be different.
+If you are using 2014 or older, the plugin name is 3DViaSolidWorksPlug-in.dll
+dll location
+Step 10
+:  Find the line:
+Convert docFileName
+Immediately above this add the line:
+AddInStatus = swApp.LoadAddIn(“C:\Program Files\SolidWorks Corp\Composer\Plugins\solidworks\composersolidworksplug-in.dll”)
+Change the path shown in the line above if the path to the .dll on the system that will run the task is different.  Ensure that ALL systems that will act as hosts for this task have the same path to the plugin.
+Add another line
+Once the task is set up, you can now either launch the task from a right-click menu, or you can trigger it automatically from a Workflow Transition.

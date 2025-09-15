@@ -1,0 +1,32 @@
+I have visited a lot of companies and many of them have their own way of managing their data, one of the standard questions I ask is “How do you store and protect your critical business data today?” and usually get the same answers:
+We keep everything on a server drive and copy files back a forth
+We work locally and backup on a server when the project is ready for production
+We have external hard drives to back up our data
+We just make copies and rename with underscores so we done overwrite anything important
+External Hard Drive
+Although these are not necessarily terrible ways of managing your companies’ data they are extremely dangerous.
+In fact, I take that back, these are not great ways of storing or securing company data but more often than not they are the norm because companies don’t realize that there is a better more secure way.   If you or your company stores your data in any of the above scenarios please, for the sake of your data, keep reading.
+When Critical Business Data storage goes BAD!
+Let’s talk about what can happen when data storage can go wrong, I have seen several customers in different situations where there has been major data loss sometimes resulting in days, weeks or months of lost design time and productivity. Data loss can happen in a number of ways:
+Accidentally or unintentionally deleted files
+Overwriting an existing file with the wrong version
+Your local workstation crashes
+Files are lost or corrupted during unstable network transfers
+These are just some of the issues, and most of us have a story or two where this has happened and it is never fun to recover from such a situation.
+There’s got to be a better way!
+Well there is, queue angels singing,
+SOLIDWORKS PDM
+can take care of all of these issues plus a lot more.
+But let’s put aside the great time saving tools and automation of SOLIDWORKS PDM and talk about its core, which is securing your data and mitigating the risk that comes with storing data.
+Use Versioning and Revision to eliminate file duplication
+SOLIDWORKS PDM gives you the ability to take snapshots of your files and create versions, so if you have a few design ideas and don’t know which one to pursue you can record them all in case you need to back track. PDM can also revision your documents automatically making sure you are always looking at and manufacturing from the latest and greatest.
+Prevent overwritten files with automatic file locking
+SOLIDWORKS PDM files will be automatically locked when they are currently being edited. This eliminates the issues of another user overwriting the progress that you just made working on your file. SOLIDWORKS PDM will tell you who is currently working on the part and even gives you the option to instant message or call them within the software itself.
+Secure Access to your files
+All of the companies’ data is held in your PDM Vault which users need to log into in order to access, this means you can customize what each user sees and can do while in the vault making sure everyone has only the privileges pertinent to their role with the company.
+See what’s new in SOLIDWORKS PDM 2018
+SOLIDWORKS PDM 2018 has some great new enhancements including design branching and merging, SOLIDWORKS Drawing Revision Table integration, and a new responsive web interface.
+These are just a taste of some of the great security and time saving features that SOLIDWORKS PDM offers. It also has solutions for collaborating on assemblies with multiple team members, automating all of your manual day to day tasks.
+Make sure you
+get in touch with your account manager
+today to start securing all of your companies’ data.

@@ -1,0 +1,63 @@
+<p>if you’ve forgotten or lost the &#8220;sa&#8221; (System Administrator) password for your SQL Server instance, you can reset it using Microsoft SQL Server Management Studio (SSMS). Here&#8217;s how you can do that in SQL Server Management Studio (SSMS): <!--more--></p>
+<h3 class="" data-start="433" data-end="485">Step 1: Open SQL Server Management Studio (SSMS)</h3>
+<p>Begin by launching <strong data-start="506" data-end="543">SQL Server Management Studio (SSMS)</strong>. You can do this by searching for &#8220;SQL Server Management Studio&#8221; in the Windows Start Menu and clicking on the application.</p>
+<p data-start="487" data-end="667"><img decoding="async" class="alignnone size-medium wp-image-69409 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2025/04/SA1-600x307.jpg" alt="" width="600" height="307" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69409 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2025/04/SA1-600x307.jpg" alt="" width="600" height="307" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2025/04/SA1-600x307.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2025/04/SA1.jpg 647w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<h3 data-start="746" data-end="792">Step 2: Log In Using Windows Authentication</h3>
+<ol>
+<li>Launch <strong data-start="804" data-end="841">SQL Server Management Studio (SSMS)</strong>.</li>
+<li>In the <strong data-start="853" data-end="874">Connect to Server</strong> window, choose <strong data-start="890" data-end="916">Windows Authentication </strong>in the Authentication selection dropdown menu.</li>
+<li>Set <strong>Encryption</strong> to <strong>optional</strong>, check the <strong>Trust server certificate</strong> checkbox.</li>
+<li>Click <strong data-start="927" data-end="938">Connect</strong>.</li>
+</ol>
+<p><img decoding="async" class="alignnone size-medium wp-image-69418 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA2-1-600x594.jpg" alt="" width="600" height="594" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69418 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA2-1-600x594.jpg" alt="" width="600" height="594" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA2-1-600x594.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA2-1.jpg 636w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<h3 data-start="1037" data-end="1080">Step 3: Check Server Authentication Mode</h3>
+<p>1. In <strong data-start="1088" data-end="1107">Object Explorer</strong>, right-click your <strong data-start="1126" data-end="1149">SQL Server instance</strong> at the top and select <strong data-start="1172" data-end="1186">Properties</strong>.</p>
+<p class="" data-start="1189" data-end="1287"><img decoding="async" class="alignnone size-medium wp-image-69412 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA3-336x600.jpg" alt="" width="336" height="600" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69412 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA3-336x600.jpg" alt="" width="336" height="600" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA3-336x600.jpg 336w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA3.jpg 411w" sizes="(max-width: 336px) 100vw, 336px" /></noscript></p>
+<p>2. In the <strong data-start="1299" data-end="1320">Server Properties</strong> dialog, go to the <strong data-start="1339" data-end="1351">Security</strong> tab.</p>
+<p><img decoding="async" class="alignnone size-full wp-image-69414 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-1.jpg" alt="" width="179" height="428" title=""><noscript><img decoding="async" class="alignnone size-full wp-image-69414 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-1.jpg" alt="" width="179" height="428" title=""></noscript></p>
+<p>3. Ensure <strong data-start="1367" data-end="1392">Server authentication</strong> is set to <strong data-start="1403" data-end="1449">SQL Server and Windows Authentication mode</strong>.</p>
+<p><img decoding="async" class="alignnone size-medium wp-image-69413 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-600x517.jpg" alt="" width="600" height="517" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69413 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-600x517.jpg" alt="" width="600" height="517" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-600x517.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4-768x661.jpg 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA4.jpg 943w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<p>4. If not, select that option, click <strong>OK</strong>, and then <strong>restart the SQL Server service</strong> by launching services.</p>
+<p><img decoding="async" class="alignnone size-medium wp-image-69415 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6-600x110.jpg" alt="" width="600" height="110" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69415 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6-600x110.jpg" alt="" width="600" height="110" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6-600x110.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6-1220x224.jpg 1220w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6-768x141.jpg 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA6.jpg 1447w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<h3 data-start="1829" data-end="1870">Step 4: Locate and edit the &#8220;sa&#8221; Login</h3>
+<ol data-start="1872" data-end="2002">
+<li class="" data-start="1872" data-end="1938">Back in <strong data-start="1883" data-end="1902">Object Explorer</strong>, expand:
+<ul data-start="1915" data-end="1938">
+<li class="" data-start="1915" data-end="1938">
+<p class="" data-start="1917" data-end="1938"><code data-start="1917" data-end="1927">Security</code> → <code data-start="1930" data-end="1938">Logins</code></p>
+</li>
+</ul>
+</li>
+<li class="" data-start="1939" data-end="2002">Right-click on the <strong data-start="1961" data-end="1969">&#8216;sa&#8217;</strong> login and choose <strong data-start="1987" data-end="2001">Properties</strong>.</li>
+</ol>
+<p><img decoding="async" class="alignnone size-medium wp-image-69416 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA7-260x600.jpg" alt="" width="260" height="600" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69416 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA7-260x600.jpg" alt="" width="260" height="600" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA7-260x600.jpg 260w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA7.jpg 332w" sizes="(max-width: 260px) 100vw, 260px" /></noscript></p>
+<h3 data-start="2096" data-end="2126">Step 5: Change the Password</h3>
+<ol data-start="2128" data-end="2298">
+<li class="" data-start="2128" data-end="2281">In the <strong data-start="2138" data-end="2149">General</strong> tab of the <strong data-start="2161" data-end="2181">Login Properties</strong> window.<br />
+<h6>Note: Clear the password and confirm password fields if prefilled by old password:</h6>
+<ul data-start="2193" data-end="2281">
+<li class="" data-start="2193" data-end="2221">
+<p class="" data-start="2195" data-end="2221">Enter the <strong data-start="2205" data-end="2221">new password</strong></p>
+</li>
+<li class="" data-start="2225" data-end="2281">
+<p class="" data-start="2227" data-end="2281">Confirm the password in the <strong data-start="2255" data-end="2275">Confirm Password</strong> field</p>
+</li>
+</ul>
+</li>
+<li class="" data-start="2282" data-end="2298">Click <strong data-start="2291" data-end="2297">OK</strong>.</li>
+</ol>
+<p><img decoding="async" class="alignnone size-medium wp-image-69419 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA8-600x517.jpg" alt="" width="600" height="517" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69419 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA8-600x517.jpg" alt="" width="600" height="517" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA8-600x517.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA8-768x661.jpg 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA8.jpg 943w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<h3 data-start="2647" data-end="2679">Step 6: Test the New Password</h3>
+<ol>
+<li>Log out of SSMS.</li>
+<li data-start="2704" data-end="2734">Reopen SSMS and this time use:</li>
+</ol>
+<ul>
+<li><strong data-start="2740" data-end="2758">Authentication</strong>: SQL Server Authentication</li>
+<li data-start="2793" data-end="2810"><strong data-start="2793" data-end="2802">Login</strong>: <code data-start="2804" data-end="2808">sa</code></li>
+<li><strong data-start="2816" data-end="2828">Password</strong>: your new password</li>
+</ul>
+<p><img decoding="async" class="alignnone size-medium wp-image-69435 aligncenter lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA9-600x594.jpg" alt="" width="600" height="594" title=""><noscript><img decoding="async" class="alignnone size-medium wp-image-69435 aligncenter lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA9-600x594.jpg" alt="" width="600" height="594" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA9-600x594.jpg 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2013/05/SA9.jpg 636w" sizes="(max-width: 600px) 100vw, 600px" /></noscript></p>
+<h3>Related Information:</h3>
+<p>After resetting the “<strong>sa</strong>” password, it is strongly recommended to review any dependencies or services that may be affected by this change. For a detailed overview of potential impacts, please refer to the companion article: <a href="https://www.javelin-tech.com/blog/2017/09/solidworks-pdm-sa-password/" target="_blank" rel="noopener">What does changing a SOLIDWORKS PDM ‘sa’ password affect?</a></p>
+<p>This will help ensure that all related systems and processes continue to operate without interruption.</p>

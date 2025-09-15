@@ -1,0 +1,11 @@
+When working with large file sets in SOLIDWORKS PDM, the file list generated for actions such as Check Outs, Check Ins and Transitions can get quite long and potentially difficult to manage.
+For instance to Check Out an entire file set of several hundred files, it would take quite a bit of time to check the box beside each file, one at a time.
+SOLIDWORKS PDM file lists
+Thankfully, there is no need to perform such a tedious process.  Simply Right Click on any file in the list and select “
+Check Out All Files
+“.  This will check the Checkout box for each file in the list that can be checked out by you.
+Check out all files
+What is really great about this command is that it’s actually a toggle, so performing it again when all files are checked will uncheck them all.  So as an example, if you are performing a Transition on a file, but don’t want to Transition the entire file set, you can use the “
+Change State on All Files
+” command to uncheck all the files, then individually select the file or files that you do want to Transition.
+Change state on all files

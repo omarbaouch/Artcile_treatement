@@ -1,0 +1,12 @@
+SOLIDWORKS PDM Web2
+search is a convenient, single search box that is able to search File Names, Folder Names as well as the Comment and Description variables by default, but what if you need to search more variable values?
+SOLIDWORKS PDM Web2 Search
+This can be done easily by modifying the Application Settings for the SOLIDWORKS PDM Web2 site.
+Go to the Internet Information Services (IIS) Manager on the server hosting the Web2 site.  In the SOLIDWORKSPDM site settings, go to “Application Settings” in the ASP.NET section.
+Information Services (IIS) Manager
+In the Application Settings, go to the “SearchDataCardVariables” setting and double click it to open the edit dialog.
+By default it will contain the value “Comment|Description”, but you can add any additional Variables that you wish to include in the search.  Each variable should be separated by a | (pipe key).
+SearchDataCardVariables
+Make sure that the variable name syntax is exactly correct so that Web2 will be able to search the variable values.
+Once the change is made, the users simply need to refresh the Web2 site in their browser to be able to search the additional fields.
+Search the additional fields

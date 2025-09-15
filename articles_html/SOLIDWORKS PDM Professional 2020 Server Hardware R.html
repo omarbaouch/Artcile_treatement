@@ -1,0 +1,98 @@
+<pre>Article co-authored by <a href="https://www.javelin-tech.com/blog/author/samir-lohmann/">Samir Lohmann</a> on </pre>
+<p>Here is an overview of our current recommended SOLIDWORKS PDM Professional 2020 Server hardware recommendations.</p>
+<p>While the following recommendations are intended as a general overview for most SOLIDWORKS PDM Professional vaults, determining proper server and client hardware is one of the first steps that Javelin will provide during a <a href="https://www.javelin-tech.com/3d/process/solidworks-pdm-services/">SOLIDWORKS PDM Professional Implementation service</a>.</p>
+<p>We strongly recommend that you contact our specialists if you are considering the purchase of any hardware or software for PDM. The optimal hardware and configuration for your vault may vary depending on many aspects, including the number of users, number of files in the vault and other factors.</p>
+<blockquote><p><strong>PLEASE NOTE</strong>:  These recommendations do NOT apply to <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-standard/">SOLIDWORKS PDM Standard</a></p></blockquote>
+<h2>SOLIDWORKS PDM Database Server:</h2>
+<ul>
+<li><strong>Processor:</strong> 4 Cores with 3Ghz or higher clock speed</li>
+<li><strong>Operating System:</strong> Windows Server 2019</li>
+<li><strong>Database Software:</strong> Microsoft SQL Server Standard 2017 (see further information regarding licensing below)</li>
+<li><strong>Memory:</strong> 32GB (see further information regarding memory below)</li>
+<li><strong>Storage configuration: </strong>Windows OS and SQL Server software in RAID 1 SSD ; SQL Database file (.mdf) RAID 1 SSD; SQL Log file (.ldf) RAID 1 SSD</li>
+</ul>
+<h3>SOLIDWORKS PDM Archive Server:</h3>
+<ul>
+<li><strong>Processor:</strong> 3Ghz or higher clock speed</li>
+<li><strong>Operating System:</strong> Windows Server 2019</li>
+<li><strong>Memory:</strong> 16GB</li>
+<li><strong>Storage configuration:</strong> Dedicated high speed storage drive(s) for archives</li>
+</ul>
+<h3>What is the recommended system architecture for SOLIDWORKS PDM Professional 2020 servers?</h3>
+<p>For medium and large PDM Vaults, It is recommended that a separate, dedicated server be used for the <strong>PDM</strong> <strong>Database Server</strong>.  For performance reasons no other databases should be hosted on the same server that is hosting the PDM database.  It is recommended that the SOLIDWORKS PDM Database Server Service (also called the Database Helper service) be installed on the same system that is hosting the SQL Server software.</p>
+<blockquote><p><strong>PLEASE NOTE</strong>: It is very strongly recommended that the Microsoft SQL Server software not be installed on a system that acts as an Active Directory Domain Controller, this can lead to several known issues, including security risks.</p></blockquote>
+<p>A separate server should be used for the SOLIDWORKS PDM Archive Server service.  That same server can also be used for the PDM Web2 Server software.</p>
+<h3>What are the minimum hardware requirements for SOLIDWORKS PDM Professional 2020?</h3>
+<p>The minimum SOLIDWORKS PDM hardware requirements can be found on the <a href="https://www.solidworks.com/sw/support/SystemRequirements.html" rel="nofollow noopener" target="_blank">SOLIDWORKS System Requirements</a> page.</p>
+<h3>What Processor (CPU) is recommended for SOLIDWORKS PDM Professional 2020?</h3>
+<p>SOLIDWORKS PDM supports both Intel and AMD processors.</p>
+<p><strong>For the Database Server, Microsoft SQL can take advantage of multi core processing</strong>.  For optimal performance of PDM functions, it is recommended that the average CPU utilization be kept below 50%.  If average utilization is above 50%, then more cores may be needed.  Please note, If using Microsoft SQL Server Standard Core Licensing, adding additional cores may require also purchasing additional core licenses.  This can be discussed with your Microsoft retailer.</p>
+<p>For the Archive Server and Web2 Server components the CPU requirements are much lower.</p>
+<h3><strong>What Operating System is recommended for SOLIDWORKS PDM Professional 2020 server components?</strong></h3>
+<p>SOLIDWORKS PDM 2020 is officially supported on the following operating systems:</p>
+<ul>
+<li>Windows Server 2016</li>
+<li>Windows Server 2019 (recommended)</li>
+</ul>
+<blockquote><p><strong>PLEASE NOTE</strong>:  Windows Server 2012 &amp; Windows Server 2012R2 are NOT compatible with SOLIDWORKS PDM 2020.</p></blockquote>
+<h3>Does SOLIDWORKS PDM Professional 2020 work in virtual environments?</h3>
+<p>Yes, however SOLIDWORKS only tests and supports PDM in specific virtual environments.</p>
+<p><a href="https://www.solidworks.com/sw/support/11168_ENU_HTML.htm" rel="nofollow noopener" target="_blank">A list of the currently supported virtual environments can be found on the SOLIDWORKS website</a>.</p>
+<h3>Can SOLIDWORKS PDM Professional 2020 be hosted in the cloud?</h3>
+<p>Although SOLIDWORKS does not test PDM in any cloud provider (such as Amazon AWS or Microsoft Azure), cloud based servers can be used for SOLIDWORKS PDM.</p>
+<p>Javelin offers various PDM cloud based solutions for customers who are interested in moving their data management to this environment.</p>
+<p>If you are investigating your own cloud environment, please take note of the following:</p>
+<ul>
+<li>Amazon Web Service’s Relational Database Services (RDS) is not an appropriate option for hosting PDM databases as it does not allow using a db_owner This leads to several issues when using PDM.</li>
+<li>The runtime restricted license of Microsoft SQL Standard 2014 that was bundled with SOLIDWORKS PDM Professional licenses purchased before Fall 2019, cannot be used for cloud based environments. For a cloud based SQL installation, you will need to ensure that you have an SQL Server license with Software Assurance, or use a EC2 or Azure instance that includes the appropriate licensing.</li>
+<li>The latency from the clients to the cloud server should be under 100 milliseconds. Keep this in mind when selecting your Availability Zone.</li>
+</ul>
+<h3>What version and release of Microsoft SQL Server is recommended for SOLIDWORKS PDM Professional 2020?</h3>
+<p>The following releases of Microsoft SQL Server can be used to host PDM Professional 2020 file vault databases:</p>
+<ul>
+<li>Microsoft SQL Server 2014 SP3</li>
+<li>Microsoft SQL Server 2016</li>
+<li>Microsoft SQL Server 2017</li>
+<li>Microsoft SQL Server 2019</li>
+</ul>
+<p>The database can be hosted on SQL Server Standard or SQL Server Enterprise, however due to performance limitations SQL Express should not be used to host a SOLIDWORKS PDM Professional vault database in a production environment.</p>
+<p>For optimal performance and stability, Microsoft SQL Server 2017 is recommended for hosting SOLIDWORKS PDM Professional 2020 databases.</p>
+<blockquote><p><strong>PLEASE NOTE</strong>:  Ensure that you have the proper licensing for the version of SQL that you use for PDM Professional (your Microsoft Software Provider can help you determine if you have all the licenses needed for SQL).  Any licenses of SOLIDWORKS PDM Professional sold before the fall of 2019 automatically included runtime restricted licenses of Microsoft SQL Standard 2014.  These licenses can not be upgraded to newer versions and are not eligible for Software Assurance from Microsoft.</p></blockquote>
+<p>SOLIDWORKS PDM 2020 requires Microsoft ODBC drive 17.3 or later for SQL Server to be installed on the Database Server and the Clients.</p>
+<h3>How much Memory (RAM) is recommended for SOLIDWORKS PDM 2020?</h3>
+<p>16GB is recommended for Archive Servers.  For the Database server, a minimum of 32GB is recommended, however this should be increased if necessary.  For optimal performance, there should be at least enough RAM fully cache the database files into the memory, plus an additional 4GB for the Operating System and other services.</p>
+<h3>What storage options are recommended for SOLIDWORKS PDM Professional 2020?</h3>
+<p>For PDM Archive storage, a hard drive with fast I/O speeds should be used, ideally a Solid State Drive.  Remote disks, such as a UNC share, NAS or SAN are NOT recommended for storing PDM Archives as there are known performance issues with such environments.  Additionally, SAN and NAS devices are not officially supported by SOLIDWORKS.</p>
+<p>For the Microsoft SQL Server, it is recommended that the Windows Server OS (with the SQL software installation), database files (.mdf) and log files (.ldf) should each be separated to individual RAID 1 arrays using high speed Solid State Drives.</p>
+<h3>What are the network considerations for SOLIDWORKS PDM Professional 2020?</h3>
+<p>SOLIDWORKS PDM Client and Server components must be able to communicate on the following ports:</p>
+<h4>Client and Database Server:</h4>
+<ul>
+<li>TCP 1433</li>
+<li>UDP 1434</li>
+</ul>
+<h4>Client and Archive Server:</h4>
+<ul>
+<li>TCP 3030</li>
+<li>UDP 3030</li>
+</ul>
+<h4>Client and SolidNetwork License Server:</h4>
+<ul>
+<li>TCP 25734</li>
+<li>UDP 25735</li>
+</ul>
+<p>If a firewall is in place between the Client systems and the Servers, exceptions must be added for these ports.</p>
+<blockquote><p><strong>PLEASE NOTE</strong>:  These are the default ports used when the server components are installed however these can be changed through adjustments to the settings so always verify which ports your server components are using when creating any firewall exceptions.</p></blockquote>
+<p>SOLIDWORKS PDM 2020 no longer utilizes Transport Layer Security (TLS) 1.0, allowing it to be disabled if necessary.  However, <u>all previous releases of SOLIDWORKS PDM (2019 and older) require TLS 1.0</u> to be enabled.</p>
+<p>For remote, replicated sites, or cloud based server deployments, network latency between the clients and the Database Server must be less than 100 milliseconds (ms).  Latency above 100ms will lead to severe performance degradation, and above 200ms will result in timeout errors for most PDM functions.</p>
+<h3>Which releases of SOLIDWORKS are compatible with SOLIDWORKS PDM Professional 2020?</h3>
+<p><strong>The PDM Professional 2020 Add In for SOLIDWORKS is tested and fully supported for use with SOLIDWORKS 2020, 2019 and 2018</strong>.  While combinations of PDM Professional 2020 and older versions of SOLIDWORKS such as 2017 or 2016 may work, please note that they are not officially tested by SOLIDWORKS Development and so they are not fully supported combinations.</p>
+<p><strong>A newer release of SOLIDWORKS is never supported with a previous release of PDM</strong> (for instance, SOLIDWORKS 2020 is not compatible with SOLIDWORKS PDM Professional 2019).</p>
+<p>Starting with their 2019 releases, <a href="https://blogs.solidworks.com/solidworksblog/2018/09/whats-new-in-solidworks-composer-2019.html" target="_blank" rel="noopener noreferrer nofollow">SOLIDWORKS Composer</a> and <a href="https://www.javelin-tech.com/blog/2018/09/solidworks-pdm-2019-inspection-integration/">SOLIDWORKS Inspection Standalone</a> both include PDM Integration built into their menus.  New for 2020, <a href="https://www.javelin-tech.com/blog/2020/01/solidworks-visualize-2020-pdm-menu-integration/">SOLIDWORKS Visualize now also includes this integration</a>.</p>
+<p>Integrations are available <a href="https://blogs.solidworks.com/solidworksblog/2018/12/make-a-better-electrical-connection-with-solidworks-pdm.html" target="_blank" rel="noopener noreferrer nofollow">SOLIDWORKS Electrical</a> and <a href="https://www.javelin-tech.com/3d/technology/solidworks-pcb/">SOLIDWORKS PCB</a> through the installation of additional Integration packages.</p>
+<h3>Which releases of Microsoft Office are compatible with SOLIDWORKS PDM Professional 2020?</h3>
+<p>Microsoft Office 2013, 2016 and 2019 are all compatible with SOLIDWORKS PDM Professional 2020.  It is recommended to use a 64-bit version of Microsoft Office.</p>
+<blockquote><p><strong>PLEASE NOTE</strong>:  SOLIDWORKS PDM Professional 2020 will be the last release to support Microsoft Office 2013</p></blockquote>
+<h3>What if I am using an environment that is not supported by SOLIDWORKS?</h3>
+<p>If you choose to set up SOLIDWORKS PDM Professional in an unsupported or untested environment, keep in mind that while it may initially work, issues can potentially develop at any point in the future and it may be necessary to migrate to a supported environment.</p>
+<p>If you are <a href="https://www.javelin-tech.com/3d/process/solidworks-pdm-implementation-service/">implementing SOLIDWORKS PDM Professional</a> with the assistance of the Javelin PDM Services team,  we will assess your situation and advise you on the possible issues that may arise.</p>

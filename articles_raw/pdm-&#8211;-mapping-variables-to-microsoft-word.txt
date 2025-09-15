@@ -1,0 +1,28 @@
+EPDM variables can be mapped to a Microsoft Office document, automatically populating documents such as ECN’s (Engineering Change Notices).
+1) In this article, the appropriate variable used will be Affects, and it has been configured for Word and Excel file types.
+2) The Variable has been mapped to the data card.
+If you are not familiar with how this done, please refer to the SolidWorks Enterprise PDM Administration Guide.
+3) In order for the variable to be mapped to the Word document, we must first define the Custom Property, in Word. From the menu bar, in Word select the File tab.
+Select Info and then Advanced Properties from the Properties pull-down
+Click on the Custom Tab to add or select a custom property. Link to Content may not be selectable, but it is not required. Click Add, to create/define the Custom Property and OK, to exit Properties.
+4) To display the custom property in the Office document, a Field needs to be inserted. From the “Insert” tab, select QuickParts icon and select Field
+From Categories, select DocProperty and in the Field Properties, select the Property you want to link to the field.
+After you click OK, you should have a value of your custom property in your Word document.
+When you save and close the Word Document, you will see the custom property value updated in the file data card for this word document.
+Updating Fields
+In order to update the field, you can press F9 when the document is open or add a refresh macro.
+To create a refresh macro with an office document open, press Alt-F8 on your keyboard and select “Create”.
+In the Macro window, enter the text shown below.
+Sub AutoOpen ()
+‘
+‘ AutoOpen Macro
+‘
+‘
+Dim aStory As Range
+Dim aField As Field
+For Each aStory In ActiveDocument.StoryRanges
+For Each aField In aStory.Fields
+aField.Update
+Next aField
+Next aStory End Sub
+Save and close the Visual Basic, to complete the macro.

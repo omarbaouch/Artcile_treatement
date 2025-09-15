@@ -1,0 +1,9 @@
+Some users get into bad habits of working with files both in outside of the vault.  This will lead to issues, when other users open a document that references, files that were saved outside the vault. When another user attempts to open an assembly or drawing that contains files that were saved outside the vault, SolidWorks will report that these files cannot be found. To prevent this, in the User/Group Properties we can change the
+Warnings
+behavior to prevent check-in, if a referenced files are outside of the vault. Under the Warnings tab of User/Group Properties, select check-in from the
+Affected operation
+pull-down and select
+Outside SolidWorks Enterprise PDM
+.
+The stop sign indicates that this condition will prevent files from being checked in.  The user will see the same stop sign when they attempt to check and files that are outside the vault.
+The check-in button is grayed out, preventing the user from checking in files, until all files are in the vault.

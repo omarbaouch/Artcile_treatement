@@ -1,0 +1,18 @@
+New in
+SOLIDWORKS PDM 2020 Web2
+we have the history tab available to view the history of files. Web2 lets you see a read-only view of a file’s history.
+When a file is selected for details, the
+History
+tab is available as shown below:
+SOLIDWORKS PDM Web2 History Tab
+Web2 displays the table view that includes the
+Event
+column and customizable columns for:
+Version
+User
+Date
+Comment
+Click the settings icon to select or clear the columns to display for the SOLIDWORKS PDM Web2 File History.
+History Tab Settings
+SOLIDWORKS PDM Web2 Demo
+Learn more about the latest enhancements in SOLIDWORKS PDM Web2 2020 in the video below:

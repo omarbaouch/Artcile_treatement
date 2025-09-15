@@ -1,0 +1,90 @@
+SOLIDWORKS PDM variables can be mapped to both predefined properties, like Title and Author, as well as to custom-named properties within
+SOLIDWORKS
+files. In this guide, we’ll discuss how to map variables between SOLIDWORKS and SOLIDWORKS PDM.
+How To Map Custom Properties in SOLIDWORKS PDM
+Before beginning, you’ll want to identify which SOLIDWORKS Custom Properties you want to map with SOLIDWORKS PDM. These are typically defined in the SOLIDWORKS templates and can been seen by opening the file properties and viewing the Custom tab. In this example, we will map for a “Drawing Title” property.
+Launch the SOLIDWORKS PDM Administration either from the PDM Vault or the Windows program search.
+In the SOLIDWORKS PDM Administration tool, right-click on
+Variables
+and choose
+New Variable
+.
+Creating a new variable in SOLIDWORKS PDM
+In the Edit Variable dialog box, create a variable called “Drawing Title”.
+Click on New Attribute.
+In the Selected attribute section:
+a. For
+Block name
+, choose “CustomProperty”.
+b. For
+Attribute name
+, enter “DRAWING_TITLE”.
+c. Enter the SOLIDWORKS file extensions that include the property, separating them with commas (e.g., slddrw).
+Click
+OK
+.
+In the Card Editor, open the data card for the SOLIDWORKS Drawing file.
+Insert an edit box and link it to the newly created Drawing Title variable.
+Mapping variables to SOLIDWORKS Drawing Card
+Save the card and exit the Card Editor.
+Other Possible SOLIDWORKS Property Mappings
+Variable name
+SW property name
+Block name
+Attribute name
+Drawing Title
+DRAWING_TITLE
+CustomProperty
+DRAWING_TITLE
+Weight
+WEIGHT
+CustomProperty
+WEIGHT
+Revision
+REVISION
+CustomProperty
+REVISION
+Designed By
+DESIGNED BY
+CustomProperty
+DESIGNED BY
+Next Assembly
+NEXT_ASSY
+CustomProperty
+NEXT_ASSY
+Vendor
+VENDOR
+CustomProperty
+VENDOR
+How To Map File Properties in SOLIDWORKS PDM
+The general steps for mapping variables to file properties are the same as outlined above.
+Create the variable:
+Right-click on
+Variable
+and select
+New Variable
+.
+Enter a name for the variable.
+Click
+New Attribute
+.
+In the Selected attribute section:
+Choose a
+Block name
+.
+Enter an
+Attribute name
+.
+Input the file extensions that will use this variable mapping, separated by commas.
+Click
+OK.
+How To Associate the Variable with a PDM Data Card Control
+In the SOLIDWORKS PDM Card Editor, open the desired data card.
+Place a new control on the card.
+In the properties pane of the control, select the
+Variable
+you created.
+Configure any additional properties for the control.
+Save the card and exit the Card Editor.
+When a variable’s value is altered on the file data card, the associated property value within the file is automatically updated, eliminating the need for users to open and resave the file. After following the above steps, you’ll soon be the expert able to map variables in SOLIDWORKS PDM to your heart’s content. However, our team is always here to answer your questions or provide additional assistance should you need it.
+Do you have additional customizations needed for SOLIDWORKS PDM? Take a look at our Data Management Services here.

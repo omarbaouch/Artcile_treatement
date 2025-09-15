@@ -1,0 +1,19 @@
+In a previous article I discussed the use of $PRPSHEET
+to create a link between Part or Assembly Properties and a Drawing. The article described how to create the link, purely through SOLIDWORKS, and how to use
+SOLIDWORKS PDM
+to update the link.
+While there are advantages to having notes in a drawing linked to Part and Assembly Properties, there is one shortcoming. In order for the links to update, the Drawing needs to be opened and saved. In this article we will look at how
+SOLIDWORKS Task Scheduler can be used to bulk update these Drawings
+.
+What is SOLIDWORKS Task Scheduler?
+SOLIDWORKS Task Scheduler, is a standalone application, that is used to schedule SOLIDWORKS tasks. The Update Task, will open and save documents, in SOLIDWORKS, in order to update the SOLIDWORKS files.
+SOLIDWORKS Task Scheduler
+Update Files Task
+This task, can be used to update Drawings, that use $PRPSHEET. These updates are required, to reflect changes made to the referenced Part or Assembly Properties.
+Individual files can be updated or a folder(s) that contain files to updated, can be specified. The start date and time for the task to run needs to defined and the task can be scheduled to run daily, weekly or monthly.
+Update Task
+For Vaulted Drawings
+If the Drawings are in a PDM Vault, the following must be done, before running the Update Files task.
+Make sure that all the drawings to be updated are checked out. Remember an entire folder can be checked. Also, PDM Searches can be used to find the Drawings, that are known to need updating.
+In SOLIDWORKS, ensure that the SOLIDWORKS PDM Client add-in is set to be enabled at start-up.
+SOLIDWORKS Add-ins

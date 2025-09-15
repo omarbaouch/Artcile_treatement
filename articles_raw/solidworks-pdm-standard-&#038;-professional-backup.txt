@@ -1,0 +1,38 @@
+SOLIDWORKS PDM
+provides a secure environment for users to store files, and safely keeps archived copies of these files on a central server, preventing most potential causes of data loss on local user’s computers.
+However, it is essential that copies of the PDM Archives and Database backups be offloaded to a secure location to prevent catastrophic data loss due to hardware failure or ransomware attacks.
+There are 3 key elements of SOLIDWORKS PDM that need to be backed up and offloaded:
+1. The PDM Archives
+The PDM Archive folder contains the actual copies of files that users have checked into the vault.  A backup of the Archive Folder should be offloaded from the server nightly if possible.  The folder can be copied using any backup software.
+To locate the PDM Archive folder, launch the
+SOLIDWORKS PDM Archive Server Configuration
+utility on the PDM Server, right click on the vault name and select
+Properties
+.
+SOLIDWORKS PDM Archive Server Properties
+The archive folder location will be listed under “Path”.
+Archive folder location
+Server Folder
+2. The PDM Database
+In addition to the file copies stored in the Archive Folders, the PDM Database should be backed up and a copy of the backup (.bak file) offloaded nightly.
+If it is a
+SOLIDWORKS PDM Professional
+vault, the database can be backed up using an integrated Maintenance Plan run by SQL Server Agent in Microsoft SQL Server Standard.
+Backing Up PDM Databases Automatically with SQL Server Agent
+If it is a
+SOLIDWORKS PDM Standard
+vault, the database is hosted on Microsoft SQL Server Express, which does not include SQL Server Agent.  The database backup file can be either generated using a third party program, or through an SQL query run through Windows Task Scheduler.
+How To Schedule SOLIDWORKS PDM Standard Database Backups
+3. The PDM Archive Server Settings
+The final item that should be backed up and offloaded from the server are the PDM Archive Server Settings.
+Learn how in our related post
+.
+If these three elements are backed up and off loaded from the server, then restoring from a complete system failure can be done very quickly with a minimum of data loss.
+NOTE
+: If your SOLIDWORKS PDM Vault is connected to a SOLIDWORKS Manage Professional environment you will also need the additional items explained in the
+SOLIDWORKS Manage Professional Backup Process
+article
+Learn more about SOLIDWORKS PDM Administration
+Take a
+SOLIDWORKS PDM training course
+live online from Javelin to learn more about administrating the software

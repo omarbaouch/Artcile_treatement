@@ -1,0 +1,14 @@
+When working with SOLIDWORKS files from the Workgroup PDM vault, a copy of the files is cached to the local computer.
+It’s generally best practice to set a specific folder for these local copies of the files to be stored in so that they are easier to manage.
+To set the local “working” folder, right click in the Workgroup PDM tab in the Task Pane and select “
+SOLIDWORKS Workgroup PDM Options…
+”
+SOLIDWORKS Workgroup PDM Options
+Go to the
+Folders
+tab to see where the Workgroup files are currently being stored.  By default, the option “Use most recently used SOLIDWORKS or SOLIDWORKS Workgroup PDM folder” with be selected if you haven’t previously set Workgroup PDM to use a specific folder.  Generally, to keep your files better organized, it’s best practice to set a specific folder.  This can be done by selecting the radio button for “
+Use folder:
+”
+SOLIDWORKS Workgroup PDM Working Folder
+After clicking the radio button “Use Folder:”, a browsing window will launch where you can select the folder where you want to cache your Workgroup PDM working files.  If you decide to change the folder where you are storing the files, click “Browse…” to relaunch the window.
+Browse for a folder

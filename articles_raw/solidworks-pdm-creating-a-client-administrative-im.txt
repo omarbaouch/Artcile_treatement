@@ -1,0 +1,32 @@
+A SOLIDWORKS Administrative Image can be created in order to deploy a SOLIDWORKS PDM client installation, with preset options.
+From Windows Start enter “
+Run
+”
+Run Command
+Enter the location of the SOLIDWORKS PDM setup.exe. The location will vary depending on whether you are installing the client from the original DVD, or if you downloaded the installation files. For 32 bit installations the setup.exe is in the \setup folder. For 64 bit it is in the \setup64 folder. the command switch /a needs to be added.
+Command String
+When the welcome screen appears, click
+Next
+and accept the license agreement.
+Select the default language and click on
+Next
+.
+Default language
+If you use Items, select Item Explorer and select
+Next
+.
+Select the
+appropriate Product Type
+and click on
+Next
+.
+Product type
+If you choose the Editor option, you will then select which CAD product(s) you use.
+CAD type
+Select the location where you wish to save the client administrative image.
+SOLIDWORKS Administrative Image Location
+The SOLIDWORKS Administrative Image can then be launched from a shared network drive, some sort of portable media, through Windows Active Directory, or by scripting a Silent Installation.
+Learn more about SOLIDWORKS PDM Administration
+Attend our
+SOLIDWORKS PDM Administration training course
+either live online or in a Canadian classroom near you to learn more about administration for SOLIDWORKS PDM Professional

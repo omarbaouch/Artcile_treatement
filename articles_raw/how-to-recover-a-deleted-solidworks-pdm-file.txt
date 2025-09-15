@@ -1,0 +1,27 @@
+In the world of SOLIDWORKS PDM, nothing is truly gone until it’s
+DESTROYED
+.  If you mistakenly delete a file (we all make mistakes…right?), don’t worry because SOLIDWORKS PDM has your back and using the recycle bin we can recover a deleted file.
+Required permissions
+To restore a deleted file, requires the folder permission:
+Recover files from recycle bin
+Recover files from recycle bin permission
+How To Recover a Deleted File
+The SOLIDWORKS PDM recycle bin can be accessed via the folder properties;
+Accessing the SOLIDWORKS PDM recycle bin
+NOTE
+: In this example, I’m looking at the root level of the vault, therefore it will show ALL deleted files, to help narrow down the list of files you can use the parent folder where the file was deleted.
+Select the
+Deleted Items
+tab and enable the
+Include items in sub-folders
+checkbox.
+Include items in sub-folders
+From here, we can scroll to the required file, then;
+Right-Click
+>
+Recover.
+Recover Deleted Files
+The file will be then restored to the original location it was deleted from;
+Recovered Deleted File
+And the file history will be updated to reflect the recovery:
+Recovery entered in file history

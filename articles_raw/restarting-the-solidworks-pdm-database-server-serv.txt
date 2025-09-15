@@ -1,0 +1,41 @@
+The SOLIDWORKS PDM Database Server Service is a helper service that periodically checks the SOLIDWORKS PDM database for any new changes and then acts on these.
+The service handles operations such as:
+Automatic notifications
+XML exports
+Card list updates
+Cold Store schedule
+Replication schedule
+Cleaner Service schedule
+Index server administration
+The service itself is fairly lightweight as most of these tasks are fairly simple, it’s simply acting as a helper connecting the SQL database to other services.  Occasionally though the service can get overwhelmed and lock up.
+Normally this is first noticed when either the automatic notifications stop being processed or the scheduled replication does not happen.
+Restarting the Service
+The very first step in troubleshooting issues with notifications or with any scheduled events like replication or cold storage, is to restart the SOLIDWORKS PDM Database Server Service.
+This can be done by launching Services.msc on the server where the database service is running (in most cases this is on the server that is hosting the Microsoft SQL Server software).
+Then find the service “SOLIDWORKS PDM Database Server” (or “SolidWorks Enterprise PDM Database Server” if you are using an older version of the software) and click Restart.
+Restart the SOLIDWORKS PDM Database Server Service
+Automatic Restart
+If the service is repeatedly locking up, every few days or weeks, you can automate this process of restarting the service.
+Here are the steps:
+Step 1
+:  Create a batch file with the commands:
+@echo Off
+
+ net stop ConisioDbServer
+
+ timeout 10
+
+ net start ConisioDbServer
+Restart Server text file
+Step 2
+:  Go to the Control Panel > Administrative Tools and launch the Task Scheduler, then click “Create Task”
+Create Task
+Step 3
+.  On “General” tab assign a name for the task
+Restart database service
+Step 4
+:  On the Triggers tab schedule the task to run once per day.
+Schedule Start
+Step 5
+:  On the Actions Tab, add a New Action and set it to “Start a program”.  Click “Browse” and select the batch file created in Step 1.
+Start a Program Action

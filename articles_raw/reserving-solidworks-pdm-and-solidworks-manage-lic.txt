@@ -1,0 +1,81 @@
+Sometimes it is necessary to ensure that certain users always have a license of SOLIDWORKS PDM or SOLIDWORKS Manage available. This can be done by using the Options File for the SolidNetwork License Manager.
+In other posts we’ve discussed how the Options File can be used to change the
+default timeout for PDM licenses
+, the
+default timeout for SOLIDWORKS licenses
+, how to
+block borrowing of SOLIDWORKS licenses
+and
+how to reserve just SOLIDWORKS licenses
+, now let’s look at reserving SOLIDWORKS PDM and SOLIDWORKS Manage licenses for certain users.
+How to create a Custom Options File
+Step 1:
+Launch the SOLIDWORKS SolidNetWork License Manager program and click “Modify…” on the
+Server Administration
+tab.
+SolidNetWork License Manager – Modify
+Step 2:
+Select the option to “Activate/Reactivate a software license” and then click “Next >”.
+Activate/Reactivate a License
+Step 3:
+On the next screen check the box beside “Options File” and click “Edit”.
+Edit Options File
+Step 4:
+If you do not have an Options File created yet you will be presented with the option to create a new one in the default path.
+Create Options File
+Step 5:
+Now we write our Options File.  First, let’s set the Options file to be case insensitive. By default the Options file will read user and group names as being case sensitive.  This frequently leads to some confusion so avoid this, we will enable the keyword GROUPCASEINSENSITIVE:
+GROUPCASEINSENSITIVE ON
+Next, the groups will need to be defined.
+These are not the groups already setup in SOLIDWORKS PDM.
+The SNL Manager has no idea that those groups exist, so the groups for the purpose of reserving licenses MUST be explicitly defined in the Options File.
+The correct syntax will be to have the Option Keyword, in this case GROUP, followed by the group name, then each user name that is a member of the group, each separated by a space.  This is the PDM username NOT the Window username, which would be the case if you have set up groups to reserve SOLIDWORKS licenses.  So if you have already defined groups of users in the Options File to reserve SOLIDWORKS licenses, you may need to create entirely new groups, with different usernames to reserve the PDM licenses.  So as an example, we can define two groups for whom we want to ensure there will always be a license available, the senior designers and the PDM administrators:
+GROUP senior_design scott chris joe
+
+GROUP administrators justin andrew
+This is then followed by the actual reserve option definition.  The correct syntax will be to have the Option Keyword, in this case RESERVE, followed by the number of licenses to reserve, followed by GROUP and then the name of the group, each separated by a space.  So if we need to reserve three SOLIDWORKS PDM Professional CAD Editor licenses for the three senior designers, but just one PDM Professional Contributor license to be shared between the two administrators (who are not using SOLIDWORKS), we will add:
+RESERVE 3 swepdm_cadeditorandweb GROUP senior_design
+
+RESERVE 1 swepdm_contributorandweb GROUP administrators
+Reserving SOLIDWORKS PDM Licenses
+The Feature Names of the SOLIDWORKS PDM Professional products are:
+Product Name
+Feature Name
+CAD Editor
+swepdm_cadeditorandweb
+Contributor
+swepdm_contributorandweb
+Viewer
+swepdm_viewer
+Universal (PSL)
+swepdm_processor
+The Feature Names of the SOLIDWORKS Manage products are:
+Product Name
+Feature Name
+CAD Editor
+swmanagepro_editor
+Contributor
+swmanagepro_contributor
+Viewer
+swmanagepro_viewer
+Universal (PSL)
+swmanagepro_processor
+The Feature Names of the SOLIDWORKS PDM Standard products are:
+Product Name
+Feature Name
+CAD Editor
+swpdmstd_cadeditor
+Contributor
+swpdmstd_contributor
+Viewer
+swpdmstd_viewer
+Step 6:
+Once the Options File text is finished, save the sw_d.opt file and close it.
+Save SolidNetwork License Manager Options File
+Step 7:
+Ensure that all server information is correct and click Next to proceed to the next screen.
+Check Server Information
+Step 8:
+Click “Select All” to make sure all your SOLIDWORKS products are selected for reactivation, enter your contact email and click “Next>” to complete the reactivation process.
+Activate License
+Activation/Reactivation Succeeded

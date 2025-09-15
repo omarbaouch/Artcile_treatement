@@ -1,0 +1,17 @@
+In
+SOLIDWORKS PDM 2019
+, a new SOLIDWORKS PDM Sheet Preview drop list has been added to the eDrawings User Interface.
+When previewing SOLIDWORKS Drawing files, eDrawings .eDRW files as well as .DXF and .DWG files, the drop list will populate with a list of sheets in the file and allow the user to select which sheet they wish to see.
+List of Drawing Sheets
+This new interface is in addition to the existing functionality in previous releases that allowed users to right click in the preview and select the sheet they wished to see.  That functionality still works in SOLIDWORKS PDM 2019 as well.
+Right-click to view sheets
+How to take advantage of the SOLIDWORKS PDM Sheet Preview
+To take advantage of these improvements, you must ensure that you have upgraded your SOLIDWORKS PDM and SOLIDWORKS eDrawings installations to 2019.
+Then, to see the new drop list in the user interface, go to
+Display
+>
+Options
+and enable the option “
+Show full UI in SOLIDWORKS Preview
+”
+Show full UI in SOLIDWORKS Preview

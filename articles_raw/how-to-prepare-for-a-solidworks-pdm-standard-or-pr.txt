@@ -1,0 +1,27 @@
+With the introduction of
+SOLIDWORKS PDM Standard
+in 2016, the popular but outdated SOLIDWORKS Workgroup PDM started to be phased-out, and SOLIDWORKS 2017 SP5 was the latest version to include it. As of version 2018, companies have the choice of either migrating to
+SOLIDWORKS PDM Standard or to SOLIDWORKS PDM Professional
+.
+This article is intended for users whose companies are migrating to either one of them, especially for the period when the actual migration is being done by Javelin and the Workgroup vault is made read-only.
+SOLIDWORKS Workgroup PDM Migration Steps
+Check-in all your files
+Your IT Department or the person responsible for the implementation will advise you when it is time to check-in all your files. After that moment, the Workgroup vault will still be available, but will be read-only. You will not be able to make any further modifications to the vault – that is, you will not be able to add or modify files, delete files, create new projects, take or release ownership and so forth.
+However, you will be able to search the vault and check out (obtain) files to your local folder.
+Important note
+: Any files that are not checked in will not be migrated to the new vault or will be migrated in a previous version.
+Work offline
+Javelin will take a few days to perform the migration. During that period, you will have to work offline if you need to create any new projects in SOLIDWORKS or make modifications in existing projects. It is important that you keep track of your changes.
+A few strategies that you can use are:
+Create a separate folder for each project that you are working on.
+Keep notes of your current changes; for instance, you can keep an Excel spreadsheet with a list of files that you are modifying.
+Pay attention to the Modified Date of your files. You may want to sort your folders by that column to identify the files that you saved in SOLIDWORKS.
+Modified date
+Copy your modified files back to the new vault
+After the migration is finished, Javelin will install the new vault. All your files will be in the vault exactly as they were when the Workgroup vault was
+frozen.
+You will have the opportunity to learn all about the new software either with your Javelin representative or with the internal implementation team. As part of the implementation, you will be shown how to copy the files you have modified while offline as new versions of existing files and how to copy the new files that you have created as new files in the vault.
+Soon, you will realize how much easier your new SOLIDWORKS PDM Standard or Professional is compared to Workgroup.
+Need expert help with your SOLIDWORKS Workgroup PDM migration?
+Contact us about our SOLIDWORKS PDM Upgrade Service
+and our team of Certified PDM Experts can help you move to SOLIDWORKS PDM Standard or Professional

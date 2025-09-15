@@ -1,0 +1,8 @@
+While I was creating a new SOLIDWORKS PDM vault for another article I was writing, I was about to race through the Configure Vault window, like I normally do. When the oft forgotten ‘Use a configuration based on an administrative image export file’ option caught my eye:
+Create New Vault
+I so rarely use this option that I could almost question its worth. Well this option does have some merit and to understand what it does, we need to look at PDM Administration.
+Any node of the Vault settings or all of the Vault settings can be exported from the right-mouse shortcut menu and then imported into another vault.
+Export Vault
+Let’s say we want to create a Sandbox (test) Vault, which is always a good idea. Now when you create a new vault, it can be based on the exported SOLIDWORKS PDM Administrative Image Vault settings mentioned earlier.
+Use a configuration based admin export file
+You may be saying to yourself, “so what, I can drag and drop nodes between vaults”. While that is true, and drag and drop may be faster, exporting a vault’s settings allows you to save snapshots of your vault, that can then be tested under various conditions. At any time, you can reload these snapshots/vault setting exports, to perform additional tests. You can even export individual nodes and test different combinations of those nodes.

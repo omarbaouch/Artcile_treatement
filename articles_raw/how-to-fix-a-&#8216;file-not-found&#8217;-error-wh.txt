@@ -1,0 +1,26 @@
+SOLIDWORKS PDM administrators may want to save their vault settings as a CEX file for a number of reasons; for instance, to create a sandbox vault or to provide it to Technical Support.
+Our exporting SOLIDWORKS PDM Vault Settings article
+contains a series of steps to generate a CEX file.
+However, sometimes you may get an error stating that
+The file could not be found
+, without any details:
+File not found message shown when trying to save a CEX file
+This message means that a file used in a Template cannot be found. To fix this error, follow these steps:
+Log in to the Administration tool and expand the Templates node. Note that the Templates shown in that node will be different in each vault. The example below show only one Template, called
+Engineering Change Request.
+List of Templates
+Open each template (double-click or right-click and Open)
+In the dialog shown, navigate to
+Files and Folders
+on the left pane
+A PDM Template
+Browse the Folders list and look for any folders that have files in the list
+Files in the folder <folder name>
+, on the right. Note that a PDM template can have a folder structure, with multiple files in different folders. You must verify each one of the folders.
+When you find a file, double click the file name. That will open another dialog.
+Edit Template File dialog
+Make sure that the file referenced in the
+Template source file
+field exists. That file can be stored in the vault or outside. It may have been removed or renamed.
+There is a good probability that your uses no longer use that template, as they would see an error when trying to use it. In that case, you may prefer to simply delete the Template from the vault entirely.
+After fixing all occurrences of missing files, in all Templates, you can try to export the settings again and it will work without any errors.

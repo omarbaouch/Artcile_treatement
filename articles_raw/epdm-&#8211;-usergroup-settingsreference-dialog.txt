@@ -1,0 +1,9 @@
+The Reference Dialog options, of User/Group settings, controls how references are handled when file are checked out or when the state is changed. These options can be accessed bey right clicking on a user or group and selecting Settings.
+Check out files silently without showing the check out dialog box,
+will hide the Check Out dialogue box, forcing the user to check-out each referenced file indvidually. This option can help prevent accidental check out of sensitive files.
+Try to check out all referenced files when the referencing file is checked out
+, will attempt to check out all referenced files. This will remove the need to manually select the referenced files from the check out dialogue box. If this option is used in conjunction with
+Check out files silently without showing the check out dialog box,
+all referenced file will be checked out if possible (files that are already checked can not be checked out).
+Do not mark referenced files when changing state,
+will not select all referenced files  when performing a state change . This can prevent referenced files from accidentally being moved to the wrong state.

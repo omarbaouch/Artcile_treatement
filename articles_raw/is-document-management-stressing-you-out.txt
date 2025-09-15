@@ -1,0 +1,42 @@
+As your organization expands, data volume grows and stress becomes commonplace. If you’ve ever lost data, had your work overwritten or suffered from version control issues, you know the stress that can occur. SolidWorks Enterprise PDM can end the pain and suffering of document management and bring order to your increasingly complex workflow. Learn how in the video below…
+Finding files is a Pain!
+How often do you find yourself spending valuable time searching for a 3D model or a document? Have you ever had to recreate a model because you could not find the original? Have you ever spent time creating a design only to discover later that there is a similar design that would have met your needs? If you are not using an integrated PDM system, chances are you are feeling this pain!
+EPDM Search Tool
+Enterprise PDM Stress Relief
+SolidWorks® Enterprise Product Data Management (EPDM) centralizes the storage of all your engineering data and related files to give you the following benefits:
+Search for data in multiple ways
+, using parameters such as document or file name, contained data, or custom properties like part number, description, and current workflow state (for example, released or in process).
+Save searches for easy reuse
+, individually or across the enterprise.
+Use integrated Windows Explorer search
+and browse capabilities to reduce desktop clutter and find files faster.
+Data Is Getting Overwritten!
+What happens once you find the file that you need? How do you make sure that you don’t overwrite a file or work with the wrong revision? Do personnel outside of engineering—such as manufacturing, purchasing, and field service people require access to design data? How can they view the file they need without accidentally corrupting, deleting, or changing a design?
+File Status in SolidWorks
+Enterprise PDM Stress Relief
+SolidWorks® Enterprise PDM allows for collaboration throughout your organization while keeping people connected, current, and working on the same set of data:
+Prevent files being overwritten accidentally
+through integrated version control.
+Protect data from theft, damage, or misuse
+with secure login.
+Automatically lock files in-use
+so other users can view but not make changes to it at the same time.
+No Data Workflow!
+Do users follow your company’s designated workflow processes? Or does everyone follow their own individual approach? You may be finding it time consuming and painfully difficult to manage data effectively without automated workflows.
+EPDM Workflow
+Enterprise PDM Stress Relief
+SolidWorks Enterprise PDM ensures that everyone follows your designated processes by providing tools for defining and formalizing your organization’s approach to product development. SolidWorks Enterprise PDM benefits include:
+Easily model your company workflows and processes
+.
+Increase productivity, quality, and accountability
+by automating workflows and approval processes.
+Instantly access audit trails
+to meet internal and external reporting requirements, document quality control and standards compliance, and drive process improvement.
+Automatically create files
+in common formats, such as PDF, at the end of an approved process.
+Learn more about Enterprise PDM
+SolidWorks Enterprise PDM manages and synchronizes design data across your product development team with a single, easily deployable solution tightly integrated with SolidWorks applications. You can learn more at an
+EPDM Webinar
+and view more
+EPDM demonstrations on our YouTube channel
+.

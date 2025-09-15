@@ -1,0 +1,23 @@
+Some ERP systems limit the description of a part to maximum of 30 characters. This can be controlled for SOLIDWORKS parts when using SOLIDWORKS PDM. In SOLIDWORKS PDM, you can set the character limit of the Description field.
+By default this setting is disabled, to enable it;
+In the
+SOLIDWORKS PDM Administration Tool
+, open the
+SOLIDWORKS Part Card
+Open the SOLIDWORKS Part Card
+Select the
+Description
+Edit-box control, under the
+Edit- box properties
+>
+Validation
+(Text length),
+Check
+>
+Max:
+(enter the maximum number of characters)
+Set the Description character limit
+Press
+Save
+to apply the changes.
+NOTE: Any new files added to the vault will be effected by this change. The existing files in the vault are not effected unless there is an update in the file card.

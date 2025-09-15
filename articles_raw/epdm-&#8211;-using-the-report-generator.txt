@@ -1,0 +1,19 @@
+The SolidWorks  PDM Report Generator provides the means of querying a SQL Database, without running the query from within SQL Management Studio
+In order to run Reports, a User or Group, must be granted this permission. This permission is set in SOLIDWORKS PDM Admin, for a User or Group
+Admin Permissions
+Once permissions have been granted, the Report Generator Window can be launched form the Tools pull-down, in the Local Vault View.
+Accessing Report Generator
+Initially, there may not be  any available Reports, in the Report Generator Window. In order to access Reports, click on the Import Query icon and select the Report you want.
+Importing Query
+Some sample queries are distributed with SolidWorks PDM. The sample Reports can be accessed on a client, by slecting the Report Examples 1.crp in the SolidWorks PDM installation directory.
+Selecting Query
+The Report Examples consists of 9 reports (at the time that this article was edited) and are shown in the below.
+List of Queries
+Additional Reports can also be downloaded from the Solidworks Knowledgebase and you can generate your own.
+When importing a Report you will prompted to choose which Users and Groups will be able to run a Report. Only the Users and Groups who were given permissions to run reports, in PDM Admin, will be listed.
+Granting Permissions to Individual Reports
+Once the Reports have been Imported, they can be launched, by selecting one or more and clicking on Run. The results will be listed on the lower panel.
+Query Results
+Also in the Report Generator Window, you can save the result of your queries and choose which vault to run the query on.
+SolidWorks PDM Local Vault View
+If you wish to create your own reports, the SolidWorks Knowledge Base Article ‘S-013369’ explains how this is done. You can also search the Javelin blog, for articles on creating your own Reports

@@ -1,0 +1,11 @@
+<p>In a previous blog “<a title="Safely Deleting and Recreating a Local Vault View" href="https://www.javelin-tech.com/blog/2011/06/epdm-deleting-vault-view/">Safely Deleting and Recreating a Local Vault View</a>”, I looked at how the local vault view can be deleted without losing the local files. But what can be done if the vault view is deleted accidentally or cannot be accessed, thereby making it impossible to perform the steps in the aforementioned blog article.<br />
+<!--more--></p>
+<p>In this situation:</p>
+<ol>
+<li>Create a new vault view.</li>
+<li>Log into this vault view as the PDM “admin”</li>
+<li>Do a search to determine which files are checked out by the user, that the local vault view is being re-created for.</li>
+<li>Find the files in the vault and perform an undo check-out each file.</li>
+<li>Once all files have been released, you can proceed to step 5 of “Safely Deleting and Recreating a Local Vault View”.</li>
+</ol>
+<p>Note: These steps are bases on the assumption that the local files exist in some other location, such as a backup. If the local vault view is deleted and the files are not backed-up all local files will be lost.</p>

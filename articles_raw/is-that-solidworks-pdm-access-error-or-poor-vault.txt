@@ -1,0 +1,5 @@
+When access errors start to occur,the cause may not be a connection issue between the client and the server.
+Full drive error message
+Even though the logs seem to indicate that the error is with communications.
+Log error
+The actual issue may be a full drive. There are a number of articles on our sight that deal with communications errors, but a first step maybe to check the condition of the drive, where the archived files are stored.

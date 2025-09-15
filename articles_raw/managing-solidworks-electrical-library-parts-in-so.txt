@@ -1,0 +1,26 @@
+Managing library parts efficiently in
+SOLIDWORKS Electrical
+can be critical for keeping projects organized and ensuring that data is consistent across teams. In a recent webinar, we discussed how SOLIDWORKS Electrical integrates with
+SOLIDWORKS PDM
+to help manage manufacturer parts within the PDM environment.
+By combining the powerful schematic tools in SOLIDWORKS Electrical with the secure, structured environment of PDM, companies can streamline workflows, protect intellectual property, and improve collaboration between electrical CAD and mechanical CAD users. By syncing the manufacturer’s parts library to PDM and using variable mapping, users are provided the flexibility, security, and automation that saves time for all users.
+Syncing Libraries to SOLIDWORKS PDM
+By synchronizing the electrical library into SOLIDWORKS PDM, users can quickly and easily organize and manage SOLIDWORKS Electrical manufacturer parts. This is as simple a process as it can be. With one click of a button, SOLIDWORKS Electrical imports manufacturer part information from the classification library directly into the PDM environment.
+Why is this important? SOLIDWORKS PDM provides a secure vaulting environment that users rely on to secure data and ensure that information is not floating around outside controlled access. Once the sync is complete, PDM organizes the information into a familiar structure.
+Electrical Classification structure exported to SOLIDWORKS PDM
+Classifications from SOLIDWORKS Electrical translate seamlessly into folder structures within PDM, making it easy for users to find what they need. The files appear in a swe.cvd format. This may be new to most users, but the swe.cvd format is specifically built to handle electrical data, ensuring smooth integration while still maintaining the PDM organization users are used to.
+Updating Components and Syncing to The Electrical Library
+Syncing is more than just for the initial setup. Any time a change is made to a component, users can push that update back into PDM by clicking the synchronize button again. This can be as simple as changing the description of a manufacturer part or adding new manufacturer information. Re-syncing the library ensures consistency across both Electrical and PDM platforms without requiring manual file management.
+Data being synced from Electrical to PDM
+Data synced to PDM can leverage the functionality built into the PDM File Explorer interface. If a manufacturer part is in use, PDM shows this information in the Contains and Where Used tabs. Users can also see the bill of materials for an Electrical project without leaving the PDM interface.
+Controlling Data with Variable Mapping
+The synchronization deployment is powered by the SOLIDWORKS PDM Administration tool. The SOLIDWORKS Electrical Integration Administration is where all synchronization settings are applied. In previous years, SOLIDWORKS Electrical and the PDM Integration tool were separate installs that needed to be synced. Starting with
+SOLIDWORKS 2025
+, the PDM-Electrical integration tool is built into the SOLIDWORKS PDM Administration tool.
+SOLIDWORKS Electrical integration add-in in the PDM Administration tool
+Within the SOLIDWORKS Electrical Integration Administration tool, users can determine how attributes like descriptions, contract numbers, or folder paths are pushed or pulled into Electrical and PDM. For example, if a user wants the contract number stored in PDM to override the value in Electrical, the mapping direction can simply be flipped.
+Setting up variables and mapping directions
+This flexibility means users are not locked into a one-directional workflow. Each company can define rules and mappings that best match their naming conventions, folder structures, or documentation needs.
+Extending Collaboration Between Teams
+Managing the SOLIDWORKS Electrical manufacturer parts library in SOLIDWORKS PDM does not need to be complicated. With the integration between SOLIDWORKS Electrical and PDM, teams can synchronize library components with a click of a button, quickly push out updates, and control what data flows where. This automation and flexibility help protect user data while keeping it organized in a manageable environment. Whether users are managing thousands of parts or just a handful of components, this workflow ensures consistency between PDM and the Electrical library.
+Looking to connect your SOLIDWORKS Electrical and SOLIDWORKS PDM environments? Learn about our Integration Service here.

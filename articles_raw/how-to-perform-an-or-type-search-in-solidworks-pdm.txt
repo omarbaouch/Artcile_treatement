@@ -1,0 +1,30 @@
+In SOLIDWORKS PDM entering values within multiple controls on a search card, performs an
+AND
+condition type search:
+SOLIDWORKS PDM ‘AND’ condition type search
+This is essentially performing a search for any files with the
+Description Variable
+Plank
+AND
+the
+Material Variable
+Mahogany
+, returning any files containing both values.  But, what if you wanted to search for two different material types with the description variable containing
+Plank
+?
+How to run an OR Type Search
+Using the Variables tab of the default
+Complete Search card
+, we have much more control over our search and can define different operators such as
+OR
+.  Therefore to perform a search for files containing the
+Description Variable
+Plank
+AND
+have the
+Material Variable
+Mahogany
+OR
+Oak
+, would look like this;
+SOLIDWORKS PDM ‘OR’ condition type search

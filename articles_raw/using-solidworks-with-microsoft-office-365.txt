@@ -1,0 +1,11 @@
+DS SOLIDWORKS does not officially support the use of
+Microsoft Office 365
+and similar outsourced mail servers. SOLIDWORKS does provide a Knowledgeable article that offers a possible workaround. This article contains a link to a utility for creating a
+E-MailRelay
+, as well as a PDF containing general instructions on using this utility.
+NOTE
+: This utility is not a purpose-built SOLIDWORKS PDM solution and implementing it does require knowledge of email server structures.
+Implementing the relay is something that should be done by your company IT department. Further,
+the use of this utility is not guaranteed by SOLIDWORKS
+. It is up to the individual organization to implement and test this solution. Your SOLIDWORKS Value Added Reseller should be able to point you to the Knowledge base article mentioned in this blog.
+E-Mail Relay

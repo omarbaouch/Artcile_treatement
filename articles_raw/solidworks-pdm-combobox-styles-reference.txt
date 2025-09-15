@@ -1,0 +1,31 @@
+Within the
+SOLIDWORKS PDM
+(Data) Card Editor, there are four different Combobox Styles to list data;
+Combobox Dropdown
+,
+Combobox Simple
+,
+Combobox Droplist
+, and a
+Listbox
+:
+Combobox Styles
+I find that I’m always forgetting the difference between them, and it’s not clear from within the editor to see the difference.  The purpose of this article is to act as a SOLIDWORKS PDM Combobox Styles cheat sheet, so you no longer have to jump back and forth between explorer and the editor when creating cards.
+Combobox Dropdown
+Combobox Dropdown
+Combobox Simple
+Combobox Simple
+With a
+Combobox Dropdown
+and a
+Combobox Simple
+, users have the option to either enter their own value or select one from the list.
+Combobox Droplist
+Combobox Droplist
+Listbox
+Listbox
+With a
+Combobox Droplist
+and a
+Listbox
+, users only have the option to choose a value from the predefined list.

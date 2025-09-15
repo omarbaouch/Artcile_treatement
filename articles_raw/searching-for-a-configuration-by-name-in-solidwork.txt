@@ -1,0 +1,14 @@
+In SOLIDWORKS PDM using the Complete Search Card you can search for a specific configuration by name.
+Note: This option was added in Enterprise PDM 2011, if you don’t have the necessary check-boxes you may need to update your complete search card
+Searching For a Configuration By Name
+Open the Complete Search Card
+Open the Complete Search Card
+Select the ‘History’ Tab
+Insert the name of the desired configuration name
+Ensure ‘Look in configuration/sheet names’ is checked
+Select the ‘History’ Tab
+Hit ‘Enter’ to complete the SOLIDWORKS PDM Search Configuration Name
+Completed search for a configuration by name
+Need SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

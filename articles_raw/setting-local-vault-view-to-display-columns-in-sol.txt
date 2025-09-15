@@ -1,0 +1,8 @@
+In order to view the columns correctly in the Windows Explorer View of the Local Vault of
+SOLIDWORKS EPDM
+.
+Local Vault View
+The View Menu for Windows must be set to Details as shown in the figure below.
+View Options
+This can be done by clicking on the Windows More Options icon on the top right of Windows Explorer.
+More Options

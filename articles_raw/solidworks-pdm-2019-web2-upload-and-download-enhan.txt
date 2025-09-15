@@ -1,0 +1,30 @@
+With the new enhanced,
+redesigned version of SOLIDWORKS PDM 2019 Web2
+, we can now upload and download complete file sets with ease.
+SOLIDWORKS PDM Web2 Upload a complete file set
+Select the destination folder
++
+>
+Check In File Structure
+Check in File Structure
+Select the local folder containing the files to upload
+Click
+Upload
+Select the local folder containing the files to upload
+Review the check-in dialog
+Select
+Check In
+Review the check-in dialog
+The complete file set is uploaded and checked in:
+The complete file set is uploaded and checked in
+SOLIDWORKS PDM Web2 Download the files and folders complete with references
+Navigate to the folder and select the assembly you’d like to download
+Click
+Download
+Select
+Download with references
+Select the appropriate settings and click
+Download
+The assembly and all the referenced files are downloaded to a compressed folder on your local machine
+Wrap Up…
+Previously, to upload or download a file was a manual process…it had to be completed separately for each file, which made it a tedious process to say the least.  With these new enhancements, time will be saved for external users accessing the vault via Web2, making them more efficient and allowing them to continue their work while offsite or on the road with ease.

@@ -1,0 +1,45 @@
+In this article, we are going to look at how to enable the content search in SOLIDWORKS PDM Professional using the Windows Search Service.
+This features requires:
+SOLIDWORKS PDM Professional version 2016 SP0 or newer
+The archive server service must be able to access the archive folders via locally attached or SAN storage. Network shares are not supported.
+NOTE
+: In this example, the Archive Server and SQL Server are on the same system.  If they are on separate systems, please see
+part 2 of this article
+Step 1 – Install Windows Search
+Server Manager > Manage > Add Roles and Features
+Add Roles and Features
+Features > Select Windows Search Service > Next
+Then click Install
+Windows Search Service
+Confirm via services that the Windows Search Service is running, if not start it;
+Confirm and Start Service
+Step 2 – Configure Windows Search to index the vault archives folder
+Control Panel > Indexing Options
+Indexing Options
+Modify > Add the archive folder location including all of its subfolders > Ok
+Add the archive folder location including all of its subfolders
+Step 3 – Configure the vault to use Windows Search for indexing
+Administration Tool > Indexing
+Check Index File Vault Archives
+Ensure Windows Search is selected for the Indexing Method
+Select the Archive Path > Edit
+Configure the vault to use Windows Search for indexing
+Browse and add the archive path for the SQL Server > Hit Ok and close both dialogs
+Add the archive path for the SQL Server
+Step 4 – Complete
+We should now be able to search the content of files within the vault via:
+Complete Search Card > Content Tab
+Search in Content
+Search in Content
+Wrap up…
+By default the Windows Search Service supports indexing the following files types;
+Microsoft Office files
+HTML files
+MIME messages
+plain-text files
+To learn how to include PDFs and for SOLIDWORKS files please
+subscribe to our blog for future articles
+.
+NOTE
+: In this example, the Archive Server and SQL Server are on the same system.  If they are on separate systems, please see
+part 2 of this article

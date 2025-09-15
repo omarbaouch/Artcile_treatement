@@ -1,0 +1,63 @@
+Have you ever wanted to change the location of a SOLIDWORKS PDM File Card? Making this change is as simple as saving it into the new folder location and then deleting the old copy of the card from the Administration tool.
+In the steps below, we’ll move a SOLIDWORKS PDM File Card named ‘
+Test Card
+‘ from its existing location (
+Folder A
+) to a new location (
+Folder B
+).
+1.
+Open the Administration tool
+Select
+SOLIDWORKS PDM
+>
+Administration
+from the Windows
+Start
+menu.
+When the SOLIDWORKS PDM Administration dialog box opens, expand or double-click the vault you want to manage and log into it.
+2.
+Expand the list to show the card being moved
+Expand
+Vault
+>
+Cards
+>
+File Cards
+Step 2- Starting Location
+3.
+Right-click the SOLIDWORKS PDM File Card and select
+Open
+Step 3- Open card
+4.
+Once the ‘Card Editor’ window opens, perform a
+Save As
+File
+>
+Save As
+Step 4- Save As
+5.
+From the ‘Save Card’ dialogue box
+Navigate to the intended folder location
+(Folder B)
+. You can either give the file card a new name or simply re-use the original name. Select
+Save
+and then close the
+Card Editor
+window.
+Step 5- Set a new location
+6.
+Delete the old SOLIDWORKS PDM File Card
+In the image below, both the old and new file cards can be seen with their respective locations shown to the right. Generally, it is a good idea to delete the
+old
+file card at this stage. This helps to keep the vault settings environment from becoming cluttered.
+Right-click the old file card and select
+Delete
+. Select
+Yes
+to confirm the deletion when prompted.
+Step 6- Delete old card
+The old card and folder location have now been replaced with the new card/location.
+New Location
+With this process complete, the associated file type(s) will now show the file card when saving in the new folder and any of its subfolders.
+To learn more SOLIDWORKS PDM tips, join one of our expert-led webinars.

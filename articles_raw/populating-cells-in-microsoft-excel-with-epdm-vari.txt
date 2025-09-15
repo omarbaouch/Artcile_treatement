@@ -1,0 +1,28 @@
+In prior posts we have shown you
+how to link EDPM variables to the custom properties of a Microsoft office document
+.
+What if you need to push that data into the cells of a
+Microsoft Excel Spreadsheet
+?
+To be able to write any properties back to specific cells in an Excel document, you will need to write an additional VB Macro that will update the files upon opening with any changes made with Enterprise PDM Variable mapping.
+In the case of updating a cell in the spreadsheet that would carry a value for a Project Name
+The steps to follow in order to associate the cell in the spreadsheet to the EPDM variable would be:
+Define a name for specific cell that would be updated (“projectname” for example in this example) This could be done by naming the cell (Option in the upper left-hand corner of the sheet)
+Define appropriate data type (test, number, Date etc) to the cell based on type of value it will be displaying.
+Define variable mapping to Excel custom properties for Enterprise PDM variables.
+Add the following VB code in the sheet that will trigger on a Document open action (Press Alt+F11 in your spreadsheet to open the VB editor and place the code)
+Private Sub Workbook_Open()
+Sheet1.Range(“Projname”).Value = ThisWorkbook.CustomDocumentProperties(“Project name”)
+Sheet1.Range(“Projnum”).Value = ThisWorkbook.CustomDocumentProperties(“ProjectNumber”)
+Sheet1.Range(“Title”).Value = ThisWorkbook.BuiltinDocumentProperties(“Title”)
+MsgBox (“Properties updated – save the document before exiting”)
+End Sub
+In our example, the sample properties are mapped to the values on the Excel data card that gets installed with the default EPDM vault.
+These values are:
+a. Project Name
+b. Project Number
+c. Title
+Additional properties can be mapped/updated using the same steps mentioned earlier.
+Please use the above as a sample only.
+NOTE:
+Starting with Office 2007, macro enabled Excel files are to be saved as .xlsm files

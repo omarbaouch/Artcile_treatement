@@ -1,0 +1,26 @@
+By default within a replicated SOLIDWORKS PDM Professional environment, 10 files are replicated per transfer to the target server(s) during scheduled replication.  If you’re experiencing bottlenecks or low bandwidth; it’s a good idea to reduce this number, or, if you have available bandwidth; the number of files can be increased to speed up replication.
+This value can be adjusted at any time and is a useful tool for troubleshooting communication problems within a replicated environment.
+How to adjust the number of files that are received per transfer to the target server
+NOTE
+: Steps within this article involve editing the Windows Registry.  This process can severely damage the operation of installed programs and should only be done by someone that is familiar with working in the Windows Registry.
+On the target server;
+Open the registry editor and browse to the following key;
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer
+Navigate to Key
+Create a new DWORD value named
+ReplicationThreads
+RMB > New > DWORD (32-bit) Value
+New DWORD
+Select the new key
+ReplicationThreads
+RMB >
+Modify
+Replication Threads Modify
+Edit the key as follows;
+Base = Decimal
+Value Data = Define the number of files to be received by the target server
+Set The Value
+The number of files set must be between 1 and 64
+Hit OK and close the registry editor.
+To incorporate the changes, a restart to the archive server service is required;
+Restart the archive server services

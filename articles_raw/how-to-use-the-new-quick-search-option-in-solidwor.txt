@@ -1,0 +1,30 @@
+With the greatly anticipated Quick Search feature added in SOLIDWORKS PDM 2020, users have a quick and convenient way to search
+favorite variables
+directly from within Windows Explorer.  We can even use
+AND, OR, and NOT Operators
+to define searches with more accuracy, returning efficient results with ease.
+How To Use SOLIDWORKS PDM Quick Search
+As mentioned previously, Quick Search is easily accessible as it’s integrated within the explorer window;
+SOLIDWORKS PDM Quick Search
+Via the dropdown, we can customize the search as required by the following options;
+Specifying variables to search
+To include a variable we need to select it, and all checked values will be searched
+We can specify where to search in from the
+Current Folder
+,
+Current Folder & Subfolders
+or
+All Folders
+;
+Search the
+Latest Version
+or
+All Versions
+of files
+So, for example, if we wanted to look for all files that contain “Side Table” OR “Panel”  within the file name or description variables of the latest version of the files in the entire vault;
+Success!
+SOLIDWORKS Quick Search Results
+Where can I learn more about creating custom searches?
+If you’re interested in learning more about getting the most out of the SOLIDWORKS PDM search tool…Search Card Creation and customization, and much more are covered within our
+Administering SOLIDWORKS PDM Course
+.  Helping users customize the vault to the company’s specific needs, and creating a better user experience.

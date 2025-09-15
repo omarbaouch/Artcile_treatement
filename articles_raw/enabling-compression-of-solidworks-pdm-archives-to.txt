@@ -1,0 +1,33 @@
+An excellent way to free up some hard drive space on your SOLIDWORKS PDM Archive Server, is to enable compression of the archives.
+Only older versions of files will be compressed when this option is enabled
+, the latest version of all files will always be uncompressed to improve performance.  The compression option is Archive Server specific, so if there are multiple replicated Archive Servers it will need to be enabled on each one to have the files be compressed on that server.
+When replication takes place, the file is uncompressed at the source server before being replicated to the destination server, so this will slightly increase the time it takes to perform the replication of the file, though it shouldn’t be very noticeable to users in the case of on demand replication.  Since most scheduled replication takes place nightly, there aren’t likely to be that many older versions created during a single day, so the impact on the scheduled replication performance should be fairly minimal.  The only noticeable effect on performance would be when doing a full replication to a new Archive Server, this may take a bit more time than on an uncompressed vault.
+One thing to keep in mind though, starting with SOLIDWORKS 2015, .sldprt .sldasm and .slddrw files are already internally compressed when they are saved (there is about a 50-80% decrease in file sizes from the previous years), so compressing these files will not really save much space (about 2%).  However
+any files last saved in SOLIDWORKS 2014 or older, or any non SOLIDWORKS files, will benefit from enabling compression.
+SOLIDWORKS 2015 Files
+Non-SOLIDWORKS Files
+Here are the steps to enable compression on an Archiver Server:
+Step 1:
+In the PDM Administration console, double click “Group Policies” to launch the Local Group Policy Editor.
+Group Policies
+Step 2:
+Under Local Computer Policy > Computer Configuration, right-click Administrative Templates and select “Add/Remove Templates”
+Add/Remove Templates
+Step 3
+: Click Add to import the SOLIDWORKS PDM Archive Compression Template
+Add to import template
+Step 4
+:  In the Open dialog, browse to the SOLIDWORKS PDM installation files and go to the SWPDMClient\support\polices folder.  There select the file PDMWorks Enterprise.adm and click Open.
+Open Policy
+Step 5
+:  Expand the Administrative Templates > Classic Administrative Templates (ADM) > SOLIDWORKS PDM Settings and select Archive Server.  Double click on the setting for “Archive Compression”.
+Archive Compression
+Step 6
+:  Enable Archive Compression and set the schedule.  The format is “minute hour weekday” with * acting as a wildcard.
+NOTE: if you enter all wildcards for the format: ‘* * *’ it will launch compression every minute of every day. DON’T USE ‘* * *’.
+You should only run the compression schedule ONCE per day
+, running it too frequently would result in performance degradation on the Archive Server.  Schedule the Compression Schedule to run AFTER the scheduled backup of the Archive Files.  For instance use 0 2 * to run the compression at 2:00 AM (server time) every day.
+Compression Schedule
+Step 7
+:  Launch the Archive Configuration Tool and Restart the Archive Server for the changes to take effect.
+Restart Archive Server

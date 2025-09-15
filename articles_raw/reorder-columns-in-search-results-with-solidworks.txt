@@ -1,0 +1,17 @@
+Whether you’ve just created your vault view and added files into your vault, or if you’re a long time user of PDM. New in
+SOLIDWORKS PDM 2020
+, you now have the capability to reorder columns right in your search window and have that change automatically saved into the Administration tool!
+When first doing a search for files in a folder for “NOT 56*”, i get the results view below:
+Search Columns
+If I had wanted to switch the columns for
+File Type
+and
+Found In
+, I simply need to drag the columns over, resulting in the image below:
+Search Columns Switched
+Now the next time I use the search field, my column switch changes was remembered via the Registry Keys and that’s the order that was pulled. See below for a different search:
+Different Search – Search Columns
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

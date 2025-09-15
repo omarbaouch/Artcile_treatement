@@ -1,0 +1,22 @@
+There are a number of Tools that can be used to determine if SQL is set up correctly as described in the SOLIDWORKS PDM / Manage Installation guide. The first two tools are located in the SQL Server Install Center and are located under Tools:
+System Config checker
+Install SQL features
+SQL Server Installation Center
+The SQL Server Installation Center can be accessed from the Microsoft SQL Server program group (Windows Start)
+Accessing SQL Server Installation Center from Windows Start
+System Configuration Checker
+The first of the two tools we’ll look at is the System Configuration Checker. In operation this tool is similar to the Install Rules check SQL performs when installing SQL.
+Install Rules
+Global Rules
+In the above two images, the lower image is the result of the System Configuration Checker (Global Rules). Above that, is the results of the checks performed during the installation of SQL. With the exception of the ‘Consistency validation for SQL Server registry keys,’  the Rules that are being checked differ. This is to be expected as most Global Rules do not exist until SQL is installed. Clicking on a Status will provide recommended actions if the Status is not “Passed.’
+Installed SQL Features Discovery Report
+The second tool located in the SQL Server Installation Center is the ‘Installed SQL features discovery report.’ The report should match the SQL features outlined in the PDM Installation guide.
+SQL Discovery Report
+SQL Installation Feature Selection
+NOTE
+: You may not have SQL Server Replication in the flavor of SQL you are installed.
+Inside SQL Server Management Studio (SSMS), Instance Properties displays the Server Authentication mode. To view this information, right-click on the SQL instance and select Properties.
+Accessing SQL Instance Properties
+Then select the Security tab. The Server Authentication mode has to be set to ‘SQL Server and Windows Authentication mode.
+Checking Authentication Mode
+I found these tools useful when helping to troubleshoot SQL issues. I often use these for initial testing before performing a deeper investigation.

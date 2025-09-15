@@ -1,0 +1,20 @@
+SOLIDWORKS PDM 2017
+Client Server Compatibility now
+allows a mismatch
+between client and server components within the same major version. Which means any PDM server component upgrades will NOT require an upgrade to each client.
+SOLIDWORKS PDM 2017 Client Server Compatibility
+Attention all IT System Administrators!
+Previously client and server components were required to be same major version and service pack.  This made upgrading a time consuming process.  In SOLIDWORKS PDM 2017, System Administrators are free to upgrade the server components and clients in batches without any users losing access to the vault.
+For example, previously
+SOLIDWORKS PDM Server components were upgraded
+to say 2016 Service Pack 5;
+THEN each client required an upgrade to the same version and service pack
+.
+With SOLIDWORKS PDM 2017, when Server components are upgraded to 2017 Service Pack 3 for example,  the client can be 2017 Service Pack 1,2,3,4 or 5 and still able to access the vault.
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017; including tech tips, demonstrations, and upcoming product webinars.
+WHAT’S NEW RESOURCES

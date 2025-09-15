@@ -1,0 +1,27 @@
+A much-anticipated feature in the 2023 release of SOLIDWORKS PDM Professional is
+logging file retrieval operations
+. That is, PDM Administrators can now track and export a list of every file in the vault that is downloaded from the archive server to the local view of a client machine, Web2 server, or Web API server. This allows
+PDM Administrators
+to track who is retrieving which files, and when they are doing it. This enabled PDM Administrators to better manage their company’s intellectual property. Included in each entry to the Get log is:
+Date/Time
+Description
+(Get initiated from PDM Client, Web2, or Web API Server)
+Destination Machine name
+Destination IP Address
+User
+Document ID
+Version
+Document Path
+Archive Server
+By default, new 2023 PDM Professional vaults (and those upgraded to 2023), DO NOT have Get logging enabled. To enable Get Logging:
+Open the PDM Administration tool (Start > SOLIDWORKS PDM > Administration)..
+Right-click on the PDM Professional vault and select ‘Properties’..
+Enter the PDM System Administrator (admin) credentials..
+Get Logging can be performed by any PDM Administrator that has the ‘File vault management’ Administrative permission.
+Under ‘Logging Operations’, check the ‘Get’ checkbox. Hit ‘X’ to close the Properties dialog..
+This enables logging of the Get operation for the vault on all archive servers.
+To view and export the file retrieval log:
+Open the PDM Administration tool (Start > SOLIDWORKS PDM > Administration)..
+Right-click on the PDM Professional vault and select ‘Show the Get Log’..
+Select the ‘Save’ icon in the toolbar above the log..
+Note: logging only begins once the ‘Get’ checkbox is selected, so past file retrieval transactions do not exist and will not show in the Get log after it is enabled.

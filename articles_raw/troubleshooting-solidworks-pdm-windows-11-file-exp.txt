@@ -1,0 +1,54 @@
+Is Windows 11 File Explorer not updating correct folder path in
+SOLIDWORKS PDM
+File Vault?
+This problem may impact Windows 11 client systems with the Windows configuration update from September 26, 2023 (KB5030509) installed.
+Systems experiencing this issue do not show folder names in the address bar during navigation within the vault view.
+The
+SOLIDWORKS® PDM 2024 SP01
+release corrects this issue.
+General Hotfixes (HF) are now available for
+SOLIDWORKS PDM
+2024 SP0.1, SOLIDWORKS PDM 2023 SP05, and SOLIDWORKS PDM 2022 SP05
+.
+This hotfix is a client-side update specifically for Windows 11 systems. Clients on older versions or service packs should be upgraded to a version compatible with the relevant hotfix.
+To check the installed client version, click on the user icon when logged in and select ‘
+About
+‘.
+Hotfix
+Install Instructions:
+Download the attached hotfix file.
+Download the attached hotfix file.
+For a SOLIDWORKS PDM
+2024 SP0.1
+client, use
+SWPDM2024SP0.1_HF1181214_Hotfix.zip
+.
+For a SOLIDWORKS PDM
+2023 SP5
+client, use
+SWPDM2023SP05_HF1181214_Hotfix.zip
+.
+For a SOLIDWORKS PDM
+2022 SP5
+client, use
+SWPDM2022SP05_HF1181214_Hotfix.zip
+.
+Close all open applications, right-click the
+SOLIDWORKS PDM
+icon in the notification area and select
+Exit
+.
+Extract the downloaded zip file to a local folder.
+Right-click “HotFix_HF1181214.bat” and select
+Run as administrator
+.
+Follow the instructions in the prompt.
+Current Workaround if Hotfix is not applicable:
+To display the “old” File Explorer toolbar, you can follow these steps:
+1. Open ‘Run’ by typing ‘Run’ in the Start menu or pressing Windows key + R.
+2. Enter ‘Control’ to open the Control Panel.
+3. Once the Control Panel dialog appears.
+4. Use the up-arrow icon or press ALT + up arrow twice to navigate back to File Explorer.
+5. The address bar should now refresh correctly as you browse through the folders.
+Known issues:
+Windows 11 systems with the Windows KB update applied do not automatically expand the folder tree to highlight the current folder. Microsoft® intends to resolve this limitation in an upcoming Windows update.

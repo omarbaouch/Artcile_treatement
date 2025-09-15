@@ -1,0 +1,89 @@
+This using SOLIDWORKS PDM remotely article is
+part of a series
+aimed at helping you to continue working during the impacts caused by COVID-19. For more information related to
+SOLIDWORKS 3D CAD software licensing
+options during this time, please see the comprehensive article from my colleague Scott Durksen.
+When it comes to SOLIDWORKS PDM, we are somewhat more limited in options.  PDM (both PDM Professional and PDM Standard) requires a direct, live connection to (1) the Microsoft SQL server instance hosting the PDM database; (2) the PDM Archive Server; (3) the SolidNetWork License Manager (we cannot borrow PDM licenses like we can SOLIDWORKS licenses).
+Here are our options for working in the SOLIDWORKS PDM Vault if we can’t be in the office where the servers are located.
+1. Remote Desktop Tools
+If you do not have access to a workstation grade computer at your home, then your best option would likely be to use Remote Desktop Tools to connect directly to your workstation in the office.  You can run these tools from any type of computer or even tablets.  These tools are likely the fastest and easiest way to get back up and running with minimal technical challenges if you are a SOLIDWORKS and SOLIDWORKS PDM user.  In this scenario, you will be using the SOLIDWORKS installation and PDM Vault View already set up on your work computer, and just connecting through remote desktop tool’s interface and controlling that system remotely from home.
+Check out some of these products for remote desktop tools:
+Teamviewer
+Splashtop
+LogMeIn
+2. Virtual Private Network (VPN)
+A VPN allows you to create a solid, encrypted connection from your home to your office network.  If you have access to a workstation grade computer in your home, then this option will allow you to do your SOLIDWORKS work directly on that computer while connect live to the PDM vault, as well as any network drives, just as if you were still in the office.  HOWEVER, don’t expect the same performance as if you were in the actual office.
+The latency between you and the Database Server will likely dramatically slow down things like browsing in the vault, searches, and performing state changes.  Likewise, the reduced bandwidth compared to being in the office will make performing Gets and Check Ins much slower as the files will need to transfer across the VPN connection.
+If the latency between you and the servers is over 100ms
+, it’s likely that you will experience occasional errors, if the latency is over 200ms PDM is fundamentally unusable.  In such higher latency circumstances, it would likely be better to consider either using remote desktop tools and leaving the workstation in the office (that way the PDM activity will take place on the local area network), or if you have SOLIDWORKS PDM Professional you can use PDM Web2 (see
+Option 3
+bellow).
+Improving Performance When Using PDM through a VPN
+There are a few steps that can be take improve performance within SOLIDWORKS and the Vault View when using PDM through a VPN connection.
+Option 1
+:  If possible, upgrade to SOLIDWORKS PDM 2020 SP2 or newer to take advantage of the
+substantial improvements in the high latency environment performance.
+Option 2
+:  Disable automatic updates in the PDM Add in within SOLDIWORKS.  Go to Tools > SOLIDWORKS PDM > Options and on the “Server” tab, uncheck all options under “Automatically update the tree in the extra tree pane” and ensure that the option “Reload tree when selecting a component that has been unloaded” is set to “Never”.
+Disable automatic updates in the PDM Add in within SOLDIWORKS
+Option 3
+:  Disable the PDM Add In entirely and perform Check Ins and Check Outs from the Windows Explorer Vault View.
+Disable the PDM Add In
+Connectivity When Using PDM through a VPN
+When connecting to the office network over a VPN,
+you will need to ensure that the client system is able to ping the PDM Server(s) using their hostnames (
+if you are unable to resolve the server hostname, but can ping it by IP address, you will need to
+add the server hostname and IP address to your computer’s host file
+), and that the following
+ports are open
+for communication.
+Licensing
+: TCP ports
+25734
+and
+25735
+(
+unless these ports have been modified from the default
+)
+PDM Archive Server
+:  TCP port
+3030
+and UDP port
+3030
+SQL Database Server
+:  If using the default instance of SQL for PDM Professional, TCP port
+1433
+.  If you are using a named instance of SQL for PDM Professional, or you are using PDM Standard (which always uses a named instance of SQL) you will need to
+determine the port currently being used
+and ensure that it is open for communication through the VPN.  Also, if using a named instance, ensure that UDP port
+1434
+is open.
+Please Note:
+If you are continuing to encounter issues with PDM being unable to find the SQL database server, even if it is able to ping the server and the ports are open, you may need to
+configure an ODBC Data Source
+for the home based computer to identify the SQL server.
+If you are attaching a vault view for the first time on a remote computer, depending on the Windows user account you are using, you may be asked to provide credentials for an account that is authorized to attach to the vault when going through the View Setup tool.
+This would be either a domain user account, or local account on the server
+that your IT has configured to allow attach access.
+3. SOLIDWORKS PDM Web2 (PDM Professional Only)
+If you have SOLIDWORKS PDM Professional, you already have
+PDM Web2
+! It may just need to be installed and configured so you can begin using it.  The
+SOLIDWORKS PDM Installation Guide
+provides detailed instructions for installing and configuring Web2, or you can contact our
+Services Team
+for a “Turn Key” installation and configuration service.  Once Web2 is set up on the IIS server though, it will still need to be mapped to a web domain name by your IT so that computers located outside of your office can connect.
+SOLIDWORKS PDM Web2
+Web2 allows users to review and transition files through a browser on any device, and it also allows users to
+Check Out files, download them to a local computer and then upload them and Check In
+.
+While this is not as simple or convenient as working in the PDM Vault View, it would allow users to continue to work if more direct options like Remote Desktop Tools or a VPN connection are not possible.
+4. Cloud Based Desktops
+If connecting to an office based workstation remotely is not an option, and you do not have a workstation grade system available that is capable of running SOLIDWORKS, another option to consider is Cloud based Virtual Machines.  If you would like more information
+Javelin’s Cloud Services
+, please
+contact us
+.
+5. Working Offline
+If there is no way to establish a live connection to the PDM Server(s) from your home, but you have your workstation with you, the final option would be to Work Offline in the Vault View.  This would allow you to work with any files that you have ALREADY cached or checked out when you had an active connection to the server.   When working offline any files you have already Checked Out will be editable and any cached files not Checked Out by you will be read only.  When you have a live connection to the PDM Server(s), you will be able to again Work Online, and Check In any files you had been editing.
+Working Offline

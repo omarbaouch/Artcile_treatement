@@ -1,0 +1,32 @@
+SOLIDWORKS PDM Standard is a new data management solution for smaller workgroup environments in a single location.
+Included in SOLIDWORKS Professional and Premium packages
+, SOLIDWORKS PDM Standard allows you to manage your SOLIDWORKS data more effectively on local and shared network drives.
+SOLIDWORKS PDM Standard Getting Started Guide
+To help you better understand the application, how it can be used, how to install, and configure it,
+PDM expert Joe Medeiros
+has
+created a series of technical articles to give you the essential PDM Standard information:
+Article Type
+Article Title
+Overview
+What is SOLIDWORKS PDM Standard?
+Installation & Setup
+SOLIDWORKS PDM Standard Server Installation
+SOLIDWORKS PDM Standard Client Installation
+SOLIDWORKS PDM Standard Server & Client Administration Setup
+SOLIDWORKS PDM Standard Client Setup
+Migrating files to SOLIDWORKS PDM Standard
+Usage
+SOLIDWORKS PDM Standard Administration
+SOLIDWORKS PDM Standard Client
+Supplemental
+What makes a good SOLIDWORKS PDM Admin person?
+Why is SOLIDWORKS 2016 PDM Standard not available to install?
+SOLIDWORKS PDM Standard and Professional Comparison
+More Information
+Click on this
+SOLIDWORKS PDM Standard tag
+to preview all the articles, and
+check out our PDM training offerings »
+SOLIDWORKS PDM Webinar
+To learn more about why and how to implement SOLIDWORKS PDM Standard watch our on-demand webinar below:

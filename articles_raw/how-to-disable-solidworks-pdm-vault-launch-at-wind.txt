@@ -1,0 +1,7 @@
+Every time I startup my Windows 10 laptop, I would be prompted to log into all my SOLIDWORKS PDM Vaults. Since I typically have 3+ Vaults this was one of those little annoyances that I finally decided to do something about.
+After some searching, I found what I believe was the culprit. At some point some of my PDM folders made their way into my Quick Access favorites. Not because I pinned these folders to Quick access, but because they were frequently used. In my case, these were the SOLIDWORKS Design Library and/or the SOLIDWORKS Routing library folders.
+To Disable SOLIDWORKS PDM Vault Launch
+In order to disable SOLIDWORKS PDM Vault Launch at startup, I accessed the Windows Quick Access options by right-clicking on the Quick Access icon and selection Options from the shortcut menu:
+Accessing Quick Access Options
+In the Privacy section of the Quick Access Options, I deselected Show frequently used folders in Quick Access. As an added measure, I also cleared the File Explorer History.
+Quick Access Options

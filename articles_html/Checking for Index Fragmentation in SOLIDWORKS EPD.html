@@ -1,0 +1,27 @@
+<p>This article was originally intended to introduce the Reorder and Reorganize tasks in SQL. <a href="https://www.javelin-tech.com/blog/2015/08/solidworks-epdm-reorganize-index/">These tasks will be discussed in other articles</a>, but while researching for this article my mindset on the aforementioned tasks, has shifted somewhat. First let&#8217;s look at how to check for fragmentation.</p>
+<h3>Check Fragmentation Query</h3>
+<p>If you do a little research you will find a Microsoft Knowledge Base article that mentions the use of the function <a href="https://msdn.microsoft.com/en-us/library/ms188917.aspx" target="_blank" rel="nofollow noopener">sys.dm_db_index_physical_stats</a> to check fragmentation. You may also find queries similar to the one below, that will check for fragmentation in all indexes.</p>
+<pre><code>SELECTdbschemas.[name] as'Schema',
+ dbtables.[name] as'Table',
+ dbindexes.[name] as'Index',
+ indexstats.avg_fragmentation_in_percent,
+ indexstats.page_count
+ FROMsys.dm_db_index_physical_stats (DB_ID(), NULL, NULL, NULL, NULL) ASindexstats
+ INNERJOINsys.tables dbtables ondbtables.[object_id] = indexstats.[object_id]
+ INNERJOINsys.schemas dbschemas ondbtables.[schema_id] = dbschemas.[schema_id]
+ INNERJOINsys.indexes ASdbindexes ONdbindexes.[object_id] = indexstats.[object_id]
+ ANDindexstats.index_id = dbindexes.index_id
+ WHEREindexstats.database_id = DB_ID()
+ ORDERBYindexstats.avg_fragmentation_in_percent desc</code>
+</pre>
+<p>The SOLIDWORKS Knowledge Base article S-061702 offers a query to find average fragmentation and whether to use the Reorganize or Rebuild tasks. Typically Reorganize would be used for low fragmentation (SOLIDWORKS suggests 30% or lower) and Rebuild for larger fragmentation.</p>
+<h3>Why not to schedule the Rebuild tasks</h3>
+<p>These two tasks can be scheduled to run at specified periods of time and this may initially seem to be a smart way of controlling fragmentation, but the below articles make some points on why not to schedule the Rebuild tasks.</p>
+<ul>
+<li><a href="http://www.brentozar.com/archive/2012/08/sql-server-index-fragmentation/" rel="nofollow noopener" target="_blank">http://www.brentozar.com/archive/2012/08/sql-server-index-fragmentation/</a></li>
+<li><a href="http://blogs.technet.com/b/sql_server_isv/archive/2010/10/18/index-fragmentation-if-it-isn-t-broke-don-t-fix-it.aspx" rel="nofollow noopener" target="_blank">http://blogs.technet.com/b/sql_server_isv/archive/2010/10/18/index-fragmentation-if-it-isn-t-broke-don-t-fix-it.aspx</a></li>
+</ul>
+<h3>The importance of Index Fragmentation</h3>
+<p>The YouTube video below questions the importance of index fragmentation.</p>
+<div class="oembed"><iframe title="Why Index Fragmentation Doesn&#039;t Matter in SQL Server" width="500" height="281" src="https://www.youtube.com/embed/fD1CZVc6oUk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<p>While I still believe that the tasks Reorganize and Rebuild are still valid tools to deal with fragmentation. If there is little or no index fragmentation, scheduling these tasks may not increase performance. An alternative to scheduling these tasks is to regularly check for fragmentation and then use an appropriate task to reduce fragmentation</p>

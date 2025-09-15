@@ -1,0 +1,21 @@
+Everybody knows the importance of training. When you take on a new task, you need to learn the ins and outs of that new job. The same is true for becoming a SOLIDWORKS PDM administrator.
+It’s true, you can find a lot of resources online, and there is a PDM Administration PDF that you can look at that can give you direction, however, nothing quite matches getting trained to be your company’s PDM Administrator from someone who knows the product through and through. With that in mind, I thought I’d take a moment to tell you five things that have stuck with me as favorites from the
+SOLIDWORKS PDM Administration course
+, both taking and teaching it.
+PDM Structure
+First up is the PDM Structure. Why? Simply stated, it gives people an opportunity to discuss the setup at their facility, see if it is sufficient for their environment and see if there can be improvements. The instructors can go through possible scenarios with you regarding how many servers and discuss when each one is appropriate. This is invaluable as your company grows, because your PDM system will need to grow with you.
+Permissions
+What is a PDM Administration class without a discussion about permissions? In the course, you will discover how to create groups, place people in those groups and assign permissions there. Yes, you can set permissions on an individual level where needed, but using permissions on a group level allows for faster changes. Also, you will learn about more than just folder and state permissions. This is a chance to dive into those administrative permissions and how the PDM system is set up to work in Windows Explorer.
+SOLIDWORKS PDM Administration
+Cards
+How do you make the data cards look great and contain the needed information? Did you know you can make the boxes the same size? How about aligning on the left margin and horizontally center? What about mapping what a user types on the data card to the file so it can be reused in the file? If you take the time to learn the different tools in the card editor, you can get a lot of information cleanly represented. Of all of those cool things, the option I have the most fun with is using conditional formatting.  Having a drop-down list control what a second box lists makes life easier.  Think of the make and model options on websites; if you pick a manufacturer from the list, the second list automatically only lists that manufacturer’s models. Being in class allows you to play with this option, see how it behaves and ask questions to help you understand how to apply it to your company.
+Managing Data Cards
+Templates
+One of the areas that people have a lot of questions in class is with templates. Learning how to create folders in the spots you want, creating a file that is named a certain way, goes a long way to helping this process along. How can you have a form populate your data card while grabbing the next serial number? You find out how in class.
+Learning Templates
+Transitions
+Most people are comfortable setting normal transitions, but they freeze if it’s anything else. When you learn about the workflows in PDM, you can learn how to quickly set up groups to have a committee approval situation where three of five people approve. How about not allowing a file to move forward in the process until specific fields have information in them. You learn how to do this with conditions. Also, did you realize that you can have SOLIDWORKS PDM automatically create PDFs for you through the transitions?
+Transition actions
+Change properties
+Final Thoughts
+While I have told you about several technical areas of going to an official PDM Administration class, there are other positives. Where else will you get to talk to other PDM Admins from other companies and see how they do things? You get to share your procedures and maybe learn a more efficient method. Also, remember that your instructor works with the PDM tool daily. They are there and can provide insight into the positives and negatives of setting up your PDM system in a particular way. Lastly, my favorite thing about going to a class is that while I might not remember everything I’m taught, I now know that it can be done and where to look to find more information.

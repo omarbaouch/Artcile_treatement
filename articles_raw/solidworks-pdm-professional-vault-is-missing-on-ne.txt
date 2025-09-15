@@ -1,0 +1,33 @@
+If the SOLIDWORKS PDM Professional Vault missing on a new client it’s possibly caused by the incorrect client type being installed.
+SOLIDWORKS PDM Professional Vault Missing
+For a SOLIDWORKS PDM Professional vault to be visible in the
+Administration Tool
+or
+View Setup
+tool a Professional client is required.
+To verify which client is installed:
+Select
+Programs
+>
+SOLIDWORKS PDM
+>
+Administration
+>
+Help
+>
+About SOLIDWORKS PDM Administration
+Verify Client Type
+If the client type is Standard and you’re looking for a Professional vault then the client type requires changing;
+Start > Control Panel > Programs and Features > SOLIDWORKS 20xx SPx > Change
+Change Installation
+Installation Manager > Summary > SW PDM Client Options > Change
+Change the Client Type from Standard to Professional
+Installation Manager > Summary > SW PDM Client Options > Change
+Finish the modification.
+Just to be sure we can verify our client again:
+Now the SOLIDWORKS PDM Professional vault[s] should be visible via the
+Administration Tool
+and
+View Setup Tool
+;
+Vaults Found!

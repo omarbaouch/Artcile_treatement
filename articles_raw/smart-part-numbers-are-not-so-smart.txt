@@ -1,0 +1,50 @@
+As a System Architect here at Javelin Technologies, there have been many discussions with SOLIDWORKS users about
+using
+Smart
+part numbers versus sequential part numbers
+.
+Smart
+part numbers contain descriptive and informative details that provide relevant information about the part, such as Commodity Code, options, colour and finish, etc.
+Sequential
+part numbers, on the other hand, are composed by a single number, incremented for each new item, regardless of its characteristics.
+Many companies using a
+Smart
+part numbers are questioning if it would be better to migrate to a sequential system?
+SOLIDWORKS Data Card with Part Number
+Sequentially generated part numbers
+Javelin advises that sequentially generated part numbers are usually the best choice as they are much easier to maintain. The
+intelligence
+provided by a composed part number is not required in a system that stores meta data of all files in data cards and allow users to create searches based on the meta data. Sequential part numbers are currently more popular in the industry;
+Intelligent
+numbers are usually a carryover from a pre-CAD period, when drawings were stored in physical locations and the code imbedded in a
+Smart
+or
+Intelligent
+part number would help one find a specific drawing in a drawer.
+Teaching new employees your custom
+Smart
+Part Numbering system is both tedious and fraught with errors due to misunderstandings during the learning curve. This learning curve is steep, as there are usually variants, exceptions and sometimes amendments sheets with options and features that do not fit within the original design of the
+Smart
+part numbering system.
+SOLIDWORKS PDM Data Cards
+SOLIDWORKS PDM alleviates the need for these cumbersome
+Smart
+or
+Intelligent
+numbering systems
+. The configuration of data cards keeps track of all the individual data components and options. Simply enter the sequentially generated number into SOLIDWORKS PDM Search window and all the data is visible to allow informed decisions and access the correct part.
+If one stops to consider the all-encompassing costs throughout the company that result from a
+Smart
+Part number systems inadequacies, the time and money is just staggering. But it seems everyone lends a blind-eye to the true costs.
+SOLIDWORKS PDM can alleviate the dependency on these inadequate and sometimes ad hoc numbering systems. Using Data Cards customized with the Meta Data that is relevant to your operation.
+When your requirements change, and it is inevitable that they will change, the configuration of the SOLIDWORKS PDM Data Card can be easily adjusted to your new requirements.
+New fields can be added as they are required, without changing the part numbering structure
+. SOLIDWORKS PDM Professional offers a function to update the data content of selected files to allow data changes to be managed across Folders, Projects and Products. Therefore, it’s easier to add data to files that have had new fields added to the existing data. Try that with a
+Smart
+or
+Intelligent
+Numbering System!
+Get more information
+SOLIDWORKS PDM Professional will put the Smarts and intelligence back into your data.
+Contact Javelin today
+to see how we can help you navigate away from smart part numbers and into an easier, more flexible and informative approach to numbering systems and data management.

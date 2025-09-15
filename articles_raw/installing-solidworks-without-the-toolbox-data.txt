@@ -1,0 +1,19 @@
+Starting with
+SOLIDWORKS 2020
+, when deploying SOLIDWORKS using an Administrative Image, you can choose not to install the
+SOLIDWORKS Toolbox
+data files.
+This is useful if your SOLIDWORKS Toolbox is located in a central location such as the SOLIDWORKS PDM Vault or network drive.  Previously, especially if you were using PDM, this was a trickier process as each client install would want to either install a fresh SOLIDWORKS Data or upgrade an exiting one.
+To control this option:
+Open the Administrative Image Option Editor and click
+Change
+to modify the Image.
+Go to the Toolbox/Hole Wizard Options section and under “Do you want this client to install/upgrade the Toolbox files?” question, select
+No, install the Toolbox software without including the data files.
+SOLIDWORKS Administrative Image Toolbox Settings
+This option greatly simplifies administering the Toolbox, especially if it is located in the PDM Vault, and it can speed up the deployment process as well.
+At some point, either before or after the deployment to the clients, the Administrator will need to upgrade the Toolbox.  Depending on how the Toolbox is stored, the process will be slightly different.
+If stored in the PDM Vault, follow the instructions here:
+How to manually update SOLIDWORKS Toolbox in a SOLIDWORKS PDM Vault
+If the toolbox is stored on a shared network drive, you can follow the steps in either of the options explained here:
+How to Upgrade SOLIDWORKS Toolbox to a Newer Version

@@ -1,0 +1,16 @@
+When working across multiple projects and teams, keeping up with the latest file version or revision can be a hassle.
+With
+SOLIDWORKS PDM Standard
+and
+SOLIDWORKS PDM Professional
+, you can maintain versions and revisions through your PDM vault and track the updates made to your projects.
+Watch the on-demand webinar below to learn the difference between versions and revisions. We will go through how they are created, how to tell the differences between the two, as well as how/if they can be configured. We will take a look at the history of the file to see some differences, as well as discuss forcing comments for the two different types. Lastly, we discuss how you can use cold storage with regards to revisions and versions.
+Included in the SOLIDWORKS PDM On-demand Webinar
+During this on-demand webinar you will learn:
+The differences between versions and revisions
+How they are created and how/if they can be configured
+How to look at the history of the file
+How you can use cold storage with regards to revisions and versions
+This TriMech Solution Webinar is presented by:
+Patricia Bar, System Architect – Data Management
+Patricia has been an Application Engineer with SOLIDWORKS VARs since 2007, where she has worked with the general CAD product as well as the PDM products. Prior to joining the VAR world, Patricia had 5+ years working on consumer products from personal printers to coin-operated dryers, which means she has worked in a lot of different part development methods.

@@ -1,0 +1,16 @@
+SOLIDWORKS PDM 2018 now allows Administrators greater flexibility and control when working with Assigned Folder Permissions.
+Previously, each folder had to be assigned permissions one at a time.  Starting with 2018 however, multiple folders can be selected at a time and their permissions set.
+To select multiple folders you can either:
+Hold down
+Ctrl and click
+to select multiple individual folders.
+Hold down
+Shift and click
+to select multiple folders in order together.
+Left Click and Drag
+to select multiple folders.
+Assigned Folder Permissions
+When multiple folders are selected, the Permissions checkboxes may display one of three different ways:
+An empty check box:  This indicates that this permission has not been set on any of the selected folders.
+A check box filled with a green square:  This indicates that the permission has been set on at least one of the selected folders.
+A checked box:  This indicates that the permission has been set on all of the selected folders.

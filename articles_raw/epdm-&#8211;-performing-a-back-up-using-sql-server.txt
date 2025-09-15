@@ -1,0 +1,21 @@
+A back-up can be created using
+Collect Support Information
+and this method is the easiest, but it may be faster and more convenient to create a back-up directly from SQL Server Management Studio.
+From Windows Start, launch Microsoft SQL Server Management Studio.
+Enter all of the required information and press
+Connect.
+Find vault database to be backed up, under the Databases folder, then right-click on the database and select
+Back-up
+from Tasks
+In the Source section, ensure that the correct database is selected and chose the
+Back type.
+A full back-up is recommended. Provide a
+Name
+for the back-up. Optionally a description can be added.  The
+Add
+and
+Remove
+buttons can be used to add or remove back-up locations.
+Please refer to my blog article
+EPDM – Are you backing you critical data…
+for best practices regarding back-ups.

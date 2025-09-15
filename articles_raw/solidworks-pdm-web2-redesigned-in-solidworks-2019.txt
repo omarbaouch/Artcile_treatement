@@ -1,0 +1,49 @@
+SOLIDWORKS PDM Web2 has undergone a complete redesign for
+SOLIDWORKS 2019
+, creating an enhanced more responsive system, with a focus on improved user experience resulting in the most powerful version of the tool yet.
+SOLIDWORKS PDM Web2 2019 vs 2018
+Some of my favorite new enhancements are:
+Navigation Bar
+The navigation bar allows users to quickly access different folders using breadcrumbs;
+New PDM Web2 navigation bar
+Action Bar
+The
+Change State,
+Check Out/Undo Check Out
+,
+Download
+and
+Delete
+, commands are all easily accessible via the action bar;
+New SOLIDWORKS PDM Web2 Action Bar
+Upload and Check In
+Via explorer; drag and drop files to upload and check in:
+Drag and drop files to Check In
+Search Bar
+Take control of your searches by specifying the location between
+Current folder
+,
+Current & Subfolders
+and
+All Folders
+;
+New SOLIDWORKS PDM Web2 Search
+Additional enhancements include:
+Enhanced file list
+The file list is a continuous scrolling list that lets users browse the vault directory content.  Previously, the file list was paginated so users had to navigate through multiple pages.
+Choose column
+Select or clear the columns to appear in the file list. When you add a column, its width adjusts automatically.
+Resize and sort column
+Resize the columns on pages with a column view including the
+Where Used
+and
+Contains tabs
+.
+User Interface Improvements
+Web2 is now more adaptive with responsiveness to various device sizes and browser window sizes for the:
+Log In Screen
+File List
+File Preview
+Upload and Check-in File Structure and Download with References
+Wrap Up…
+All these enhancements provide more functionality to external users not connected to the network, allowing them to continue their work while offsite or on the road.

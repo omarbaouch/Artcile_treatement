@@ -1,0 +1,91 @@
+SOLIDWORKS 2017 is packed with new, customer-focused enhancements. Whether you design single components, incredibly complex equipment, or even entire facilities, SOLIDWORKS 2017 delivers easy-to-use tools to help turn your ideas into higher-quality products. Check out the SOLIDWORKS 2017 Top Ten list of features to look out for in the new release:
+1. SOLIDWORKS 3D Interconnect
+Work seamlessly with anyone, and incorporate design changes dramatically faster.
+Open proprietary 3D CAD data directly into SOLIDWORKS
+Includes Creo®, CATIA® V5, SolidEdge®, NX™, and Inventor®
+Retain associativity to the original file
+Register for our
+SOLIDWORKS Interconnect Webinar
+to see the new features LIVE
+2. Improved Large Assembly Performance
+Speed design of large assemblies and layouts machinery and equipment.
+New Asset Publisher, Ground Mates and Magnetic Mates speed equipment layouts
+Replace sub-assembly with multi-body part and maintain downstream references;
+Replace missing references all at once
+Register for our
+Large Assembly webinar
+to see the new features LIVE
+3. More powerful modeling tools
+Faster, easier modeling with fewer picks and clicks.
+New Advanced Hole Wizard creates/reuses customized holes
+Wrap Feature now for any surface; Offset 3D Curve on surface with multiple faces
+Sheet Metal support for three-bend corners
+4. Renderings and Animations get a boost from Visualize
+Dramatic improvement in rendering speed and improved workflow between modeling, rendering, and viewing.
+New “Visualize Boost”: Network rendering made simple for blazing fast render speeds
+Import animations and motion studies
+Map SOLIDWORKS camera navigation and hot keys
+Support for HTC® Vive™, Oculus, Google® Cardboard, Samsung®
+Register for our
+What’s New in SOLIDWORKS 2017 Communication Tools webinar
+to see Visualize LIVE
+5. Faster 2D Drawing Creation
+Simplified, faster drawing creation.
+Reference and link to BOM table cell elements in annotations
+Parametrically mirror drawing views without the model
+Pre-defined layers
+6. Expanded capabilities for Model Based Definition
+Ease the transition from 2D drawings to MBD and enable model-based enterprises (MBE).
+Compare geometry and 3D PMI between two revisions
+Define DimXpert 3D PMI more easily for drafted parts
+Export STEP 242 with 3D PMI to automate CAM and CMM
+Attach multiple files to 3D PDF to build Technical Data Packages (TDP)
+Attend our
+What’s new with SOLIDWORKS MBD 2017 webinar
+to see the product LIVE
+7. Electrifying Electrical/Electronic Design
+Expanded capabilities mean improved productivity for electrical design.
+SOLIDWORKS Electrical:
+Automatic creation of schematic from a spreadsheet
+Compound parts – accessories
+SOLIDWORKS PCB: Unified design environment between schematic editing, board layout and 3D layout
+Attend our
+What’s New in SOLIDWORKS PCB 2017 webinar
+to see PCB software LIVE
+8. Simplifying Design Validation
+Simulation expanded to handle more use cases – extended capabilities tackle more design scenarios.
+SOLIDWORKS Simulation: Display simulation results in SOLIDWORKS model; arc length control for nonlinear contact
+SOLIDWORKS Plastics: Part Mass can be used in addition to gate temperature for gate freeze and pressure holding time determination
+SOLIDWORKS Flow: Parametric Study now allows multi-parameter optimization
+Attend our
+What’s New in SOLIDWORKS Simulation 2017 webinar
+to see the products LIVE
+9. Integrating design and manufacturing
+Extending SOLIDWORKS capabilities for the manufacturing ecosystem.
+3D Printing: Import/Export 3MF. Import mesh data
+SOLIDWORKS Inspection: Manual and selective ballooning
+SOLIDWORKS Costing: Instant estimates from manufacturers via My.SolidWorks Manufacturing Network
+Register for our
+SOLIDWORKS 2017 for 3D Printing webinar
+to learn more
+10. Improving data management and collaboration
+Collaborate at more levels and manage data more efficiently.
+SOLIDWORKS PDM:
+Version overwrite;
+Rollback with references;
+Improved viewing
+SOLIDWORKS PDM Professional: Vault Database Replication
+eDrawings®:
+Augmented Reality (AR) for the Android™;
+3D Views and annotation views for assemblies;
+Component descriptions;
+Weld beads;
+Undo/redo
+Register for our
+SOLIDWORKS PDM 2017 webinar
+to learn more about data management
+SOLIDWORKS 2017 Resources
+Access our resources page to get everything you need to learn what’s new in SOLIDWORKS 2017, including tech tips, demonstrations, and upcoming product webinars. You can also
+download a copy of the SOLIDWORKS 2017 Top Ten features
+.
+WHAT’S NEW RESOURCES

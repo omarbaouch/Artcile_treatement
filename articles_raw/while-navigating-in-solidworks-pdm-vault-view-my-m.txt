@@ -1,0 +1,15 @@
+If the mouse pointer jumps around when navigating through folders in SOLIDWORKS PDM vault view, you can deselect the option to snap in mouse properties. When the option is selected, the pointer will jump from the folder or file you click on to an ambiguous point in the Windows Explorer toolbar.
+Browse to the
+Mouse Properties
+in Windows
+Control Panel
+, select the tab “
+Pointer Options
+“,
+deselect
+“Automatically
+move pointer to the default button in a dialog box
+” under Snap To, and pick
+OK
+.
+Snap To Mouse Properties

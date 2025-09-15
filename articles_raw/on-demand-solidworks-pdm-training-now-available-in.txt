@@ -1,0 +1,31 @@
+MySolidWorks SOLIDWORKS PDM Training
+MySolidWorks Training contains a number of excellent
+self paced training videos
+explaining how to perform many common processes for SOLIDWORKS PDM Professional and Standard users.  Presently there are 19 lessons available, including fundamentals such as:
+SOLIDWORKS PDM Windows Explorer Interface
+SOLIDWORKS PDM Log In/Log Out
+SOLIDWORKS PDM Check Out, Edit, Check In
+SOLIDWORKS PDM Add-In Interface
+SOLIDWORKS PDM Workflows
+And more advanced lessons:
+SOLIDWORKS PDM Using Custom Search Cards
+SOLIDWORKS PDM Adding, Editing and Recalling Favorite Searches
+SOLIDWORKS PDM File History
+SOLIDWORKS PDM Copy/Move Tree
+SOLIDWORKS PDM Working with Named BOMs, BOM Versions and Comparing BOMs
+Plus many more lessons for specific SOLIDWORKS PDM commands.
+IMPORTANT NOTE:
+The SOLIDWORKS PDM lessons are available only for MySolidWorks Standard (or Professional) and/or customers with an active SOLIDWORKS Subscription Service account.
+.
+Get the SOLIDWORKS PDM Training
+More information about MySolidWorks Standard
+The MySolidWorks Standard package is included with your SOLIDWORKS Subscription Service and features:
+MySolidWorks Search – Get the best answers to questions from across all SOLIDWORKS community resources, Knowledge Base and advanced forum sections in one location
+30+ hours of online SOLIDWORKS training content
+MySolidWorks Drive for sharing files
+Access to MySolidWorks Manufacturing Network
+Access to My VAR content including tech tips and articles
+Learn more about the different MySolidWorks accounts and what is included
+Looking for more SOLIDWORKS PDM Training?
+We offer live online training and in-class training for SOLIDWORKS PDM for new and existing users and administrators.
+Learn more about the PDM courses we offer

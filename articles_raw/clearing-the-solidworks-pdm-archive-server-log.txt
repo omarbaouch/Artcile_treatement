@@ -1,0 +1,13 @@
+When viewing the SOLIDWORKS PDM User Log, clearing the log is straight forward. You simply left-click, on the ‘Empty the log’ icon. This is available from the User Log menu bar, located at the top-left of the Log.
+User Log Menu Bar
+But how do you accomplish this for the SOLIDWORKS PDM Archie Server Log? There is no ‘Empty the log’ option in the menu bar!
+Archive Server Log Menu Bar
+NOTE
+: The Archive log contains a history of occurrences on the server, which can be useful when it comes to troubleshooting. Generally it is
+good practice not to empty the archive log
+, but if the log contains errors that have been addressed, clearing the log may prevent confusion, when troubleshooting  new issues.
+Emptying the SOLIDWORKS PDM Archive Log
+The Archive Log is populated by the Windows Event Viewer and can be cleared from there. To do this, access the ConisioArchiverServerLog and select ‘Clear log’
+Clear Log
+When clearing the SOLIDWORKS PDM Archive Server Log you have the option to save the log and then clear it. Save and Clear allows you to keep older logs, and can be used for cross-referencing new issues.
+Clear log options

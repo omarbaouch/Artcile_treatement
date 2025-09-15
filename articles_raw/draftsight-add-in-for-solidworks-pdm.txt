@@ -1,0 +1,12 @@
+I was reading through the “What’s New” material for
+SOLIDWORKS PDM
+and I am excited to learn that there is a DraftSight SOLIDWORKS PDM Add-in available for running PDM inside of DraftSight. It does seem like you may require DraftSight Enterprise to give access to the API but the prices on that sound quite good from what I’ve heard and is likely well worth it for all the other benefits as well.
+DraftSight SOLIDWORKS PDM functionality:
+Here are the top three things it looks like you will be able to do from within the Draftsight application:
+Check in and out while the DWG is open
+Quickly toggle between earlier versions of the DWG
+Access the datacard directly and have that drive the titleblock
+Draftsight SOLIDWORKS PDM Add-in
+By the looks of the DraftSight SOLIDWORKS PDM Add-in toolbar, you will have access to a variety of other tools as well.  With millions of DraftSight downloads it is quickly becoming an important player in the CAD industry and it is exciting to have such a well rounded solution to both generate and manage 2D DWG drawings.
+Learn more about the
+different versions of DraftSight software »

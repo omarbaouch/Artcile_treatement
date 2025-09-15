@@ -1,0 +1,13 @@
+Businesses want to automate the connection between Product Design and Operations to be more efficient and innovative throughout the product lifecycle. But traditional, top-down approaches to Product Lifecycle Management (PLM) are often too complex, time-consuming, and costly—making PLM impractical for many businesses.
+Dassault Systèmes SOLIDWORKS Corp. has radically simplified the approach to Product Lifecycle Management—just like they simplified product design by making parametric 3D design easier to use and available on Windows.
+Companies can build PLM strategies on three pillars:
+Simple integrated design, simulation, documentation and data management solutions from SOLIDWORKS;
+Links to critical production systems (such as ERP, MRP and CRM) using industry standards;
+Integration with Microsoft Windows, Microsoft Office and Microsoft SQL Server for business collaboration.
+Simple technologies, familiar or attractive to business and engineering professionals
+—can help you gain control of your product data and make it an asset that complements Operations.
+A more productive Product Development organization not only achieves time-to-market goals and project cost reductions, but also dramatically improves company operations with higher-quality products and reduced material, labour and scrap costs. By focusing on the practical problems that PLM is trying to solve, Javelin Technologies with DS SOLIDWORKS solutions is helping many businesses achieve their PLM goals faster, with better performance, and at less cost than with traditional approaches (see the figure below).
+SOLIDWORKS PLM Process
+What is a Practical Approach to PLM for my business?
+If you are considering a data management solution or just want to know how to better organize your business then
+download the step-by-step guide on a practical approach to using and implementing PLM:

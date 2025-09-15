@@ -1,0 +1,18 @@
+When performing certain actions in the vault, such as transitioning a file, or checking a file in, you can add comments to provide context for this action in the file’s history.  In fact depending on the settings enabled by the Administrator you may be
+required
+to add comments during these actions.
+However, sometimes when you Check In a file the Comments box will be disabled (greyed out), preventing you from being able to add comments. Why is that?
+SOLIDWORKS PDM Check In dialog
+Comments are linked to file version
+It’s important to understand that the Comments are actually linked to the
+Version
+of the file, not to the SOLIDWORKS PDM Check In
+action
+.  So if the Check In does not create a new Version, then there is no way to add comments.  In fact, if you Check In a file that has not been modified since it was last Checked Out, the system is intelligent enough to understand that you aren’t performing a Check In, you’re performing an Undo Check Out and the Comments will be inactive.
+Undo Check Out
+Check In Comment
+If you have made a change to the file, then during the Check In process, PDM will understand that a new version of the file will be created by the check in and it will unlock the Comments field so that Version Comments can be input.
+These Version comments can be reviewed by right clicking on the file and going to “History”.  The comments stored against each version can be reviewed for each version in the history of the file.
+Comments for file versions
+If you are logged in as the User who created that Version of the file, then you have the ability to edit and update the comment at any point later on through the History dialog.
+PDM History edit comment

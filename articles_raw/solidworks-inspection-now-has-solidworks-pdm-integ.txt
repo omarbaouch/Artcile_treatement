@@ -1,0 +1,12 @@
+As of
+SOLIDWORKS 2018 SP2
+,
+SOLIDWORKS PDM
+integration has been added to the Standalone version of
+SOLIDWORKS Inspection
+!
+Implementing the new functionality is easy, first toggle the option ‘on’ in your SOLIDWORKS Inspection options as shown below:
+SOLIDWORKS PDM Integration Add-In
+Once you have this option toggled, a new tab/section dedicated to SOLIDWORKS PDM will appear in your ribbon as shown below.
+SOLIDWORKS PDM Ribbon
+All desired SOLIDWORKS PDM functionality is present! Including checking in/out your Inspection Project, access to previous versions, and state changes!

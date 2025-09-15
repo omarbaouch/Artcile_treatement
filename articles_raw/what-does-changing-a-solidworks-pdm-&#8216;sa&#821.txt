@@ -1,0 +1,36 @@
+If the SOLIDWORKS PDM sa password is lost or forgotten it can be
+reset using
+th
+ese steps
+.  Whenever there is a change to the account password, there is a few places within the vault settings where it needs to be updated:
+Archive Server Settings
+On the archive server host, open the Archive Server Configuration Tool
+Start > Programs > SOLIDWORKS PDM > Archive Server Configuration
+Archive Server Configuration
+Tools > Default Settings
+Archive Server Default Settings
+Login > ‘SQL Login’ > Change > Update the password > Hit ‘OK’
+Note; The password fields are always blank, regardless if there was password previously
+Change SQL User Login
+Still within the Archive Server Settings…This Computer > Archives > Right-Click [Vault name] > Properties
+Vault Properties
+Login >
+IF ‘Use default SQL login’ is unchecked
+> Change > Update Password > OK > Apply
+Set SQL Login
+Repeat for all vaults listed.
+Database Server Service
+On the Database server host, open the Database Server Configuration Tool
+Start > Programs > SOLIDWORKS PDM > Database Server Configuration
+Database Server Configuration
+Update the password > OK
+Enter Password
+Lists (Optional)
+This step only applies if you have the list data type set to; From SQL Database.
+Administration Tool > [Vault Name] > Lists (for cards) > [List Name] > Update Password
+Lists for cards
+Note
+: By default when SQL Server is installed, the ‘sa’ login is created which has full access to all databases on the SQL Server and this is what’s most commonly used.  It is possible the vault could be specified to use a alternate account with db_owner access.
+Interested in SOLIDWORKS PDM Training?
+Contact us about our SOLIDWORKS PDM training courses
+for users and administrators.

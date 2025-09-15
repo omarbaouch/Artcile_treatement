@@ -1,0 +1,25 @@
+SOLIDWORKS PDM Professional
+includes a Microsoft Office SOLIDWORKS PDM Add-In, which provides access to PDM tools within Microsoft Word, Excel, and PowerPoint documents.
+The Microsoft Office Add-In
+Using the ribbon, you can perform PDM vault commands and view file information when a file is open in Microsoft Office applications.
+All SOLIDWORKS PDM license types can be used with the integration. However, you must have a Contributor or CAD Editor license to check files out and in.
+The Office add-in (Microsoft Office Integration) option is selected during the client installation if Office is detected on the system.
+Microsoft Office Integration
+The SOLIDWORKS PDM ribbon is automatically added to the Microsoft Word, Excel, and PowerPoint documents when the Office Integration Add-ins is installed.
+If it does not show, go to
+File
+>
+Options
+>
+Add-Ins
+>
+COM Add-Ins
+and press
+Go
+…
+Microsoft Word Options
+Select
+Word SOLIDWORKS PDM Integration
+in the list of available Add-ins and press
+OK
+COM Add-ins

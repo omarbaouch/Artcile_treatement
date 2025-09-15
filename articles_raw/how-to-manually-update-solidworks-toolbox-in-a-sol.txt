@@ -1,0 +1,72 @@
+Before you manually update
+SOLIDWORKS Toolbox
+in
+SOLIDWORKS PDM
+Vault, first ensure there is a full recent back up of the file vault database and archive.
+Next make sure that all the Toolbox parts are not checked out or in use by any currently checked out assemblies. When an existing major version Toolbox is upgraded, Toolbox parts may be need to be moved, any checked out checked out files will not be moved and could result in the update failing.
+To Check whether any SOLIDWORKS Toolbox parts are currently checked out:
+Log into a local vault view as “Admin” and use the search tool to make sure no files are checked out under the Toolbox folder in the vault.
+To find if any Toolbox parts are used by checked out assemblies, run the SolidWorks Enterprise PDM report “ListAllCheckedOutParentsWithToolboxParts.crp. This report can be downloaded from the SolidWorks Knowledgebase article S-058099. Knowledgebase articles are accessible from the SolidWorks Customer Portal (www.solidworks.com)
+Report Generator
+Check in all assemblies that are listed in the results area of the report.
+To manually upgrade Toolbox:
+Ensure that no one is accessing Toolbox during this process.
+Log into a vault view as ‘Admin’
+Check-out the
+‘swbrowser.sldedb’
+file (and if it’s present the
+‘swbrowser.sldedbold’
+file
+)
+located in the PDM Vault typically “
+SOLIDWORKS Data\lang\english
+“
+Browse to
+SOLIDWORKS 2024
+installation folder, typically “
+C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS
+“, and then to “
+Toolbox\data utilities
+” right click on “
+UpdateBrowserDatabase.exe
+” and select “
+Run as administrator”
+.
+Update Browser Database
+Click the
+“…”
+button to browse for the file “
+swbrowser.sldedb
+“
+To begin the upgrade, click the “
+Update
+” button.
+Update Toolbox Database
+Confirm the Toolbox update was successful by repeating
+Step 4
+and
+Step 5.
+The Database version should match the Update Version when the update is complete.
+Once the update is complete, start-up
+SOLIDWORKS
+and ensure that the correct path for the updated Toolbox is specified in
+Tools > Options > System Options > Hole Wizard /Toolbox
+.
+Check-in
+the updated Toolbox files
+Select the
+SOLIDWORKS Data
+folder, click on
+Get Latest Version
+(or
+right click
+on
+SOLIDWORKS Data
+folder and select
+Get Latest Version
+from right click menu.)
+Get Latest Version
+Upgrading the remainder of the client computers:
+Log in as a user that has at least read permission to the Toolbox folder on other client machines.
+Repeat
+Step 10

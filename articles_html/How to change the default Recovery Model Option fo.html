@@ -1,0 +1,32 @@
+<p>By default when a new database is created within Microsoft SQL the recovery model option is set to full.  If you&#8217;re capturing daily backups, a full recovery model can cause issues with the transaction log affecting performance.  We&#8217;ve previously looked at <a href="https://www.javelin-tech.com/blog/?p=43225">how to change the recovery model</a>, but we can change a setting within SQL to make the default recovery model set to simple.</p>
+<h2>How to set the default recovery model to simple</h2>
+<ul>
+<li>Log in to the SQL Server Management Studio using the <strong>sa</strong> (system administrator) account;</li>
+</ul>
+<p><div id="attachment_43226" style="width: 487px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recover-Model-Login-to-SSMS.png"><img decoding="async" aria-describedby="caption-attachment-43226" class="wp-image-43226 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recover-Model-Login-to-SSMS.png" alt="SQL Server Management Studio" width="477" height="315" title=""><p id="caption-attachment-43226" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43226 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recover-Model-Login-to-SSMS.png" alt="SQL Server Management Studio" width="477" height="315" title=""></noscript></a> SQL Server Management Studio</p></div></p>
+<ul>
+<li>Expand the <strong>Databases</strong> folder
+<ul>
+<li>Then the <strong>System Databases</strong> folder
+<ul>
+<li>Select the <strong>model</strong> DB
+<ul>
+<li>Right-click &gt; <strong>Properties</strong>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_43288" style="width: 357px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Model-DB-Properties.png"><img decoding="async" aria-describedby="caption-attachment-43288" class="wp-image-43288 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Model-DB-Properties.png" alt="Databases" width="347" height="390" title=""><p id="caption-attachment-43288" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43288 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Model-DB-Properties.png" alt="Databases" width="347" height="390" title=""></noscript></a> Databases</p></div></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Select <strong>Options</strong> and for <strong>Recovery Model via the drop-down, </strong>we can switch it from <strong>Full</strong> to <strong>Simple</strong>, then hit <strong>OK</strong>;</li>
+</ul>
+</li>
+</ul>
+<p><div id="attachment_43289" style="width: 700px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Full-_-Simple.png"><img decoding="async" aria-describedby="caption-attachment-43289" class="wp-image-43289 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Full-_-Simple.png" alt="Simple Recovery Model" width="690" height="625" title=""><p id="caption-attachment-43289" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43289 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Full-_-Simple.png" alt="Simple Recovery Model" width="690" height="625" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Full-_-Simple.png 690w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-Full-_-Simple-600x543.png 600w" sizes="(max-width: 690px) 100vw, 690px" /></noscript></a> Simple Recovery Model Option</p></div></p>
+<p>Then any new vaults we create, the database Recovery Model will be set to simple;</p>
+<p><div id="attachment_43290" style="width: 700px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-NewVaultDB.png"><img decoding="async" aria-describedby="caption-attachment-43290" class="wp-image-43290 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-NewVaultDB.png" alt="New Database set to Simple" width="690" height="625" title=""><p id="caption-attachment-43290" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-43290 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-NewVaultDB.png" alt="New Database set to Simple" width="690" height="625" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-NewVaultDB.png 690w, https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Default-Recovery-Model-NewVaultDB-600x543.png 600w" sizes="(max-width: 690px) 100vw, 690px" /></noscript></a> New Database set to Simple</p></div></p>

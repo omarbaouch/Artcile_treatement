@@ -1,0 +1,46 @@
+In a previous article I described how to create a
+Sandbox Vault
+. This will create a new vault with the same vault settings, but it does not copy the Database or the Archive. We can copy the Database and the Archive or parts of the archive using
+Collect Support Information
+. In this article, we will look at how to bring all those pieces together, in order to create a duplicate SOLIDWORKS PDM Vault.
+The first step is create a the
+Sandbox Vault
+, making sure to select an Empty Predefined Vault. In the
+Sandbox Vault
+article, the last step is to import the vault settings. We’ll put this off until later.
+Create New Vault
+Once we have an empty Vault, we restore the Database through SQL Management Studio. After logging into SQL Management Studio, right-click on the Databases folder and select restore.
+Restore Database
+In the General tab, for Source, select Device and hit the browse button. Click on Add to select the backup that was created earlier.
+Select backup devices
+Back in the General tab, set the Destination Database, to the
+Sandbox Vault
+.
+Restore Database
+Under options, select ‘Overwrite the existing database (WITH REPLACE)’ , deselect ‘Take tail-log backup before restore’ and select ‘Close existing connections to destination database’.
+Overwrite the existing database (WITH REPLACE)
+Next click OK to restore the vault.
+Now that we have restored the production database, over top of the Sandbox database, we can copy the Archive folders, from our production vault, to our Sandbox vault. We can copy all of the archive sub-folders, but the archive folder can be massive.
+Archive sub-folders
+We are likely better off to use
+Collect Support Information,
+to copy only the files and/or folders we want work with.
+There are some changes that we need to make in SQL Management Studio. In Object Explorer Expand Databases>Your Sandbox database>Tables>File Tables, right click dbo.ArchiveServers and select Edit Top 200 Rows
+Edit Top 200 Rows
+Change the Vault Name, so that it matches that of your Sandbox vault.
+Change the Vault Name
+Next, do the same for dbo.SystemInfo (also found in Databases > Your Sandbox database > Tables > File Tables)
+dbo.SystemInfo
+To update all the SQL and PDM settings, restart SQL Server service if possible. If not, then restart PDM Database and Archive Service.
+Restart Vault
+The last step is to import the vault settings, as described in my
+Sandbox Vault
+blog
+If you experience any problems connecting to the vault, edit the Windows Registry and check that settings for Sandbox vault are correct. Ensure that everything is pointing correct locations. Below are the keys that should be checked.
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults
+
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\ACME_Sandbox\ArchiveTable
+
+HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases

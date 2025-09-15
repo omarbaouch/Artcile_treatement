@@ -1,0 +1,34 @@
+The
+EPDM user log file
+and the
+Archive Server log
+, can help to identify issues with EPDM, but some events are not captured by these logs. The Windows Application Log can often reveal issues not seen in the other logs.
+To access the Event Viewer enter
+log
+in Windows
+Search Programs and files
+and select
+View event logs
+The Application log is located under the
+Windows
+folder.
+The log can be sorted by severity by clicking on the
+Level
+column header. The log can also be sorted by
+Date and Time
+and
+Source.
+Specific information about an event is shown in the panel below where the the events are listed.
+Click on
+Event Log Onlin
+e
+Help
+if you wish to search for a solution online.
+If you would intend to send a copy of the application log to another person, such as your SolidWorks re-seller, select
+Save All Events
+from the
+Action
+pull-down.
+The preferred file format for the log file is
+*.evtx.
+Picked for TenLinks Daily and for CADdigest.com

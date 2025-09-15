@@ -1,0 +1,52 @@
+SOLIDWORKS PDM has the ability for administrators to enable automatic login for users, simplifying the process for users accessing the vault.
+Depending on which type of login used, here are the steps to enable automatic login;
+SOLIDWORKS PDM Login
+Start the Administration Tool and pick
+Local Settings
+>
+Settings
+as shown below
+SOLIDWORKS PDM Administration Tool
+Within the Settings Dialog set the
+V
+ault
+you’d like users to automatically log into;
+Settings – Select Vault
+Then check the box ‘
+Use automatic login for this vault
+‘;
+Settings – Use Automatic Login
+Input the
+Login
+details for the account you’d like to use;
+Settings – Login Info
+To complete the setup select ‘
+Ok
+‘
+As a result; the user will now automatically be logged into the vault.
+Note
+:  These settings are specific to the machine it was configured on
+Windows Login
+To enable an automatic Windows logon requires configuration on the server:
+Start the
+Archive Server Configuration Tool
+>
+Tools
+>
+Default Settings
+;
+Archive Server Config Tool – Tools – Default Settings
+Within the ‘
+Default Settings
+‘ dialog check the ‘
+Automatic Login
+‘ box;
+Default Settings – Automatic Login
+To complete, select ‘
+Ok
+‘
+As a result; this will change will update all clients to automatically login using their Windows credentials.
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

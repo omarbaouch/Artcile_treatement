@@ -1,0 +1,104 @@
+SOLIDWORKS PDM Standard is a document management product offering included with SOLIDWORKS Professional and Premium versions, that is based on the same architecture used by the current SOLIDWORKS PDM Professional (formerly SOLIDWORKS Enterprise PDM) product. This makes SOLIDWORKS PDM Standard 100% compatible with SOLIDWORKS PDM Professional, which allows you to easily upgrade from Standard to Professional at any time.
+SOLIDWORKS PDM Standard
+In this article I will focus on a SOLIDWORKS PDM Standard and Professional comparison so you can decide which offering best suits your needs.
+SOLIDWORKS PDM Feature Comparison
+The table below highlights the features included with the Standard and Professional versions of SOLIDWORKS PDM.
+Features
+SOLIDWORKS
+PDM Standard
+SOLIDWORKS
+PDM Professional
+SOLIDWORKS Add-in
+DraftSight Add-in
+SOLIDWORKS Electrical Integration
+AutoCAD Add-in
+Inventor Add-in
+Pro/E Connector
+Solid Edge File Support
+Microsoft Office Add-in
+eDrawings Preview
+eDrawings Professional
+CAD Editor Client
+Contributor Client
+Viewer Client
+Notifications- PDM Inbox (Database)
+Notifications- Email (SMTP)
+Web Client
+External Viewer Integration
+Multi-Document Preview
+Integrated Search Tool
+Dedicated Search Tool
+Content Search (Indexing)
+Search Favorites
+Multiple Workflows
+Limited to 1
+Workflow States
+Limited to 10
+Revision Schemes
+Limited to 2
+Multiple Transitions (1)
+Transition Actions (2)
+(Limited)
+Parallel Approvals
+Automated Tasks
+Automated Data Import/Export
+File Categories
+Version Labels
+Templates
+Serial Numbers
+Version Free Variables
+Offline Mode
+Report Generator
+Named Bill of Materials
+Menu and Toolbar Customization
+Application Programming Interface (API)
+Custom Add-in Support
+Dispatch Macros
+SQL Express Support
+SQL Standard Support
+Multi-Site Replication
+Active Directory and LDAP Login
+Central Card Lists (3)
+Data Card Input Formulas
+Paste Shared Links
+View Private State files (4)
+(1) Multiple, same direction transitions between the same two states is not allowed in SOLIDWORKS PDM Standard
+(2) Execute command, Execute Task and Import/Export XML are not available in SOLIDWORKS PDM Standard
+(3) List definition in the Administration Tool is not available in SOLIDWORKS PDM Standard. Free text lists defined in the Data Card Editor for various controls are available but lists controlled by a variable are not.
+(4) Viewing of other users Private State files is only available to the Admin user in SOLIDWORKS PDM Standard.
+PDM Version FAQs
+Here are answers to frequently asked questions about the two PDM products:
+What is the difference between SQL versions?
+This Microsoft article
+provides a comparison between SQL Express used for the PDM Standard version and SQL Standard used on the PDM Professional version. The important thing to note is the limit of the database of 10 GB on SQL Express. This may prove to be an issue for larger vaults.
+Are SOLIDWORKS PDM Standard licenses allowed to float?
+Yes, the licenses will be allowed to float among users and across multiple regions as SOLIDWORKS PDM Professional licenses do today. If your company has a mix of SOLIDWORKS Standard and SOLIDWORKS Professional and/or Premium, a SOLIDWORKS Standard user would be able to consume a SOLIDWORKS PDM Standard CAD Editor license. This is provided you have installed the SOLIDWORKS PDM Standard CAD Editor client.
+Can vaults created in SOLIDWORKS PDM Professional be used with SOLIDWORKS PDM Standard?
+No, SOLIDWORKS PDM Professional vaults will not be compatible with SOLIDWORKS PDM Standard and cannot be “downgraded”.
+Can vault export files (.cex) from SOLIDWORKS PDM Professional (EPDM) be used to create data in a SOLIDWORKS PDM Standard vault?
+Yes, but any feature (i.e. Transition Action for Executing a Task or replication settings) that is not supported by SOLIDWORKS PDM Standard must be removed from the export file before it can be imported.
+What kind of support for PDF files is available in SOLIDWORKS PDM Standard?
+PDF files will be able to be managed in SOLIDWORKS PDM Standard, however since Tasks, Add-ins and API support is not included, no automated creation of PDFs will be possible. In addition, viewing PDF files will not be possible via the View File menu or in the Windows Explorer Preview tab.
+SOLIDWORKS PDM Professional Advantages
+Here are a list of the main advantages of using the PDM Professional version:
+Multi-site replication
+is key to allowing the sharing of data across multiple locations. This functionality can ensure that all locations have the latest versions of files.
+Search
+: The additional search tools in SOLIDWORKS PDM Professional, allows the creation of custom searches, saving of search favorites and increased search performance.
+Viewers
+: SOLIDWORKS PDM Professional allows the use of viewers for file types other than SOLIDWORKS. This allows users to preview non-SOLIDWORKS files while browsing the vault.
+Templates
+allows the automation and standardization of creating documents, such as ECO’s. Templates can also automatically create a predefined folder structure and automatically name these folders. For example, a folder could be named after project number or customer.
+Serial Numbers
+can be automatically generated in SOLIDWORKS PDM Professional. Files can then be automatically named, using the serial number.
+Multiple Workflows
+allows a separate workflow for different products, departments and divisions.
+Unlimited Workflow States
+allows the creation of a workflow that accurately represents a company’s product lifecycle.
+Automated Tasks
+can be used to run tasks that are performed frequently. For example, batch printing of files, or the conversion of files to different file formats.
+Web Clients
+allows customers, vendors and others to access files in the vault through the web. Access permission is controlled by the PDM administrator.
+Need to learn SOLIDWORKS PDM?
+We offer online and in-class SOLIDWORKS PDM User and Administration training courses.
+Check out our PDM training offerings »

@@ -1,0 +1,7 @@
+New in
+SOLIDWORKS PDM 2020 Web2
+, we have the ability to view version comments in the data card of a file.
+When a file is selected in the SOLIDWORKS PDM Web2, under
+Data Card
+, in the detail section of the data card, version comment of the file is included.
+Version Comment

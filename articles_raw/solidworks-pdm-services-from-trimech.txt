@@ -1,0 +1,58 @@
+Product Data Management (PDM) plays a crucial role in how engineering teams handle their design files, collaborate across departments, and maintain version control. At TriMech, we offer a comprehensive suite of SOLIDWORKS PDM services that help organizations implement, maintain, and optimize their data management environments. If you’re using
+SOLIDWORKS PDM
+or thinking about getting started, here’s what you need to know about how we can support your data management journey from end to end.
+Implementing PDM with a Rapid Deployment System (RDS)
+The
+PDM Rapid Deployment System
+is TriMech’s streamlined, headache-free approach to implementing a working PDM system. It’s a turnkey service that covers everything needed to go from a blank slate to a usable data management system. Our implementation process includes the installation of all necessary software components, such as the PDM archive server, database server, and license manager, whether those are distributed across multiple servers or housed on a single machine. We ensure full compatibility and optimal configuration so your users can connect and start working from day one.
+Example SOLIDWORKS PDM workflow
+Each RDS implementation includes a pre-configured PDM vault built around best practices. These vaults include default workflows, user groups, permissions, and automation features such as hands-off PDF generation and folder creation. We also provide essential training for both administrators and end users, ensuring your team knows how to navigate the system and maintain it going forward.
+To meet different levels of business complexity, RDS is offered in four tiers:
+RDS 1
+: Simple, starter system ideal for smaller teams.
+RDS 2
+: Adds more workflows and automation, plus multi-day user and admin training
+RDS Secure
+: Tailored for government or high-security environments that require on-site service
+RDS 3
+: Fully customized solution for businesses with unique workflows and industry-specific needs
+Migrating Legacy Data into PDM
+For companies moving into PDM for the first time, data migration can be a daunting task. Legacy files might be scattered across network drives, individual PCs, or other document management systems. There’s a real risk of duplications, missing references, or inconsistent metadata, all of which can cause problems once inside a PDM vault.
+TriMech offers two options for
+Data Migration Services
+:
+The
+Data Transition (DTS)
+is designed for smaller, simpler data sets originating from Windows Explorer or SOLIDWORKS Workgroup.
+The
+Data Migration Service (DMS)
+is designed for larger and more complex data sets from a wide variety of sources.
+The typical Data Migration process
+We begin with our proprietary Data Doctor tool, which scans your file directories and produces a comprehensive report. This helps us assess file counts, types, broken references, and duplicates. From there, we clean and prepare the data for migration. This might include remapping custom properties, standardizing file naming conventions, or filtering out obsolete files. Whether you’re coming from basic file storage, legacy PDM systems, or even multiple platforms, we can help consolidate everything into one clean, structured environment.
+Keep Systems Current with Upgrade Services
+As SOLIDWORKS PDM evolves, regular upgrades are essential for accessing new features, improved performance, and ongoing support.
+TriMech’s Upgrade Services
+ensure that your system remains compatible with the latest versions of SOLIDWORKS, SQL Server, and other necessary software. We take care of the entire upgrade process, from verifying system compatibility to deploying new versions and updating the vault itself. Our team is flexible, with scheduling options that include evenings and weekends to minimize downtime.
+Upgrade SOLIDWORKS PDM from Standard to Professional
+In addition to version upgrades, we also help clients transition from
+SOLIDWORKS PDM Standard to PDM Professional
+. This shift unlocks more robust features, including unlimited workflows, advanced automation, serial number generation, and multi-site replication. Because this transition involves both licensing and infrastructure changes, including a move from SQL Express to SQL Standard, we guide clients through every step to ensure a smooth rollout. To better understand the differences between SOLIDWORKS PDM Standard and Professional,
+read our guide here.
+Remote PDM Administrator Service
+Managing a PDM system takes ongoing attention. User accounts need to be created or updated, workflows evolve, and access permissions must stay aligned with business requirements. And not all companies have the bandwidth to manage this internally. With this service, a
+certified TriMech PDM expert becomes your go-to admin
+. They can help with day-to-day tasks like user management and workflow changes, as well as larger responsibilities like coordinating upgrades or troubleshooting user issues.
+Deploying SOLIDWORKS Manage
+For teams that need more than just file management, SOLIDWORKS Manage is the natural next step. It sits on top of PDM Professional and adds project management, process workflows, dashboard reporting, and item tracking. It’s ideal for companies that need to manage not just design files, but product development lifecycles in a broader sense.
+SOLIDWORKS Manage Gantt Chart
+Our
+SOLIDWORKS Manage Deployment System
+(MDS) comes in two forms. First is a combined implementation of both PDM Professional and SOLIDWORKS Manage, designed for teams starting from scratch. The second is an integration of Manage into an existing PDM environment. In both cases, we configure the software to meet your specific needs while ensuring it functions with your current environment.
+Connecting SOLIDWORKS Electrical and SOLIDWORKS PDM
+For organizations using SOLIDWORKS Electrical Schematic Professional alongside PDM Professional, integration between the two platforms can dramatically improve collaboration between electrical and mechanical teams. Our
+SOLIDWORKS Electrical PDM Integration Service
+bridges these environments by configuring both systems so they can communicate more seamlessly, synchronizing libraries, mapping electrical-specific metadata to PDM variables, and creating templates and data cards suited to electrical design files. This not only keeps all project data unified but also improves version control and data traceability across disciplines.
+SOLIDWORKS Electrical and PDM integrated BOMs
+Getting Started with SOLIDWORKS PDM Services from TriMech
+If you’re looking to take your data management to the next level, TriMech offers the technology, the talent, and the tailored services to help you succeed. From first-time PDM deployments to advanced customizations and integrations, we can help every step of the way! You don’t even need to be a current TriMech Group client to leverage our services, so get in touch with us today.
+To get in touch with our technical experts to discuss your data management needs, contact us here.

@@ -1,0 +1,29 @@
+The error message “Could not access the item in the database” can be the result of a number of issues. If the message is received when attempting to log into a vault, the issue may be with the “sa” log-in
+Login Error Message
+The local log file may help determine the cause of this error. The log can be accessed by right clicking on the Log File node, of SolidWorks EPDM Administration and selecting open.
+Open Log File
+If the error entries in the log file indicate that the SQL log in failed,this may be a result of the stored “sa” password being incorrect.
+Error log entry
+The first place to check for problems would be in the Archive Server Configuration tool. Which is available from Windows Start>All Programs
+Start Archive Server Configuration
+Right-click on the vault that generates the error and select Properties.
+Vault Properites
+Under the log-in tab, either set the password to default or re-enter the password to make sure it is correct.
+SQL login
+Restart the service.
+Restart service
+Log-ins can be locked out by SQL if the incorrect password was entered a number of times. If logging into the vault still fails, this may be the reason. From
+Windows Start
+>
+All Programs
+start
+SQL Server Management Studio
+.
+SQL management studio
+Expand the Security node, right click on the “sa” account and select Properties.
+Login properties
+If Enforce Password is checked (default)
+Enforce password
+Click on the Status tab and deselect “Login is locked out”.
+Login locked
+Once this is done, a password will have to be re-entered under the general tab. The same password can be reused.

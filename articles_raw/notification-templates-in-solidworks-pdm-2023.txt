@@ -1,0 +1,116 @@
+SOLIDWORKS PDM Professional 2023 added a number of exciting enhancements that will help improve usability, performance and security. One of these
+SOLIDWORKS PDM
+2023 enhancements was the introduction of a new feature that allows administrators to customize notification templates for a vault. This helps to display information that is more relevant to the user.
+In order to do this, you must have
+Can update mail configuration
+administrative permission checked off – as shown below. You can customize notifications only for files and not for items and Bills of Material (BOMs).
+You can customize templates for the following file operations:
+Added
+Changed State
+Checked In
+Checked Out
+Delayed in State
+You can edit the subject and body of the template in HTML format and also use variables in the notification message.
+You can also export templates. To export:
+All templates – Right-click the
+Notification Templates
+node and select
+Export
+.
+File templates – Expand
+Notification Templates
+, right-click
+File Notifications
+, and select
+Export
+.
+The template for a file operation – Expand
+Notification Templates
+>
+File Notifications
+, right-click a file operation, and select
+Export
+.
+After editing the HTML template, check the preview to ensure it is what you expect to see.
+If any undesired changes are made, there is a reset button that will return the template back to the default.
+There is also an option to load in HTML files with the “Load from file” button. This can be useful if the PDM Administrator would like to save time by using premade templates from an external source.
+Example of Customized Notification Templates
+Here is an example of using a variable in the body text with a real notification from the vault.
+“Description” variable added to HTML Body
+Check In Notification
+Data Card Description
+Example HTML Code to Change Format
+Here is sample code that has a different color for the HTML header, text and buttons, an icon and borders for the buttons:
+<html>
+<style>
+body {
+margin: 0;
+font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+color: #333;
+}
+.card {
+background-color: #ffffff;
+max-width: 600px;
+margin: 30px auto;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.header {
+background-color: #FFA500;
+color: white;
+padding: 15px;
+text-align: center;
+font-size: 22px;
+border-radius: 10px 10px 0 0;
+}
+.header i {
+margin-right: 10px;
+}
+a {
+color: #FFA500;
+text-decoration: none;
+}
+.button {
+display: inline-block;
+margin: 10px 5px;
+padding: 10px 15px;
+background-color: #FFA500;
+color: white;
+border-radius: 5px;
+text-decoration: none;
+font-size: 14px;
+}
+.button:hover {
+background-color: #005a9e;
+}
+hr {
+border: none;
+height: 1px;
+background-color: #ccc;
+margin: 20px 0;
+}
+</style>
+<body>
+<div class=”card”>
+<div class=”header”>
+<i>📢</i> SOLIDWORKS PDM Notification
+</div>
+<p>
+Document <b><a href=”%url_open%”>%vaultname%%filename_with_path%</a></b> has been
+<b>added</b> by <b>%user% (%fullname%)</b>, %timestamp%.
+</p>
+<hr>
+<div style=”text-align: center;”>
+<a class=”button” href=”%url_view%”>View</a>
+<a class=”button” href=”%url_openfolder%”>Open Folder</a>
+<a class=”button” href=”%url_properties%”>Properties</a>
+<a class=”button” href=”%url_history%”>History</a>
+</div>
+</div>
+</body>
+</html>
+Want to learn more about PDM 2023 enhancements? Some of the best highlights were Copy-Paste Static Text, Custom Tool Tips, User Fields for Button Controls, Remove Task Host Servers, Revoke Access for Multiple Users, and more,
+check out the highlights in our article and video here
+and download the full enhancements guide.

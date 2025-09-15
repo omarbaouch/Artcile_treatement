@@ -1,0 +1,11 @@
+In the Windows Explorer SOLIDWORKS PDM Vault View,
+toolbar buttons
+can be used for quick access to various commands.
+If toolbar buttons are missing inside your vault view, check to see if the SOLIDWORKS PDM Vault has been placed in “Offline Mode”. Only the “View File” button is available during “Offline Mode”.
+SOLIDWORKS PDM Toolbar in Offline Mode
+Select
+Tools
+>
+Work Online
+to enable the buttons again.
+Vault View Toolbar Buttons Redisplayed

@@ -1,0 +1,88 @@
+<p>In this article, we are going to look at how to implement a SOLIDWORKS PDM Revision Numbering System, that incorporates both minor and major revisions.</p>
+<blockquote><p>Review our previous article for <a href="https://www.javelin-tech.com/blog/2017/04/solidworks-pdm-revision/" target="_blank" rel="noopener">a complete guide to increment a revision number via a workflow</a></p></blockquote>
+<h3>How to create a SOLIDWORKS PDM Revision Numbering System for major and minor revisions</h3>
+<p>For this example, we&#8217;re going to create a system that uses uppercase alphabetical for major revisions, and numerical for a minor revision.  For example = A-01, B-01, C-01, C-02, C-03 etc.</p>
+<p>First, we have to create our revision numbering components&#8230;</p>
+<ul>
+<li>Administration Tool &gt; Revisions &gt; Revision Number Components
+<ul>
+<li>Right-Click &gt;  New Component&#8230;</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_37651" style="width: 1230px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components.png"><img decoding="async" aria-describedby="caption-attachment-37651" class="wp-image-37651 size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components-1220x831.png" alt="SOLIDWORKS PDM Revision Numbering System" width="1220" height="831" title=""><p id="caption-attachment-37651" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37651 size-large lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components-1220x831.png" alt="SOLIDWORKS PDM Revision Numbering System" width="1220" height="831" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components-1220x831.png 1220w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components-600x409.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components-768x523.png 768w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components.png 1303w" sizes="(max-width: 1220px) 100vw, 1220px" /></noscript></a> Revision Number Components</p></div>
+<p>Next, we have to create the Revision Number System&#8230;</p>
+<ul>
+<li>Administration Tool &gt; Revisions &gt; Revision numbers
+<ul>
+<li>Right-Click &gt;  New revision number&#8230;
+<ul>
+<li>Add the revision number components we created in the previous step</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_37653" style="width: 621px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number.png"><img decoding="async" aria-describedby="caption-attachment-37653" class="wp-image-37653 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number.png" alt="Revision Number System" width="611" height="222" title=""><p id="caption-attachment-37653" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37653 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number.png" alt="Revision Number System" width="611" height="222" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number.png 611w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number-600x218.png 600w" sizes="(max-width: 611px) 100vw, 611px" /></noscript></a> Revision Number System</p></div>
+<p>Now we have to implement this into the workflow.  In the appropriate workflow and state;</p>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; [Workflow Name]</li>
+</ul>
+<div id="attachment_37655" style="width: 773px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1.png"><img decoding="async" aria-describedby="caption-attachment-37655" class="wp-image-37655 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1.png" alt="Incorporate into a workflow" width="763" height="785" title=""><p id="caption-attachment-37655" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37655 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1.png" alt="Incorporate into a workflow" width="763" height="785" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1.png 763w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1-583x600.png 583w" sizes="(max-width: 763px) 100vw, 763px" /></noscript></a> Incorporate into a workflow</p></div>
+<p>On the state where the revision is first applied:</p>
+<p><em>For this example the &#8216;Approved&#8217; state</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>Add the new revision number system
+<ul>
+<li>Leave the &#8216;Increment by&#8217; and the &#8216;Reset to&#8217; values blank
+<ul>
+<li>Save the workflow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_37656" style="width: 665px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties.png"><img decoding="async" aria-describedby="caption-attachment-37656" class="wp-image-37656 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties.png" alt="Clear increment by on revision state" width="655" height="472" title=""><p id="caption-attachment-37656" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37656 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties.png" alt="Clear increment by on revision state" width="655" height="472" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties.png 655w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties-600x432.png 600w" sizes="(max-width: 655px) 100vw, 655px" /></noscript></a> Clear increment by on revision state</p></div>
+<p>In the transition preceding the state where the revision is first applied;</p>
+<p><em>For this example the &#8216;Passed Approval&#8217; transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>Add the new revision number system
+<ul>
+<li>For both revision number components; set the &#8216;Reset to&#8217; vault to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>When files first enter this state, the revision will be set to A-01</em></p>
+<div id="attachment_37726" style="width: 656px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition.png"><img decoding="async" aria-describedby="caption-attachment-37726" class="wp-image-37726 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition.png" alt="Passed Approval Properties" width="646" height="459" title=""><p id="caption-attachment-37726" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37726 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition.png" alt="Passed Approval Properties" width="646" height="459" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition.png 646w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition-600x426.png 600w" sizes="(max-width: 646px) 100vw, 646px" /></noscript></a> In the transition preceding the state where the revision is first applied reset the revision components to 1</p></div>
+<p>Now, we need to increment the appropriate revision in the corresponding state;</p>
+<p><em>For the &#8216;Major Rev Change&#8217; transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>For the <strong>Major Rev Component</strong> set the value to increment by 1</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_37727" style="width: 656px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change.png"><img decoding="async" aria-describedby="caption-attachment-37727" class="wp-image-37727 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change.png" alt="Increment the major rev" width="646" height="459" title=""><p id="caption-attachment-37727" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37727 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change.png" alt="Increment the major rev" width="646" height="459" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change.png 646w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change-600x426.png 600w" sizes="(max-width: 646px) 100vw, 646px" /></noscript></a> Major Rev Change transition</p></div>
+<p><em>For the &#8216;Minor Rev Change&#8217; transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>For the <strong>Minor Rev Component</strong> set the value to increment by 1</li>
+</ul>
+</li>
+</ul>
+<div id="attachment_37728" style="width: 656px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change.png"><img decoding="async" aria-describedby="caption-attachment-37728" class="wp-image-37728 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change.png" alt="Increment the minor rev" width="646" height="459" title=""><p id="caption-attachment-37728" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37728 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change.png" alt="Increment the minor rev" width="646" height="459" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change.png 646w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change-600x426.png 600w" sizes="(max-width: 646px) 100vw, 646px" /></noscript></a> Minor Rev Component</p></div>
+<ul>
+<li>Save and close the workflow.</li>
+</ul>
+<p>As with any change in the vault; it&#8217;s imperative to test any changes thoroughly before implementing.  This is a great example of a change that should be implemented in a <a href="https://www.javelin-tech.com/blog/2013/08/solidworks-pdm-sandbox-vault/">sandbox vault</a>, ahead of the production vault.</p>
+<div id="attachment_37730" style="width: 870px" class="wp-caption aligncenter"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes.png"><img decoding="async" aria-describedby="caption-attachment-37730" class="wp-image-37730 size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes.png" alt="Test thoroughly" width="860" height="786" title=""><p id="caption-attachment-37730" class="wp-caption-text"><noscript><img decoding="async" class="wp-image-37730 size-full lazyload" src="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes.png" alt="Test thoroughly" width="860" height="786" title="" srcset="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes.png 860w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes-600x548.png 600w, https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes-768x702.png 768w" sizes="(max-width: 860px) 100vw, 860px" /></noscript></a> Test thoroughly</p></div>

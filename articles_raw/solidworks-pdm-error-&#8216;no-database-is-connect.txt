@@ -1,0 +1,13 @@
+When using SolidWorks Enterprise PDM the ‘No database is connected to this view’ error message may appear when opening a PDF from multiple folders using Adobe Reader XI (11.0.7). This
+error appears to be triggered by the Protected Mode option in Adobe Reader XI (11.0.7)
+, which is enabled by default.
+PDF error
+Resolving the error
+This issue can be addressed by disabling Protected Mode, or by reverting to an older version of Adobe Reader. To disable Protected Mode, from the
+Edit menu in the Adobe Reader
+, select P
+references
+.
+Adobe Reader Edit Menu
+From Security (enhanced)  deselect Protected Mode.
+Adobe Reader Preferences

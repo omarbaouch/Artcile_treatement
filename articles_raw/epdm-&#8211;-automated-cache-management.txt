@@ -1,0 +1,6 @@
+In SolidWorks Enterprise PDM there are now tools that can automatically handle how files are cached. These tools are available for both the User & Group Properties.
+Clear the local cache during log-out,
+removes unwanted files which in turn can increase performance and reduce errors related to conflicts in cached files.
+Refresh cache during log,
+ensures that files that have to remain locally cached, such as templates and Design Library components, are always at the latest version. These options can be set to individual folders, so that the cache is cleared for project folders, while template and library folders are automatically updated.
+The Assigned Cache Options tab is used  to view and modify cache options.

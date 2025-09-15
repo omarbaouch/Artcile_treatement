@@ -1,0 +1,67 @@
+As a leading provider of easy-to-use design, engineering, and product development solutions, SOLIDWORKS provides the industry’s most affordable distributed product data management software, which can often match the capabilities of expensive PLM systems at a fraction of the cost. This unique set of solutions enables engineers and manufacturers to take advantage of PDM, advanced data management, and powerful searching applications, either individually or as a combined Distributed Data Management system.
+Product Data Management — SOLIDWORKS PDM
+SOLIDWORKS solutions for product data management are fully integrated with increasingly popular SOLIDWORKS design software, enabling manufacturers to safeguard, store, and organize product design data for maximum efficiency. These solutions also allow product development teams to collaborate more effectively. Two different solutions —
+SOLIDWORKS PDM Standard
+and
+SOLIDWORKS PDM Professional
+— are available, depending on the size and PDM needs of your company and extended design and engineering team.
+Watch the video
+below to learn more about SOLIDWORKS Data Management solutions, the video includes:
+Introduction to Product Data Management
+SOLIDWORKS PDM Standard Overview
+SOLIDWORKS PDM Professional Overview
+SOLIDWORKS Manage Overview
+Manage PDM Projects
+Manage PDM Bill of Materials (BOM)
+Manage PDM Process & Workflow
+Running on-premise SOLIDWORKS PDM in the Cloud
+SOLIDWORKS PDM Standard
+Included as part of
+SOLIDWORKS Professional
+and
+SOLIDWORKS Premium
+design and analysis software,
+SOLIDWORKS PDM Standard
+is an ideal
+product data management solution for smaller workgroup environments
+that are housed in one geographic location. The application helps designers and engineers easily and efficiently organize and manage product design and engineering data, and has an easy upgrade path if and when your organization’s needs change.
+SOLIDWORKS PDM Professional
+SOLIDWORKS PDM Professional
+is a
+full-featured product data management solution for organizations large and small
+. SOLIDWORKS PDM Professional helps product development teams to more easily find and repurpose files, parts, and drawings; share design information; automate workflows; and ensure manufacturing always has the right version. The solution enables these tasks:
+Securely store and index design data for fast retrieval.
+Eliminate concerns about version control and data loss.
+Share and collaborate on designs with people inside and outside the organization in multiple locations.
+Create an electronic workflow to formalize, manage, and optimize development, document approval, and engineering change processes.
+Using SOLIDWORKS PDM Training
+Advanced Product Data Management — SOLIDWORKS Manage
+SOLIDWORKS Manage is an advanced product data management system that extends the capabilities of the global file management and application integrations enabled by the SOLIDWORKS PDM platform. Combining the ease of use and familiar Windows® Explorer interface of SOLIDWORKS PDM, SOLIDWORKS Manage adds advanced capabilities that allow teams throughout the manufacturing enterprise to manage project timelines and resources, streamline complex business processes, automate records management, and aggregate, communicate, and present PDM-related information in formats tailored for consumption by varied audiences.
+SOLIDWORKS Manage Features
+Project Management
+SOLIDWORKS Manage provides product data management information to help teams manage projects and resources.
+Manage project stages, timelines, and milestones
+View resource utilization and capacity
+Attach items, files, and deliverables
+Utilize user tasks and time sheets to track progress
+Process Management
+SOLIDWORKS Manage streamlines business processes, automates document creation, and brings together all involved stakeholders for new products—from sales and marketing to production and support.
+Configure states and decision points for all types of business processes
+Attach affected items and file, and enable ad hoc approvers and user tasks
+Item or Record Management
+SOLIDWORKS Manage brings together all components required for product definition—whether represented by a CAD model, drawing, document, or database record—in a single location.
+Create, edit, and compare bills of materials (BOMs) using items/records or files
+Automatically or selectively create items or records for SOLIDWORKS configurations
+Drive SOLIDWORKS drawing BOMs and item or record numbers
+Dashboards and Reports
+SOLIDWORKS Manage provides instant access to critical product data management information in an easy-to-consume format for better decision-making.
+Create interactive graphical dashboards to display critical information
+Configure reports to company standards and publish automatically or on demand
+Download a White Paper to discover:
+Download Engineering.com’s
+“Research Report: How Design Teams Manage Product Data”
+to learn how deploying product data management (PDM) systems can help you improve upon these key workflows so you can develop new products more efficiently and stop wasting time on non-productive tasks:
+What features in PDM systems are most critical to users
+How PDM improves workflow efficiencies
+How much time design team members waste on non-productive activities
+What seven design activities are most affected by not having a data management solution

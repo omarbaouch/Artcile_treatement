@@ -1,0 +1,51 @@
+To maximize PDM performance, the SQL database files should be located on the fastest hard drive available. If the mdf and ldf files for the database need to be relocated, this can be done using the
+Microsoft SQL Server Management Studio
+.
+Before moving the files, ensure that a backup of the database has been performed and that the vault has been locked so that no users are currently working.
+Step 1:  Locate the Database files
+Right click on the vault database and select
+Properties
+.
+Database Properties
+Click on the
+Files
+page to find the current file path and file names.  Browse to this location through the Windows Explorer and then close the Properties window in the SQL Server Management Studio.
+Find the current file path and file names
+Step 2:  Detach the Database
+Next, again right click on the Vault Database that is being moved and in the fly out menu under
+Tasks
+select
+Detach
+.
+Detach the Database
+Check the box for
+Drop Connections
+and click
+OK
+to complete the detach operation.
+Drop Connections
+Step 3:  Move the .MDF and .LDF files
+In Windows Explorer, move the database and log files (.MDF and .LDF) to the new location.
+Move the database and log files
+Step 4:  Re-Attach the Database
+Back in the SQL Server Management Studio, right click on
+Databases
+in the tree on the left hand side of the window and select
+Attach
+.
+Re-Attach the Database
+In the Attach Databases dialog box click
+Add
+and browse to the new location for the database (.MDF) file and select it, the log file (.LDF) will automatically be added.
+Add and browse to the new location for the database
+Click
+OK
+to re-attach the database.
+OK to re-attach the database
+Step 5:  Restart the Database helper service.
+Go to Services and
+Restart
+the
+SOLIDWORKS PDM Database Server
+.
+Restart the SOLIDWORKS PDM Database Server

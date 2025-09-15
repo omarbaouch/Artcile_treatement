@@ -1,0 +1,16 @@
+SOLIDWORKS PDM Branching and Merging, aids in the design process, by allowing the designer to Branch concepts from source file, and combine the successful concepts with the source file.
+Branching
+The first part of this process, is Branching. Branching creates copies of a source, in much the same way as Copy Tree, but adds the ability to maintain the History, of the branched files. By maintaining this History, the branches can later merged to their Source. Like Copy Tree, Branch is available from the Tools pull-down, in the PDM Local Vault view.
+Selecting Branch from the Tools Pull-down of the Local Vault View
+Many of the options available in Copy Tree, are also available from the Branch Dialogue box.
+Branch Dialog Box
+A file can be Branched multiple times and a Branch, can itself be branched. Each Branch is independent of its source file, so that any changes to a Branch or its source, will not affect other branches or the source file. The History of the Source and Branched files, will record the Branching operation.
+File History Showing Branch Operation
+Merging
+At any time, Branched files, can be Merged with their Source file. Any modifications in the Branched file, will be carried over to the Source file. Like Branch, Merge is available from the Tools pull-down, in the PDM Local Vault view.
+Selecting Merge from the Tools Pull-down of the Local Vault View
+The dialog box for Merge is similar to both Copy Tree and Branch.
+Selecting Merge from the Tools Pull-down of the Local Vault view
+File History Showing Merge Operation
+As with Branching, the Merge operation is recorded in the History of the Merged and Source files.
+One final note, while the screenshots in this article showed SOLIDWORKS files, other file types, can also be branched.

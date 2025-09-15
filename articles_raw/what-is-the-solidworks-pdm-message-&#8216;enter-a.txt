@@ -1,0 +1,18 @@
+When using the View Setup utility to create a local vault view, the first thing you will be asked to do is select the name of the PDM Archive Server hosting the vault you want to attach to.  When you check the box beside that server name though, you MAY encounter a security screen asking you to “Enter a valid account for this resource”.
+What “resource” does it mean? … What account should I use?
+Enter a valid account for this resource message on login screen
+The meaning of the message and a solution
+The “resource” in this case is the Archive Server and a valid account is a Windows User account that has been authorized to “Attach” to this Archive Server.
+These authorized Windows Users are controlled in the SOLIDWORKS PDM Archive Server Configuration utility, under
+Tools
+>
+Default Settings
+, on the “Security” tab in the “Attach access” section.
+Attach Access
+Active Directory Controller
+If your organization has a domain setup with an Active Directory controller, then your IT may have already added either your domain account, or a domain group that you belong to here so that you are immediately authorized to “Attach” and create a new vault view.  In which case you won’t see the request to “Enter a valid account for this resource” because your current Windows Login is already authenticated and valid to use for creating the vault view.
+Local Windows accounts
+If you are using local Windows accounts though, this automatic authentication won’t take place, so you will need to provide a Windows login name and password for an account that has been added to the “Attach access” box.
+By default, the “BUILTIN\Administrators”, “BUILTIN\Power Users” and “BUILTIN\Uses” groups will always be present here (unless someone has specifically removed them after the installation), so if your organization doesn’t use Active Directory, or if you aren’t sure what users or groups have attach access, use the Windows login name and password for ANY user account on the Windows Server hosting the Archive Server software.
+You may need to request your IT department to either set up a user account on the server for this purpose, or they can enter this login information for you.  This is a one time authentication that is only needed to allow the View Setup utility to move to the next step, it does not store the login information and does not need to be entered again (unless the view is removed and needs to be added again).
+Login credentials

@@ -1,0 +1,44 @@
+As your SOLIDWORKS PDM vault is used, and more files are added, and new versions of those files are created, the archives where all of those files are kept will grow significantly.  You may need to move these SOLIDWORKS PDM archive folders around as the vault gets larger; for instance relocating the entire archive to a different drive with more space, or splitting it up across multiple drives.  This can be done very easily directly through the interface of the “Archive Server Configuration” utility which runs on the computer where the archives are stored.
+You will be able to access the Archive Server Configuration tool, from
+Windows
+>
+Start
+>
+All Programs
+>
+SOLIDWORKS PDM
+, or by typing ‘
+Archive Server Configuration
+‘ in Windows search.
+If the utility does not launch when you do this though, that means it’s actually already running, so go to the Task bar icons on the bottom right of the screen and find the
+SOLIDWORKS PDM Archive Server
+icon, right click and select
+Open.
+Windows Shortcut Bar
+In the utility, either double click the “Archives” folder in the main pane of the interface, or expand “This Computer” and single click to select the “Archives” folder in the tree in the left pane of the screen.  This will show all the archives hosted on this server, there may be several if you have sandbox or training vaults set up.
+SOLIDWORKS PDM Archive Server
+Right click on the vault that you need to move and select “Relocate”.
+Relocate PDM Archive
+In the “File vault relocation” dialog box, you will see where archive folders are currently located.  In this case, currently, 100% of the archive folders are located on the C: drive.
+Archive Location
+There are 16 different archive folders in all SOLIDWORKS PDM vaults, named 0 – 9, and A – F.  This is where the actual vaulted copies of all the files are located.
+Physical Archive Folders
+Considerations when using the Archive Server Configuration tool to relocate archives:
+During the relocate process there should be NO USERS ACCESSING THE VAULT.  Before initiating a move, the administrator should Block Log-ins to the vault to prevent user’s from accessing it during the move.
+Consider performing the move in increments, especially if the archive is very large. The 16 archive folders are each moved as a unit, so the move can be done in increments of as little as 1/16 or roughly 6.3% at a time.
+You can span the archive across as many drives as you require.
+If the vault is very very large (for instance several hundred gigabytes of data), then you may want to consider performing a manual move and redirecting of the Archive Folder registry values instead of using the Relocate functionality in the Archive Server Configuration tool.  You can contact your SOLIDWORKS Value Added Re-seller for further directions on how this can be done.
+If you are encountering issues with the backups of the archive taking too long to perform because the vault is too large, relocating the archive will not help as it does not reduce the overall size of the archive.  In that situation, you should consider also
+compressing the archive
+.
+Relocate Process:
+If you are moving the entire vault from one location to another here are the steps:
+Step 1:
+In the File vault relocation dialog, click “Add” to inset a new row under Archive Locations.  Click the “…” button and browse to the new folder location.  This should be a folder on a local hard drive, NOT a network share, mapped drive or a USB external hard drive (using anything but a local drive will degrade file access performance for users).
+Add new Archive Location
+Step 2:
+Adjust the “Size” slider as desired.  If the vault isn’t too large, and you have sufficient time before the users will require full access again, you can move 100% of the vault to the new location, otherwise you may wish to do so incrementally.  NOTE:  You will need to manually adjust the sliders on both locations, for instance if you set the new location Size to 100% the “Total Size” value will show as 200%.  To correct this you must manually set the initial location’s size slider to 100%.  If you are moving incrementally, you will need to make sure the Total Size adds up to 100% (watch for the indicator to turn green).
+Adjust Archive Size
+Step 3:
+Click OK.  A warning will show reminding you to ensure that the users are not working in the vault (they can continue to work in Offline Mode), once you click OK the archives will begin to be moved.  This process must be allowed to complete and should not be interrupted once it begins.
+Confirming Archive Move

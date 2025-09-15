@@ -1,0 +1,29 @@
+A desktop folder shortcut is a useful tool to quickly navigate to a folder you’re frequenting in SOLIDWORKS PDM.
+How to create a folder shortcut to a vault folder in Windows 10
+Navigate into the folder you’d like to create a shortcut to
+Select the entire folder path then; right-click > Copy
+Select the entire folder path then; right-click > Copy
+Go back to your desktop (or wherever on your local machine you’d like to create the shortcut)
+Right-click >  New > Shortcut
+Desktop > Right-click >  New > Shortcut
+Right-Click > Paste the copied SOLIDWORKS PDM folder shortcut into the location dialog
+Right-Click > Paste the copied path into the location dialog
+Click
+Next
+>
+Name the SOLIDWORKS PDM folder shortcut
+>
+Finish
+Then the shortcut is created
+Quick Access Panel
+In Windows 10 we also have the option to add folders to the
+Quick access
+panel;
+Navigate to the folder you’d like to create a link to
+Right-click > Pin to Quick access
+Right-click folder > Pin to Quick access
+Then whenever we’re in Windows Explorer, we’ll have quick access to frequently used vault folders
+Available via Quick Access
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

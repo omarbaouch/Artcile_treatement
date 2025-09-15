@@ -1,0 +1,21 @@
+SOLIDWORKS Cloud Services
+, now included with every newly purchased license of SOLIDWORKS, encompass a whole host of cloud and browser-based tools for SOLIDWORKS. When most people think of 3DEXPERIENCE, they immediately think of data management as well. While 3DEXPERIENCE can be used to store and revise your CAD data, that doesn’t mean that it’s only for managing data.
+The toolset it offers to users can even sit on top of any existing data management infrastructure you have.
+SOLIDWORKS PDM
+and 3DEXPERIENCE aren’t mutually exclusive, and here are some of the ways you can take advantage of the cloud services that are included in your SOLIDWORKS subscription, even if using PDM.
+Share and Markup with Cloud Services
+When using 3DEXPERIENCE, you can share a file externally with your organization so that they can view it in their web browser. This generates a derived format of the file (whether a part, assembly, or drawing) that viewers can comment on, get measurements from, and markup with annotations and digital ink. The only requirement for the person you’re sharing the file with is that they log in with a free-to-create 3DEXPERIENCE ID so access can be secure and any comments they leave can be tracked by you. This functionality doesn’t actually require you to have the native file on the platform, it just uploads a copy, so you can use it even if you’re using PDM.
+Previewing a Share and Markup file in the 3DEXPERIENCE Platform
+Collaborative Tasks with SOLIDWORKS Cloud Services
+The collaborative tasks app is certainly enhanced by storing your data on the platform, but it doesn’t actually require it. For instance, you could create a picture of that markup that your client shared with you and attach it to a task that you can access directly within SOLIDWORKS. Collaborative tasks, whether with CAD attachments or not, make a great to-do list for the changes you’ll need to be making to your models.
+Collaborative Tasks can be given priority, text, and can have non-CAD attachments
+SWYM Communities and Collaboration with Cloud Services
+Being able to quickly share images of designs and source feedback is valuable in getting products across the finish line. 3DEXPERIENCE enables that through SWYM communities. Not only can you create communities within your organization to gather feedback, but the whole SOLIDWORKS community is collaborating on 3DSwym and sharing their expertise. Some of my favorites include:
+The Enhancement Community
+The Makers Community
+The SOLIDWORKS User Forum
+You don’t need 3DEXPERIENCE to access these communities, but being in the platform on your browser does make for quick access when you add your frequently visited communities to the favorites tab.
+Interested in learning about how to set up your 3DEXPERIENCE platform?
+Take a
+3DEXPERIENCE training course
+live online with Javelin.

@@ -1,0 +1,12 @@
+A quick way of determining which SOLIDWORKS PDM Variable is connected to a Data Card Control, is from within the Local Vault View. With the Data Card Tab selected:
+Data Card Tab
+Click on the Help Icon, in the top-right of the lower panel.
+Help Button
+A question mark will appear next to the the mouse cursor:
+Question mark mouse pointer
+Then click on the control to see the SOLIDWORKS PDM Variable attached to that Control.
+Help information displayed upon click
+Learn more about SOLIDWORKS PDM
+Take a
+SOLIDWORKS PDM training course
+delivered by a certified expert either in a local Canadian city, or live online

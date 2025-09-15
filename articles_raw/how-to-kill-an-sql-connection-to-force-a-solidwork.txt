@@ -1,0 +1,30 @@
+Currently there is no functionality to force a SOLIDWORKS PDM logout, but the connection between the client and SQL can be temporarily killed. You should only kill SOLIDWORKS PDM if a user cannot be logged out normally.
+If you need to prevent access to a vault, you can block a login,
+refer to my article on how to Block a PDM Login for more information
+.
+To kill SOLIDWORKS PDM / SQL connection, you need to access the
+SQL Management Studio
+, then
+right-click on the SQL server
+, and select
+Activity Monitor
+.
+SQL Activity Monitor
+Click on the
+Process
+tab and look for the process
+EdmServer.exe
+that is associated with the user you want to disconnect.
+PDM Server Processes
+Right-click on the process and choose
+Kill Process
+from the shortcut menu.
+Kill Process Option
+If the user now attempts to navigate within the vault they will receive the following message.
+SOLIDWORKS PDM Message
+Further attempts to access the vault will result in a blank Vault View.
+Blank PDM View
+Before the user can access the vault again, they will need to first log out. If
+login is currently blocked
+, they will then receive the message below, when they try to log in.
+Blocked login message

@@ -1,0 +1,53 @@
+If you are planning on upgrading to the latest release of PDM, then make sure you follow our SOLIDWORKS PDM Upgrade Checklist below:
+NOTE
+: Upgrading PDM carries some risk. It’s your company’s IP contained in your vault.
+Javelin can perform your upgrade
+for you to ensure it’s done right with minimal down time and risk of data loss. Contact your Javelin account manager for a quote. If a PDM upgrade is self-served and it goes poorly, our PDM Technical Support can help get the upgrade back on track, and the time may be billable.
+Prepare (Recommended 1 week before upgrade)
+Download the full installation file set through a Customer Portal account
+SOLIDWORKS Support
+> Downloads > login using your 3DS credentials
+https://www.javelin-tech.com/blog/2012/04/manually-download-solidworks-software/
+Alternatively, for the full installation file set, please contact your VAR and let them know what Version Year and Service Pack you wish to upgrade to, and they can assist
+https://www.javelin-tech.com/3d/people/technical-support/
+Verify that the system requirements for server and client computers are met
+https://www.solidworks.com/support/system-requirements
+NOTE:
+Pay special attention to the Operating System as well as the Microsoft SQL Server versions. SOLIDWORKS PDM 2023 SP5 is the last release that is compatible with Microsoft SQL 2016. SOLIDWORKS PDM 2024 will require at least Microsoft SQL 2017, and 2025 will require Microsoft SQL 2019 or newer.
+Ensure the 24-digit activation-based serial number for PDM has been recorded
+Upgrade License Manager (Recommended several days before upgrade)
+On the system serving as the license server, run ‘Setup.exe’ from the downloaded folder
+Choose ‘Server products’ then ‘Upgrade SolidNetwork License Manager’
+Reactivate SolidNetwork License Manager
+‘SolidNetwork License Manager Admin’ from the Start menu, then ‘Modify’
+https://www.javelin-tech.com/blog/2019/05/update-solidworks-solidnetwork-license-server/
+Backups (Immediately before upgrade)
+Have users Check In all files
+Ensure that the PDM Archive folders have been backed up
+Back up the SQL Databases
+https://www.javelin-tech.com/blog/2019/07/manually-backup-solidworks-pdm-database/
+Back up the PDM Archive Server settings
+https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/
+Server Upgrade
+Upgrade the SOLIDWORKS PDM Database Server and Archive Server programs
+Run \SWPDMServer\setup.exe to start the SOLIDWORKS PDM server upgrade
+Upgrade the SQL Databases
+https://www.javelin-tech.com/blog/2013/04/solidworks-pdm-database-upgrade-tool
+Upgrade any PDM add-ins
+https://www.javelin-tech.com/blog/2016/08/solidworks-pdm-professional-task-add-in/
+If SOLIDWORKS PDM Web2 Server is installed, configure Microsoft IIS to set the application pool for SOLIDWORKS PDM Web2 back to the correct identity
+https://www.javelin-tech.com/blog/2020/01/solidworks-pdm-web2-upgrade-issues/
+Upgrade any additional replicated Archive Servers
+Client Upgrade
+Log in to Windows as the Local Administrator account (ensure full local permissions)
+https://www.javelin-tech.com/blog/2014/02/need-local-administrative-rights-install-solidworks/
+Run the SWPDMClient\setup.exe to start the SOLIDWORKS PDM client upgrade
+Following SOLIDWORKS Upgrade
+Upgrade SOLIDWORKS Toolbox if it is located in the vault
+https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/
+OPTIONAL:  Upgrade SOLIDWORKS files using the
+File Version Upgrade Tool
+https://help.solidworks.com/2024/english/EnterprisePDM/UpgradeUtility/c_upgrade_utility_overview.htm?verRedirect=1
+NOTE
+: Need to upgrade SOLIDWORKS? Then check out our
+SOLIDWORKS Upgrade Checklist

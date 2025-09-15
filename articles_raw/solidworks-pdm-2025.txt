@@ -1,0 +1,26 @@
+Enhancements to SOLIDWORKS PDM 2025 streamline accessibility, help you better understand assembly structures, and improve revision management. Highlights include:
+Quickly access SOLIDWORKS PDM functions from the new PDM tab in the CommandManager toolbar.
+Easily understand the order of assembly structures with a bill of materials that follows the same order as the SOLIDWORKS FeatureManager.
+Explore new options for caching revisions and getting the latest revision or a specified revision.
+Gain a more complete view of user activities with improved security and audit trail information.
+Improved Bill of Materials Visualization
+Understand the bill of materials easily and intuitively. Easily understand the order of the assembly structure shown in the bill of materials tab which follows the same order as the SOLIDWORKS FeatureManager®.
+SOLIDWORKS PDM 2025 BOM Visualization
+Increased Flexibility for Caching Data
+Enjoy increased usability and speed with reduced multiple operations.
+Check out files directly from the Get Latest dialog.
+Take advantage of new options for caching revisions and get the latest revision or a specified revision.
+SOLIDWORKS PDM 2025 Cached Data
+Better User Experience
+Bypass the Task Pane for accessing commands with an increased graphics area. Easily access SOLIDWORKS PDM functions from a new SOLIDWORKS PDM tab in the SOLIDWORKS CommandManager toolbar.
+SOLIDWORKS PDM 2025 User Experience
+Increased User Tracking
+Enjoy improved security and audit trail information. Gain a more complete audit trail of user activities now that the system tracks when users log in and log out.
+SOLIDWORKS PDM 2025 User Tracking
+Improved Web 2.0 Performance
+Streamline work with the web client, offering more flexibility. Browse faster in folders with thousands of files and leverage the improved file preview performance.
+SOLIDWORKS PDM 2025 Web2 Performance
+SOLIDWORKS PDM Services
+Need help with your SOLIDWORKS PDM system? Check out the
+SOLIDWORKS PDM Services
+available from Javelin, including audits, upgrades, maintenance and implementation.

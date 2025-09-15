@@ -1,0 +1,24 @@
+In this article we are going to review some of the main components of SOLIDWORKS PDM Standard Administration. These components allow you, the administrator, to control your data and to define what information will be gathered and distributed. It is important to understand how these components function and interact in order to efficiently manage your data. I strongly recommend taking
+training to become a competent SOLIDWORKS PDM Standard Administrator
+. Also, your SOLIDWORKS reseller may be able to help with the implementation of your SOLIDWORKS PDM Standard. This can save you time, frustration and ensure you have an efficient vault.
+PDM Nodes
+Your SOLIDWORKS PDM Standard vault consists of a number of components, that are referred to as nodes. Each node controls a certain aspect of SOLIDWORKS PDM Standard. These nodes interact with each other, in order to provide a seamless user interaction with the vault. A properly configured vault will provide a intuitive and efficient portal to your companies data.
+SOLIDWORKS PDM Standard Administration
+PDM Workflow
+The heart of your vault is the Workflow. The workflow at minimum, defines the path a project must follow, from inception to completion. A  workflow will also control file access for different stages of your project. Additionally workflows can:
+Update document information such as revision
+Send notifications at critical phases of the workflow
+PDM Workflow
+Users and Groups
+Users are added to the vault so they can access the files for which they have permission.
+Add Users
+In order to simplify organizing multiple users, users can be placed into Groups.
+User groups
+Data Cards
+Users of SOLIDWORKS PDM Standard:, enter pertinent project information through Data Cards
+PDM Data Card
+The proper configuration of these nodes, as well as the remainder of the nodes, is essential to ensure the proper control of your companies data.
+SOLIDWORKS PDM Training
+To learn more about SOLIDWORKS PDM Training you can attend one of our
+training courses
+either in-class or live online.

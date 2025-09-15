@@ -1,0 +1,51 @@
+The
+SOLIDWORKS PDM Standard
+installation consists of three components,
+SQL Express, PDM Server
+and the
+SOLIDWORKS PDM Clients
+. In this post we will cover a SOLIDWORKS PDM Standard Client Installation. The
+SQL Express and PDM Server installation were covered in a previous post
+.
+Running the SOLIDWORKS PDM Standard Client installation
+SOLIDWORKS PDM is installed using the same Installation Manager that is used by SOLIDWORKS. To install SOLIDWORKS PDM Client select “
+Individual (on this computer)
+” and click on
+Next
+.
+SOLIDWORKS PDM Client Installation
+Uncheck the Serial Number for SOLIDWORKS and press Next. Press OK to install the PDM client and other products that do not require serial number.
+Products which do not require a serial number
+Select the
+SOLIDWORKS PDM Client
+from the list of products and click on
+Back to Summary
+to return to the previous page.
+Select SOLIDWORKS PDM Client
+On the summary page expand the
+SOLIDWORKS PDM Options
+and click on
+CHANGE
+to select the PDM products
+SOLIDWORKS PDM Options
+From the list of products, select the
+PDM Product
+,
+PDM Client Type
+and
+Add-ins
+and click on
+Back to Summary
+to return to the previous page.
+SOLIDWORKS PDM Client Options
+Identify the installation location, or accept the default and continue with the installation
+Installation Manager Summary
+Accept the license agreement and click on
+Download and Install
+(if the installation files are not downloaded already) or click on
+Install Now
+to complete the installation.
+Javelin PDM Services
+Javelin can provide PDM implementation and training services for your business.
+Learn more about Javelin Services
+.

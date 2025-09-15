@@ -1,0 +1,4 @@
+Is there a setting in SOLIDWORKS PDM to prevent a user from accidentally moving a folder in a vault?
+The following steps can be used to prevent a user from accidentally moving a folder in the vault because of a ‘lack of permission’ by disabling the ‘Move folder’ privilege.
+In the Administration tool > Users or Groups properties > Select Folder Permissions > Permissions per Folder uncheck ‘Move folder’ on the folder in question.
+SOLIDWORKS PDM Move Folder Permission

@@ -1,0 +1,17 @@
+Navigating large assembly reference trees within SOLIDWORKS PDM can be difficult, especially when Checking a file In/Out, performing a Copy Tree function, or Changing States.
+Let’s look at the dialog box when checking out a file:
+Check Out Assembly
+When checking out a file, the dialog box above is the default dialog box that is seen, however, if I had wanted to select all of the references for one of the sub assemblies, I’d need to select them individually.
+However, with a slight modification, all you will need to do is select one checkbox to select ALL of its referenced components…. See below:
+Check Out Dialog Box Commands
+The Show All Levels/Top Level Only dropdown above allows you to expand/collapse your reference tree in the dialog box
+The
+Show Reference Selection Controls
+toggle turns on a parallel set of check boxes that will allow you to select or clear all check boxes from that one node. So if I only want to check out one sub-assembly and its parts from the Top level assembly, I can do so using the parallel check box. To access this toggle, Right click on any file listed and select ‘
+Show Reference Selection Control
+‘
+The same commands can be applied when the file is being checked out or used in the copy tree functionality.
+SOLIDWORKS PDM Training
+Javelin offers various
+SOLIDWORKS PDM training courses
+which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.

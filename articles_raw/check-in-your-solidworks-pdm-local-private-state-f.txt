@@ -1,0 +1,36 @@
+This article is more of a cautionary tale than a technical document. Increasingly I’m seeing customers lose SOLIDWORKS PDM data because of not checking in Private State files.
+What are Private State Files?
+According to the SOLIDWORKS PDM Help,
+“Private State files are files that other users have added to the vault, but have not yet checked in”.
+Private State Files are SOLIDWORKS PDM files that have been copied or saved to a Local Vault View and are ONLY available locally. They are not saved to the Server where PDM stores files (archive server)
+.
+While these files can be seen by other users, if they have the Folder Permission
+“
+May see files before initial check in (Private State)”,
+few operations are available for these files until they are checked in (the ability to view Private State files is only available with SOLIDWORKS PDM Professional). These Private State files cannot be cached to another computer or opened on another computer.
+Permission to See private State Files
+Local Files need to be checked in
+Because of its importance, I want to restate that
+saving or copying a file to a Local vault view does not add the file to the archive server. Only a check-in operation will do this. Not understanding this can lead to data loss.
+With more people working from home and potentially experiencing slow connections, some users are checking files infrequently. Sometimes they only check in files at the completion of a project. While this may seem to save time, in fact, this practice is self-defeating, as at one point these files need to be checked in. The result is that instead of checking in a few files on a regular basis, a whole project needs to be checked in at once. So now instead of trying to push a couple of files through a slow connection, potentially dozens of files need to be pushed through the same slow connection at one time.
+Private State File Limitations
+Few PDM operations can be performed on these Private State files.
+Private State files
+cannot be transitioned
+.
+There is
+no history
+for Private State files, so if you need to get an earlier version of a file, in order to recover from unwanted changes, you cannot do this.
+Further, while Copy and Move Tree are available, for Private State files,
+referenced files will not be included with copy or move tree
+.
+No Referenced Files Included In Copy Tree
+Also, if Private State files are deleted, they may not be
+recoverable from SOLIDWORKS PDM Folder properties
+, nor the Windows Recycle Bin.
+In other words, you lost all that work.
+Private State Files not Recoverable from PDM
+Private Files can be permanently lost!
+But likely
+the greatest problem with Local State files is that if something happens to the system where these Private Files exist, the files may be permanently lost.
+With the loss of functionality and the very real possibility of losing work, is it really worth saving a bit of time by avoiding checking in files regularly?

@@ -1,0 +1,44 @@
+The SOLIDWORKS PDM Archive Server Settings backup should be completed as part of your regular
+Backup Process
+, but it’s also a good practice to be run ahead of any major procedures such as an migration or upgrade.  It’s straight forward to configure and can be scheduled to complete automatically.
+Important! The archive server settings backup utility does not include the archives or databases, these need to be created and completed separately
+How to set up the archive server settings backup
+On the archive server; start the
+Archive Server Configuration
+Tool from
+Start
+>
+Programs
+>
+SOLIDWORKS PDM
+>
+Archive Server Configuration
+;
+Start Archive Server Configuration
+In the Archive Server dialog select
+Tools
+>
+Backup Settings…
+Archive Server dialog
+Here you can;
+Select which vaults to back up.
+Or include all vaults (preferred).
+Define a
+Backup Location
+for the generated backup file (Backup.dat.) to be created.
+The recommended location is within the default root to the vault archives, so it’s included within the vault archives backup.
+Enable the
+Schedule option,
+to complete automatically.
+Define a
+Password
+to be required when restoring the backup.
+Backup Settings
+We can manually launch a backup file to be created using the
+Launch Backup
+button, otherwise, it will be created as per the defined schedule.
+Archive server settings include anything entered at the Archive Server Configuration Tool Level, like the physical location of the archives, defined login types (database or Windows login etc) and passwords.
+Learn more about SOLIDWORKS PDM
+Attend a
+SOLIDWORKS PDM Professional Administration training course
+either in a classroom near you or live online.

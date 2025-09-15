@@ -1,0 +1,13 @@
+How often do you find yourself spending valuable time searching for a model or a file? Have you ever had to recreate a model because you could not find the original?
+Using SOLIDWORKS EPDM
+Have you ever spent time creating a design only to discover later that one of your colleagues had previously modeled a similar design that would have met your needs? If you are not using an integrated product data management (PDM) system, chances are you can relate to these scenarios.
+Take advantage of proven designs and win more business
+In today’s global economy, wasting your valuable time looking for or recreating designs that already exist not only puts you out, but also puts your company at a competitive disadvantage. Adapting, leveraging, and reusing existing designs can save you time and save your company money. It can also help you bring new products to market faster, improve your company’s profitability, and win new business.
+Companies that use an integrated PDM system can maximize the effectiveness of design reuse
+by efficiently addressing the associated challenges. The following white paper examines the five key benefits of design reuse and explores how SOLIDWORKS® PDM software can help you turn design reuse into a winning strategy.
+Get our white paper to learn how an integrated PDM system will:
+Slash design time
+Leverage proven concepts
+Increase quoting speed and accuracy
+Reduce data duplication and part numbers
+Integrate resources from all departments

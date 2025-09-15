@@ -1,0 +1,14 @@
+New in
+SOLIDWORKS PDM 2021
+, you can use the Quick Access Toolbar to easily access commonly used commands like check in or check out.
+SOLIDWORKS PDM Quick Access Toolbar
+To add or remove specific commands to the Quick Access Toolbar, open user or group
+Settings
+in the
+SOLIDWORKS PDM Administration
+tool, in the left pan of the
+Settings
+dialog box, select
+Quick Access Toolbar
+and specify the commands.
+SOLIDWORKS PDM Quick Access Toolbar Settings

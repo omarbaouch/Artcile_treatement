@@ -1,0 +1,44 @@
+The
+SOLIDWORKS Design Checker
+is one of the most underutilized utilities in SOLIDWORKS and this is unfortunate, as this utility can help eliminate costly mistakes due to errors in a SOLIDWORKS document. Design Checker can also reduce the amount of time to check documents, by running
+user defined checks
+.
+The SOLIDWORKS Design Checker ensures accuracy, completeness, and standards compliance for design elements such as:
+Title blocks
+Custom properties
+Layers
+Annotation and dimension fonts
+Standard units
+Materials
+Overridden dimensions
+In SOLIDWORKS PDM, a Task can configured to run the SOLIDWORKS Design Checker. Depending on the options that were used when Installing SOLIDWORKS PDM, this Task may not have been added. To add this Task, right-click on the Vault and select Import.
+Importing Task
+The Task to be imported will be located in the PDM installation directory, under Default Data.
+SOLIDWORKS Design Checker Import
+Once completed, a message will be indicate that the imported was successful.
+Import Complete
+The imported Task will now appear under The Tasks node of SOLIDWORKS PDM Administration.
+Design Checker Task in Task Node
+In order for the Task to run, we need to set-up Task Host Configuration, on the computers where we want to run the Task. To this right click on the PDM Icon, located in the Windows System Tray.
+PDM Icon in Windows System Tray
+When the Task Host Configuration Window opens, select the vault that contains the Task and check the SOLIDWORKS Task Add-in, to enable it.
+Enabling Task
+Once the Task Host has been configured, the computers that will run the Task, can now be added in the Execution Method tab, of Design Checker Task.
+Execution Method
+A Task can be launched by right clicking a file, in the File Explorer Vault View.  In the Menu Command tab, the name for that Task, that will appear in  File Explorer, is defined. The Status Bar Help Text option is the description that appears in the File Explorer status, bar when the user hovers over the Task.
+Menu Command
+From the Script tab the code which defines the text can be edited. Also, if multiple versions of SOLIDWORKS are installed on the Task Hosts, the version of SOLIDWORKS to be used can be specified.  Lastly, the configurable options for a Task, can be specified from the Task User Interface Type pull-down.
+Script
+Note, changing Task User Interface Type,  will require a restart pf the Task Property menu. More importantly, this will change the options available for the Tasks Properties and not all Task Properties are compatible with a given Task. The Design Checker Task uses the General Task User Interface Type.
+The Permissions tab, is where User and Group access to the task is defined.
+Permissions
+There are also tabs to format Success and Error Notifications.
+Success Notification
+The Notifications can be set-up for Users and/or Groups. Under the User tab, there is the option to Notify the user, who launched the Task.
+Error Notification
+Once the Design Checker Task has been configured, it can be launched by right clicking a file, in File Explorer.
+Launching Design Checker Task from File Explorer
+A Task can also be configured, to run from a Workflow
+Transition Action
+.
+Running Design Checker Task from a Workflow Transition Action

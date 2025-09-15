@@ -1,0 +1,26 @@
+In SOLIDWORKS PDM, when you ‘Copy’ and ‘Paste’ a file to another folder, the two files are independent of each other even though the copy would have the same name and physical content. There is no link between the source file and its copy. The files will each have a unique record in the database (Document ID) and have a separate file history.
+If you ‘Copy’ and then select ‘Paste Shared’ to a new folder instead,
+the copied file be ‘Shared’ to the new folder
+.
+Paste Shared Option
+A shared file is shown with a plus-sign next to the file icon. A shared file will have same record in the database (Document ID) but share version history with the other instances of the shared copy.
+Denotes a shared file
+To see which folders a file is shared between,
+right-click the file
+, select
+Properties
+and view the
+Links
+tab:
+Show the folders sharing the file
+Benefits of a Shared File
+You can cache individual versions of a shared file to the different folders it is shared between, but the Workflow state will be the same for all shared instances of the file.
+If you check out a shared file, the physical local copy in the folder where you checked the file out will be writable and all other shared instances of the file will be marked as checked out to the same user and workstation.
+Shared file instances may use different data cards depending on what card is active in the folder where the instance is shared, however the variable values would be the same across all instances of the shared file.
+NOTE
+: Shared files should primarily be used for non-CAD files or files having no reference structures. Read more about this in the
+SOLIDWORKS Knowledge Base
+S-066219.
+Need SOLIDWORKS PDM Training?
+Learn more about our SOLIDWORKS PDM training courses
+for users and administrators.

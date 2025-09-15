@@ -1,0 +1,25 @@
+<p>When you rename an assembly file in SOLIDWORKS via the FeatureManager Design Tree SOLIDWORKS PDM will update all the references for you automatically.</p>
+<p>Here I have a SOLIDWORKS flashlight assembly:</p>
+<div class="wp-caption aligncenter" id="attachment_19755" style="width: 3850px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/04/FlashlightAssy.png"><img alt="Rename" aria-describedby="caption-attachment-19755" height="1080" src="/assets/images/FlashlightAssy.png" title="" width="3840"/><p class="wp-caption-text" id="caption-attachment-19755"><noscript><img alt="Rename" height="1080" sizes="(max-width: 3840px) 100vw, 3840px" src="/assets/images/FlashlightAssy.png" title="" width="3840"/></noscript></p></a> SOLIDWORKS Flashlight Assembly</div>
+<p>I’d like to change the name of my sub assembly <strong>Head_sub</strong> to <strong><em>JavHeadSubAssy</em>.</strong></p>
+<h3>SOLIDWORKS PDM rename file requirements</h3>
+<p>Before we can change the name there are a few requirements to check off first:</p>
+<ul>
+<li>The file must be checked out</li>
+<li>PDM add-in installed and loaded</li>
+<li>The user has the state and folder permission to Add or rename a file</li>
+</ul>
+<p>If you are missing any of the above requirements you will receive an error message.</p>
+<blockquote><p>Note: To see the <strong>Rename</strong> option in SOLIDWORKS from the right click menu, this must first be enabled:</p>
+<p>Tools &gt; Options &gt; System Options &gt; FeatureManager &gt; “Allow component files to be renamed from FeatureManager tree“</p></blockquote>
+<h3>SOLIDWORKS PDM rename file process</h3>
+<p>Within the FeatureManager Design Tree <strong>right-click the part/sub-assembly name</strong> you would like to change, and select <strong>rename</strong> from the shortcut menu as shown in the figure below</p>
+<div class="wp-caption aligncenter" id="attachment_19777" style="width: 439px"><img alt="SOLIDWORKS PDM rename file" aria-describedby="caption-attachment-19777" height="531" src="/assets/images/SelectRename.png" title="" width="429"/><p class="wp-caption-text" id="caption-attachment-19777"><noscript><img alt="SOLIDWORKS PDM rename file" height="531" sizes="(max-width: 429px) 100vw, 429px" src="/assets/images/SelectRename.png" title="" width="429"/></noscript> Rename Assembly</p></div>
+<p>After a rebuild and save, the name will be updated within SOLIDWORKS PDM:</p>
+<div class="wp-caption aligncenter" id="attachment_19766" style="width: 1343px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/04/Updated.png"><img alt="Flashlight Assembly References Updated" aria-describedby="caption-attachment-19766" height="379" src="/assets/images/Updated.png" title="" width="1333"/><p class="wp-caption-text" id="caption-attachment-19766"><noscript><img alt="Flashlight Assembly References Updated" height="379" sizes="(max-width: 1333px) 100vw, 1333px" src="/assets/images/Updated.png" title="" width="1333"/></noscript></p></a> Flashlight Assembly References Updated</div>
+<p>It even updates the components within the sub-assembly:</p>
+<div class="wp-caption aligncenter" id="attachment_19767" style="width: 900px"><img alt="Sub-Assembly Components Updated" aria-describedby="caption-attachment-19767" height="310" src="/assets/images/SubAssy.png" title="" width="890"/><p class="wp-caption-text" id="caption-attachment-19767"><noscript><img alt="Sub-Assembly Components Updated" height="310" sizes="(max-width: 890px) 100vw, 890px" src="/assets/images/SubAssy.png" title="" width="890"/></noscript> Sub-Assembly Components Updated</p></div>
+<p>Easy!</p>
+<p>If you’re looking to <strong>create a new assembly and use your current assembly as a base</strong>, then <strong>this feature isn’t the one for you</strong>.  Check out one of my favourite functions of PDM <em><a href="https://www.javelin-tech.com/blog/2014/07/solidworks-pdm-copy-tree/" target="_blank">Copy Tree</a>.</em></p>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Attend our <a href="http://www.javelin-tech.com/main/training/course_solidworks_enterprise_pdm_admin.htm" target="_blank">SOLIDWORKS PDM Administration training course</a> to learn more about using or administering SOLIDWORKS PDM.</p>

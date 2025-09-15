@@ -1,0 +1,38 @@
+<p>In this article, we will review the main components, of the SOLIDWORKS PDM Administration tool. Understanding the use of this tool is important, in order to manage and Configure SOLIDWORKS PDM Standard Vault effectively.</p>
+<p>Before configuring a SOLIDWORKS PDM Vault, the <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-server-installation-updated/">SOLIDWORKS PDM Server</a> and at least one <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-client-installation/">Client</a>, must first be installed. Installing one client on the PDM server, can be useful, when troubleshooting communication issues, as this removes the network as a possible source.</p>
+<p>The SOLIDWORKS PDM Administration tool is installed on every client computer. This article assumes that you have already created a Vault and know how access the PDM Admin tool. If you do not, please first refer to my article titled, <a href="https://www.javelin-tech.com/blog/?p=17686">SOLIDWORKS PDM Standard: Creating a New Vault</a>.</p>
+<p><img alt="" height="474" src="/assets/images/Admin-tool.png" title="" width="703"/><noscript><img alt="" height="474" sizes="(max-width: 703px) 100vw, 703px" src="/assets/images/Admin-tool.png" title="" width="703"/></noscript></p>
+<p>Local Settings is located at the bottom of PDM Admin window can be accessed without logging into a Vault. Local Settings contains three components</p>
+<ul>
+<li>Microsoft Group Policies editor, can be launched from Local Settings. The SOLIDWORKS PDM Installation Guide, provides  information about the available policies.</li>
+<li>The Log File, is useful in determining issues with the the client computer, such as communication issues to the server.</li>
+<li>Settings, determine if Automatic Login will be used, the Zip Program to be used by PDM and search paths for External References.</li>
+</ul>
+<p><img alt="" height="488" src="/assets/images/settings.png" title="" width="444"/><noscript><img alt="" height="488" sizes="(max-width: 444px) 100vw, 444px" src="/assets/images/settings.png" title="" width="444"/></noscript></p>
+<p>The remainder of what will discussing in this article, requires that a user with the appropriate permissions, logs into a Vault. When PDM is installed, a default Admin user is created.</p>
+<p><img alt="" height="278" src="/assets/images/login-1.png" title="" width="456"/><noscript><img alt="" height="278" sizes="(max-width: 456px) 100vw, 456px" src="/assets/images/login-1.png" title="" width="456"/></noscript></p>
+<p>The Vault consists of a number of components, that is referred to as Nodes. In this article, we will focus the core Nodes that are required for a properly operating Vault.</p>
+<p><img alt="" height="475" src="/assets/images/Vault-Nodes.png" title="" width="702"/><noscript><img alt="" height="475" sizes="(max-width: 702px) 100vw, 702px" src="/assets/images/Vault-Nodes.png" title="" width="702"/></noscript></p>
+<p> </p>
+<p>The first Node that I will look at, is the Variables Node. Variables are the containers for information, that is stored within a Vault database. Variables are used extensively in PDM, so understanding their use is important. Some variables, are generated internally, for example Revisions or Users, while other are created manually by a PDM administrator. Variables can be linked to file, so that information can be shared between the Vault database and a file.</p>
+<p><img alt="" height="152" src="/assets/images/variables.png" title="" width="163"/><noscript><img alt="" height="152" src="/assets/images/variables.png" title="" width="163"/></noscript></p>
+<p>The next Node I will at is the Card Node. To use this Node, a Local Vault View must first be created. This can be done by right-clicking on the Vault and selecting ‘Create local view…’.</p>
+<p><img alt="" height="190" src="/assets/images/local-vault-view.png" title="" width="283"/><noscript><img alt="" height="190" src="/assets/images/local-vault-view.png" title="" width="283"/></noscript></p>
+<p>Please refer to my article titled, SOLIDWORKS PDM Standard: Creating the Local Vault View for further instructions on how to create a Local Vault View.</p>
+<p>Cards are used to input information to the Vault’s Database. There are cards for Files, Folders and for conducting Searches.</p>
+<ul>
+<li>File Cards, define what file specific input is required form a user, what information is being read from PDM (revision) and what information is being extracted from a file (SOLIDWORKS Properties). The data card can also push information into a file. This information is stored within Variables, which are linked to a Card.</li>
+<li>Folder Cards contain information that is generic to all files, within that folder. Information in the Folder Card, can be pushed to the File Card. Folder cards also use Variables.</li>
+<li>Search Cards allow a user to search for information, input through File Cards as well as system information such as File Name. Searches can use variables as a search criteria.</li>
+</ul>
+<p><img alt="" height="241" src="/assets/images/Cards.png" title="" width="235"/><noscript><img alt="" height="241" src="/assets/images/Cards.png" title="" width="235"/></noscript></p>
+<p>The next Node is Revisions. In this Node we define what are Revision scheme will look like. The layout of the Revision scheme ca be manually enter and/or created from pull-downs. Revisions are normally  assigned and incremented, through a Workflow.</p>
+<p><img alt="" height="78" src="/assets/images/revision.png" title="" width="219"/><noscript><img alt="" height="78" src="/assets/images/revision.png" title="" width="219"/></noscript></p>
+<p>The Workflow Node is where define the progress of a file, from its inception to its terminus. In a Workflow we define the stages of a design cycle. These stages are referred to as States. The State controls who can access a file, what level of access they have (Read or Read/Write), as well as number of other actions, such as writing to Variable.</p>
+<p>States are connected by Transition actions. Progress through a Transaction, is controlled by the PDM Administrator. Actions, such as Incrementing the Revision of a File, Send Mail and writing to a Variable, can also be performed by the Transition</p>
+<p><img alt="" height="541" src="/assets/images/Workflow.png" title="" width="666"/><noscript><img alt="" height="541" sizes="(max-width: 666px) 100vw, 666px" src="/assets/images/Workflow.png" title="" width="666"/></noscript></p>
+<p>The User’s Node is where we add our users to the Vault and where we can assign passwords, permissions and assign Users to Groups.</p>
+<p><img alt="" height="689" src="/assets/images/New-user.png" title="" width="737"/><noscript><img alt="" height="689" sizes="(max-width: 737px) 100vw, 737px" src="/assets/images/New-user.png" title="" width="737"/></noscript></p>
+<p>Groups allow you to to control how users interact with the Vault, as a Group, instead of individual Users. Grouping users can simplify creating a vault when there are many users.  As with the User’s Node, you can assign permissions to the Group.</p>
+<p><img alt="" height="439" src="/assets/images/Groups.png" title="" width="730"/><noscript><img alt="" height="439" sizes="(max-width: 730px) 100vw, 730px" src="/assets/images/Groups.png" title="" width="730"/></noscript></p>
+<p>This article was intended as an overview of the main functions, of the SOLIDWORKS PDM Standard Administration tool. To be effective in creating and managing a vault, I would strongly recommend taking training, from your SOLIDWORKS Value Added Reseller.</p>

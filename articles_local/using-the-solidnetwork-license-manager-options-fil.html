@@ -1,0 +1,81 @@
+<p>Starting with the 2015 release, SOLIDWORKS PDM licensing is now handled through the SolidNetwork License Manager, instead of through a license file.  This has many benefits for PDM administrators, one of which is that it will allow much more customized control over PDM licenses using the SNL Manager Options File.</p>
+<p>One such benefit is when it comes to forcing inactive users to log off automatically so that their licenses are released back to the license pool, allowing other users access to PDM.</p>
+<p>Previously (in 2014 and older releases) this functionality could be enabled in the Licensing node of the Enterprise PDM Administration console by going to “Automatic Log Off”. However the only option was to have users automatically log off after 30 minutes of inactivity.</p>
+<div class="wp-caption aligncenter" id="attachment_13907" style="width: 539px"><img alt="Automatic Log Off" aria-describedby="caption-attachment-13907" height="623" src="/assets/images/Automatic-Log-Off.png" title="" width="529"/><p class="wp-caption-text" id="caption-attachment-13907"><noscript><img alt="Automatic Log Off" height="623" sizes="(max-width: 529px) 100vw, 529px" src="/assets/images/Automatic-Log-Off.png" title="" width="529"/></noscript> Automatic Log Off</p></div>
+<p>Now, for both SOLIDWORKS PDM Professional and SOLIDWORKS PDM Standard this functionality will be controlled by the SolidNetwork License Manager’s time out settings.</p>
+<p><em><strong>This means that by default the automatic log off, or time out, is ENABLED when you upgrade to PDM 2015 or newer software.</strong></em>  The default setting is for inactive licenses to be logged off after 2 hours, however this can be modified using the SNL Manager Options File.</p>
+<h3>How to create a Custom Options File</h3>
+<p><strong>Step 1:</strong>  Launch the SOLIDWORKS SolidNetWork License Manager program and click “Modify…” on the <em>Server Administration</em> tab.</p>
+<div class="wp-caption aligncenter" id="attachment_13908" style="width: 980px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-1.png"><img alt="SolidNetWork License Manager - Modify" aria-describedby="caption-attachment-13908" height="614" src="/assets/images/Step-1.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13908"><noscript><img alt="SolidNetWork License Manager - Modify" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-1.png" title="" width="970"/></noscript></p></a> SolidNetWork License Manager – Modify</div>
+<p><strong>Step 2:</strong>  Select the option to “Activate/Reactivate a software license” and then click “Next &gt;”.</p>
+<div class="wp-caption aligncenter" id="attachment_13909" style="width: 980px"><img alt="Activate/Reactivate a License" aria-describedby="caption-attachment-13909" height="614" src="/assets/images/Step-2.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13909"><noscript><img alt="Activate/Reactivate a License" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-2.png" title="" width="970"/></noscript> Activate/Reactivate a License</p></div>
+<p><strong>Step 3:</strong>  On the next screen check the box beside “Options File” and click “Edit”.</p>
+<div class="wp-caption aligncenter" id="attachment_13913" style="width: 980px"><img alt="Edit Options File" aria-describedby="caption-attachment-13913" height="614" src="/assets/images/Step-3.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13913"><noscript><img alt="Edit Options File" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-3.png" title="" width="970"/></noscript> Edit Options File</p></div>
+<p><strong>Step 4:</strong>  If you do not have an Options File created yet you will be presented with the option to create a new one in the default path.</p>
+<div class="wp-caption aligncenter" id="attachment_13914" style="width: 997px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2014/12/Step-4.png"><img alt="Create Options File" aria-describedby="caption-attachment-13914" height="797" src="/assets/images/Step-4.png" title="" width="987"/><p class="wp-caption-text" id="caption-attachment-13914"><noscript><img alt="Create Options File" height="797" sizes="(max-width: 987px) 100vw, 987px" src="/assets/images/Step-4.png" title="" width="987"/></noscript></p></a> Create Options File</div>
+<p><strong>Step 5:</strong>  Now we write our Options File.  The correct syntax is to have the Option Keyword, followed by a space, then the Feature Name, followed by another space and then the Time in seconds.  For instance if we wanted the PDM Professional CAD Editor licenses to time out after 1 hour of inactivity but the PDM Professional Contributor license to time out after only half an hour we would write:</p>
+<p>TIMEOUT swepdm_cadeditorandweb 3600<br/>
+TIMEOUT swepdm_contributorandweb 1800</p>
+<div class="wp-caption aligncenter" id="attachment_13917" style="width: 980px"><img alt="Write Options File" aria-describedby="caption-attachment-13917" height="614" src="/assets/images/Step-5.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13917"><noscript><img alt="Write Options File" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-5.png" title="" width="970"/></noscript> Write Options File</p></div>
+<p>A full list of the Option Keywords that can be used in the SNL License file can be found on page 141 and 142 of the FLEXlm End Users Guide (http://files.solidworks.com/Supportfiles/FlexLM_Enduser/licensingenduserguide.pdf).</p>
+<p>The Feature Names of the SOLIDWORKS PDM Professional products are:</p>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Feature Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="197">CAD Editor</td>
+<td width="323">swepdm_cadeditorandweb</td>
+</tr>
+<tr>
+<td width="197">Contributor</td>
+<td width="323">swepdm_contributorandweb</td>
+</tr>
+<tr>
+<td width="197">Viewer</td>
+<td width="323">swepdm_viewer</td>
+</tr>
+<tr>
+<td width="197">PSL</td>
+<td width="323">swepdm_processor</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>The Feature Names of the SOLIDWORKS PDM Standard products are:</p>
+<table>
+<thead>
+<tr>
+<th>Product Name</th>
+<th>Feature Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="197">CAD Editor</td>
+<td width="323">swpdmstd_cadeditor</td>
+</tr>
+<tr>
+<td width="197">Contributor</td>
+<td width="323">swpdmstd_contributor</td>
+</tr>
+<tr>
+<td width="197">Viewer</td>
+<td width="323">swpdmstd_viewer</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong>Step 6:</strong>  Once the Options File text is finished, save the sw_d.opt file and close it.</p>
+<div class="wp-caption aligncenter" id="attachment_13918" style="width: 980px"><img alt="Save SolidNetwork License Manager Options File" aria-describedby="caption-attachment-13918" height="614" src="/assets/images/Step-6.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13918"><noscript><img alt="Save SolidNetwork License Manager Options File" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-6.png" title="" width="970"/></noscript> Save SolidNetwork License Manager Options File</p></div>
+<p><strong>Step 7:</strong>  Ensure that all server information is correct and click Next to proceed to the next screen.</p>
+<div class="wp-caption aligncenter" id="attachment_13919" style="width: 980px"><img alt="Check Server Information" aria-describedby="caption-attachment-13919" height="614" src="/assets/images/Step-7.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13919"><noscript><img alt="Check Server Information" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-7.png" title="" width="970"/></noscript> Check Server Information</p></div>
+<p><strong>Step 8:</strong>  Click “Select All” to make sure all your SOLIDWORKS products are selected for reactivation, enter your contact email and click “Next&gt;” to complete the reactivation process.</p>
+<div class="wp-caption aligncenter" id="attachment_13920" style="width: 980px"><img alt="Activate License" aria-describedby="caption-attachment-13920" height="614" src="/assets/images/Step-8.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13920"><noscript><img alt="Activate License" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-8.png" title="" width="970"/></noscript> Activate License</p></div>
+<div class="wp-caption aligncenter" id="attachment_13921" style="width: 980px"><img alt="Activation Success" aria-describedby="caption-attachment-13921" height="614" src="/assets/images/Step-9.png" title="" width="970"/><p class="wp-caption-text" id="caption-attachment-13921"><noscript><img alt="Activation Success" height="614" sizes="(max-width: 970px) 100vw, 970px" src="/assets/images/Step-9.png" title="" width="970"/></noscript> Activation Success</p></div>
+<p>Here is a video demonstration of the steps outlined above:</p>
+<div class="oembed"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="281" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KGQuiunA28w?feature=oembed" title="Tech Tip: Using the SolidNetwork Licensing Options File with Enterprise PDM" width="500"></iframe></div>

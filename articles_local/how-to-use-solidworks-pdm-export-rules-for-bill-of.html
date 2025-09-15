@@ -1,0 +1,15 @@
+<blockquote><p><em>Is there a way to export specific BOM (Computed BOM or CAD BOM) using SOLIDWORKS PDM export rules?</em></p></blockquote>
+<p>An ability to only export activated BOMs is presented. You should activate specific BOM in Bill of materials Tab in SOLIDWORKS PDM Explorer and turn the flag ‘Only export activated BOMs’ in Export Rule.</p>
+<ol>
+<li>Activate only one of the CAD BOMs
+<p><div class="wp-caption aligncenter" id="attachment_43022" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Activate-BOM.jpg"><img alt="Activate BOM" aria-describedby="caption-attachment-43022" height="640" src="/assets/images/Activate-BOM-1220x640.jpg" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-43022"><noscript><img alt="Activate BOM" height="640" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/Activate-BOM-1220x640.jpg" title="" width="1220"/></noscript></p></a> Activate BOM</div></p></li>
+<li>Create export rule and set it for exporting Computed BOM or CAD BOM, turn the flag ‘Only export activated BOMs’ on. Indicate output folder for XML files.
+<p><div class="wp-caption aligncenter" id="attachment_43026" style="width: 809px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/BOM-Export-Rules.jpg"><img alt="SOLIDWORKS PDM Export Rules" aria-describedby="caption-attachment-43026" height="667" src="/assets/images/BOM-Export-Rules.jpg" title="" width="799"/><p class="wp-caption-text" id="caption-attachment-43026"><noscript><img alt="SOLIDWORKS PDM Export Rules" height="667" sizes="(max-width: 799px) 100vw, 799px" src="/assets/images/BOM-Export-Rules.jpg" title="" width="799"/></noscript></p></a> BOM Export Rules</div></p></li>
+<li>Edit workflow and add new transition action with type ‘Export data to XML’.
+<ul>
+<li>Run it for required files (for example for drawings only).</li>
+<li>Select export corresponding export rule created before.</li>
+</ul>
+</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_43024" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/08/Transition-Action.jpg"><img alt="Transition Action - Export data to XML" aria-describedby="caption-attachment-43024" height="713" src="/assets/images/Transition-Action-1220x713.jpg" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-43024"><noscript><img alt="Transition Action - Export data to XML" height="713" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/Transition-Action-1220x713.jpg" title="" width="1220"/></noscript></p></a> Transition Action – Export data to XML</div></p>

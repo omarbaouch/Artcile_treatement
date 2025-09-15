@@ -1,0 +1,46 @@
+<p data-pm-slice="1 1 []">In <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/">SOLIDWORKS PDM</a>, tasks running within the system may occasionally become unresponsive and fail to progress. When SOLIDWORKS PDM tasks stall out, it is necessary to cancel the stuck tasks from the Task List.</p>
+<p data-pm-slice="1 1 []">This guide provides a step-by-step approach to resolving such issues using the SOLIDWORKS PDM Administration Tool and SQL Server Management Studio. The following sections will outline the procedure to terminate this task in the event it becomes stuck.</p>
+<h2 data-pm-slice="1 1 []">Understanding Task Statuses in SOLIDWORKS PDM</h2>
+<p class="" data-end="87" data-start="0">Each status in the Task List is associated with a numeric value ranging from 1 to 11. The table below outlines all possible task statuses along with their corresponding numeric values:</p>
+<ul>
+<li><strong>1 </strong>– Waiting for Host</li>
+<li><strong>2 </strong>– Starting Up</li>
+<li><strong>3</strong> – In Process</li>
+<li><strong>4 </strong>– Retrying</li>
+<li><strong>5 </strong>– Suspended</li>
+<li><strong>6 </strong>– Cancelling</li>
+<li><strong>7 </strong>– OK</li>
+<li><strong>8 </strong>– Cancelled</li>
+<li><strong>9 </strong>– Failed</li>
+<li><strong>10</strong> – Suspending</li>
+<li><strong>11 </strong>– Resuming</li>
+</ul>
+<h2 data-pm-slice="1 1 []">Identifying a Stuck Task</h2>
+<p>Generally speaking, a task can be considered stuck if it has not fired in a reasonable amount of time or takes significantly longer than normal. At this point, you will need to enter the Task List and find the status of the task.</p>
+<div class="wp-caption aligncenter" id="attachment_69109" style="width: 610px"><img alt="A convert task stuck in the Task List" aria-describedby="caption-attachment-69109" height="224" src="/assets/images/tasklist-600x224.jpg" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-69109"><noscript><img alt="A convert task stuck in the Task List" height="224" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/tasklist-600x224.jpg" title="" width="600"/></noscript> A convert task is stuck in the Task List</p></div>
+<p>In the screenshot below, the “Convert” task is displayed with the status <em>Waiting for host.</em> Based on the previously provided list, this status corresponds to a numeric value of 1. With this information, we can launch the Microsoft SQL Server Management Studio.</p>
+<h2>Cancelling a Task</h2>
+<p>To cancel a task that is stuck in the <em>Waiting for Host</em> state, follow these steps:</p>
+<ol data-spread="false" start="1">
+<li>Open SQL Server Management Studio.</li>
+<li>Expand DATABASES.</li>
+<li>Right-click on the affected vault and select New Query.</li>
+<li>In the SQL Query editor, enter the following command to update the task status:</li>
+</ol>
+<pre><code class="language-sql"><strong>UPDATE</strong> TaskInstances  
+
+<strong>SET</strong> TaskStatus = 8  
+
+<strong>WHERE</strong> TaskStatus = 1  
+
+</code></pre>
+<ol data-pm-slice="3 3 []" data-spread="false" start="5">
+<li>Execute the query.</li>
+<li>The Messages box will display the number of rows affected, indicating how many task statuses have been updated.</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_69118" style="width: 610px"><img alt="Steps to cancel a stuck task in SOLIDWORKS PDM" aria-describedby="caption-attachment-69118" height="292" src="/assets/images/tasklist1-1-600x292.jpg" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-69118"><noscript><img alt="Steps to cancel a stuck task in SOLIDWORKS PDM" height="292" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/tasklist1-1-600x292.jpg" title="" width="600"/></noscript> Steps to cancel a stuck task in SOLIDWORKS PDM</p></div>
+<h2 data-pm-slice="1 1 []">Modifying Task Status for Other Stalled Tasks</h2>
+<p>The SQL query can be adjusted to change the status of any task. Simply modify the numeric values in the command to reflect the desired status transition. For example, replacing <code>WHERE TaskStatus = 1</code> with another numeric value will update tasks currently in a different status.</p>
+<h2 data-pm-slice="1 1 []">Need Further Assistance with Cancelling Tasks?</h2>
+<p>The guide above should provide the necessary steps to clear out the Task List of anything that is not properly processed. Should you have any questions or run into any other issues, do not hesitate to contact our TriMech Technical Support team for further assistance.</p>
+<p style="text-align: center;"><strong><a href="https://www.javelin-tech.com/3d/people/technical-support/">To be connected with our Technical Support team, click here.</a></strong></p>

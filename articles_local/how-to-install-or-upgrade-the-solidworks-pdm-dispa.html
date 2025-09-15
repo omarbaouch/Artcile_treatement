@@ -1,0 +1,29 @@
+<p>When upgrading the SOLIDWORKS PDM file vault to a new version, the add-ins in the vault will not automatically update.  You can <a href="https://www.javelin-tech.com/blog/2016/08/solidworks-pdm-professional-task-add-in/" rel="noopener" target="_blank">view a step by step guide to upgrading the Task Add-in</a>.  In this article, we are going to look at upgrading the Dispatch Add-in.</p>
+<p>It is recommended to run the same major and service pack version of the Dispatch add-in as the current major and service pack version of SOLIDWORKS PDM.</p>
+<p>First, we need to remove the existing SOLIDWORKS PDM Dispatch Add-in (don’t worry you won’t lose any existing scripts):</p>
+<ul>
+<li><strong>Step 1: Administration Tool &gt; Add-ins &gt; Dispatch &gt; <em>Right-Click</em> &gt; Remove</strong>
+<ul>
+<li>Note if installing for the first time, skip to step 2</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_25407" style="width: 721px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/RemoveDispatch.png"><img alt="Remove the SOLIDWORKS PDM Dispatch Add-in" aria-describedby="caption-attachment-25407" height="777" src="/assets/images/RemoveDispatch.png" title="" width="711"/><p class="wp-caption-text" id="caption-attachment-25407"><noscript><img alt="Remove the SOLIDWORKS PDM Dispatch Add-in" height="777" sizes="(max-width: 711px) 100vw, 711px" src="/assets/images/RemoveDispatch.png" title="" width="711"/></noscript></p></a> Remove the SOLIDWORKS PDM Dispatch Add-in</div>
+<ul>
+<li><strong>Step 2: Administration Tool</strong> &gt; <strong>File</strong> &gt; <strong>Open</strong>
+<ul>
+<li>Change the filter to show “.caf” files</li>
+<li>Browse to the installation location for PDM and the “Default Data” folder (by default the path is “C:\Program Files\SOLIDWORKS PDM\Default Data”)</li>
+</ul>
+</li>
+<li><strong>Click to Open</strong> <strong>Dispatch.caf</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_25408" style="width: 1042px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/OpenDispatch.png"><img alt="Open Dispatch File" aria-describedby="caption-attachment-25408" height="778" src="/assets/images/OpenDispatch.png" title="" width="1032"/><p class="wp-caption-text" id="caption-attachment-25408"><noscript><img alt="Open Dispatch File" height="778" sizes="(max-width: 1032px) 100vw, 1032px" src="/assets/images/OpenDispatch.png" title="" width="1032"/></noscript></p></a> Open Dispatch File</div>
+<ul>
+<li><strong>Step 3: Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_25409" style="width: 724px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/DragDispatch.png"><img alt="Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins" aria-describedby="caption-attachment-25409" height="780" src="/assets/images/DragDispatch.png" title="" width="714"/><p class="wp-caption-text" id="caption-attachment-25409"><noscript><img alt="Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins" height="780" sizes="(max-width: 714px) 100vw, 714px" src="/assets/images/DragDispatch.png" title="" width="714"/></noscript></p></a> Drag-and-drop the Dispatch add-in into the Administration Tool Add-ins</div>
+<ul>
+<li><strong>Step 4: Close the Admin Tool and Reboot the client workstation</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_25411" style="width: 723px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/DispatchUpdatedVer.png"><img alt="Upgraded Dispatch Add-in" aria-describedby="caption-attachment-25411" height="781" src="/assets/images/DispatchUpdatedVer.png" title="" width="713"/><p class="wp-caption-text" id="caption-attachment-25411"><noscript><img alt="Upgraded Dispatch Add-in" height="781" sizes="(max-width: 713px) 100vw, 713px" src="/assets/images/DispatchUpdatedVer.png" title="" width="713"/></noscript></p></a> Upgraded Dispatch Add-in</div>

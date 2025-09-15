@@ -1,0 +1,27 @@
+<p>The SOLIDWORKS PDM Archive Server Settings backup should be completed as part of your regular <a href="https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/">Backup Process</a>, but it’s also a good practice to be run ahead of any major procedures such as an migration or upgrade.  It’s straight forward to configure and can be scheduled to complete automatically.</p>
+<blockquote><p><span style="text-decoration: underline;"><strong>Important! The archive server settings backup utility does not include the archives or databases, these need to be created and completed separately</strong></span></p></blockquote>
+<h2>How to set up the archive server settings backup</h2>
+<p>On the archive server; start the <strong>Archive Server Configuration</strong> Tool from <strong>Start</strong> &gt; <strong>Programs</strong> &gt; <strong>SOLIDWORKS PDM</strong> &gt; <strong>Archive Server Configuration</strong>;</p>
+<p><div class="wp-caption aligncenter" id="attachment_20319" style="width: 610px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/ArchiveServerConfiguration.png"><img alt="Archive Server Settings" aria-describedby="caption-attachment-20319" height="153" src="/assets/images/ArchiveServerConfiguration.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-20319"><noscript><img alt="Archive Server Settings" height="153" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/ArchiveServerConfiguration.png" title="" width="600"/></noscript></p></a> Start Archive Server Configuration</div></p>
+<p>In the Archive Server dialog select <strong>Tools</strong> &gt; <strong>Backup Settings…</strong></p>
+<p><div class="wp-caption aligncenter" id="attachment_20321" style="width: 719px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/ToolsBackupSettings.png"><img alt="Archive Server Settings" aria-describedby="caption-attachment-20321" height="508" src="/assets/images/ToolsBackupSettings.png" title="" width="709"/><p class="wp-caption-text" id="caption-attachment-20321"><noscript><img alt="Archive Server Settings" height="508" sizes="(max-width: 709px) 100vw, 709px" src="/assets/images/ToolsBackupSettings.png" title="" width="709"/></noscript></p></a> Archive Server dialog</div></p>
+<p>Here you can;</p>
+<ul>
+<li>Select which vaults to back up.
+<ul>
+<li>Or include all vaults (preferred).</li>
+</ul>
+</li>
+<li>Define a <strong>Backup Location </strong>for the generated backup file (Backup.dat.) to be created.
+<ul>
+<li>The recommended location is within the default root to the vault archives, so it’s included within the vault archives backup.</li>
+</ul>
+</li>
+<li>Enable the <strong>Schedule option, </strong>to complete automatically.</li>
+<li>Define a <strong>Password</strong> to be required when restoring the backup.</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_20322" style="width: 433px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/BackupSettings.png"><img alt="SOLIDWORKS PDM Archive Server Settings Backup" aria-describedby="caption-attachment-20322" height="617" src="/assets/images/BackupSettings.png" title="" width="423"/><p class="wp-caption-text" id="caption-attachment-20322"><noscript><img alt="SOLIDWORKS PDM Archive Server Settings Backup" height="617" sizes="(max-width: 423px) 100vw, 423px" src="/assets/images/BackupSettings.png" title="" width="423"/></noscript></p></a> Backup Settings</div></p>
+<p>We can manually launch a backup file to be created using the <strong>Launch Backup</strong> button, otherwise, it will be created as per the defined schedule.</p>
+<blockquote><p>Archive server settings include anything entered at the Archive Server Configuration Tool Level, like the physical location of the archives, defined login types (database or Windows login etc) and passwords.</p></blockquote>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Attend a <a href="http://www.javelin-tech.com/main/training/course_solidworks_enterprise_pdm_admin.htm" rel="noopener noreferrer" target="_blank">SOLIDWORKS PDM Professional Administration training course</a> either in a classroom near you or live online.</p>

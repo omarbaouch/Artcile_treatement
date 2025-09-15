@@ -1,0 +1,32 @@
+
+<h6>Updated 2025-06-04 </h6>
+<p>When troubleshooting problems within SOLIDWORKS PDM, especially performance issues, it’s important to ensure the client has a strong connection to the server components.  Often, tech support will request an extended ping test, to look for issues.</p>
+<h3>How to complete an extended ping test with log</h3>
+<p>In Windows 10</p>
+<ul>
+<li>Start button &gt; RMB &gt; Run
+
+<ul>
+<li>CMD</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_48980" style="width: 718px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/10/Ping-Test-With-Log-Start-Run.png"><img alt="Run CMD" aria-describedby="caption-attachment-48980" height="269" src="/assets/images/Ping-Test-With-Log-Start-Run.png" title="" width="708"/><p class="wp-caption-text" id="caption-attachment-48980"><noscript><img alt="Run CMD" height="269" sizes="(max-width: 708px) 100vw, 708px" src="/assets/images/Ping-Test-With-Log-Start-Run.png" title="" width="708"/></noscript></p></a> Run CMD</div>
+<ul>
+<li>Ping &lt;Database/Archive Server Name&gt; -t -l <strong>1350</strong> &gt;C:\temp\Pingtest.txt</li>
+</ul>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-03-09.png"><img alt="" height="136" src="/assets/images/2025-06-04_13-03-09.png" title="" width="628"/><noscript><img alt="" height="136" sizes="(max-width: 628px) 100vw, 628px" src="/assets/images/2025-06-04_13-03-09.png" title="" width="628"/></noscript></a></p>
+<ul>
+<li>Let it run for a sample amount of time, then stop the test by pressing <strong>CTRL-C</strong>.</li>
+</ul>
+<p>The command will be completed, and a log file generated on the C-Drive;</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/2025-06-04_13-05-13.png"><img alt="" height="817" src="/assets/images/2025-06-04_13-05-13.png" title="" width="1075"/><noscript><img alt="" height="817" sizes="(max-width: 1075px) 100vw, 1075px" src="/assets/images/2025-06-04_13-05-13.png" title="" width="1075"/></noscript></a></p>
+<p>This can then be sent to tech support for further analysis.</p>
+<h3>Additional Notes</h3>
+<ul>
+<li>The above test is using an increased packet size of <strong>1350</strong>, this improves the quality of the test to a size more comparable with PDM communications.</li>
+<li>Any listings of ‘Request timed out’ or dropped packets would indicate an issue.</li>
+<li>If multiple tests are required (network communication can vary) editing the command from ‘&gt;’ to ‘&gt;&gt;’ will append the existing log, rather than replacing it, so multiple tests can be captured within the one log. </li>
+</ul>
+<h6>2025-06-04…Update Details</h6>
+<p>This article was updated to reduce the sample packet size from 1500 to 1350 as within some environments a packet size of &gt; 1400 could cause IP fragmentation / reassembly on the link to measure.</p>

@@ -1,0 +1,305 @@
+<p>SOLIDWORKS PDM Professional runs on Microsoft SQL Standard which allows maintenance plans to be set up which will automatically <a href="https://www.javelin-tech.com/blog/2015/06/setting-microsoft-sql-maintenance-plan-video/">create backup files for the PDM databases</a>.  However SOLIDWORKS PDM Standard runs on Microsoft SQL Express, which does not include the SQL Server Agent and thus does not have the ability to create automatic backups.</p>
+<p><strong>It is VERY important that the SOLIDWORKS PDM Standard vault databases be backed up on a daily basis</strong>.  If you haven’t set up a backup process for the databases yet, do so right away, your data is at risk until you do so (even if you are backing up the Archive Folder with the actual vault files, you still need a backup of the database to restore in case of system failure).</p>
+<p>There are two options for setting up scheduled back ups of a Microsoft SQL Server Express database.</p>
+<h3>Option 1:  Third Part Utilities</h3>
+<p>There are several utilities, both paid and free, which can do an excellent job of backing up the databases.  Some of these tools even include the ability to upload the backups to cloud storage or to send out email notifications if desired.</p>
+<p>A few options are:</p>
+<ul>
+<li><a href="https://sqlbackupandftp.com/" rel="nofollow noopener" target="_blank">SQL Backup and FTP</a></li>
+<li><a href="http://sqlbackupfree.com/" rel="nofollow noopener" target="_blank">SQLBackupFree</a></li>
+<li><a href="http://www.sqlbackupmaster.com/" rel="nofollow noopener" target="_blank">SQL Backup Master</a></li>
+</ul>
+<blockquote><p>Please Note: These utilities are not SOLIDWORKS or Javelin products, so <strong>this list is provided for information purposes only</strong>. Javelin does not specifically recommend any of these utilities over another and cannot guarantee their effectiveness.</p></blockquote>
+<p><strong>When using these utilities, ensure that both the database for the SOLIDWORKS PDM Vault AND the ConisioMasterDB database are being backed up.</strong></p>
+<h3>Option 2:  Using SQL Server Management Studio and Windows Task Scheduler</h3>
+<p>A backup can be scripted through the SQL Server Management Studio and then set up to be done on a daily basis using a batch file that is run by the Task Scheduler integrated into Windows.</p>
+<p>The steps for creating a scheduled backup of a database hosted in Microsoft SQL Server Express are explained in the Microsoft Knowledge Base article <a href="https://support.microsoft.com/en-us/kb/2019698" rel="nofollow noopener" target="_blank">KB2019698</a>.</p>
+<p>Below is a slight modification to those instructions, including a slightly simpler to set up batch file which will also perform a cleanup of the backups, removing those older than a set number of days.</p>
+<p>To use this method, the SQL Server Management Studio tool must be installed.</p>
+<p>Here are the steps:</p>
+<p><strong>Step 1:</strong>  Launch the SQL Server Management Studio and log in to the named instance “SWPDM” using the sa account and password.</p>
+<div class="wp-caption aligncenter" id="attachment_27604" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-1-Login.png"><img alt="Connect to server" aria-describedby="caption-attachment-27604" height="526" src="/assets/images/Step-1-Login-640x526.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27604"><noscript><img alt="Connect to server" height="526" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-1-Login-640x526.png" title="" width="640"/></noscript></p></a> Connect to server</div>
+<p><strong>Step 2:</strong>  Click “New Query”</p>
+<div class="wp-caption aligncenter" id="attachment_27605" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-2-Query.png"><img alt="New Query" aria-describedby="caption-attachment-27605" height="526" src="/assets/images/Step-2-Query-640x526.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27605"><noscript><img alt="New Query" height="526" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-2-Query-640x526.png" title="" width="640"/></noscript></p></a> New Query</div>
+<p><strong>Step 3:</strong>  Copy and paste the script from the Microsoft Knowledge Base article <a href="https://support.microsoft.com/en-us/kb/2019698" rel="nofollow noopener" target="_blank">KB2019698</a> into the query window (the text of the query is below for easy reference).  Ensure that the “master” database is specified in the drop list, then click “Execute”.  This will create the stored procedure “sp_BackupDatabases” that the batch file will trigger to create the backups.</p>
+<div class="wp-caption aligncenter" id="attachment_27606" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-3-Execute-Query.png"><img alt="SOLIDWORKS PDM Standard Database Backups" aria-describedby="caption-attachment-27606" height="526" src="/assets/images/Step-3-Execute-Query-640x526.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27606"><noscript><img alt="SOLIDWORKS PDM Standard Database Backups" height="526" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-3-Execute-Query-640x526.png" title="" width="640"/></noscript></p></a> Copy &amp; Paste Query</div>
+<p>This is the script for the query:</p>
+<pre><span style="color: #808080;">USE [master] </span>
+
+<span style="color: #808080;">GO </span>
+
+<span style="color: #808080;">/****** Object: StoredProcedure [dbo].[sp_BackupDatabases] ******/ </span>
+
+<span style="color: #808080;">SET ANSI_NULLS ON </span>
+
+<span style="color: #808080;">GO </span>
+
+<span style="color: #808080;">SET QUOTED_IDENTIFIER ON </span>
+
+<span style="color: #808080;">GO </span>
+
+ 
+
+<span style="color: #808080;">-- ============================================= </span>
+
+<span style="color: #808080;">-- Author: Microsoft </span>
+
+<span style="color: #808080;">-- Create date: 2010-02-06</span>
+
+<span style="color: #808080;">-- Description: Backup Databases for SQLExpress</span>
+
+<span style="color: #808080;">-- Parameter1: databaseName </span>
+
+<span style="color: #808080;">-- Parameter2: backupType F=full, D=differential, L=log</span>
+
+<span style="color: #808080;">-- Parameter3: backup file location</span>
+
+<span style="color: #808080;">-- =============================================</span>
+
+ 
+
+<span style="color: #808080;">CREATE PROCEDURE [dbo].[sp_BackupDatabases] </span>
+
+<span style="color: #808080;"> @databaseName sysname = null,</span>
+
+<span style="color: #808080;"> @backupType CHAR(1),</span>
+
+<span style="color: #808080;"> @backupLocation nvarchar(200) </span>
+
+<span style="color: #808080;">AS </span>
+
+ 
+
+<span style="color: #808080;"> SET NOCOUNT ON; </span>
+
+ 
+
+<span style="color: #808080;"> DECLARE @DBs TABLE</span>
+
+<span style="color: #808080;"> (</span>
+
+<span style="color: #808080;"> ID int IDENTITY PRIMARY KEY,</span>
+
+<span style="color: #808080;"> DBNAME nvarchar(500)</span>
+
+<span style="color: #808080;"> )</span>
+
+ 
+
+<span style="color: #808080;"> -- Pick out only databases which are online in case ALL databases are chosen to be backed up</span>
+
+<span style="color: #808080;"> -- If specific database is chosen to be backed up only pick that out from @DBs</span>
+
+<span style="color: #808080;"> INSERT INTO @DBs (DBNAME)</span>
+
+<span style="color: #808080;"> SELECT Name FROM master.sys.databases</span>
+
+<span style="color: #808080;"> where state=0</span>
+
+<span style="color: #808080;"> AND name=@DatabaseName</span>
+
+<span style="color: #808080;"> OR @DatabaseName IS NULL</span>
+
+<span style="color: #808080;"> ORDER BY Name</span>
+
+ 
+
+<span style="color: #808080;"> -- Filter out databases which do not need to backed up</span>
+
+<span style="color: #808080;"> IF @backupType='F'</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> DELETE @DBs where DBNAME IN ('tempdb','Northwind','pubs','AdventureWorks')</span>
+
+<span style="color: #808080;"> END</span>
+
+<span style="color: #808080;"> ELSE IF @backupType='D'</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> DELETE @DBs where DBNAME IN ('tempdb','Northwind','pubs','master','AdventureWorks')</span>
+
+<span style="color: #808080;"> END</span>
+
+<span style="color: #808080;"> ELSE IF @backupType='L'</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> DELETE @DBs where DBNAME IN ('tempdb','Northwind','pubs','master','AdventureWorks')</span>
+
+<span style="color: #808080;"> END</span>
+
+<span style="color: #808080;"> ELSE</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> RETURN</span>
+
+<span style="color: #808080;"> END</span>
+
+ 
+
+<span style="color: #808080;"> -- Declare variables</span>
+
+<span style="color: #808080;"> DECLARE @BackupName varchar(100)</span>
+
+<span style="color: #808080;"> DECLARE @BackupFile varchar(100)</span>
+
+<span style="color: #808080;"> DECLARE @DBNAME varchar(300)</span>
+
+<span style="color: #808080;"> DECLARE @sqlCommand NVARCHAR(1000) </span>
+
+<span style="color: #808080;"> DECLARE @dateTime NVARCHAR(20)</span>
+
+<span style="color: #808080;"> DECLARE @Loop int </span>
+
+ 
+
+<span style="color: #808080;"> -- Loop through the databases one by one</span>
+
+<span style="color: #808080;"> SELECT @Loop = min(ID) FROM @DBs</span>
+
+ 
+
+<span style="color: #808080;"> WHILE @Loop IS NOT NULL</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+ 
+
+<span style="color: #808080;">-- Database Names have to be in [dbname] format since some have - or _ in their name</span>
+
+<span style="color: #808080;"> SET @DBNAME = '['+(SELECT DBNAME FROM @DBs WHERE ID = @Loop)+']'</span>
+
+ 
+
+<span style="color: #808080;">-- Set the current date and time n yyyyhhmmss format</span>
+
+<span style="color: #808080;"> SET @dateTime = REPLACE(CONVERT(VARCHAR, GETDATE(),101),'/','') + '_' + REPLACE(CONVERT(VARCHAR, GETDATE(),108),':','') </span>
+
+ 
+
+<span style="color: #808080;">-- Create backup filename in path\filename.extension format for full,diff and log backups</span>
+
+<span style="color: #808080;"> IF @backupType = 'F'</span>
+
+<span style="color: #808080;"> SET @BackupFile = @backupLocation+REPLACE(REPLACE(@DBNAME, '[',''),']','')+ '_FULL_'+ @dateTime+ '.BAK'</span>
+
+<span style="color: #808080;"> ELSE IF @backupType = 'D'</span>
+
+<span style="color: #808080;"> SET @BackupFile = @backupLocation+REPLACE(REPLACE(@DBNAME, '[',''),']','')+ '_DIFF_'+ @dateTime+ '.BAK'</span>
+
+<span style="color: #808080;"> ELSE IF @backupType = 'L'</span>
+
+<span style="color: #808080;"> SET @BackupFile = @backupLocation+REPLACE(REPLACE(@DBNAME, '[',''),']','')+ '_LOG_'+ @dateTime+ '.TRN'</span>
+
+ 
+
+<span style="color: #808080;">-- Provide the backup a name for storing in the media</span>
+
+<span style="color: #808080;"> IF @backupType = 'F'</span>
+
+<span style="color: #808080;"> SET @BackupName = REPLACE(REPLACE(@DBNAME,'[',''),']','') +' full backup for '+ @dateTime</span>
+
+<span style="color: #808080;"> IF @backupType = 'D'</span>
+
+<span style="color: #808080;"> SET @BackupName = REPLACE(REPLACE(@DBNAME,'[',''),']','') +' differential backup for '+ @dateTime</span>
+
+<span style="color: #808080;"> IF @backupType = 'L'</span>
+
+<span style="color: #808080;"> SET @BackupName = REPLACE(REPLACE(@DBNAME,'[',''),']','') +' log backup for '+ @dateTime</span>
+
+ 
+
+<span style="color: #808080;">-- Generate the dynamic SQL command to be executed</span>
+
+ 
+
+<span style="color: #808080;"> IF @backupType = 'F' </span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> SET @sqlCommand = 'BACKUP DATABASE ' +@DBNAME+ ' TO DISK = '''+@BackupFile+ ''' WITH INIT, NAME= ''' +@BackupName+''', NOSKIP, NOFORMAT'</span>
+
+<span style="color: #808080;"> END</span>
+
+<span style="color: #808080;"> IF @backupType = 'D'</span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> SET @sqlCommand = 'BACKUP DATABASE ' +@DBNAME+ ' TO DISK = '''+@BackupFile+ ''' WITH DIFFERENTIAL, INIT, NAME= ''' +@BackupName+''', NOSKIP, NOFORMAT' </span>
+
+<span style="color: #808080;"> END</span>
+
+<span style="color: #808080;"> IF @backupType = 'L' </span>
+
+<span style="color: #808080;"> BEGIN</span>
+
+<span style="color: #808080;"> SET @sqlCommand = 'BACKUP LOG ' +@DBNAME+ ' TO DISK = '''+@BackupFile+ ''' WITH INIT, NAME= ''' +@BackupName+''', NOSKIP, NOFORMAT' </span>
+
+<span style="color: #808080;"> END</span>
+
+ 
+
+<span style="color: #808080;">-- Execute the generated SQL command</span>
+
+<span style="color: #808080;"> EXEC(@sqlCommand)</span>
+
+ 
+
+<span style="color: #808080;">-- Goto the next database</span>
+
+<span style="color: #808080;">SELECT @Loop = min(ID) FROM @DBs where ID&gt;@Loop</span>
+
+ 
+
+<span style="color: #808080;">END</span></pre>
+<p><strong>Step 4:</strong>  Open a text editor such as Notepad then copy and paste the following text.</p>
+<pre><span style="color: #808080;">::Specify Folder Location For SQL Database Backups</span>
+
+<span style="color: #808080;">set BACKUPPATH=<span style="color: #800000;">c:\SQL Backup</span></span>
+
+
+
+<span style="color: #808080;">::Specify Name of PDM Vault Database</span>
+
+<span style="color: #808080;">set PDMDATABASE=<span style="color: #008000;">PDMVault</span></span>
+
+
+
+<span style="color: #808080;">::Specify How Many Days Of Backups To Keep</span>
+
+<span style="color: #808080;">set numbackups=<span style="color: #0000ff;">14</span></span>
+
+
+
+<span style="color: #808080;">sqlcmd -S .\SWPDM -E -Q"EXEC sp_BackupDatabases @backupLocation='%BACKUPPATH%\', @databaseName=%PDMDATABASE%, @backupType=F"</span>
+
+
+
+<span style="color: #808080;">sqlcmd -S .\SWPDM -E -Q"EXEC sp_BackupDatabases @backupLocation='%BACKUPPATH%\', @databaseName=ConisioMasterDB, @backupType=F"</span>
+
+
+
+<span style="color: #808080;">forfiles /P "%BACKUPPATH%" /S /M *.BAK /D -%numbackups% /C "cmd /c del @PATH"</span></pre>
+<p>Replace “<span style="color: #800000;">c:\SQL Backup</span>” with the path for the folder where the SQL database backup files will be stored (this must be a location on the local hard drive).</p>
+<p>Replace “<span style="color: #008000;">PDMVault</span>” with name of the database for the PDM Vault.  PLEASE NOTE this may be different from the name of the vault.  To verify the database name, expand the list of databases in the SQL Management Studio and use the name found there.</p>
+<p>Replace “<span style="color: #0000ff;">14</span>” with the number of days that you wish keep the backup files for.</p>
+<div class="wp-caption aligncenter" id="attachment_27607" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-4-Batch-File.png"><img alt="Edit script" aria-describedby="caption-attachment-27607" height="526" src="/assets/images/Step-4-Batch-File-640x526.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27607"><noscript><img alt="Edit script" height="526" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-4-Batch-File-640x526.png" title="" width="640"/></noscript></p></a> Edit script</div>
+<p><strong>Step 5:</strong>  Perform a Save As and change the “Save as type” to “All Files”.  Name the file “Sqlbackup.bat” and save the file.</p>
+<div class="wp-caption aligncenter" id="attachment_27608" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-5-Save-As.png"><img alt="Save As" aria-describedby="caption-attachment-27608" height="632" src="/assets/images/Step-5-Save-As-640x632.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27608"><noscript><img alt="Save As" height="632" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-5-Save-As-640x632.png" title="" width="640"/></noscript></p></a> Save As</div>
+<p><strong>Step 6:</strong>  Launch the Task Scheduler and click “Create Basic Task” to launch the wizard.</p>
+<div class="wp-caption aligncenter" id="attachment_27609" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-6-Task-Scheduler.png"><img alt="Create Basic Task" aria-describedby="caption-attachment-27609" height="456" src="/assets/images/Step-6-Task-Scheduler-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27609"><noscript><img alt="Create Basic Task" height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-6-Task-Scheduler-640x456.png" title="" width="640"/></noscript></p></a> Create Basic Task</div>
+<p><strong>Step 7:</strong>  Assign a name to the task.</p>
+<div class="wp-caption aligncenter" id="attachment_27611" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-7-Task-Name.png"><img alt="Assign a name to the task" aria-describedby="caption-attachment-27611" height="456" src="/assets/images/Step-7-Task-Name-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27611"><noscript><img alt="Assign a name to the task" height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-7-Task-Name-640x456.png" title="" width="640"/></noscript></p></a> Assign a name to the task</div>
+<p><strong>Step 8:</strong>  Set the task to trigger daily.</p>
+<div class="wp-caption aligncenter" id="attachment_27612" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-9-Trigger-Daily.png"><img alt="Set the task to trigger daily." aria-describedby="caption-attachment-27612" height="456" src="/assets/images/Step-9-Trigger-Daily-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27612"><noscript><img alt="Set the task to trigger daily." height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-9-Trigger-Daily-640x456.png" title="" width="640"/></noscript></p></a> Set the task to trigger daily.</div>
+<p><strong>Step 9:</strong>  Set the time for the back up to be made.  This should be at a time when no users will be working in the vault.</p>
+<div class="wp-caption aligncenter" id="attachment_27613" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-8-Time.png"><img alt="Set the time for the back up to be made" aria-describedby="caption-attachment-27613" height="456" src="/assets/images/Step-8-Time-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27613"><noscript><img alt="Set the time for the back up to be made" height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-8-Time-640x456.png" title="" width="640"/></noscript></p></a> Set the time for the back up to be made</div>
+<p><strong>Step 10:</strong>  Set the task action to be “Start a program”.</p>
+<div class="wp-caption aligncenter" id="attachment_27614" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-10-Action.png"><img alt='Set the task action to be "Start a program"' aria-describedby="caption-attachment-27614" height="456" src="/assets/images/Step-10-Action-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27614"><noscript><img alt='Set the task action to be "Start a program"' height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-10-Action-640x456.png" title="" width="640"/></noscript></p></a> Set the task action to be “Start a program”</div>
+<p><strong>Step 11:</strong>  Click “Browse” and select the batch file created in Step 5.  Click Next then Finish to finalize the task creation.<br/>
+<a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-11-Batch-File.png"><img alt="" height="456" src="/assets/images/Step-11-Batch-File-640x456.png" title="" width="640"/><noscript><img alt="" height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-11-Batch-File-640x456.png" title="" width="640"/></noscript></a></p>
+<div class="wp-caption aligncenter" id="attachment_27616" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/04/Step-11-Finish.png"><img alt="Finalize the task creation" aria-describedby="caption-attachment-27616" height="456" src="/assets/images/Step-11-Finish-640x456.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-27616"><noscript><img alt="Finalize the task creation" height="456" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Step-11-Finish-640x456.png" title="" width="640"/></noscript></p></a> Finalize the task creation</div>
+<p> </p>

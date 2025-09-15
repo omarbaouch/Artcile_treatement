@@ -1,0 +1,32 @@
+<p>Before you manually update <a href="https://www.javelin-tech.com/3d/solidworks-toolbox/">SOLIDWORKS Toolbox</a> in <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> Vault, first ensure there is a full recent back up of the file vault database and archive.</p>
+<p>Next make sure that all the Toolbox parts are not checked out or in use by any currently checked out assemblies. When an existing major version Toolbox is upgraded, Toolbox parts may be need to be moved, any checked out checked out files will not be moved and could result in the update failing.</p>
+<h3>To Check whether any SOLIDWORKS Toolbox parts are currently checked out:</h3>
+<ul>
+<li>Log into a local vault view as “Admin” and use the search tool to make sure no files are checked out under the Toolbox folder in the vault.<img alt="" height="234" src="/assets/images/01-600x234.jpg" title="search" width="600"/><noscript><img alt="" height="234" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/01-600x234.jpg" title="search" width="600"/></noscript><span style="color: #0a1626;"><span style="line-height: 16px;"><br/>
+</span></span></li>
+<li><span style="color: #0a1626;"><span style="line-height: 16px;">To find if any Toolbox parts are used by checked out assemblies, run the SolidWorks Enterprise PDM report “ListAllCheckedOutParentsWithToolboxParts.crp. This report can be downloaded from the SolidWorks Knowledgebase article S-058099. Knowledgebase articles are accessible from the SolidWorks Customer Portal (www.solidworks.com)</span></span>
+<p><div class="wp-caption aligncenter" id="attachment_46341" style="width: 480px"><img alt="" aria-describedby="caption-attachment-46341" height="460" src="/assets/images/02.jpg" style="line-height: 16px; color: #0a1626;" title="tools pul-down" width="470"/><p class="wp-caption-text" id="caption-attachment-46341"><noscript><img alt="" height="460" src="/assets/images/02.jpg" style="line-height: 16px; color: #0a1626;" title="tools pul-down" width="470"/></noscript> Report Generator</p></div></p></li>
+<li>Check in all assemblies that are listed in the results area of the report.</li>
+</ul>
+<h3>To manually upgrade Toolbox:</h3>
+<ol>
+<li>Ensure that no one is accessing Toolbox during this process.</li>
+<li>Log into a vault view as ‘Admin’</li>
+<li>Check-out the <strong>‘swbrowser.sldedb’ </strong>file (and if it’s present the<strong> ‘swbrowser.sldedbold’ </strong>file<strong>) </strong>located in the PDM Vault typically “<strong>SOLIDWORKS Data\lang\english</strong>“</li>
+<li>Browse to <strong>SOLIDWORKS 2024</strong> installation folder, typically “<strong>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS</strong>“, and then to “<strong>Toolbox\data utilities</strong>” right click on “<strong>UpdateBrowserDatabase.exe</strong>” and select “<strong>Run as administrator”</strong>.
+<p><div class="wp-caption aligncenter" id="attachment_40686" style="width: 568px"><img alt="" aria-describedby="caption-attachment-40686" height="221" src="/assets/images/1.jpg" title="" width="558"/><p class="wp-caption-text" id="caption-attachment-40686"><noscript><img alt="" height="221" src="/assets/images/1.jpg" title="" width="558"/></noscript> Update Browser Database</p></div></p></li>
+<li>Click the <strong>“…”</strong> button to browse for the file “<strong>swbrowser.sldedb</strong>“</li>
+<li>To begin the upgrade, click the “<strong>Update</strong>” button.
+<p><div class="wp-caption aligncenter" id="attachment_63853" style="width: 559px"><img alt="" aria-describedby="caption-attachment-63853" height="227" src="/assets/images/SW-Toolbox-versions.png" title="" width="549"/><p class="wp-caption-text" id="caption-attachment-63853"><noscript><img alt="" height="227" src="/assets/images/SW-Toolbox-versions.png" title="" width="549"/></noscript> Update Toolbox Database</p></div></p></li>
+<li>Confirm the Toolbox update was successful by repeating <strong>Step 4</strong> and <strong>Step 5. </strong>The Database version should match the Update Version when the update is complete.</li>
+<li>Once the update is complete, start-up <strong>SOLIDWORKS</strong> and ensure that the correct path for the updated Toolbox is specified in <strong>Tools &gt; Options &gt; System Options &gt; Hole Wizard /Toolbox</strong>.</li>
+<li><strong>Check-in</strong> the updated Toolbox files</li>
+<li>Select the <strong>SOLIDWORKS Data</strong> folder, click on <strong>Get Latest Version</strong> (or <strong>right click</strong> on <strong>SOLIDWORKS Data</strong> folder and select <strong>Get Latest Version</strong> from right click menu.)
+<div class="mceTemp"></div>
+<p><div class="wp-caption aligncenter" id="attachment_40690" style="width: 351px"><img alt="" aria-describedby="caption-attachment-40690" height="184" src="/assets/images/4.jpg" title="" width="341"/><p class="wp-caption-text" id="caption-attachment-40690"><noscript><img alt="" height="184" src="/assets/images/4.jpg" title="" width="341"/></noscript> Get Latest Version</p></div></p></li>
+</ol>
+<h3>Upgrading the remainder of the client computers:</h3>
+<ul>
+<li>Log in as a user that has at least read permission to the Toolbox folder on other client machines.</li>
+<li>Repeat <strong>Step 10</strong></li>
+</ul>

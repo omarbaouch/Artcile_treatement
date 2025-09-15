@@ -1,0 +1,46 @@
+<p>In SOLIDWORKS PDM 2018, the much-anticipated <strong>Revision Tables</strong> integration was added, and we can now automatically add table rows with updated variable values via a workflow transition or the <a href="https://www.javelin-tech.com/blog/2016/05/solidworks-pdm-set-revision/"><strong>Set Revision</strong></a> command.  In this article, we’re going to look at the basic set up of this feature to automatically update the Revision Table via a workflow transition action.</p>
+<blockquote><p><strong>NOTE</strong>: This functionality requires SOLIDWORKS PDM 2018 or later, and the drawing file format to be 2018 or later.</p></blockquote>
+<h2>How To Set Up Revision Tables</h2>
+<p>By default, there are 5 revision columns; Zone, Rev, Description, Date and Approved.  For this example, we’re going to create a table that only uses <strong>Rev</strong>, <strong>Description – Rev Table</strong>, <strong>Date</strong> and <strong>Approved</strong></p>
+<h3>Enable Revision Tables</h3>
+<ul>
+<li>Administration Tool &gt; SOLIDWORKS &gt; Revision Table
+<ul>
+<li>Settings:
+<ul>
+<li>Check <strong>Enable Revision Table</strong></li>
+<li>Number of visible rows: <strong>3</strong></li>
+<li>Revision placeholder character(s): *</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption alignnone" id="attachment_38807" style="width: 821px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/10/Rev-Tables-Enable.png"><img alt="Revision Table Settings" aria-describedby="caption-attachment-38807" height="489" src="/assets/images/Rev-Tables-Enable.png" title="" width="811"/><p class="wp-caption-text" id="caption-attachment-38807"><noscript><img alt="Revision Table Settings" height="489" sizes="(max-width: 811px) 100vw, 811px" src="/assets/images/Rev-Tables-Enable.png" title="" width="811"/></noscript></p></a> Revision Table Settings</div>
+<h3>Map Variables</h3>
+<ul>
+<li>Administration Tool &gt; Variables &gt; Revision
+<ul>
+<li>Create a new attribute
+<ul>
+<li>Block Name: <strong>SWRevTable</strong></li>
+<li>Attribute Name: <strong>Revision</strong></li>
+<li>Extension: <strong>slddrw</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_38806" style="width: 393px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/10/Rev-Tables-Map-Revision.png"><img alt="Map Variables" aria-describedby="caption-attachment-38806" height="580" src="/assets/images/Rev-Tables-Map-Revision.png" title="" width="383"/><p class="wp-caption-text" id="caption-attachment-38806"><noscript><img alt="Map Variables" height="580" src="/assets/images/Rev-Tables-Map-Revision.png" title="" width="383"/></noscript></p></a> Map Variables</div>
+<p>Repeat for variables used for the <strong>Description – Rev Table</strong>, <strong>Date</strong> and <strong>Approved</strong> values.</p>
+<h3>Integrate Into Workflow</h3>
+<p>For any transitions that have revision actions associated with them; add <strong>Set Variable</strong> actions to update the variable used by the table</p>
+<div class="wp-caption aligncenter" id="attachment_38814" style="width: 1003px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/10/Transition-Action-Set-Variable.png"><img alt="Integrate Into Workflow" aria-describedby="caption-attachment-38814" height="970" src="/assets/images/Transition-Action-Set-Variable.png" title="" width="993"/><p class="wp-caption-text" id="caption-attachment-38814"><noscript><img alt="Integrate Into Workflow" height="970" sizes="(max-width: 993px) 100vw, 993px" src="/assets/images/Transition-Action-Set-Variable.png" title="" width="993"/></noscript></p></a> Integrate Into Workflow</div>
+<p>For this example, I’m using the <strong>Default</strong> vault set up, therefore this required adding actions to the transitions; <strong><em>Passed Approval</em></strong>, <strong><em>No Approval Required</em></strong> and <strong><em>Change Approved</em></strong></p>
+<blockquote><p>For more information regarding the increment of a revision via a workflow please see our previous article on <a href="https://www.javelin-tech.com/blog/2017/04/solidworks-pdm-revision/">SOLIDWORKS PDM Revision</a>.</p></blockquote>
+<h3>Test Thoroughly</h3>
+<p>This is a great example of something that can be tested thoroughly in a Sandbox vault, ahead of implementing in your production vault.</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/10/Testing-Complete.png"><img alt="Test Thoroughly" height="620" src="/assets/images/Testing-Complete.png" title="" width="1160"/><noscript><img alt="Test Thoroughly" height="620" sizes="(max-width: 1160px) 100vw, 1160px" src="/assets/images/Testing-Complete.png" title="" width="1160"/></noscript></a></p>
+<blockquote><p><strong>NOTE</strong>: The drawing must have a pre-existing revision table within it, for the integration to work and the rows to be added automatically.</p></blockquote>
+<h3>Learn more about SOLIDWORKS PDM Revisions</h3>
+<p>Attend our <a href="https://www.javelin-tech.com/3d/people/training/administering-solidworks-pdm-professional/" rel="noopener" target="_blank">SOLIDWORKS PDM Administration training course</a> to learn more about using or administering SOLIDWORKS PDM, and creating a complete revision numbering system.</p>

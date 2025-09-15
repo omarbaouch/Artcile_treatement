@@ -1,0 +1,23 @@
+<p>New in <strong>SOLIDWORKS PDM Professional 2019</strong> we now have the ability to use mixed login types between Windows Login (Active Directory) and SOLIDWORKS PDM login (Archive server managed).  Previously for a vault; when Windows Login was selected all users (outside of the default ‘admin’ account) had to be pulled from Active Directory.</p>
+<div class="wp-caption aligncenter" id="attachment_37745" style="width: 509px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Login-Types.png"><img alt="SOLIDWORKS PDM Mixed Login" aria-describedby="caption-attachment-37745" height="415" src="/assets/images/Login-Types.png" title="" width="499"/><p class="wp-caption-text" id="caption-attachment-37745"><noscript><img alt="SOLIDWORKS PDM Mixed Login" height="415" src="/assets/images/Login-Types.png" title="" width="499"/></noscript></p></a> Choose default login type</div>
+<p>Now the vault administrator has the ability to add users that are not a part of active directory but require access to the vault.</p>
+<h2>How to enable SOLIDWORKS PDM Mixed Login</h2>
+<ul>
+<li>Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration
+<ul>
+<li>Tools &gt; Default Settings
+<ul>
+<li>Windows Login &gt; Check ‘Allow SOLIDWORKS PDM Login’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37746" style="width: 521px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Allow-SOLIDWORKS-PDM-Login.png"><img alt="Allow SOLIDWORKS PDM Login" aria-describedby="caption-attachment-37746" height="492" src="/assets/images/Allow-SOLIDWORKS-PDM-Login.png" title="" width="511"/><p class="wp-caption-text" id="caption-attachment-37746"><noscript><img alt="Allow SOLIDWORKS PDM Login" height="492" src="/assets/images/Allow-SOLIDWORKS-PDM-Login.png" title="" width="511"/></noscript></p></a> Allow SOLIDWORKS PDM Login</div>
+<p>This will allow users to be added via Windows login or SOLIDWORKS PDM login</p>
+<div class="wp-caption aligncenter" id="attachment_37747" style="width: 551px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Add-Users.png"><img alt="New Add User Options" aria-describedby="caption-attachment-37747" height="241" src="/assets/images/Add-Users.png" title="" width="541"/><p class="wp-caption-text" id="caption-attachment-37747"><noscript><img alt="New Add User Options" height="241" src="/assets/images/Add-Users.png" title="" width="541"/></noscript></p></a> New Add User Options</div>
+<h3>Why is a SOLIDWORKS PDM Mixed Login useful?</h3>
+<p>In some environments, it makes sense for vault administrators to have multiple logins; one used for administration and the other that’s a regular user.  This is a good idea as it <strong>prevents users from accidentally making a change that should only be limited to vault administrators</strong> (for example; checking out a released file etc.).</p>
+<blockquote><p>I generally recommend against sharing the ‘admin’ account, as it makes it difficult to track who made which change via the Administration Tool history when there are multiple users using the same account.</p></blockquote>
+<p>With this new functionality; we have the ability for multiple accounts to be available for users, without creating additional accounts within the Windows Domain.  The regular user accounts can be obtained from active directory via the Windows login type and the administrator accounts can be created via SOLIDWORKS PDM login (Archive server managed).</p>
+<p>In a replicated environment; the replicated archive server isn’t always connected to the same domain as the primary archive server.  This makes the replicated archive server unable to obtain users from active directory (AD).  With this new functionality; user accounts for the replicated office can be created via SOLIDWORKS PDM Login without the archive server needing to obtain the accounts from AD.</p>

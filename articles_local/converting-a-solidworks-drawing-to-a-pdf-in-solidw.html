@@ -1,0 +1,22 @@
+<p>New in SOLIDWORKS PDM Standard 2018, is the ability to run Convert to PDF on SOLIDWORKS Drawings. This is enabled through PDM Tasks.</p>
+<p>Tasks are used to automate procedures, that are performed regularly. The Convert Task in SOLIDWORKS PDM Standard, automates the process of creating PDFs of SOLIDWORKS Drawings. This Task uses the same mechanics that saves a PDF in SOLIDWORKS, but requires little or no user interaction. Tasks are configured through the SOLIDWORKS PDM Administration.</p>
+<div class="wp-caption aligncenter" id="attachment_35561" style="width: 308px"><img alt="PDM Admin Tasks" aria-describedby="caption-attachment-35561" height="591" src="/assets/images/Task-in-admin.png" title="" width="298"/><p class="wp-caption-text" id="caption-attachment-35561"><noscript><img alt="PDM Admin Tasks" height="591" src="/assets/images/Task-in-admin.png" title="" width="298"/></noscript> PDM Admin Tasks</p></div>
+<p>The Convert task itself, can be installed when the vault was created. If this was not done, the Task can Imported.</p>
+<div class="wp-caption aligncenter" id="attachment_35562" style="width: 415px"><img alt="Import a Task" aria-describedby="caption-attachment-35562" height="254" src="/assets/images/Import-task.png" title="" width="405"/><p class="wp-caption-text" id="caption-attachment-35562"><noscript><img alt="Import a Task" height="254" src="/assets/images/Import-task.png" title="" width="405"/></noscript> Import a Task</p></div>
+<p>The Convert Task to be Imported, is located in the PDM installation directory, in the Default Data folder.</p>
+<div class="wp-caption aligncenter" id="attachment_35563" style="width: 244px"><img alt="Convert Task File" aria-describedby="caption-attachment-35563" height="79" src="/assets/images/convert-import-file.png" title="" width="234"/><p class="wp-caption-text" id="caption-attachment-35563"><noscript><img alt="Convert Task File" height="79" src="/assets/images/convert-import-file.png" title="" width="234"/></noscript> Convert Task File to import</p></div>
+<p>The Administration Guide that is available from the Help pull-down in SOLIDWORKS PDM Administration, describes in detail how to configure a Task. In summary, there eight sections that need to defined.</p>
+<div class="wp-caption aligncenter" id="attachment_35564" style="width: 269px"><img alt="Convert Help" aria-describedby="caption-attachment-35564" height="321" src="/assets/images/Task-Steps.png" title="" width="259"/><p class="wp-caption-text" id="caption-attachment-35564"><noscript><img alt="Convert Help" height="321" src="/assets/images/Task-Steps.png" title="" width="259"/></noscript> Convert Help</p></div>
+<ol>
+<li>Choosing the Add-in. The Add-in is added to the vault, by the same operation that adds the Task. The Add-in is used to define the perimeters, of the Task.</li>
+<li>Menu Command allows us to specify what prompt the user will see, when they access the the task manually.</li>
+<li>Execution Method, is where we choose which computers will run the task and the criteria for choosing a computer.</li>
+<li>Conversion Setting, is where the output file format is defined</li>
+<li>File Card, defines Variable mapping between the source and the target file.</li>
+<li>Output File Details, is where we define the output file name and the output path.</li>
+<li>Permission is where we designate, which Users and Groups have access to the Task</li>
+</ol>
+<p>Once the Convert Task has been configured, it can be launched from the right-mouse menu, of the Local Vault View.</p>
+<div class="wp-caption aligncenter" id="attachment_35566" style="width: 228px"><img alt="Convert to PDF command" aria-describedby="caption-attachment-35566" height="244" src="/assets/images/right-mouse-task.png" title="" width="218"/><p class="wp-caption-text" id="caption-attachment-35566"><noscript><img alt="Convert to PDF command" height="244" src="/assets/images/right-mouse-task.png" title="" width="218"/></noscript> Convert to PDF command</p></div>
+<p>A Task can also be launched through a <a href="https://www.javelin-tech.com/blog/2013/08/epdm-transition-action-to-run-a-task/" rel="noopener" target="_blank">Workflow Transition Action</a>.</p>
+<blockquote><p><strong>NOTE: </strong>Before a Task can be launched on a computer, <a href="https://www.javelin-tech.com/blog/2013/05/solidworks-pdm-task-host-configuration/">Task Host Configuration</a> must first be enabled, on that computer.</p></blockquote>

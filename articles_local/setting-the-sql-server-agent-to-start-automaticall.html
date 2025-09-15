@@ -1,0 +1,41 @@
+
+<p>As part of our best practices, it’s imperative to routinely check that <a href="https://www.javelin-tech.com/blog/2019/12/solidworks-pdm-vault-structure-backup/">good backups are being captured</a>, and database maintenance is being complete.  If you find these scheduled actions aren’t completing, the first step of troubleshooting will be to manually complete an action for the SQL Server Agent from within the <a href="https://www.javelin-tech.com/blog/2019/09/installing-sql-server-management-studio-smss/">SQL Server Management Studio</a>;</p>
+<div class="wp-caption aligncenter" id="attachment_51131" style="width: 491px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Manual-Backup.png"><img alt="Manually execute a backup within the SQL Server Management Studio" aria-describedby="caption-attachment-51131" height="651" src="/assets/images/SQL-Server-Agent-Manual-Backup.png" title="" width="481"/><p class="wp-caption-text" id="caption-attachment-51131"><noscript><img alt="Manually execute a backup within the SQL Server Management Studio" height="651" sizes="(max-width: 481px) 100vw, 481px" src="/assets/images/SQL-Server-Agent-Manual-Backup.png" title="" width="481"/></noscript></p></a> Manually execute a backup within the SQL Server Management Studio</div>
+<p>If you’re greeted with an error similar to below, it’s indicating there is an issue with the SQL Server Agent;</p>
+<div class="wp-caption aligncenter" id="attachment_51132" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Error_Nor-Running.png"><img alt="Issue with the SQL Server Agent" aria-describedby="caption-attachment-51132" height="369" src="/assets/images/SQL-Server-Agent-Error_Nor-Running.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-51132"><noscript><img alt="Issue with the SQL Server Agent" height="369" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/SQL-Server-Agent-Error_Nor-Running.png" title="" width="646"/></noscript></p></a> Issue with the SQL Server Agent</div>
+<p>The SQL Server Agent is a service that executes scheduled administrative tasks, within SQL Server, for example; backups.  This service is required to be running to complete any of the maintenance tasks within SQL Server.</p>
+<h3>How to manually start the SQL Server Agent</h3>
+<p>On the server;</p>
+<ul>
+<li>Start &gt; Microsoft SQL Server 20xx
+
+<ul>
+<li>SQL Server 20xx Configuration Manager</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51133" style="width: 322px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Start-Configuration-Manager.png"><img alt="SQL Server in Start Menu" aria-describedby="caption-attachment-51133" height="667" src="/assets/images/SQL-Server-Agent-Start-Configuration-Manager.png" title="" width="312"/><p class="wp-caption-text" id="caption-attachment-51133"><noscript><img alt="SQL Server in Start Menu" height="667" sizes="(max-width: 312px) 100vw, 312px" src="/assets/images/SQL-Server-Agent-Start-Configuration-Manager.png" title="" width="312"/></noscript></p></a> SQL Server in Start Menu</div>
+<ul>
+<li>Select <strong>SQL Server Services</strong> &gt; RMB <strong>SQL Server Agent</strong> &gt; <strong>Start</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51134" style="width: 817px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Start-Service.png"><img alt="SQL Server Services" aria-describedby="caption-attachment-51134" height="447" src="/assets/images/SQL-Server-Agent-Start-Service.png" title="" width="807"/><p class="wp-caption-text" id="caption-attachment-51134"><noscript><img alt="SQL Server Services" height="447" sizes="(max-width: 807px) 100vw, 807px" src="/assets/images/SQL-Server-Agent-Start-Service.png" title="" width="807"/></noscript></p></a> SQL Server Services</div>
+<p>Then the service should resume;</p>
+<div class="wp-caption aligncenter" id="attachment_51135" style="width: 818px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Running.png"><img alt="Service resumed" aria-describedby="caption-attachment-51135" height="448" src="/assets/images/SQL-Server-Agent-Running.png" title="" width="808"/><p class="wp-caption-text" id="caption-attachment-51135"><noscript><img alt="Service resumed" height="448" sizes="(max-width: 808px) 100vw, 808px" src="/assets/images/SQL-Server-Agent-Running.png" title="" width="808"/></noscript></p></a> Service resumed</div>
+<blockquote>
+<p><strong>NOTE</strong>: If the service doesn’t start, or there are errors; please check the <a href="https://docs.microsoft.com/en-us/windows/win32/wes/windows-event-log" rel="nofollow noopener" target="_blank">Windows Event Log</a> for further details and troubleshooting steps.</p>
+</blockquote>
+<p>Service stoppages (without error) can be caused by a number of actions like a reboot, restart of the SQL Server Service, or anything similar.  With some additional settings changes, we can ensure this SQL Agent Service will restart automatically.</p>
+<h2>How to set the Agent to restart automatically</h2>
+<p>Within the SQL Server Configuration Manager;</p>
+<ul>
+<li>Select the <strong>SQL Server Agent</strong> &gt; <strong>RMB</strong> &gt; <strong>Properties</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51136" style="width: 818px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Properties.png"><img alt="SQL Server Agent &gt; RMB &gt; Properties" aria-describedby="caption-attachment-51136" height="448" src="/assets/images/SQL-Server-Agent-Properties.png" title="" width="808"/><p class="wp-caption-text" id="caption-attachment-51136"><noscript><img alt="SQL Server Agent &gt; RMB &gt; Properties" height="448" sizes="(max-width: 808px) 100vw, 808px" src="/assets/images/SQL-Server-Agent-Properties.png" title="" width="808"/></noscript></p></a> SQL Server Agent &gt; RMB &gt; Properties</div>
+<ul>
+<li><strong>Service</strong> Tab &gt; <strong>Start Mode</strong>
+<ul>
+<li>Set to <strong>Automatic</strong></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51137" style="width: 818px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/SQL-Server-Agent-Start-Mode_Automatic.png"><img alt="Start mode set to Automatic" aria-describedby="caption-attachment-51137" height="524" src="/assets/images/SQL-Server-Agent-Start-Mode_Automatic.png" title="" width="808"/><p class="wp-caption-text" id="caption-attachment-51137"><noscript><img alt="Start mode set to Automatic" height="524" sizes="(max-width: 808px) 100vw, 808px" src="/assets/images/SQL-Server-Agent-Start-Mode_Automatic.png" title="" width="808"/></noscript></p></a> Start mode set to Automatic</div>

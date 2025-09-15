@@ -1,0 +1,49 @@
+<p>After enabling the <a href="https://www.javelin-tech.com/blog/?p=40051">content search in SOLIDWORKS PDM Professional</a>, by default the Windows Search Service supports indexing the following files types:</p>
+<ul>
+<li>Microsoft Office files</li>
+<li>HTML files</li>
+<li>MIME messages</li>
+<li>Plain-text files</li>
+</ul>
+<p>We can include other file types by installing its corresponding third-party iFilter.  After a new iFilter is installed the archive must be reindexed to include the new file type in the content search.</p>
+<h2>Can we include SOLIDWORKS files in the content search?</h2>
+<p>Yes….kind of.  With the SOLIDWORKS iFilter installed on the indexing server, we are able to index content in SOLIDWORKS files, such as annotations in drawings and custom properties.  The exception is; that it doesn’t include dimension values in drawings (unless they are linked to a custom property).</p>
+<div class="wp-caption aligncenter" id="attachment_40351" style="width: 988px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Dims-Not-Included.png"><img alt="Drawing Annotation can be indexed" aria-describedby="caption-attachment-40351" height="390" src="/assets/images/Dims-Not-Included.png" title="" width="978"/><p class="wp-caption-text" id="caption-attachment-40351"><noscript><img alt="Drawing Annotation can be indexed" height="390" sizes="(max-width: 978px) 100vw, 978px" src="/assets/images/Dims-Not-Included.png" title="" width="978"/></noscript></p></a> Drawing Annotation can be indexed</div>
+<h2>How to include SOLIDWORKS files in the PDM Content Search</h2>
+<h3>Step 1 – Add the SOLIDWORKS iFilter to the server running Windows Search</h3>
+<p>There is no standalone iFilter for SOLIDWORKS files available to install separately, but we can add one by installing SOLIDWORKS <del>or just SOLIDWORKS Explorer on the server</del>.</p>
+<blockquote><p>With <a href="https://www.javelin-tech.com/blog/2019/05/solidworks-explorer-pdm-web-client-eol/">SOLIDWORKS Explorer being retired in 2019</a>, it is now required to install SOLIDWORKS on the archive server and then rebuild the index with the release of 2020 and later versions.</p></blockquote>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Content-Search-Install-SOLIDWORKS.png"><img alt="Install SOLIDWORKS Explorer on the server" height="657" src="/assets/images/Content-Search-Install-SOLIDWORKS.png" title="" width="939"/><noscript><img alt="Install SOLIDWORKS Explorer on the server" height="657" sizes="(max-width: 939px) 100vw, 939px" src="/assets/images/Content-Search-Install-SOLIDWORKS.png" title="" width="939"/></noscript></a></p>
+<h3>Step 2 – Add and check in some files for testing</h3>
+<div class="wp-caption aligncenter" id="attachment_40353" style="width: 970px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Test-Files-Added.png"><img alt="Check in SOLIDWORKS files for testing" aria-describedby="caption-attachment-40353" height="721" src="/assets/images/Test-Files-Added.png" title="" width="960"/><p class="wp-caption-text" id="caption-attachment-40353"><noscript><img alt="Check in SOLIDWORKS files for testing" height="721" sizes="(max-width: 960px) 100vw, 960px" src="/assets/images/Test-Files-Added.png" title="" width="960"/></noscript></p></a> Check in SOLIDWORKS files for testing</div>
+<h3>Step 3 – Verify the iFilter is installed and rebuild the index</h3>
+<ul>
+<li>Control Panel &gt; Indexing Options</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40056" style="width: 645px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png"><img alt="Indexing Options" aria-describedby="caption-attachment-40056" height="324" src="/assets/images/Indexing-Options.png" title="" width="635"/><p class="wp-caption-text" id="caption-attachment-40056"><noscript><img alt="Indexing Options" height="324" sizes="(max-width: 635px) 100vw, 635px" src="/assets/images/Indexing-Options.png" title="" width="635"/></noscript></p></a> Indexing Options</div>
+<ul>
+<li>Advanced &gt; File Types Tab
+<ul>
+<li>Ensure the SOLIDWORKS entries exist</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40355" style="width: 633px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/SOLIDWORKS-iFilter.png"><img alt="Ensure the SOLIDWORKS entries exist" aria-describedby="caption-attachment-40355" height="567" src="/assets/images/SOLIDWORKS-iFilter.png" title="" width="623"/><p class="wp-caption-text" id="caption-attachment-40355"><noscript><img alt="Ensure the SOLIDWORKS entries exist" height="567" sizes="(max-width: 623px) 100vw, 623px" src="/assets/images/SOLIDWORKS-iFilter.png" title="" width="623"/></noscript></p></a> Ensure the SOLIDWORKS entries exist</div>
+<p>As the iFilter was added after the content search was set up, we’ll need to rebuild the indexes to include the SOLIDWORKS files;</p>
+<ul>
+<li>Indexing Options
+<ul>
+<li>Advanced &gt; Index Settings Tab
+<ul>
+<li>Hit <strong>Rebuild</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40198" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Rebuild-Index.png"><img alt="Rebuild Index" aria-describedby="caption-attachment-40198" height="614" src="/assets/images/Rebuild-Index.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-40198"><noscript><img alt="Rebuild Index" height="614" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/Rebuild-Index.png" title="" width="640"/></noscript></p></a> Rebuild Index</div>
+<blockquote><p><strong>NOTE</strong>: Before testing, we need to wait for the rebuild to complete, in larger vaults this may take some time;</p></blockquote>
+<div class="wp-caption aligncenter" id="attachment_40199" style="width: 252px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/Indexing-Done.png"><img alt="Indexing Complete" aria-describedby="caption-attachment-40199" height="113" src="/assets/images/Indexing-Done.png" title="" width="242"/><p class="wp-caption-text" id="caption-attachment-40199"><noscript><img alt="Indexing Complete" height="113" src="/assets/images/Indexing-Done.png" title="" width="242"/></noscript></p></a> Indexing Complete</div>
+<h3>Step 4 – Test</h3>
+<div class="wp-caption aligncenter" id="attachment_40356" style="width: 970px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/02/SOLIDWORKS-iFilter-Testing.png"><img alt="Test the index" aria-describedby="caption-attachment-40356" height="721" src="/assets/images/SOLIDWORKS-iFilter-Testing.png" title="" width="960"/><p class="wp-caption-text" id="caption-attachment-40356"><noscript><img alt="Test the index" height="721" sizes="(max-width: 960px) 100vw, 960px" src="/assets/images/SOLIDWORKS-iFilter-Testing.png" title="" width="960"/></noscript></p></a> Test the index</div>
+<p>To learn how to <a href="https://www.javelin-tech.com/blog/?p=40098">include PDFs please see our blog article</a>.</p>

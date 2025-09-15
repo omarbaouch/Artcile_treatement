@@ -1,0 +1,19 @@
+<p>Within SOLIDWORKS PDM Professional, when creating a <a href="https://www.javelin-tech.com/blog/2017/06/solidworks-pdm-tasks/">task</a> after selecting <a href="https://www.javelin-tech.com/blog/2013/05/solidworks-pdm-task-host-configuration/">which computers can support the task</a>, we have 3 options for the execution method;</p>
+<ol>
+<li>Let the system choose the computers to execute the task</li>
+<li>Prompt the user to choose a computer when the task is initiated</li>
+<li>Execute on the computer where the task is initiated</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_47142" style="width: 710px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/06/Convert-Execution-Method.png"><img alt="SOLIDWORKS PDM Task execution Methods" aria-describedby="caption-attachment-47142" height="542" src="/assets/images/Convert-Execution-Method.png" title="" width="700"/><p class="wp-caption-text" id="caption-attachment-47142"><noscript><img alt="SOLIDWORKS PDM Task execution Methods" height="542" sizes="(max-width: 700px) 100vw, 700px" src="/assets/images/Convert-Execution-Method.png" title="" width="700"/></noscript></p></a> SOLIDWORKS PDM Task execution Methods</div></p>
+<p>Your environment will define which is the appropriate selection, for example; using a dedicated task host…but what do each of these options mean?</p>
+<h4>1. Let the system choose the computers to execute the task</h4>
+<p>This option is available if you have multiple task hosts enabled.  With this selected, there is no hierarchy and whichever available machine responds first will accept the task.</p>
+<h4>2. Prompt the user to choose a computer when the task is initiated</h4>
+<p>With this option selected, when the task is launched, the user will be presented with a list of hosts to choose from;</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/06/Convert-Select-Host.png"><img alt="" height="125" src="/assets/images/Convert-Select-Host.png" title="" width="527"/><noscript><img alt="" height="125" src="/assets/images/Convert-Select-Host.png" title="" width="527"/></noscript></a></p>
+<blockquote><p>Note: The task will be added to the queue but won’t launch until the client is available</p></blockquote>
+<h4>3. Execute on the computer where the task is initiated</h4>
+<p>This is the only option available with PDM Standard.  This will launch the task on the same machine that created the task.</p>
+<blockquote><p>If you’d like the task to be completed silently when attached to a workflow transition, it is required to select <strong><em>Let the system choose the computers to execute the task </em></strong>or <strong><em>Execute on the computer where the task is initiated </em></strong>for the execution method</p></blockquote>
+<p>We can monitor what tasks are queued on which machines via the task list in the Administration Tool:</p>
+<p><div class="wp-caption aligncenter" id="attachment_47141" style="width: 799px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/06/Convert-Task-List.png"><img alt="Monitor what tasks are queued" aria-describedby="caption-attachment-47141" height="396" src="/assets/images/Convert-Task-List.png" title="" width="789"/><p class="wp-caption-text" id="caption-attachment-47141"><noscript><img alt="Monitor what tasks are queued" height="396" sizes="(max-width: 789px) 100vw, 789px" src="/assets/images/Convert-Task-List.png" title="" width="789"/></noscript></p></a> Monitor what tasks are queued</div></p>

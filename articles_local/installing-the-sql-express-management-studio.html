@@ -1,0 +1,44 @@
+<blockquote><p>With the 2019 release and later versions of SOLIDWORKS PDM, the SQL Server Management Studio is no longer included within the installation media.  Please see <a href="https://www.javelin-tech.com/blog/?p=42908">here</a> for our updated guide to downloading and installing the SSMS.</p></blockquote>
+<p>The SQL Server Express Management Studio is a must for any SOLIDWORKS PDM Standard installation.  With this tool you can capture database backups, run queries and complete other vault maintenance.</p>
+<p>The simplest way to install this is during install within the installation manger;</p>
+<ul>
+<li>At SWPDM Server Options select ‘<strong>Install MS SQL Management Tools</strong>‘;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26624" style="width: 972px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/IM_Install.png"><img alt="Install Via Installation Manager" aria-describedby="caption-attachment-26624" height="678" src="/assets/images/IM_Install.png" title="" width="962"/><p class="wp-caption-text" id="caption-attachment-26624"><noscript><img alt="Install Via Installation Manager" height="678" sizes="(max-width: 962px) 100vw, 962px" src="/assets/images/IM_Install.png" title="" width="962"/></noscript></p></a> Install Via Installation Manager</div>
+<p>If you missed this during install do not fear as we can complete this later manually.</p>
+<h2>Manually Installing The SQL Server Express Management Studio</h2>
+<ul>
+<li>Browse to <strong>&lt;Installation Media&gt;\SQLMNGMNT\sqlmanagementstudio_x64_enu.exe </strong>and <strong>Run</strong> as administrator</li>
+<li>Select <strong>New SQL Server stand-alone installation or add features to an existing installation</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26629" style="width: 801px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/sqlmngmnt_AddFeatures.png"><img alt="New SQL Server stand-alone installation or add features to an existing installation" aria-describedby="caption-attachment-26629" height="598" src="/assets/images/sqlmngmnt_AddFeatures.png" title="" width="791"/><p class="wp-caption-text" id="caption-attachment-26629"><noscript><img alt="New SQL Server stand-alone installation or add features to an existing installation" height="598" sizes="(max-width: 791px) 100vw, 791px" src="/assets/images/sqlmngmnt_AddFeatures.png" title="" width="791"/></noscript></p></a> New SQL Server stand-alone installation or add features to an existing installation</div>
+<ul>
+<li>Check for and install any updates then click <strong>next</strong>.</li>
+<li>For Installation Type select ‘<strong>Perform a new installation of SQL Server 2014</strong>‘ and click <strong>next</strong>;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26631" style="width: 977px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/sqlmngmnt_InstallType.png"><img alt="Perform a new installation of SQL Server 2014" aria-describedby="caption-attachment-26631" height="712" src="/assets/images/sqlmngmnt_InstallType.png" title="" width="967"/><p class="wp-caption-text" id="caption-attachment-26631"><noscript><img alt="Perform a new installation of SQL Server 2014" height="712" sizes="(max-width: 967px) 100vw, 967px" src="/assets/images/sqlmngmnt_InstallType.png" title="" width="967"/></noscript></p></a> Perform a new installation of SQL Server 2014</div>
+<ul>
+<li>Read and accept the license agreement then click <strong>next</strong></li>
+<li>For <strong>Feature Selection</strong> under ‘<strong>Shared Features</strong>‘ choose the following, then select <strong>next</strong>;
+<ul>
+<li><strong>Client Tools Connectivity</strong></li>
+<li><strong>Client Tools Backward Compatibility</strong></li>
+<li><strong>Management Tools – Basic</strong></li>
+<li><strong>Management Tools – Complete</strong></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26635" style="width: 961px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/sqlmngmnt_FeatureSelection.png"><img alt="Shared Features" aria-describedby="caption-attachment-26635" height="696" src="/assets/images/sqlmngmnt_FeatureSelection.png" title="" width="951"/><p class="wp-caption-text" id="caption-attachment-26635"><noscript><img alt="Shared Features" height="696" sizes="(max-width: 951px) 100vw, 951px" src="/assets/images/sqlmngmnt_FeatureSelection.png" title="" width="951"/></noscript></p></a> Shared Features</div>
+<ul>
+<li>Click <strong>Next</strong> and <strong>complete the install</strong>;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26636" style="width: 978px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/sqlmngmnt_Complete.png"><img alt="SQL Server Express Management Studio Installed" aria-describedby="caption-attachment-26636" height="694" src="/assets/images/sqlmngmnt_Complete.png" title="" width="968"/><p class="wp-caption-text" id="caption-attachment-26636"><noscript><img alt="SQL Server Express Management Studio Installed" height="694" sizes="(max-width: 968px) 100vw, 968px" src="/assets/images/sqlmngmnt_Complete.png" title="" width="968"/></noscript></p></a> SQL Server Express Management Studio Installed</div>
+<ul>
+<li>The management studio should now be available from;
+<ul>
+<li>Start &gt; Programs &gt; Microsoft SQL Server 2014 &gt; SQL Server 2014 Management Studio</li>
+</ul>
+</li>
+</ul>
+<h3>Need SOLIDWORKS PDM Training?</h3>
+<p><a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">Contact us about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

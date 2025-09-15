@@ -1,0 +1,23 @@
+<p>If you want to rename SOLIDWORKS PDM Archive Server, follow these steps to ensure proper functioning of SOLIDWORKS PDM after renaming the server machine.</p>
+<h3>Step 1: Backup and lock access</h3>
+<p>The first step is to ensure you have a recent backup of the archive and the SQL database. Once the backups are complete, you need to ensure  that during the rename operation no one can access the PDM vault; refer to my recent article on <a href="https://www.javelin-tech.com/blog/2017/01/block-solidworks-pdm-login/" target="_blank">how to block PDM login</a>.</p>
+<h3>Step 2: Rename the Server</h3>
+<p>The next step is rename the server. There are a number of ways of doing this. In the below image I illustrate how this is done through Windows System Settings.</p>
+<div class="wp-caption aligncenter" id="attachment_24944" style="width: 667px"><img alt="Rename SOLIDWORKS PDM Archive Server" aria-describedby="caption-attachment-24944" height="331" src="/assets/images/rename-pc.png" title="" width="657"/><p class="wp-caption-text" id="caption-attachment-24944"><noscript><img alt="Rename SOLIDWORKS PDM Archive Server" height="331" sizes="(max-width: 657px) 100vw, 657px" src="/assets/images/rename-pc.png" title="" width="657"/></noscript> Rename PC through Windows System Settings</p></div>
+<h3>Step 3: Edit SQL Tables</h3>
+<p>Now that the server is renamed, we need to make make changes through SQL Server Management Studio. Expand the Tables folder, for your vault and edit the tables <em>ArchiveServers</em> and <em>SystemInfo</em>.</p>
+<div class="wp-caption aligncenter" id="attachment_24945" style="width: 434px"><img alt="Edit Table" aria-describedby="caption-attachment-24945" height="176" src="/assets/images/edit-table.png" title="" width="424"/><p class="wp-caption-text" id="caption-attachment-24945"><noscript><img alt="Edit Table" height="176" sizes="(max-width: 424px) 100vw, 424px" src="/assets/images/edit-table.png" title="" width="424"/></noscript> Edit Table</p></div>
+<p>Update the <strong><em>ArchiveServerName</em> ONLY</strong>, for each of these tables. If this a replicated environment, ONLY update the server that was renamed.</p>
+<div class="wp-caption aligncenter" id="attachment_24946" style="width: 621px"><img alt="Updated name" aria-describedby="caption-attachment-24946" height="96" src="/assets/images/editing-table.png" title="" width="611"/><p class="wp-caption-text" id="caption-attachment-24946"><noscript><img alt="Updated name" height="96" sizes="(max-width: 611px) 100vw, 611px" src="/assets/images/editing-table.png" title="" width="611"/></noscript> Updated name</p></div>
+<p>Once the Tables have been updated, <strong>restart the Archive Server service</strong>.</p>
+<h3>Step 4: Edit Client Registry</h3>
+<p>Each client must now be updated to reflect the new Archive Server name.  Edit the registry key:</p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Application\PDMWorks Enterprise\Databases\VAULTNAME</pre>
+<p>And update ServerLoc with the new server name.</p>
+<div class="wp-caption aligncenter" id="attachment_24947" style="width: 1063px"><img alt="Registry Editor" aria-describedby="caption-attachment-24947" height="381" src="/assets/images/serverloc.png" title="" width="1053"/><p class="wp-caption-text" id="caption-attachment-24947"><noscript><img alt="Registry Editor" height="381" sizes="(max-width: 1053px) 100vw, 1053px" src="/assets/images/serverloc.png" title="" width="1053"/></noscript> Registry Editor</p></div>
+<p>If the above key is empty, the file vault view is most likely “private”, in this case, edit the key:</p>
+<pre>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME</pre>
+<p>Next delete the registry:</p>
+<pre>HKEY_CURRENT_USER\Software\SolidWorks\Application\PDMWorks Enterprise\ConisioAdmin</pre>
+<p>Deleting this key is only required  if the vault view is “private”. Once the changes have been made, on the client, reboot the system and log into the vault.</p>
+<p>If the server is part of a replicated environment, ensure that server name is correct in your replication settings.</p>

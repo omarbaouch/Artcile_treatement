@@ -1,0 +1,62 @@
+<p>In SOLIDWORKS PDM we can extract configuration specific information from the SOLIDWORKS part or assembly, and map it directly to the data card variable.</p>
+<h2>How to map the configuration name to the PDM data card</h2>
+<ul>
+<li>First, create the <a href="http://help.solidworks.com/2018/english/EnterprisePDM/Admin/c_variables.htm" rel="nofollow noopener" target="_blank">Variable</a> to store the information in.
+<ul>
+<li>Then map the attributes as follows;
+<ul>
+<li>Block Name; <strong>SWCfgProperty</strong></li>
+<li>Attribute Name; <strong>Name</strong></li>
+<li>File Extensions; <strong>sldasm, sldprt</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_39927" style="width: 393px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/New-Variable-Configuration-Name.png"><img alt="How to map the configuration name to the PDM data card" aria-describedby="caption-attachment-39927" height="580" src="/assets/images/New-Variable-Configuration-Name.png" title="" width="383"/><p class="wp-caption-text" id="caption-attachment-39927"><noscript><img alt="How to map the configuration name to the PDM data card" height="580" src="/assets/images/New-Variable-Configuration-Name.png" title="" width="383"/></noscript></p></a> Create the Variable</div>
+<ul>
+<li>Link the new variable to the data card</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_39928" style="width: 660px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Data-card-Link-Variable.png"><img alt="Link the new variable to the data card" aria-describedby="caption-attachment-39928" height="403" src="/assets/images/Data-card-Link-Variable.png" title="" width="650"/><p class="wp-caption-text" id="caption-attachment-39928"><noscript><img alt="Link the new variable to the data card" height="403" sizes="(max-width: 650px) 100vw, 650px" src="/assets/images/Data-card-Link-Variable.png" title="" width="650"/></noscript></p></a> Link the new variable to the data card</div>
+<ul>
+<li>Then the variable will extract the configuration name and map it directly to the data card;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_39929" style="width: 1162px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Configuration-Name-Mapped.png"><img alt="Map it directly to the data card" aria-describedby="caption-attachment-39929" height="751" src="/assets/images/Configuration-Name-Mapped.png" title="" width="1152"/><p class="wp-caption-text" id="caption-attachment-39929"><noscript><img alt="Map it directly to the data card" height="751" sizes="(max-width: 1152px) 100vw, 1152px" src="/assets/images/Configuration-Name-Mapped.png" title="" width="1152"/></noscript></p></a> Map it directly to the data card</div>
+<blockquote><p><strong>Note</strong>: This value is read-only and will be read when the file is added or checked in to the file vault.</p></blockquote>
+<p>Other configuration specific values that can be mapped to a data card variable:</p>
+<table border="0" cellpadding="0" cellspacing="0" class="table table-striped" summary="" title="">
+<thead>
+<tr>
+<th>Configuration Property</th>
+<th>Block Name</th>
+<th>Attribute Name</th>
+<th>Read/Write</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>SWCfgProperty</td>
+<td>Description</td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>SWCfgProperty</td>
+<td>Comment</td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td>Document Name</td>
+<td>SWCfgProperty</td>
+<td>BOMPartNumber</td>
+<td>Read-only</td>
+</tr>
+<tr>
+<td>User Specified Name</td>
+<td>SWCfgProperty</td>
+<td>BOMUserSpecifiedName</td>
+<td>Read/Write</td>
+</tr>
+</tbody>
+</table>

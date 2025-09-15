@@ -1,0 +1,14 @@
+<p>Starting with <a href="https://www.javelin-tech.com/blog/tag/solidworks-2020/">SOLIDWORKS 2020</a>, when deploying SOLIDWORKS using an Administrative Image, you can choose not to install the <a href="https://www.javelin-tech.com/3d/solidworks-toolbox/">SOLIDWORKS Toolbox</a> data files.</p>
+<p>This is useful if your SOLIDWORKS Toolbox is located in a central location such as the SOLIDWORKS PDM Vault or network drive.  Previously, especially if you were using PDM, this was a trickier process as each client install would want to either install a fresh SOLIDWORKS Data or upgrade an exiting one.</p>
+<p>To control this option:</p>
+<ol>
+<li>Open the Administrative Image Option Editor and click <strong>Change</strong> to modify the Image.</li>
+<li>Go to the Toolbox/Hole Wizard Options section and under “Do you want this client to install/upgrade the Toolbox files?” question, select <strong>No, install the Toolbox software without including the data files.</strong></li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_47329" style="width: 993px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/07/Toolbox-settings.jpg"><img alt="SOLIDWORKS Administrative Image Toolbox Settings" aria-describedby="caption-attachment-47329" height="761" src="/assets/images/Toolbox-settings.jpg" title="" width="983"/><p class="wp-caption-text" id="caption-attachment-47329"><noscript><img alt="SOLIDWORKS Administrative Image Toolbox Settings" height="761" sizes="(max-width: 983px) 100vw, 983px" src="/assets/images/Toolbox-settings.jpg" title="" width="983"/></noscript></p></a> SOLIDWORKS Administrative Image Toolbox Settings</div></p>
+<p>This option greatly simplifies administering the Toolbox, especially if it is located in the PDM Vault, and it can speed up the deployment process as well.</p>
+<p>At some point, either before or after the deployment to the clients, the Administrator will need to upgrade the Toolbox.  Depending on how the Toolbox is stored, the process will be slightly different.</p>
+<ul>
+<li>If stored in the PDM Vault, follow the instructions here: <a href="https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/">How to manually update SOLIDWORKS Toolbox in a SOLIDWORKS PDM Vault </a></li>
+<li>If the toolbox is stored on a shared network drive, you can follow the steps in either of the options explained here:  <a href="https://www.javelin-tech.com/blog/2018/10/upgrade-solidworks-toolbox/">How to Upgrade SOLIDWORKS Toolbox to a Newer Version</a></li>
+</ul>

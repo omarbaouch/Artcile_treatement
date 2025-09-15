@@ -1,0 +1,44 @@
+<p>When files are <strong>DESTROYED </strong>(this is different to being deleted and likely only the admin has permission), they aren’t removed from the vault archive until the SOLIDWORKS PDM Cleaner Service has been run.</p>
+<p>This can cause issues when your IT admin is frantically trying to clear space when the hard drives are close to being full on the archive server and not seeing results from all the file destruction.  In this situation a better option would be to spread the archive over multiple drives (see <a href="https://www.javelin-tech.com/blog/2014/12/solidworks-pdm-relocate-tool/">here</a>), but if this isn’t an option you can change the time the cleaner service runs from the default 3 AM.</p>
+<h3>Changing the schedule for SOLIDWORKS PDM Cleaner Service</h3>
+<ul>
+<li>On the Archive Server open the Registry Editor
+<ul>
+<li>Start menu &gt; Run &gt; regedit</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26692" style="width: 422px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Run_Regedit.png"><img alt="Run Regedit" aria-describedby="caption-attachment-26692" height="212" src="/assets/images/Run_Regedit.png" title="" width="412"/><p class="wp-caption-text" id="caption-attachment-26692"><noscript><img alt="Run Regedit" height="212" sizes="(max-width: 412px) 100vw, 412px" src="/assets/images/Run_Regedit.png" title="" width="412"/></noscript></p></a> Run Regedit</div>
+<ul>
+<li>Navigate to the key <strong>HKEY_LOCAL_MACHINE\SOFTWARE\SOLIDWORKS\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\VAULTNAME\</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26695" style="width: 955px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Find_Key.png"><img alt="Browse to the Vault" aria-describedby="caption-attachment-26695" height="468" src="/assets/images/Find_Key.png" title="" width="945"/><p class="wp-caption-text" id="caption-attachment-26695"><noscript><img alt="Browse to the Vault" height="468" sizes="(max-width: 945px) 100vw, 945px" src="/assets/images/Find_Key.png" title="" width="945"/></noscript></p></a> Browse to the Vault</div>
+<ul>
+<li>Right-Click within &gt; New &gt; String Value &gt; Named ‘<span class="highlight">Cleaner</span>Schedule’</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26697" style="width: 955px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/New-String-Value.png"><img alt="Edit the CleanerSchedule entry" aria-describedby="caption-attachment-26697" height="468" src="/assets/images/New-String-Value.png" title="" width="945"/><p class="wp-caption-text" id="caption-attachment-26697"><noscript><img alt="Edit the CleanerSchedule entry" height="468" sizes="(max-width: 945px) 100vw, 945px" src="/assets/images/New-String-Value.png" title="" width="945"/></noscript></p></a> Edit the CleanerSchedule entry</div>
+<ul>
+<li>For value data, enter the schedule string in format <em>Minute Hour Weekday  </em>(See below for more information)
+<ul>
+<li>In the below example it’s running every Monday at 1:00am</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26701" style="width: 955px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Mon-1am.png"><img alt="SOLIDWORKS PDM Cleaner Service time value" aria-describedby="caption-attachment-26701" height="468" src="/assets/images/Mon-1am.png" title="" width="945"/><p class="wp-caption-text" id="caption-attachment-26701"><noscript><img alt="SOLIDWORKS PDM Cleaner Service time value" height="468" sizes="(max-width: 945px) 100vw, 945px" src="/assets/images/Mon-1am.png" title="" width="945"/></noscript></p></a> Enter time value</div>
+<ul>
+<li>Restart the archive server service for the changes to be implemented</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_26703" style="width: 709px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/03/Restart-Archive-Server-Service.png"><img alt="Restart the Server" aria-describedby="caption-attachment-26703" height="499" src="/assets/images/Restart-Archive-Server-Service.png" title="" width="699"/><p class="wp-caption-text" id="caption-attachment-26703"><noscript><img alt="Restart the Server" height="499" sizes="(max-width: 699px) 100vw, 699px" src="/assets/images/Restart-Archive-Server-Service.png" title="" width="699"/></noscript></p></a> Restart the Server</div>
+<h4>Schedule Format</h4>
+<pre>Minute - Use numerals 0 through 59.
+
+Hour - Use numerals 0 through 23, where 0 is midnight
+
+Weekday - Use numerals 1 through 7, where 1 is Monday.</pre>
+<h5>Examples</h5>
+<p><strong>0 0 *</strong> <em>Run every day at midnight.</em></p>
+<p><strong>0 2 1-5</strong> <em>Run every Monday through Friday at 2 a.m.</em></p>
+<p><strong>0 * *</strong> <em>Run every hour on the hour every day.</em></p>
+<p><strong>0 6-18 1-5</strong> <em>Run every hour between 6 a.m. and 6 p.m. Monday through Friday.</em></p>
+<h3>Need SOLIDWORKS PDM Training?</h3>
+<p><a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">Contact us about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

@@ -1,0 +1,54 @@
+
+<p>If your <a href="https://www.javelin-tech.com/3d/solidworks-toolbox/" rel="noopener" target="_blank">SOLIDWORKS Toolbox</a> is stored within the vault, you have the option to <a href="https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/">manually upgrade it</a>, or my preferred method is to use the Installation Manager as I’ve outlined here:</p>
+<h2>How to upgrade SOLIDWORKS Toolbox using the Installation Manager</h2>
+<p>In this scenario, the upgrade is complete on the server using the <a href="https://www.javelin-tech.com/blog/2020/10/solidworks-pdm-upgrade-checklist/">PDM Upgrade Checklist.</a> Now, we’re finally ready to upgrade SOLIDWORKS and PDM Client to the new major version. </p>
+<blockquote>
+<p><strong>NOTE</strong>: SOLIDWORKS Toolbox only needs to be upgraded once, so we’re going to include it in the first SOLIDWORKS workstation being upgraded, the rest will be able to update SOLIDWORKS and PDM at the same time and the toolbox will be skipped.</p>
+</blockquote>
+<h3>Preparing the toolbox for upgrading</h3>
+<ul>
+<li>Log in to the vault, preferably as ‘Admin’ but any account with full permissions will suffice</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65820" style="width: 326px"><img alt="" aria-describedby="caption-attachment-65820" height="241" src="/assets/images/UT-Logged-in-as-Admin.png" title="" width="316"/><p class="wp-caption-text" id="caption-attachment-65820"><noscript><img alt="" height="241" src="/assets/images/UT-Logged-in-as-Admin.png" title="" width="316"/></noscript> Logged in as Admin</p></div>
+<ul>
+<li>Perform a ‘Get Latest’ on the toolbox folder to cache the most up to date version of all the files</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65819" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65819" height="487" src="/assets/images/UT-Get-Latest-on-Toolbox-600x487.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65819"><noscript><img alt="" height="487" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Get-Latest-on-Toolbox-600x487.png" title="" width="600"/></noscript> Get Latest on the Toolbox folder</p></div>
+<ul>
+<li>Check out the database file
+
+<ul>
+<li>Default Location; <em>[Vault Name]\[Toolbox Path]\lang\english\swbrowser.sldedb</em></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65816" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65816" height="315" src="/assets/images/UT-Check-Out-Toolbox-Database-600x315.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65816"><noscript><img alt="" height="315" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Check-Out-Toolbox-Database-600x315.png" title="" width="600"/></noscript> Check out the database file</p></div>
+<h3>Completing the upgrade</h3>
+<p>Start the installation manager, and complete the SOLIDWORKS upgrade with the appropriate settings.</p>
+<ul>
+<li>On the Summary Tab
+
+<ul>
+<li>Toolbox/Hole Wizard Options &gt; Select <strong>Change</strong></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65822" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65822" height="530" src="/assets/images/UT-Use-an-existing-SOLIDWORKS-Toolbox-600x530.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65822"><noscript><img alt="" height="530" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Use-an-existing-SOLIDWORKS-Toolbox-600x530.png" title="" width="600"/></noscript> Change Toolbox/Hole Wizard Options</p></div>
+<ul>
+<li>Ensure <strong>Use an existing SOLIDWORKS Toolbox</strong> is selected and the path is correct</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65814" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65814" height="530" src="/assets/images/UT-Change-Toolbox-Hole-Wizard-Options-600x530.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65814"><noscript><img alt="" height="530" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Change-Toolbox-Hole-Wizard-Options-600x530.png" title="" width="600"/></noscript> Use an existing SOLIDWORKS Toolbox</p></div>
+<ul>
+<li>Complete the upgrade then check in the swbrowser.sldedb file</li>
+</ul>
+<h3>Validation</h3>
+<ul>
+<li>Ensure the swbrowser.sldedb updated by verifying the timestamp</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65826" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65826" height="292" src="/assets/images/UT-Ensure-the-swbrowser-file-updated-600x292.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65826"><noscript><img alt="" height="292" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Ensure-the-swbrowser-file-updated-600x292.png" title="" width="600"/></noscript> Verify the swbrowser.sldedb file was updated</p></div>
+<ul>
+<li>Check in swbrowser.sldedb to make the updated version available to other users</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_65815" style="width: 610px"><img alt="" aria-describedby="caption-attachment-65815" height="310" src="/assets/images/UT-Check-in-swbrowser-600x310.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-65815"><noscript><img alt="" height="310" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UT-Check-in-swbrowser-600x310.png" title="" width="600"/></noscript> Check in swbrowser.sldedb</p></div>
+<h3>Additional Steps</h3>
+<p>Prior to upgrading any additional SOLIDWORKS workstations to the new version, <strong>perform a Get Latest on the Toolbox folder</strong>, then the latest version will be cached and the installation manager will skip the Toolbox upgrade on those machines.</p>

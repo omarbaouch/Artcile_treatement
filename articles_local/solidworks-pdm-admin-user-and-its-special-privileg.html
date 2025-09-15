@@ -1,0 +1,37 @@
+<p>Every SOLIDWORKS PDM vault contains a default user named Admin. That’s because this user is automatically added upon the creation of a new vault and cannot be deleted. In this article, we will look at some of the privileges of the SOLIDWORKS PDM admin user.</p>
+<p>When you create additional users in a vault, you’ll notice there is an option to copy permissions and settings from another user, including the Admin.</p>
+<p><div class="wp-caption aligncenter" id="attachment_60796" style="width: 467px"><img alt="SOLIDWORKS PDM Admin User" aria-describedby="caption-attachment-60796" height="600" src="/assets/images/Copy-permissions-and-settings-457x600.png" title="" width="457"/><p class="wp-caption-text" id="caption-attachment-60796"><noscript><img alt="SOLIDWORKS PDM Admin User" height="600" sizes="(max-width: 457px) 100vw, 457px" src="/assets/images/Copy-permissions-and-settings-457x600.png" title="" width="457"/></noscript> Add Users dialog box</p></div></p>
+<p>However, the Admin user has unique properties which cannot be copied to a new user. In other words, the Admin cannot be truly duplicated. This makes Admin the ideal user for configuring the vault and troubleshooting issues in SOLIDWORKS PDM.</p>
+<h3><strong>SOLIDWORKS PDM Admin Has Administrative Privileges </strong></h3>
+<p>The Admin user account:</p>
+<ul>
+<li>The only active user account in a new vault</li>
+<li>Cannot be disabled, renamed, or deleted in a vault</li>
+<li>Can delete a file that is checked out by another user or in another vault view</li>
+<li>Can change the category of a checked-in file</li>
+<li>Has access to all search favorites</li>
+<li>In PDM Standard, is the only user that can search and view files that are in another user’s private state (i.e. files added to the vault that have never been checked in)</li>
+<li>In PDM Professional, can log into a vault that is set for Windows login only</li>
+<li>In PDM Professional, can change the vault settings in the SOLIDWORKS PDM Add-in options for automatically naming files with serial numbers</li>
+</ul>
+<p>I’ll touch on a few of the bullet points above. Some of these items apply only to PDM Standard or only to PDM Professional. PDM Professional is the full-featured offering while PDM Standard is a light version. However, both applications perform the essential functions of data management. The type of vault you have depends on the type of license being used.</p>
+<h3><strong>Searching for Private State Files</strong></h3>
+<p>In PDM Professional, there is the folder permission, “May see files before initial check-in (Private State)” which can be set for any user. However, in PDM Standard, this permission setting doesn’t exist. Only the Admin user can see Private State files of other users in a Standard-type vault. Therefore, the SOLIDWORKS PDM Admin can ensure all files are checked in before performing maintenance of some kind, such as a complete backup or decommissioning old client machines.</p>
+<h3><strong>Ability to Log into a Vault Set for Windows Login Only</strong></h3>
+<p>The three login types for a Professional vault are “SOLIDWORKS PDM login,” “Windows login” and “LDAP login.” (PDM Standard is limited to “SOLIDWORKS PDM login”.) Notice, in the screenshot below, the option “Allow SOLIDWORKS PDM login” when “Windows login” is enabled.</p>
+<p>If this setting is unchecked, then only Windows-type users will be able to log into the vault, except for the Admin. The Admin user is not tied to a Windows profile, yet can log into a vault regardless of the login type set in the Archive Server Configuration tool. This helps determine if log-in issues are active directory or LDAP server-related.</p>
+<p><div class="wp-caption aligncenter" id="attachment_60797" style="width: 610px"><img alt="" aria-describedby="caption-attachment-60797" height="506" src="/assets/images/Login-type-600x506.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-60797"><noscript><img alt="" height="506" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Login-type-600x506.png" title="" width="600"/></noscript> Login type settings</p></div></p>
+<h3><strong>Set Serial Number Options for the SOLIDWORKS PDM Add-in</strong></h3>
+<p>When the SOLIDWORKS PDM Add-In is enabled in SOLIDWORKS, the SOLIDWORKS PDM Options become accessible from the SOLIDWORKS Tools menu as shown below.</p>
+<p><div class="wp-caption aligncenter" id="attachment_60798" style="width: 610px"><img alt="" aria-describedby="caption-attachment-60798" height="247" src="/assets/images/SW-Tools-PDM-Options-menu-600x247.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-60798"><noscript><img alt="" height="247" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SW-Tools-PDM-Options-menu-600x247.png" title="" width="600"/></noscript> SOLIDWORKS Tools menu &gt; SOLIDWORKS PDM &gt; Options</p></div></p>
+<p>Several options are available for using PDM within SOLIDWORKS. If you are using <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/" rel="noopener" target="_blank">PDM Professional</a>, then you can have files automatically named using serial numbers. Only the Admin user can make changes to the settings for serial numbers on the dialog box shown below. This applies to when files are created from SOLIDWORKS. The Admin can choose whether serial numbers are applied to new files, files created by Save As, or both. Also, Admin sets which serial number to use and to which type of SOLIDWORKS files it should be applied.</p>
+<p><div class="wp-caption aligncenter" id="attachment_60799" style="width: 449px"><img alt="" aria-describedby="caption-attachment-60799" height="600" src="/assets/images/Vault-Settings-Pro-Only-439x600.png" title="" width="439"/><p class="wp-caption-text" id="caption-attachment-60799"><noscript><img alt="" height="600" sizes="(max-width: 439px) 100vw, 439px" src="/assets/images/Vault-Settings-Pro-Only-439x600.png" title="" width="439"/></noscript> SOLIDWORKS Add-in settings</p></div></p>
+<h3><strong>Troubleshooting Permission Issues</strong></h3>
+<p>Besides being the only user that can do certain things, the Admin user is great for investigating permission issues.</p>
+<p>To make it easier to troubleshoot permissions issues:</p>
+<ul>
+<li>Assign the Admin user full permissions to all folders and states in a vault.</li>
+<li>Do not include the Admin user in any group.</li>
+</ul>
+<p>When a user is unable to do a PDM operation, such as Check-In, Change State, etc, a good first step is to log into the vault as Admin and try the same operation. If it is successful, then you’ve confirmed that there is a permission issue. Since the Admin is not part of any groups, changes you make to groups won’t affect the Admin. Therefore, you can always rely on the SOLIDWORKS PDM Admin user to have full control over everything in the vault. However, it is best practice to manage permissions for other users with groups so that changes can be made easily.</p>
+<p style="text-align: center;"><strong><a href="https://www.javelin-tech.com/blog/category/solidworks-pdm/">To learn more about SOLIDWORKS PDM, check out more resources here. </a></strong></p>

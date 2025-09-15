@@ -1,0 +1,27 @@
+<p>Are you receiving a SOLIDWORKS PDM login prompt when you create a new email in Microsoft Outlook 2016? Read on to learn how to disable the Outlook SOLIDWORKS PDM Login.</p>
+<div class="wp-caption aligncenter" id="attachment_25415" style="width: 896px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/EmailLogin.png"><img alt="Outlook SOLIDWORKS PDM Login" aria-describedby="caption-attachment-25415" height="649" src="/assets/images/EmailLogin.png" title="" width="886"/><p class="wp-caption-text" id="caption-attachment-25415"><noscript><img alt="Outlook SOLIDWORKS PDM Login" height="649" sizes="(max-width: 886px) 100vw, 886px" src="/assets/images/EmailLogin.png" title="" width="886"/></noscript></p></a> Login Prompt when creating a new email in Outlook 2016</div>
+<p>The Outlook SOLIDWORKS PDM Login is caused by the new Attach File feature in Outlook 2016, which provides a list of recent items;</p>
+<div class="wp-caption aligncenter" id="attachment_25416" style="width: 438px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/ListFiles.png"><img alt="Outlook Recent Items" aria-describedby="caption-attachment-25416" height="301" src="/assets/images/ListFiles.png" title="" width="428"/><p class="wp-caption-text" id="caption-attachment-25416"><noscript><img alt="Outlook Recent Items" height="301" sizes="(max-width: 428px) 100vw, 428px" src="/assets/images/ListFiles.png" title="" width="428"/></noscript></p></a> Outlook Recent Items</div>
+<p>You can cancel the login prompt and proceed to create your email.  However, if you do not want this prompt to appear anymore you will need to disable the recent items feature within Outlook via the registry;</p>
+<blockquote><p><strong>Please note that caution should be taken when editing the registry</strong>, as changing or deleting the wrong key, can affect other programs, or the operating system. If you not are familiar with Windows Registry, please have someone who is, do this for you.</p></blockquote>
+<ol>
+<li>Activate the <strong>Registry Editor</strong> (search for Regedit in the Windows Start menu)</li>
+<li>Browse to the key <strong>HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail</strong>
+<ul>
+<li>Note: If the sub key ‘Mail’ doesn’t exist, you can create it.</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/OutlookKey.png"><img alt="" height="484" src="/assets/images/OutlookKey.png" title="" width="785"/><noscript><img alt="" height="484" sizes="(max-width: 785px) 100vw, 785px" src="/assets/images/OutlookKey.png" title="" width="785"/></noscript></a></p>
+<ol start="3">
+<li>Within the Mail key, create a new DWORD (32-bit) value</li>
+</ol>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/NewDWORD.png"><img alt="" height="484" src="/assets/images/NewDWORD.png" title="" width="785"/><noscript><img alt="" height="484" sizes="(max-width: 785px) 100vw, 785px" src="/assets/images/NewDWORD.png" title="" width="785"/></noscript></a></p>
+<ol start="4">
+<li>Name it <strong>MaxAttachmentMenuItems</strong> and <strong>set the value to 0</strong></li>
+</ol>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/MaxAttachmentMenuItems.png"><img alt="" height="484" src="/assets/images/MaxAttachmentMenuItems.png" title="" width="785"/><noscript><img alt="" height="484" sizes="(max-width: 785px) 100vw, 785px" src="/assets/images/MaxAttachmentMenuItems.png" title="" width="785"/></noscript></a></p>
+<ol start="5">
+<li>After you <strong>restart Outlook</strong> the list of recent items should be disabled and you’ll no longer be prompted to login to the vault when forwarding that chain letter</li>
+</ol>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/12/NoRecentItems.png"><img alt="" height="495" src="/assets/images/NoRecentItems.png" title="" width="878"/><noscript><img alt="" height="495" sizes="(max-width: 878px) 100vw, 878px" src="/assets/images/NoRecentItems.png" title="" width="878"/></noscript></a></p>

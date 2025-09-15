@@ -1,0 +1,31 @@
+<p>When completing a search in SOLIDWORKS PDM using the name field; when two or more words separated by a space the search will use an OR operation.   Or, if you’re searching one word, what happens is a LIKE operation.  In large vaults, these searches will return a lot of mostly unwanted results.  In this article, we’ll look at how to perform a SOLIDWORKS PDM <strong><em>exact </em></strong>search.</p>
+<h3>Example 1</h3>
+<ul>
+<li>In this example; I’m searching for the part named <strong><em>Example 1 A</em></strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_29722" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/09/2017-09-07_14-22-57.jpg"><img alt="SOLIDWORKS PDM Exact Search: Example 1 A" aria-describedby="caption-attachment-29722" height="677" src="/assets/images/2017-09-07_14-22-57-780x677.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-29722"><noscript><img alt="SOLIDWORKS PDM Exact Search: Example 1 A" height="677" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/2017-09-07_14-22-57-780x677.jpg" title="" width="780"/></noscript></p></a> Search: Example 1 A</div>
+<blockquote><p>The search that’s actually happening is: <strong>Example</strong><em><span style="color: #ff0000;">OR</span></em><strong>1</strong><em><span style="color: #ff0000;">OR</span></em><strong>A</strong>.</p></blockquote>
+<p>It’s returning anything matching Example, 1 or A which in large vaults will return a lot of results.</p>
+<h3>Example 2</h3>
+<ul>
+<li>If I’m searching <strong><em>ABC</em></strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_29729" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/09/2017-09-07_15-11-12.jpg"><img alt="Search: ABC" aria-describedby="caption-attachment-29729" height="677" src="/assets/images/2017-09-07_15-11-12-780x677.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-29729"><noscript><img alt="Search: ABC" height="677" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/2017-09-07_15-11-12-780x677.jpg" title="" width="780"/></noscript></p></a> Search: ABC</div>
+<blockquote><p>The search that’s actually happening is; <em>LIKE</em> ‘%<strong>ABC</strong>%.</p></blockquote>
+<p>It’s returning anything matching ABC which again in large vaults will return a lot of results.</p>
+<h3>How to Perform an Exact Search</h3>
+<p>To <strong>search for an exact string, we can use double-quotes</strong>.</p>
+<ul>
+<li>Searching “Example 1 A” will only return that filename;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_29726" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/09/2017-09-07_14-44-19.jpg"><img alt='Search: "Example 1 A"' aria-describedby="caption-attachment-29726" height="677" src="/assets/images/2017-09-07_14-44-19-780x677.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-29726"><noscript><img alt='Search: "Example 1 A"' height="677" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/2017-09-07_14-44-19-780x677.jpg" title="" width="780"/></noscript></p></a> Search: “Example 1 A”</div>
+<ul>
+<li>Searching “ABC” won’t help, as it will return all the options that contain ABC, but have any string of characters before or after ABC….we have a couple of options here, we could include the extension “ABC.txt”;</li>
+</ul>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/10/Exact-Search-File-extension-2.png"><img alt="" height="751" src="/assets/images/Exact-Search-File-extension-2.png" title="" width="863"/><noscript><img alt="" height="751" sizes="(max-width: 863px) 100vw, 863px" src="/assets/images/Exact-Search-File-extension-2.png" title="" width="863"/></noscript></a></p>
+<p>This narrows it down, but it includes results with characters ahead of “ABC”.  To narrow it down to only ABC.txt, we can add an operator for exact entry =ABC.txt;</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/10/Exact-Search-exact-entry-2.png"><img alt="" height="751" src="/assets/images/Exact-Search-exact-entry-2.png" title="" width="863"/><noscript><img alt="" height="751" sizes="(max-width: 863px) 100vw, 863px" src="/assets/images/Exact-Search-exact-entry-2.png" title="" width="863"/></noscript></a></p>
+<p>Let’s look at another scenario here…we know the filename contains <em>ABC</em>, but we need to only return the option ending with <em>F</em>, we could use a <a href="https://www.javelin-tech.com/blog/2016/05/solidworks-pdm-search-tool/">wildcard</a> “ABC*F.*”;</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/10/Exact-Search-Wildcard-2.png"><img alt="" height="751" src="/assets/images/Exact-Search-Wildcard-2.png" title="" width="863"/><noscript><img alt="" height="751" sizes="(max-width: 863px) 100vw, 863px" src="/assets/images/Exact-Search-Wildcard-2.png" title="" width="863"/></noscript></a></p>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Javelin delivers SOLIDWORKS PDM user and administration training courses either in-class, online, or on-site at your location. Learn more about our <a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">SOLIDWORKS PDM Training »</a></p>

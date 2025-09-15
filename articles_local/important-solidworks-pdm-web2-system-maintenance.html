@@ -1,0 +1,24 @@
+<p>I had a support case recently where the SOLIDWORKS PDM Server hard drives were at critical levels and the culprit was the Web2 portal.  To prevent this from happening to any Web2 users, there’s Important <a href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-web2/">SOLIDWORKS PDM Web2</a> System Maintenance that must be completed to clear space as the Web2 system folders will continue to grow in size as users access the vault.</p>
+<h2>SOLIDWORKS PDM Web2 System Maintenance</h2>
+<p>The following folders should be monitored and emptied periodically to prevent the Web2 Server disk space reaching critical levels:</p>
+<ul>
+<li><strong>tempFiles</strong>
+<ul>
+<li>Default location; C:\inetpub\wwwroot\SOLIDWORKSPDM\Web2\Content\tempFiles</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Uploads</strong>
+<ul>
+<li>Default location; C:\inetpub\wwwroot\SOLIDWORKSPDM\Web2\Content\Uploads</li>
+</ul>
+</li>
+</ul>
+<h3>Additional Information</h3>
+<h5>tempFiles</h5>
+<p>As users access the vault via Web2, the server caches files from the vault it stores them in the tempFiles subfolder, which is why it continues to grow in size. You can safely delete the contents of the tempFiles subfolder (but not the tempFiles subfolder).</p>
+<h5>Uploads</h5>
+<p>As users upload files, this is the folder where the Web2 Server adds files before being copied into the vault.  You can safely delete the contents of the Uploads subfolder.</p>
+<h3>Need SOLIDWORKS PDM Training?</h3>
+<p><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/" rel="noopener noreferrer" target="_blank">Learn more about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

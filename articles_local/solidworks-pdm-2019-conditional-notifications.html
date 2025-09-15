@@ -1,0 +1,48 @@
+<p>New in SOLIDWORKS PDM 2019 we have the ability to; send notifications on a conditional basis, depending on data card variables.</p>
+<div class="wp-caption aligncenter" id="attachment_37848" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Conditional-Notifications.png"><img alt="SOLIDWORKS PDM Conditional Notifications" aria-describedby="caption-attachment-37848" height="459" src="/assets/images/Conditional-Notifications.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-37848"><noscript><img alt="SOLIDWORKS PDM Conditional Notifications" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Conditional-Notifications.png" title="" width="646"/></noscript></p></a> SOLIDWORKS PDM Conditional Notifications</div>
+<h2>How can this help improve our vault?</h2>
+<p>Previously, notifications were attached to an entire transition…therefore; every file that transitioned through it generated a notification to a group or user, which often resulted in needless notifications being sent for parts that didn’t necessarily need it.  With this new functionality; we can limit notifications so that they are restricted to files that require it.</p>
+<h3>SOLIDWORKS PDM Conditional Notifications Example</h3>
+<p>We can use this new feature to build a notification that ONLY generates a notification for a part or assembly that is deemed high priority as it is sent for review.  The recipients will be limited to the management group so that they will only be notified when something high priority is waiting for approval.  The goal being; time-sensitive parts will be reviewed quicker, speeding up the overall process to complete a change on a high priority project.</p>
+<h4>How to create a Conditional Notification for High Priority Parts</h4>
+<p>For this example; I already have a data card variable, that determines the priority of the part;</p>
+<div class="wp-caption aligncenter" id="attachment_37849" style="width: 972px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Part-Card-Priority-Variable.png"><img alt="SOLIDWORKS PDM Card Editor" aria-describedby="caption-attachment-37849" height="508" src="/assets/images/Part-Card-Priority-Variable.png" title="" width="962"/><p class="wp-caption-text" id="caption-attachment-37849"><noscript><img alt="SOLIDWORKS PDM Card Editor" height="508" sizes="(max-width: 962px) 100vw, 962px" src="/assets/images/Part-Card-Priority-Variable.png" title="" width="962"/></noscript></p></a> SOLIDWORKS PDM Card Editor</div>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; [Workflow Name]
+<ul>
+<li>[Transition Name] &gt; Properties</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37850" style="width: 623px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Transition-Properties.png"><img alt="Submit Change for Approval Properties" aria-describedby="caption-attachment-37850" height="396" src="/assets/images/Transition-Properties.png" title="" width="613"/><p class="wp-caption-text" id="caption-attachment-37850"><noscript><img alt="Submit Change for Approval Properties" height="396" sizes="(max-width: 613px) 100vw, 613px" src="/assets/images/Transition-Properties.png" title="" width="613"/></noscript></p></a> Submit Change for Approval Properties</div>
+<ul>
+<li>Notifications &gt; Add Conditional Notification</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37852" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Add-Conditional-Notification.png"><img alt="Add Conditional Notification" aria-describedby="caption-attachment-37852" height="459" src="/assets/images/Add-Conditional-Notification.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-37852"><noscript><img alt="Add Conditional Notification" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Add-Conditional-Notification.png" title="" width="646"/></noscript></p></a> Add Conditional Notification</div>
+<ul>
+<li>Recipients
+<ul>
+<li>Add Users/Groups
+<ul>
+<li>Management</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37853" style="width: 515px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Recipients-Management.png"><img alt="Add Users/Groups - Management" aria-describedby="caption-attachment-37853" height="419" src="/assets/images/Recipients-Management.png" title="" width="505"/><p class="wp-caption-text" id="caption-attachment-37853"><noscript><img alt="Add Users/Groups - Management" height="419" src="/assets/images/Recipients-Management.png" title="" width="505"/></noscript></p></a> Add Users/Groups – Management</div>
+<ul>
+<li>Notification Conditions
+<ul>
+<li>Variable = <strong>Priority</strong></li>
+<li>Comparison = <strong>Text Equal To</strong></li>
+<li>Value = <strong>High</strong></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37877" style="width: 515px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Notification-Conditions.png"><img alt="Notification Conditions" aria-describedby="caption-attachment-37877" height="419" src="/assets/images/Notification-Conditions.png" title="" width="505"/><p class="wp-caption-text" id="caption-attachment-37877"><noscript><img alt="Notification Conditions" height="419" src="/assets/images/Notification-Conditions.png" title="" width="505"/></noscript></p></a> Notification Conditions</div>
+<ul>
+<li>Save and close the workflow</li>
+</ul>
+<p>This should result in any ‘High Priority’ part generating a notification to the management group;</p>
+<div class="wp-caption aligncenter" id="attachment_37878" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Complete.png"><img alt="SOLIDWORKS PDM Conditional Notifications" aria-describedby="caption-attachment-37878" height="401" src="/assets/images/Complete-1220x401.png" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-37878"><noscript><img alt="SOLIDWORKS PDM Conditional Notifications" height="401" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/Complete-1220x401.png" title="" width="1220"/></noscript></p></a> ‘High Priority’ parts generate a notification to the management group</div>

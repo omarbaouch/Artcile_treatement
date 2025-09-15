@@ -1,0 +1,20 @@
+<p>One of my favorite enhancements in <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM 2018</a> is a new option to use dynamic values when updating Variables while performing a <a href="https://www.javelin-tech.com/blog/2014/07/solidworks-pdm-copy-tree/">Copy Tree</a>.  In the past, this functionality only allowed Administrators to either <a href="https://www.javelin-tech.com/blog/2016/05/automatically-clearing-copy-tree-data-variables/">clear values</a> or set <a href="https://www.javelin-tech.com/blog/2011/10/resetting-revsion/">static values</a> for Variables in files that are created by a Copy Tree command.</p>
+<p>Now a new “Value” dialog box, shown below, will display when you click in the box beside the Variable name.  The &gt; button will present a drop list of dynamic values that can be selected from.</p>
+<div class="wp-caption aligncenter" id="attachment_33884" style="width: 775px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/01/Untitled.png"><img alt="Copy Tree Dynamic Variable Values Dialog Box" aria-describedby="caption-attachment-33884" height="947" src="/assets/images/Untitled.png" title="" width="765"/><p class="wp-caption-text" id="caption-attachment-33884"><noscript><img alt="Copy Tree Dynamic Variable Values Dialog Box" height="947" sizes="(max-width: 765px) 100vw, 765px" src="/assets/images/Untitled.png" title="" width="765"/></noscript></p></a> Copy Tree Value Dialog Box</div>
+<h3>Copy Tree Dynamic Variable Values</h3>
+<p>Here is what these selection will produce:</p>
+<ul>
+<li><strong>Current time</strong>:  This will be the time when the Copy Tree command is performed.</li>
+<li><strong>File Name</strong>:  This is the name of the SOURCE file that is being copied by the Copy Tree command including the file extension.</li>
+<li><strong>File name without extension</strong>:  The file name of the SOURCE file, but with the extension removed.</li>
+<li><strong>File Path</strong>:  The folder path for the SOURCE file that is being copied as displayed in the “Found In” column of the Copy Tree command dialogue box.  (If the source file set contains references in multiple folders, the “File Path” value written to each file created by the Copy Tree will match the “Found In” value for that file)</li>
+<li><strong>Logged in user</strong>:  This is the value in the “Login name” field in the User Properties for the user who launches the Copy Tree command.</li>
+<li><strong>Target File Name</strong>:  This is the “Target File Name” that the User specifies in the Copy Tree command dialogue for the file being created.</li>
+<li><strong>Target File name without extension</strong>:  This is the “Target File Name” only, with the extension information removed.</li>
+<li><strong>Target File Path</strong>:  This is the “Destination Folder Path” that the user sets for the file when performing the Copy Tree.</li>
+<li><strong>Today’s date</strong>:  This will be the date that the Copy Tree command is performed.</li>
+<li><strong>User – Full name</strong>:  This is the value in the “Full name” field in the User Properties for the user who launches the Copy Tree command.</li>
+<li><strong>User – initials</strong>:  This is the value in the “Initials” field in the User Properties for the user who launches the Copy Tree command.</li>
+<li><strong>User – User data</strong>:  This is the value in the “User data” field in the User Properties for the user who launches the Copy Tree command.</li>
+</ul>
+<p>Any combination of these dynamic values can be used as well.</p>

@@ -1,0 +1,29 @@
+<p>When a new SOLIDWORKS PDM User is created in the vault, the <strong>user is stored in both the database and the registry on the archive server</strong>.  When a user is deleted via the administration tool, the user is removed from the database, but still listed when adding new users because it exists in the registry on the archive server:</p>
+<div class="wp-caption aligncenter" id="attachment_41285" style="width: 859px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Permanently-Delete-a-User-Add-new-user_Still-there.png"><img alt="SOLIDWORKS PDM Users" aria-describedby="caption-attachment-41285" height="749" src="/assets/images/Permanently-Delete-a-User-Add-new-user_Still-there.png" title="" width="849"/><p class="wp-caption-text" id="caption-attachment-41285"><noscript><img alt="SOLIDWORKS PDM Users" height="749" sizes="(max-width: 849px) 100vw, 849px" src="/assets/images/Permanently-Delete-a-User-Add-new-user_Still-there.png" title="" width="849"/></noscript></p></a> Deleted SOLIDWORKS PDM Users still listed?</div>
+<p>To completely permanently delete a user, we need to delete them from the registry on the archive server.</p>
+<h2>How to permanently delete a user</h2>
+<blockquote><p><strong>Please note that caution should be taken when editing the registry</strong>, as changing or deleting the wrong key, can affect other programs, or the operating system.</p></blockquote>
+<p>On the archive server;</p>
+<ul>
+<li>Start &gt; Registry editor
+<ul>
+<li>Navigate to the key; <em>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\ConisioUsers</em>
+<ul>
+<li>Locate the user and delete the value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<div class="wp-caption aligncenter" id="attachment_41286" style="width: 944px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Permanently-Delete-a-User-Remove-from-registry.png"><img alt="Edit the Windows Registry" aria-describedby="caption-attachment-41286" height="414" src="/assets/images/Permanently-Delete-a-User-Remove-from-registry.png" title="" width="934"/><p class="wp-caption-text" id="caption-attachment-41286"><noscript><img alt="Edit the Windows Registry" height="414" sizes="(max-width: 934px) 100vw, 934px" src="/assets/images/Permanently-Delete-a-User-Remove-from-registry.png" title="" width="934"/></noscript></p></a> Edit the Windows Registry</div>
+<p>After the registry value is deleted, the SOLIDWORKS PDM User should no longer show up when adding new users;</p>
+<div class="wp-caption aligncenter" id="attachment_41287" style="width: 835px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Permanently-Delete-a-User-User-Gone.png"><img alt="User[s] completely removed" aria-describedby="caption-attachment-41287" height="751" src="/assets/images/Permanently-Delete-a-User-User-Gone.png" title="" width="825"/><p class="wp-caption-text" id="caption-attachment-41287"><noscript><img alt="User[s] completely removed" height="751" sizes="(max-width: 825px) 100vw, 825px" src="/assets/images/Permanently-Delete-a-User-User-Gone.png" title="" width="825"/></noscript></p></a> User[s] completely removed</div>
+<blockquote><p>In a replicated environment, it’s likely to be using vault specific login, in these instances, the user account will be found under a different registry key:</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\[VAULTNAME]\ConisioUsers</p></blockquote>
+<h2>What if I delete the wrong key?</h2>
+<p>If a registry value is deleted for a SOLIDWORKS PDM User that still exists in the vault, they will show with a red plus next to them in the administration tool:</p>
+<div class="wp-caption aligncenter" id="attachment_41288" style="width: 237px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Permanently-Delete-a-User-Broken-User-Account.png"><img alt="Deleted User" aria-describedby="caption-attachment-41288" height="251" src="/assets/images/Permanently-Delete-a-User-Broken-User-Account.png" title="" width="227"/><p class="wp-caption-text" id="caption-attachment-41288"><noscript><img alt="Deleted User" height="251" src="/assets/images/Permanently-Delete-a-User-Broken-User-Account.png" title="" width="227"/></noscript></p></a> Deleted User</div>
+<p>To restore this account; open the user from the administration tool and use the <strong>‘Set Password’</strong> option to recreate them in the registry:</p>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/04/Permanently-Delete-a-User-Set-password.png"><img alt="" height="748" src="/assets/images/Permanently-Delete-a-User-Set-password.png" title="" width="964"/><noscript><img alt="" height="748" sizes="(max-width: 964px) 100vw, 964px" src="/assets/images/Permanently-Delete-a-User-Set-password.png" title="" width="964"/></noscript></a></p>
+<p>After this is complete and the <strong>Users</strong> node is refreshed, the red plus should be removed and the login repaired.</p>

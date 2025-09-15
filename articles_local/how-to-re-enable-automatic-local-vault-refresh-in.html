@@ -1,0 +1,26 @@
+<p>If you’re using SOLIDWORKS PDM 2019, then you’ve likely noticed some changes to the local vault view.  As part of the <a href="https://www.javelin-tech.com/blog/2018/09/solidworks-pdm-performance/">performance improvements in 2019</a>, the frequency that Windows Explorer completes a refresh has been reduced.  This behavior is most apparent with operations like a <a href="https://www.javelin-tech.com/blog/2016/07/solidworks-pdm-professional-move-tree/">Copy/Move Tree</a>, as previously after the move tree completed explorer would automatically refresh and the files wouldn’t be apparent in the source folder, <strong>whereas in 2019 a manual refresh (default ‘F5’ key) is required for the files not to be visible anymore</strong>.</p>
+<p>The benefit of this change in functionality is primarily seen in larger vaults, or with larger assemblies where any reduction to the calculations in the database can be beneficial to the system.  In smaller vaults; it may be more beneficial to bring back the automatic refresh option so the user doesn’t have to complete it manually.</p>
+<h3>How to re-enable the automatic refresh in explorer</h3>
+<blockquote><p><strong>WARNING</strong>: Caution is required when editing entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.</p></blockquote>
+<ul>
+<li>Open <strong>Regedit</strong>
+<ul>
+<li>Browse to; <em>HKEY_CURRENT_USER\Software\Solidworks\Applications\PDMWorks Enterprise\Namespace</em></li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41571" style="width: 768px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Enable-Refresh-Regedit.png"><img alt="Enable Automatic Refresh - Regedit" aria-describedby="caption-attachment-41571" height="491" src="/assets/images/Enable-Refresh-Regedit.png" title="" width="758"/><p class="wp-caption-text" id="caption-attachment-41571"><noscript><img alt="Enable Automatic Refresh - Regedit" height="491" sizes="(max-width: 758px) 100vw, 758px" src="/assets/images/Enable-Refresh-Regedit.png" title="" width="758"/></noscript></p></a> Enable Automatic Refresh – Regedit</div>
+<ul>
+<li>Right-Click &gt; New &gt; DWORD (32-bit) Value</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41572" style="width: 768px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Enable-Refresh-New-DWORD-Value.png"><img alt="Enable Automatic Refresh - New DWORD Value" aria-describedby="caption-attachment-41572" height="491" src="/assets/images/Enable-Refresh-New-DWORD-Value.png" title="" width="758"/><p class="wp-caption-text" id="caption-attachment-41572"><noscript><img alt="Enable Automatic Refresh - New DWORD Value" height="491" sizes="(max-width: 758px) 100vw, 758px" src="/assets/images/Enable-Refresh-New-DWORD-Value.png" title="" width="758"/></noscript></p></a> DWORD (32-bit) Value</div>
+<ul>
+<li>Name it; <strong>EnableAutoFileRefresh</strong></li>
+<li>Set the value to; <strong>1</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41574" style="width: 768px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Enable-Refresh-EnableAutoFileRefresh-1.png"><img alt="Enable Automatic Refresh - Value 1" aria-describedby="caption-attachment-41574" height="491" src="/assets/images/Enable-Refresh-EnableAutoFileRefresh-1.png" title="" width="758"/><p class="wp-caption-text" id="caption-attachment-41574"><noscript><img alt="Enable Automatic Refresh - Value 1" height="491" sizes="(max-width: 758px) 100vw, 758px" src="/assets/images/Enable-Refresh-EnableAutoFileRefresh-1.png" title="" width="758"/></noscript></p></a> EnableAutoFileRefresh</div>
+<ul>
+<li>Close the Registry Editor</li>
+<li>Close and reopen Explorer</li>
+</ul>
+<blockquote><p><strong>Note</strong>: This setting is specific to the client install, therefore will need to be completed on each client machine that requires this change.</p></blockquote>

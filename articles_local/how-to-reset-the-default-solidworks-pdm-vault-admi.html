@@ -1,0 +1,46 @@
+<p>During the <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-server-installation-updated/">install of the SOLIDWORKS PDM Archive Server</a>, you’re prompted to ‘Set the default admin login password’:</p>
+<div class="wp-caption aligncenter" id="attachment_36265" style="width: 509px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Archive-Server-Configuration-Default-Password.png"><img alt="SOLIDWORKS PDM Vault Admin Password" aria-describedby="caption-attachment-36265" height="415" src="/assets/images/Archive-Server-Configuration-Default-Password.png" title="" width="499"/><p class="wp-caption-text" id="caption-attachment-36265"><noscript><img alt="SOLIDWORKS PDM Vault Admin Password" height="415" src="/assets/images/Archive-Server-Configuration-Default-Password.png" title="" width="499"/></noscript></p></a> SOLIDWORKS PDM Archive Server Configuration</div>
+<p>Then when <a href="https://www.javelin-tech.com/blog/2015/12/create-new-solidworks-pdm-vault/">creating a new vault</a>, you’re provided options to either set the default password or create a new ‘specific’ SOLIDWORKS PDM Vault Admin Password:</p>
+<div class="wp-caption aligncenter" id="attachment_36266" style="width: 554px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Vault-creation-Create-new-password.png"><img alt="Create New Vault - Use default or set vault specific admin password" aria-describedby="caption-attachment-36266" height="505" src="/assets/images/Vault-creation-Create-new-password.png" title="" width="544"/><p class="wp-caption-text" id="caption-attachment-36266"><noscript><img alt="Create New Vault - Use default or set vault specific admin password" height="505" src="/assets/images/Vault-creation-Create-new-password.png" title="" width="544"/></noscript></p></a> Create New Vault – Use default or set vault specific admin password</div>
+<p>If (like in the above screenshot) you opt to create a SOLIDWORKS PDM Vault Admin Password, this can sometimes lead to the default password getting lost or forgotten.  The default password is useful if you ever need to reset a vault specific password, or have multiple vaults and want to keep the password consistent.  In the following article, we’re going to look at how to reset a default password if it is ever lost or forgotten.</p>
+<h2>How To Reset the Default Admin password</h2>
+<ul>
+<li>Login to the archive server with local administrative permissions</li>
+<li>Open the registry editor
+<ul>
+<li>Start &gt; Run &gt; regedit</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36206" style="width: 409px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/regedit.png"><img alt="Run &gt; regedit" aria-describedby="caption-attachment-36206" height="206" src="/assets/images/regedit.png" title="" width="399"/><p class="wp-caption-text" id="caption-attachment-36206"><noscript><img alt="Run &gt; regedit" height="206" src="/assets/images/regedit.png" title="" width="399"/></noscript></p></a> Run &gt; regedit</div>
+<blockquote><p><strong>WARNING</strong>: Please be very careful when editing or deleting any entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.</p></blockquote>
+<ul>
+<li>Navigate to; <em>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\ConisioUsers</em></li>
+<li>Delete the key ‘Admin’</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36260" style="width: 855px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Delete-Default-Admin-key.png"><img alt="Delete Admin key" aria-describedby="caption-attachment-36260" height="526" src="/assets/images/Delete-Default-Admin-key.png" title="" width="845"/><p class="wp-caption-text" id="caption-attachment-36260"><noscript><img alt="Delete Admin key" height="526" sizes="(max-width: 845px) 100vw, 845px" src="/assets/images/Delete-Default-Admin-key.png" title="" width="845"/></noscript></p></a> Delete Admin key</div>
+<ul>
+<li>Start the Archive Server Configuration Tool
+<ul>
+<li>Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36212" style="width: 307px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Archive-Server-Configuration.png"><img alt="Start &gt; Archive Server Configuration" aria-describedby="caption-attachment-36212" height="435" src="/assets/images/Archive-Server-Configuration.png" title="" width="297"/><p class="wp-caption-text" id="caption-attachment-36212"><noscript><img alt="Start &gt; Archive Server Configuration" height="435" src="/assets/images/Archive-Server-Configuration.png" title="" width="297"/></noscript></p></a> Start &gt; Archive Server Configuration</div>
+<ul>
+<li>Archive Server Configuration Tool &gt; Tools &gt; Default Settings</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36263" style="width: 786px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Tools-Default-Settings.png"><img alt="Archive Server Configuration &gt; Tools &gt; Default Settings" aria-describedby="caption-attachment-36263" height="494" src="/assets/images/Tools-Default-Settings.png" title="" width="776"/><p class="wp-caption-text" id="caption-attachment-36263"><noscript><img alt="Archive Server Configuration &gt; Tools &gt; Default Settings" height="494" sizes="(max-width: 776px) 100vw, 776px" src="/assets/images/Tools-Default-Settings.png" title="" width="776"/></noscript></p></a> Archive Server Configuration &gt; Tools &gt; Default Settings</div>
+<ul>
+<li>Login Page &gt; Admin User &gt; Password
+<ul>
+<li>Enter the new password</li>
+<li>Note; The current password will be blank at this point.</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36264" style="width: 792px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/New-Password.png"><img alt="Default Settings &gt; Admin user &gt; Password" aria-describedby="caption-attachment-36264" height="492" src="/assets/images/New-Password.png" title="" width="782"/><p class="wp-caption-text" id="caption-attachment-36264"><noscript><img alt="Default Settings &gt; Admin user &gt; Password" height="492" sizes="(max-width: 782px) 100vw, 782px" src="/assets/images/New-Password.png" title="" width="782"/></noscript></p></a> Default Settings &gt; Admin user &gt; Password</div>
+<ul>
+<li>After hitting OK the ‘Admin’ key will be recreated in the registry and the new password set</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36267" style="width: 855px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/New-Admin-Reg.png"><img alt="Admin key is recreated" aria-describedby="caption-attachment-36267" height="526" src="/assets/images/New-Admin-Reg.png" title="" width="845"/><p class="wp-caption-text" id="caption-attachment-36267"><noscript><img alt="Admin key is recreated" height="526" sizes="(max-width: 845px) 100vw, 845px" src="/assets/images/New-Admin-Reg.png" title="" width="845"/></noscript></p></a> Admin key is recreated</div>

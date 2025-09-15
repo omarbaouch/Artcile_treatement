@@ -1,0 +1,56 @@
+<p>This article is a continuation on my previous articles relating to linking Data Card Variables, to Office Properties. In this article we will look at how to create a Word or Excel template that can be used for ECO’s/ECN’s</p>
+<p><!--more--></p>
+<p>As before, this article will assume that the appropriate variables have been added to SolidWorks Enterprise PDM and that these Variables have been mapped to the corresponding Data Card Fields.</p>
+<p>The first step is to create the Office document as outlined in my previous blogs <a href="https://www.javelin-tech.com/blog/2012/12/epdm-mapping-variables-to-msoffice/" target="_blank" title="EPDM - Mapping Variables to Microsoft Office">EPDM – Mapping Variables to Microsoft Office</a> and ‘<a href="https://www.javelin-tech.com/blog/?p=7898" rel="bookmark" title="Permanent Link to EPDM – Using “Link to content” to Define custom file properties in Excel">EPDM – Using “Link to content” to Define custom file properties in Excel</a>.</p>
+<p>The Office template needs to be checked into your vault. To control excess to the template it is recommended, that the template be checked into a folder, that only an administrator has write access to.</p>
+<p>Once the Office template has been checked in, launch SolidWorks Enterprise PDM Administration and log into vault.</p>
+<p>Right click on the <strong>Template Node</strong> and select <strong>New Template.</strong></p>
+<p><img alt="New Template" height="130" src="/assets/images/New-Template.png" title="" width="272"/><noscript><img alt="New Template" height="130" src="/assets/images/New-Template.png" title="" width="272"/></noscript></p>
+<p> </p>
+<p>Enter a name for the Template and press <strong>Next.</strong></p>
+<p><img alt="template name" height="282" src="/assets/images/template-name.png" title="" width="510"/><noscript><img alt="template name" height="282" sizes="(max-width: 510px) 100vw, 510px" src="/assets/images/template-name.png" title="" width="510"/></noscript></p>
+<p> </p>
+<p>Select the appropriate permissions for creating files for the template. The user must have sufficient permissions to folder, where the ECO/ECN will be created. Click on <strong>Next</strong>.</p>
+<p><img alt="permissions" height="217" src="/assets/images/permissions.png" title="" width="553"/><noscript><img alt="permissions" height="217" sizes="(max-width: 553px) 100vw, 553px" src="/assets/images/permissions.png" title="" width="553"/></noscript></p>
+<p> </p>
+<p>We will not look at Template Cards at this point; click <strong>Next</strong>.</p>
+<p><img alt="Template Cards" height="344" src="/assets/images/Template-Cards1.png" title="" width="479"/><noscript><img alt="Template Cards" height="344" sizes="(max-width: 479px) 100vw, 479px" src="/assets/images/Template-Cards1.png" title="" width="479"/></noscript></p>
+<p> </p>
+<p>A Template can create folder and sub-folders. The folder names can be linked to Template Variables, such as Customer, Part/Project Number and date. We will not look at creating folders in this article.</p>
+<p><img alt="Folders" height="191" src="/assets/images/Folders.png" title="" width="220"/><noscript><img alt="Folders" height="191" src="/assets/images/Folders.png" title="" width="220"/></noscript></p>
+<p> </p>
+<p>For this article we will look at creating a ECO in the ‘Current Folder’. This is the folder that is open in the local vault view, when we run the template. Click on <strong>New Template.</strong></p>
+<p><img alt="New template file" height="194" src="/assets/images/New-template-file.png" title="" width="367"/><noscript><img alt="New template file" height="194" sizes="(max-width: 367px) 100vw, 367px" src="/assets/images/New-template-file.png" title="" width="367"/></noscript>.</p>
+<p> </p>
+<p>Select the Office template you created earlier and click on <strong>Open</strong>.</p>
+<p><img alt="Select office template" height="211" src="/assets/images/Select-office-template.png" title="" width="598"/><noscript><img alt="Select office template" height="211" sizes="(max-width: 598px) 100vw, 598px" src="/assets/images/Select-office-template.png" title="" width="598"/></noscript></p>
+<p> </p>
+<p>We will not be using Template Variables, press on <strong>OK</strong> and press then <strong>Next</strong>.</p>
+<p><img alt="edit template file" height="398" src="/assets/images/edit-template-file.png" title="" width="660"/><noscript><img alt="edit template file" height="398" sizes="(max-width: 660px) 100vw, 660px" src="/assets/images/edit-template-file.png" title="" width="660"/></noscript></p>
+<p> </p>
+<p>From the <strong>Extension</strong> pull-down, choose an Icon for your Template and press <strong>Next.</strong></p>
+<p><img alt="icon" height="226" src="/assets/images/icon.png" title="" width="624"/><noscript><img alt="icon" height="226" sizes="(max-width: 624px) 100vw, 624px" src="/assets/images/icon.png" title="" width="624"/></noscript></p>
+<p> </p>
+<p>Select which <strong>Users and Groups</strong> will have be able to you this Template and click on <strong>OK</strong> to finish creating the Template.</p>
+<p><img alt="users and groups" height="379" src="/assets/images/users-and-groups.png" title="" width="781"/><noscript><img alt="users and groups" height="379" sizes="(max-width: 781px) 100vw, 781px" src="/assets/images/users-and-groups.png" title="" width="781"/></noscript></p>
+<p> </p>
+<p>To run the Template, in the Local Vault View, right click and select <strong>New</strong> and then click on the Template .</p>
+<p><img alt="Running template" height="77" src="/assets/images/Running-template.png" title="" width="400"/><noscript><img alt="Running template" height="77" sizes="(max-width: 400px) 100vw, 400px" src="/assets/images/Running-template.png" title="" width="400"/></noscript></p>
+<p> </p>
+<p>Any variables in the Data Card that are mapped to the Office template, will be written to the new ECO. A unique name should be given to the new ECO. Click on <strong>Create File</strong> to create the new ECO.</p>
+<p><img alt="Data Card" height="632" src="/assets/images/Data-Card.png" title="" width="885"/><noscript><img alt="Data Card" height="632" sizes="(max-width: 885px) 100vw, 885px" src="/assets/images/Data-Card.png" title="" width="885"/></noscript></p>
+<p> </p>
+<p>A new ECO is created</p>
+<p><img alt="New ECO" height="138" src="/assets/images/New-ECO.png" title="" width="299"/><noscript><img alt="New ECO" height="138" src="/assets/images/New-ECO.png" title="" width="299"/></noscript></p>
+<p> </p>
+<p>And the variable is mapped to the Office document.</p>
+<p><img alt="updated Excel" height="81" src="/assets/images/updated-Excel.png" title="" width="158"/><noscript><img alt="updated Excel" height="81" src="/assets/images/updated-Excel.png" title="" width="158"/></noscript></p>
+<p> </p>
+<p>We will look at using template variables and template cards in upcoming articles.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>

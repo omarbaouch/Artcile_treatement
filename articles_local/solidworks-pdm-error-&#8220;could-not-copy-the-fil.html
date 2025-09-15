@@ -1,0 +1,29 @@
+<p>This article is <a href="https://www.javelin-tech.com/blog/tag/solidworks-pdm-troubleshooting/">part of a series</a> for troubleshooting common, and perhaps not so common, SOLIDWORKS PDM error messages. The error message <em>“Could not copy the file. Cause: The file could not be found.”</em>, can occur when a user launches a SOLIDWORKS PDM Template that generates a file.</p>
+<p><div class="wp-caption aligncenter" id="attachment_50575" style="width: 442px"><img alt='SOLIDWORKS PDM Error "Could not copy the file. Cause: The file could not be found."' aria-describedby="caption-attachment-50575" height="186" src="/assets/images/31-12-2020-12-26-07.png" title="" width="432"/><p class="wp-caption-text" id="caption-attachment-50575"><noscript><img alt='SOLIDWORKS PDM Error "Could not copy the file. Cause: The file could not be found."' height="186" src="/assets/images/31-12-2020-12-26-07.png" title="" width="432"/></noscript> Template Fails to Create New File</p></div></p>
+<p>When a PDM Template generates a file, it uses a corresponding document template.</p>
+<p><div class="wp-caption aligncenter" id="attachment_50573" style="width: 1054px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-10-47-29.png"><img alt="Defining Document Template for PDM Template" aria-describedby="caption-attachment-50573" height="481" src="/assets/images/31-12-2020-10-47-29.png" title="" width="1044"/><p class="wp-caption-text" id="caption-attachment-50573"><noscript><img alt="Defining Document Template for PDM Template" height="481" sizes="(max-width: 1044px) 100vw, 1044px" src="/assets/images/31-12-2020-10-47-29.png" title="" width="1044"/></noscript></p></a> Defining Document Template for PDM Template</div></p>
+<p>For example, if the PDM Template generates a SOLIDWORKS part file, the PDM Template would use an existing SOLIDWORKS part, as a template. The user of the PDM Template will need at least read permissions to the template document.</p>
+<h3>Resolving the PDM Issue</h3>
+<p>To resolve this issue, make sure that users have at minimum the permission, <strong>Read file contents</strong>, for both the folder and state that document templates reside in.</p>
+<p><div class="wp-caption aligncenter" id="attachment_50579" style="width: 789px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-01-12-42.png"><img alt="Minimum State Permissions to Use Document Template" aria-describedby="caption-attachment-50579" height="589" src="/assets/images/31-12-2020-01-12-42.png" title="" width="779"/><p class="wp-caption-text" id="caption-attachment-50579"><noscript><img alt="Minimum State Permissions to Use Document Template" height="589" sizes="(max-width: 779px) 100vw, 779px" src="/assets/images/31-12-2020-01-12-42.png" title="" width="779"/></noscript></p></a> Minimum State Permissions to Use Document Template</div></p>
+<p>Alternatively, editing the PDM Template and specifying a user with sufficient permissions, will temporarily elevate the current user’s permissions. This is useful when you want to elevate a users permission, only when they use the PDM Template.</p>
+<p><div class="wp-caption aligncenter" id="attachment_50576" style="width: 858px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/12/31-12-2020-12-35-56.png"><img alt="Elevating User Permissions When Running Template" aria-describedby="caption-attachment-50576" height="394" src="/assets/images/31-12-2020-12-35-56.png" title="" width="848"/><p class="wp-caption-text" id="caption-attachment-50576"><noscript><img alt="Elevating User Permissions When Running Template" height="394" sizes="(max-width: 848px) 100vw, 848px" src="/assets/images/31-12-2020-12-35-56.png" title="" width="848"/></noscript></p></a> Elevating User Permissions When Running Template</div></p>
+<h3>Error could also be from Invalid Characters</h3>
+<p>This error message as well as the error message “Could not create folder. Cause: The file/key name was invalid,” can also be the result of an invalid character being specified for the file name, by the PDM Template. Below is a list of invalid characters, for file names:</p>
+<pre>" (Double quote)
+
+/ \ (Forward / Back slash)
+
+: (Colon)
+
+? (Question mark)
+
+* (Asterisk)
+
+&lt; &gt; (Smaller / Bigger than)
+
+| (Pipe)
+
+Any character created using the CTRL key
+
+An empty filename</pre>

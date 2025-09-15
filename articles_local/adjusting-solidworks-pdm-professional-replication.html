@@ -1,0 +1,44 @@
+<p>By default within a replicated SOLIDWORKS PDM Professional environment, 10 files are replicated per transfer to the target server(s) during scheduled replication.  If you’re experiencing bottlenecks or low bandwidth; it’s a good idea to reduce this number, or, if you have available bandwidth; the number of files can be increased to speed up replication.</p>
+<p>This value can be adjusted at any time and is a useful tool for troubleshooting communication problems within a replicated environment.</p>
+<h2>How to adjust the number of files that are received per transfer to the target server</h2>
+<blockquote><p><strong>NOTE</strong>: Steps within this article involve editing the Windows Registry.  This process can severely damage the operation of installed programs and should only be done by someone that is familiar with working in the Windows Registry.</p></blockquote>
+<p>On the target server;</p>
+<ul>
+<li>Open the registry editor and browse to the following key;
+<ul>
+<li><em><strong>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer</strong></em></li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_50621" style="width: 815px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Navigate-to-Key.png"><img alt="Adjusting replication performance - Navigate to Key" aria-describedby="caption-attachment-50621" height="533" src="/assets/images/Adjusting-replication-performance-Navigate-to-Key.png" title="" width="805"/><p class="wp-caption-text" id="caption-attachment-50621"><noscript><img alt="Adjusting replication performance - Navigate to Key" height="533" sizes="(max-width: 805px) 100vw, 805px" src="/assets/images/Adjusting-replication-performance-Navigate-to-Key.png" title="" width="805"/></noscript></p></a> Navigate to Key</div></p>
+<ul>
+<li>Create a new DWORD value named <em><strong>ReplicationThreads</strong></em>
+<ul>
+<li>RMB &gt; New &gt; DWORD (32-bit) Value</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_50622" style="width: 813px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-New-DWORD.png"><img alt="Adjusting replication performance - New DWORD" aria-describedby="caption-attachment-50622" height="532" src="/assets/images/Adjusting-replication-performance-New-DWORD.png" title="" width="803"/><p class="wp-caption-text" id="caption-attachment-50622"><noscript><img alt="Adjusting replication performance - New DWORD" height="532" sizes="(max-width: 803px) 100vw, 803px" src="/assets/images/Adjusting-replication-performance-New-DWORD.png" title="" width="803"/></noscript></p></a> New DWORD</div></p>
+<ul>
+<li>Select the new key <em>ReplicationThreads</em>
+<ul>
+<li>RMB &gt; <strong>Modify</strong></li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_50623" style="width: 518px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-ReplicationThreads-Modify.png"><img alt="Adjusting replication performance - Replication Threads Modify" aria-describedby="caption-attachment-50623" height="129" src="/assets/images/Adjusting-replication-performance-ReplicationThreads-Modify.png" title="" width="508"/><p class="wp-caption-text" id="caption-attachment-50623"><noscript><img alt="Adjusting replication performance - Replication Threads Modify" height="129" src="/assets/images/Adjusting-replication-performance-ReplicationThreads-Modify.png" title="" width="508"/></noscript></p></a> Replication Threads Modify</div></p>
+<ul>
+<li>Edit the key as follows;
+<ul>
+<li>Base = Decimal</li>
+<li>Value Data = Define the number of files to be received by the target server</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_50625" style="width: 812px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Set-The-Value.png"><img alt="Adjusting replication performance - Set The Value" aria-describedby="caption-attachment-50625" height="531" src="/assets/images/Adjusting-replication-performance-Set-The-Value.png" title="" width="802"/><p class="wp-caption-text" id="caption-attachment-50625"><noscript><img alt="Adjusting replication performance - Set The Value" height="531" sizes="(max-width: 802px) 100vw, 802px" src="/assets/images/Adjusting-replication-performance-Set-The-Value.png" title="" width="802"/></noscript></p></a> Set The Value</div></p>
+<blockquote><p>The number of files set must be between 1 and 64</p></blockquote>
+<ul>
+<li>Hit OK and close the registry editor.</li>
+</ul>
+<p>To incorporate the changes, a restart to the archive server service is required;</p>
+<p><div class="wp-caption aligncenter" id="attachment_50626" style="width: 816px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/01/Adjusting-replication-performance-Restart-the-archive-server-services.png"><img alt="Restart the archive server services" aria-describedby="caption-attachment-50626" height="593" src="/assets/images/Adjusting-replication-performance-Restart-the-archive-server-services.png" title="" width="806"/><p class="wp-caption-text" id="caption-attachment-50626"><noscript><img alt="Restart the archive server services" height="593" sizes="(max-width: 806px) 100vw, 806px" src="/assets/images/Adjusting-replication-performance-Restart-the-archive-server-services.png" title="" width="806"/></noscript></p></a> Restart the archive server services</div></p>

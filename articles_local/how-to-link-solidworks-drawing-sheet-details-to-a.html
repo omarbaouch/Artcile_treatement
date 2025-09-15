@@ -1,0 +1,66 @@
+<p>In <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> we can map SOLIDWORKS Drawing Sheet details directly to a Data Card, making the information easily accessible to users.  In this article we’re going to look at how to create that relationship within the vault.</p>
+<h2>How to map the SOLIDWORKS Drawing Sheet to a Data Card</h2>
+<p>In this example, we’re going to map the <strong>current sheet</strong> and the <strong>total number of sheets</strong> values…</p>
+<ul>
+<li>The first step is we’ll need to create the variables to store this information, then create the attribute mappings accordingly;
+<ul>
+<li>Administration Tool &gt; Variables &gt; New Variable…
+<ul>
+<li>Name; <strong>Current Sheet</strong></li>
+<li>Type; <strong>Text</strong>
+<ul>
+<li>New attribute;
+<ul>
+<li>Block Name: <strong>$PRP</strong></li>
+<li>Attribute Name: <strong>SW-Current Sheet</strong></li>
+<li>Extension: <strong>slddrw</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_41720" style="width: 393px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Sheet-Details-Mapping-Create-Variable-Current-Sheet.png"><img alt="Edit Variable" aria-describedby="caption-attachment-41720" height="580" src="/assets/images/Sheet-Details-Mapping-Create-Variable-Current-Sheet.png" title="" width="383"/><p class="wp-caption-text" id="caption-attachment-41720"><noscript><img alt="Edit Variable" height="580" src="/assets/images/Sheet-Details-Mapping-Create-Variable-Current-Sheet.png" title="" width="383"/></noscript></p></a> Edit Variable</div></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Name; <strong>Current Sheet</strong>
+<ul>
+<li>Type; <strong>Text</strong>
+<ul>
+<li>New attribute;
+<ul>
+<li>Block Name: <strong>$PRP</strong></li>
+<li>Attribute Name: <strong>SW-Total Sheets</strong></li>
+<li>Extension: <strong>slddrw</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_41721" style="width: 393px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Sheet-Details-Mapping-Create-Variable-Sheet-Total.png"><img alt="Sheet Total Variable" aria-describedby="caption-attachment-41721" height="580" src="/assets/images/Sheet-Details-Mapping-Create-Variable-Sheet-Total.png" title="" width="383"/><p class="wp-caption-text" id="caption-attachment-41721"><noscript><img alt="Sheet Total Variable" height="580" src="/assets/images/Sheet-Details-Mapping-Create-Variable-Sheet-Total.png" title="" width="383"/></noscript></p></a> Sheet Total Variable</div></p>
+<ul>
+<li>Next, we’ll need to link these variables to a data card;
+<ul>
+<li>Administration Tool &gt; Cards &gt; File Cards &gt; SOLIDWORKS Drawing Card;
+<ul>
+<li>Link up edit boxes to the new variables;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_41722" style="width: 1334px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Sheet-Details-Mapping-Edit-Data-Card.png"><img alt="SOLIDWORKS Drawing Sheet details in a data card" aria-describedby="caption-attachment-41722" height="773" src="/assets/images/Sheet-Details-Mapping-Edit-Data-Card.png" title="" width="1324"/><p class="wp-caption-text" id="caption-attachment-41722"><noscript><img alt="SOLIDWORKS Drawing Sheet details in a data card" height="773" sizes="(max-width: 1324px) 100vw, 1324px" src="/assets/images/Sheet-Details-Mapping-Edit-Data-Card.png" title="" width="1324"/></noscript></p></a> Link to data card</div></p>
+<p>Then the Drawing Sheet value should populate directly to the SOLIDWORKS PDM Data Card;</p>
+<p><div class="wp-caption aligncenter" id="attachment_41723" style="width: 1144px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Sheet-Details-Mapping-Complete.png"><img alt="SOLIDWORKS Drawing Sheet and data card linked" aria-describedby="caption-attachment-41723" height="796" src="/assets/images/Sheet-Details-Mapping-Complete.png" title="" width="1134"/><p class="wp-caption-text" id="caption-attachment-41723"><noscript><img alt="SOLIDWORKS Drawing Sheet and data card linked" height="796" sizes="(max-width: 1134px) 100vw, 1134px" src="/assets/images/Sheet-Details-Mapping-Complete.png" title="" width="1134"/></noscript></p></a> SOLIDWORKS Drawing Sheet and data card linked</div></p>

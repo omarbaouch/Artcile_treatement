@@ -1,0 +1,17 @@
+<p>Many important settings are controlled by Reference Dialog, but many do not know where to find it, or what options are controlled in this area.</p>
+<p><!--more--></p>
+<p>The Reference Dialog is accessed by right clicking on the User node and selecting settings (settings can also be changed for individual users or groups).</p>
+<p><img alt="users node" height="182" src="/assets/images/users-node.png" title="" width="284"/><noscript><img alt="users node" height="182" src="/assets/images/users-node.png" title="" width="284"/></noscript></p>
+<p>In the settings dialogue box, select Reference Dialog.</p>
+<p><img alt="settings" height="570" src="/assets/images/settings.png" title="" width="730"/><noscript><img alt="settings" height="570" sizes="(max-width: 730px) 100vw, 730px" src="/assets/images/settings.png" title="" width="730"/></noscript></p>
+<p>Below is a list of the options and what they do</p>
+<p><strong>Auto Select reference file to get latest version of files,</strong> will pre-select the <strong>Get</strong> option, in the check-out dialog box, if the latest version of referenced files are not cached locally.</p>
+<p><img alt="get" height="101" src="/assets/images/get.png" title="" width="552"/><noscript><img alt="get" height="101" sizes="(max-width: 552px) 100vw, 552px" src="/assets/images/get.png" title="" width="552"/></noscript></p>
+<p><strong>Always  work with latest version of files,</strong> will copy the latest version of a file to the local cache. If a file contains references, the latest version of these files will also be cached. <strong>Get Version is</strong> not available if this option is selected, unless the sub-option,<strong> Enable the Get Version command in SolidWorks Add-in,</strong> is checked.</p>
+<p><strong>Check out files silently without showing the check out dialog box, </strong>hides the check-out dialog. Each referenced file will have to be checked out individually.</p>
+<p><strong>Try to check out all referenced files when the referencing file is checked out</strong>. This option can be used to check out referenced files if the option <strong>Check out files silently without showing the check out dialog box hides the check-out dialog</strong> has been selected.</p>
+<p><strong>Do not mark referenced files when changing state,</strong> can be useful if you typically do not change state of all referenced files. For instance if there are referenced files that are released and you do  not wish to sent them back through the workflow. With this option selected only the parent is selected, all references that also need to change state, must be selected manually.</p>
+<p><img alt="change state" height="178" src="/assets/images/change-state.png" title="" width="472"/><noscript><img alt="change state" height="178" sizes="(max-width: 472px) 100vw, 472px" src="/assets/images/change-state.png" title="" width="472"/></noscript></p>
+<p><strong>Show “not rebuilt” warning on drawing and assemblies in need of rebuilding.</strong> While seeing  warnings may be annoying, this could indicate that there is changes to a referenced document which could impact the parent file. For instance a change to part may causes changes to it’s drawing. These changes will not propagate until the drawing is opened in SolidWorks and rebuilt.</p>
+<p><img alt="rebuilt" height="188" src="/assets/images/rebuilt.png" title="" width="492"/><noscript><img alt="rebuilt" height="188" sizes="(max-width: 492px) 100vw, 492px" src="/assets/images/rebuilt.png" title="" width="492"/></noscript></p>
+<p> </p>

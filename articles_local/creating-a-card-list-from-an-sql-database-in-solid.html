@@ -1,0 +1,73 @@
+<h2>Introduction</h2>
+<p>Card lists play a crucial role in managing data within SOLIDWORKS PDM. By setting up T-SQL queries to retrieve values from an external SQL database, you can create custom card lists. In this article, we’ll guide you through the process.</p>
+<h2>Prerequisites</h2>
+<p>Before we begin, ensure you have the following:</p>
+<ul>
+<li>Access to the SQL Server Management Studio (SSMS)</li>
+<li>Familiarity with T-SQL syntax</li>
+<li>A configured SOLIDWORKS PDM environment</li>
+</ul>
+<h2>Steps to Create Card Lists</h2>
+<ul>
+<li><strong>Identify Data Sources:</strong>
+<ul>
+<li>Use SSMS to locate relevant table names in your SQL database.</li>
+<li>Determine the data you want to include in your card lists (e.g., materials, customer names).</li>
+</ul>
+</li>
+<li><strong>Create the Card List:</strong>
+<ul>
+<li>In SOLIDWORKS PDM, right-click on “Lists” (for cards) and select “Add New.”</li>
+<li>Provide a descriptive name for your list.</li>
+<li>Choose “From SQL Database” as the data type.</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_63838" style="width: 399px"><img alt="Card Lists in PDM Admin Tool" aria-describedby="caption-attachment-63838" height="256" src="/assets/images/CardListPDM.png" title="" width="389"/><p class="wp-caption-text" id="caption-attachment-63838"><noscript><img alt="Card Lists in PDM Admin Tool" height="256" src="/assets/images/CardListPDM.png" title="" width="389"/></noscript> Card Lists in PDM Admin Tool</p></div>
+<ul>
+<li><strong>Define the SQL Query:</strong>
+<ul>
+<li>Under “SQL command returning the data,” enter the T-SQL query that selects the desired values from the database table. You can find example SQL Queries here – <a href="https://help.solidworks.com/2021/english/EnterprisePDM/Admin/c_SQL_query_examples.htm?_gl=1*rilms*_up*MQ..*_ga*MjA0MTA3MDA2LjE3MTk0MTYwOTU.*_ga_XQJPQWHZHH*MTcxOTQxNjA5NC4xLjAuMTcxOTQxNjA5NC4wLjAuMA.." rel="nofollow noopener" target="_blank"><strong>EXAMPLE SQL QUERIES</strong></a></li>
+<li>Specify the following details:
+<ul>
+<li><strong>Server:</strong> IP address or name of the SQL server hosting the database.</li>
+<li><strong>Database:</strong> Name of the SQL database containing the list values.</li>
+<li><strong>Login credentials:</strong> Enter the SQL user’s login name and password.</li>
+</ul>
+</li>
+<li>Click “Test” to verify the query and connection.</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_63841" style="width: 293px"><img alt="Server Details" aria-describedby="caption-attachment-63841" height="163" src="/assets/images/ServerDetails.png" title="" width="283"/><p class="wp-caption-text" id="caption-attachment-63841"><noscript><img alt="Server Details" height="163" src="/assets/images/ServerDetails.png" title="" width="283"/></noscript> Server Details</p></div>
+<ul>
+<li><strong>Populate the List:</strong>
+<ul>
+<li>If the test is successful, a list of values from the SQL source will appear in the “Values” window.</li>
+<li>Save the list configuration by clicking “File” &gt; “Save.”</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" height="511" src="/assets/images/CardListTest-600x511.png" title="" width="600"/><noscript><img alt="" height="511" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/CardListTest-600x511.png" title="" width="600"/></noscript></p>
+<ul>
+<li><strong>Link the List to a Card:</strong>
+<ul>
+<li>Create or edit a data card in SOLIDWORKS PDM.</li>
+<li>Add a control (e.g., drop-down list) that will use the SQL-based list.</li>
+<li>In the properties pane, under “Items,” select the newly created list as a “Special value.”</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<div class="wp-caption aligncenter" id="attachment_63843" style="width: 438px"><img alt="Data Card" aria-describedby="caption-attachment-63843" height="377" src="/assets/images/CardEditor.png" title="" width="428"/><p class="wp-caption-text" id="caption-attachment-63843"><noscript><img alt="Data Card" height="377" src="/assets/images/CardEditor.png" title="" width="428"/></noscript> Data Card – Card Editor</p></div>
+<ul>
+<li><strong>Test out card list:</strong>
+<ul>
+<li>Log in to PDM local vault view in File Explorer.</li>
+<li>Click on a file then on the “Data Card” tab.</li>
+<li>See if the card list is populating on the data card.</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_63844" style="width: 504px"><img alt="Data Card in PDM Local Vault View" aria-describedby="caption-attachment-63844" height="335" src="/assets/images/DataCardFileExplorer.png" title="" width="494"/><p class="wp-caption-text" id="caption-attachment-63844"><noscript><img alt="Data Card in PDM Local Vault View" height="335" src="/assets/images/DataCardFileExplorer.png" title="" width="494"/></noscript> Using the list in PDM local vault view (File Explorer)</p></div>
+<p style="text-align: center;"><a href="https://www.javelin-tech.com/3d/resources/?_sft_category=solidworks-pdm"><strong>To learn more about SOLIDWORKS PDM, you can see our resources here. </strong></a></p>

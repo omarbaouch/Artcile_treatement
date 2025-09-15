@@ -1,0 +1,10 @@
+<p><img alt="locked-folder" height="666" src="/assets/images/locked-folder.jpg" title="" width="1000"/><noscript><img alt="locked-folder" height="666" sizes="(max-width: 1000px) 100vw, 1000px" src="/assets/images/locked-folder.jpg" title="" width="1000"/></noscript></p>
+<p>The warning “folder contains hidden files you may not delete”, may appear when destroying a folder. There are a number of reasons why this may occur.</p>
+<ol>
+<li>The user destroying the folder, lacks read permissions to some files in that folder. Typically it would be because the user does not have sufficient permissions, in a workflow state.</li>
+<li>A file in the folder has not been checked in yet.</li>
+<li>An orphaned file.</li>
+</ol>
+<h3>How to delete the folder</h3>
+<p>For the first two possibilities, try logging in as the EPDM Admin and then destroying the folder.</p>
+<p>For an orphaned file, try adding a text file to the folder that cannot be deleted. This should trigger a orphan record cleanup process and allow the folder to be deleted.</p>

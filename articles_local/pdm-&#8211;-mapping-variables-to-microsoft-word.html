@@ -1,0 +1,44 @@
+<p>EPDM variables can be mapped to a Microsoft Office document, automatically populating documents such as ECN’s (Engineering Change Notices).</p>
+<p>1) In this article, the appropriate variable used will be Affects, and it has been configured for Word and Excel file types.</p>
+<p><img alt="" height="568" src="/assets/images/Screenshot-2025-05-03-125744-600x568.png" title="" width="600"/><noscript><img alt="" height="568" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Screenshot-2025-05-03-125744-600x568.png" title="" width="600"/></noscript></p>
+<p>2) The Variable has been mapped to the data card.<img alt="" height="447" src="/assets/images/Data-card.png" title="" width="971"/><noscript><img alt="" height="447" sizes="(max-width: 971px) 100vw, 971px" src="/assets/images/Data-card.png" title="" width="971"/></noscript></p>
+<p>If you are not familiar with how this done, please refer to the SolidWorks Enterprise PDM Administration Guide.</p>
+<p>3) In order for the variable to be mapped to the Word document, we must first define the Custom Property, in Word. From the menu bar, in Word select the File tab.</p>
+<div><img alt="" height="95" src="/assets/images/Screenshot-2025-05-03-130255.png" title="" width="335"/><noscript><img alt="" height="95" src="/assets/images/Screenshot-2025-05-03-130255.png" title="" width="335"/></noscript></div>
+<div>Select Info and then Advanced Properties from the Properties pull-down<img alt="" height="118" src="/assets/images/Screenshot-2025-05-03-130547-600x118.png" title="" width="600"/><noscript><img alt="" height="118" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Screenshot-2025-05-03-130547-600x118.png" title="" width="600"/></noscript></div>
+<p>Click on the Custom Tab to add or select a custom property. Link to Content may not be selectable, but it is not required. Click Add, to create/define the Custom Property and OK, to exit Properties.</p>
+<div><img alt="" height="531" src="/assets/images/Screenshot-2025-05-03-131703.png" title="" width="416"/><noscript><img alt="" height="531" src="/assets/images/Screenshot-2025-05-03-131703.png" title="" width="416"/></noscript></div>
+<div>4) To display the custom property in the Office document, a Field needs to be inserted. From the “Insert” tab, select QuickParts icon and select Field
+<div><img alt="" height="276" src="/assets/images/Quick-Parts.png" title="" width="1463"/><noscript><img alt="" height="276" sizes="(max-width: 1463px) 100vw, 1463px" src="/assets/images/Quick-Parts.png" title="" width="1463"/></noscript></div>
+</div>
+<p>From Categories, select DocProperty and in the Field Properties, select the Property you want to link to the field.</p>
+<div><img alt="" height="446" src="/assets/images/Field.png" title="" width="690"/><noscript><img alt="" height="446" sizes="(max-width: 690px) 100vw, 690px" src="/assets/images/Field.png" title="" width="690"/></noscript></div>
+<p><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">After you click OK, you should have a value of your custom property in your Word document.</span></p>
+<p><img alt="" height="185" src="/assets/images/Screenshot-2025-05-03-131223.png" title="" width="275"/><noscript><img alt="" height="185" src="/assets/images/Screenshot-2025-05-03-131223.png" title="" width="275"/></noscript></p>
+<p><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">When you save and close the Word Document, you will see the custom property value updated in the file data card for this word document. </span></p>
+<p><img alt="" height="259" src="/assets/images/Screenshot-2025-05-03-131452-600x294.png" title="" width="529"/><noscript><img alt="" height="259" sizes="(max-width: 529px) 100vw, 529px" src="/assets/images/Screenshot-2025-05-03-131452-600x294.png" title="" width="529"/></noscript></p>
+<div>
+<h4><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">Updating Fields</span></h4>
+<p><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">In order to update the field, you can press F9 when the document is open or add a refresh macro.</span></p>
+<p><span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 16px;">To create a refresh macro with an office document open, press Alt-F8 on your keyboard and select “Create”.</span></p>
+</div>
+<div>
+<p><img alt="" height="365" src="/assets/images/Update-fields.png" title="" width="446"/><noscript><img alt="" height="365" sizes="(max-width: 446px) 100vw, 446px" src="/assets/images/Update-fields.png" title="" width="446"/></noscript></p>
+<p> </p>
+<p>In the Macro window, enter the text shown below.</p>
+<p><img alt="" height="366" src="/assets/images/06-05-2019-01-38-42.png" title="" width="646"/><noscript><img alt="" height="366" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/06-05-2019-01-38-42.png" title="" width="646"/></noscript></p>
+<p>Sub AutoOpen ()</p>
+<p>‘</p>
+<p>‘ AutoOpen Macro</p>
+<p>‘</p>
+<p>‘</p>
+<p>Dim aStory As Range</p>
+<p>Dim aField As Field</p>
+<p>For Each aStory In ActiveDocument.StoryRanges</p>
+<p>For Each aField In aStory.Fields</p>
+<p>aField.Update</p>
+<p>Next aField</p>
+<p>Next aStory End Sub</p>
+<p> </p>
+<p>Save and close the Visual Basic, to complete the macro.</p>
+</div>

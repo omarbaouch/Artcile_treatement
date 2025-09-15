@@ -1,0 +1,23 @@
+<p>Following an upgrade of <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/">SOLIDWORKS PDM Professional</a>, you may encounter some odd behavior when accessing the vault through Web2.</p>
+<p>If you see any of these symptoms, you may have missed one final step in the upgrade process:</p>
+<ul>
+<li>Login page hanging indefinitely</li>
+<li>Being able to login successfully but not able to navigate between folders</li>
+<li>Either hanging indefinitely or being sent back to the Login page when trying to view any details of a file</li>
+<li>Or, encountering the error “<em>Could not open database</em>“.</li>
+</ul>
+<p>These are all symptoms of the same issue, the Web2 application pool using the wrong identity.</p>
+<p>This most commonly happens following an upgrade of the software.  That’s because, during the upgrade, the application pool will be reset to the default “<em>Network Service</em>” identity and must be modified back to use the Windows Profile that it was using before the upgrade.</p>
+<p>In order for Web2 to work properly, the application pool identity must be set to use a Windows Profile that has:</p>
+<ol>
+<li>Has <em>logged into the vault</em> <strong>and</strong> <em>selected a folder in the vault</em> at least once.</li>
+<li>Has been added as a member of the <strong>IIS_IUSRS</strong> group.</li>
+<li>Is a member of the local <strong>Administrators</strong> group.</li>
+</ol>
+<p>Following any upgrade of the SOLIDWORKS PDM Professional Web2 Server software, make sure the following steps are performed:</p>
+<p><strong>Step 1: </strong> Open<em><strong> Internet Information Services (IIS) Manager</strong></em>, go to the “<em><strong>Application Pools</strong></em>“, select “<em><strong>SOLIDWORKS PDM Web2</strong></em>” and click “<em><strong>Advanced Settings…</strong></em>“.</p>
+<p><div class="wp-caption aligncenter" id="attachment_44883" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/12/After-upgrade.jpg"><img alt="Application Ppols SOLIDWORKS PDM Web2" aria-describedby="caption-attachment-44883" height="734" src="/assets/images/After-upgrade-1220x734.jpg" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-44883"><noscript><img alt="Application Ppols SOLIDWORKS PDM Web2" height="734" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/After-upgrade-1220x734.jpg" title="" width="1220"/></noscript></p></a> Application Ppols SOLIDWORKS PDM Web2</div></p>
+<p><strong>Step 2</strong>:  Select the “<em><strong>Identity</strong></em>” field and click on the “<strong>…</strong>” button.</p>
+<p><div class="wp-caption aligncenter" id="attachment_44884" style="width: 743px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/12/Advanced-Settings.jpg"><img alt="Identify Network Service" aria-describedby="caption-attachment-44884" height="720" src="/assets/images/Advanced-Settings.jpg" title="" width="733"/><p class="wp-caption-text" id="caption-attachment-44884"><noscript><img alt="Identify Network Service" height="720" sizes="(max-width: 733px) 100vw, 733px" src="/assets/images/Advanced-Settings.jpg" title="" width="733"/></noscript></p></a> Identify Network Service</div></p>
+<p><strong>Step 3</strong>:  Select “<strong>Custom account</strong>” and click “<strong>Set…</strong>“, then enter the credentials for the Windows User account that should be used for Web2.</p>
+<p><div class="wp-caption aligncenter" id="attachment_44885" style="width: 524px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/12/specific-user.jpg"><img alt="Set the credentials for the Windows User account" aria-describedby="caption-attachment-44885" height="696" src="/assets/images/specific-user.jpg" title="" width="514"/><p class="wp-caption-text" id="caption-attachment-44885"><noscript><img alt="Set the credentials for the Windows User account" height="696" sizes="(max-width: 514px) 100vw, 514px" src="/assets/images/specific-user.jpg" title="" width="514"/></noscript></p></a> Set the credentials for the Windows User account</div></p>

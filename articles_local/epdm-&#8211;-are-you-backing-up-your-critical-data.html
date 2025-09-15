@@ -1,0 +1,12 @@
+<p>Accidental deletions, viruses, hardware failures are just a few things that can damage or destroy your vault data. Without a well structured back-up scheme, recovering data after a calamity can be difficult if not impossible.<br/>
+<!--more--></p>
+<p>Large amounts of data can be generated daily therefore backups also need to occur on a daily basis. In Solidworks Enterprise PDM there are two key areas that need to be backed up daily. The first is the <span style="color: #800000;"><strong>archive folder that is located on the Archive Server</strong></span>. This is where the physical files are kept and this folder can be backed up using any standard back-up software. The next area that needs to be backed up is the <span style="color: #800000;"><strong>SQL database</strong></span>. Regular back-up software typically does not back-up SQL databases. There is third party software available that is capable of backing up SQL databases. Or you can use Maintenance Plans which is included with Microsoft SQL server.</p>
+<p>Even with back-ups of these two key areas, restoring data can be difficult if the file versions in database and archive folder differ. In a good back-up scheme, both backups occur as close to the same time as possible.</p>
+<p>The components of a good back-up scheme are as follows:</p>
+<ul>
+<li>Back-up both the archive folder and the SQL database.</li>
+<li>Back-ups should be scheduled to run at least once per day.</li>
+<li>Do not rely on manual back-ups – you should use the Microsoft SQL Maintenance Plans and/or third party software to perform the back-ups.</li>
+<li>Back-ups should be scheduled to run as close as possible to the same times. (SQL first, it’s fast, then the archive)</li>
+<li>Check your backups regularly to ensure that the scheduled backups are occurring as scheduled.</li>
+</ul>

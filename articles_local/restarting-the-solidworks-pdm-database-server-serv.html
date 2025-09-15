@@ -1,0 +1,40 @@
+<p>The SOLIDWORKS PDM Database Server Service is a helper service that periodically checks the SOLIDWORKS PDM database for any new changes and then acts on these.</p>
+<p>The service handles operations such as:</p>
+<ul>
+<li>Automatic notifications</li>
+<li>XML exports</li>
+<li>Card list updates</li>
+<li>Cold Store schedule</li>
+<li> Replication schedule</li>
+<li>Cleaner Service schedule</li>
+<li>Index server administration</li>
+</ul>
+<p>The service itself is fairly lightweight as most of these tasks are fairly simple, it’s simply acting as a helper connecting the SQL database to other services.  Occasionally though the service can get overwhelmed and lock up.</p>
+<p>Normally this is first noticed when either the automatic notifications stop being processed or the scheduled replication does not happen.</p>
+<h3>Restarting the Service</h3>
+<p>The very first step in troubleshooting issues with notifications or with any scheduled events like replication or cold storage, is to restart the SOLIDWORKS PDM Database Server Service.</p>
+<p>This can be done by launching Services.msc on the server where the database service is running (in most cases this is on the server that is hosting the Microsoft SQL Server software).</p>
+<p>Then find the service “SOLIDWORKS PDM Database Server” (or “SolidWorks Enterprise PDM Database Server” if you are using an older version of the software) and click Restart.</p>
+<div class="wp-caption aligncenter" id="attachment_21859" style="width: 1214px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/Restart-service.png"><img alt="SOLIDWORKS PDM Database Server Service" aria-describedby="caption-attachment-21859" height="687" src="/assets/images/Restart-service.png" title="" width="1204"/><p class="wp-caption-text" id="caption-attachment-21859"><noscript><img alt="SOLIDWORKS PDM Database Server Service" height="687" sizes="(max-width: 1204px) 100vw, 1204px" src="/assets/images/Restart-service.png" title="" width="1204"/></noscript></p></a> Restart the SOLIDWORKS PDM Database Server Service</div>
+<p> </p>
+<h3>Automatic Restart</h3>
+<p>If the service is repeatedly locking up, every few days or weeks, you can automate this process of restarting the service.</p>
+<p>Here are the steps:</p>
+<p><strong>Step 1</strong>:  Create a batch file with the commands:</p>
+<pre style="padding-left: 60px;">@echo Off
+
+ net stop ConisioDbServer
+
+ timeout 10
+
+ net start ConisioDbServer</pre>
+<div class="wp-caption aligncenter" id="attachment_21861" style="width: 1078px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/1.png"><img alt="Restart Server text file" aria-describedby="caption-attachment-21861" height="698" src="/assets/images/1.png" title="" width="1068"/><p class="wp-caption-text" id="caption-attachment-21861"><noscript><img alt="Restart Server text file" height="698" sizes="(max-width: 1068px) 100vw, 1068px" src="/assets/images/1.png" title="" width="1068"/></noscript></p></a> Restart Server text file</div>
+<p><strong>Step 2</strong>:  Go to the Control Panel &gt; Administrative Tools and launch the Task Scheduler, then click “Create Task”</p>
+<div class="wp-caption aligncenter" id="attachment_21863" style="width: 650px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/2-1.png"><img alt="Create Task" aria-describedby="caption-attachment-21863" height="458" src="/assets/images/2-1-640x458.png" title="" width="640"/><p class="wp-caption-text" id="caption-attachment-21863"><noscript><img alt="Create Task" height="458" sizes="(max-width: 640px) 100vw, 640px" src="/assets/images/2-1-640x458.png" title="" width="640"/></noscript></p></a> Create Task</div>
+<p><strong>Step 3</strong>.  On “General” tab assign a name for the task</p>
+<div class="wp-caption aligncenter" id="attachment_21864" style="width: 796px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/3.png"><img alt="Restart database service" aria-describedby="caption-attachment-21864" height="563" src="/assets/images/3.png" title="" width="786"/><p class="wp-caption-text" id="caption-attachment-21864"><noscript><img alt="Restart database service" height="563" sizes="(max-width: 786px) 100vw, 786px" src="/assets/images/3.png" title="" width="786"/></noscript></p></a> Restart database service</div>
+<p><strong>Step 4</strong>:  On the Triggers tab schedule the task to run once per day.</p>
+<div class="wp-caption aligncenter" id="attachment_21865" style="width: 796px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/4.png"><img alt="Schedule Start" aria-describedby="caption-attachment-21865" height="563" src="/assets/images/4.png" title="" width="786"/><p class="wp-caption-text" id="caption-attachment-21865"><noscript><img alt="Schedule Start" height="563" sizes="(max-width: 786px) 100vw, 786px" src="/assets/images/4.png" title="" width="786"/></noscript></p></a> Schedule Start</div>
+<p><strong>Step 5</strong>:  On the Actions Tab, add a New Action and set it to “Start a program”.  Click “Browse” and select the batch file created in Step 1.</p>
+<div class="wp-caption aligncenter" id="attachment_21866" style="width: 796px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/07/5.png"><img alt="Start a Program Action" aria-describedby="caption-attachment-21866" height="563" src="/assets/images/5.png" title="" width="786"/><p class="wp-caption-text" id="caption-attachment-21866"><noscript><img alt="Start a Program Action" height="563" sizes="(max-width: 786px) 100vw, 786px" src="/assets/images/5.png" title="" width="786"/></noscript></p></a> Start a Program Action</div>
+<p> </p>

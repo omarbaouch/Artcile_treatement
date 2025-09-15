@@ -1,0 +1,71 @@
+<p>In this article, we are going to look at how to enable the content search in SOLIDWORKS PDM Professional using the Windows Search Service.</p>
+<p>This features requires:</p>
+<ul>
+<li>SOLIDWORKS PDM Professional version 2016 SP0 or newer</li>
+<li>The archive server service must be able to access the archive folders via locally attached or SAN storage. Network shares are not supported.</li>
+</ul>
+<blockquote><p><strong>NOTE</strong>: In this example, the Archive Server and SQL Server are on the same system.  If they are on separate systems, please see <a href="https://www.javelin-tech.com/blog/?p=40089">part 2 of this article</a></p></blockquote>
+<h3>Step 1 – Install Windows Search</h3>
+<ul>
+<li>Server Manager &gt; Manage &gt; Add Roles and Features</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40054" style="width: 421px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Add-Roles-and-Features.png"><img alt="Add Roles and Features" aria-describedby="caption-attachment-40054" height="222" src="/assets/images/Add-Roles-and-Features.png" title="" width="411"/><p class="wp-caption-text" id="caption-attachment-40054"><noscript><img alt="Add Roles and Features" height="222" src="/assets/images/Add-Roles-and-Features.png" title="" width="411"/></noscript></p></a> Add Roles and Features</div>
+<ul>
+<li>Features &gt; Select Windows Search Service &gt; Next
+<ul>
+<li>Then click Install</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40055" style="width: 796px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Install-Windows-Search-Service.png"><img alt="Windows Search Service" aria-describedby="caption-attachment-40055" height="560" src="/assets/images/Install-Windows-Search-Service.png" title="" width="786"/><p class="wp-caption-text" id="caption-attachment-40055"><noscript><img alt="Windows Search Service" height="560" sizes="(max-width: 786px) 100vw, 786px" src="/assets/images/Install-Windows-Search-Service.png" title="" width="786"/></noscript></p></a> Windows Search Service</div>
+<ul>
+<li>Confirm via services that the Windows Search Service is running, if not start it;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40060" style="width: 889px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Start-Windows-Search.png"><img alt="" aria-describedby="caption-attachment-40060" height="470" src="/assets/images/Start-Windows-Search.png" title="" width="879"/><p class="wp-caption-text" id="caption-attachment-40060"><noscript><img alt="" height="470" sizes="(max-width: 879px) 100vw, 879px" src="/assets/images/Start-Windows-Search.png" title="" width="879"/></noscript></p></a> Confirm and Start Service</div>
+<h3>Step 2 – Configure Windows Search to index the vault archives folder</h3>
+<ul>
+<li>Control Panel &gt; Indexing Options</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40056" style="width: 645px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Indexing-Options.png"><img alt="Indexing Options" aria-describedby="caption-attachment-40056" height="324" src="/assets/images/Indexing-Options.png" title="" width="635"/><p class="wp-caption-text" id="caption-attachment-40056"><noscript><img alt="Indexing Options" height="324" sizes="(max-width: 635px) 100vw, 635px" src="/assets/images/Indexing-Options.png" title="" width="635"/></noscript></p></a> Indexing Options</div>
+<ul>
+<li>Modify &gt; Add the archive folder location including all of its subfolders &gt; Ok</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40061" style="width: 700px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Index-Archive-Folder.png"><img alt="Add the archive folder location including all of its subfolders" aria-describedby="caption-attachment-40061" height="683" src="/assets/images/Index-Archive-Folder.png" title="" width="690"/><p class="wp-caption-text" id="caption-attachment-40061"><noscript><img alt="Add the archive folder location including all of its subfolders" height="683" sizes="(max-width: 690px) 100vw, 690px" src="/assets/images/Index-Archive-Folder.png" title="" width="690"/></noscript></p></a> Add the archive folder location including all of its subfolders</div>
+<h3>Step 3 – Configure the vault to use Windows Search for indexing</h3>
+<ul>
+<li>Administration Tool &gt; Indexing
+<ul>
+<li>Check Index File Vault Archives</li>
+<li>Ensure Windows Search is selected for the Indexing Method</li>
+<li>Select the Archive Path &gt; Edit</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40084" style="width: 855px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Enable-indexing-within-the-vault.png"><img alt="Configure the vault to use Windows Search for indexing" aria-describedby="caption-attachment-40084" height="628" src="/assets/images/Enable-indexing-within-the-vault.png" title="" width="845"/><p class="wp-caption-text" id="caption-attachment-40084"><noscript><img alt="Configure the vault to use Windows Search for indexing" height="628" sizes="(max-width: 845px) 100vw, 845px" src="/assets/images/Enable-indexing-within-the-vault.png" title="" width="845"/></noscript></p></a> Configure the vault to use Windows Search for indexing</div>
+<ul>
+<li>Browse and add the archive path for the SQL Server &gt; Hit Ok and close both dialogs</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40085" style="width: 395px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Enter-archive-path.png"><img alt="Add the archive path for the SQL Server" aria-describedby="caption-attachment-40085" height="399" src="/assets/images/Enter-archive-path.png" title="" width="385"/><p class="wp-caption-text" id="caption-attachment-40085"><noscript><img alt="Add the archive path for the SQL Server" height="399" src="/assets/images/Enter-archive-path.png" title="" width="385"/></noscript></p></a> Add the archive path for the SQL Server</div>
+<h3>Step 4 – Complete</h3>
+<ul>
+<li>We should now be able to search the content of files within the vault via:
+<ul>
+<li>Complete Search Card &gt; Content Tab
+<ul>
+<li>Search in Content</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_40094" style="width: 1012px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/01/Succesful-Content-Search.png"><img alt="Search in Content" aria-describedby="caption-attachment-40094" height="576" src="/assets/images/Succesful-Content-Search.png" title="" width="1002"/><p class="wp-caption-text" id="caption-attachment-40094"><noscript><img alt="Search in Content" height="576" sizes="(max-width: 1002px) 100vw, 1002px" src="/assets/images/Succesful-Content-Search.png" title="" width="1002"/></noscript></p></a> Search in Content</div>
+<h4>Wrap up…</h4>
+<p>By default the Windows Search Service supports indexing the following files types;</p>
+<ul>
+<li>Microsoft Office files</li>
+<li>HTML files</li>
+<li>MIME messages</li>
+<li>plain-text files</li>
+</ul>
+<p>To learn how to include PDFs and for SOLIDWORKS files please <a href="https://www.javelin-tech.com/blog/subscribe/">subscribe to our blog for future articles</a>.</p>
+<blockquote><p><strong>NOTE</strong>: In this example, the Archive Server and SQL Server are on the same system.  If they are on separate systems, please see <a href="https://www.javelin-tech.com/blog/?p=40089">part 2 of this article</a></p></blockquote>

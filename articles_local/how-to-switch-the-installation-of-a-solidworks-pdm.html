@@ -1,0 +1,23 @@
+<p>Part of the <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-client-installation/">SOLIDWORKS PDM Standard Client installation</a> is to select the SOLIDWORKS PDM Standard Client. But you can continue the installation selecting the SOLIDWORKS PDM Professional Client instead. In this post we will cover how to switch SOLIDWORKS PDM Client Installation from a Professional Client to a Standard Client.</p>
+<p><strong>If you selected the wrong SOLIDWORKS PDM client type during the installation</strong>, you will come across many issues when trying to use SOLIDWORKS PDM. For example:</p>
+<ul>
+<li>Slow performance when opening folders in the PDM vault,</li>
+<li>Slow performance Check-in/out files,</li>
+<li>Slow performance when using the Search Tool, etc.</li>
+</ul>
+<h2>Confirm the type of SOLIDWORKS PDM License</h2>
+<p>Open <strong>SOLIDWORKS SolidNetWork License Manager Client,</strong> in the <strong>License Usage</strong> tab, select the correct license under <strong>Product</strong>:</p>
+<div class="wp-caption aligncenter" id="attachment_38346" style="width: 976px"><img alt="Type of SOLIDWORKS PDM Product" aria-describedby="caption-attachment-38346" height="614" src="/assets/images/Product.png" title="" width="966"/><p class="wp-caption-text" id="caption-attachment-38346"><noscript><img alt="Type of SOLIDWORKS PDM Product" height="614" sizes="(max-width: 966px) 100vw, 966px" src="/assets/images/Product.png" title="" width="966"/></noscript> Type of SOLIDWORKS PDM Product</p></div>
+<p>In this case, we have SOLIDWORKS PDM Standard CAD Editor</p>
+<p>Go to Start menu and type admin to open <strong>Administration</strong> (SOLIDWORKS PDM Administration)</p>
+<p>Click on <strong>Help</strong> and <strong>About SOLIDWORKS PDM Administration…</strong></p>
+<div class="wp-caption aligncenter" id="attachment_38337" style="width: 808px"><img alt="About SOLIDWORKS PDM Administration" aria-describedby="caption-attachment-38337" height="404" src="/assets/images/about-PDM.png" title="" width="798"/><p class="wp-caption-text" id="caption-attachment-38337"><noscript><img alt="About SOLIDWORKS PDM Administration" height="404" sizes="(max-width: 798px) 100vw, 798px" src="/assets/images/about-PDM.png" title="" width="798"/></noscript> About SOLIDWORKS PDM Administration</p></div>
+<p>Review the options in the <strong>Client Type</strong></p>
+<div class="wp-caption aligncenter" id="attachment_38349" style="width: 609px"><img alt="SOLIDWORKS PDM Professional Client Type" aria-describedby="caption-attachment-38349" height="437" src="/assets/images/PDM-Pro.png" title="" width="599"/><p class="wp-caption-text" id="caption-attachment-38349"><noscript><img alt="SOLIDWORKS PDM Professional Client Type" height="437" src="/assets/images/PDM-Pro.png" title="" width="599"/></noscript> SOLIDWORKS PDM Professional Client Type</p></div>
+<p>We have <strong>SOLIDWORKS PDM Professional CAD Editor &amp; Web</strong> client installed but the available license is <strong>SOLIDWORKS PDM Standard CAD Editor</strong></p>
+<p>To Switch the Client Type, Launch the <strong>Windows Registry Editor</strong>, (In Windows 7, or Windows 10 go to the Start menu and type: regedit)</p>
+<p>In the Registry Editor expand <strong>HKEY_LOCAL_MACHINE</strong> then<strong> SOFTWARE</strong> then<strong> SolidWorks</strong> then<strong> Applications</strong> then<strong> PDMWorks Enterprise </strong></p>
+<div class="wp-caption aligncenter" id="attachment_38344" style="width: 1189px"><img alt="Windows Registry Editor" aria-describedby="caption-attachment-38344" height="365" src="/assets/images/Updated-PDM-Type-1.png" title="" width="1179"/><p class="wp-caption-text" id="caption-attachment-38344"><noscript><img alt="Windows Registry Editor" height="365" sizes="(max-width: 1179px) 100vw, 1179px" src="/assets/images/Updated-PDM-Type-1.png" title="" width="1179"/></noscript> Windows Registry Editor</p></div>
+<p>Double click on <strong>PDMType</strong>, change <strong>Value data</strong>: <strong>1</strong> to <strong>0</strong>, press <strong>OK </strong></p>
+<div class="wp-caption aligncenter" id="attachment_38348" style="width: 516px"><img alt="Edit PDMType String" aria-describedby="caption-attachment-38348" height="207" src="/assets/images/Edit-Vaule.png" title="" width="506"/><p class="wp-caption-text" id="caption-attachment-38348"><noscript><img alt="Edit PDMType String" height="207" src="/assets/images/Edit-Vaule.png" title="" width="506"/></noscript> Edit PDMType String</p></div>
+<blockquote><p><strong>Note</strong>: SOLIDWORKS PDM Standard (PDMType Value = 0) &amp; SOLIDWORKS PDM Professional (PDMType Value = 1)</p></blockquote>

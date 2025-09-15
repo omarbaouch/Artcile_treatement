@@ -1,0 +1,43 @@
+<p>SQL queries are the bread and butter of information gathering from SQL databases. In this blog, we will learn how to access a SQL database and run a SQL Query.</p>
+<h3>Access the SOLIDWORKS PDM SQL Database</h3>
+<p>The first step is to access SQL Server Management Studio (SSMS), the main application for configuring, managing, and administering SQL server components. This application will be running on your PDM database server.</p>
+<div class="wp-caption aligncenter" id="attachment_63908" style="width: 358px"><img alt="" aria-describedby="caption-attachment-63908" height="546" src="/assets/images/SQL-1.png" title="" width="348"/><p class="wp-caption-text" id="caption-attachment-63908"><noscript><img alt="" height="546" src="/assets/images/SQL-1.png" title="" width="348"/></noscript> SQL Server Management Studio</p></div>
+<p>When opening SSMS you will be greeted by a server connection pop-up. <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/" rel="noopener" target="_blank">PDM</a> typically uses the System Administrator (sa) account as its main connection point to SQL, but the SA account is not required to run database queries, a Windows account will also work. Either option can be chosen from the <strong>Authentication</strong> drop-down.</p>
+<div class="wp-caption aligncenter" id="attachment_63909" style="width: 963px"><img alt="" aria-describedby="caption-attachment-63909" height="314" src="/assets/images/SQL-2.png" title="" width="953"/><p class="wp-caption-text" id="caption-attachment-63909"><noscript><img alt="" height="314" sizes="(max-width: 953px) 100vw, 953px" src="/assets/images/SQL-2.png" title="" width="953"/></noscript> Connecting To the SQL Database</p></div>
+<h3>Running a SOLIDWORKS PDM SQL Query</h3>
+<p>Once a connection has been established you will be presented with the Object Explorer, which will include each vault as a distinct database. Selecting New Query or right-clicking a vault and selecting New Query will open a new window:</p>
+<div class="wp-caption aligncenter" id="attachment_63911" style="width: 792px"><img alt="" aria-describedby="caption-attachment-63911" height="376" src="/assets/images/SQL-3-1.png" title="" width="782"/><p class="wp-caption-text" id="caption-attachment-63911"><noscript><img alt="" height="376" sizes="(max-width: 782px) 100vw, 782px" src="/assets/images/SQL-3-1.png" title="" width="782"/></noscript> Starting a New Query</p></div>
+<p>Paste your query here (double clicking on a .sql file will automatically open the query view), select the vault, and <strong>Execute</strong>.</p>
+<div class="wp-caption aligncenter" id="attachment_63917" style="width: 1012px"><img alt="" aria-describedby="caption-attachment-63917" height="352" src="/assets/images/SQL-4.png" title="" width="1002"/><p class="wp-caption-text" id="caption-attachment-63917"><noscript><img alt="" height="352" sizes="(max-width: 1002px) 100vw, 1002px" src="/assets/images/SQL-4.png" title="" width="1002"/></noscript> Sample Query</p></div>
+<p>The query in the above picture can be used as a sample, it will list all user information details such as email address, phone number, address, and presence note.</p>
+<pre>--Query to show user details example--
+
+select u.Username,
+
+isnull (u.FullName , '') as [Full Name],
+
+isnull (u.Email,'') as [Email],
+
+isnull ((select value from settings where userid = u.UserID and varID =34), '') as [Phone],
+
+isnull ((select value from settings where userid = u.UserID and varID =35), '') as [Cellphone],
+
+isnull ((select value from settings where userid = u.UserID and VarID =36), '') as [Presence Note],
+
+isnull ((select value from settings where userid = u.UserID and varID =37), '') as [Website 1],
+
+isnull ((select value from settings where userid = u.UserID and varID =38), '') as [Website 2],
+
+isnull ((select value from settings where userid = u.UserID and varID =39), '') as [Website 3],
+
+isnull ((select value from settings where userid = u.UserID and varID =40), '') as [Website 4]
+
+from Users u where u.UserID != 1 and u.Enabled = 1
+
+and u.Username like N'admin'
+
+order by u.Username
+
+</pre>
+<h3>Learn more about SOLIDWORKS PDM and SQL Query</h3>
+<p>Take a <a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">SOLIDWORKS PDM training course</a> live online and learn more about data management from the experts at Javelin.</p>

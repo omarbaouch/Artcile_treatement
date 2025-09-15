@@ -1,0 +1,81 @@
+<p>The PDM File Version Upgrade Tool streamlines the process of saving SOLIDWORKS files in the newest version of the software by automating the checkout, upgrade, and check-in of files within a <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> vault.</p>
+<p>The <a href="https://www.javelin-tech.com/blog/2023/07/solidworks-task-scheduler-streamline-your-design-process/">SOLIDWORKS Task Scheduler</a> is recommended to upgrade any SOLIDWORKS files outside of the PDM vault. Non-CAD file types (CAD files being sldprt, sldasm, slddrw) such as SOLIDWORKS template files, must be updated manually.</p>
+<p>Ensure a backup of the PDM file vault database is captured before upgrading. The machine or machines chosen for the upgrade process should be capable of opening the largest assembly files in the vault. All files should be checked in to avoid missing any files in the upgrade. Close out of all SOLIDWORKS processes that may be open.</p>
+<h2>Installing the File Version Upgrade Tool</h2>
+<p>This application is not installed by default when installing the PDM client. The File Version Upgrade.exe installation file is located in the same folder location where you downloaded SOLIDWORKS, typically under <code>SWPDMClient\Support\File Version Upgrade</code>.</p>
+<p>The default download location is <code>C:\Users\Documents\SOLIDWORKS Downloads\SOLIDWORKS 20XX SPX\SWPDMClient\Support\File Version Upgrade</code>.</p>
+<p>Run the File Version Upgrade.exe to launch the InstallShield Wizard and follow the prompts to complete the installation. When the Wizard is done, you can now launch the application by searching for the “File Version Upgrade Tool”.</p>
+<h3>Using the File Version Upgrade Tool</h3>
+<p>These steps are a general guide to the tool’s functionality.</p>
+<ol>
+<li><strong>Initiate the Upgrade Process</strong>
+<ul>
+<li>On the Welcome screen, select “Initiate a new upgrade process (Coordinator Workstation)” and click Next.
+<p><div class="wp-caption aligncenter" id="attachment_64999" style="width: 573px"><img alt="File Version Upgrade Tool - Welcome Page" aria-describedby="caption-attachment-64999" height="600" src="/assets/images/WelcomePage_FVUT-563x600.png" title="" width="563"/><p class="wp-caption-text" id="caption-attachment-64999"><noscript><img alt="File Version Upgrade Tool - Welcome Page" height="600" sizes="(max-width: 563px) 100vw, 563px" src="/assets/images/WelcomePage_FVUT-563x600.png" title="" width="563"/></noscript> File Version Upgrade Tool – Welcome Page</p></div></p></li>
+</ul>
+</li>
+<li><strong>Select Version</strong>
+<ul>
+<li>Choose the SOLIDWORKS version for the upgrade and click Next.<img alt="" height="600" src="/assets/images/SelectVersion_FVUT-530x600.png" title="" width="530"/><noscript><img alt="" height="600" sizes="(max-width: 530px) 100vw, 530px" src="/assets/images/SelectVersion_FVUT-530x600.png" title="" width="530"/></noscript></li>
+</ul>
+</li>
+<li><strong>Select Vault</strong>
+<ul>
+<li>Select the appropriate vault and click Next. You may encounter a PDM login screen at this step.<img alt="" height="455" src="/assets/images/SelectVault_FVUT-600x455.png" title="" width="600"/><noscript><img alt="" height="455" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SelectVault_FVUT-600x455.png" title="" width="600"/></noscript></li>
+</ul>
+</li>
+<li><strong>Search Files to Upgrade</strong>
+<ul>
+<li>Input the search criteria for SOLIDWORKS file types, folders, states, or specific variable values. Leave defaults if no additional filters are needed. Click Next.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" height="407" src="/assets/images/SearchFilesToUpgrade_FVUT-600x407.png" title="" width="600"/><noscript><img alt="" height="407" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SearchFilesToUpgrade_FVUT-600x407.png" title="" width="600"/></noscript></p>
+<ol>
+<li><strong>Review Search Results</strong>
+<ul>
+<li>A list of files meeting the search criteria will be displayed. Uncheck any files you do not want to include in the upgrade. Click Next.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" height="600" src="/assets/images/SearchResults_FVUT-529x600.png" title="" width="529"/><noscript><img alt="" height="600" sizes="(max-width: 529px) 100vw, 529px" src="/assets/images/SearchResults_FVUT-529x600.png" title="" width="529"/></noscript></p>
+<ol>
+<li><strong>Version Settings</strong>
+<ul>
+<li>Choose between creating new versions of files or overwriting existing versions. Each option has additional decisions regarding file references and revisions.
+<ul>
+<li><strong>Creating New Versions of Files:</strong> When you choose to create new versions of files, you’ll need to make additional decisions about how to manage file references and revisions.</li>
+<li><strong>Overwriting Existing Versions of Files:</strong> Opting to overwrite existing versions of files can save space in the archive. This option could add extra time to the upgrade process.<img alt="" height="458" src="/assets/images/VersionSettings_FVUT-1-600x458.png" title="" width="600"/><noscript><img alt="" height="458" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/VersionSettings_FVUT-1-600x458.png" title="" width="600"/></noscript></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Upgrade Settings</strong>
+<ul>
+<li>Add a comment for the history and configure additional settings, including a log file location. Click Next when done.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="" height="600" src="/assets/images/UpgradeSettingsFVUT-529x600.png" title="" width="529"/><noscript><img alt="" height="600" sizes="(max-width: 529px) 100vw, 529px" src="/assets/images/UpgradeSettingsFVUT-529x600.png" title="" width="529"/></noscript></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Consider running the upgrade in multiple work instruction files if your vault contains thousands of files. Select a shared location for work instruction files if running in batches. Optionally, notify users of success/failures using PDM messaging settings. Click Next.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" height="438" src="/assets/images/UpgradeSettingsFVUT2-600x438.png" title="" width="600"/><noscript><img alt="" height="438" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/UpgradeSettingsFVUT2-600x438.png" title="" width="600"/></noscript></p>
+<ol>
+<li><strong>Ready to Upgrade Files</strong>
+<ul>
+<li>Review the summary of files and batches to run. Start the upgrade process by selecting Continue or click Cancel to run the work instructions files individually later. It is best practice to run the upgrade outside of normal PDM working hours to avoid performance issues.</li>
+</ul>
+</li>
+</ol>
+<p>After clicking Continue, you will see the progress of the upgrade in real-time. Once complete, you will see how many files were successfully upgraded.</p>
+<p><img alt="" height="600" src="/assets/images/ReadyToUpgradeFilesFVUT-529x600.png" title="" width="529"/><noscript><img alt="" height="600" sizes="(max-width: 529px) 100vw, 529px" src="/assets/images/ReadyToUpgradeFilesFVUT-529x600.png" title="" width="529"/></noscript></p>
+<h4>Using Work Instruction Files</h4>
+<p>With Work Instruction Files, you can run the upgrade tool concurrently on several workstations to reduce the upgrade time. To run a saved work instruction (.wrkins), select “Participate in an upgrade process (Agent Workstation)” on the Welcome screen and click Next.</p>
+<p>Type or browse to the shared location for work instructions and select the work instruction file from the dropdown list. Click Next when done.</p>
+<p>The Work Instruction File Summary will display, and you can click Next when done. On the Ready to Upgrade screen, click Continue to start the upgrade.</p>
+<p>You can also refer to this SolidWorks Help page for these steps on the Work Instruction Files – <a href="https://help.solidworks.com/2023/English/EnterprisePDM/UpgradeUtility/t_creating_work_instruction_files.htm" rel="nofollow noopener" target="_blank">Creating and Using Work Instruction Files – 2023 – SOLIDWORKS PDM Help</a></p>

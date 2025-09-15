@@ -1,0 +1,63 @@
+<p>Renaming files inside a SOLIDWORKS PDM vault can be intimidating, especially when they’re linked to assemblies, drawings, or other referenced files. Luckily, the Move Tree function in <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/">SOLIDWORKS PDM</a> offers a safe and efficient way to rename and/or relocate files without breaking references.</p>
+<p>In this guide, we’ll explore how to use the Move Tree function to:</p>
+<ul>
+<li>Apply structured renaming using Transform operations like Prefix, Suffix, and Replace.</li>
+<li>Manually rename files by editing the Target File Name.</li>
+<li>Moving files to a different folder while preserving references.</li>
+</ul>
+<h2 style="text-align: left;">What Is Move Tree in SOLIDWORKS PDM?</h2>
+<p>The Move Tree command allows users to move or rename files while maintaining all associated references, something that can’t be done safely with basic file system operations like drag-and-drop or <em>Right-Click&gt;Rename.</em></p>
+<p>To access Move Tree:</p>
+<ol>
+<li>Select a file or multiple files inside the PDM Vault.</li>
+<li>Choose <em>Tools&gt;Move</em> Tree from the context menu.</li>
+</ol>
+<p><img alt="" height="365" src="/assets/images/Move-tree-1.png" title="" width="775"/><noscript><img alt="" height="365" sizes="(max-width: 775px) 100vw, 775px" src="/assets/images/Move-tree-1.png" title="" width="775"/></noscript></p>
+<h2 style="text-align: left;">Automatically Renaming Files in SOLIDWORKS PDM</h2>
+<p style="text-align: left;">The transform panel in the Move Tree dialog lets you batch rename files using consistent naming rules. You can perform these actions on a single file, multiple selected files, or all files at one time.</p>
+<h3>How to Add a Prefix</h3>
+<p>By adding a prefix using the SOLIDWORKS PDM Move Tree command, you can append a custom string to the beginning of each file name. For example, you can turn a file name from <code data-end="1639" data-start="1623">Path.SLDPRT</code> to <code data-end="1663" data-start="1642">REV1_Path.SLDPRT</code> programmatically.</p>
+<ol>
+<li>Select the file, click <em>Add Prefix,</em> then enter the prefix into the text box.
+<p><div class="wp-caption aligncenter" id="attachment_70777" style="width: 610px"><img alt="Adding a file name prefix in the Move Tree command" aria-describedby="caption-attachment-70777" height="339" src="/assets/images/Move-tree-prefix-2-600x339.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70777"><noscript><img alt="Adding a file name prefix in the Move Tree command" height="339" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-prefix-2-600x339.png" title="" width="600"/></noscript> Adding a file name prefix in the Move Tree command</p></div></p></li>
+<li>Click <em>OK</em>.</li>
+<li>Confirm the Target File Name is updated with the new file name with the prefix. Then click <em>Move</em>.
+<p><div class="wp-caption aligncenter" id="attachment_70779" style="width: 610px"><img alt="The new file name showing the prefix" aria-describedby="caption-attachment-70779" height="340" src="/assets/images/Move-tree-prefix-4-600x340.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70779"><noscript><img alt="The new file name showing the prefix" height="340" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-prefix-4-600x340.png" title="" width="600"/></noscript> The new file name showing the prefix</p></div></p></li>
+</ol>
+<h3>How to Add a Suffix</h3>
+<p>By adding a suffix using the SOLIDWORKS PDM Move Tree command, you can append a custom string to the end of each file name. For example, you can turn a file name from <code data-end="1639" data-start="1623">Path.SLDPRT</code> to <code data-end="1663" data-start="1642">Path_Rev1.SLDPRT</code> programmatically.</p>
+<ol>
+<li>Select the file, click <em>Add Suffix,</em> then enter the suffix into the text box.
+<p><div class="wp-caption aligncenter" id="attachment_70782" style="width: 610px"><img alt="Adding a file name suffix in the Move Tree command" aria-describedby="caption-attachment-70782" height="340" src="/assets/images/Move-tree-suffix-5-600x340.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70782"><noscript><img alt="Adding a file name suffix in the Move Tree command" height="340" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-suffix-5-600x340.png" title="" width="600"/></noscript> Adding a file name suffix in the Move Tree command</p></div></p></li>
+<li>Click <em>OK</em>.</li>
+<li>Confirm the Target File Name is updated with the new file name with the suffix. Then click <em>Move</em>.
+<p><div class="wp-caption aligncenter" id="attachment_70784" style="width: 610px"><img alt="The new file name showing the suffix" aria-describedby="caption-attachment-70784" height="339" src="/assets/images/Move-tree-suffix-7-600x339.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70784"><noscript><img alt="The new file name showing the suffix" height="339" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-suffix-7-600x339.png" title="" width="600"/></noscript> The new file name showing the suffix</p></div></p></li>
+</ol>
+<h3>How to Replace Text</h3>
+<p>By using the Replace function in the SOLIDWORKS PDM Move Tree command, you can find and replace instances of a string of text within a file name. For example, you can turn a file name from <code data-end="1639" data-start="1623">File Name.SLDPRT</code> to <code data-end="1663" data-start="1642">File Name_TEST.SLDPRT</code> programmatically.</p>
+<ol>
+<li>Click <em>Replace</em>, then enter the desired text in “Find what” and “Replace with” text boxes.
+<p><div class="wp-caption aligncenter" id="attachment_70785" style="width: 610px"><img alt="Setting up the find and replace boxes" aria-describedby="caption-attachment-70785" height="338" src="/assets/images/Move-tree-replace-8-600x338.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70785"><noscript><img alt="Setting up the find and replace boxes" height="338" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-replace-8-600x338.png" title="" width="600"/></noscript> Setting up the find and replace boxes</p></div></p></li>
+<li>Click OK.</li>
+<li>Confirm the file name has been updated with the replaced text. Then click Move.<strong><strong><br/>
+</strong></strong>
+<p><div class="wp-caption aligncenter" id="attachment_70787" style="width: 610px"><img alt="Confirming the files have been renamed" aria-describedby="caption-attachment-70787" height="338" src="/assets/images/Move-tree-replace-10-600x338.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70787"><noscript><img alt="Confirming the files have been renamed" height="338" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-replace-10-600x338.png" title="" width="600"/></noscript> Confirming the files have been renamed</p></div></p></li>
+</ol>
+<h2>Manually Editing the Target File Name</h2>
+<p>For more fine control or for situations where the automated methods won’t work, you can manually enter a new file name in the SOLIDWORKS PDM Move Tree command.</p>
+<p>To manually edit the target file name:</p>
+<ol>
+<li>Launch the Move Tree command.</li>
+<li>Select the <em>Target File Name </em>of the file(s) you want to rename. Make the desired changes to the file name.
+<p><div class="wp-caption aligncenter" id="attachment_70790" style="width: 610px"><img alt="Manually editing the final file name" aria-describedby="caption-attachment-70790" height="339" src="/assets/images/Move-tree-target-12-600x339.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-70790"><noscript><img alt="Manually editing the final file name" height="339" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Move-tree-target-12-600x339.png" title="" width="600"/></noscript> Manually editing the final file name</p></div></p></li>
+<li>Confirm the changes in the <em>Target File Name</em> cell of the file (s) and click <em>Move</em> to finish the operation.</li>
+</ol>
+<h2 style="text-align: left;">Moving Files to a New Folder</h2>
+<p>In addition to renaming, you can also move files to a different folder in your PDM Vault without breaking any references. Follow the instructions provided in the article <a href="https://www.javelin-tech.com/blog/2016/07/solidworks-pdm-professional-move-tree/" rel="noopener" target="_blank">How to use the SOLIDWORKS PDM Professional Move Tree Feature</a>.</p>
+<h2>Considerations When Using the Move Tree Command</h2>
+<ul>
+<li><strong>Permissions:</strong> Ensure you have the appropriate permissions to rename and move files.</li>
+<li><strong>References:</strong> Any references to renamed or moved files are automatically updated by PDM if the dependent files are included in the operation.</li>
+</ul>
+<p>The Move Tree function is your go-to tool for safe and organized file renaming in SOLIDWORKS PDM. Whether you’re cleaning up file names, applying a new naming convention, or restructuring folders, Move Tree ensures that your references remain intact and your data stays reliable.</p>
+<p style="text-align: center;"><strong><a href="https://trimech.com/administering-solidworks-pdm-professional-training-course/" rel="nofollow noopener" target="_blank">To learn about additional SOLIDWORKS PDM tools, register for an upcoming training class here.</a></strong></p>

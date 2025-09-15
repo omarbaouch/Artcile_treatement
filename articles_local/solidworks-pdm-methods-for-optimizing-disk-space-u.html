@@ -1,0 +1,98 @@
+<p><img alt="Managing archive server disk space" height="666" src="/assets/images/epdm-windows-explorer.jpg" title="" width="1000"/><noscript><img alt="Managing archive server disk space" height="666" sizes="(max-width: 1000px) 100vw, 1000px" src="/assets/images/epdm-windows-explorer.jpg" title="" width="1000"/></noscript></p>
+<p>There are a few built in options provided by SOLIDWORKS PDM for managing archive server disk space and reducing folder size used:</p>
+<ul>
+<li><strong>Cleanup – Remove deleted files</strong>
+<ul>
+<li>Deleted files and folders are not available from the vault but still exist within the archive.  To completely remove a file or folder it must be <em><strong>Destroyed.  </strong></em>You can destroy files through the folder properties <em>deleted items </em>tab: If you have access rights, you can destroy (permanently remove) files in this list – Right-click and select <strong>Destroy</strong>.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Distribute the archive across multiple drives</strong>
+<ul>
+<li>More on this can be found <a href="https://www.javelin-tech.com/blog/2014/12/solidworks-pdm-relocate-tool/">here</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Activate vault compression</strong></li>
+</ul>
+<h6>Note:  <span style="color: #ff6600; font-size: 16px; font-style: italic;">The use of the compression option is no longer recommended, as it has been determined to provide minimal benefits in terms of disk space recovery. In most cases, the amount of space reclaimed through compression is negligible, making this method ineffective for optimizing storage. </span></h6>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>By default, all file versions in an archive are stored uncompressed on the archive server. Enabling compression on all file versions older than the most recent version can save some space within the archive. <em>Note: The most recent version is always stored uncompressed for optimal performance during transfers between client and server.  </em>To enable archive server compression, see Chapter 3 – Archive Compression and Cleanup in the administration guide.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Cold Storage</strong>: With a cold storage schema, you can move (to secondary storage) or delete obsolete versions</li>
+</ul>
+<h6>Note: The Restore option in the SOLIDWORKS PDM File Explorer ‘Get Version’ menu allows you to retrieve files from cold storage. However, please note that if cold storage was utilized to delete a file version, that version cannot be restored to the archive server.</h6>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li><strong><span style="text-decoration: underline;"><em>(STEPS AS MENTIONED IN SOLIDWORKS ADMINSTRATIONS GUIDE)</em></span> To create a cold storage schema:</strong><br/>
+1. In the left pane of the Administration tool, right-click <strong>Cold Storage Schemas</strong> and<br/>
+select <strong>New Cold Storage Schema</strong>.</li>
+<li>2. In the Cold Storage Schema dialog box, enter a <strong>Schema name</strong>.</li>
+<li>3. Select the archive server on which to run the schema.<br/>
+If the vault is replicated to multiple archive servers, they are listed.</li>
+<li>4. Under <strong>Cold storage method:</strong><br/>
+<strong>a)</strong> Choose whether to delete or move older versions from the file archives:
+<h6>Note: The deletion cannot be undone. Ensure that you back up the archive before<br/>
+deletion.</h6>
+<p>• <strong>Delete archive files.</strong> Deletes files in the vault and records the deletion in the<br/>
+vault history.<br/>
+• <strong>Move archive files to folder.</strong> Moves older versions of files outside the archive.<br/>
+<strong>b)</strong> Enter a folder name by combining path components, for example, c:\ColdStore,<br/>
+and variable components available when you click &gt;.<br/>
+For example: c:\ColdStore\Year (2) Month (2) Counter-04<br/>
+When the cold storage schema triggers, the folder path specified is used.<br/>
+<strong>c)</strong> Enter a media name, which is a subdirectory in which to move instances of cold<br/>
+storage. Use path components and variable components available when you click<br/>
+&gt;.</p></li>
+<li>5. Under <strong>Versions,</strong> select the number of versions to keep on the server for each file<br/>
+archive. For example, enter <strong>5</strong> to keep the five most recent versions of a file and to<br/>
+discard or move older versions.</li>
+<li>6. Select the folders for the cold storage schema. Subfolders are always processed, so<br/>
+you need not select them. By default, the entire vault is selected. Use the<strong> Add</strong> and<br/>
+<strong>Remove</strong> buttons to specify folders.</li>
+<li>7. Set up the schedule, either by selecting an interval from<strong> Predefined interval</strong> or by<br/>
+selecting <strong>User defined schedule</strong>.<br/>
+To specify a user-defined schedule, enter a value in <strong>Interval string</strong>.<br/>
+The schedule has the format: Minute Hour Weekday where:<br/>
+<img alt="" height="407" src="/assets/images/Coldstorage-time-interval-600x407.jpg" title="" width="600"/><noscript><img alt="" height="407" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/Coldstorage-time-interval-600x407.jpg" title="" width="600"/></noscript><br/>
+The time is local to the server.</li>
+<li>8. Click <strong>OK</strong> to save the schema.</li>
+<li>9. Stop and restart the archive server service:<br/>
+<strong>a)</strong> From the Control Panel, click <strong>Systems and Security &gt; Administrative Tools</strong><br/>
+<strong>&gt; Services.</strong><br/>
+<strong>b)</strong> In the Services dialog box, right click <strong>SOLIDWORKS PDM Archive Server</strong> and<br/>
+click <strong>Stop.</strong><br/>
+<strong>c)</strong> Right-click <strong>SOLIDWORKS PDM Archive Server</strong> again and click <strong>Start</strong>.</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<h2>What is the recommended order of execution?</h2>
+<p>The sequence below is recommended by SOLIDWORKS as the logical order of execution for good system maintenance:</p>
+<ol>
+<li>Run daily file backups across all servers of the file vault archives
+<ul>
+<li>More information can be found <a href="https://www.javelin-tech.com/blog/2011/06/epdm-are-you-backing-up-your-critical-data-heres-how-you-can-be-better-prepared/">here</a></li>
+</ul>
+</li>
+<li>Run MS SQL Database backups of the vault databases
+<ul>
+<li>More information can be found <a href="https://www.javelin-tech.com/blog/2015/06/setting-microsoft-sql-maintenance-plan-video/">here</a></li>
+</ul>
+</li>
+<li>Backup the archive server settings and logins</li>
+<li>Run Cold Storage schemas to move obsolete file versions to secondary storage</li>
+<li>Run Compression the service to reduce the file size of older file versions</li>
+<li>Run Replication to synchronize the archives</li>
+<li>Run the cleanup procedure of each archive vault to remove orphaned files</li>
+</ol>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Take a <a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener" target="_blank">SOLIDWORKS PDM training course</a> either online, in a local classroom, or ask us about delivering customized PDM training in your office.</p>

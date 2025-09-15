@@ -1,0 +1,46 @@
+<p data-end="173" data-start="136"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">When creating a new vault view in SOLIDWORKS PDM, you may encounter the confusing message:</span></p>
+<blockquote data-end="214" data-start="175">
+<p data-end="214" data-start="177"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><strong data-end="33" data-is-last-node="" data-is-only-node="" data-start="0">Attached; Missing Information</strong></span></p>
+</blockquote>
+<p data-end="253" data-start="216"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">This typically indicates leftover or corrupt registry entries, or incomplete vault view files from a prior installation. Below is the structured method for <strong data-end="228" data-start="190">completely cleaning and recreating</strong> it to resolve the issue.</span></p>
+<div class="wp-caption aligncenter" id="attachment_13597" style="width: 432px"><img alt="EPDM error message" aria-describedby="caption-attachment-13597" height="150" src="/assets/images/error-message.png" title="" width="422"/><p class="wp-caption-text" id="caption-attachment-13597"><noscript><img alt="EPDM error message" height="150" sizes="(max-width: 422px) 100vw, 422px" src="/assets/images/error-message.png" title="" width="422"/></noscript> EPDM error message</p></div>
+<h2>Clean Registry &amp; Recreate a New Vault View:</h2>
+<h6><strong>NOTE:</strong> Always export a backup copy of the registry keys before deleting, <strong>caution should be taken when editing the registry</strong>, as changing or deleting the wrong key, can affect other programs, or the operating system. If you are not familiar with Windows Registry, please have someone who is, do this for you.</h6>
+<h3>Step 1: Remove Corrupt Registry Entries:</h3>
+<p data-end="1382" data-start="1343"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Close View Setup, then delete any vault-related keys at:</span></p>
+<ul data-end="1549" data-start="1384">
+<li data-end="1425" data-start="1384">
+<p data-end="1425" data-start="1386"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-end="81" data-is-last-node="" data-is-only-node="" data-start="0">HKLM\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VaultName]</code></span></p>
+</li>
+<li data-end="1467" data-start="1426">
+<p data-end="1467" data-start="1428"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-end="93" data-is-last-node="" data-is-only-node="" data-start="0">HKLM\SOFTWARE\Wow6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VaultName]</code></span></p>
+</li>
+<li data-end="1549" data-start="1468">
+<p data-end="1549" data-start="1470"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out"><code data-end="78" data-is-last-node="" data-is-only-node="" data-start="0">HKCU\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VaultName]</code></span></p>
+</li>
+</ul>
+<h3 data-end="1687" data-start="1635">Step 2: Delete/Re-Name the Local Vault Folder:</h3>
+<ul>
+<li data-end="1769" data-start="1689"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Remove any leftover empty or yellow folder located at the <strong data-end="71" data-start="58">ShellRoot</strong> path. If stubborn, delete hidden system files like <strong data-end="138" data-start="123">Desktop.ini</strong> first</span></li>
+</ul>
+<h3 data-end="1806" data-start="1771">Step 3: Run View Setup Again:</h3>
+<ol data-end="2100" data-start="1808">
+<li data-end="1849" data-start="1808">
+<p data-end="1849" data-start="1810"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Launch <strong data-end="21" data-start="7">View Setup</strong>.</span></p>
+</li>
+<li data-end="1891" data-start="1850">
+<p data-end="1891" data-start="1852"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Select your archive server (or manually add it).</span></p>
+<p><img alt="" height="397" src="/assets/images/Attached-Missing-1.png" title="" width="502"/><noscript><img alt="" height="397" src="/assets/images/Attached-Missing-1.png" title="" width="502"/></noscript></p></li>
+<li data-end="1933" data-start="1892">
+<p data-end="1933" data-start="1894"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Choose your vault.</span></p>
+<p><img alt="" height="398" src="/assets/images/Attached-Missing-2.png" title="" width="503"/><noscript><img alt="" height="398" src="/assets/images/Attached-Missing-2.png" title="" width="503"/></noscript></p></li>
+<li data-end="1975" data-start="1934">
+<p data-end="1975" data-start="1936"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Specify a clean view folder (ideally close to drive root to avoid path length issues) and c</span><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">hoose whether it’s user-specific or shared across all users.</span></p>
+<p><img alt="" height="394" src="/assets/images/Attached-Missing-3.png" title="" width="499"/><noscript><img alt="" height="394" src="/assets/images/Attached-Missing-3.png" title="" width="499"/></noscript></p></li>
+<li data-end="2100" data-start="2018">
+<p data-end="2100" data-start="2020"><span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">Complete the wizard. The “Attached; Missing Information” issue should no longer appear.</span></p>
+<p><img alt="" height="396" src="/assets/images/Attached-Missing-4.png" title="" width="498"/><noscript><img alt="" height="396" src="/assets/images/Attached-Missing-4.png" title="" width="498"/></noscript></p></li>
+</ol>
+<h4>Conclusion:</h4>
+<p>The <strong data-end="2857" data-start="2822">“Attached; Missing Information”</strong> error almost always stems from residual registry entries or leftover folder data. Cleaning those completely and reinstalling the view usually resolves the problem. If issues persist, coordinate with your IT or PDM administrator, there may be deeper server or permission problems at hand.</p>
+<p> </p>

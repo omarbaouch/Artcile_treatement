@@ -1,0 +1,88 @@
+<p>In this article, we are going to look at how to implement a SOLIDWORKS PDM Revision Numbering System, that incorporates both minor and major revisions.</p>
+<blockquote><p>Review our previous article for <a href="https://www.javelin-tech.com/blog/2017/04/solidworks-pdm-revision/" rel="noopener" target="_blank">a complete guide to increment a revision number via a workflow</a></p></blockquote>
+<h3>How to create a SOLIDWORKS PDM Revision Numbering System for major and minor revisions</h3>
+<p>For this example, we’re going to create a system that uses uppercase alphabetical for major revisions, and numerical for a minor revision.  For example = A-01, B-01, C-01, C-02, C-03 etc.</p>
+<p>First, we have to create our revision numbering components…</p>
+<ul>
+<li>Administration Tool &gt; Revisions &gt; Revision Number Components
+<ul>
+<li>Right-Click &gt;  New Component…</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37651" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Major-and-Minor-Rev-Components.png"><img alt="SOLIDWORKS PDM Revision Numbering System" aria-describedby="caption-attachment-37651" height="831" src="/assets/images/Major-and-Minor-Rev-Components-1220x831.png" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-37651"><noscript><img alt="SOLIDWORKS PDM Revision Numbering System" height="831" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/Major-and-Minor-Rev-Components-1220x831.png" title="" width="1220"/></noscript></p></a> Revision Number Components</div>
+<p>Next, we have to create the Revision Number System…</p>
+<ul>
+<li>Administration Tool &gt; Revisions &gt; Revision numbers
+<ul>
+<li>Right-Click &gt;  New revision number…
+<ul>
+<li>Add the revision number components we created in the previous step</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37653" style="width: 621px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/New-revision-number.png"><img alt="Revision Number System" aria-describedby="caption-attachment-37653" height="222" src="/assets/images/New-revision-number.png" title="" width="611"/><p class="wp-caption-text" id="caption-attachment-37653"><noscript><img alt="Revision Number System" height="222" sizes="(max-width: 611px) 100vw, 611px" src="/assets/images/New-revision-number.png" title="" width="611"/></noscript></p></a> Revision Number System</div>
+<p>Now we have to implement this into the workflow.  In the appropriate workflow and state;</p>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; [Workflow Name]</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37655" style="width: 773px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Administration-Tool-Workflows-Workflow-Name-1.png"><img alt="Incorporate into a workflow" aria-describedby="caption-attachment-37655" height="785" src="/assets/images/Administration-Tool-Workflows-Workflow-Name-1.png" title="" width="763"/><p class="wp-caption-text" id="caption-attachment-37655"><noscript><img alt="Incorporate into a workflow" height="785" sizes="(max-width: 763px) 100vw, 763px" src="/assets/images/Administration-Tool-Workflows-Workflow-Name-1.png" title="" width="763"/></noscript></p></a> Incorporate into a workflow</div>
+<p>On the state where the revision is first applied:</p>
+<p><em>For this example the ‘Approved’ state</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>Add the new revision number system
+<ul>
+<li>Leave the ‘Increment by’ and the ‘Reset to’ values blank
+<ul>
+<li>Save the workflow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37656" style="width: 665px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/08/Approved-State-Properties.png"><img alt="Clear increment by on revision state" aria-describedby="caption-attachment-37656" height="472" src="/assets/images/Approved-State-Properties.png" title="" width="655"/><p class="wp-caption-text" id="caption-attachment-37656"><noscript><img alt="Clear increment by on revision state" height="472" sizes="(max-width: 655px) 100vw, 655px" src="/assets/images/Approved-State-Properties.png" title="" width="655"/></noscript></p></a> Clear increment by on revision state</div>
+<p>In the transition preceding the state where the revision is first applied;</p>
+<p><em>For this example the ‘Passed Approval’ transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>Add the new revision number system
+<ul>
+<li>For both revision number components; set the ‘Reset to’ vault to 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>When files first enter this state, the revision will be set to A-01</em></p>
+<div class="wp-caption aligncenter" id="attachment_37726" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Passed-Approval-Transition.png"><img alt="Passed Approval Properties" aria-describedby="caption-attachment-37726" height="459" src="/assets/images/Passed-Approval-Transition.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-37726"><noscript><img alt="Passed Approval Properties" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Passed-Approval-Transition.png" title="" width="646"/></noscript></p></a> In the transition preceding the state where the revision is first applied reset the revision components to 1</div>
+<p>Now, we need to increment the appropriate revision in the corresponding state;</p>
+<p><em>For the ‘Major Rev Change’ transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>For the <strong>Major Rev Component</strong> set the value to increment by 1</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37727" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Major-Rev-Change.png"><img alt="Increment the major rev" aria-describedby="caption-attachment-37727" height="459" src="/assets/images/Major-Rev-Change.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-37727"><noscript><img alt="Increment the major rev" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Major-Rev-Change.png" title="" width="646"/></noscript></p></a> Major Rev Change transition</div>
+<p><em>For the ‘Minor Rev Change’ transition</em></p>
+<ul>
+<li>Properties &gt; Revision Numbers
+<ul>
+<li>For the <strong>Minor Rev Component</strong> set the value to increment by 1</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37728" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Minor-Rev-Change.png"><img alt="Increment the minor rev" aria-describedby="caption-attachment-37728" height="459" src="/assets/images/Minor-Rev-Change.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-37728"><noscript><img alt="Increment the minor rev" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Minor-Rev-Change.png" title="" width="646"/></noscript></p></a> Minor Rev Component</div>
+<ul>
+<li>Save and close the workflow.</li>
+</ul>
+<p>As with any change in the vault; it’s imperative to test any changes thoroughly before implementing.  This is a great example of a change that should be implemented in a <a href="https://www.javelin-tech.com/blog/2013/08/solidworks-pdm-sandbox-vault/">sandbox vault</a>, ahead of the production vault.</p>
+<div class="wp-caption aligncenter" id="attachment_37730" style="width: 870px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Test-Changes.png"><img alt="Test thoroughly" aria-describedby="caption-attachment-37730" height="786" src="/assets/images/Test-Changes.png" title="" width="860"/><p class="wp-caption-text" id="caption-attachment-37730"><noscript><img alt="Test thoroughly" height="786" sizes="(max-width: 860px) 100vw, 860px" src="/assets/images/Test-Changes.png" title="" width="860"/></noscript></p></a> Test thoroughly</div>

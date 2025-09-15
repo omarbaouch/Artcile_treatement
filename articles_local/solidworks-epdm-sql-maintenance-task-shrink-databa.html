@@ -1,0 +1,15 @@
+<p><strong>The Shrink Database task reduces the size of SQL Server database data and log files.</strong> This task can cause index fragmentation and is not recommended by SOLIDWORKS. SOLIDWORKS does note that “on large databases or environments with hundreds of users, shrinking the SOLIDWORKS® Enterprise PDM database once per year may improve overall performance.” Please refer to the Solidworks Knowledge base article S-067843 for more information. An active subscription is required in order to access the knowledgebase.</p>
+<h4>Before running this task:</h4>
+<ul>
+<li>you should have good understanding of working with SQL databases</li>
+<li>a recent back-up of the database and the archive</li>
+<li>if possible, a test run on a non-production test vault that is mirror of your production vault</li>
+<li>ensure that no is accessing the database during this operation</li>
+</ul>
+<p>The steps to run the Shrink task may vary between versions of SQL. These instructions are based on Microsoft SQL 2014. If you are using a different version of SQL, please refer to the SQL Help for instructions. In fact, even if you are using  Microsoft SQL 2014, I would still recommend reviewing SQL Help for recommendations and additional information, beyond what is covered in this article.</p>
+<p>This task is launched by right clicking on the database you wish to shrink and selecting the task Shrink Database.</p>
+<div class="wp-caption alignnone" id="attachment_15493" style="width: 842px"><img alt="Shrink Database" aria-describedby="caption-attachment-15493" height="238" src="/assets/images/Shrink-Database.png" title="" width="832"/><p class="wp-caption-text" id="caption-attachment-15493"><noscript><img alt="Shrink Database" height="238" sizes="(max-width: 832px) 100vw, 832px" src="/assets/images/Shrink-Database.png" title="" width="832"/></noscript> Shrink Database</p></div>
+<p>Ensure that the correct database is selected and click on OK to shrink the database. Depending on the size of the database, this may take a while. Running this task after hours is recommended.</p>
+<div class="wp-caption alignnone" id="attachment_15494" style="width: 706px"><img alt="ShrinkDB Window" aria-describedby="caption-attachment-15494" height="623" src="/assets/images/ShrinkDB-Window.png" title="" width="696"/><p class="wp-caption-text" id="caption-attachment-15494"><noscript><img alt="ShrinkDB Window" height="623" sizes="(max-width: 696px) 100vw, 696px" src="/assets/images/ShrinkDB-Window.png" title="" width="696"/></noscript> ShrinkDB Window</p></div>
+<p>Selecting the ‘Reorganize files before releasing unused space…’  option, will allow you to specify a target percentage.</p>
+<p>As noted earlier, Shrink Database can cause fragmentation of the tables and may require rebuilding of  indexes. This option should be fully evaluated before its use.</p>

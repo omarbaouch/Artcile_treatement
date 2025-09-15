@@ -1,0 +1,54 @@
+<p>In a previous post I showed you how to <a href="https://www.javelin-tech.com/blog/?p=36257">reset the ‘default’ SOLIDWORKS PDM Vault Admin Password</a>. If you’ve ever had the chance to participate in one of my <a href="https://www.javelin-tech.com/3d/people/training/administering-solidworks-pdm-professional/">administering SOLIDWORKS PDM training class</a>, you’ve likely heard my <del>rant</del> lecture on the benefits of a <a href="https://www.javelin-tech.com/blog/2017/10/duplicate-solidworks-pdm-vault/">sandbox vault</a>.</p>
+<p>A Sandbox Vault gives us a place to test and troubleshoot vault issues or changes in a safe place, before implementing any changes in our primary production vault.  This sandbox vault isn’t something we’ll likely be using daily, and with that said; it’s easy to forget the password as we’re maybe not using it often.  I recently had a scenario where I needed to reset the SOLIDWORKS PDM Admin Password, in test vault without affecting my primary vault.</p>
+<h2>Reset a vault specific Admin password</h2>
+<ul>
+<li>Login to the archive server with local administrative permissions</li>
+<li>Open the registry editor
+<ul>
+<li>Start &gt; Run &gt; Regedit</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36206" style="width: 409px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/regedit.png"><img alt="Start &gt; Run &gt; Regedit" aria-describedby="caption-attachment-36206" height="206" src="/assets/images/regedit.png" title="" width="399"/><p class="wp-caption-text" id="caption-attachment-36206"><noscript><img alt="Start &gt; Run &gt; Regedit" height="206" src="/assets/images/regedit.png" title="" width="399"/></noscript></p></a> Start &gt; Run &gt; Regedit</div>
+<blockquote><p><strong>WARNING</strong>: Please be very careful when editing or deleting any entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.</p></blockquote>
+<ul>
+<li>Navigate to; <em>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\ArchiveServer\Vaults\<strong>[vaultname]</strong>\ConisioUsers</em></li>
+<li>Delete the key ‘Admin’</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36210" style="width: 855px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Delete-Admin-key.png"><img alt="SOLIDWORKS PDM Admin Password" aria-describedby="caption-attachment-36210" height="526" src="/assets/images/Delete-Admin-key.png" title="" width="845"/><p class="wp-caption-text" id="caption-attachment-36210"><noscript><img alt="SOLIDWORKS PDM Admin Password" height="526" sizes="(max-width: 845px) 100vw, 845px" src="/assets/images/Delete-Admin-key.png" title="" width="845"/></noscript></p></a> Delete the Admin key</div>
+<ul>
+<li>Start the Archive Server Configuration Tool
+<ul>
+<li>Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36212" style="width: 307px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Archive-Server-Configuration.png"><img alt="Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration" aria-describedby="caption-attachment-36212" height="435" src="/assets/images/Archive-Server-Configuration.png" title="" width="297"/><p class="wp-caption-text" id="caption-attachment-36212"><noscript><img alt="Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration" height="435" src="/assets/images/Archive-Server-Configuration.png" title="" width="297"/></noscript></p></a> Start SOLIDWORKS PDM Archive Server</div>
+<ul>
+<li>Archive Server Configuration Tool &gt; Archives &gt; [Vault Name]
+<ul>
+<li>Right-Click Properties &gt; Properties</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36213" style="width: 696px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Sandbox_Properties.png"><img alt="Archive Server Configuration Tool &gt; Archives &gt; [Vault Name]" aria-describedby="caption-attachment-36213" height="493" src="/assets/images/Sandbox_Properties.png" title="" width="686"/><p class="wp-caption-text" id="caption-attachment-36213"><noscript><img alt="Archive Server Configuration Tool &gt; Archives &gt; [Vault Name]" height="493" sizes="(max-width: 686px) 100vw, 686px" src="/assets/images/Sandbox_Properties.png" title="" width="686"/></noscript></p></a> Archive Server Configuration Tool &gt; Archives &gt; [Vault Name]</div>
+<ul>
+<li>Select the ‘Login’ tab
+<ul>
+<li>Clear the checkbox ‘Use default Admin User’
+<ul>
+<li>Enter the existing default Admin password under ‘Current Password’</li>
+<li>Enter the new password for the vault specific admin account</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36219" style="width: 1056px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Reset-Password.png"><img alt="Default login type" aria-describedby="caption-attachment-36219" height="625" src="/assets/images/Reset-Password.png" title="" width="1046"/><p class="wp-caption-text" id="caption-attachment-36219"><noscript><img alt="Default login type" height="625" sizes="(max-width: 1046px) 100vw, 1046px" src="/assets/images/Reset-Password.png" title="" width="1046"/></noscript></p></a> Default login type</div>
+<blockquote><p><strong>Note</strong>: If the default Admin password is lost or forgotten, <a href="https://www.javelin-tech.com/blog/?p=36257">you can use this guide to reset it.</a></p></blockquote>
+<ul>
+<li>After hitting OK the ‘Admin’ key will be recreated in the registry and the new password set</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_36216" style="width: 855px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/05/Admin-Key-Recreated.png"><img alt="Admin key recreated" aria-describedby="caption-attachment-36216" height="526" src="/assets/images/Admin-Key-Recreated.png" title="" width="845"/><p class="wp-caption-text" id="caption-attachment-36216"><noscript><img alt="Admin key recreated" height="526" sizes="(max-width: 845px) 100vw, 845px" src="/assets/images/Admin-Key-Recreated.png" title="" width="845"/></noscript></p></a> Admin key recreated</div>
+<h3>Need SOLIDWORKS PDM Training?</h3>
+<p><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/" rel="noopener noreferrer" target="_blank">Learn more about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

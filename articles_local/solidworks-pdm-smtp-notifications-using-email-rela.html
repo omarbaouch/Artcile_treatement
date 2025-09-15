@@ -1,0 +1,52 @@
+<p><span class="keyword"><a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-professional/">SOLIDWORKS PDM Professional</a> has the functionality to</span> configure <span class="keyword">SOLIDWORKS PDM</span> to send notifications through the default database message system or an SMTP mail server. Whereas <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm-standard/"><span class="keyword">SOLIDWORKS PDM Standard</span></a> supports only the default database message system. But how do we set up the SMTP Server using an Email Proxy Application? That will be addressed in this article.</p>
+<h2>Why would I need to use an Email Relay?</h2>
+<p>There are multiple third-party applications available to use as an email proxy, this article will highlight only ONE of the many open-source applications that will act as the proxy to forward emails from one server to another.</p>
+<p>It is the responsibility of users to set up and troubleshoot the setup of the Mail Proxy Server.</p>
+<h3>Step-by-Step: Setting up the Email Relay</h3>
+<ol>
+<li>Download and Extract the <a href="http://emailrelay.sourceforge.net/" rel="nofollow noopener" target="_blank">Email Relay Application</a></li>
+<li>Run the “EmailRelay-Setup.exe” file</li>
+<li>Configure the Installation per the Screenshots below</li>
+</ol>
+<ul>
+<li>Installation Directories:</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_49385" style="width: 522px"><img alt="emailrelay Installation Directories" aria-describedby="caption-attachment-49385" height="423" src="/assets/images/Email-Relay-Directories.png" title="" width="512"/><p class="wp-caption-text" id="caption-attachment-49385"><noscript><img alt="emailrelay Installation Directories" height="423" src="/assets/images/Email-Relay-Directories.png" title="" width="512"/></noscript> emailrelay Installation Directories</p></div>
+<ul>
+<li>Installation Type:</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_49387" style="width: 522px"><img alt="emailrelay Setup" aria-describedby="caption-attachment-49387" height="423" src="/assets/images/Email-Relay-Installation-Type.png" title="" width="512"/><p class="wp-caption-text" id="caption-attachment-49387"><noscript><img alt="emailrelay Setup" height="423" src="/assets/images/Email-Relay-Installation-Type.png" title="" width="512"/></noscript> emailrelay Setup</p></div>
+<ul>
+<li>SMTP Server</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_49402" style="width: 525px"><img alt="emailrelay SMTP Server Setup" aria-describedby="caption-attachment-49402" height="441" src="/assets/images/Email-Relay-SMTP-Server-1.png" title="" width="515"/><p class="wp-caption-text" id="caption-attachment-49402"><noscript><img alt="emailrelay SMTP Server Setup" height="441" src="/assets/images/Email-Relay-SMTP-Server-1.png" title="" width="515"/></noscript> emailrelay SMTP Server Setup</p></div>
+<ul>
+<li>SMTP Client</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_62869" style="width: 610px"><img alt="" aria-describedby="caption-attachment-62869" height="488" src="/assets/images/SMTP_Client-600x488.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-62869"><noscript><img alt="" height="488" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SMTP_Client-600x488.png" title="" width="600"/></noscript> emailrelay SMTP Client Setup</p></div>
+<p> </p>
+<ul>
+<li>Filters</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_62870" style="width: 610px"><img alt="" aria-describedby="caption-attachment-62870" height="488" src="/assets/images/SMTP_Client_Filters-600x488.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-62870"><noscript><img alt="" height="488" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SMTP_Client_Filters-600x488.png" title="" width="600"/></noscript> emailrelay Filters</p></div>
+<ul>
+<li>Logging</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_62871" style="width: 610px"><img alt="" aria-describedby="caption-attachment-62871" height="488" src="/assets/images/SMTP_Client_Logging-600x488.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-62871"><noscript><img alt="" height="488" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SMTP_Client_Logging-600x488.png" title="" width="600"/></noscript> emailrelay Logging</p></div>
+<ul>
+<li>Connections</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_62872" style="width: 610px"><img alt="" aria-describedby="caption-attachment-62872" height="488" src="/assets/images/SMTP_Client_Connections-600x488.png" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-62872"><noscript><img alt="" height="488" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SMTP_Client_Connections-600x488.png" title="" width="600"/></noscript> emailrelay Connections Setup</p></div>
+<ul>
+<li>Server Startup</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_49389" style="width: 522px"><img alt="emailrelay Server Startup" aria-describedby="caption-attachment-49389" height="440" src="/assets/images/Email-Relay-Server-Startup.png" title="" width="512"/><p class="wp-caption-text" id="caption-attachment-49389"><noscript><img alt="emailrelay Server Startup" height="440" src="/assets/images/Email-Relay-Server-Startup.png" title="" width="512"/></noscript> emailrelay Server Startup</p></div>
+<ul>
+<li>Complete the Setup</li>
+<li>In the installation directory, you will find a couple of BAT files. You want to use “emailrelay-start-with-logfile.bat” to start the application.</li>
+</ul>
+<h3>Configuring SOLIDWORKS PDM to use the Specified SMTP Server</h3>
+<p>The settings for configuring the SMTP Mail Server within the Administration tool can be found on the SOLIDWORKS Help documentation: <a href="https://help.solidworks.com/2024/English/EnterprisePDM/Admin/t_message_system_selecting.htm?verRedirect=1" rel="nofollow noopener" target="_blank">Configuring the Message System</a></p>
+<p>If the e-mail messages fail to be forwarded using the E-MailRelay system, check the spool directory for files with a .<em>bad </em>suffix. The reason for failure will be recorded within the envelope file.</p>
+<h3>SOLIDWORKS PDM Training</h3>
+<p>Javelin offers various <a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">SOLIDWORKS PDM training courses</a> which cover all the new additions and features such as searching within the vault. PDM Administrator training covers topics such as this in great detail and ample examples and exercises are provided for PDM administrators to familiarize themselves with new additions to SOLIDWORKS PDM.</p>

@@ -1,0 +1,28 @@
+<p>In order to troubleshoot SOLIDWORKS PDM connectivity issue between the Archive Server and client, a simple ping test can be used. The ping test is performed on the client computer.</p>
+<p>From inside Windows “Start”, select run and type in CMD.</p>
+<p>In the command dialogue box enter ping followed by the archive server (ping &lt;server name&gt;). This simple test will determine if the client computer can see the archive server.</p>
+<div class="wp-caption aligncenter" id="attachment_71146" style="width: 610px"><img alt="" aria-describedby="caption-attachment-71146" height="418" src="/assets/images/ping-1-600x418.jpg" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-71146"><noscript><img alt="" height="418" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/ping-1-600x418.jpg" title="" width="600"/></noscript> Ping Test Results</p></div>
+<p>Being able to ping the server may not be sufficient to discover problems though. Slow connections lead to poor performance and not being able to access data. To test for slow connections, we can increase the pack size, using the following syntax:</p>
+<p>ping &lt;server name&gt; -t -l 1350</p>
+<p>The -t option will ping the &lt;server name&gt; continuously until stopped by the user. Pressing <strong>Ctrl-C</strong> on your keyboard to stop the ping test.</p>
+<p>The -l option defines the packet size to be used in the test.  A normal ping packet is only 8 bytes which is not a good test of actual TCP packets. The above continuous ping test is using an increased packet size of <b>1350</b>; this improves the quality of the test to a size more comparable with PDM communications</p>
+<div class="wp-caption aligncenter" id="attachment_71147" style="width: 610px"><img alt="" aria-describedby="caption-attachment-71147" height="562" src="/assets/images/ping-2-600x562.jpg" title="ping test" width="600"/><p class="wp-caption-text" id="caption-attachment-71147"><noscript><img alt="" height="562" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/ping-2-600x562.jpg" title="ping test" width="600"/></noscript> Ping Test Results</p></div>
+<p> </p>
+<p>Any dropped packets or excessive latency times indicate a problem with the connection to the server. There are many variables that can determine the impact of slow connections, but the below values can be used as a general guide.</p>
+<ul>
+<li>&lt;40 ms is normal in a local network environment</li>
+<li>&lt;80 ms is workable for an internet connection, but problems can occur when accessing larger amounts of data. This value is high for a local network environment</li>
+<li>&gt;80 ms performance issues will be noticeable and failures will occur</li>
+<li>&gt;120 ms performance degradation will be quite noticeable and the number of failures will increase significantly</li>
+<li>&gt;200 ms connection issues are critical and access to data may not be possible.</li>
+</ul>
+<p>Being able to connect to the server is only one aspect that needs to be looked at, communication issues may also need to be addressed. My colleague’s article “<a href="https://www.javelin-tech.com/blog/2015/06/perform-telnet-test-video/" rel="noopener noreferrer" target="_blank">How to Perform a Telnet Test</a>”</p>
+<p> </p>
+<p>The PDM User log can be helpful in determining if there are communication issues. Socket errors or messages that show failures to access the database or archive server are often related to socket errors.</p>
+<div class="wp-caption aligncenter" id="attachment_71148" style="width: 610px"><img alt="" aria-describedby="caption-attachment-71148" height="297" src="/assets/images/dd-600x297.jpg" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-71148"><noscript><img alt="" height="297" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/dd-600x297.jpg" title="" width="600"/></noscript> Accessing the PDM User Log</p></div>
+<p> </p>
+<p>The Archive Server log can be used to determine if the issue is related to one user’s computer or multiple user’s computers, by looking at the reported IP addresses. If only one user’s computer is reporting communication issues, then the issue is likely localized to that one user.  If there are multiple IP addresses reporting communication issues, then the issue is likely with the PDM server(s) or the network.</p>
+<div class="wp-caption aligncenter" id="attachment_71150" style="width: 610px"><img alt="" aria-describedby="caption-attachment-71150" height="297" src="/assets/images/bb-600x297.jpg" title="" width="600"/><p class="wp-caption-text" id="caption-attachment-71150"><noscript><img alt="" height="297" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/bb-600x297.jpg" title="" width="600"/></noscript> Accessing the Archive server Log</p></div>
+<p>With many people working from home, communication issues have become more frequent. This is usually a result of high latency that can be associated with VPN connections.  Our blog, “<a href="https://www.javelin-tech.com/blog/2020/03/using-solidworks-pdm-remotely-during-covid-19/" rel="noopener" target="_blank">Using SOLIDWORKS PDM Remotely</a>” discusses some of the things that may mitigate communication issues when working from home.</p>
+<p> </p>
+<p>While your SOLIDWORKS Value Added Reseller can provide advice on some aspects of communication issues, resolving these issues is mainly the responsibility of your IT department.</p>

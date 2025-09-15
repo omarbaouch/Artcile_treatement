@@ -1,0 +1,18 @@
+<p>Currently if you need to make changes to User Viewer settings, each user has to be updated individually.</p>
+<div class="wp-caption aligncenter" id="attachment_19943" style="width: 750px"><img alt="SOLIDWORKS PDM Viewer Settings" aria-describedby="caption-attachment-19943" height="578" src="/assets/images/viewer-settings.png" title="" width="740"/><p class="wp-caption-text" id="caption-attachment-19943"><noscript><img alt="SOLIDWORKS PDM Viewer Settings" height="578" sizes="(max-width: 740px) 100vw, 740px" src="/assets/images/viewer-settings.png" title="" width="740"/></noscript> Viewer settings</p></div>
+<p>If there are multiple users to update, this can be a tedious time consuming task. To avoid this toil, the SOLIDWORKS PDM Viewer Settings can be updated for all users by using the following SQL query:</p>
+<pre>Update Settings
+
+ set value = (
+
+ select Value From Settings S
+
+ Inner Join Users U on S.UserID = U.UserID
+
+ Where VarID = 16 and Username = 'Admin')
+
+ Where VarID = 16 and UserID != 2</pre>
+<p>First update the Viewer settings for the Admin and then run the query on your vault.</p>
+<div class="wp-caption aligncenter" id="attachment_19944" style="width: 636px"><img alt="Run query" aria-describedby="caption-attachment-19944" height="223" src="/assets/images/run-query.png" title="" width="626"/><p class="wp-caption-text" id="caption-attachment-19944"><noscript><img alt="Run query" height="223" sizes="(max-width: 626px) 100vw, 626px" src="/assets/images/run-query.png" title="" width="626"/></noscript> Run query</p></div>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Attend our <a href="http://www.javelin-tech.com/main/training/course_solidworks_enterprise_pdm_admin.htm" target="_blank">SOLIDWORKS PDM Administration training course</a> either online, in a classroom near you, or ask us about training on-site at your location.</p>

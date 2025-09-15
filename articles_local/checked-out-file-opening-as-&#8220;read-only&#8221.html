@@ -1,0 +1,57 @@
+<p>Have you ever checked out a file in <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/" rel="noopener" target="_blank">PDM</a>, did some work and changes on the file only to realize that when you wanted to do a “Check in” you couldn’t as the file was “Read-only”? This can cause some extreme headaches, and even potentially some lost work if you don’t know what is happening. Here is one of the most common reasons for this and how to resolve it.</p>
+<h2>Windows Folder Permission issues between Windows and PDM causing “Read-only” files</h2>
+<p>PDM needs the ability to write and modify files, when you do a “Check out” or “Check in” action, typically the “Read-only” flag on the cached file gets toggled. When you do a check out the “Read-only” flag on the file should toggle off, and when you do a “Check in” it should get toggled back on. This feature/process is necessary to make sure users aren’t modifying files inside of PDM without checking out the file. Sometimes the currently set Windows Folder permissions block PDM from switching the “Read Only” check box on files. To resolve this we need to make sure a couple of permissions are set on the root of the vault.</p>
+<div class="wp-caption aligncenter" id="attachment_64428" style="width: 658px"><img alt='File Properties showing the "Ready-only" check box' aria-describedby="caption-attachment-64428" height="488" src="/assets/images/Read-only-check-box-Properties-window.png" title="" width="648"/><p class="wp-caption-text" id="caption-attachment-64428"><noscript><img alt='File Properties showing the "Ready-only" check box' height="488" sizes="(max-width: 648px) 100vw, 648px" src="/assets/images/Read-only-check-box-Properties-window.png" title="" width="648"/></noscript> File Properties “Read-only” check box</p></div>
+<ol>
+<li>Open File Explorer</li>
+<li>Navigate to the location where your vault was set up
+<ul>
+<li>Typically this is the C drive for most people</li>
+</ul>
+</li>
+<li>Right-click the Vault View and select “Properties”
+<ul>
+<li>If you have Windows 11 you might need to hit “Show More Options” first and then select “Properties”</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_64432" style="width: 472px"><img alt='Right Clicking the Vault View and select "Properties"' aria-describedby="caption-attachment-64432" height="168" src="/assets/images/Right-Click-Properties.png" title="" width="462"/><p class="wp-caption-text" id="caption-attachment-64432"><noscript><img alt='Right Clicking the Vault View and select "Properties"' height="168" src="/assets/images/Right-Click-Properties.png" title="" width="462"/></noscript> Vault View Properties.</p></div></p></li>
+<li>Select the “Security” Tab</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_64429" style="width: 1050px"><img alt='Showing the last tab called "Security"' aria-describedby="caption-attachment-64429" height="684" src="/assets/images/Security-Properties-Window.png" title="" width="1040"/><p class="wp-caption-text" id="caption-attachment-64429"><noscript><img alt='Showing the last tab called "Security"' height="684" sizes="(max-width: 1040px) 100vw, 1040px" src="/assets/images/Security-Properties-Window.png" title="" width="1040"/></noscript> Security Tab</p></div>
+<ol start="5">
+<li>Click “Edit”</li>
+<li>Click “Add”</li>
+<li>Add your Windows User</li>
+<li>You can check this by opening the Command Prompt typing “Whoami” and using the Windows credentials that pop up.
+<ul>
+<li>In this case, I am using the domain\username “azuread\codyfoley”.</li>
+</ul>
+</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_64431" style="width: 458px"><img alt='In the command prompt, used the "Whoami" command to see what user account I am logged into windows with' aria-describedby="caption-attachment-64431" height="153" src="/assets/images/whoami-Command-Prompt.png" title="" width="448"/><p class="wp-caption-text" id="caption-attachment-64431"><noscript><img alt='In the command prompt, used the "Whoami" command to see what user account I am logged into windows with' height="153" src="/assets/images/whoami-Command-Prompt.png" title="" width="448"/></noscript> The “whoami” in the “Command Prompt”</p></div>
+<ol start="9">
+<li>Click “OK”.</li>
+<li>With your name highlighted check the “Full Control” box
+<ul>
+<li>Additionally, check the “Full control” box on the “User” group as well</li>
+</ul>
+</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_64430" style="width: 372px"><img alt='Selected "Full control" in the "Allow" column' aria-describedby="caption-attachment-64430" height="450" src="/assets/images/Full-Control-Security-Box.png" title="" width="362"/><p class="wp-caption-text" id="caption-attachment-64430"><noscript><img alt='Selected "Full control" in the "Allow" column' height="450" src="/assets/images/Full-Control-Security-Box.png" title="" width="362"/></noscript> Select “Full control” in the allow column of the Group/User name</p></div>
+<ol start="11">
+<li>Click “Apply”</li>
+<li>Click “OK”</li>
+</ol>
+<p> </p>
+<p>Now on any files that have checked out that are opening as “Read-only”, you can manually turn off their flags and then check the file in. To do this, please.</p>
+<ol>
+<li>Find the file in the vault</li>
+<li>Right Click the file and then select “Properties”</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_64438" style="width: 360px"><img alt='Right click file and select "properties" ' aria-describedby="caption-attachment-64438" height="217" src="/assets/images/File-Right-Click-Properties-1.png" title="" width="350"/><p class="wp-caption-text" id="caption-attachment-64438"><noscript><img alt='Right click file and select "properties" ' height="217" src="/assets/images/File-Right-Click-Properties-1.png" title="" width="350"/></noscript> Right click -&gt; “Properties”</p></div>
+<ol start="3">
+<li>Un-check the “Read-only” flag on the file and select “OK”</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_64436" style="width: 658px"><img alt='Deselecting the "Read-only" check box' aria-describedby="caption-attachment-64436" height="488" src="/assets/images/File-Read-only-check-box-Properties-window.png" title="" width="648"/><p class="wp-caption-text" id="caption-attachment-64436"><noscript><img alt='Deselecting the "Read-only" check box' height="488" sizes="(max-width: 648px) 100vw, 648px" src="/assets/images/File-Read-only-check-box-Properties-window.png" title="" width="648"/></noscript> Unselect the “Read-only” box</p></div>
+<p> </p>
+<p>After you do this you should now be able to “Check in” the file with no issues and this problem should be resolved going forward.</p>
+<p><strong>Want to learn more? Check out our </strong><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/"><strong>SOLIDWORKS PDM </strong></a><strong><a href="https://www.javelin-tech.com/3d/people/solidworks-pdm-training/">training courses</a>. </strong></p>

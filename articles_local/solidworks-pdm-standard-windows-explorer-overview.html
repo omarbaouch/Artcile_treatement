@@ -1,0 +1,59 @@
+<p>In this article, I will provide an overview of the SOLIDWORKS PDM Windows Explorer View for a local vault. This Vault interface is available to all Client License Types.</p>
+<h3>SOLIDWORKS PDM Client License Types</h3>
+<p>Below is a list of the different PDM Client License Types.</p>
+<h4>SOLIDWORKS PDM Editor:</h4>
+<p>Adds an Add-in in SOLIDWORKS, which allows a user to interact with the vault from with-in SOLIDWORKS. This includes Checking Out files so they can be edited, Checking In files so that they will be saved to the PDM server, searching for files as well as other vault related activities. The editor includes Contributor and Viewer Components</p>
+<h4>SOLIDWORKS PDM Contributor:</h4>
+<p>Offers the same functionality as the Editor, but uses a Windows Explorer interface. The Contributor includes the Viewer component</p>
+<h4>SOLIDWORKS PDM Viewer:</h4>
+<p>Offers view only capabilities. Users can view files, but cannot check-out files for editing.</p>
+<p>Even though the Editor and Contributor licenses include additional components, this does not mean that these components can be used concurrently. Each license can only be used once, regardless which component is being used, to access the vault. A user can choose to use a different License Type, but unless there is a bundle of network licenses, that include Contributors and/or Viewers, this will not free up a license for another user.</p>
+<div class="wp-caption aligncenter" id="attachment_28198" style="width: 524px"><img alt="Changing PDM License Type" aria-describedby="caption-attachment-28198" height="355" src="/assets/images/Changing-license-type.png" title="" width="514"/><p class="wp-caption-text" id="caption-attachment-28198"><noscript><img alt="Changing PDM License Type" height="355" sizes="(max-width: 514px) 100vw, 514px" src="/assets/images/Changing-license-type.png" title="" width="514"/></noscript> Changing PDM License Type</p></div>
+<h4>SOLIDWORKS PDM Windows Explorer</h4>
+<p>The SOLIDWORKS PDM Explorer View consists of the following:</p>
+<ol>
+<li><strong>Navigation Pane</strong> – Displays the drives, folders etc. available from a computer. This includes PDM Vaults and their contents</li>
+<li><strong>File and Folder View</strong> – Displays all the files and sub-folders in a selected folder. Information, such as who a file is checked out by, the description of a file and the Workflow state the file is in, is also displayed. The information that is displayed can be controlled through SOLIDWORKS PDM Administration.</li>
+<li><strong>PDM View Tabs</strong> – Control what groups of information are displayed</li>
+<li><strong>Preview Pane</strong> – Displays a preview of a selected file, either as an image or using eDrawings. Only some CAD files, such as SOLIDWORKS parts, assemblies and drawings will use eDrawings. Additional viewers can be specified, through SOLIDWORKS PDM Administration.</li>
+<li><strong>Variables</strong> – Lists the Variables and the Variable values associated, with a selected file. These variables can be linked to SOLIDWORKS Custom and Configuration Specific Properties. Tabs on this panel allow users to choose which variables are displayed.</li>
+</ol>
+<div class="wp-caption aligncenter" id="attachment_28242" style="width: 1343px"><img alt="SOLIDWORKS PDM Windows Explorer" aria-describedby="caption-attachment-28242" height="833" src="/assets/images/Vault-View-in-Windows-Explorer.png" title="" width="1333"/><p class="wp-caption-text" id="caption-attachment-28242"><noscript><img alt="SOLIDWORKS PDM Windows Explorer" height="833" sizes="(max-width: 1333px) 100vw, 1333px" src="/assets/images/Vault-View-in-Windows-Explorer.png" title="" width="1333"/></noscript> Vault View in Windows Explorer</p></div>
+<p>Along the top of the File Folder View, there are four drop down menus:</p>
+<div class="wp-caption aligncenter" id="attachment_28337" style="width: 349px"><img alt="Explorer Menus" aria-describedby="caption-attachment-28337" height="74" src="/assets/images/Explorer-Pull-downs.png" title="" width="339"/><p class="wp-caption-text" id="caption-attachment-28337"><noscript><img alt="Explorer Menus" height="74" sizes="(max-width: 339px) 100vw, 339px" src="/assets/images/Explorer-Pull-downs.png" title="" width="339"/></noscript> Explorer Menus</p></div>
+<h5>Actions menu</h5>
+<p>The Actions drop down menu allows you to perform actions, such as Check-in/out.</p>
+<div class="wp-caption aligncenter" id="attachment_28335" style="width: 215px"><img alt="Actions Menu" aria-describedby="caption-attachment-28335" height="215" src="/assets/images/Actions-Pull-down.png" title="" width="205"/><p class="wp-caption-text" id="caption-attachment-28335"><noscript><img alt="Actions Menu" height="215" src="/assets/images/Actions-Pull-down.png" title="" width="205"/></noscript> Actions Menu</p></div>
+<h5>Modify Menu</h5>
+<p>From the Modify menu, you can perform actions such as Copy, Paste or Change the State of a file.</p>
+<div class="wp-caption aligncenter" id="attachment_28338" style="width: 194px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/05/Modify-Pull-down.png"><img alt="Modify menu" aria-describedby="caption-attachment-28338" height="198" src="/assets/images/Modify-Pull-down.png" title="" width="184"/><p class="wp-caption-text" id="caption-attachment-28338"><noscript><img alt="Modify menu" height="198" src="/assets/images/Modify-Pull-down.png" title="" width="184"/></noscript></p></a> Modify menu</div>
+<h5>Display menu</h5>
+<p>The Display menu, allows you to choose what View will be displayed in the Explorer Window. You can choose:</p>
+<ul>
+<li>Show Files, which is the default</li>
+<li>Show Bill of Material, which will display saved Named BOM’s</li>
+<li>Search Results, display the PDM search window</li>
+</ul>
+<p>A user can view a file in separate Window, using View File, this will use the viewer specified for that file type, in SOLIDWORKS PDM Administration i.e. eDrawings for SOLIDWORKS files. The user can also view the History of a selected file. Options allow a user to control display options, such as whether an image or eDrawings will be used in the Preview panel, for SOLIDWORKS files.</p>
+<div class="wp-caption aligncenter" id="attachment_28336" style="width: 601px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/05/Display-Pull-down.png"><img alt="Display menu" aria-describedby="caption-attachment-28336" height="445" src="/assets/images/Display-Pull-down.png" title="" width="591"/><p class="wp-caption-text" id="caption-attachment-28336"><noscript><img alt="Display menu" height="445" sizes="(max-width: 591px) 100vw, 591px" src="/assets/images/Display-Pull-down.png" title="" width="591"/></noscript></p></a> Display menu</div>
+<h5>Tools menu</h5>
+<p>The Tools menu gives users the ability to send Notifications, Clear Local Cache, and copy an entire project using Copy Tree. From here, a user can access SOLIDWORKS PDM Administration</p>
+<div class="wp-caption aligncenter" id="attachment_28340" style="width: 210px"><img alt="Tools menu" aria-describedby="caption-attachment-28340" height="206" src="/assets/images/Tools-Pull-down.png" title="" width="200"/><p class="wp-caption-text" id="caption-attachment-28340"><noscript><img alt="Tools menu" height="206" src="/assets/images/Tools-Pull-down.png" title="" width="200"/></noscript> Tools menu</p></div>
+<p>The commands available from the above menus, can be added to the right-mouse menu through SOLIDWORKS PDM Administration.</p>
+<h3>PDM View Tabs</h3>
+<p>The PDM View Tabs allow a user to Preview a selected file.</p>
+<p>The Data Card can be viewed and edited from the Data Card tab. The Data Card, allows a user to view and add information (metadata), related to a selected file or folder</p>
+<div class="wp-caption aligncenter" id="attachment_28352" style="width: 660px"><img alt="Data Card Tab" aria-describedby="caption-attachment-28352" height="327" src="/assets/images/Data-Card.png" title="" width="650"/><p class="wp-caption-text" id="caption-attachment-28352"><noscript><img alt="Data Card Tab" height="327" sizes="(max-width: 650px) 100vw, 650px" src="/assets/images/Data-Card.png" title="" width="650"/></noscript> Data Card Tab</p></div>
+<h5>Version Tab</h5>
+<p>From Version tab, the Version of the cached file and that of the vaulted file can be seen and compared. This is useful in determining if latest file is being viewed or worked on. The Revision, State and Workflow of the file are also displayed here.</p>
+<div class="wp-caption aligncenter" id="attachment_28353" style="width: 206px"><img alt="Version Tab" aria-describedby="caption-attachment-28353" height="123" src="/assets/images/Version-Information.png" title="" width="196"/><p class="wp-caption-text" id="caption-attachment-28353"><noscript><img alt="Version Tab" height="123" src="/assets/images/Version-Information.png" title="" width="196"/></noscript> Version Tab</p></div>
+<h5>Bill of Materials tab</h5>
+<p>The Bill of Materials tab can the display the PDM BOM, a Named BOM or the Solidworks BOM.</p>
+<div class="wp-caption aligncenter" id="attachment_28350" style="width: 1004px"><img alt="Bill of Materials" aria-describedby="caption-attachment-28350" height="183" src="/assets/images/Bill-of-Materials.png" title="" width="994"/><p class="wp-caption-text" id="caption-attachment-28350"><noscript><img alt="Bill of Materials" height="183" sizes="(max-width: 994px) 100vw, 994px" src="/assets/images/Bill-of-Materials.png" title="" width="994"/></noscript> Bill of Materials</p></div>
+<h5>Contains tab</h5>
+<p>The Contains tab, lists all files that are referenced by a selected file.</p>
+<div class="wp-caption aligncenter" id="attachment_28351" style="width: 1218px"><img alt="Contains Tab" aria-describedby="caption-attachment-28351" height="170" src="/assets/images/Contains.png" title="" width="1208"/><p class="wp-caption-text" id="caption-attachment-28351"><noscript><img alt="Contains Tab" height="170" sizes="(max-width: 1208px) 100vw, 1208px" src="/assets/images/Contains.png" title="" width="1208"/></noscript> Contains Tab</p></div>
+<h5>Where Used tab</h5>
+<p>The Where Used tab lists all files that the selected file is being referenced by.</p>
+<div class="wp-caption alignnone" id="attachment_28354" style="width: 1220px"><img alt="Where Used tab" aria-describedby="caption-attachment-28354" height="175" src="/assets/images/Where-Used.png" title="" width="1210"/><p class="wp-caption-text" id="caption-attachment-28354"><noscript><img alt="Where Used tab" height="175" sizes="(max-width: 1210px) 100vw, 1210px" src="/assets/images/Where-Used.png" title="" width="1210"/></noscript> Where Used tab</p></div>
+<p>This article is meant as introduction to SOLIDWORKS PDM Standard and the SOLIDWORKS PDM Windows Explorer. To work efficiently with SOLIDWORKS PDM Standard contact us about <a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm">SOLIDWORKS PDM User Training</a>.</p>

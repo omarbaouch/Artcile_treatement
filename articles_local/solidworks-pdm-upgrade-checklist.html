@@ -1,0 +1,101 @@
+<p>If you are planning on upgrading to the latest release of PDM, then make sure you follow our SOLIDWORKS PDM Upgrade Checklist below:</p>
+<blockquote><p><strong>NOTE</strong>: Upgrading PDM carries some risk. It’s your company’s IP contained in your vault. <a href="https://www.javelin-tech.com/3d/process/solidworks-pdm-upgrade-service/">Javelin can perform your upgrade</a> for you to ensure it’s done right with minimal down time and risk of data loss. Contact your Javelin account manager for a quote. If a PDM upgrade is self-served and it goes poorly, our PDM Technical Support can help get the upgrade back on track, and the time may be billable.</p></blockquote>
+<h3>Prepare (Recommended 1 week before upgrade)</h3>
+<ul>
+<li><strong style="font-family: 'Open Sans', sans-serif; font-size: 15px; color: #333333;">Download the full installation file set through a Customer Portal account</strong>
+<ul>
+<li><a href="https://www.solidworks.com/sw/support/downloads.htm" rel="nofollow noopener" target="_blank">SOLIDWORKS Support</a> &gt; Downloads &gt; login using your 3DS credentials</li>
+<li><a href="https://www.javelin-tech.com/blog/2012/04/manually-download-solidworks-software/">https://www.javelin-tech.com/blog/2012/04/manually-download-solidworks-software/</a></li>
+</ul>
+</li>
+<li><strong>Alternatively, for the full installation file set, please contact your VAR and let them know what Version Year and Service Pack you wish to upgrade to, and they can assist</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/3d/people/technical-support/">https://www.javelin-tech.com/3d/people/technical-support/</a></li>
+</ul>
+</li>
+<li><strong>Verify that the system requirements for server and client computers are met</strong>
+<ul>
+<li><a href="https://www.solidworks.com/support/system-requirements" rel="nofollow noopener" target="_blank">https://www.solidworks.com/support/system-requirements</a></li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 80px;"><span style="color: #ff6600;"><strong>NOTE:</strong> Pay special attention to the Operating System as well as the Microsoft SQL Server versions. SOLIDWORKS PDM 2023 SP5 is the last release that is compatible with Microsoft SQL 2016. SOLIDWORKS PDM 2024 will require at least Microsoft SQL 2017, and 2025 will require Microsoft SQL 2019 or newer.</span></p>
+<ul>
+<li><strong>Ensure the 24-digit activation-based serial number for PDM has been recorded</strong></li>
+</ul>
+<h3>Upgrade License Manager (Recommended several days before upgrade)</h3>
+<ul>
+<li><strong>On the system serving as the license server, run ‘Setup.exe’ from the downloaded folder</strong>
+<ul>
+<li>Choose ‘Server products’ then ‘Upgrade SolidNetwork License Manager’</li>
+</ul>
+</li>
+<li><strong>Reactivate SolidNetwork License Manager</strong>
+<ul>
+<li>‘SolidNetwork License Manager Admin’ from the Start menu, then ‘Modify’</li>
+<li><a href="https://www.javelin-tech.com/blog/2019/05/update-solidworks-solidnetwork-license-server/">https://www.javelin-tech.com/blog/2019/05/update-solidworks-solidnetwork-license-server/</a></li>
+</ul>
+</li>
+</ul>
+<h3>Backups (Immediately before upgrade)</h3>
+<ul>
+<li><strong>Have users Check In all files</strong></li>
+<li><strong>Ensure that the PDM Archive folders have been backed up</strong></li>
+<li><strong>Back up the SQL Databases</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2019/07/manually-backup-solidworks-pdm-database/">https://www.javelin-tech.com/blog/2019/07/manually-backup-solidworks-pdm-database/</a></li>
+</ul>
+</li>
+<li><strong>Back up the PDM Archive Server settings</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/">https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/</a></li>
+</ul>
+</li>
+</ul>
+<h3>Server Upgrade</h3>
+<ul>
+<li><strong>Upgrade the SOLIDWORKS PDM Database Server and Archive Server programs</strong>
+<ul>
+<li>Run \SWPDMServer\setup.exe to start the SOLIDWORKS PDM server upgrade</li>
+</ul>
+</li>
+<li><strong>Upgrade the SQL Databases</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2013/04/solidworks-pdm-database-upgrade-tool">https://www.javelin-tech.com/blog/2013/04/solidworks-pdm-database-upgrade-tool</a></li>
+</ul>
+</li>
+<li><strong>Upgrade any PDM add-ins</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2016/08/solidworks-pdm-professional-task-add-in/">https://www.javelin-tech.com/blog/2016/08/solidworks-pdm-professional-task-add-in/</a></li>
+</ul>
+</li>
+<li><strong>If SOLIDWORKS PDM Web2 Server is installed, configure Microsoft IIS to set the application pool for SOLIDWORKS PDM Web2 back to the correct identity</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2020/01/solidworks-pdm-web2-upgrade-issues/">https://www.javelin-tech.com/blog/2020/01/solidworks-pdm-web2-upgrade-issues/</a></li>
+</ul>
+</li>
+<li><strong>Upgrade any additional replicated Archive Servers </strong></li>
+</ul>
+<h3>Client Upgrade</h3>
+<ul>
+<li><strong>Log in to Windows as the Local Administrator account (ensure full local permissions)</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2014/02/need-local-administrative-rights-install-solidworks/">https://www.javelin-tech.com/blog/2014/02/need-local-administrative-rights-install-solidworks/</a></li>
+</ul>
+</li>
+<li><strong>Run the SWPDMClient\setup.exe to start the SOLIDWORKS PDM client upgrade</strong></li>
+</ul>
+<h3>Following SOLIDWORKS Upgrade</h3>
+<ul>
+<li><strong>Upgrade SOLIDWORKS Toolbox if it is located in the vault</strong>
+<ul>
+<li><a href="https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/">https://www.javelin-tech.com/blog/2020/04/how-to-manually-update-solidworks-toolbox-in-a-solidworks-pdm-vault/</a></li>
+</ul>
+</li>
+<li><strong>OPTIONAL:  Upgrade SOLIDWORKS files using the <em>File Version Upgrade Tool</em></strong>
+<ul>
+<li><a href="https://help.solidworks.com/2024/english/EnterprisePDM/UpgradeUtility/c_upgrade_utility_overview.htm?verRedirect=1" rel="nofollow noopener" target="_blank">https://help.solidworks.com/2024/english/EnterprisePDM/UpgradeUtility/c_upgrade_utility_overview.htm?verRedirect=1</a></li>
+</ul>
+</li>
+</ul>
+<blockquote><p><strong>NOTE</strong>: Need to upgrade SOLIDWORKS? Then check out our <a href="https://www.javelin-tech.com/blog/2023/06/solidworks-upgrade-checklist/?">SOLIDWORKS Upgrade Checklist</a></p></blockquote>

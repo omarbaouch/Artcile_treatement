@@ -1,0 +1,17 @@
+<p>If there is a mismatch in the Back-up settings of the SOLIDWORKS PDM Archive Server Configuration application, the message ‘Failed to Make Backup!’, will appear in the Archive Server log. If the error message is opened from the Archive Server log, the below description will be displayed.</p>
+<pre>Date: 2018-05-18 09:07:02.000
+
+Module: ArchiveServerService
+
+Function: MainClass::muiBackupProc
+
+Code: E_INVALIDARG
+
+Code Description: An invalid argument was given to the method.
+
+Failed to make backup!</pre>
+<p>The Back-up that is failing is that of the PDM settings. These are the settings found in SOLIDWORKS PDM Administration. To correct this issue, launch the Archive Server application and choose Back-up Settings from the Tools pull-down.</p>
+<div class="wp-caption aligncenter" id="attachment_39976" style="width: 709px"><img alt="Failed to Make Backup" aria-describedby="caption-attachment-39976" height="495" src="/assets/images/Back-up-settings.png" title="" width="699"/><p class="wp-caption-text" id="caption-attachment-39976"><noscript><img alt="Failed to Make Backup" height="495" sizes="(max-width: 699px) 100vw, 699px" src="/assets/images/Back-up-settings.png" title="" width="699"/></noscript> Launching Back-up Settings</p></div>
+<p>Then reset the password and make sure that the backup location is a valid.</p>
+<div class="wp-caption aligncenter" id="attachment_39977" style="width: 717px"><img alt="" aria-describedby="caption-attachment-39977" height="612" src="/assets/images/Backup-settings.png" title="" width="707"/><p class="wp-caption-text" id="caption-attachment-39977"><noscript><img alt="" height="612" sizes="(max-width: 707px) 100vw, 707px" src="/assets/images/Backup-settings.png" title="" width="707"/></noscript> Back-up Settings</p></div>
+<p>Read our article on using the <a href="https://www.javelin-tech.com/blog/2015/12/solidworks-pdm-professional-archive-server-configuration/">SOLIDWORKS PDM Archive Server Configuration</a> application for more information</p>

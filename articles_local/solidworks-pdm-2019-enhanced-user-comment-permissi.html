@@ -1,0 +1,43 @@
+<p>New in SOLIDWORKS PDM 2019 with the enhanced user comment permissions; we have the ability to make version comments mandatory for a check in at specific states or at specific transitions of a state change.  Previously; this permission was an ‘all or nothing approach’ via the administrative permissions for transitions and version comments which applied to all states and transitions.</p>
+<div class="wp-caption aligncenter" id="attachment_37756" style="width: 545px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Must-Enter-State-Change-Comments.png"><img alt="SOLIDWORKS PDM user comment permissions" aria-describedby="caption-attachment-37756" height="68" src="/assets/images/Must-Enter-State-Change-Comments.png" title="" width="535"/><p class="wp-caption-text" id="caption-attachment-37756"><noscript><img alt="SOLIDWORKS PDM user comment permissions" height="68" src="/assets/images/Must-Enter-State-Change-Comments.png" title="" width="535"/></noscript></p></a> SOLIDWORKS PDM user comment permissions</div>
+<h2>How to make state change comments mandatory for a transition</h2>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; [Workflow Name]
+<ul>
+<li>Select the transition you would like to apply this requirement to
+<ul>
+<li>Permissions &gt; Select the User/Group
+<ul>
+<li>Check ‘Must enter state change comments’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37776" style="width: 1168px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Transition-comment-required-permission.png"><img alt="Must enter state change comments" aria-describedby="caption-attachment-37776" height="474" src="/assets/images/Transition-comment-required-permission.png" title="" width="1158"/><p class="wp-caption-text" id="caption-attachment-37776"><noscript><img alt="Must enter state change comments" height="474" sizes="(max-width: 1158px) 100vw, 1158px" src="/assets/images/Transition-comment-required-permission.png" title="" width="1158"/></noscript></p></a> Must enter state change comments</div>
+<p>This will result in a state change comment being required for the Management group when transitioning through ‘Change Approved’;</p>
+<div class="wp-caption aligncenter" id="attachment_37760" style="width: 947px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Transition-Comment-Required.png"><img alt="SOLIDWORKS PDM User Comment Permissions" aria-describedby="caption-attachment-37760" height="438" src="/assets/images/Transition-Comment-Required.png" title="" width="937"/><p class="wp-caption-text" id="caption-attachment-37760"><noscript><img alt="SOLIDWORKS PDM User Comment Permissions" height="438" sizes="(max-width: 937px) 100vw, 937px" src="/assets/images/Transition-Comment-Required.png" title="" width="937"/></noscript></p></a> Change Approved</div>
+<h3>How to make a state change comments mandatory for a check-in</h3>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; [Workflow Name]
+<ul>
+<li>Select the State you would like to apply this requirement to
+<ul>
+<li>Permissions &gt; Select the User/Group
+<ul>
+<li>Check ‘Must enter state change comments’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_37761" style="width: 949px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Must-enter-version-comment.png"><img alt="Must enter state change comments" aria-describedby="caption-attachment-37761" height="509" src="/assets/images/Must-enter-version-comment.png" title="" width="939"/><p class="wp-caption-text" id="caption-attachment-37761"><noscript><img alt="Must enter state change comments" height="509" sizes="(max-width: 939px) 100vw, 939px" src="/assets/images/Must-enter-version-comment.png" title="" width="939"/></noscript></p></a> Must enter state change comments</div>
+<p>This will result in a version comments being required for the Engineering group when checking in to the ‘Approved’ State;</p>
+<div class="wp-caption aligncenter" id="attachment_37762" style="width: 1136px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/09/Must-enter-comment-on-check-in.png"><img alt="Version comments are required" aria-describedby="caption-attachment-37762" height="432" src="/assets/images/Must-enter-comment-on-check-in.png" title="" width="1126"/><p class="wp-caption-text" id="caption-attachment-37762"><noscript><img alt="Version comments are required" height="432" sizes="(max-width: 1126px) 100vw, 1126px" src="/assets/images/Must-enter-comment-on-check-in.png" title="" width="1126"/></noscript></p></a> Version comments are required</div>
+<h3>How can SOLIDWORKS PDM User Comment Permissions help improve our vault?</h3>
+<p>In my experience; making all comments important results in them all being unimportant…Previously, during a time when I was a vault administrator; I enabled the option that all state change comments were required.  I found this made the comments meaningless as it was just a requirement and users would put in the minimum information.  I worked around this using an overly complicated system of transition conditions, which allowed me to make comments required for specific transitions and it resulted in; a better file history with more meaningful comments.  With this new functionality, we have a simple solution, to apply importance to certain workflow actions which will result in a more complete and reliable document history.</p>
+<p>Another use of this functionality; when paired with the new revision table functionality added in SOLIDWORKS PDM 2018, we can ensure revision comments are added which can directly update the revision table within the drawing accordingly.</p>

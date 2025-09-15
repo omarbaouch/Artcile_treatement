@@ -1,0 +1,10 @@
+<p>Here is an interesting article from the Solidworks Knowledgebase which can address some issues when using eDrawings to view files.</p>
+<p><strong>What can cause eDrawings to launch but fail loading the file with “Unsupported file type” error when using View option (in button bar, history, notification) in Enterprise PDM?</strong><!--more--></p>
+<p>Go to the administrator application.<br/>
+Expand vault and right click on the ‘Users’ icon and choose Settings.<br/>
+Click on the ‘Viewers’ tab and click on the Installed Viewers for sldasm, sldprt, etc.<br/>
+On the bottom there is a ‘Path and arguments to viewer program;’ the path should be something like this<br/>
+C:\Program Files\Common Files\eDrawings2009\EModelViewer.exe”%1%”</p>
+<p style="text-align: center;"><a href="https://www.javelin-tech.com/blog/2011/08/epdm-unsupported-file-type/viewer-settings/" rel="attachment wp-att-2153"><img alt="" height="322" src="/assets/images/viewer-settings.jpg" title="viewer settings" width="322"/><noscript><img alt="" height="322" src="/assets/images/viewer-settings.jpg" title="viewer settings" width="322"/></noscript></a></p>
+<p>Make sure there is no SPACE before or trailing after the “%1%” argument. Also the error will manifest itself if there is no path filled in at all.</p>
+<p>Note that on a x64 system eDrawings is installed under C:\Program Files (x86)\….”</p>

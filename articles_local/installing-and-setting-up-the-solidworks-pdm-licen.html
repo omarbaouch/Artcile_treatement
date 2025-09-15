@@ -1,0 +1,27 @@
+<p>SOLIDWORKS PDM Standard and Professional versions use a License Manager to control access to their respective licenses.</p>
+<p>With SOLIDWORKS PDM Professional, installations are purchased separately. The number of installations purchased, dictates how many users can access PDM at any one time. With SOLIDWORKS PDM Standard, each license of SOLIDWORKS Professional or Premium, ships with one license of SOLIDWORKS PDM Standard.</p>
+<p>The SolidNetWork License Manager, is installed using the same Installation Manager for SOLIDWORKS. The option to install the SolidNetWork License Manager, is listed under Server Products, on the Welcome screen:</p>
+<p><img alt="" height="528" src="/assets/images/License-manager-600x528.jpg" title="" width="600"/><noscript><img alt="" height="528" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/License-manager-600x528.jpg" title="" width="600"/></noscript></p>
+<p>After pressing Next, finish the installation. Once SolidNetWork License Manager is installed open it and follow the steps below.</p>
+<ol>
+<li>Click <strong>Yes</strong>.</li>
+</ol>
+<p><img alt="" height="150" src="/assets/images/License-manager-1.jpg" title="" width="409"/><noscript><img alt="" height="150" src="/assets/images/License-manager-1.jpg" title="" width="409"/></noscript></p>
+<p>2. Enter the license server information and click next.</p>
+<p><img alt="" height="550" src="/assets/images/License-manager-2.jpg" title="" width="583"/><noscript><img alt="" height="550" src="/assets/images/License-manager-2.jpg" title="" width="583"/></noscript></p>
+<p>3. Add the serial number and contact information, then click next.</p>
+<p><img alt="" height="557" src="/assets/images/License-manager-3.jpg" title="" width="590"/><noscript><img alt="" height="557" src="/assets/images/License-manager-3.jpg" title="" width="590"/></noscript></p>
+<p>4. You should see a pop-up dialog box with successful activation message.</p>
+<ul>
+<li>If you are installing SOLIDWORKS PDM Professional, you will likely only have one serial number for PDM.</li>
+<li>With SOLIDWORKS PDM Standard you will also have only one serial number, even if you have a network license of SOLIDWORKS Professional or Premium.</li>
+<li>If you have standalone licenses of SOLIDWORKS Professional or Premium, you may need to enter serial numbers for each seat of SOLIDWORKS.</li>
+</ul>
+<blockquote><p>Please note: Your SOLIDWORKS PDM Standard or Professional serial number, is not the same, as your SOLIDWORKS serial number.</p>
+<p>One further note: for SOLIDWORKS PDM Standard installations, you can either install a separate License Manager for each standalone installation of SOLIDWORKS; or you can install the License Manager on one computer/server that all client can access.</p></blockquote>
+<p>If you already use the SolidNetWork License Manager. for SOLIDWORKS or one of its add-ins (e.g. SOLIDWORKS Simulation), you can modify that installation and <a href="https://www.javelin-tech.com/blog/2015/06/adding-epdm-license-existing-solidnetwork-license-manager-video/" rel="noopener noreferrer" target="_blank">add the SOLIDWORKS PDM serial numbers</a>.</p>
+<p>Once the installation is complete, you next need to specify the location of the SolidNetWork License Manager. You will normally be prompted to do this when the installation finishes; but you can also do this from the License node of the SOLIDWORKS PDM Administration, shown below, or by launching the SolidNetWork License Manager application from Windows.</p>
+<div class="wp-caption aligncenter" id="attachment_28416" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/License-Server.png"><img alt="Adding License Server" aria-describedby="caption-attachment-28416" height="509" src="/assets/images/License-Server-780x509.png" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28416"><noscript><img alt="Adding License Server" height="509" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/License-Server-780x509.png" title="" width="780"/></noscript></p></a> Adding License Server</div>
+<p>The format for entering the server, into the License Manager, is port number@server name. The default port number is 25734, but you can specify any port that is open.</p>
+<p>Whichever port you use, should not be blocked on client or the License server side. This may require adding exceptions to security software, such as firewalls. If the port is blocked the client will not be able to retrieve a license. A <a href="https://www.javelin-tech.com/blog/2015/06/perform-telnet-test-video/" rel="noopener noreferrer" target="_blank">Telnet test, </a>to that port will tell you whether that port is blocked. There is a blog article on the Javelin website, which deals with <a href="https://www.javelin-tech.com/blog/2015/10/solidnetwork-license-snl-manager-troubleshooting/" rel="noopener noreferrer" target="_blank">connection issues</a>, relating to the License Manager.</p>
+<p>Now that the SolidNetWork License Manager has been installed, you can proceed with the installation of SOLIDWORKS PDM <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-server-installation-updated/" rel="noopener noreferrer" target="_blank">Server</a> and <a href="https://www.javelin-tech.com/blog/2015/11/solidworks-pdm-standard-client-installation/" rel="noopener noreferrer" target="_blank">Client</a>.</p>

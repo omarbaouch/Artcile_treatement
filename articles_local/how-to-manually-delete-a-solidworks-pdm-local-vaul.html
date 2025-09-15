@@ -1,0 +1,47 @@
+<p>Rarely, it may not be possible to delete <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> Local Vault by the standard method of right-clicking on it and selecting Delete File Vault View.</p>
+<div class="wp-caption aligncenter" id="attachment_70435" style="width: 377px"><img alt="Delete SOLIDWORKS PDM Local Vault" aria-describedby="caption-attachment-70435" height="146" src="/assets/images/Delete-View-Context-Menu.jpg" title="" width="367"/><p class="wp-caption-text" id="caption-attachment-70435"><noscript><img alt="Delete SOLIDWORKS PDM Local Vault" height="146" src="/assets/images/Delete-View-Context-Menu.jpg" title="" width="367"/></noscript> Normal Method of Deleting Vault View</p></div>
+<p>Typically, you will encounter an error that the vault is created by a different Windows login.</p>
+<div class="wp-caption aligncenter" id="attachment_70434" style="width: 408px"><img alt="Error Message" aria-describedby="caption-attachment-70434" height="172" src="/assets/images/Delete-View-Error.jpg" title="" width="398"/><p class="wp-caption-text" id="caption-attachment-70434"><noscript><img alt="Error Message" height="172" src="/assets/images/Delete-View-Error.jpg" title="" width="398"/></noscript> Delete Vault Error Message</p></div>
+<p>If the other login or an administrator account is available, logging into one of these accounts may resolve the issue. If not, it is possible to modify the desktop.ini file that stores the creator of the vault view.</p>
+<p> </p>
+<blockquote><p><strong>Caution should be taken to ensure all files are checked in first, if possible. After the below processes are completed, files in the Local Vault View will be deleted.</strong></p></blockquote>
+<h2>Manual Deletion SOLIDWORKS PDM Process</h2>
+<p>The Manual delete SOLIDWORKS PDM Local Vault process involves modifying the Windows Registry,</p>
+<blockquote><p><strong>If you are not familiar with working within the Registry, you should not attempt this manual deletion process. Irreparable damage to the operating system or installed software can occur, if some areas are edited or deleted. </strong></p></blockquote>
+<p>Because of this, I have purposely omitted the steps, to access the areas mentioned in this article.</p>
+<p>The first step is to delete the following keys depending on what “Attach Type” the vault was as. Typically this depends on level of Administrator rights a user has to the machine when setting up the Vault View. However if you are unsure of the Vault Setup history and typically an Administrator runs the View Setup I would go through both the User and Admin’s registry on that machine to ensure these locations are cleaned up.</p>
+<ul>
+<li>Only for me
+<ul>
+<li>“HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[VAULTNAME]”</li>
+<li>“HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\ConisioAdmin\Servers\[COMPUTERNAME]\FileVaults\[VAULTNAME]”</li>
+</ul>
+</li>
+<li>For all users on this computer
+<ul>
+<li>“HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]”</li>
+<li>“HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\[VAULTNAME]”</li>
+</ul>
+</li>
+</ul>
+<p>Note – [Vault Name] refers to the name of the Vault that is to be deleted. In my example, the Vault is called “Javelin Vault”.</p>
+<p> </p>
+<div class="wp-caption aligncenter" id="attachment_70437" style="width: 343px"><img alt="Deleting Reg Key" aria-describedby="caption-attachment-70437" height="320" src="/assets/images/Registry-Delete.jpg" title="" width="333"/><p class="wp-caption-text" id="caption-attachment-70437"><noscript><img alt="Deleting Reg Key" height="320" src="/assets/images/Registry-Delete.jpg" title="" width="333"/></noscript> Deleting Reg Key</p></div>
+<p>After deleting these keys, close all Windows Explorer Windows and start a Windows Command Prompt. In the Command prompt enter “RD “c:\path_to_vault_view” /s” hit enter and then confirm with “Y” then enter.</p>
+<div class="wp-caption aligncenter" id="attachment_70438" style="width: 517px"><img alt="Remove Directory through Command Prompt" aria-describedby="caption-attachment-70438" height="268" src="/assets/images/RD-Vault-View.jpg" title="" width="507"/><p class="wp-caption-text" id="caption-attachment-70438"><noscript><img alt="Remove Directory through Command Prompt" height="268" src="/assets/images/RD-Vault-View.jpg" title="" width="507"/></noscript> Remove Directory through Command Prompt</p></div>
+<p>Alternatively, in Windows Command Prompt, navigate to the Local View: CD “c:\path_to_vault_view”</p>
+<div class="wp-caption aligncenter" id="attachment_70442" style="width: 517px"><img alt="Navigating to Local View" aria-describedby="caption-attachment-70442" height="268" src="/assets/images/CD-Vaut-View-2.jpg" title="" width="507"/><p class="wp-caption-text" id="caption-attachment-70442"><noscript><img alt="Navigating to Local View" height="268" src="/assets/images/CD-Vaut-View-2.jpg" title="" width="507"/></noscript> Navigating to Local View</p></div>
+<p>and change the attributes of desktop.ini using:  “attrib –s –h –r desktop.ini”, then type “Del desktop.ini” and hit enter.</p>
+<div class="wp-caption aligncenter" id="attachment_70441" style="width: 517px"><img alt="Changing Attribute for Desktop.ini" aria-describedby="caption-attachment-70441" height="268" src="/assets/images/del-desktop-ini.jpg" title="" width="507"/><p class="wp-caption-text" id="caption-attachment-70441"><noscript><img alt="Changing Attribute for Desktop.ini" height="268" src="/assets/images/del-desktop-ini.jpg" title="" width="507"/></noscript> Changing Attribute for Desktop.ini</p></div>
+<p>Now when you navigate to the vault view, you will now see that the vault folder now appears as a normal Explorer Folder (that you can now delete). In some cases, you may need to restart Windows Explorer, in the Windows Task Manager, in order to delete the Local View.</p>
+<div class="wp-caption aligncenter" id="attachment_50795" style="width: 444px"><img alt="" aria-describedby="caption-attachment-50795" height="546" src="/assets/images/06-01-2021-03-57-05.png" title="" width="434"/><p class="wp-caption-text" id="caption-attachment-50795"><noscript><img alt="" height="546" src="/assets/images/06-01-2021-03-57-05.png" title="" width="434"/></noscript> Restarting Windows Explorer In Windows TasK Manager</p></div>
+<h2>Editing Vault Creator to gain ownership of the “Desktop.ini” file</h2>
+<p>If the above didn’t work, we can edit the “desktop.ini” file to give you ownership of the vault view. Inside every vault is a Desktop.ini file, a system configuration file that is used to create the unique folder interface inside of PDM. It stores information about the vault view, including the Windows user that created it.</p>
+<blockquote><p><strong>Improperly editing these files can damage your local vault view, please read carefully before making any changes.</strong></p></blockquote>
+<p>This is a hidden file that is not typically visible through File Explorer/Vault View, even with hidden items visible. This can be accessed through the command prompt by entering the full folder path for the root of the vault followed by desktop.ini or uninstalling PDM and then viewing the folder.</p>
+<div class="wp-caption aligncenter" id="attachment_70443" style="width: 517px"><img alt="Command Prompt Code" aria-describedby="caption-attachment-70443" height="268" src="/assets/images/Desktop-file.jpg" title="" width="507"/><p class="wp-caption-text" id="caption-attachment-70443"><noscript><img alt="Command Prompt Code" height="268" src="/assets/images/Desktop-file.jpg" title="" width="507"/></noscript> Accessing a Desktop.ini</p></div>
+<p>This should open the Desktop.ini in Notepad. After updating the desktop.ini, save and try to delete the vault view again.</p>
+<div class="wp-caption aligncenter" id="attachment_70444" style="width: 843px"><img alt="Correcting AttachedBy User" aria-describedby="caption-attachment-70444" height="410" src="/assets/images/desktop-ini-file.jpg" title="" width="833"/><p class="wp-caption-text" id="caption-attachment-70444"><noscript><img alt="Correcting AttachedBy User" height="410" sizes="(max-width: 833px) 100vw, 833px" src="/assets/images/desktop-ini-file.jpg" title="" width="833"/></noscript> Correcting AttachedBy User</p></div>
+<p> </p>
+<p>When deleting a vault view, the AttachedBy value from the Desktop.ini is queried against the currently logged-in Windows user. This value can be manually updated to the currently logged-in user. If you are unsure of your full login name, <strong>whoami</strong> in the command prompt can be used to find your Windows login and domain.</p>
+<div class="wp-caption aligncenter" id="attachment_70445" style="width: 517px"><img alt="Finding Windows Login" aria-describedby="caption-attachment-70445" height="268" src="/assets/images/whoami.jpg" title="" width="507"/><p class="wp-caption-text" id="caption-attachment-70445"><noscript><img alt="Finding Windows Login" height="268" src="/assets/images/whoami.jpg" title="" width="507"/></noscript> Finding Windows Login</p></div>

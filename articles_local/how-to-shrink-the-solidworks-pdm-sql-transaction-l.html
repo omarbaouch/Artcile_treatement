@@ -1,0 +1,26 @@
+<p>Within Microsoft SQL, every SOLIDWORKS PDM vault database has a transaction log associated with it that records the modifications to the database.  In some scenarios, if this log grows large it can cause performance issues within SQL and the vault.  If you’ve recently changed the recovery model for the SOLIDWORKS PDM vault <a href="https://www.javelin-tech.com/blog/?p=43225">DB from full to simple</a>, we can reduce the size of the transaction log with a shrink action.</p>
+<h2>How to shrink the SQL transaction log</h2>
+<ul>
+<li>Login to the SQL Server Management Studio using the <strong>sa</strong> (system administrator) account;</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43226" style="width: 487px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recover-Model-Login-to-SSMS.png"><img alt="SQL Server Management Studio Login" aria-describedby="caption-attachment-43226" height="315" src="/assets/images/Recover-Model-Login-to-SSMS.png" title="" width="477"/><p class="wp-caption-text" id="caption-attachment-43226"><noscript><img alt="SQL Server Management Studio Login" height="315" src="/assets/images/Recover-Model-Login-to-SSMS.png" title="" width="477"/></noscript></p></a> SQL Server Management Studio Login</div></p>
+<ul>
+<li>Expand the <strong>Databases</strong> folder
+<ul>
+<li>Select the vault DB
+<ul>
+<li>Right-click
+<ul>
+<li><strong>Tasks</strong> &gt; <strong>Shrink</strong> &gt; <strong>Files</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43253" style="width: 828px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Shrink-Log-Shrink.png"><img alt="Shrink Transaction Log - Tasks &gt; Shrink &gt; Files" aria-describedby="caption-attachment-43253" height="493" src="/assets/images/Shrink-Log-Shrink.png" title="" width="818"/><p class="wp-caption-text" id="caption-attachment-43253"><noscript><img alt="Shrink Transaction Log - Tasks &gt; Shrink &gt; Files" height="493" sizes="(max-width: 818px) 100vw, 818px" src="/assets/images/Shrink-Log-Shrink.png" title="" width="818"/></noscript></p></a> Shrink Transaction Log – Tasks &gt; Shrink &gt; Files</div></p>
+<ul>
+<li>For <em>File Type</em> select <strong>Log</strong>, and click <b>OK</b></li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43254" style="width: 700px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Shrink-Log-File-Type.png"><img alt="Shrink Transaction Log" aria-describedby="caption-attachment-43254" height="625" src="/assets/images/Shrink-Log-File-Type.png" title="" width="690"/><p class="wp-caption-text" id="caption-attachment-43254"><noscript><img alt="Shrink Transaction Log" height="625" sizes="(max-width: 690px) 100vw, 690px" src="/assets/images/Shrink-Log-File-Type.png" title="" width="690"/></noscript></p></a> Shrink Transaction Log</div></p>

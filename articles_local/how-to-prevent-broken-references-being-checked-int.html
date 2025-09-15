@@ -1,0 +1,31 @@
+<p>Nobody enjoys being greeted by this error message when opening an assembly in SOLIDWORKS.</p>
+<div class="wp-caption aligncenter" id="attachment_28818" style="width: 422px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/OpenSummary.jpg"><img alt="Open Summary" aria-describedby="caption-attachment-28818" height="204" src="/assets/images/OpenSummary.jpg" title="" width="412"/><p class="wp-caption-text" id="caption-attachment-28818"><noscript><img alt="Open Summary" height="204" sizes="(max-width: 412px) 100vw, 412px" src="/assets/images/OpenSummary.jpg" title="" width="412"/></noscript></p></a> Open Summary</div>
+<p>It usually means there’s a broken reference…</p>
+<div class="wp-caption aligncenter" id="attachment_28819" style="width: 540px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/UnableToLocate.jpg"><img alt="Broken reference" aria-describedby="caption-attachment-28819" height="348" src="/assets/images/UnableToLocate.jpg" title="" width="530"/><p class="wp-caption-text" id="caption-attachment-28819"><noscript><img alt="Broken reference" height="348" sizes="(max-width: 530px) 100vw, 530px" src="/assets/images/UnableToLocate.jpg" title="" width="530"/></noscript></p></a> Broken reference</div>
+<p>Yup definitely broken.</p>
+<p>Within a SOLIDWORKS PDM environment this can happen when migrating files via explorer into the vault.  When dragged into the vault, no reference are evaluated.  This allows you to add files in any order you wish.</p>
+<blockquote><p>They key step is the initial check-in.  When the files are checked into the vault the references are written to the database.</p></blockquote>
+<p>If everything is accounted for at this point then the vault will do its magic and maintain the file references as they are moved or renamed within the vault.</p>
+<p>The initial check-in crucial…the vault can only track what it can account for therefore broken references happen if the assembly reference is not found or is outside the vault at the time of initial check in.</p>
+<p>The good news is that there’s a warning when this is about to happen;</p>
+<div class="wp-caption aligncenter" id="attachment_28823" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Check-In_Warning.jpg"><img alt="File not found" aria-describedby="caption-attachment-28823" height="299" src="/assets/images/Check-In_Warning-780x299.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28823"><noscript><img alt="File not found" height="299" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/Check-In_Warning-780x299.jpg" title="" width="780"/></noscript></p></a> File not found</div>
+<p>Or the following message:</p>
+<div class="wp-caption aligncenter" id="attachment_28822" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/OutsidePDMWarning.jpg"><img alt="Outside SOLIDWORKS PDM" aria-describedby="caption-attachment-28822" height="299" src="/assets/images/OutsidePDMWarning-780x299.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28822"><noscript><img alt="Outside SOLIDWORKS PDM" height="299" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/OutsidePDMWarning-780x299.jpg" title="" width="780"/></noscript></p></a> Outside SOLIDWORKS PDM</div>
+<p>With the appropriate permissions we can turn this from a warning into a STOP action via the PDM  Administration Tool;</p>
+<ul>
+<li>Administration Tool &gt; [Vault Name] &gt; Groups &gt; [Group Name] &gt; Warnings
+<ul>
+<li>Affected Option = Check In
+<ul>
+<li>Check the boxes for ‘File not found.’ and ‘Outside SOLIDWORKS PDM’</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28824" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/WarningsStop.jpg"><img alt="Warnings Options" aria-describedby="caption-attachment-28824" height="656" src="/assets/images/WarningsStop-780x656.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28824"><noscript><img alt="Warnings Options" height="656" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/WarningsStop-780x656.jpg" title="" width="780"/></noscript></p></a> Warnings Options</div>
+<p>Thus stopping an assembly with broken references being references being checked into the vault;</p>
+<div class="wp-caption aligncenter" id="attachment_28826" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/NoCheckIn.jpg"><img alt="Check in blocked" aria-describedby="caption-attachment-28826" height="299" src="/assets/images/NoCheckIn-780x299.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28826"><noscript><img alt="Check in blocked" height="299" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/NoCheckIn-780x299.jpg" title="" width="780"/></noscript></p></a> Check in blocked</div>
+<p>I strongly recommend implementing this as a preventative measure to adding assemblies/parts/drawings with broken references.</p>
+<h3>Interested in further SOLIDWORKS PDM Training?</h3>
+<p><a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">Contact us about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

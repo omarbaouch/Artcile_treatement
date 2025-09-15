@@ -1,0 +1,32 @@
+<p style="font-weight: 400;">A much-anticipated feature in the 2023 release of SOLIDWORKS PDM Professional is <a href="https://help.solidworks.com/2023/English/WhatsNew/c_wn2023_install_add_serial_numbers.htm" rel="noopener nofollow" target="_blank">logging file retrieval operations</a>. That is, PDM Administrators can now track and export a list of every file in the vault that is downloaded from the archive server to the local view of a client machine, Web2 server, or Web API server. This allows <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/" rel="noopener" target="_blank">PDM Administrators</a> to track who is retrieving which files, and when they are doing it. This enabled PDM Administrators to better manage their company’s intellectual property. Included in each entry to the Get log is:</p>
+<ul>
+<li>Date/Time</li>
+<li>Description <em>(Get initiated from PDM Client, Web2, or Web API Server)</em></li>
+<li>Destination Machine name</li>
+<li>Destination IP Address</li>
+<li>User</li>
+<li>Document ID</li>
+<li>Version</li>
+<li>Document Path</li>
+<li>Archive Server</li>
+</ul>
+<p style="font-weight: 400;">By default, new 2023 PDM Professional vaults (and those upgraded to 2023), DO NOT have Get logging enabled. To enable Get Logging:</p>
+<ol>
+<li style="font-weight: 400;">Open the PDM Administration tool (Start &gt; SOLIDWORKS PDM &gt; Administration)..</li>
+<li style="font-weight: 400;">Right-click on the PDM Professional vault and select ‘Properties’.. <img alt="vault properties in SOLIDWORKS PDM Professional logging file retrieval" height="567" src="/assets/images/vault_properties.png" title="" width="636"/><noscript><img alt="vault properties in SOLIDWORKS PDM Professional logging file retrieval" height="567" sizes="(max-width: 636px) 100vw, 636px" src="/assets/images/vault_properties.png" title="" width="636"/></noscript></li>
+<li>
+<p style="font-weight: 400;">  Enter the PDM System Administrator (admin) credentials..<br/>
+<em>Get Logging can be performed by any PDM Administrator that has the ‘File vault management’ Administrative permission.<img alt="PDM Administrator that has the ‘File vault management’ Administrative permission" height="837" src="/assets/images/file_vault_management.png" title="" width="1052"/><noscript><img alt="PDM Administrator that has the ‘File vault management’ Administrative permission" height="837" sizes="(max-width: 1052px) 100vw, 1052px" src="/assets/images/file_vault_management.png" title="" width="1052"/></noscript></em></p>
+<ol start="4">
+<li style="font-weight: 400;">Under ‘Logging Operations’, check the ‘Get’ checkbox. Hit ‘X’ to close the Properties dialog.. <img alt="enable get log in PDM logging file retrieval" height="535" src="/assets/images/enable_get_log.png" title="" width="848"/><noscript><img alt="enable get log in PDM logging file retrieval" height="535" sizes="(max-width: 848px) 100vw, 848px" src="/assets/images/enable_get_log.png" title="" width="848"/></noscript><br/>
+<em>This enables logging of the Get operation for the vault on all archive servers.</em></li>
+</ol>
+</li>
+</ol>
+<p style="font-weight: 400;">To view and export the file retrieval log:</p>
+<ol>
+<li style="font-weight: 400;">Open the PDM Administration tool (Start &gt; SOLIDWORKS PDM &gt; Administration)..</li>
+<li style="font-weight: 400;">Right-click on the PDM Professional vault and select ‘Show the Get Log’.. <img alt="get log with arrow" height="528" src="/assets/images/show_the_get_log.png" title="" width="600"/><noscript><img alt="get log with arrow" height="528" src="/assets/images/show_the_get_log.png" title="" width="600"/></noscript></li>
+<li style="font-weight: 400;">Select the ‘Save’ icon in the toolbar above the log.. <img alt="export get log in solidworks pdm" height="667" src="/assets/images/export_get_log.png" title="" width="1127"/><noscript><img alt="export get log in solidworks pdm" height="667" sizes="(max-width: 1127px) 100vw, 1127px" src="/assets/images/export_get_log.png" title="" width="1127"/></noscript></li>
+</ol>
+<p style="font-weight: 400;"><em>Note: logging only begins once the ‘Get’ checkbox is selected, so past file retrieval transactions do not exist and will not show in the Get log after it is enabled.</em></p>

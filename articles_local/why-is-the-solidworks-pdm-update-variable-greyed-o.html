@@ -1,0 +1,35 @@
+<p>A question I run into often while on tech support is:</p>
+<blockquote><p><em>“Why is the SOLIDWORKS PDM <strong>Update Variable</strong> checkbox greyed out when using the <a href="https://www.javelin-tech.com/blog/2016/05/solidworks-pdm-file-revision/"><strong>Set Revision tool</strong></a>?”</em></p></blockquote>
+<div class="wp-caption aligncenter" id="attachment_35267" style="width: 1058px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision.png"><img alt="SOLIDWORKS PDM Update Variable disabled" aria-describedby="caption-attachment-35267" height="458" src="/assets/images/Set-Revision.png" title="" width="1048"/><p class="wp-caption-text" id="caption-attachment-35267"><noscript><img alt="SOLIDWORKS PDM Update Variable disabled" height="458" sizes="(max-width: 1048px) 100vw, 1048px" src="/assets/images/Set-Revision.png" title="" width="1048"/></noscript></p></a> Set Revision – Update Variable Greyed Out</div>
+<p>The minimum permissions required to use <em><strong>Set Revision</strong></em> are;</p>
+<ul>
+<li><strong>Folder Permission</strong>
+<ul>
+<li>Set Revision</li>
+</ul>
+</li>
+<li><strong>State Permission</strong>
+<ul>
+<li>Set Revision</li>
+</ul>
+</li>
+</ul>
+<p>But to also update the variable will require;</p>
+<ul>
+<li><strong>Folder Permission</strong>
+<ul>
+<li>Check out file</li>
+</ul>
+</li>
+<li><strong>State Permission</strong>
+<ul>
+<li>Check out file</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_35270" style="width: 1230px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Permissions.png"><img alt="Set Revision - Update Variable - Required Permissions" aria-describedby="caption-attachment-35270" height="624" src="/assets/images/Set-Revision-Permissions-1220x624.png" title="" width="1220"/><p class="wp-caption-text" id="caption-attachment-35270"><noscript><img alt="Set Revision - Update Variable - Required Permissions" height="624" sizes="(max-width: 1220px) 100vw, 1220px" src="/assets/images/Set-Revision-Permissions-1220x624.png" title="" width="1220"/></noscript></p></a> Set Revision – Update Variable – Required Permissions</div>
+<p>With the <em>Check out file</em> permission added, you’ll be able to also update the variable when using <strong>Set Revision</strong>;</p>
+<div class="wp-caption aligncenter" id="attachment_35271" style="width: 1058px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2018/03/Set-Revision-Complete.png"><img alt="Set Revision - Update Variable - Complete" aria-describedby="caption-attachment-35271" height="458" src="/assets/images/Set-Revision-Complete.png" title="" width="1048"/><p class="wp-caption-text" id="caption-attachment-35271"><noscript><img alt="Set Revision - Update Variable - Complete" height="458" sizes="(max-width: 1048px) 100vw, 1048px" src="/assets/images/Set-Revision-Complete.png" title="" width="1048"/></noscript></p></a> Set Revision</div>
+<p>If you’re of the mindset that the <strong>Check out file</strong> permissions shouldn’t be necessary to update the variable, you’re not alone.  There’s an existing enhancement request to have this requirement removed;</p>
+<blockquote><p><strong>SPR# 898366</strong>: ‘Set Revision’ feature should not require ‘Check Out File’ permission to increment revision without update to variable (data card).</p></blockquote>
+<p>If this sounds appealing, you can vote on this via the <a href="https://www.javelin-tech.com/blog/2010/11/enhancement-requests/">SOLIDWORKS Customer Portal</a>.</p>

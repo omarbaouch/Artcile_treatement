@@ -1,0 +1,28 @@
+<p>With <a href="https://www.javelin-tech.com/blog/?tag=solidworks-pdm-professional">SOLIDWORKS PDM Professional</a>, <a href="https://www.javelin-tech.com/blog/?tag=solidworks-pdm-standard">SOLIDWORKS PDM Standard</a>, and <a href="https://www.javelin-tech.com/blog/wp-admin/edit.php?tag=sql-management-studio">SQL Management Studio</a> by default within Microsoft SQL, the recovery model option for any new databases is set to full.  In some instances this can cause problems later as the full recovery model; causes the transaction log to grow exponentially as regular database backups are captured.  We have seen instances in the past where the transaction log continually grows to a point where it’s consumed all the available disk space and causes performance issues within SQL and the vault.  If you are <a href="https://www.javelin-tech.com/blog/2019/03/solidworks-pdm-backup-process/">backing up the vault DB daily</a> we recommend the recovery model is set to simple, to prevent the transaction log from getting too large.</p>
+<h2>How to verify and change the Recovery Model option of the DB</h2>
+<ul>
+<li>Log in to the SQL Server Management Studio using the <strong>sa</strong> (system administrator) account;</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43226" style="width: 487px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recover-Model-Login-to-SSMS.png"><img alt="Log In to the server" aria-describedby="caption-attachment-43226" height="315" src="/assets/images/Recover-Model-Login-to-SSMS.png" title="" width="477"/><p class="wp-caption-text" id="caption-attachment-43226"><noscript><img alt="Log In to the server" height="315" src="/assets/images/Recover-Model-Login-to-SSMS.png" title="" width="477"/></noscript></p></a> Log In to the server</div></p>
+<ul>
+<li>Expand the <strong>Databases</strong> folder
+<ul>
+<li>Select the vault DB
+<ul>
+<li>Right-click &gt; <strong>Properties</strong>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43227" style="width: 390px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recovery-Model-DB-Properties.png"><img alt="Database Properties" aria-describedby="caption-attachment-43227" height="457" src="/assets/images/Recovery-Model-DB-Properties.png" title="" width="380"/><p class="wp-caption-text" id="caption-attachment-43227"><noscript><img alt="Database Properties" height="457" src="/assets/images/Recovery-Model-DB-Properties.png" title="" width="380"/></noscript></p></a> Database Properties</div></p>
+<ul>
+<li>Select <strong>Options</strong> and the <strong>Recovery Model</strong> should be listed;</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43228" style="width: 700px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recovery-Model-Full.png"><img alt="Recovery Model Options" aria-describedby="caption-attachment-43228" height="625" src="/assets/images/Recovery-Model-Full.png" title="" width="690"/><p class="wp-caption-text" id="caption-attachment-43228"><noscript><img alt="Recovery Model Options" height="625" sizes="(max-width: 690px) 100vw, 690px" src="/assets/images/Recovery-Model-Full.png" title="" width="690"/></noscript></p></a> Recovery Model Options</div></p>
+<ul>
+<li>And if necessary, we can switch it from <strong>Full</strong> to <strong>Simple</strong> via the drop-down, then hit <strong>OK</strong>;</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43229" style="width: 700px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/09/Recovery-Model-Simple.png"><img alt="Changing the DB Recovery Model to Simple" aria-describedby="caption-attachment-43229" height="625" src="/assets/images/Recovery-Model-Simple.png" title="" width="690"/><p class="wp-caption-text" id="caption-attachment-43229"><noscript><img alt="Changing the DB Recovery Model to Simple" height="625" sizes="(max-width: 690px) 100vw, 690px" src="/assets/images/Recovery-Model-Simple.png" title="" width="690"/></noscript></p></a> Changing the DB Recovery Model to Simple</div></p>
+<blockquote><p><strong>NOTE</strong>: These recommendations are based on the SOLIDWORKS PDM uses of SQL when regular backups are performed.  More information regarding the Recovery Model and transaction log options can be found within the SQL documentation.</p></blockquote>
+<p>If your Recovery Model has been set to full for some time, and you’d like to clear up some storage space; a shrink of the transaction log may be required.</p>

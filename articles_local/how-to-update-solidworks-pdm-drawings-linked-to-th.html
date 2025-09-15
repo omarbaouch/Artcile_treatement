@@ -1,0 +1,16 @@
+<p><a href="https://www.javelin-tech.com/blog/?p=30169">In a previous article I discussed the use of $PRPSHEET</a> to create a link between Part or Assembly Properties and a Drawing. The article described how to create the link, purely through SOLIDWORKS, and how to use <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> to update the link.</p>
+<p>While there are advantages to having notes in a drawing linked to Part and Assembly Properties, there is one shortcoming. In order for the links to update, the Drawing needs to be opened and saved. In this article we will look at how <strong>SOLIDWORKS Task Scheduler can be used to bulk update these Drawings</strong>.</p>
+<h3>What is SOLIDWORKS Task Scheduler?</h3>
+<p>SOLIDWORKS Task Scheduler, is a standalone application, that is used to schedule SOLIDWORKS tasks. The Update Task, will open and save documents, in SOLIDWORKS, in order to update the SOLIDWORKS files.</p>
+<div class="wp-caption aligncenter" id="attachment_31091" style="width: 406px"><img alt="SOLIDWORKS Task Scheduler" aria-describedby="caption-attachment-31091" height="213" src="/assets/images/Task-Scheduler.png" title="" width="396"/><p class="wp-caption-text" id="caption-attachment-31091"><noscript><img alt="SOLIDWORKS Task Scheduler" height="213" sizes="(max-width: 396px) 100vw, 396px" src="/assets/images/Task-Scheduler.png" title="" width="396"/></noscript> SOLIDWORKS Task Scheduler</p></div>
+<h3>Update Files Task</h3>
+<p>This task, can be used to update Drawings, that use $PRPSHEET. These updates are required, to reflect changes made to the referenced Part or Assembly Properties.</p>
+<p>Individual files can be updated or a folder(s) that contain files to updated, can be specified. The start date and time for the task to run needs to defined and the task can be scheduled to run daily, weekly or monthly.</p>
+<div class="wp-caption aligncenter" id="attachment_31094" style="width: 470px"><img alt="Update SOLIDWORKS PDM Drawing $PRPSHEET" aria-describedby="caption-attachment-31094" height="447" src="/assets/images/Uodate-File-Menu.png" title="" width="460"/><p class="wp-caption-text" id="caption-attachment-31094"><noscript><img alt="Update SOLIDWORKS PDM Drawing $PRPSHEET" height="447" sizes="(max-width: 460px) 100vw, 460px" src="/assets/images/Uodate-File-Menu.png" title="" width="460"/></noscript> Update Task</p></div>
+<h3>For Vaulted Drawings</h3>
+<p>If the Drawings are in a PDM Vault, the following must be done, before running the Update Files task.</p>
+<ul>
+<li>Make sure that all the drawings to be updated are checked out. Remember an entire folder can be checked. Also, PDM Searches can be used to find the Drawings, that are known to need updating.</li>
+<li>In SOLIDWORKS, ensure that the SOLIDWORKS PDM Client add-in is set to be enabled at start-up.</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_31095" style="width: 426px"><img alt="SOLIDWORKS Add-ins" aria-describedby="caption-attachment-31095" height="226" src="/assets/images/PDM-Add-in.png" title="" width="416"/><p class="wp-caption-text" id="caption-attachment-31095"><noscript><img alt="SOLIDWORKS Add-ins" height="226" sizes="(max-width: 416px) 100vw, 416px" src="/assets/images/PDM-Add-in.png" title="" width="416"/></noscript> SOLIDWORKS Add-ins</p></div>

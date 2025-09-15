@@ -1,0 +1,56 @@
+<p>If the SOLIDWORKS PDM sa password is lost or forgotten it can be <a href="https://www.javelin-tech.com/blog/2013/05/epdm-resetting-sa-password/">reset using </a><a href="https://www.javelin-tech.com/blog/2013/05/epdm-resetting-sa-password/">th</a><a href="https://www.javelin-tech.com/blog/2013/05/epdm-resetting-sa-password/">ese steps</a>.  Whenever there is a change to the account password, there is a few places within the vault settings where it needs to be updated:</p>
+<h3>Archive Server Settings</h3>
+<ul>
+<li>On the archive server host, open the Archive Server Configuration Tool
+<ul>
+<li>Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Archive Server Configuration</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<div class="wp-caption aligncenter" id="attachment_28848" style="width: 316px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/ArchiveServerConfiguration.jpg"><img alt="Archive Server Configuration" aria-describedby="caption-attachment-28848" height="347" src="/assets/images/ArchiveServerConfiguration.jpg" title="" width="306"/><p class="wp-caption-text" id="caption-attachment-28848"><noscript><img alt="Archive Server Configuration" height="347" sizes="(max-width: 306px) 100vw, 306px" src="/assets/images/ArchiveServerConfiguration.jpg" title="" width="306"/></noscript></p></a> Archive Server Configuration</div>
+<ul>
+<li>Tools &gt; Default Settings</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28868" style="width: 696px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/ToolsDefaultSetting.jpg"><img alt="Archive Server Default Settings" aria-describedby="caption-attachment-28868" height="493" src="/assets/images/ToolsDefaultSetting.jpg" title="" width="686"/><p class="wp-caption-text" id="caption-attachment-28868"><noscript><img alt="Archive Server Default Settings" height="493" sizes="(max-width: 686px) 100vw, 686px" src="/assets/images/ToolsDefaultSetting.jpg" title="" width="686"/></noscript></p></a> Archive Server Default Settings</div>
+<ul>
+<li>Login &gt; ‘SQL Login’ &gt; Change &gt; Update the password &gt; Hit ‘OK’
+<ul>
+<li>Note; The password fields are always blank, regardless if there was password previously</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28867" style="width: 800px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/UpdatePasswordsArchive.jpg"><img alt="Enter the SOLIDWORKS PDM sa password" aria-describedby="caption-attachment-28867" height="490" src="/assets/images/UpdatePasswordsArchive.jpg" title="" width="790"/><p class="wp-caption-text" id="caption-attachment-28867"><noscript><img alt="Enter the SOLIDWORKS PDM sa password" height="490" sizes="(max-width: 790px) 100vw, 790px" src="/assets/images/UpdatePasswordsArchive.jpg" title="" width="790"/></noscript></p></a> Change SQL User Login</div>
+<ul>
+<li>Still within the Archive Server Settings…This Computer &gt; Archives &gt; Right-Click [Vault name] &gt; Properties</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28869" style="width: 696px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/ArchiveServerSettings_Vault.jpg"><img alt="Vault Properties" aria-describedby="caption-attachment-28869" height="493" src="/assets/images/ArchiveServerSettings_Vault.jpg" title="" width="686"/><p class="wp-caption-text" id="caption-attachment-28869"><noscript><img alt="Vault Properties" height="493" sizes="(max-width: 686px) 100vw, 686px" src="/assets/images/ArchiveServerSettings_Vault.jpg" title="" width="686"/></noscript></p></a> Vault Properties</div>
+<ul>
+<li>Login &gt; <strong>IF ‘Use default SQL login’ is unchecked</strong> &gt; Change &gt; Update Password &gt; OK &gt; Apply</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28870" style="width: 742px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/ArchiveServerSettings_Vault_Password.jpg"><img alt="Set SQL Login" aria-describedby="caption-attachment-28870" height="473" src="/assets/images/ArchiveServerSettings_Vault_Password.jpg" title="" width="732"/><p class="wp-caption-text" id="caption-attachment-28870"><noscript><img alt="Set SQL Login" height="473" sizes="(max-width: 732px) 100vw, 732px" src="/assets/images/ArchiveServerSettings_Vault_Password.jpg" title="" width="732"/></noscript></p></a> Set SQL Login</div>
+<ul>
+<li>Repeat for all vaults listed.</li>
+</ul>
+<h3>Database Server Service</h3>
+<ul>
+<li>On the Database server host, open the Database Server Configuration Tool
+<ul>
+<li>Start &gt; Programs &gt; SOLIDWORKS PDM &gt; Database Server Configuration</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28872" style="width: 314px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/DatabaseServerConfigurationTool.jpg"><img alt="Database Server Configuration" aria-describedby="caption-attachment-28872" height="345" src="/assets/images/DatabaseServerConfigurationTool.jpg" title="" width="304"/><p class="wp-caption-text" id="caption-attachment-28872"><noscript><img alt="Database Server Configuration" height="345" sizes="(max-width: 304px) 100vw, 304px" src="/assets/images/DatabaseServerConfigurationTool.jpg" title="" width="304"/></noscript></p></a> Database Server Configuration</div>
+<ul>
+<li>Update the password &gt; OK</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28875" style="width: 390px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/DatabaseServerConfigPassword.jpg"><img alt="Enter Password" aria-describedby="caption-attachment-28875" height="294" src="/assets/images/DatabaseServerConfigPassword.jpg" title="" width="380"/><p class="wp-caption-text" id="caption-attachment-28875"><noscript><img alt="Enter Password" height="294" sizes="(max-width: 380px) 100vw, 380px" src="/assets/images/DatabaseServerConfigPassword.jpg" title="" width="380"/></noscript></p></a> Enter Password</div>
+<h3>Lists (Optional)</h3>
+<p>This step only applies if you have the list data type set to; From SQL Database.</p>
+<ul>
+<li>Administration Tool &gt; [Vault Name] &gt; Lists (for cards) &gt; [List Name] &gt; Update Password</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28879" style="width: 800px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/ListPassword.jpg"><img alt="Lists for cards" aria-describedby="caption-attachment-28879" height="922" src="/assets/images/ListPassword.jpg" title="" width="790"/><p class="wp-caption-text" id="caption-attachment-28879"><noscript><img alt="Lists for cards" height="922" sizes="(max-width: 790px) 100vw, 790px" src="/assets/images/ListPassword.jpg" title="" width="790"/></noscript></p></a> Lists for cards</div>
+<blockquote><p><strong>Note</strong>: By default when SQL Server is installed, the ‘sa’ login is created which has full access to all databases on the SQL Server and this is what’s most commonly used.  It is possible the vault could be specified to use a alternate account with db_owner access.</p></blockquote>
+<h3>Interested in SOLIDWORKS PDM Training?</h3>
+<p><a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">Contact us about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

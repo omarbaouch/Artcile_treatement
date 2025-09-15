@@ -1,0 +1,46 @@
+<p>In SOLIDWORKS PDM Professional 2016 it’s possible to link PDF document properties with SOLIDWORKS PDM variables and create a two way relationship.</p>
+<div class="wp-caption aligncenter" id="attachment_20817" style="width: 649px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFDataCard.png"><img alt="" aria-describedby="caption-attachment-20817" height="293" src="/assets/images/PDFDataCard.png" title="" width="639"/><p class="wp-caption-text" id="caption-attachment-20817"><noscript><img alt="" height="293" sizes="(max-width: 639px) 100vw, 639px" src="/assets/images/PDFDataCard.png" title="" width="639"/></noscript></p></a> PDF Data Card</div>
+<div class="wp-caption aligncenter" id="attachment_20818" style="width: 871px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDFCustomProperties.png"><img alt="" aria-describedby="caption-attachment-20818" height="506" src="/assets/images/PDFCustomProperties.png" title="" width="861"/><p class="wp-caption-text" id="caption-attachment-20818"><noscript><img alt="" height="506" sizes="(max-width: 861px) 100vw, 861px" src="/assets/images/PDFCustomProperties.png" title="" width="861"/></noscript></p></a> PDF Document Properties</div>
+<h3>How To Map Custom Properties to PDF Data Cards</h3>
+<p>First step is to create some variables for this information via <strong>Administration Tool</strong> &gt; <strong>Variables</strong> &gt; <strong>Right-Click</strong> &gt; <strong>New Variable</strong></p>
+<div class="wp-caption aligncenter" id="attachment_20833" style="width: 260px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/NewVariable.png"><img alt="New Variable from shortcut menu" aria-describedby="caption-attachment-20833" height="124" src="/assets/images/NewVariable.png" title="" width="250"/><p class="wp-caption-text" id="caption-attachment-20833"><noscript><img alt="New Variable from shortcut menu" height="124" src="/assets/images/NewVariable.png" title="" width="250"/></noscript></p></a> New Variable from shortcut menu</div>
+<p>This example I’ve named PDF_Author</p>
+<div class="wp-caption aligncenter" id="attachment_20834" style="width: 398px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/VariableBlank.png"><img alt="VariableBlank" aria-describedby="caption-attachment-20834" height="583" src="/assets/images/VariableBlank.png" title="" width="388"/><p class="wp-caption-text" id="caption-attachment-20834"><noscript><img alt="VariableBlank" height="583" sizes="(max-width: 388px) 100vw, 388px" src="/assets/images/VariableBlank.png" title="" width="388"/></noscript></p></a> PDF_Author</div>
+<p>Next we need to link it to PDF Files. Click <strong>New Attribute</strong> &gt; Enter the data as shown:</p>
+<ul>
+<li>Block Name = <strong>CustomProperty</strong></li>
+<li>Attribute name = <strong>Author</strong></li>
+<li>File Extension = <strong>pdf</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_20828" style="width: 393px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/05/PDF_Author.png"><img alt="Link PDF Document Properties" aria-describedby="caption-attachment-20828" height="582" src="/assets/images/PDF_Author.png" title="" width="383"/><p class="wp-caption-text" id="caption-attachment-20828"><noscript><img alt="Link PDF Document Properties" height="582" sizes="(max-width: 383px) 100vw, 383px" src="/assets/images/PDF_Author.png" title="" width="383"/></noscript></p></a> Edit Variable</div>
+<p>Create the remaining variables as per the following mappings;</p>
+<table>
+<tbody>
+<tr>
+<th>Block Name</th>
+<th>Attribute Name</th>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Keywords</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Subject</td>
+</tr>
+<tr>
+<td>CustomProperty</td>
+<td>Title</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Next we need to link this information in the .PDF file data card.  Create the applicable text and edit boxes, then link them to the variables.</p>
+<div class="wp-caption aligncenter" id="attachment_20974" style="width: 658px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2016/06/PDFCard.png"><img alt="PDF Card" aria-describedby="caption-attachment-20974" height="321" src="/assets/images/PDFCard.png" title="" width="648"/><p class="wp-caption-text" id="caption-attachment-20974"><noscript><img alt="PDF Card" height="321" sizes="(max-width: 648px) 100vw, 648px" src="/assets/images/PDFCard.png" title="" width="648"/></noscript></p></a> Card Editor &gt; PDF Card</div>
+<p>Now the two way relationship is created and when a PDF is added to the vault the custom properties in the PDF will be updated on the data card and when a user updates variable values on the data card, the values are updated in the PDF document properties.</p>
+<h3>Learn more about SOLIDWORKS PDM</h3>
+<p>Attend our <a href="http://www.javelin-tech.com/main/training/course_solidworks_enterprise_pdm_admin.htm" target="_blank">SOLIDWORKS PDM Administration training course</a> to learn more about creating custom data cards and administering SOLIDWORKS PDM.</p>

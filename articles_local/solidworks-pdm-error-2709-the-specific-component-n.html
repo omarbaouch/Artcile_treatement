@@ -1,0 +1,6 @@
+<p>This SOLIDWORKS PDM Error 2709 commonly occurs when using the standalone installer [SOLIDWORKS installation folder]\SWPDMClient\Setup.exe to install the PDM Client software.</p>
+<p><div class="wp-caption aligncenter" id="attachment_51520" style="width: 351px"><img alt="" aria-describedby="caption-attachment-51520" height="146" src="/assets/images/Error-2709.jpg" title="" width="341"/><p class="wp-caption-text" id="caption-attachment-51520"><noscript><img alt="" height="146" src="/assets/images/Error-2709.jpg" title="" width="341"/></noscript> Error 2709. The specific Component name (‘{96C9D8BC-A40C-45F4-919C-E73D649B93E3’}) not found in Component table</p></div></p>
+<p>To resolve this issue on the client computer, install both the 32-bit and 64-bit versions of the Microsoft Visual C++ 2008, 2010, 2012, 2013, and 2015 Redistributable packages located in folders:</p>
+<pre>[SOLIDWORKS Installation folder]\PreReqs\(VCRedist9, VCRedist10, VCRedist11, VCRedist12, VCRedist15)</pre>
+<p>You will have to restart explorer.exe from the Task Manager or restart your computer.</p>
+<blockquote><p><strong>NOTE</strong>: Using SOLIDWORKS Installation Manager [SOLIDWORKS Installation folder]\Setup.exe to install the SOLIDWORKS PDM client will install all available prerequisites. This includes the Microsoft Visual C++ redistributable libraries.</p></blockquote>

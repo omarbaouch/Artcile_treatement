@@ -1,0 +1,17 @@
+<p>When moving SOLIDWORKS PDM files between folders, with the option ‘Folder data card variable’ checked the result may not be what you are expecting.</p>
+<div class="wp-caption alignnone" id="attachment_14409" style="width: 991px"><img alt="Moving SOLIDWORKS PDM files Default Values" aria-describedby="caption-attachment-14409" height="441" src="/assets/images/Default-Values.png" title="" width="981"/><p class="wp-caption-text" id="caption-attachment-14409"><noscript><img alt="Moving SOLIDWORKS PDM files Default Values" height="441" sizes="(max-width: 981px) 100vw, 981px" src="/assets/images/Default-Values.png" title="" width="981"/></noscript> Default Values</p></div>
+<p> </p>
+<p>The expectation would be that any Data Card Control, with ‘Folder data card variable’,  would pull the Variable Value from the Folder Card, regardless how the file made its way to the folder.</p>
+<p>When a file is moved or copied and the associated Data Card has Default Values, the existing values are copied to the target file. The default values of the target file are <span style="text-decoration: underline;"><strong>NOT</strong></span> regenerated. With the exception of:</p>
+<ul>
+<li><strong>Data card variables with the Unique flag set</strong>. If this set, the variable value is cleared, the user is warned and the default value is regenerated.</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_14410" style="width: 344px"><img alt="Unique variable" aria-describedby="caption-attachment-14410" height="104" src="/assets/images/Unigue-variable.png" title="" width="334"/><p class="wp-caption-text" id="caption-attachment-14410"><noscript><img alt="Unique variable" height="104" sizes="(max-width: 334px) 100vw, 334px" src="/assets/images/Unigue-variable.png" title="" width="334"/></noscript> Unique variable</p></div>
+<ul>
+<li><strong>Data card variable is a serial number</strong>. The user is warned and the variable value is set to next available serial number.</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_14411" style="width: 296px"><img alt="Serial number" aria-describedby="caption-attachment-14411" height="147" src="/assets/images/serial-number.png" title="" width="286"/><p class="wp-caption-text" id="caption-attachment-14411"><noscript><img alt="Serial number" height="147" src="/assets/images/serial-number.png" title="" width="286"/></noscript> Serial number</p></div>
+<ul>
+<li><strong>Default Overwrites is enabled for data card variable</strong>. The variable value for any copied file is regenerated, <span style="color: #ff0000;"><strong>but the variable value is not regenerated for files that are moved (cut &amp; paste).</strong></span></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_14412" style="width: 300px"><img alt="Default overwrites" aria-describedby="caption-attachment-14412" height="195" src="/assets/images/Default-overwrites.png" title="" width="290"/><p class="wp-caption-text" id="caption-attachment-14412"><noscript><img alt="Default overwrites" height="195" src="/assets/images/Default-overwrites.png" title="" width="290"/></noscript> Default overwrites</p></div>

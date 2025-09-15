@@ -1,0 +1,9 @@
+<p>The recommended SOLIDWORKS PDM Toolbox Integration is to add a Windows registry option to automatically force caching of the latest version of SOLIDWORKS Toolbox references on open when Toolbox is managed in SOLIDWORKS PDM.</p>
+<p>This override ensures that the latest version of a Toolbox reference is cached to avoid Toolbox having to create missing sizes in some cases when an earlier version already cached.</p>
+<blockquote><p><strong>WARNING</strong>: Be <strong>very</strong> careful when making modifications to the registry as this may cause serious instability on your system. As such, you will need <strong>full administrative permissions</strong> on your computer to be able to edit them. Note that Javelin is not responsible for any changes that you make to your system, the following is just a guide.</p></blockquote>
+<h2>To enable/disable the registry override:</h2>
+<p>Add a DWORD key named ‘<strong>GetLatestToolboxVer</strong>‘ under:</p>
+<pre>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\ConisioCAD\SolidWorks</pre>
+<p>Value: 1 = Enabled, 0 (or missing) = Disabled</p>
+<p><div class="wp-caption aligncenter" id="attachment_41811" style="width: 341px"><img alt="Get Latest SOLIDWORKS Toolbox Version" aria-describedby="caption-attachment-41811" height="199" src="/assets/images/GetLatestToolboxVer.jpg" title="" width="331"/><p class="wp-caption-text" id="caption-attachment-41811"><noscript><img alt="Get Latest SOLIDWORKS Toolbox Version" height="199" src="/assets/images/GetLatestToolboxVer.jpg" title="" width="331"/></noscript> Get Latest SOLIDWORKS Toolbox Version</p></div></p>
+<p><strong>Note that when registry value is enabled, it will force latest version of all Toolbox references to become cached, even if they are already present and may therefore add some overhead to the time it takes to open the assembly.</strong></p>

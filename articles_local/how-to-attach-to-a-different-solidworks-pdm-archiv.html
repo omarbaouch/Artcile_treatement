@@ -1,0 +1,22 @@
+<p>Whether its because the SOLIDWORKS PDM archives have been migrated to a new server, or you are working in a different office than usual and need to connect through a replicated Archive Server, it may be necessary to modify which Archive Server your PDM Vault View is attached to.</p>
+<blockquote><p><em>This can be done very easily through the Windows Registry.  The change can be applied without needing to check in any files beforehand and without losing any work.</em></p></blockquote>
+<p>The first step is to determine how the Vault View on the client computer was originally set up.  There are two possible ways the vault view might have been attached, either using the default “<em>For all users on this computer</em>” or “<em>Only for me</em>”</p>
+<p><div class="wp-caption aligncenter" id="attachment_44901" style="width: 534px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/01/Attach-Type.jpg"><img alt="Select Attach Location" aria-describedby="caption-attachment-44901" height="411" src="/assets/images/Attach-Type.jpg" title="" width="524"/><p class="wp-caption-text" id="caption-attachment-44901"><noscript><img alt="Select Attach Location" height="411" src="/assets/images/Attach-Type.jpg" title="" width="524"/></noscript></p></a> Select Attach Location</div></p>
+<p>Depending on which Attach type was used, the server information will be stored in different locations in the Windows Registry.</p>
+<p>If you don’t know which Attach type was used originally, first check the location used by the default, “<em>For all users on this computer</em>” option.</p>
+<h4>If “<em>For all users on this computer</em>” was used:</h4>
+<p>This option creates registry entries for the SOLIDWORKS PDM Archive Server information in these two locations:</p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\SolidWorks\Applications\PDMWorks Enterprise\Databases\VAULTNAME</pre>
+<p>and</p>
+<pre>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Databases\VAULTNAME</pre>
+<p>The string value “ServerLoc” contains the Archive Server computer name.  To attach to the new server, this value must be changed in <em><strong>BOTH</strong> </em>of the locations listed above.  If the value in the WOW6432Node section of the registry is not updated, there will be <a href="https://www.javelin-tech.com/blog/2017/03/solidworks-pdm-database-error/">errors with some applications when trying to browse into the vault view</a>.</p>
+<p><div class="wp-caption aligncenter" id="attachment_44908" style="width: 778px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/01/First-Server.jpg"><img alt="ServerLoc Registry String" aria-describedby="caption-attachment-44908" height="519" src="/assets/images/First-Server.jpg" title="" width="768"/><p class="wp-caption-text" id="caption-attachment-44908"><noscript><img alt="ServerLoc Registry String" height="519" sizes="(max-width: 768px) 100vw, 768px" src="/assets/images/First-Server.jpg" title="" width="768"/></noscript></p></a> ServerLoc Registry String</div></p>
+<p>Once the change is made, exit the PDM Client software and log back in again.  The view will immediately begin using the new server name.</p>
+<p>If you do not see the vault name listed under “Databases”, then the view was set up using the “Only me” Attach Type.</p>
+<h4>If “<em>Only me</em>” was used:</h4>
+<p>This option creates registry entries for the server information in these two locations:</p>
+<pre>HKEY_CURRENT_USER\Software\Solidworks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME</pre>
+<p>and</p>
+<pre>HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\SolidWorks\Applications\PDMWorks Enterprise\Vaults\VAULTNAME</pre>
+<p>Again, the string value “ServerLoc” contains the Archive Server computer name.  Modify the string, in BOTH locations, with the new server name, then exit the PDM Client software and log in again to begin using the new Archive Server.</p>
+<p><div class="wp-caption aligncenter" id="attachment_44910" style="width: 783px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/01/CU-Vaults.png"><img alt="ServerLoc Archive Server Name" aria-describedby="caption-attachment-44910" height="596" src="/assets/images/CU-Vaults.png" title="" width="773"/><p class="wp-caption-text" id="caption-attachment-44910"><noscript><img alt="ServerLoc Archive Server Name" height="596" sizes="(max-width: 773px) 100vw, 773px" src="/assets/images/CU-Vaults.png" title="" width="773"/></noscript></p></a> ServerLoc Archive Server Name</div></p>

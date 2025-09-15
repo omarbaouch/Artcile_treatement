@@ -1,0 +1,10 @@
+<blockquote><p>Why do I receive error “Failed to check proxy settings” when logging in to SOLIDWORKS PDM Web Portal?</p></blockquote>
+<p>When logging in to a SOLIDWORKS PDM vault web portal, an error message displays:</p>
+<blockquote><p>“Failed to check proxy settings.</p>
+<p>Description:</p>
+<p>The Archive Server could not open the Windows Registry.”</p></blockquote>
+<p>To correct this error message, you can add the site to the Trusted sites in Internet Explorer (IE):</p>
+<p>in Internet Explorer go to <strong>Tools</strong> &gt; <strong>Internet Options </strong>&gt; <strong>Security </strong>Tab &gt; select<strong> Trusted sites</strong> &gt; click on the <strong>Sites</strong> button &gt; enter the PDM Vault Web Portal Link and select <strong>Add</strong> to include the link in the list of trusted websites.</p>
+<div class="wp-caption aligncenter" id="attachment_39215" style="width: 763px"><img alt="Internet Explorer Options for Failed to check proxy settings" aria-describedby="caption-attachment-39215" height="534" src="/assets/images/IE-Settings.jpg" title="" width="753"/><p class="wp-caption-text" id="caption-attachment-39215"><noscript><img alt="Internet Explorer Options for Failed to check proxy settings" height="534" sizes="(max-width: 753px) 100vw, 753px" src="/assets/images/IE-Settings.jpg" title="" width="753"/></noscript> Internet Explorer Options</p></div>
+<blockquote><p>Make sure the option: “Require server verification (https:) for all sites in this zone” is not checked.</p></blockquote>
+<p>NOTE: This issue can also be caused by having the “IE Enhanced Security Configuration” enabled on the Windows Server operating systems.</p>

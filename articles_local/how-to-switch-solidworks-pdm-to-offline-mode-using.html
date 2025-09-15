@@ -1,0 +1,36 @@
+
+<p><a href="https://www.javelin-tech.com/blog/2019/12/solidworks-pdm-work-offline/">Working offline</a> within SOLIDWORKS PDM is a great option if you want to bring work home on your laptop, or if there is <a href="https://www.javelin-tech.com/blog/2018/12/solidworks-pdm-vault-maintenance-working-offline/">maintenance being performed on the vault</a> and there’s no access to the server. </p>
+<p>In a perfect world, you’ve remembered to switch into offline mode ahead of losing access, but if you’re forgetful and impatient (like myself), there is an option to make this switch within the registry, without having to wait for the delayed login prompt when the server can’t be found by the client</p>
+<div class="wp-caption aligncenter" id="attachment_51460" style="width: 466px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/02/Offline-Mode-Regsitry-Offline-Mode.png"><img alt="Work Offline in SOLIDWORKS PDM" aria-describedby="caption-attachment-51460" height="274" src="/assets/images/Offline-Mode-Regsitry-Offline-Mode.png" title="" width="456"/><p class="wp-caption-text" id="caption-attachment-51460"><noscript><img alt="Work Offline in SOLIDWORKS PDM" height="274" src="/assets/images/Offline-Mode-Regsitry-Offline-Mode.png" title="" width="456"/></noscript></p></a> Work Offline in SOLIDWORKS PDM</div>
+<blockquote>
+<p><strong>WARNING</strong>! – Only complete this change if you are comfortable with the Windows Registry.  Accidental changes to the registry can render your system inoperable, exercising extreme caution is required when making any registry edits.</p>
+</blockquote>
+<ul>
+<li>Start <strong>Regedit.msc</strong> and navigate to;
+
+<ul>
+<li>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[vaultname]</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51449" style="width: 1038px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/02/Offline-Mode-Regsitry-Navigate-to-key.png"><img alt="Registry Editor" aria-describedby="caption-attachment-51449" height="440" src="/assets/images/Offline-Mode-Regsitry-Navigate-to-key.png" title="" width="1028"/><p class="wp-caption-text" id="caption-attachment-51449"><noscript><img alt="Registry Editor" height="440" sizes="(max-width: 1028px) 100vw, 1028px" src="/assets/images/Offline-Mode-Regsitry-Navigate-to-key.png" title="" width="1028"/></noscript></p></a> Registry Editor</div>
+<ul>
+<li>RMB within this key &gt; <strong>New</strong> &gt; <strong>DWORD</strong></li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51450" style="width: 1038px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/02/Offline-Mode-Regsitry-New-key.png"><img alt="New &gt; DWORD" aria-describedby="caption-attachment-51450" height="440" src="/assets/images/Offline-Mode-Regsitry-New-key.png" title="" width="1028"/><p class="wp-caption-text" id="caption-attachment-51450"><noscript><img alt="New &gt; DWORD" height="440" sizes="(max-width: 1028px) 100vw, 1028px" src="/assets/images/Offline-Mode-Regsitry-New-key.png" title="" width="1028"/></noscript></p></a> New &gt; DWORD</div>
+<ul>
+<li>Set the <em>New Value Name</em> as ‘<strong>Offline</strong>‘
+
+<ul>
+<li>and the <em>Value Data</em> as ‘<strong>1</strong>‘</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51451" style="width: 1038px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/02/Offline-Mode-Regsitry-Offline-1.png"><img alt="Set the New Value Name as 'Offline'" aria-describedby="caption-attachment-51451" height="440" src="/assets/images/Offline-Mode-Regsitry-Offline-1.png" title="" width="1028"/><p class="wp-caption-text" id="caption-attachment-51451"><noscript><img alt="Set the New Value Name as 'Offline'" height="440" sizes="(max-width: 1028px) 100vw, 1028px" src="/assets/images/Offline-Mode-Regsitry-Offline-1.png" title="" width="1028"/></noscript></p></a> Set the New Value Name as ‘Offline’</div>
+<ul>
+<li>Then the PDM client will be instantly switched to offline mode, without having to wait for the login prompt;</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_51454" style="width: 898px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2021/02/Offline-Mode-Regsitry-Complete.png"><img alt="SOLIDWORKS PDM Offline Mode" aria-describedby="caption-attachment-51454" height="648" src="/assets/images/Offline-Mode-Regsitry-Complete.png" title="" width="888"/><p class="wp-caption-text" id="caption-attachment-51454"><noscript><img alt="SOLIDWORKS PDM Offline Mode" height="648" sizes="(max-width: 888px) 100vw, 888px" src="/assets/images/Offline-Mode-Regsitry-Complete.png" title="" width="888"/></noscript></p></a> SOLIDWORKS PDM Offline Mode</div>
+<blockquote>
+<p><strong>NOTE</strong>: If you’ve used offline mode previously, the registry key may already exist.  In this scenario we can just switch the Value Data to ‘<strong>1</strong>‘</p>
+</blockquote>

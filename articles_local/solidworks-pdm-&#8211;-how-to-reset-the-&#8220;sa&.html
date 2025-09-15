@@ -1,0 +1,63 @@
+<p>if you’ve forgotten or lost the “sa” (System Administrator) password for your SQL Server instance, you can reset it using Microsoft SQL Server Management Studio (SSMS). Here’s how you can do that in SQL Server Management Studio (SSMS): <!--more--></p>
+<h3 class="" data-end="485" data-start="433">Step 1: Open SQL Server Management Studio (SSMS)</h3>
+<p>Begin by launching <strong data-end="543" data-start="506">SQL Server Management Studio (SSMS)</strong>. You can do this by searching for “SQL Server Management Studio” in the Windows Start Menu and clicking on the application.</p>
+<p data-end="667" data-start="487"><img alt="" height="307" src="/assets/images/SA1-600x307.jpg" title="" width="600"/><noscript><img alt="" height="307" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA1-600x307.jpg" title="" width="600"/></noscript></p>
+<h3 data-end="792" data-start="746">Step 2: Log In Using Windows Authentication</h3>
+<ol>
+<li>Launch <strong data-end="841" data-start="804">SQL Server Management Studio (SSMS)</strong>.</li>
+<li>In the <strong data-end="874" data-start="853">Connect to Server</strong> window, choose <strong data-end="916" data-start="890">Windows Authentication </strong>in the Authentication selection dropdown menu.</li>
+<li>Set <strong>Encryption</strong> to <strong>optional</strong>, check the <strong>Trust server certificate</strong> checkbox.</li>
+<li>Click <strong data-end="938" data-start="927">Connect</strong>.</li>
+</ol>
+<p><img alt="" height="594" src="/assets/images/SA2-1-600x594.jpg" title="" width="600"/><noscript><img alt="" height="594" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA2-1-600x594.jpg" title="" width="600"/></noscript></p>
+<h3 data-end="1080" data-start="1037">Step 3: Check Server Authentication Mode</h3>
+<p>1. In <strong data-end="1107" data-start="1088">Object Explorer</strong>, right-click your <strong data-end="1149" data-start="1126">SQL Server instance</strong> at the top and select <strong data-end="1186" data-start="1172">Properties</strong>.</p>
+<p class="" data-end="1287" data-start="1189"><img alt="" height="600" src="/assets/images/SA3-336x600.jpg" title="" width="336"/><noscript><img alt="" height="600" sizes="(max-width: 336px) 100vw, 336px" src="/assets/images/SA3-336x600.jpg" title="" width="336"/></noscript></p>
+<p>2. In the <strong data-end="1320" data-start="1299">Server Properties</strong> dialog, go to the <strong data-end="1351" data-start="1339">Security</strong> tab.</p>
+<p><img alt="" height="428" src="/assets/images/SA4-1.jpg" title="" width="179"/><noscript><img alt="" height="428" src="/assets/images/SA4-1.jpg" title="" width="179"/></noscript></p>
+<p>3. Ensure <strong data-end="1392" data-start="1367">Server authentication</strong> is set to <strong data-end="1449" data-start="1403">SQL Server and Windows Authentication mode</strong>.</p>
+<p><img alt="" height="517" src="/assets/images/SA4-600x517.jpg" title="" width="600"/><noscript><img alt="" height="517" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA4-600x517.jpg" title="" width="600"/></noscript></p>
+<p>4. If not, select that option, click <strong>OK</strong>, and then <strong>restart the SQL Server service</strong> by launching services.</p>
+<p><img alt="" height="110" src="/assets/images/SA6-600x110.jpg" title="" width="600"/><noscript><img alt="" height="110" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA6-600x110.jpg" title="" width="600"/></noscript></p>
+<h3 data-end="1870" data-start="1829">Step 4: Locate and edit the “sa” Login</h3>
+<ol data-end="2002" data-start="1872">
+<li class="" data-end="1938" data-start="1872">Back in <strong data-end="1902" data-start="1883">Object Explorer</strong>, expand:
+<ul data-end="1938" data-start="1915">
+<li class="" data-end="1938" data-start="1915">
+<p class="" data-end="1938" data-start="1917"><code data-end="1927" data-start="1917">Security</code> → <code data-end="1938" data-start="1930">Logins</code></p>
+</li>
+</ul>
+</li>
+<li class="" data-end="2002" data-start="1939">Right-click on the <strong data-end="1969" data-start="1961">‘sa’</strong> login and choose <strong data-end="2001" data-start="1987">Properties</strong>.</li>
+</ol>
+<p><img alt="" height="600" src="/assets/images/SA7-260x600.jpg" title="" width="260"/><noscript><img alt="" height="600" sizes="(max-width: 260px) 100vw, 260px" src="/assets/images/SA7-260x600.jpg" title="" width="260"/></noscript></p>
+<h3 data-end="2126" data-start="2096">Step 5: Change the Password</h3>
+<ol data-end="2298" data-start="2128">
+<li class="" data-end="2281" data-start="2128">In the <strong data-end="2149" data-start="2138">General</strong> tab of the <strong data-end="2181" data-start="2161">Login Properties</strong> window.<br/>
+<h6>Note: Clear the password and confirm password fields if prefilled by old password:</h6>
+<ul data-end="2281" data-start="2193">
+<li class="" data-end="2221" data-start="2193">
+<p class="" data-end="2221" data-start="2195">Enter the <strong data-end="2221" data-start="2205">new password</strong></p>
+</li>
+<li class="" data-end="2281" data-start="2225">
+<p class="" data-end="2281" data-start="2227">Confirm the password in the <strong data-end="2275" data-start="2255">Confirm Password</strong> field</p>
+</li>
+</ul>
+</li>
+<li class="" data-end="2298" data-start="2282">Click <strong data-end="2297" data-start="2291">OK</strong>.</li>
+</ol>
+<p><img alt="" height="517" src="/assets/images/SA8-600x517.jpg" title="" width="600"/><noscript><img alt="" height="517" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA8-600x517.jpg" title="" width="600"/></noscript></p>
+<h3 data-end="2679" data-start="2647">Step 6: Test the New Password</h3>
+<ol>
+<li>Log out of SSMS.</li>
+<li data-end="2734" data-start="2704">Reopen SSMS and this time use:</li>
+</ol>
+<ul>
+<li><strong data-end="2758" data-start="2740">Authentication</strong>: SQL Server Authentication</li>
+<li data-end="2810" data-start="2793"><strong data-end="2802" data-start="2793">Login</strong>: <code data-end="2808" data-start="2804">sa</code></li>
+<li><strong data-end="2828" data-start="2816">Password</strong>: your new password</li>
+</ul>
+<p><img alt="" height="594" src="/assets/images/SA9-600x594.jpg" title="" width="600"/><noscript><img alt="" height="594" sizes="(max-width: 600px) 100vw, 600px" src="/assets/images/SA9-600x594.jpg" title="" width="600"/></noscript></p>
+<h3>Related Information:</h3>
+<p>After resetting the “<strong>sa</strong>” password, it is strongly recommended to review any dependencies or services that may be affected by this change. For a detailed overview of potential impacts, please refer to the companion article: <a href="https://www.javelin-tech.com/blog/2017/09/solidworks-pdm-sa-password/" rel="noopener" target="_blank">What does changing a SOLIDWORKS PDM ‘sa’ password affect?</a></p>
+<p>This will help ensure that all related systems and processes continue to operate without interruption.</p>

@@ -1,0 +1,26 @@
+<p>If you’re using <a href="https://www.javelin-tech.com/blog/2018/04/solidworks-pdm-custom-explorer-views/">custom columns for Windows Explorer</a> within SOLIDWORKS PDM you may have run into an issue with them not retaining their order while navigating the vault or after a reboot.  This issue can be caused by a mismatch in the registry of the client machine, which we can correct with a few edits.</p>
+<blockquote><p><strong>WARNING</strong>: Caution is required when editing entries in the Windows Registry as changing the wrong entry can lead to major issues on your system.</p></blockquote>
+<div class="wp-caption aligncenter" id="attachment_41714" style="width: 668px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Custom-Columns-Order.jpg"><img alt="SOLIDWORKS PDM Custom Columns in Windows Explorer" aria-describedby="caption-attachment-41714" height="552" src="/assets/images/Custom-Columns-Order.jpg" title="" width="658"/><p class="wp-caption-text" id="caption-attachment-41714"><noscript><img alt="SOLIDWORKS PDM Custom Columns in Windows Explorer" height="552" sizes="(max-width: 658px) 100vw, 658px" src="/assets/images/Custom-Columns-Order.jpg" title="" width="658"/></noscript></p></a> SOLIDWORKS PDM Custom Columns in Windows Explorer</div>
+<h3>How to make custom columns in the vault retain their order</h3>
+<ul>
+<li>Via the system tray close the PDM Client:</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41704" style="width: 426px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Custom-Column-Order-Close-Client.png"><img alt="Exit the PDM Client" aria-describedby="caption-attachment-41704" height="204" src="/assets/images/Custom-Column-Order-Close-Client.png" title="" width="416"/><p class="wp-caption-text" id="caption-attachment-41704"><noscript><img alt="Exit the PDM Client" height="204" src="/assets/images/Custom-Column-Order-Close-Client.png" title="" width="416"/></noscript></p></a> Exit the PDM Client</div>
+<ul>
+<li>Open the registry editor and delete the following keys:
+<ul>
+<li>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\CTDMListView</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41705" style="width: 737px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Custom-Column-Order-Delete-Key-1.png"><img alt="Delete Registry Key" aria-describedby="caption-attachment-41705" height="747" src="/assets/images/Custom-Column-Order-Delete-Key-1.png" title="" width="727"/><p class="wp-caption-text" id="caption-attachment-41705"><noscript><img alt="Delete Registry Key" height="747" sizes="(max-width: 727px) 100vw, 727px" src="/assets/images/Custom-Column-Order-Delete-Key-1.png" title="" width="727"/></noscript></p></a> Delete Registry Key</div>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>HKEY_CURRENT_USER\Software\SolidWorks\Applications\PDMWorks Enterprise\Vaults\[Vault Name]\CTDMListView\ColOrder</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_41707" style="width: 979px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/05/Custom-Column-Order-Delete-Key-2.png"><img alt="Deleting other registry key for Custom Columns" aria-describedby="caption-attachment-41707" height="878" src="/assets/images/Custom-Column-Order-Delete-Key-2.png" title="" width="969"/><p class="wp-caption-text" id="caption-attachment-41707"><noscript><img alt="Deleting other registry key for Custom Columns" height="878" sizes="(max-width: 969px) 100vw, 969px" src="/assets/images/Custom-Column-Order-Delete-Key-2.png" title="" width="969"/></noscript></p></a> Deleting other registry key</div>
+<blockquote><p><strong>NOTE</strong>: Don’t worry, the registry keys will be recreated when logging back into your vault view.</p></blockquote>
+<p>Then log back into the vault, rearrange the custom columns as you’d like to see; then it should be retained moving forward on the client machine.</p>

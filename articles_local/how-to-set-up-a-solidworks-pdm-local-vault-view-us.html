@@ -1,0 +1,66 @@
+<p><span data-preserver-spaces="true">A SOLIDWORKS PDM user needs to have a local vault view to access the </span>SOLIDWORKS PDM<span data-preserver-spaces="true"> vault. Local vault view allows the user access to the files in the vault, and the ability to check them in or out, among other actions.</span></p>
+<h2>To create a .cvs file for a SOLIDWORKS PDM local vault view, follow these steps:</h2>
+<ol>
+<li>Run the View Setup wizard with the “/a” trigger on a machine without a local vault view. If one exists, remove it first.</li>
+<li>Right-click the Windows Start icon and select “Run.”</li>
+<li>In the Run dialog, enter the following command (adjust the path if not default):</li>
+</ol>
+<pre>“C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\ViewSetup.exe” /a</pre>
+<div class="wp-caption aligncenter" id="attachment_65941" style="width: 626px"><img alt="Run command" aria-describedby="caption-attachment-65941" height="322" src="/assets/images/CVS1.jpg" title="" width="616"/><p class="wp-caption-text" id="caption-attachment-65941"><noscript><img alt="Run command" height="322" sizes="(max-width: 616px) 100vw, 616px" src="/assets/images/CVS1.jpg" title="" width="616"/></noscript> Run command</p></div>
+<ol start="4">
+<li>This launches the wizard to create the .cvs file follow the steps in the wizard.
+<p><div class="wp-caption aligncenter" id="attachment_65943" style="width: 674px"><img alt="Wizard to create the .cvs file for a SOLIDWORKS PDM Local Vault View" aria-describedby="caption-attachment-65943" height="483" src="/assets/images/CVS3.jpg" title="" width="664"/><p class="wp-caption-text" id="caption-attachment-65943"><noscript><img alt="Wizard to create the .cvs file for a SOLIDWORKS PDM Local Vault View" height="483" sizes="(max-width: 664px) 100vw, 664px" src="/assets/images/CVS3.jpg" title="" width="664"/></noscript> Wizard to create the .cvs file</p></div></p></li>
+<li>On the Welcome screen, select the server where the vault is hosted.
+<p><div class="wp-caption aligncenter" id="attachment_65944" style="width: 515px"><img alt="Server where the vault is hosted" aria-describedby="caption-attachment-65944" height="405" src="/assets/images/CVS4.jpg" title="" width="505"/><p class="wp-caption-text" id="caption-attachment-65944"><noscript><img alt="Server where the vault is hosted" height="405" src="/assets/images/CVS4.jpg" title="" width="505"/></noscript> Server where the vault is hosted</p></div></p></li>
+<li>Select the desired vault.
+<p><div class="wp-caption aligncenter" id="attachment_65945" style="width: 515px"><img alt="Select desired vault" aria-describedby="caption-attachment-65945" height="405" src="/assets/images/CVS5.jpg" title="" width="505"/><p class="wp-caption-text" id="caption-attachment-65945"><noscript><img alt="Select desired vault" height="405" src="/assets/images/CVS5.jpg" title="" width="505"/></noscript> Select desired vault</p></div></p></li>
+<li>Choose the location for the local vault view.
+<p><div class="wp-caption aligncenter" id="attachment_65946" style="width: 519px"><img alt="Location for the local vault view" aria-describedby="caption-attachment-65946" height="403" src="/assets/images/CVS6.jpg" title="" width="509"/><p class="wp-caption-text" id="caption-attachment-65946"><noscript><img alt="Location for the local vault view" height="403" src="/assets/images/CVS6.jpg" title="" width="509"/></noscript> Location for the local vault view</p></div></p></li>
+<li>Click “Finish.”
+<p><div class="wp-caption aligncenter" id="attachment_65947" style="width: 521px"><img alt="Review and finish" aria-describedby="caption-attachment-65947" height="404" src="/assets/images/CVS7.jpg" title="" width="511"/><p class="wp-caption-text" id="caption-attachment-65947"><noscript><img alt="Review and finish" height="404" src="/assets/images/CVS7.jpg" title="" width="511"/></noscript> Review and finish</p></div></p></li>
+<li>When prompted, specify the location to save the .cvs file.</li>
+<li>The .cvs file will be saved and is ready for use.
+<p><div class="wp-caption aligncenter" id="attachment_65948" style="width: 520px"><img alt="Process completed" aria-describedby="caption-attachment-65948" height="408" src="/assets/images/CVS8.jpg" title="" width="510"/><p class="wp-caption-text" id="caption-attachment-65948"><noscript><img alt="Process completed" height="408" src="/assets/images/CVS8.jpg" title="" width="510"/></noscript> Process completed</p></div></p></li>
+</ol>
+<h3>How to use .CVS file</h3>
+<p>The .cvs file is now ready for execution. However, it can be opened and edited in Notepad to adjust details, such as changing the vault or modifying the local vault view location.</p>
+<div class="wp-caption aligncenter" id="attachment_65949" style="width: 640px"><img alt="The .cvs file" aria-describedby="caption-attachment-65949" height="433" src="/assets/images/CVS9.jpg" title="" width="630"/><p class="wp-caption-text" id="caption-attachment-65949"><noscript><img alt="The .cvs file" height="433" sizes="(max-width: 630px) 100vw, 630px" src="/assets/images/CVS9.jpg" title="" width="630"/></noscript> The .cvs file</p></div>
+<p>To edit the file, right-click the .cvs file and select <strong>Open with &gt; Notepad</strong>. This allows you to customize the configuration as needed for different environments.</p>
+<ul>
+<li><strong>Location</strong>: Specify the folder where the vault view should be created, typically <code>C:\</code>.</li>
+<li><strong>ViewType</strong>: Set to either <code>SharedView</code> or <code>PrivateView</code>.</li>
+<li><strong>[FileVault]</strong>: Replace with the exact file vault name (case-sensitive), e.g., <code>[W11 2024 SP1]</code>.</li>
+<li><strong>VaultID</strong>: Enter the vault ID, found in the PDM Administration tool by right clicking the vault and selecting Properties (omit <code>{}</code> brackets).</li>
+<li><strong>DbName</strong>: Enter the case-sensitive database name.</li>
+<li><strong>DbServer</strong>: Provide the SQL server name.</li>
+<li><strong>ServerLoc</strong>: Input the archive server name.</li>
+<li><strong>ServerPort</strong>: Specify the archive server port (default: <code>3030</code>)</li>
+</ul>
+<h3>Creating Local Vault View using .CVS file.</h3>
+<ol>
+<li>Copy the .cvs file to a preferred location on the client machine.</li>
+<li>Double-click the .cvs file to launch the View Setup wizard.</li>
+<li>The wizard will display “<strong>Action: Create local view</strong>” and “<strong>Status: Ready</strong>.”
+<p><div class="wp-caption aligncenter" id="attachment_65951" style="width: 519px"><img alt='"Action: Create local view" and "Status: Ready."' aria-describedby="caption-attachment-65951" height="402" src="/assets/images/CVS10.jpg" title="" width="509"/><p class="wp-caption-text" id="caption-attachment-65951"><noscript><img alt='"Action: Create local view" and "Status: Ready."' height="402" src="/assets/images/CVS10.jpg" title="" width="509"/></noscript> “Action: Create local view” and “Status: Ready.”</p></div></p></li>
+<li>Click <strong>Finish</strong> to create the local vault view. You will be prompted to log into PDM to complete the setup.</li>
+<li>Once complete, the wizard will show “<strong>Status: Completed</strong>,” and the local vault view will be ready for use.
+<p><div class="wp-caption aligncenter" id="attachment_65952" style="width: 515px"><img alt='"Status: Completed"' aria-describedby="caption-attachment-65952" height="402" src="/assets/images/CVS11.jpg" title="" width="505"/><p class="wp-caption-text" id="caption-attachment-65952"><noscript><img alt='"Status: Completed"' height="402" src="/assets/images/CVS11.jpg" title="" width="505"/></noscript> “Status: Completed”</p></div></p></li>
+</ol>
+<h3>Silently creating Local Vault View using .CVS file</h3>
+<p>You can execute the .cvs file and run the View Setup wizard in silent mode by specifying the file path and using the <code>/q</code> trigger as shown below:</p>
+<ul>
+<li>Run the command with the path to <code>ViewSetup.exe</code>, followed by the .cvs file path and <code>/q</code> trigger.</li>
+<li>The wizard operates silently, without displaying any screens or prompts.</li>
+<li>After the local vault view is successfully created, the user will be prompted to log in with their PDM credentials.</li>
+</ul>
+<pre>“C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\ViewSetup.exe” “C:\W11 2024 SP1.cvs” /q</pre>
+<div class="wp-caption aligncenter" id="attachment_65953" style="width: 466px"><img alt="Run CVS" aria-describedby="caption-attachment-65953" height="272" src="/assets/images/CVS12.jpg" title="" width="456"/><p class="wp-caption-text" id="caption-attachment-65953"><noscript><img alt="Run CVS" height="272" src="/assets/images/CVS12.jpg" title="" width="456"/></noscript> Run CVS</p></div>
+<h3>Benefits of Using a .cvs File for <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">PDM Vault</a> View Configuration</h3>
+<ol>
+<li>Automating the setup of local vault views using a .cvs file eliminates the need for manual configuration on each machine, saving time, especially in large scale deployments.</li>
+<li>Ensures uniform configuration across multiple workstations by applying the same settings, reducing the risk of errors caused by inconsistent setup.</li>
+<li>The .cvs file can be easily edited to change parameters such as vault names or locations, making it adaptable for different projects or environments.</li>
+<li>With the <code>/q</code> trigger, the setup process can run in silent mode, allowing IT administrators to deploy vault views without user interaction.</li>
+<li>This method is ideal for organizations with many users or departments, as it simplifies the vault view setup for multiple users or machines simultaneously.</li>
+<li>The .cvs file can be reused or modified for future vault configurations, making it a versatile tool for managing multiple PDM setups.</li>
+</ol>

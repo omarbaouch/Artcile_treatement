@@ -1,0 +1,53 @@
+<p>After an upgrade to <a href="https://www.javelin-tech.com/3d/technology/solidworks-manage/" rel="noopener noreferrer" target="_blank">SOLIDWORKS Manage</a>, there are a few steps required to ensure the new version of the add-in is loaded, and the records between Manage and PDM remain up to date.</p>
+<h2>Step 1: Update the Manage add-in within SOLIDWORKS PDM</h2>
+<ol>
+<li>Open the SOLIDWORKS PDM Administration Tool
+<ul>
+<li>Login to the vault and expand the <strong>Add-ins</strong> Node</li>
+<li>Select the previous add-in &gt; RMB &gt; <strong>Remove</strong></li>
+</ul>
+</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_48115" style="width: 503px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-Remove-old-addin.png"><img alt="Remove previous add-in" aria-describedby="caption-attachment-48115" height="306" src="/assets/images/Post-Manage-Upgrade-Remove-old-addin.png" title="" width="493"/><p class="wp-caption-text" id="caption-attachment-48115"><noscript><img alt="Remove previous add-in" height="306" src="/assets/images/Post-Manage-Upgrade-Remove-old-addin.png" title="" width="493"/></noscript></p></a> Remove previous add-in</div></p>
+<ol start="2">
+<li>Select the <strong>Add-ins</strong> Node &gt; RMB &gt; <strong>New Add-in</strong></li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_48114" style="width: 456px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-RMB-New-Addin.png"><img alt="Apply New Add-in" aria-describedby="caption-attachment-48114" height="305" src="/assets/images/Post-Manage-Upgrade-RMB-New-Addin.png" title="" width="446"/><p class="wp-caption-text" id="caption-attachment-48114"><noscript><img alt="Apply New Add-in" height="305" src="/assets/images/Post-Manage-Upgrade-RMB-New-Addin.png" title="" width="446"/></noscript></p></a> Apply New Add-in</div></p>
+<ol start="3">
+<li>Navigate to the client install folder
+<ul>
+<li>Select both;
+<ul>
+<li><strong>SWM.swpdm.dll</strong></li>
+<li><strong>EPDM.Interop.epdm.dll</strong>
+<ul>
+<li>Hit <strong>Open</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_48110" style="width: 927px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-Select-DLL.png"><img alt="Open Add-in .dll files" aria-describedby="caption-attachment-48110" height="641" src="/assets/images/Post-Manage-Upgrade-Select-DLL.png" title="" width="917"/><p class="wp-caption-text" id="caption-attachment-48110"><noscript><img alt="Open Add-in .dll files" height="641" sizes="(max-width: 917px) 100vw, 917px" src="/assets/images/Post-Manage-Upgrade-Select-DLL.png" title="" width="917"/></noscript></p></a> Open Add-in .dll files</div></p>
+<p><strong>NOTE</strong>: The default location for the client install is:</p>
+<pre>C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS Manage Client</pre>
+<ol start="4">
+<li>Hit <strong>OK</strong> on the addin properties dialog
+<ul>
+<li>Note the new version number</li>
+</ul>
+</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_48116" style="width: 641px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-Addin-properties.png"><img alt="Accept new add-in version" aria-describedby="caption-attachment-48116" height="497" src="/assets/images/Post-Manage-Upgrade-Addin-properties.png" title="" width="631"/><p class="wp-caption-text" id="caption-attachment-48116"><noscript><img alt="Accept new add-in version" height="497" sizes="(max-width: 631px) 100vw, 631px" src="/assets/images/Post-Manage-Upgrade-Addin-properties.png" title="" width="631"/></noscript></p></a> Accept new add-in version</div></p>
+<ul>
+<li>Note the warning and hit <strong>OK</strong></li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_48113" style="width: 493px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-Addin-upgrade-warning.png"><img alt="SOLIDWORKS PDM warning" aria-describedby="caption-attachment-48113" height="223" src="/assets/images/Post-Manage-Upgrade-Addin-upgrade-warning.png" title="" width="483"/><p class="wp-caption-text" id="caption-attachment-48113"><noscript><img alt="SOLIDWORKS PDM warning" height="223" src="/assets/images/Post-Manage-Upgrade-Addin-upgrade-warning.png" title="" width="483"/></noscript></p></a> SOLIDWORKS PDM warning</div></p>
+<ol start="5">
+<li>Kill and restart any active PDM Clients and the new version of the add-in is loaded within SOLIDWORKS PDM;</li>
+</ol>
+<p><div class="wp-caption aligncenter" id="attachment_48119" style="width: 873px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2020/09/Post-Manage-Upgrade-Addin-upgrade-completed-in-PDM.png"><img alt="New version loaded" aria-describedby="caption-attachment-48119" height="233" src="/assets/images/Post-Manage-Upgrade-Addin-upgrade-completed-in-PDM.png" title="" width="863"/><p class="wp-caption-text" id="caption-attachment-48119"><noscript><img alt="New version loaded" height="233" sizes="(max-width: 863px) 100vw, 863px" src="/assets/images/Post-Manage-Upgrade-Addin-upgrade-completed-in-PDM.png" title="" width="863"/></noscript></p></a> New version loaded</div></p>
+<h3>Step 2: Launch a manual sync between Manage and PDM</h3>
+<p>For a step by step guide to launching a synchronization please see my previous article: <a href="https://www.javelin-tech.com/blog/2020/08/how-to-perform-a-synchronization-between-solidworks-pdm-and-manage/">How to perform a synchronization between SOLIDWORKS PDM and SOLIDWORKS Manage</a></p>
+<blockquote><p><strong>NOTE:</strong> Document folders aren’t required to be include in the sync and this will transfer any changes in Manage into the PDM Database</p></blockquote>

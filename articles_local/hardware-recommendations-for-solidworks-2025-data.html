@@ -1,0 +1,203 @@
+<p>We have compiled these architecture and hardware recommendations for the SOLIDWORKS 2025 data management tools. Use this guide when upgrading or purchasing new hardware for your <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM</a> or <a href="https://www.javelin-tech.com/3d/technology/solidworks-manage/">SOLIDWORKS Manage</a> environments.</p>
+<p>While this guidance is intended to provide you with recommendations for general scenarios, we recommend discussing your specific hardware and architecture needs with our data management specialists.</p>
+<h2>SOLIDWORKS PDM Standard 2025</h2>
+<h4>Architecture:</h4>
+<p>Single server hosting the Microsoft SQL database server and all PDM server components.</p>
+<div class="wp-caption aligncenter" id="attachment_71250" style="width: 580px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/01-PDM-Standard.jpg"><img alt="SOLIDWORKS PDM system architecture" aria-describedby="caption-attachment-71250" height="531" src="/assets/images/01-PDM-Standard.jpg" title="" width="570"/><p class="wp-caption-text" id="caption-attachment-71250"><noscript><img alt="SOLIDWORKS PDM system architecture" height="531" src="/assets/images/01-PDM-Standard.jpg" title="" width="570"/></noscript></p></a> SOLIDWORKS PDM Standard system architecture</div>
+<h4>Server:</h4>
+<ul>
+<li><strong>Processor:</strong> 4 Cores with 2.5Ghz clock speed minimum</li>
+<li><strong>Operating System:</strong> Windows Server Standard 2022</li>
+<li><strong>Database Software:</strong> Microsoft SQL Server Express 2022</li>
+<li><strong>Memory:</strong> 8GB minimum, 16GB preferred (see FAQ below regarding memory)</li>
+<li><strong>Storage configuration: </strong>Windows OS and SQL Server software and database(s) in RAID 1 SSD; Dedicated high-speed storage drive(s) for archives.</li>
+</ul>
+<h2>SOLIDWORKS PDM Professional 2025</h2>
+<h3>Single Server Deployment for Smaller Teams</h3>
+<h4>Architecture:</h4>
+<p>Single dedicated server hosting the Microsoft SQL database server and all PDM server components.</p>
+<div class="wp-caption aligncenter" id="attachment_71250" style="width: 580px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/01-PDM-Standard.jpg"><img alt="Single server deployment for SOLIDWORKS PDM Professional" aria-describedby="caption-attachment-71250" height="531" src="/assets/images/01-PDM-Standard.jpg" title="" width="570"/><p class="wp-caption-text" id="caption-attachment-71250"><noscript><img alt="Single server deployment for SOLIDWORKS PDM Professional" height="531" src="/assets/images/01-PDM-Standard.jpg" title="" width="570"/></noscript></p></a> Single server deployment for SOLIDWORKS PDM Professional</div>
+<h4>Server:</h4>
+<ul>
+<li><strong>Processor:</strong> 4 Cores with 3Ghz clock speed minimum</li>
+<li><strong>Operating System:</strong> Windows Server Standard 2022</li>
+<li><strong>Database Software:</strong> Microsoft SQL Server Standard 2022</li>
+<li><strong>Memory:</strong> 16-32 GB (see FAQ below regarding memory allocation)</li>
+<li><strong>Storage configuration: </strong>Windows OS and SQL Server software and database(s) in RAID 1 SSD; Dedicated high-speed storage drive(s) for archives.</li>
+</ul>
+<h3>Multiple Server Deployment for Larger Teams</h3>
+<h4>Architecture:</h4>
+<p>One dedicated server for the Microsoft SQL database server hosting the PDM database and a dedicated server for the other SOLIDWORKS PDM Professional server components.</p>
+<div class="wp-caption aligncenter" id="attachment_71252" style="width: 467px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/03-PDM-Professional-Multi.jpg"><img alt="Architecture for larger-scale deployments" aria-describedby="caption-attachment-71252" height="640" src="/assets/images/03-PDM-Professional-Multi.jpg" title="" width="457"/><p class="wp-caption-text" id="caption-attachment-71252"><noscript><img alt="Architecture for larger-scale deployments" height="640" sizes="(max-width: 457px) 100vw, 457px" src="/assets/images/03-PDM-Professional-Multi.jpg" title="" width="457"/></noscript></p></a> Architecture for larger-scale deployments</div>
+<h4>Database Server:</h4>
+<ul>
+<li><strong>Processor: </strong>4 Cores with 3Ghz clock speed minimum</li>
+<li><strong>Operating System: </strong>Windows Server Standard 2022</li>
+<li><strong>Database Software: </strong>Microsoft SQL Server Standard 2022</li>
+<li><strong>Memory: </strong>32GB minimum (see FAQ below regarding memory allocation)</li>
+<li><strong>Storage configuration: </strong>Windows OS and SQL Server software in RAID 1 SSD; SQL Database file (.mdf) RAID 1 SSD; SQL Log file (.ldf) RAID 1 SSD</li>
+</ul>
+<h4>SolidNetWork License Manager Server and SOLIDWORKS PDM Archive Server:</h4>
+<ul>
+<li><strong>Processor: </strong>2 Cores with 3Ghz clock speed minimum</li>
+<li><strong>Operating System: </strong>Windows Server Standard 2022</li>
+<li><strong>Memory: </strong>8GB minimum, 16GB preferred</li>
+<li><strong>Storage configuration: </strong>Dedicated high-speed storage drive(s) for archives</li>
+</ul>
+<h2>SOLIDWORKS Manage and PDM Professional 2025</h2>
+<h4>Architecture:</h4>
+<p>One dedicated server for the Microsoft SQL Server hosting the SOLIDWORKS Manage and PDM databases, and a dedicated server for the other SOLIDWORKS Manage and PDM Professional server components.</p>
+<div class="wp-caption aligncenter" id="attachment_71254" style="width: 551px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/04-SOLIDWORKS-Manage.jpg"><img alt="Multi-server deployment for SOLIDWORKS Manage and PDM" aria-describedby="caption-attachment-71254" height="757" src="/assets/images/04-SOLIDWORKS-Manage.jpg" title="" width="541"/><p class="wp-caption-text" id="caption-attachment-71254"><noscript><img alt="Multi-server deployment for SOLIDWORKS Manage and PDM" height="757" sizes="(max-width: 541px) 100vw, 541px" src="/assets/images/04-SOLIDWORKS-Manage.jpg" title="" width="541"/></noscript></p></a> Multi-server deployment for SOLIDWORKS Manage and PDM</div>
+<h4>Database Server:</h4>
+<ul>
+<li><strong>Processor: </strong>6 Cores with 3Ghz clock speed minimum</li>
+<li><strong>Operating System: </strong>Windows Server Standard 2022</li>
+<li><strong>Database Software: </strong>Microsoft SQL Server Standard 2022</li>
+<li><strong>Memory: </strong>32GB minimum (see FAQ below regarding memory allocation)</li>
+<li><strong>Storage configuration: </strong>Windows OS and SQL Server software in RAID 1 SSD; SQL Database file (.mdf) RAID 1 SSD; SQL Log file (.ldf) RAID 1 SSD</li>
+</ul>
+<h4>SolidNetWork License Manager Server/SOLIDWORKS PDM Archive Server/SOLIDWORKS Manage File Server and Web Server:</h4>
+<ul>
+<li><strong>Processor: </strong>4 Cores with 3Ghz clock speed</li>
+<li><strong>Operating System: </strong>Windows Server Standard 2022</li>
+<li><strong>Memory: </strong>16GB</li>
+<li><strong>Storage configuration: </strong>Dedicated high-speed storage drive(s) for archives</li>
+</ul>
+<hr/>
+<h2>System Recommendations Frequently Asked Questions</h2>
+<h5><strong>What are the minimum system requirements for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>The minimum requirements can be found on the <a href="https://www.solidworks.com/sw/support/SystemRequirements.html" rel="nofollow noopener" target="_blank">SOLIDWORKS System Requirements</a> page.</p>
+<h5><strong>Can a virtual server be used for hosting SOLIDWORKS PDM or Manage 2025?</strong></h5>
+<p>Yes, however SOLIDWORKS only tests and supports PDM and Manage in specific virtual environments. <a href="https://www.solidworks.com/support/system-requirements#hwhyper" rel="nofollow noopener" target="_blank">A list of the currently supported virtual environments can be found on the SOLIDWORKS website.</a></p>
+<h5><strong>What Operating System is recommended for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>SOLIDWORKS PDM and SOLIDWORKS Manage 2025 are officially supported on the following operating systems:</p>
+<ul>
+<li>Windows Server 2019 (2025 SP5 is the last SOLIDWORKS release that will install on Windows Server 2019)</li>
+<li>Windows Server 2022 (Recommended)</li>
+<li>Windows Server 2025 (2025 SP3 is the first SOLIDWORKS release compatible with Windows Server 2025)</li>
+</ul>
+<blockquote><p><strong>NOTE</strong>:  Windows Server 2016 &amp; Windows Server 2017 are not compatible with SOLIDWORKS PDM or Manage 2025.</p></blockquote>
+<h5><strong>What Operating System is recommended for SOLIDWORKS PDM and Manage 2025 clients?</strong></h5>
+<p>The SOLIDWORKS PDM and SOLIDWORKS Manage 2025 client programs can be installed on the following operating systems:</p>
+<ul>
+<li>Windows 10 (2025 SP5 will be the last SOLIDWORKS release that will support Windows 10)</li>
+<li>Windows 11 (Recommended)</li>
+</ul>
+<h5><strong>Can a desktop computer be used for hosting SOLIDWORKS PDM or Manage 2025?</strong></h5>
+<p>While it is technically possible to install SOLIDWORKS PDM or SOLIDWORKS Manage 2025 server components on a desktop operating system such as Windows 11, we strongly advise against using this configuration in a production environment.</p>
+<p>Windows 11 is designed and licensed primarily for single-user desktop use. Hosting server workloads, such as SQL Server or PDM Archive Server, for multiple users may violate the terms outlined in the <a href="https://www.microsoft.com/content/dam/microsoft/usetm/documents/windows/11/oem-(pre-installed)/UseTerms_OEM_Windows_11_English.pdf" rel="nofollow noopener" target="_blank">Windows 11 End User License Agreement (EULA)</a>. Additionally, Windows 11 lacks many of the advanced features and optimizations found in server-class operating systems, including enhanced security, scalability, and remote management capabilities.</p>
+<p>Beyond software limitations, desktop-class hardware typically does not meet the reliability and performance standards required for enterprise-grade server workloads. Most desktop systems lack features such as redundant power supplies, ECC (error-correcting code) memory, and high-throughput network interfaces. These limitations can lead to reduced performance, increased risk of downtime, and potential data loss.</p>
+<h5><strong>Can a cloud-based server be used for hosting SOLIDWORKS PDM or Manage 2025?</strong></h5>
+<p>Although SOLIDWORKS does not test PDM in any cloud provider environment, cloud-based servers running supported Windows Server Operating Systems, such as AWS EC2 or Microsoft Azure, can be used for SOLIDWORKS PDM or Manage servers.</p>
+<p><a href="https://www.javelin-tech.com/3d/process/javelin-cloud-services/">TriMech Group offers various cloud-based server solutions</a> for clients who are interested in moving their data management to this type of environment.</p>
+<p>If you are evaluating a cloud environment, please take note of the following:</p>
+<ul>
+<li>Amazon Web Services’ Relational Database Services (RDS) is not an appropriate option for hosting SOLIDWORKS PDM or Manage databases, as it does not allow using a db_owner. This leads to several issues when using the software.</li>
+<li>Azure SQL is not compatible and should not be used for hosting the SOLIDWORKS PDM or Manage databases.</li>
+<li>The latency between the clients to the cloud server must be under 100 milliseconds to prevent issues, best performance will be achieved if latency is below 50 milliseconds.</li>
+<li>For larger groups (10+ users) in a single location, consider a hybrid setup with a replicated SOLIDWORKS PDM Archive Server/SOLIDWORKS Manage File Server on the local network to improve performance.</li>
+</ul>
+<h5><strong>What is the recommended system architecture for SOLIDWORKS PDM Standard 2025 servers?</strong></h5>
+<p>SOLIDWORKS PDM Standard is intended for smaller teams. As such it only supports using Microsoft SQL Express for hosting the PDM database. This greatly limits the resource usage for SOLIDWORKS PDM Standard so a single server hosting all components, including Microsoft SQL Server Express, is recommended for PDM Standard environments.</p>
+<h5><strong>What is the recommended system architecture for SOLIDWORKS PDM Professional 2025 servers?</strong></h5>
+<p>For smaller vaults, with less than 15 concurrent users, SOLIDWORKS PDM Professional can be hosted on a single, dedicated, server without encountering significant bottlenecks. Care should be taken to ensure that sufficient resources are provided for SQL Standard (see further information regarding CPU and Memory below). For performance reasons, no other databases should be hosted on the same server that is hosting the PDM database.</p>
+<p><strong>NOTE</strong>: It is strongly recommended that the Microsoft SQL Server software not be installed on a system that acts as an Active Directory Domain Controller, this can lead to several known issues, including security risks.</p>
+<p>For environments with more than 15 concurrent users accessing the vault, it is recommended that a separate, dedicated server be used for the SOLIDWORKS PDM Database Server. It is recommended that the SOLIDWORKS PDM Database Server Service (also called the Database Helper service) be installed on the same system that is hosting the SQL Server software.</p>
+<p>For these environments, a separate server should be used for the SOLIDWORKS PDM Archive Server service.  That same server can also be used for the SolidNetwork License Manager Server and the PDM Web2 Server software if used (Microsoft IIS will need to be configured for PDM Web2).</p>
+<h5><strong>What is the recommended system architecture for SOLIDWORKS Manage 2025 servers?</strong></h5>
+<p>A separate, dedicated server should be used for hosting the databases. The PDM Professional and SOLIDWORKS Manage databases should be hosted together on the same SQL Server instance. The SOLIDWORKS Manage database will grow much faster than the SOLIDWORKS PDM database, so system resources should be monitored closely and more memory allocated if needed. The SOLIDWORKS PDM Database Server Service should be installed on the same system as the SQL Server software.</p>
+<p><strong>NOTE</strong>: It is strongly recommended that the Microsoft SQL Server software not be installed on a system that acts as an Active Directory Domain Controller, this can lead to several known issues, including security risks.</p>
+<p>A separate server should be used for the SOLIDWORKS PDM Archive Server service and the SOLIDWORKS Manage File Server. That same server can also be used for the PDM Web2 Server and PDM Manage Plenary Web Server running on Microsoft IIS, as well as the SolidNetwork License Manager Server software.</p>
+<h5><strong>What version and release of Microsoft SQL Server is recommended for SOLIDWORKS PDM Standard 2025?</strong></h5>
+<p>SOLIDWORKS PDM Standard is only compatible with Microsoft SQL Server Express. It cannot connect to databases hosted on other versions of SQL Server.</p>
+<p>The following releases of Microsoft SQL Server can be used to host the PDM Standard 2025 vault database:</p>
+<ul>
+<li>Microsoft SQL Server 2019 CU 22 (2025 SP5 is the last SOLIDWORKS release to be compatible with Microsoft SQL Server 2019)</li>
+<li>Microsoft SQL Server 2022 (Recommended)</li>
+</ul>
+<h5><strong>What version and release of Microsoft SQL Server is recommended for SOLIDWORKS PDM Professional 2025 and SOLIDWORKS Manage 2025?</strong></h5>
+<p>The following releases of Microsoft SQL Server can be used to host PDM Professional 2025 file vault databases and SOLIDWORKS Manage databases:</p>
+<ul>
+<li>Microsoft SQL Server 2019 CU 22 (2025 SP5 is the last SOLIDWORKS release to be compatible with Microsoft SQL Server 2019)</li>
+<li>Microsoft SQL Server 2022 (Recommended)</li>
+</ul>
+<p>The SOLIDWORKS Manage database must always be hosted on the same instance of Microsoft SQL server as the database for SOLIDWORKS PDM Professional</p>
+<p>The databases can be hosted on SQL Server Standard or SQL Server Enterprise; however, due to performance limitations, Microsoft SQL Express should not be used in a production environment for SOLIDWORKS PDM Professional or SOLIDWORKS Manage.</p>
+<blockquote><p><strong>NOTE</strong>:  Ensure that you have the proper licensing for the version of SQL that you use for hosting your databases, your Microsoft Software Provider can help you determine if you have all the licenses needed for SQL. See our <a href="https://www.javelin-tech.com/blog/2021/03/microsoft-sql-licensing-for-solidworks-pdm-faqs/">Microsoft SQL Licensing for SOLIDWORKS FAQs</a>.</p></blockquote>
+<h5><strong>What Processor (CPU) is recommended for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>SOLIDWORKS supports both Intel and AMD processors.</p>
+<p>For the Database Server, Microsoft SQL can take advantage of multi-core processing. For optimal performance of PDM functions, it is recommended that the average CPU utilization be kept below 50%. If average utilization is above 50%, then more cores may be needed. If using Microsoft SQL Server Standard Core Licensing, adding additional cores may also require purchasing additional core licenses.</p>
+<p>For the SolidNetWork License Manager, PDM Archive Server, PDM Professional Web2 Server, SOLIDWORKS Manage File Server, and SOLIDWORKS Manage Web Server components, the CPU requirements are much lower.</p>
+<h5><strong>How much memory (RAM) is recommended for SOLIDWORKS PDM Standard 2025?</strong></h5>
+<p>As SOLIDWORKS PDM Standard is only compatible with Microsoft SQL Express, it is limited in the amount of memory that can be used to cache the database. Typically, 8GB of RAM would be sufficient for a dedicated server running SOLIDWORKS PDM Standard; however, 16GB is preferred to ensure optimal performance for all Windows functions.</p>
+<h5><strong>How much memory (RAM) is recommended for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>For the Database Server, Microsoft SQL Standard and Enterprise can take advantage of available RAM to cache the database in memory. Sufficient RAM should be allocated to fully cache the database files, plus a minimum of 4GB additional RAM for the Operating System and other services.</p>
+<h5><strong>What storage options are recommended for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>For SOLIDWORKS PDM Archive storage, a hard drive with fast I/O speeds should be used, ideally a Solid State Drive(SSD). Remote disks, such as a UNC share, NAS, or SAN, are NOT recommended for storing PDM Archives, as there are known performance issues with such environments. Additionally, SAN and NAS devices are not officially supported by SOLIDWORKS.</p>
+<p>For the Microsoft SQL Server, it is recommended that the Windows Server OS (with the SQL software installation), database files (.mdf), and log files (.ldf) should each be separated into individual RAID 1 arrays using high-speed SSDs.</p>
+<h5><strong>What are the network considerations for SOLIDWORKS PDM and Manage 2025?</strong></h5>
+<p>Clients must be able to communicate with the server components on the following ports:</p>
+<p style="padding-left: 40px;"><strong>Client and Microsoft SQL Server (if default SQL instance is used):</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>TCP 1433 and 1434</li>
+<li>UDP 1434</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><strong>Client and Microsoft SQL Server (if a named instance of SQL is used or if using SQL Express):</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Microsoft SQL Server Express uses a dynamic port instead of the static port 1433. This is also the case if using a named instance of Microsoft SQL Server Standard. In this case, if there is a need to set firewall rules between the client and the SQL server, SQL will need to be <a href="https://www.javelin-tech.com/blog/2018/03/setting-microsoft-sql-server-static-por">configured to use a static port</a>.</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><strong>Client and SOLIDWORKS PDM Archive Server:</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>TCP 3030</li>
+<li>UDP 3030</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><strong>Client and SOLIDWORKS Manage File Server:</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>TCP 9999</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><strong>Client and SolidNetWork License Server:</strong></p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>TCP 25734 and 25735</li>
+</ul>
+</li>
+</ul>
+<p>If a firewall is in place between the client systems and the servers, exceptions must be added for these ports.</p>
+<p>As of the 2020 release, SOLIDWORKS PDM no longer utilizes Transport Layer Security (TLS) 1.0, allowing it to be disabled if necessary. However, all previous releases of SOLIDWORKS PDM (2019 and older) require TLS 1.0 to be enabled.</p>
+<p>For remote, replicated, or cloud-based server deployments, network latency between the clients and the Database Server should be less than 150 milliseconds (ms). Latency above 150ms will lead to severe performance degradation, and above 200ms will likely result in timeout errors for most PDM functions. Optimal client performance in a WAN environment will be achieved if the latency between the clients and the SQL Database Server is less than 50 milliseconds.</p>
+<h5><strong>What is the network architecture for SOLIDWORKS PDM Professional Web2 Server?</strong></h5>
+<p>There are two ways that SOLIDWORKS PDM Professional Web2 can be configured: for an internal network connection and an external internet connection.</p>
+<p>If Web2 will only be accessed through the internal connection, it can typically be configured on the SOLIDWORKS PDM Archive Server. Clients will connect to the vault through a browser via TCP port 80.</p>
+<div class="wp-caption aligncenter" id="attachment_71257" style="width: 611px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/Web2-Internal.jpg"><img alt="Local SOLIDWORKS PDM Web2 configuration" aria-describedby="caption-attachment-71257" height="605" src="/assets/images/Web2-Internal.jpg" title="" width="601"/><p class="wp-caption-text" id="caption-attachment-71257"><noscript><img alt="Local SOLIDWORKS PDM Web2 configuration" height="605" sizes="(max-width: 601px) 100vw, 601px" src="/assets/images/Web2-Internal.jpg" title="" width="601"/></noscript></p></a> Local SOLIDWORKS PDM Web2 configuration</div>
+<p>If Web2 will be accessed from outside your network, by exposing the site to the internet, we strongly recommend configuring a DMZ network to isolate the server hosting the Web2 software. This will ensure that the Web2 server does not provide unintended access to your network. An inner firewall should only allow communication to the PDM server on the necessary ports (TCP 25734, 25735, 3030, and 1433 by default). If exposing the Web2 site to external connections, we strongly recommend <a href="https://learn.microsoft.com/en-us/iis/manage/configuring-security/how-to-set-up-ssl-on-iis" rel="nofollow noopener" target="_blank">purchasing a certificate and enabling SSL (Secure Socket Layer)</a> for added security.</p>
+<div class="wp-caption aligncenter" id="attachment_71258" style="width: 851px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2025/06/Web2-External.jpg"><img alt="External SOLIDWORKS PDM Web2 configuration" aria-describedby="caption-attachment-71258" height="650" src="/assets/images/Web2-External.jpg" title="" width="841"/><p class="wp-caption-text" id="caption-attachment-71258"><noscript><img alt="External SOLIDWORKS PDM Web2 configuration" height="650" sizes="(max-width: 841px) 100vw, 841px" src="/assets/images/Web2-External.jpg" title="" width="841"/></noscript></p></a> External SOLIDWORKS PDM Web2 configuration</div>
+<h5><strong>Which releases of SOLIDWORKS are compatible with SOLIDWORKS PDM Standard 2025?</strong></h5>
+<p>The SOLIDWORKS PDM Standard 2025 add-in for SOLIDWORKS is only officially tested and supported to work with SOLIDWORKS 2025. PDM Standard is only supported with the same release of the SOLIDWORKS CAD software.</p>
+<h5><strong>Which releases of SOLIDWORKS are compatible with SOLIDWORKS PDM 2025?</strong></h5>
+<p>The SOLIDWORKS PDM Professional 2025 add-in for SOLIDWORKS is tested and fully supported for use with SOLIDWORKS 2025, 2024, and 2023. While combinations of PDM Professional 2025 and older versions of SOLIDWORKS, such as 2022 or 2021, may work, please note that they are not officially tested by SOLIDWORKS Development, so they are not supported.</p>
+<p>A newer release of SOLIDWORKS is never supported with a previous release of PDM (for instance, SOLIDWORKS 2025 is not compatible with SOLIDWORKS PDM 2024).</p>
+<p>Starting with their 2019 releases, <a href="https://blogs.solidworks.com/solidworksblog/2018/09/whats-new-in-solidworks-composer-2019.html" rel="nofollow noopener" target="_blank">SOLIDWORKS Composer</a> and <a href="https://www.javelin-tech.com/blog/2018/09/solidworks-pdm-2019-inspection-integration/">SOLIDWORKS Inspection Standalone</a> both include PDM Integration built into their menus. Starting in 2020, <a href="https://www.javelin-tech.com/blog/2020/01/solidworks-visualize-2020-pdm-menu-integration/">SOLIDWORKS Visualize also includes this integration</a>.</p>
+<p>The 2025 release includes the option to install an integration for <a href="https://blogs.solidworks.com/solidworksblog/2018/12/make-a-better-electrical-connection-with-solidworks-pdm.html" rel="nofollow noopener" target="_blank">SOLIDWORKS Electrical</a>. For previous releases, this integration requires a separate installation package.</p>
+<h5><strong>Which releases of Microsoft Office are compatible with SOLIDWORKS PDM Professional and SOLIDWORKS Manage 2025?</strong></h5>
+<p>Microsoft Office 2021 is the only release tested and certified by SOLIDWORKS to be compatible with SOLIDWORKS PDM Professional and SOLIDWORKS Manage 2025.</p>
+<p><strong>NOTE</strong>: SOLIDWORKS PDM Professional 2023 SP5 was the last release compatible with Microsoft Office 2016 and 2019.</p>
+<h5><strong>What if I am using an environment that is not supported by SOLIDWORKS?</strong></h5>
+<p>If you choose to host SOLIDWORKS PDM or SOLIDWORKS Manage in an unsupported or untested environment, keep in mind that while it may initially work, issues can potentially develop at any point in the future and it may be necessary to migrate to a supported environment.</p>
+<p style="text-align: center;"><strong><a href="https://trimech.com/contact-us/" rel="nofollow noopener" target="_blank">To get additional assistance when configuring a SOLIDWORKS PDM or Manage server, contact us here.</a></strong></p>

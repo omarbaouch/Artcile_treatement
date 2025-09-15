@@ -1,0 +1,34 @@
+<p>In <a href="https://www.javelin-tech.com/3d/technology/solidworks-pdm/">SOLIDWORKS PDM 2020</a> we have the ability to define child reference state conditions, to prevent parent files from being transitioned before all the requirements are met.  In the example we’re going to use in this article, we’ve got the parent assembly; <strong>Light.SLDASM </strong>and we want to ensure that the assembly doesn’t get transitioned through <em>Submit for Approval </em>ahead of all it’s child reference parts and sub-assemblies being approved…this way the assembly and drawing can be rebuilt and updated ahead of being approved.</p>
+<h3>How to define Child Reference State Conditions</h3>
+<p>In this example, let’s use the Default vault setup.  The corresponding CAD workflow is <em>Default Workflow</em>, and we want all child files to be in the <em>Approved</em> state ahead of the parent being able to transition through <em>Submit for Approval</em>.</p>
+<ul>
+<li>Administration Tool &gt; Workflows &gt; Default Workflow</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43710" style="width: 300px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/Child-Reference-State-Conditions-Workflow.png"><img alt="Default Workflow" aria-describedby="caption-attachment-43710" height="198" src="/assets/images/Child-Reference-State-Conditions-Workflow.png" title="" width="290"/><p class="wp-caption-text" id="caption-attachment-43710"><noscript><img alt="Default Workflow" height="198" src="/assets/images/Child-Reference-State-Conditions-Workflow.png" title="" width="290"/></noscript></p></a> Default Workflow</div></p>
+<p>We would like to prevent the parent assembly from transitioning through <em>Submit for Approval </em>so we’ll modify the properties of the transition and add a condition</p>
+<ul>
+<li>Default Wokflow &gt; Submit for Approval
+<ul>
+<li>Conditions</li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43712" style="width: 1108px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/Child-Reference-State-Conditions-Submit-for-approval-Condition.png"><img alt="Submit for Approval" aria-describedby="caption-attachment-43712" height="747" src="/assets/images/Child-Reference-State-Conditions-Submit-for-approval-Condition.png" title="" width="1098"/><p class="wp-caption-text" id="caption-attachment-43712"><noscript><img alt="Submit for Approval" height="747" sizes="(max-width: 1098px) 100vw, 1098px" src="/assets/images/Child-Reference-State-Conditions-Submit-for-approval-Condition.png" title="" width="1098"/></noscript></p></a> Submit for Approval</div></p>
+<ul>
+<li>Conditions &gt; <strong>&lt;Click here to add a condition&gt;</strong>
+<ul>
+<li>Variable = <strong>Child Reference Current State</strong></li>
+<li>Comparison = <strong>Text Equal To</strong></li>
+<li>Value = <strong>Default Workflow.Approved</strong></li>
+</ul>
+</li>
+</ul>
+<p><div class="wp-caption aligncenter" id="attachment_43713" style="width: 656px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/Child-Reference-State-Conditions-Condition.png"><img alt="Default Workflow.Approved" aria-describedby="caption-attachment-43713" height="459" src="/assets/images/Child-Reference-State-Conditions-Condition.png" title="" width="646"/><p class="wp-caption-text" id="caption-attachment-43713"><noscript><img alt="Default Workflow.Approved" height="459" sizes="(max-width: 646px) 100vw, 646px" src="/assets/images/Child-Reference-State-Conditions-Condition.png" title="" width="646"/></noscript></p></a> Default Workflow.Approved</div></p>
+<blockquote><p>Under Configuration / Path we could use wildcards and specify a file name or pattern etc, for example “%.sldprt” to limit this condition to just part files, but for this example we’ll leave it blank to apply to <strong><span style="text-decoration: underline;">all</span></strong> child reference files.</p></blockquote>
+<ul>
+<li>Hit <b>OK</b>, then <strong>Save</strong> and close the workflow</li>
+</ul>
+<p>Success!  The result is; we cannot transition the Light assembly until all it’s corresponding child references are in the <em>Approved</em> state.</p>
+<p><div class="wp-caption aligncenter" id="attachment_43714" style="width: 1207px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2019/10/Child-Reference-State-Conditions-Complete.png"><img alt="cannot transition the Light assembly until all it's corresponding child references are in the Approved state" aria-describedby="caption-attachment-43714" height="751" src="/assets/images/Child-Reference-State-Conditions-Complete.png" title="" width="1197"/><p class="wp-caption-text" id="caption-attachment-43714"><noscript><img alt="cannot transition the Light assembly until all it's corresponding child references are in the Approved state" height="751" sizes="(max-width: 1197px) 100vw, 1197px" src="/assets/images/Child-Reference-State-Conditions-Complete.png" title="" width="1197"/></noscript></p></a> Cannot transition the Light assembly until all it’s corresponding child references are in the Approved state</div></p>
+<h3>This just blew my mind!  Where can I learn more about customizing the workflow to increase efficiency?</h3>
+<p>Thanks for asking, here at Javelin we offer an <a href="https://www.javelin-tech.com/3d/people/training/administering-solidworks-pdm-professional/">Administering SOLIDWORKS PDM Course</a> where Workflow creation and features like creating an automatic revision numbering system and much more are covered in detail, helping you to customize the vault to your company’s specific needs, and getting the vault to do the work so you don’t have to.</p>

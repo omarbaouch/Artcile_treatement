@@ -1,0 +1,45 @@
+<p>We have talked about the <a href="https://www.javelin-tech.com/blog/2016/04/solidworks-pdm-rollback/">SOLIDWORKS PDM Rollback feature</a> before and saw some of the <a href="https://www.javelin-tech.com/blog/2016/11/solidworks-pdm-rollback-references/">enhancements made to the feature for SOLIDWORKS 2017</a>.  In learning about it we also saw the warning; <em><strong>This function should be used with caution as it permanently deletes file versions</strong></em>.  Personally I’m not a big fan of deleting anything (seriously I’m a data hoarder).  With the following example scenario we’re going to look at a SOLIDWORKS PDM Rollback Alternative method that achieves the same result, without deleting any files.</p>
+<h3>Example scenario</h3>
+<p>Here is my simple part;</p>
+<div class="wp-caption aligncenter" id="attachment_28777" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Clip.jpg"><img alt="Sample SOLIDWORKS part, two versions" aria-describedby="caption-attachment-28777" height="223" src="/assets/images/Clip-780x223.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28777"><noscript><img alt="Sample SOLIDWORKS part, two versions" height="223" src="/assets/images/Clip-780x223.jpg" title="" width="780"/></noscript></p></a> Sample SOLIDWORKS part, two versions</div>
+<p>There are two versions; one with slotted holes (version 2/2) and one without (Version 1/2).  It’s still in the design phase and there’s been a change at a higher level which makes the slotted holes unnecessary, and I need to revert to the previous design (version 1).  Using rollback version 2 will be deleted, but I need to keep it as we may go back to that design.</p>
+<h2>Rollback without the rollback</h2>
+<blockquote><p><strong>WARNING: Make sure the file is CHECKED IN before starting the process to ensure no changes are lost.</strong></p></blockquote>
+<ul>
+<li>Via Explorer select the file then;
+<ul>
+<li>Actions &gt; Get &gt; Version 1</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28772" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/GetVersion1.jpg"><img alt="Get previous version" aria-describedby="caption-attachment-28772" height="695" src="/assets/images/GetVersion1-780x695.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28772"><noscript><img alt="Get previous version" height="695" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/GetVersion1-780x695.jpg" title="" width="780"/></noscript></p></a> Get previous version</div>
+<div class="wp-caption aligncenter" id="attachment_28900" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Version1of2.jpg"><img alt="File is local" aria-describedby="caption-attachment-28900" height="696" src="/assets/images/Version1of2-780x696.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28900"><noscript><img alt="File is local" height="696" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/Version1of2-780x696.jpg" title="" width="780"/></noscript></p></a> File is local</div>
+<p>This caches version 1 in your local view;</p>
+<ul>
+<li>Then via explorer copy and paste it outside of the vault to your local machine (ie desktop etc)</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28773" style="width: 505px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Paste-to-desktop.jpg"><img alt="Copy and Paste the file outside the vault" aria-describedby="caption-attachment-28773" height="609" src="/assets/images/Paste-to-desktop.jpg" title="" width="495"/><p class="wp-caption-text" id="caption-attachment-28773"><noscript><img alt="Copy and Paste the file outside the vault" height="609" sizes="(max-width: 495px) 100vw, 495px" src="/assets/images/Paste-to-desktop.jpg" title="" width="495"/></noscript></p></a> Copy and Paste the file outside the vault</div>
+<ul>
+<li>Then back in the vault check out the part (which forces a Get Latest, overwriting the cached version 1 with version 2)</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28774" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/CheckoutFile.jpg"><img alt="Get the part" aria-describedby="caption-attachment-28774" height="443" src="/assets/images/CheckoutFile-780x443.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28774"><noscript><img alt="Get the part" height="443" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/CheckoutFile-780x443.jpg" title="" width="780"/></noscript></p></a> Get the part</div>
+<ul>
+<li>and copy and paste the locally saved version, replacing the vault version</li>
+</ul>
+<p><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Replace.jpg"><img alt="" height="608" src="/assets/images/Replace.jpg" title="" width="1077"/><noscript><img alt="" height="608" sizes="(max-width: 1077px) 100vw, 1077px" src="/assets/images/Replace.jpg" title="" width="1077"/></noscript></a></p>
+<ul>
+<li>Then check it back in.
+<ul>
+<li>Although not always required, its important to leave a comment explaining what has happened.</li>
+</ul>
+</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28796" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/CheckInDialog.jpg"><img alt="Check the file in" aria-describedby="caption-attachment-28796" height="299" src="/assets/images/CheckInDialog-780x299.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28796"><noscript><img alt="Check the file in" height="299" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/CheckInDialog-780x299.jpg" title="" width="780"/></noscript></p></a> Check the file in</div>
+<ul>
+<li> This creates an exact replica of version 1 as version 3.  Leaving version 2 available if we ever need go back to it.</li>
+</ul>
+<div class="wp-caption aligncenter" id="attachment_28776" style="width: 790px"><a href="https://www.javelin-tech.com/blog/wp-content/uploads/2017/06/Version3of3.jpg"><img alt="Replica created" aria-describedby="caption-attachment-28776" height="446" src="/assets/images/Version3of3-780x446.jpg" title="" width="780"/><p class="wp-caption-text" id="caption-attachment-28776"><noscript><img alt="Replica created" height="446" sizes="(max-width: 780px) 100vw, 780px" src="/assets/images/Version3of3-780x446.jpg" title="" width="780"/></noscript></p></a> Replica created</div>
+<p>This is also a useful method if you don’t have rollback privileges within the vault.</p>
+<p>Although nothing is being deleted there’s still a need to be cautious with when to use this approach, as it doesn’t work in every scenario.  The example used references a part that’s still at the In Design state and no revision has been assigned.  It this was completed to a file with a revision it would remain at the same revision.</p>
+<h3>Interested in further SOLIDWORKS PDM Training?</h3>
+<p><a href="http://www.javelin-tech.com/main/training/solidworks_pdm_training.htm" rel="noopener noreferrer" target="_blank">Contact us about our SOLIDWORKS PDM training courses</a> for users and administrators.</p>

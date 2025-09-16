@@ -38,7 +38,29 @@
 - [x] Captured Workgroup PDM backup best practices in <code>articles_rewrite/solidworks-workgroup-pdm-backup.md</code> with vault location imagery.
 - [x] Outlined SOLIDWORKS Electrical integration tiers in <code>articles_rewrite/solidworks-electrical-pdm-integration-options.md</code>, including connector references and images.
 
+## 2025-09-16 (update 5)
+- [x] Rewrote "Best Practices for Using $PRPSHEET" as <code>articles_rewrite/solidworks-prpsheet-best-practices.md</code>, documenting metadata flow between properties, variables, and drawing notes.
+- [x] Reframed "Bolster Regulatory Compliance" as <code>articles_rewrite/solidworks-pdm-regulatory-compliance.md</code> with emphasis on audit trails, permissions, and training.
+- [x] Detailed revision assignment strategies in <code>articles_rewrite/solidworks-pdm-revision-number-workflows.md</code> including risks and alternatives.
+- [x] Clarified version compatibility requirements in <code>articles_rewrite/solidworks-pdm-version-compatibility.md</code>.
+- [x] Captured CT Logics support story in <code>articles_rewrite/canadian-solidworks-support-value.md</code> highlighting subscription benefits.
+- [x] Authored login method guidance in <code>articles_rewrite/solidworks-pdm-change-login-type.md</code> with LDAP/Windows configuration visuals.
+- [x] Documented license server migrations in <code>articles_rewrite/solidworks-pdm-license-server-change.md</code>.
+- [x] Warned about private state files in <code>articles_rewrite/solidworks-pdm-private-state-check-in.md</code> with recovery limitations.
+- [x] Resolved read-only checkout issues in <code>articles_rewrite/solidworks-pdm-read-only-checkout.md</code> by adjusting permissions and attributes.
+- [x] Summarized index maintenance in <code>articles_rewrite/solidworks-pdm-index-fragmentation.md</code> and linked best-practice resources.
+- [x] Produced a clean uninstall checklist in <code>articles_rewrite/clean-uninstall-solidworks-pdm-client.md</code>.
+- [x] Explained archive log maintenance in <code>articles_rewrite/solidworks-pdm-archive-log-clear.md</code>.
+- [x] Illustrated the Collect Support Information wizard in <code>articles_rewrite/solidworks-pdm-collect-support-information.md</code>.
+- [x] Compared BOM and geometry review tools in <code>articles_rewrite/solidworks-pdm-manage-comparison-tools.md</code>.
+- [x] Configured the task add-in in <code>articles_rewrite/solidworks-pdm-print-task-configuration.md</code>.
+- [x] Set up PDM Standard PDF publishing in <code>articles_rewrite/solidworks-pdm-standard-drawing-pdf-task.md</code>.
+- [x] Described manual Convert-to-PDF usage in <code>articles_rewrite/solidworks-pdm-standard-drawing-pdf-conversion.md</code>.
+- [x] Shared hyperlink workflows in <code>articles_rewrite/solidworks-pdm-copy-link.md</code>.
+- [x] Highlighted Copy Tree dynamic values in <code>articles_rewrite/solidworks-pdm-copy-tree-dynamic-values.md</code>.
+- [x] Fixed ConisioMasterDb vault creation errors in <code>articles_rewrite/solidworks-pdm-conisiomasterdb-error.md</code>.
+
 ### Next Steps for Future Agents
-- Continue with the next articles in <code>articles_raw/</code> starting at <code>best-practices-for-using-$prpsheet-in-solidworks-p.txt</code>; consult matching files in <code>articles_local/</code> for image order before rewriting.
+- Continue with the next articles in <code>articles_raw/</code> starting at <code>creating-a-card-list-from-an-sql-database-in-solid.txt</code>; review corresponding files in <code>articles_local/</code> for image placement.
 - Maintain the established Markdown structure with YAML front matter, HTML headings, and <code>&lt;figure&gt;</code> blocks using /assets/images paths and descriptive alt text.
 - Note any remaining legacy embeds (e.g., external iframes) that may require conversion to simple hyperlinks in subsequent passes.

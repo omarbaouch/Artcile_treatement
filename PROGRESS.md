@@ -6,7 +6,13 @@
 - Images referenced from <code>/assets/images</code> remain unchanged; alt text added or confirmed where missing.
 - Front matter dates use 2025-09-16 (current working date) until original publication dates are identified.
 
+## 2025-09-16 (cont.)
+- [x] Rewrote "5 Reasons Why You Should Upgrade SOLIDWORKS Workgroup PDM" as <code>articles_rewrite/upgrade-workgroup-pdm-to-pdm-professional.md</code>, restructuring the five business drivers and modernizing captions while keeping legacy imagery in place.
+- [x] Rewrote "5 Ways PDM Can Help You Succeed Through Design Reuse" as <code>articles_rewrite/solidworks-pdm-design-reuse-benefits.md</code> with new headings, keyword-rich narrative, and a refined call to action.
+- [x] Verified image order via matching files in <code>articles_local/</code> and replaced each with simplified <code>&lt;figure&gt;</code> blocks and updated alt text.
+- Documented SOLIDWORKS PDM data management advantages, including references to custom columns and workflow automation where applicable.
+
 ### Next Steps for Future Agents
-- Continue processing remaining articles in <code>articles_raw/</code>; match each to the corresponding HTML in <code>articles_local/</code> to confirm image placement.
-- Maintain the established Markdown structure with front matter, HTML headings, and <code>&lt;figure&gt;</code> blocks for images.
-- Update this log with newly completed articles and any deviations or discoveries (e.g., missing images or metadata).
+- Continue processing remaining articles in <code>articles_raw/</code>; consult <code>articles_local/</code> before rewriting to confirm image placement and any embedded assets.
+- Maintain the established Markdown structure with YAML front matter, HTML headings, and <code>&lt;figure&gt;</code> blocks for images and captions.
+- Prioritize nearby topics such as <code>articles_raw/5-ways-project-management-just-got-easier.txt</code> or subsequent workflow-related pieces, and note any missing imagery or metadata encountered.

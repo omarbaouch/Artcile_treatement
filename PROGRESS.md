@@ -12,7 +12,11 @@
 - [x] Verified image order via matching files in <code>articles_local/</code> and replaced each with simplified <code>&lt;figure&gt;</code> blocks and updated alt text.
 - Documented SOLIDWORKS PDM data management advantages, including references to custom columns and workflow automation where applicable.
 
+## 2025-09-16 (update 3)
+- [x] Rewrote "5 Ways Project Management Just Got Easier" as <code>articles_rewrite/solidworks-pdm-project-management-efficiency.md</code>, restructuring the five recommendations with SOLIDWORKS PDM workflow automation messaging.
+- [x] Confirmed four legacy images via <code>articles_local/5-ways-project-management-just-got-easier.html</code> and replaced them using <figure> blocks with refreshed descriptive alt text aligned to /assets/images/.
+
 ### Next Steps for Future Agents
 - Continue processing remaining articles in <code>articles_raw/</code>; consult <code>articles_local/</code> before rewriting to confirm image placement and any embedded assets.
 - Maintain the established Markdown structure with YAML front matter, HTML headings, and <code>&lt;figure&gt;</code> blocks for images and captions.
-- Prioritize nearby topics such as <code>articles_raw/5-ways-project-management-just-got-easier.txt</code> or subsequent workflow-related pieces, and note any missing imagery or metadata encountered.
+- Prioritize <code>articles_raw/a-quick-way-to-log-in-and-off-(out)-of-solidworks.txt</code> or other administration-focused pieces, and note any missing imagery or metadata encountered.

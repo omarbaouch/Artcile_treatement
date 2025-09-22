@@ -64,3 +64,6 @@
 - Continue with the next articles in <code>articles_raw/</code> starting at <code>creating-a-card-list-from-an-sql-database-in-solid.txt</code>; review corresponding files in <code>articles_local/</code> for image placement.
 - Maintain the established Markdown structure with YAML front matter, HTML headings, and <code>&lt;figure&gt;</code> blocks using /assets/images paths and descriptive alt text.
 - Note any remaining legacy embeds (e.g., external iframes) that may require conversion to simple hyperlinks in subsequent passes.
+
+## 2025-09-16 (update 6)
+- [x] Rédigé "Configuration matérielle idéale pour station CAO SOLIDWORKS" dans <code>articles_rewrite/configuration-materielle-cao.md</code> avec recommandations matérielles chiffrées et bonnes pratiques pour grands assemblages.
